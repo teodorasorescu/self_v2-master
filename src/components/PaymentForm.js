@@ -14,12 +14,10 @@ export const PaymentForm = () => {
 
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
-		console.log(customer);
 	};
 
 	const setCustomerField = () => {
 		const newsletterChanged = !customer.newsletter;
-		console.log(newsletterChanged);
 		setCustomer({ ...customer, newsletter: newsletterChanged });
 	};
 

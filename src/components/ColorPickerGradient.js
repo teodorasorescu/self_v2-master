@@ -56,7 +56,7 @@ function ColorPickerGradient() {
 
 	const dispatch = useDispatch();
 	const localStoreProducts = localStorage.getItem('products');
-	console.log(localStoreProducts);
+
 	var storedProducts = [];
 	if (localStoreProducts != []) {
 		storedProducts = JSON.parse(localStoreProducts);
@@ -71,6 +71,7 @@ function ColorPickerGradient() {
 		default: {
 			gradient: {
 				background: `radial-gradient(circle at center, rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, ${colorSwatch1.a}) 0,
+				rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, ${colorSwatch1.a}),
           rgba(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}, ${colorSwatch2.a}),
           rgba(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b}, ${colorSwatch3.a}),
           rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, ${colorSwatch4.a}),
@@ -111,15 +112,14 @@ function ColorPickerGradient() {
 	const wideScreen = useMediaQuery('(min-width:1025px)');
 
 	return (
-		<div class='body'>
-			<div class='container'>
+		<div className='body'>
+			<div className='container'>
 				{wideScreen && (
 					<div>
-						{console.log(currentSlide)}
 						{currentSlide == 1 && (
 							<div
 								id='Resources'
-								class='imageSlideCorner'
+								className='imageSlideCorner'
 								style={styles.gradient}
 								onClick={nextSlide}
 							></div>
@@ -127,7 +127,7 @@ function ColorPickerGradient() {
 						{currentSlide == 0 && (
 							<img
 								src={require(`../images/${product.image}`)}
-								class='imageSlideCorner'
+								className='imageSlideCorner'
 								onClick={prevSlide}
 							/>
 						)}
@@ -137,35 +137,35 @@ function ColorPickerGradient() {
 					{currentSlide == 0 && (
 						<div
 							id='Resources'
-							class='gradientDiv'
+							className='gradientDiv'
 							style={styles.gradient}
 						></div>
 					)}
 					{currentSlide == 1 && (
 						<img
 							src={require(`../images/${product.image}`)}
-							class='gradientDiv'
+							className='gradientDiv'
 						/>
 					)}
 				</div>
 				{!wideScreen && (
-					<div class='bodySwatches'>
+					<div className='bodySwatches'>
 						<SwatchGradient color={colorSwatch1} setColor={setColorSwatch1} />
 						<SwatchGradient color={colorSwatch2} setColor={setColorSwatch2} />
 						<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
 						<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
 					</div>
 				)}
-				<div class='descriptionContainer'>
-					<div class='titleContainer'>
-						<h>
+				<div className='descriptionContainer'>
+					<div className='titleContainer'>
+						<h1>
 							Personalizare tablou <br />
 							{product.title}
 							<br />
 							{product.price} <br />
-						</h>
+						</h1>
 					</div>
-					<div class='paragraphContainer'>
+					<div className='paragraphContainer'>
 						<p>{product.description}</p>
 						<p>
 							Începe personalizarea tabloului, alegând cele patru culori. Vei
@@ -173,7 +173,7 @@ function ColorPickerGradient() {
 						</p>
 					</div>
 					{wideScreen && (
-						<div class='bodySwatches'>
+						<div className='bodySwatches'>
 							<SwatchGradient color={colorSwatch1} setColor={setColorSwatch1} />
 							<SwatchGradient color={colorSwatch2} setColor={setColorSwatch2} />
 							<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
@@ -181,13 +181,13 @@ function ColorPickerGradient() {
 						</div>
 					)}
 
-					<div class='buttonContainer'>
+					<div className='buttonContainer'>
 						<Link to='/cosdecumparaturi'>
-							<Button class='button' onClick={computeProductCart}>
+							<Button className='button' onClick={computeProductCart}>
 								ADAUGĂ ÎN COȘ
 							</Button>
 						</Link>
-						<div class='detailsContainer'>
+						<div className='detailsContainer'>
 							<p>
 								Material: lemn natural <br />
 								Dimensiune: 30x40 cm <br />

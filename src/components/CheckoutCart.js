@@ -20,7 +20,6 @@ export const CheckoutCart = () => {
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
 	const products = useSelector(selectProducts);
-	console.log(storedProducts);
 
 	const columns = [
 		{ id: 'image', label: 'Articol' },

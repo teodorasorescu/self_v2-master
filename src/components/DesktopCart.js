@@ -32,13 +32,13 @@ export const DesktopCart = () => {
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
+				key={color[0]}
 				style={{
 					width: '40px',
 					height: '30px',
 					borderRadius: '3px',
 					margin: '1%',
 					marginTop: '5%',
-					// backgroundColor: 'black',
 					background: `rgba(${color[0][1]}, ${color[1][1]}, ${color[2][1]}, ${color[3][1]})`,
 				}}
 			></div>
@@ -57,7 +57,7 @@ export const DesktopCart = () => {
 	return (
 		<div className={styles.cart}>
 			<div className={styles.hContainer}>
-				<h>Coșul tău</h>
+				<h1>Coșul tău</h1>
 			</div>
 			{storedProducts.length === 0 && setItemCount(0)}
 			{storedProducts.length === 0 ? (

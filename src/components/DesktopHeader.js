@@ -36,7 +36,7 @@ const DesktopHeader = () => {
 			</div>
 			<div className={styles.stillPositionContainer}>
 				<div className={styles.upperContainer}>
-					<h>self.</h>
+					<h1>self.</h1>
 					<div className={styles.icon}>
 						<Link to='/cosdecumparaturi' style={{ color: 'black' }}>
 							<Badge
