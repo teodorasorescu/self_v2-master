@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Pacifico&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Literata:ital,opsz@1,7..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@media screen and (min-width: 1024px) {
+	.promotionTextContainer {
+		height: 30px;
+		width: 100%;
+		position: relative;
+		top: 0;
+		vertical-align: baseline;
+		background-image: linear-gradient(
+			103.3deg,
+			rgba(248, 221, 170, 0.244) 30%,
+			rgb(247, 196, 221) 55.7%,
+			rgba(162, 186, 245, 1) 81.8%
+		);
+		display: flex;
+		flex-direction: row; //default value
+		align-items: center;
+		justify-content: space-evenly;
+		font-family: 'Roboto', sans-serif;
+		text-decoration: none;
+		color: rgb(0, 0, 0);
+		font-size: 15px;
+		font-weight: 600;
+		padding-top: 1%;
+
+		.socialMediaLogo {
+			display: inline-block;
+			vertical-align: top;
+			list-style: none;
+			margin: 0;
+			top: 0;
+			line-height: 15px;
+			color: black;
+			position: absolute;
+			left: 5px;
+
+			.socialMediaIcons {
+				width: 25px;
+				height: 25px;
+				margin: none;
+				border: none;
+			}
+		}
+
+		.contactText {
+			display: flex;
+			flex-direction: row;
+			list-style: none;
+			margin: 0;
+			font-weight: 500;
+			position: absolute;
+			right: 5px;
+		}
+	}
+	.stillPositionContainer {
+		justify-content: space-evenly;
+
+		.upperContainer {
+			height: 150px;
+			width: 100%;
+			background-color: rgb(255, 255, 255);
+			font-family: 'Liberata', serif;
+			justify-content: center;
+			display: flex;
+			flex-direction: row;
+			line-height: 150px;
+
+			> h {
+				font-size: 70px;
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		.icon {
+			// padding: 0;
+			// margin: 0;
+			// display: inline-block;
+			text-decoration: none;
+			font-family: 'Roboto', sans-serif;
+			color: rgb(0, 0, 0);
+			width: 90px;
+			position: absolute;
+
+			right: 18%;
+			line-height: 160px;
+
+			.iconSize {
+				font-size: 30px;
+			}
+		}
+
+		.underContainer {
+			position: sticky;
+			top: 150px;
+			bottom: auto;
+			height: 60px;
+			width: 100%;
+			background-color: rgb(255, 255, 255);
+
+			//background-color: rgb(204, 204, 231);
+			// background-color: rgba(248, 221, 170, 0.244);
+			border-top: 0.1ch solid rgba(159, 153, 153, 0.379);
+			display: flex;
+			flex-direction: row; //default value
+			align-items: center;
+			justify-content: space-evenly;
+			.link {
+				text-decoration: none;
+				font-family: 'Roboto', sans-serif;
+				color: rgb(0, 0, 0);
+				font-weight: 400;
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+//smartphone size
+@media screen and (max-width: 1024px) {
+	.promotionTextContainer {
+		height: 35px;
+		@media screen and (max-width: 280px) {
+			height: 45px;
+		}
+		width: 100%;
+		position: relative;
+		top: 0;
+		padding-top: 1%;
+		// vertical-align: baseline;
+		background-image: linear-gradient(
+			103.3deg,
+			rgba(248, 221, 170, 0.244) 30%,
+			rgb(247, 196, 221) 55.7%,
+			rgba(162, 186, 245, 1) 81.8%
+		);
+		display: block;
+
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		text-decoration: none;
+		color: rgb(0, 0, 0);
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	.stillPositionContainer {
+		justify-content: space-between;
+		display: flex;
+		margin-left: 40px;
+		align-items: center;
+		.shoppingButton {
+			padding-right: 7%;
+			margin: 0;
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+			.iconSize {
+				size: small;
+				font-size: 25px;
+			}
+		}
+
+		.link {
+			text-decoration: none;
+			font-family: 'Roboto', sans-serif;
+			color: rgb(0, 0, 0);
+			font-weight: 400;
+			font-size: 18px;
+		}
+
+		> drawerlink {
+			text-decoration: none;
+			font-family: 'Roboto', sans-serif;
+			color: rgb(0, 0, 0);
+			font-weight: 400;
+			font-size: 40px;
+		}
+		> h {
+			position: relative;
+			left: -25px;
+			font-size: 70px;
+			display: flex;
+			text-align: center;
+			font-family: 'Liberata', serif;
+		}
+
+		.socialMediaLogo {
+			list-style: none;
+			color: pink;
+			position: absolute;
+			left: 5px;
+			display: flex;
+			flex-direction: row;
+			top: 200px;
+
+			.socialMediaIcons {
+				width: 25px;
+				height: 25px;
+				margin: none;
+				border: none;
+			}
+		}
+		.contactText {
+		}
+	}
+}

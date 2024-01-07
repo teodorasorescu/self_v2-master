@@ -1,0 +1,47 @@
+.container {
+	// @media screen and (max-width: 1025px) {
+	// 	height: 11vw;
+	// }
+
+	// @media screen and (max-width: 300px) {
+	// 	height: 13vw;
+	// }
+
+	// @media screen and (width: 1024px) {
+	// 	height: 6vw;
+	// }
+	// @media screen and (width: 1024px) {
+	// 	height: 6vw;
+	// }
+
+	// width: 1vw;
+
+	// background-color: rgba(85, 79, 79, 0.315);
+	
+	.resumeContainer {
+        display: flex;
+		flex-direction: column;
+		transition: all .5s ease-in-out;
+		overflow: hidden;
+		width: 100vw;
+
+
+		.textContainer {
+			vertical-align: middle;
+			display: flex;
+			width: 100vw;
+			flex-direction: row;
+			color: rgba(107, 107, 105, 0.973);
+			justify-content: space-around;
+			cursor: pointer;
+		}
+
+		.cartContainer {
+			transition: all .5s ease-in-out;
+		}
+	}
+
+	.resumeContainer:target {
+		height: 40vh;
+	}
+}

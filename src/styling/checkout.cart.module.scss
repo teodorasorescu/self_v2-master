@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@media screen and (min-width: 1025px) {
+	.container {
+		position: relative;
+		bottom: 100px;
+		// width: 100vw;
+		padding: 0;
+		font-family: 'Roboto', serif;
+		// background-color: rgba(248, 221, 170, 0.2);
+
+		.priceContainer {
+			display: flex;
+			flex-direction: column;
+
+			.pLeftContainer {
+				padding: 14px 0 0px 15px;
+				display: flex;
+				flex-direction: row;
+				font-size: 90%;
+				.pRightContainer {
+					font-weight: 600;
+					text-align: right;
+					position: absolute;
+					left: 85%;
+				}
+				.pTransportContainer {
+					font-weight: 500;
+					text-align: right;
+					position: absolute;
+					left: 85%;
+				}
+			}
+
+			.pTotalContainer {
+				padding: 0px 0 0px 15px;
+				display: flex;
+				flex-direction: row;
+				font-weight: 600;
+				font-size: large;
+
+				.totalValueContainer {
+					text-align: right;
+					position: absolute;
+					left: 81%;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.cartContainer {
+		//surface pro?
+		@media screen and (width: 1024px) {
+		padding-left: 10%;
+		}
+		//ipad
+		@media screen and (max-width: 950px) {
+			padding-left: 6%;
+			padding-right: 10%;
+		}
+
+		@media screen and (max-width: 450px) {
+			padding:0;
+		}
+
+		background-color: rgba(248, 221, 170, 0.2);
+		border-bottom: 2px solid rgba(248, 221, 170, 0.8);
+		border-top: 2px solid rgba(248, 221, 170, 0.8);
+		.container {
+			overflow: hidden;
+			position: relative;
+
+			@media screen and (width: 1024px) {
+				width: 80vw;
+				// padding-left: 15%;
+			}
+
+
+			transition: all 0.5s ease-in-out;
+
+			.priceContainer {
+				display: flex;
+				flex-direction: column;
+				transition: all 0.5s ease-in-out;
+
+				.pLeftContainer {
+					color: gray;
+					padding: 14px 0 0px 15px;
+					display: flex;
+					flex-direction: row;
+					font-size: 90%;
+
+					.pRightContainer {
+						color: black;
+						text-align: right;
+						position: absolute;
+						@media screen and (max-width: 600px) {
+							left: 80%;
+						}
+						@media screen and (max-width: 320px) {
+							left: 76%;
+						}
+						left: 73vw;
+					}
+					.pTransportContainer {
+						font-weight: 500;
+						text-align: right;
+						position: absolute;
+						@media screen and (max-width: 600px) {
+							left: 80%;
+						}
+
+						@media screen and (max-width: 320px) {
+							left: 76%;
+						}
+
+						left: 73vw;
+					}
+				}
+
+				.pTotalContainer {
+					padding: 0px 0 0px 15px;
+					display: flex;
+					flex-direction: row;
+					font-weight: 600;
+					font-size: large;
+
+					.totalValueContainer {
+						text-align: right;
+						position: absolute;
+						left: 71.5vw;
+						@media screen and (max-width: 600px) {
+							left: 75%;
+						}
+
+						@media screen and (max-width: 320px) {
+							left: 70%;
+						}
+
+						// @media screen and (min-width: 600px) {
+						// 	left: 68vw;
+
+						// }
+
+						font-weight: 550;
+					}
+				}
+			}
+		}
+
+		.container:target {
+			transition: all 0.5s ease-in-out;
+
+			height: 40vh;
+		}
+	}
+}

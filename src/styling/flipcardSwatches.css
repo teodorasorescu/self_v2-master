@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Literata:ital,opsz@1,7..72&display=swap');
+
+@media screen and (min-width: 1025px) {
+	.body {
+		.container {
+			width: 50vw;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			align-items: center;
+			padding-top: 5%;
+			padding-bottom: 5%;
+
+			.bodySwatches {
+				display: flex;
+				flex-direction: 'row';
+				align-self: flex-start;
+			}
+
+			.gradientDiv {
+				transform-style: preserve-3d;
+				/* border-radius: 20px; */
+				box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
+				/* transition: all 0.1s ease; */
+				justify-content: center;
+
+				position: relative;
+
+				left: -5vw;
+				top: 0;
+				width: 35vw;
+				height: 80vh;
+				overflow: initial;
+			}
+
+			.imageSlideCorner {
+				transition: all 0.1s ease;
+
+				justify-content: center;
+				position: relative;
+				left: -6vw;
+				top: -31vh;
+
+				width: 7vw;
+				height: 15vh;
+			}
+
+			.descriptionContainer {
+				width: 20vw;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				font-family: Roboto, serif;
+				text-align: left;
+				justify-content: center;
+				.titleContainer {
+					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+					width: 20vw;
+
+					> h {
+						font-size: xx-large;
+						font-style: italic;
+					}
+				}
+
+				.paragraphContainer {
+					padding-top: 5%;
+					width: 20vw;
+
+					> p {
+						font-family: 'Roboto';
+						padding-top: 10%;
+					}
+				}
+
+				.buttonContainer {
+					padding-top: 10%;
+					padding-bottom: 5%;
+
+					.button {
+						width: 20vw;
+						height: 6vh;
+						font-family: 'Roboto';
+						border: 0.1px solid rgba(221, 204, 174, 0);
+						/* border-radius: 10px; */
+						/* margin-left: 3%; */
+						/* box-shadow: rgba(0, 0, 0, 0.116) 0px 1px 1px;  */
+						text-align: center;
+						font-size: 90%;
+						transition: all 0.1s ease;
+						background-color: rgba(248, 221, 170, 0.484);
+						cursor: pointer;
+					}
+
+					.button:hover {
+						text-decoration: none;
+						transition: none;
+						background-color: rgba(248, 221, 170, 0.8);
+					}
+				}
+
+				.detailsContainer {
+					align-self: flex-start;
+				}
+			}
+
+			.current {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.body {
+		padding-left: 0%;
+		margin-left: 0%;
+		border-left: 0;
+		.container {
+			flex-direction: column;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 0;
+			font-family: Roboto, serif;
+			display: flex;
+			width: 100vw;
+
+			.bodySwatches {
+				display: flex;
+				flex-direction: 'row';
+				justify-content: center;
+			}
+
+			.gradientDiv {
+				padding-left: 0%;
+				margin-left: 0%;
+				border-left: 0%;
+				width: 100vw;
+				height: 70vh;
+				
+
+			}
+			@media screen and (width: 1024px) {
+			.gradientDiv {
+				padding-left: 2%;
+				margin-left: 0%;
+				border-left: 0%;
+				width: 100vw;
+				height: 70vh;
+				display: flex;
+			}
+		}
+
+			.columnFlex {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.descriptionContainer {
+				width: 95vw;
+				font-family: Roboto, serif;
+				text-align: left;
+				justify-content: center;
+				.bodySwatches {
+					display: flex;
+					flex-direction: 'row';
+
+					position: relative;
+					bottom: 35vh;
+
+					justify-content: center;
+				}
+				.titleContainer {
+					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+					padding-left: 1%;
+					> h {
+						font-size: xx-large;
+						font-style: italic;
+					}
+				}
+
+				.paragraphContainer {
+					padding-top: 5%;
+					padding-left: 1%;
+
+					> p {
+						font-family: 'Roboto', sans-serif;
+						margin-left: 0;
+					}
+				}
+
+				.buttonContainer {
+					padding-bottom: 2%;
+					.button {
+						width: 100vw;
+						height: 50px;
+						font-family: 'Roboto';
+						border: 0.1px solid rgba(221, 204, 174, 0);
+						/* text-align: center; */
+						font-size: 90%;
+						transition: all 0.1s ease;
+						background-color: rgba(248, 221, 170, 0.484);
+						cursor: pointer;
+					}
+
+					.button:hover {
+						text-decoration: none;
+						transition: none;
+						background-color: rgba(248, 221, 170, 0.8);
+					}
+
+					.detailsContainer {
+						padding-left: 1%;
+					}
+				}
+			}
+		}
+	}
+}

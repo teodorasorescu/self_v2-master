@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Literata:ital,opsz@1,7..72&display=swap');
+
+.container {
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-family: 'Liberata', serif;
+	font-size: 70px;
+	text-align: center;
+
+	.textContainer {
+		// opacity: 1;
+		@media screen and (max-width: 1024px) {
+			width: 100vw;
+			font-size: 8vw;
+
+		}
+		@media screen and (min-width: 880px) {
+			width: 100vw;
+			font-size: 4vw;
+
+		}
+		padding: 2%;
+		margin: 3%;
+		width: 55vw;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-size: 2.5vw;
+		font-weight: 400;
+
+		color: #0f1928;
+		box-sizing: border-box;
+		border-collapse: separate;
+		font-weight: 550;
+		// padding: 2%;
+	}
+
+	.sustenabilityTextContainer {
+		padding: 1%;
+		margin: 3%;
+		width: 80%;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-size: 25px;
+
+		color: #0f1928;
+		box-sizing: border-box;
+		border-collapse: separate;
+		// padding: 2%;
+
+		> img {
+			width: 70px;
+		}
+	}
+	@mixin myContainer($color, $url) {
+		width: 100%;
+		background-color: rgb(255, 255, 255);
+		background-repeat: no-repeat;
+		background-size:contain;
+
+		background-image: url($url);
+		@media screen and (max-width: 1024px) {
+			background-size:cover
+		}
+		background-position: center;
+		transition: all 0.05s;
+		height: calc(100vh - 70px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.imgContainer {
+		@include myContainer(black, '../images/img 2.JPG');
+	}
+}
+
+.products {
+	//  width: 100%;
+	padding: 2%;
+	margin: 3%;
+	width: 90%;
+	display: flex;
+	// align-items: center;
+	flex-direction: row;
+	// justify-content: space-evenly;
+	font-family: 'Liberata', serif;
+	//font-size: px;
+	text-align: center;
+	cursor: grab;
+}

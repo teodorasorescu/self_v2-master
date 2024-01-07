@@ -1,0 +1,39 @@
+.swatch {
+	padding: 5px;
+	border-radius: 2px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.popover {
+	position: absolute;
+	@media screen and (min-width: 1025px) {
+		right: 32vw;
+	}
+
+	@media screen and (max-width: 800px) {
+		justify-content: center;
+		right: 39vw;
+	}
+
+	
+	@media screen and (max-width: 500px) {
+		justify-content: center;
+		right: 23vw;
+	}
+
+	@media screen and (max-width: 280px) {
+		justify-content: center;
+		right: 10vw;
+	}
+	
+
+}
+
+.cover {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
