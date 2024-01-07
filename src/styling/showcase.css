@@ -1,10 +1,12 @@
-
-
 /* clearfix class */
 .clearfix {
 	zoom: 1;
 }
 
+.container {
+	padding: 3%;
+	text-align: center;
+}
 .clearfix:after {
 	content: '.';
 	clear: both;
@@ -23,29 +25,26 @@
 	font-style: italic;
 	font-family: Roboto, serif;
 	font-weight: 600;
-	font-size:xx-large
+	font-size: xx-large;
 }
 .section-houses {
-
 	position: relative;
 	left: 15%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 	/* padding-left:10%; */
 }
 
 .houses-showcase {
 	list-style: none;
 	width: 80%;
-
 }
 
 .houses-showcase li {
 	width: 40%;
-	float:left;
+	float: left;
 	padding: 1%;
-
 }
 
 .photo {

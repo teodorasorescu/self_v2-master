@@ -5,6 +5,10 @@
 	cursor: pointer;
 }
 
+.container {
+	touch-action: none;
+}
+
 .popover {
 	position: absolute;
 	@media screen and (min-width: 1025px) {
@@ -16,7 +20,6 @@
 		right: 39vw;
 	}
 
-	
 	@media screen and (max-width: 500px) {
 		justify-content: center;
 		right: 23vw;
@@ -26,8 +29,6 @@
 		justify-content: center;
 		right: 10vw;
 	}
-	
-
 }
 
 .cover {

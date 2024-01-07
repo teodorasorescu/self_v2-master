@@ -38,7 +38,11 @@ export function SwatchGradient({ color, setColor }) {
 			{displayColorPicker ? (
 				<div className={styleSwatch.popover}>
 					<div className={styleSwatch.cover} onClick={handleClose} />
-					<SketchPicker color={color} onChange={handleChange} />
+					<SketchPicker
+						className={styleSwatch.container}
+						color={color}
+						onChange={handleChange}
+					/>
 				</div>
 			) : null}
 		</div>

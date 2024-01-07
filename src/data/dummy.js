@@ -6,7 +6,6 @@ export const cartProductsGrid = [
 		headerText: 'Articol',
 		width: '150',
 		height: 'auto',
-		//template: gridEmployeeProfile,
 		textAlign: 'Center',
 	},
 

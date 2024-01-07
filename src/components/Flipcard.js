@@ -23,7 +23,6 @@ const Flipcard = () => {
 			description: description,
 		};
 
-		// console.log('image, title, descrp: ' + image + title);
 		dispatch(loadProduct(product));
 	};
 
@@ -43,7 +42,6 @@ const Flipcard = () => {
 					>
 						<div class='inner color-white'>
 							<h3 class='flip-box-header'>"Foarte frumos"</h3>
-							{/* <p>A short sentence describing this callout is.</p> */}
 							<Link to='alegeculorile'>
 								<button
 									class='flip-box-button'
@@ -55,7 +53,7 @@ const Flipcard = () => {
 										)
 									}
 								>
-									Personalizeaza-ti tabloul
+									Personalizează tabloul
 								</button>
 							</Link>
 						</div>
@@ -93,7 +91,7 @@ const Flipcard = () => {
 										)
 									}
 								>
-									Personalizeaza-ti tabloul
+									Personalizează tabloul
 								</button>
 							</Link>
 						</div>
@@ -119,7 +117,6 @@ const Flipcard = () => {
 					>
 						<div class='inner color-white'>
 							<h3 class='flip-box-header'>"Foarte frumos"</h3>
-							{/* <p>A short sentence describing this callout is.</p> */}
 							<Link to='alegeculorile'>
 								<button
 									onClick={() =>
@@ -131,7 +128,7 @@ const Flipcard = () => {
 									}
 									class='flip-box-button'
 								>
-									Personalizeaza-ti tabloul
+									Personalizează tabloul
 								</button>
 							</Link>
 						</div>

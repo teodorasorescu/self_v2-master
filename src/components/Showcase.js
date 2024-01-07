@@ -3,7 +3,7 @@ import '../styling/showcase.css';
 export const Showcase = ({ jpg }) => {
 	return (
 		<div>
-			<div style={{ padding: '3%' }}>
+			<div className='container'>
 				<h className='text'>Inspirație</h>
 			</div>
 			<section className='section-houses'>
