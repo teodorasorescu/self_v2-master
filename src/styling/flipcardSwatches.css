@@ -21,13 +21,9 @@
 
 			.gradientDiv {
 				transform-style: preserve-3d;
-				/* border-radius: 20px; */
 				box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
-				/* transition: all 0.1s ease; */
 				justify-content: center;
-
 				position: relative;
-
 				left: -5vw;
 				top: 0;
 				width: 35vw;
@@ -60,7 +56,7 @@
 					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 					width: 20vw;
 
-					> h {
+					> h1 {
 						font-size: xx-large;
 						font-style: italic;
 					}
@@ -85,14 +81,12 @@
 						height: 6vh;
 						font-family: 'Roboto';
 						border: 0.1px solid rgba(221, 204, 174, 0);
-						/* border-radius: 10px; */
-						/* margin-left: 3%; */
-						/* box-shadow: rgba(0, 0, 0, 0.116) 0px 1px 1px;  */
 						text-align: center;
 						font-size: 90%;
 						transition: all 0.1s ease;
 						background-color: rgba(248, 221, 170, 0.484);
 						cursor: pointer;
+						text-decoration: none;
 					}
 
 					.button:hover {
@@ -143,19 +137,17 @@
 				border-left: 0%;
 				width: 100vw;
 				height: 70vh;
-				
-
 			}
 			@media screen and (width: 1024px) {
-			.gradientDiv {
-				padding-left: 2%;
-				margin-left: 0%;
-				border-left: 0%;
-				width: 100vw;
-				height: 70vh;
-				display: flex;
+				.gradientDiv {
+					padding-left: 2%;
+					margin-left: 0%;
+					border-left: 0%;
+					width: 100vw;
+					height: 70vh;
+					display: flex;
+				}
 			}
-		}
 
 			.columnFlex {
 				display: flex;
@@ -179,7 +171,7 @@
 				.titleContainer {
 					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 					padding-left: 1%;
-					> h {
+					> h1 {
 						font-size: xx-large;
 						font-style: italic;
 					}
@@ -202,11 +194,11 @@
 						height: 50px;
 						font-family: 'Roboto';
 						border: 0.1px solid rgba(221, 204, 174, 0);
-						/* text-align: center; */
 						font-size: 90%;
 						transition: all 0.1s ease;
 						background-color: rgba(248, 221, 170, 0.484);
 						cursor: pointer;
+						text-decoration: none;
 					}
 
 					.button:hover {

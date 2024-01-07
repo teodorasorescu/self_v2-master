@@ -11,13 +11,7 @@ import Badge from '@material-ui/core/Badge';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
-import {
-	IconButton,
-	Drawer,
-	MenuItem,
-	Button,
-	Toolbar,
-} from '@material-ui/core';
+import { IconButton, Drawer, MenuItem, Toolbar } from '@material-ui/core';
 
 const headersData = [
 	{
@@ -74,10 +68,8 @@ const SmartphoneHeader = () => {
 							fontSize: '20px',
 							fontFamily: "'Roboto', sans-serif",
 							paddingTop: '3%',
-
 						}}
 						onClick={closeDrawer}
-
 					>
 						{label}
 					</MenuItem>
@@ -208,12 +200,11 @@ const SmartphoneHeader = () => {
 					</Drawer>
 				</Toolbar>
 
-				<h>self.</h>
+				<h1>self.</h1>
 				<div className={styles.shoppingButton}>
 					<Link to='/cosdecumparaturi' style={{ color: 'black' }}>
 						<Badge
 							color='primary'
-							// color='pr'
 							className={styles.iconSize}
 							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
 						>

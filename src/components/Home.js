@@ -8,11 +8,11 @@ const Home = () => {
 			<div className={styles.container}>
 				<div className={styles.imgContainer}></div>
 				<div className={styles.textContainer}>
-					<h>
+					<h1>
 						Suntem uniunea dintre minte, suflet și corp. <br />
 						Creează-ți un mediu care să reprezinte ființa ta și exprimă-ți
 						sentimentele prin culori.
-					</h>
+					</h1>
 				</div>
 			</div>
 			<Flipcard />

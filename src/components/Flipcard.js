@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import '../styling/flipcard.css';
-import Mind from '../images/mind.jpg';
-import Soul from '../images/soul.jpg';
-import Body from '../images/body.jpg';
-import { useSelector } from 'react-redux';
-import { selectProduct } from '../reducers/productSlice';
-import { productMind } from '../images/mind_buy.jpg';
-import { productBody } from '../images/body_buy.jpg';
-import { productSoul } from '../images/Soul_Buy.jpg';
+import Mind from '../images/mind.png';
+import Soul from '../images/soul.png';
+import Body from '../images/body.png';
 import { useDispatch } from 'react-redux';
 import { loadProduct } from '../reducers/productSlice';
 import { Link } from 'react-router-dom';
@@ -27,24 +22,24 @@ const Flipcard = () => {
 	};
 
 	return (
-		<div class='box-container'>
-			<div class='box-item'>
-				<div class='flip-box'>
+		<div className='box-container'>
+			<div className='box-item'>
+				<div className='flip-box'>
 					<div
-						class='flip-box-front text-center'
+						className='flip-box-front text-center'
 						style={{ backgroundImage: `url(${Mind})` }}
 					>
-						<div class='inner color-white'></div>
+						<div className='inner color-white'></div>
 					</div>
 					<div
-						class='flip-box-back text-center'
+						className='flip-box-back text-center'
 						style={{ backgroundImage: `url(${Mind})` }}
 					>
-						<div class='inner color-white'>
-							<h3 class='flip-box-header'>"Foarte frumos"</h3>
+						<div className='inner color-white'>
+							{/* <h3 className='flip-box-header'>"Foarte frumos"</h3> */}
 							<Link to='alegeculorile'>
 								<button
-									class='flip-box-button'
+									className='flip-box-button'
 									onClick={() =>
 										computeProduct(
 											'mind_buy.jpg',
@@ -65,24 +60,22 @@ const Flipcard = () => {
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>120 lei</p>
 			</div>
-			<div class='box-item'>
-				<div class='flip-box'>
+			<div className='box-item'>
+				<div className='flip-box'>
 					<div
-						class='flip-box-front text-center'
+						className='flip-box-front text-center'
 						style={{ backgroundImage: `url(${Soul})` }}
 					>
-						<div class='inner color-white'></div>
+						<div className='inner color-white'></div>
 					</div>
 					<div
-						class='flip-box-back text-center'
+						className='flip-box-back text-center'
 						style={{ backgroundImage: `url(${Soul})` }}
 					>
-						<div class='inner color-white'>
-							<h3 class='flip-box-header'>"Foarte frumos"</h3>
-							{/* <p>A short sentence describing this callout is.</p> */}
+						<div className='inner color-white'>
 							<Link to='alegeculorile'>
 								<button
-									class='flip-box-button'
+									className='flip-box-button'
 									onClick={() =>
 										computeProduct(
 											'Soul_Buy.jpg',
@@ -103,20 +96,20 @@ const Flipcard = () => {
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>120 lei</p>
 			</div>
-			<div class='box-item'>
-				<div class='flip-box'>
+			<div className='box-item'>
+				<div className='flip-box'>
 					<div
-						class='flip-box-front text-center'
+						className='flip-box-front text-center'
 						style={{ backgroundImage: `url(${Body})` }}
 					>
-						<div class='inner color-white'></div>
+						<div className='inner color-white'></div>
 					</div>
 					<div
-						class='flip-box-back text-center'
+						className='flip-box-back text-center'
 						style={{ backgroundImage: `url(${Body})` }}
 					>
-						<div class='inner color-white'>
-							<h3 class='flip-box-header'>"Foarte frumos"</h3>
+						<div className='inner color-white'>
+							{/* <h3 className='flip-box-header'>"Foarte frumos"</h3> */}
 							<Link to='alegeculorile'>
 								<button
 									onClick={() =>
@@ -126,7 +119,7 @@ const Flipcard = () => {
 											'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.'
 										)
 									}
-									class='flip-box-button'
+									className='flip-box-button'
 								>
 									Personalizează tabloul
 								</button>

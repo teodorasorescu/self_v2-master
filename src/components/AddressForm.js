@@ -12,7 +12,6 @@ export const AddressForm = () => {
 
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
-		console.log(customer);
 	};
 
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
@@ -22,25 +21,14 @@ export const AddressForm = () => {
 		heightT = '11vh';
 	}
 
-
-
-
 	function handleSubmit(e) {
 		e.preventDefault();
 		e.stopPropagation();
-
-		if (e.target.checkValidity() === false) {
-			console.log('Not submitted');
-		} else {
-			console.log('Submitted!');
-		}
-
 		e.target.classList.add('was-validated');
 	}
 
 	const setCustomerField = () => {
 		const newsletterChanged = !customer.newsletter;
-		console.log(newsletterChanged);
 		setCustomer({ ...customer, newsletter: newsletterChanged });
 	};
 
@@ -70,11 +58,11 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div class='invalid-feedback'>Introdu un e-mail</div>
+							<div className='invalid-feedback'>Introdu un e-mail</div>
 						</div>
-						<div class='form-check' style={{ paddingBottom: '2%' }}>
+						<div className='form-check' style={{ paddingBottom: '2%' }}>
 							<input
-								class='form-check-input'
+								className='form-check-input'
 								id='newsletter'
 								type='checkbox'
 								name='newsletter'
@@ -83,7 +71,7 @@ export const AddressForm = () => {
 								style={{ paddingBottom: '2%' }}
 							/>
 							<label
-								class='form-check-label'
+								className='form-check-label'
 								for='newsletter'
 								style={{
 									maxInlineSize: '100%',
@@ -114,7 +102,7 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div class='invalid-feedback'>Introdu un prenume</div>
+							<div className='invalid-feedback'>Introdu un prenume</div>
 						</div>
 						<div className='form-group'>
 							<input
@@ -130,7 +118,7 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div class='invalid-feedback'>Introdu un nume</div>
+							<div className='invalid-feedback'>Introdu un nume</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<input
@@ -144,7 +132,7 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div class='invalid-feedback'>Introdu o adresă</div>
+							<div className='invalid-feedback'>Introdu o adresă</div>
 						</div>
 
 						<div className='form-group' style={{ paddingTop: '2%' }}>
@@ -185,9 +173,9 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div class='invalid-feedback'>Introdu o localitate</div>
+							<div className='invalid-feedback'>Introdu o localitate</div>
 						</div>
-						<div className='form-group ' gray-200 style={{ paddingTop: '2%' }}>
+						<div className='form-group' gray-200 style={{ paddingTop: '2%' }}>
 							<select
 								className='form-select'
 								id='state'
@@ -204,9 +192,9 @@ export const AddressForm = () => {
 									return <option value={`state-${index}`}>{state}</option>;
 								})}
 							</select>
-							<div class='invalid-feedback'>
+							<div className='invalid-feedback'>
 								{' '}
-								<div class='invalid-feedback'>Introdu un județ</div>
+								<div className='invalid-feedback'>Introdu un județ</div>
 							</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
@@ -225,7 +213,7 @@ export const AddressForm = () => {
 									return <option key={`country-${index}`}>{country}</option>;
 								})}
 							</select>
-							<div class='invalid-feedback'>Introdu o țară</div>
+							<div className='invalid-feedback'>Introdu o țară</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<input
@@ -239,11 +227,13 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div class='invalid-feedback'>Introdu un număr de telefon</div>
+							<div className='invalid-feedback'>
+								Introdu un număr de telefon
+							</div>
 						</div>
 					</div>
 					<Shipping />
-					
+
 					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
 						<button
 							class='btn btn-primary'
@@ -254,9 +244,7 @@ export const AddressForm = () => {
 						</button>
 					</div>
 				</form>
-		
 			</div>
-			
 		</div>
 	);
 };

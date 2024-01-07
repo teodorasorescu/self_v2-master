@@ -69,7 +69,7 @@ const CartActions = ({ quantity, productId }) => {
 					<input
 						type='button'
 						value='-'
-						class='button-minus'
+						className='button-minus'
 						data-field='quantity'
 						onClick={() => {
 							decrementQuantity(productId);
@@ -92,7 +92,7 @@ const CartActions = ({ quantity, productId }) => {
 				<input
 					type='button'
 					value='+'
-					class='button-plus'
+					className='button-plus'
 					data-field='quantity'
 					onClick={() => {
 						incrementQuantity(productId);

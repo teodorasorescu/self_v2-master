@@ -9,7 +9,6 @@ export const productsSlice = createSlice({
 	reducers: {
 		loadProducts: (state, action) => {
 			state.products = action.payload;
-			console.log(state.products);
 			localStorage.setItem('products', JSON.stringify(state.products));
 		},
 	},
