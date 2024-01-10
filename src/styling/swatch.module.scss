@@ -11,8 +11,8 @@
 
 .popover {
 	position: absolute;
+	display: block;
 	@media screen and (min-width: 1025px) {
-		right: 32vw;
 	}
 
 	@media screen and (max-width: 800px) {

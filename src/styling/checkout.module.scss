@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Literata:ital,opsz@1,7..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .container {
 	height: auto;
@@ -8,14 +9,10 @@
 
 	.fixedContainer {
 		position: sticky;
-		// top: 100;
-		// z-index: 0;
-		font-family: 'Liberata', serif;
-		// padding: 5%;
+		font-family: 'Raleway', sans-serif;
 		display: block;
 		.textP {
-			font-family: Roboto;
-			// padding-top: 5%;
+			font-family: 'Raleway', sans-serif;
 		}
 	}
 
@@ -37,20 +34,11 @@
 		align-items: center;
 
 		.text {
-			font-family: 'Liberata', serif;
+			font-family: 'Raleway', sans-serif;
 			padding: 5%;
-			// opacity: 1;
-			// text-decoration: none;
-			// color: rgb(0, 0, 0);
-			// font-weight: 500;
-			// letter-spacing: 0.6px;
-			// font-family: Roboto;
-
-			// font-size: 100px;
 
 			.textP {
-				font-family: Roboto;
-				// font-size: 12px;
+				font-family: 'Raleway', sans-serif;
 				padding-top: 5%;
 			}
 		}
@@ -73,6 +61,5 @@
 				rgb(255, 255, 255)
 			);
 		}
-	
 	}
 }

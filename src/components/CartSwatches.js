@@ -1,4 +1,3 @@
-import { Widgets } from '@material-ui/icons';
 import React from 'react';
 
 export const CartSwatches = ({ colors }) => {

@@ -1,14 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import ColorPickerGradient from './components/ColorPickerGradient';
 import { Cart } from './components/Cart';
 import { Checkout } from './components/Checkout';
 import { useStateContext } from './contexts/ContextProvider';
 import Inspiration from './components/Inspiration';
+import ColorPsychologyPage from './components/ColorPsychologyPage';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -26,9 +25,13 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/alegeculorile' element={<ColorPickerGradient />} />
-					<Route path='/cosdecumparaturi' element={<Cart />} />
+					<Route path='/cos-de-cumparaturi' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiratie' element={<Inspiration />} />
+					<Route
+						path='/psihologia-culorilor'
+						element={<ColorPsychologyPage />}
+					/>
 				</Routes>
 				{/* <Footer/> */}
 			</BrowserRouter>

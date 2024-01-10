@@ -1,10 +1,9 @@
-/* clearfix class */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 .clearfix {
 	zoom: 1;
 }
 
 .container {
-	padding: 3%;
 	text-align: center;
 }
 .clearfix:after {
@@ -21,11 +20,10 @@
 }
 
 .text {
+	padding-top: 3%;
+	padding-bottom: 3%;
 	text-align: center;
-	font-style: italic;
-	font-family: Roboto, serif;
-	font-weight: 600;
-	font-size: xx-large;
+	font-family: 'Raleway', sans-serif;
 }
 .section-houses {
 	position: relative;

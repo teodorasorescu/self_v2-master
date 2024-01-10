@@ -1,17 +1,15 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
-
 import { useStateContext } from '../contexts/ContextProvider';
-
 import styles from '../styling/header.module.scss';
 import FacebookIcon from '../images/facebook_logo.png';
 import InstaIcon from '../images/instagram_logo.png';
 import TikTokIcon from '../images/tiktok_logo.png';
 import Badge from '@material-ui/core/Badge';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
-import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@material-ui/core';
+import ShoppingBag from '../images/shopping-bag.png';
 
 const headersData = [
 	{
@@ -20,7 +18,7 @@ const headersData = [
 	},
 	{
 		label: 'Psihologia Culorilor',
-		href: '/psihologiaculorilor',
+		href: '/psihologia-culorilor',
 	},
 	{
 		label: 'Inspirație',
@@ -167,6 +165,7 @@ const SmartphoneHeader = () => {
 											border: 'none',
 										}}
 										src={FacebookIcon}
+										alt='description'
 									/>
 								</Link>
 							</MenuItem>
@@ -180,6 +179,7 @@ const SmartphoneHeader = () => {
 											border: 'none',
 										}}
 										src={InstaIcon}
+										alt='description'
 									/>
 								</Link>
 							</MenuItem>
@@ -192,6 +192,7 @@ const SmartphoneHeader = () => {
 											margin: 'none',
 											border: 'none',
 										}}
+										alt='description'
 										src={TikTokIcon}
 									/>
 								</Link>
@@ -202,13 +203,13 @@ const SmartphoneHeader = () => {
 
 				<h1>self.</h1>
 				<div className={styles.shoppingButton}>
-					<Link to='/cosdecumparaturi' style={{ color: 'black' }}>
+					<Link to='/cos-de-cumparaturi' style={{ color: 'black' }}>
 						<Badge
 							color='primary'
 							className={styles.iconSize}
 							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
 						>
-							<LocalMallOutlinedIcon className={styles.iconSize} />{' '}
+							<img src={ShoppingBag} className={styles.iconSize} />{' '}
 						</Badge>
 					</Link>
 				</div>

@@ -2,6 +2,8 @@ import { loadProducts } from '../reducers/productsSlice';
 import { useDispatch } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { useStateContext } from '../contexts/ContextProvider';
+import PropTypes from 'prop-types';
+import { noop } from 'lodash';
 
 const CartActions = ({ quantity, productId }) => {
 	const dispatch = useDispatch();
@@ -68,7 +70,7 @@ const CartActions = ({ quantity, productId }) => {
 				{quantity > 1 && (
 					<input
 						type='button'
-						value='-'
+						defaultValue='-'
 						className='button-minus'
 						data-field='quantity'
 						onClick={() => {
@@ -86,12 +88,12 @@ const CartActions = ({ quantity, productId }) => {
 					step='1'
 					name='quantity'
 					max=''
-					value={quantity}
+					defaultValue={quantity}
 				/>
 
 				<input
 					type='button'
-					value='+'
+					defaultValue='+'
 					className='button-plus'
 					data-field='quantity'
 					onClick={() => {
@@ -114,6 +116,16 @@ const CartActions = ({ quantity, productId }) => {
 			</Button>
 		</div>
 	);
+};
+
+CartActions.propTypes = {
+	quantity: PropTypes.number,
+	productId: PropTypes.number,
+};
+
+CartActions.defaultProps = {
+	quantity: noop,
+	productId: noop,
 };
 
 export default CartActions;

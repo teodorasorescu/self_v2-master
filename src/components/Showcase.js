@@ -4,13 +4,13 @@ export const Showcase = ({ jpg }) => {
 	return (
 		<div>
 			<div className='container'>
-				<h className='text'>Inspirație</h>
+				<h1 className='text'>Inspirație</h1>
 			</div>
 			<section className='section-houses'>
 				<ul className='houses-showcase clearfix'>
 					{jpg.map((el) => {
 						return (
-							<li>
+							<li key={Math.random() * 101}>
 								<figure className='photo'>
 									<img src={el.image} alt='house' />
 								</figure>

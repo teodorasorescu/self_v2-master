@@ -10,10 +10,10 @@ import { selectProduct } from '../reducers/productSlice';
 import { loadProducts } from '../reducers/productsSlice';
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
-
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import ProductCarousel from './ProductCarousel';
+import ColorPsychology from './ColorPsychology';
+
 function ColorPickerGradient() {
 	const [colorSwatch1, setColorSwatch1] = useState({
 		r: '255',
@@ -75,11 +75,11 @@ function ColorPickerGradient() {
           rgba(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}, ${colorSwatch2.a}),
           rgba(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b}, ${colorSwatch3.a}),
           rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, ${colorSwatch4.a}),
-          rgba(248, 221, 170, 0.244),
-          rgba(248, 221, 170, 0.244),
-		  rgba(248, 221, 170, 0.244),
-          rgba(248, 221, 170, 0.244),
-          rgba(248, 221, 170, 0.244)`,
+          rgba(248, 221, 170, 0.3),
+          rgba(248, 221, 170, 0.3),
+		  	  rgba(248, 221, 170, 0.3),
+          rgba(248, 221, 170, 0.3),
+          rgba(248, 221, 170, 0.3)`,
 			},
 		},
 	});
@@ -114,48 +114,19 @@ function ColorPickerGradient() {
 	return (
 		<div className='body'>
 			<div className='container'>
-				{wideScreen && (
-					<div>
-						{currentSlide == 1 && (
-							<div
-								id='Resources'
-								className='imageSlideCorner'
-								style={styles.gradient}
-								onClick={nextSlide}
-							></div>
-						)}
-						{currentSlide == 0 && (
-							<img
-								src={require(`../images/${product.image}`)}
-								className='imageSlideCorner'
-								onClick={prevSlide}
-							/>
-						)}
-					</div>
-				)}
-				<div>
-					{currentSlide == 0 && (
-						<div
-							id='Resources'
-							className='gradientDiv'
-							style={styles.gradient}
-						></div>
-					)}
-					{currentSlide == 1 && (
-						<img
-							src={require(`../images/${product.image}`)}
-							className='gradientDiv'
-						/>
-					)}
-				</div>
-				{!wideScreen && (
+				<div className='posterContainer'>
+					<ProductCarousel
+						product={product}
+						classGradient='gradientDiv'
+						styleGradient={styles.gradient}
+					/>
 					<div className='bodySwatches'>
 						<SwatchGradient color={colorSwatch1} setColor={setColorSwatch1} />
 						<SwatchGradient color={colorSwatch2} setColor={setColorSwatch2} />
 						<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
 						<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
 					</div>
-				)}
+				</div>
 				<div className='descriptionContainer'>
 					<div className='titleContainer'>
 						<h1>
@@ -172,17 +143,9 @@ function ColorPickerGradient() {
 							vedea modificările tale pe parcurs.
 						</p>
 					</div>
-					{wideScreen && (
-						<div className='bodySwatches'>
-							<SwatchGradient color={colorSwatch1} setColor={setColorSwatch1} />
-							<SwatchGradient color={colorSwatch2} setColor={setColorSwatch2} />
-							<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
-							<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
-						</div>
-					)}
 
 					<div className='buttonContainer'>
-						<Link to='/cosdecumparaturi'>
+						<Link to='/cos-de-cumparaturi'>
 							<Button className='button' onClick={computeProductCart}>
 								ADAUGĂ ÎN COȘ
 							</Button>
@@ -197,6 +160,7 @@ function ColorPickerGradient() {
 					</div>
 				</div>
 			</div>
+			<ColorPsychology />
 		</div>
 	);
 }

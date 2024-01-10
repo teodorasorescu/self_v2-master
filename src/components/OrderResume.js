@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styling/order.resume.module.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { KeyboardArrowUp } from '@material-ui/icons';
 import { useStateContext } from '../contexts/ContextProvider';
 import { CheckoutCart } from './CheckoutCart';
 
@@ -23,7 +22,7 @@ export const OrderResume = () => {
 	};
 	return (
 		<div className={styles.container}>
-			{orderResume == false && (
+			{orderResume === false && (
 				<div
 					className={styles.resumeContainer}
 					onClick={() => setOrderResumeTrue()}
@@ -36,7 +35,7 @@ export const OrderResume = () => {
 					</div>
 				</div>
 			)}
-			{orderResume == true && (
+			{orderResume === true && (
 				<div
 					className={styles.resumeContainer}
 					onClick={() => setOrderResumeFalse()}

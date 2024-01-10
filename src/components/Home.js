@@ -18,8 +18,7 @@ const Home = () => {
 			<Flipcard />
 			<div className={styles.container}>
 				<div className={styles.sustenabilityTextContainer}>
-					<img src={Responsability} />
-
+					<img src={Responsability} alt='description' />
 					<p>
 						<br />
 						Confecționarea ramelor este facută din lemn natural certificat FSC,

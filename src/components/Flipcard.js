@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styling/flipcard.css';
 import Mind from '../images/mind.png';
 import Soul from '../images/soul.png';

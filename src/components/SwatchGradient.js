@@ -1,9 +1,8 @@
 import { React, useState } from 'react';
 import reactCSS from 'reactcss';
 import { SketchPicker } from 'react-color';
-import { HexColorPicker } from 'react-colorful';
-import { getDefaultNormalizer } from '@testing-library/react';
 import styleSwatch from '../styling/swatch.module.scss';
+
 export function SwatchGradient({ color, setColor }) {
 	const [displayColorPicker, setDisplayColorPicker] = useState(false);
 

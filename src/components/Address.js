@@ -1,27 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import {
-	Avatar,
-	Box,
-	Button,
-	Grid,
-	MenuItem,
-	Paper,
-	TextField,
-	Typography,
-} from '@mui/material';
-import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import React from 'react';
+import { Box, Button, Grid, MenuItem, TextField } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
-import LoginIcon from '@mui/icons-material/Login';
 
-export const Signup = ({ setValue }) => {
-	const paperStyle = {
-		padding: 60,
-		width: '100opx',
-	};
-
+export const Signup = () => {
 	const marginTop = { marginTop: 5 };
 
 	const validationSchema = Yup.object().shape({
@@ -35,8 +18,7 @@ export const Signup = ({ setValue }) => {
 		userType: Yup.string().required('Please select an option'),
 		course: Yup.string().required('Please choose a course'),
 	});
-	// const history = useNavigate();
-	// const [users, setUsers] = useState([]);
+
 	const initialValues = {
 		firstName: '',
 		lastName: '',
@@ -44,12 +26,6 @@ export const Signup = ({ setValue }) => {
 		email: '',
 		userType: '',
 		course: '',
-	};
-
-	const [visibility, setVisibility] = useState(false);
-
-	const popupCloseHandler = (e) => {
-		//   history.push('/');
 	};
 
 	const handleSubmit = async (values) => {

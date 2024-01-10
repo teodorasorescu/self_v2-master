@@ -33,6 +33,7 @@ export const SmartphoneCart = () => {
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
+				key={Math.random() * 101}
 				style={{
 					width: '25px',
 					height: '20px',
@@ -56,14 +57,11 @@ export const SmartphoneCart = () => {
 	return (
 		<div className={styles.cart}>
 			<div className={styles.container}>
-				<h1>Coșul tău</h1>
+				<p>Coșul tău</p>
 			</div>
 			{storedProducts.length === 0 && setItemCount(0)}
 			{storedProducts.length === 0 ? (
-				<img
-					src={emptyCart}
-					style={{ width: '60vw', height: '30vh', justifyContent: 'center' }}
-				/>
+				<img src={emptyCart} className={styles.image} alt='description' />
 			) : (
 				<Paper
 					sx={{
@@ -80,7 +78,7 @@ export const SmartphoneCart = () => {
 											hover
 											role='checkbox'
 											tabIndex={-1}
-											key={row.code}
+											key={Math.random() * 101}
 											style={{ width: '50vw' }}
 										>
 											{columns.map((column) => {
@@ -92,12 +90,13 @@ export const SmartphoneCart = () => {
 																fontSize: '100%',
 															}}
 														>
-															{column.id == 'image' ? (
+															{column.id === 'image' ? (
 																<div>
 																	<div>
 																		<img
 																			src={require(`../images/${row['image']}`)}
 																			width='70'
+																			alt='description'
 																		/>{' '}
 																	</div>
 																	<div
@@ -109,7 +108,7 @@ export const SmartphoneCart = () => {
 																		{listItems(row['colors'])}
 																	</div>
 																</div>
-															) : column.id == 'title' ? (
+															) : column.id === 'title' ? (
 																<div
 																	style={{
 																		display: 'flex',
@@ -161,7 +160,6 @@ export const SmartphoneCart = () => {
 						</div>
 						<div
 							style={{
-								position: 'relative',
 								display: 'flex',
 								flexDirection: 'column',
 								position: 'relative',
@@ -169,7 +167,6 @@ export const SmartphoneCart = () => {
 						>
 							<Button
 								style={{
-									width: '25%',
 									backgroundColor: 'rgba(248, 221, 170, 0.484)',
 									height: '50px',
 									fontSize: '18px',
@@ -183,7 +180,6 @@ export const SmartphoneCart = () => {
 							</Button>
 							<Button
 								style={{
-									width: '25%',
 									fontStyle: 'italic',
 									textDecoration: 'none',
 									width: '100vw',
