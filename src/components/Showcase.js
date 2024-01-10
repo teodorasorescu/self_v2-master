@@ -7,17 +7,15 @@ export const Showcase = ({ jpg }) => {
 				<h1 className='text'>Inspirație</h1>
 			</div>
 			<section className='section-houses'>
-				<ul className='houses-showcase clearfix'>
+				<div className='houses-showcase clearfix'>
 					{jpg.map((el) => {
 						return (
-							<li key={Math.random() * 101}>
-								<figure className='photo'>
-									<img src={el.image} alt='house' />
-								</figure>
-							</li>
+							<div key={Math.random() * 101}>
+								<img className='photo' src={el.image} alt='house' />
+							</div>
 						);
 					})}
-				</ul>
+				</div>
 			</section>
 		</div>
 	);
