@@ -1,25 +1,16 @@
-import React, { Component, useEffect } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { loadCustomer, selectCustomer } from '../reducers/customerSlice';
 import Badge from '@material-ui/core/Badge';
-
-import { useStateContext } from '../contexts/ContextProvider';
-import { useSelector } from 'react-redux';
-import { selectProducts } from '../reducers/productsSlice';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/checkout.cart.module.scss';
-import Paper from '@mui/material/Paper';
 
 export const CheckoutCart = () => {
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
-	const products = useSelector(selectProducts);
 
 	const columns = [
 		{ id: 'image', label: 'Articol' },
@@ -35,13 +26,13 @@ export const CheckoutCart = () => {
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
+				key={Math.random() * 101}
 				style={{
 					width: '25px',
 					height: '20px',
 					borderRadius: '3px',
 					margin: '1%',
 					marginTop: '5%',
-					// backgroundColor: 'black',
 					background: `rgba(${color[0][1]}, ${color[1][1]}, ${color[2][1]}, ${color[3][1]})`,
 				}}
 			></div>
@@ -61,7 +52,7 @@ export const CheckoutCart = () => {
 						<TableBody>
 							{storedProducts.map((row, index) => {
 								return (
-									<TableRow hover role='checkbox' tabIndex={-1} key={row.code}>
+									<TableRow hover role='checkbox' tabIndex={-1} key={index}>
 										{columns.map((column) => {
 											const value = row[column.id];
 											return (
@@ -71,7 +62,7 @@ export const CheckoutCart = () => {
 															fontSize: '100%',
 														}}
 													>
-														{column.id == 'image' ? (
+														{column.id === 'image' ? (
 															<div>
 																<div>
 																	<Badge
@@ -81,6 +72,7 @@ export const CheckoutCart = () => {
 																		<img
 																			src={require(`../images/${row['image']}`)}
 																			width='70'
+																			alt='description'
 																		/>{' '}
 																	</Badge>
 																</div>
@@ -94,9 +86,9 @@ export const CheckoutCart = () => {
 																	{listItems(row['colors'])}
 																</div>
 															</div>
-														) : column.id == 'total' ? (
+														) : column.id === 'total' ? (
 															'' + row['quantity'] * 120 + '.00 lei'
-														) : column.id == 'title' ? (
+														) : column.id === 'title' ? (
 															'Tablou personalizat ' + value
 														) : null}
 													</div>
@@ -106,27 +98,25 @@ export const CheckoutCart = () => {
 									</TableRow>
 								);
 							})}
-							<div className={styles.priceContainer}>
-								<div className={styles.pLeftContainer}>
-									<p align='left'>Subtotal</p>
-									<p className={styles.pRightContainer}>
-										{'' + total + '.00 lei'}
-									</p>
-								</div>
-								<div className={styles.pLeftContainer}>
-									<p align='left'>Transport</p>
-									<p className={styles.pTransportContainer}>&nbsp; 20.00 lei</p>
-								</div>
-								<div className={styles.pTotalContainer}>
-									<p align='left'>Total</p>
-									<p className={styles.totalValueContainer}>
-										{'' + calculateTotal() + '.00 lei'}{' '}
-									</p>
-								</div>
-							</div>
 						</TableBody>
 					</Table>
 				</TableContainer>
+				<div className={styles.priceContainer}>
+					<div className={styles.pLeftContainer}>
+						<p align='left'>Subtotal</p>
+						<p className={styles.pRightContainer}>{'' + total + '.00 lei'}</p>
+					</div>
+					<div className={styles.pLeftContainer}>
+						<p align='left'>Transport</p>
+						<p className={styles.pTransportContainer}>&nbsp; 20.00 lei</p>
+					</div>
+					<div className={styles.pTotalContainer}>
+						<p align='left'>Total</p>
+						<p className={styles.totalValueContainer}>
+							{'' + calculateTotal() + '.00 lei'}{' '}
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

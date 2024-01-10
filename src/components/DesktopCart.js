@@ -32,7 +32,7 @@ export const DesktopCart = () => {
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
-				key={color[0]}
+				key={Math.random() * 101}
 				style={{
 					width: '40px',
 					height: '30px',
@@ -57,11 +57,11 @@ export const DesktopCart = () => {
 	return (
 		<div className={styles.cart}>
 			<div className={styles.hContainer}>
-				<h1>Coșul tău</h1>
+				<p>Coșul tău</p>
 			</div>
 			{storedProducts.length === 0 && setItemCount(0)}
 			{storedProducts.length === 0 ? (
-				<img src={emptyCart} style={{ width: '30%', height: '30%' }} />
+				<img src={emptyCart} className={styles.image} alt='description' />
 			) : (
 				<Paper
 					sx={{
@@ -98,7 +98,7 @@ export const DesktopCart = () => {
 											hover
 											role='checkbox'
 											tabIndex={-1}
-											key={row.code}
+											key={Math.random() * 101}
 										>
 											{columns.map((column) => {
 												const value = row[column.id];
@@ -109,7 +109,7 @@ export const DesktopCart = () => {
 																fontSize: 'large',
 															}}
 														>
-															{column.id == 'title' ? (
+															{column.id === 'title' ? (
 																<div>
 																	{'Tablou personalizat ' + value}
 																	<div
@@ -121,17 +121,18 @@ export const DesktopCart = () => {
 																		{listItems(row['colors'])}
 																	</div>
 																</div>
-															) : column.id == 'image' ? (
+															) : column.id === 'image' ? (
 																<img
 																	src={require(`../images/${value}`)}
 																	width='130'
+																	alt='description'
 																/>
-															) : column.id == 'quantity' ? (
+															) : column.id === 'quantity' ? (
 																<CartActions
 																	quantity={value}
 																	productId={index}
 																/>
-															) : column.id == 'total' ? (
+															) : column.id === 'total' ? (
 																'' + row['quantity'] * 120 + '.00 lei'
 															) : column.id != 'colors' ? (
 																value

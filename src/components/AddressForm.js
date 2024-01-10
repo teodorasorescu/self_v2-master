@@ -35,16 +35,12 @@ export const AddressForm = () => {
 	return (
 		<div>
 			<div className={styles.container}>
-				<form fullWidth noValidate onSubmit={handleSubmit}>
+				<form noValidate onSubmit={handleSubmit}>
 					<div>
 						<h3 align='left' className={styles.hTitle}>
 							Contact
 						</h3>
-						<div
-							className='form-group'
-							feedback='Please choose a username.'
-							invalid
-						>
+						<div className='form-group'>
 							<input
 								id='email'
 								name='email'
@@ -72,7 +68,6 @@ export const AddressForm = () => {
 							/>
 							<label
 								className='form-check-label'
-								for='newsletter'
 								style={{
 									maxInlineSize: '100%',
 									display: 'block',
@@ -175,21 +170,23 @@ export const AddressForm = () => {
 							/>
 							<div className='invalid-feedback'>Introdu o localitate</div>
 						</div>
-						<div className='form-group' gray-200 style={{ paddingTop: '2%' }}>
+						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<select
 								className='form-select'
 								id='state'
 								name='state'
-								value={customer.state}
+								defaultValue={customer.state}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
 							>
-								<option style={{ color: 'grey' }} selected>
-									Județ
-								</option>
+								<option style={{ color: 'grey' }}>Județ</option>
 								{states.map((state, index) => {
-									return <option value={`state-${index}`}>{state}</option>;
+									return (
+										<option key={index} value={`state-${index}`}>
+											{state}
+										</option>
+									);
 								})}
 							</select>
 							<div className='invalid-feedback'>
@@ -203,7 +200,7 @@ export const AddressForm = () => {
 								name='country'
 								className='form-select'
 								placeholder='Tară/Regiune'
-								value={customer.country}
+								defaultValue={customer.country}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
@@ -235,11 +232,7 @@ export const AddressForm = () => {
 					<Shipping />
 
 					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
-						<button
-							class='btn btn-primary'
-							type='submit'
-							className={styles.buttonContainer}
-						>
+						<button type='submit' className={styles.buttonContainer}>
 							PLĂTEȘTE ACUM
 						</button>
 					</div>

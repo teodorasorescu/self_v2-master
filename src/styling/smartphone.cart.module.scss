@@ -1,9 +1,17 @@
-.container > h1 {
+.container > p {
 	margin-bottom: 3%;
 	font-style: italic;
 	font-size: 2rem;
 	padding-bottom: 3%;
 	padding-top: 3%;
+}
+
+.image {
+	height: 30%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
 }
 
 .container {

@@ -5,55 +5,53 @@
 		width: 90vw;
 	}
 
-  @media screen and (width: 1024px) {
+	@media screen and (width: 1024px) {
 		width: 80vw;
 	}
 
 	.hTitle {
-		font-size: 4vw;
+		font-size: 1.5rem;
 		padding-bottom: 2%;
-    padding-top: 3%;
+		padding-top: 3%;
 
-    @media screen and (max-width: 1024px) {
-      font-size: 3.5vw;
+		@media screen and (max-width: 1024px) {
+			font-size: 3.5vw;
+		}
 
-    }
-
-    @media screen and (max-width: 450px) {
-      font-size: 6vw;
-
-    }
+		@media screen and (max-width: 450px) {
+			font-size: 6vw;
+		}
 	}
-  .buttonContainer {	
-    @media screen and (max-width: 850px) {
-      font-size: 3vw;
-    }
 
-    @media screen and (max-width: 1024px) {
-      height: 5vh;
-      font-size: 3vw;
-    }
+	.buttonContainer {
+		@media screen and (max-width: 850px) {
+			font-size: 3vw;
+		}
 
-    @media screen and (width: 1024px) {
-      height: 10vh;
-      font-size: 2vw;
-    }
+		@media screen and (max-width: 1024px) {
+			height: 5vh;
+			font-size: 3vw;
+		}
 
-    @media screen and (max-width: 450px) {
-      height: 8vh;
-      font-size: 5vw;
-    }
-  
-    width: 100%;
-    background-color: rgba(248, 221, 170, 0.2);
-    font-weight: 600;
-    border: 2px solid rgba(248, 221, 170, 0.8);
-    color: black;
-  }
+		@media screen and (width: 1024px) {
+			height: 10vh;
+			font-size: 2vw;
+		}
 
-  .orderResumeContainer {
-  
-  }
+		@media screen and (max-width: 450px) {
+			height: 8vh;
+			font-size: 5vw;
+		}
+
+		width: 100%;
+		background-color: rgba(248, 221, 170, 0.2);
+		font-weight: 600;
+		border: 2px solid rgba(248, 221, 170, 0.8);
+		color: black;
+	}
+
+	.orderResumeContainer {
+	}
 }
 
 .titleShipping {
@@ -64,24 +62,24 @@
 
 .shippingContainer {
 	background-color: rgba(248, 221, 170, 0.2);
-  @media screen and (max-width: 1025px) {
-    height: 8vh;
-  }
+	@media screen and (max-width: 1025px) {
+		height: 8vh;
+	}
 
-  @media screen and (min-width: 900px) {
-   height: 5vh;
-  }
+	@media screen and (min-width: 900px) {
+		height: 5vh;
+	}
 
-  @media screen and (max-width: 400px) {
-    height: 7vh;
-  }
+	@media screen and (max-width: 400px) {
+		height: 7vh;
+	}
 
-  @media screen and (max-width: 300px) {
-    height: 0.5vh;
-  }
-  // @media screen and (width: 760px) {
-  //   height: 3px;
-  // }
+	@media screen and (max-width: 300px) {
+		height: 0.5vh;
+	}
+	// @media screen and (width: 760px) {
+	//   height: 3px;
+	// }
 	height: 60px;
 
 	border-radius: 8px;
@@ -94,23 +92,10 @@
 	justify-content: space-between;
 
 	.buttonContainer {
- 
-    @media screen and (width: 1024px) {
-      font-size: 4px;
-    }
-  
-    @media screen and (max-width: 1025px) {
-      font-size: 3.5vw;
-
-    }
-
-  
-
-    @media screen and (max-width: 400px) {
-      font-size: 4vw;
-    }
-		// font-size: 2.5vw;
+		font-size: 1.5rem;
+		border-radius: 8px;
 	}
+
 	.pBold {
 		font-weight: 600;
 		padding-right: 1%;
