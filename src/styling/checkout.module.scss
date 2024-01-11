@@ -33,10 +33,13 @@
 		justify-content: center;
 		align-items: center;
 
-		.text {
+		.image {
 			font-family: 'Raleway', sans-serif;
 			padding: 5%;
 
+			> img {
+				width: 200px;
+			}
 			.textP {
 				font-family: 'Raleway', sans-serif;
 				padding-top: 5%;

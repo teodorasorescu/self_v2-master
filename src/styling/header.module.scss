@@ -70,6 +70,11 @@
 				display: flex;
 				justify-content: center;
 			}
+
+			> img {
+				padding: 1%;
+				width: 200px;
+			}
 		}
 
 		.icon {
@@ -171,6 +176,11 @@
 			display: flex;
 			text-align: center;
 			font-family: 'Liberata', serif;
+		}
+
+		> img {
+			padding: 1%;
+			width: 200px;
 		}
 
 		.socialMediaLogo {

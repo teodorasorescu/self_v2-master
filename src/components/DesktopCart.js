@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { columns } from '../constants/cartColumns.js';
 import CartActions from './CartActions';
-
 export const DesktopCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
