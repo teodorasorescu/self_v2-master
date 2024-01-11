@@ -5,6 +5,7 @@ import AddressForm from './AddressForm';
 import { CheckoutCart } from './CheckoutCart';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { OrderResume } from './OrderResume';
+import Self from '../images/Group 3 (1).png';
 
 export const Checkout = () => {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -17,15 +18,8 @@ export const Checkout = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.checkoutContainer}>
-				<div className={styles.text}>
-					<h1
-						style={{
-							fontSize: '70px',
-							fontWeight: '500',
-						}}
-					>
-						self.
-					</h1>
+				<div className={styles.image}>
+					<img src={Self} />
 				</div>
 				{!wideScreen && <OrderResume />}
 				<AddressForm />
