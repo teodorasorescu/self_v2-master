@@ -2,7 +2,7 @@ import { React } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styling/header.module.scss';
 import FacebookIcon from '../images/facebook_logo.png';
-import ShoppingBag from '../images/shopping-bag.png';
+import ShoppingBag from '../images/cart.png';
 import InstaIcon from '../images/instagram_logo.png';
 import TikTokIcon from '../images/tiktok_logo.png';
 import Badge from '@material-ui/core/Badge';

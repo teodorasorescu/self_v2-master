@@ -9,7 +9,7 @@ import Badge from '@material-ui/core/Badge';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@material-ui/core';
-import ShoppingBag from '../images/shopping-bag.png';
+import ShoppingBag from '../images/cart.png';
 import Self from '../images/Group 3 (1).png';
 const headersData = [
 	{
