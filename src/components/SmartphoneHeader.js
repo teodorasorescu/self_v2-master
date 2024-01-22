@@ -10,7 +10,7 @@ import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@material-ui/core';
 import ShoppingBag from '../images/cart.png';
-import Self from '../images/Group 3 (1).png';
+import Self from '../images/self_logo.png';
 const headersData = [
 	{
 		label: 'Acasă',
@@ -47,7 +47,6 @@ const SmartphoneHeader = () => {
 	const closeDrawer = () => {
 		setDrawerOpen(false);
 	};
-
 	const getDrawerChoices = () => {
 		return headersData.map(({ label, href }) => {
 			return (
@@ -113,7 +112,6 @@ const SmartphoneHeader = () => {
 							'aria-label': 'menu',
 							'aria-haspopup': 'true',
 							onClick: openDrawer,
-							style: { left: '-35px' },
 						}}
 					>
 						<MenuIcon />

@@ -6,7 +6,7 @@ import ShoppingBag from '../images/cart.png';
 import InstaIcon from '../images/instagram_logo.png';
 import TikTokIcon from '../images/tiktok_logo.png';
 import Badge from '@material-ui/core/Badge';
-import Self from '../images/Group 3 (1).png';
+import Self from '../images/self_logo.png';
 
 const DesktopHeader = () => {
 	return (
@@ -50,7 +50,7 @@ const DesktopHeader = () => {
 			<div className={styles.stillPositionContainer}>
 				<div className={styles.upperContainer}>
 					<img src={Self} />{' '}
-					<div className={styles.icon}>
+					<div className={styles.cartContainer}>
 						<Link to='/cos-de-cumparaturi' style={{ color: 'black' }}>
 							<Badge
 								color='primary'

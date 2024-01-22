@@ -21,10 +21,10 @@ const ProductCarousel = ({ product, classGradient, styleGradient }) => {
 			prevIcon={<ArrowBackIosIcon />}
 			nextIcon={<ArrowForwardIosIcon />}
 		>
-			<Carousel.Item data-bs-theme='dark'>
+			<Carousel.Item data-bs-theme='dark' interval={600000}>
 				<div className={classGradient} style={styleGradient}></div>
 			</Carousel.Item>
-			<Carousel.Item>
+			<Carousel.Item interval={600000}>
 				{!isImageEmpty && (
 					<img
 						src={require(`../images/${product.image}`)}
