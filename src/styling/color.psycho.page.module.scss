@@ -1,25 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .container {
-	@media screen and (max-width: 1025px) {
-		width: 90vw;
-	}
-
-	justify-content: space-evenly;
+	// justify-content: space-evenly;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Raleway', sans-serif;
-	width: 70vw;
+	width: 90vw;
+	text-align: center;
+
 	.title {
-		padding-top: 3%;
-		padding-bottom: 3%;
+		padding-top: 5%;
+		padding-bottom: 5%;
 		text-align: center;
+	}
+
+	.paragraph {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 70vw;
 	}
 }
 
 .rowContainer {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+}
+
+.colors {
+	padding-top: 4%;
+}
+
+.colorsContainer {
+	width: 70vw;
+	border-radius: 5%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.flipcards {
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.flipcards::-webkit-scrollbar {
+	display: none;
 }
 
 .researchers {
@@ -40,8 +64,5 @@
 	> h4 {
 		font-style: italic;
 		font-weight: 600;
-	}
-
-	> h1 {
 	}
 }
