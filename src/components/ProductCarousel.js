@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const ProductCarousel = ({ product, classGradient, styleGradient }) => {
-	console.log(product);
 	const navigate = useNavigate();
 	const isImageEmpty = product.image === '';
 	useEffect(() => {

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html {
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+}
+
+.container {
+	align-items: center;
+
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 0.5rem;
+	justify-content: center;
+	gap: 3.2rem;
+
+	@media screen and (max-width: 1025px) {
+		gap: 0.5rem;
+	}
+}
+
+.item {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 100%;
+	padding-right: 5%;
+}
+
+.box {
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	perspective: 1000px;
+	-webkit-perspective: 1000px;
+}
+
+.front,
+.back {
+	width: 200px;
+	height: 200px;
+
+	@media screen and (max-width: 1025px) {
+		width: 100px;
+		height: 100px;
+	}
+
+	background-size: cover;
+	background-position: center;
+	border-radius: 8px;
+	-ms-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.front {
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.box:hover .front {
+	-ms-transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.back {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	-ms-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.box:hover .back {
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.box .inner {
+	position: absolute;
+	left: 0;
+	outline: 1px solid transparent;
+	-webkit-perspective: inherit;
+	perspective: inherit;
+	z-index: 2;
+	transform: translateY(-50%) translateZ(60px) scale(0.94);
+	-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+	-ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
+	top: 50%;
+
+	> p {
+		@media screen and (max-width: 1025px) {
+			font-size: 0.4rem;
+		}
+
+		font-size: small;
+		justify-content: space-evenly;
+	}
+}
+
+.box .nameContainer {
+	color: black;
+	display: inline-block;
+	line-height: 1.5;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 15px 50px;
+}
+
+.header {
+	font-size: 34px;
+	border-radius: 5px;
+	text-align: center;
+	background-color: rgba(248, 221, 170, 0.133);
+}
+
+.box p {
+	font-size: 20px;
+	line-height: 1.5em;
+}

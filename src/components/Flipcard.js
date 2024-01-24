@@ -36,7 +36,6 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Mind})` }}
 					>
 						<div className='inner color-white'>
-							{/* <h3 className='flip-box-header'>"Foarte frumos"</h3> */}
 							<Link to='alegeculorile'>
 								<button
 									className='flip-box-button'

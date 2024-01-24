@@ -134,6 +134,7 @@
 		display: flex;
 		align-items: center;
 		padding: 0;
+		border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 		.shoppingButton {
 			padding-right: 7%;
 			margin: 0;
@@ -170,7 +171,10 @@
 		}
 
 		> img {
-			width: 200px;
+			width: 170px;
+			padding-top: 3%;
+			padding-bottom: 3%;
+			padding-right: 16px;
 		}
 
 		.socialMediaLogo {
