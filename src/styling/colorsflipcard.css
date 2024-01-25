@@ -7,7 +7,6 @@ html {
 
 .container {
 	align-items: center;
-
 	margin-left: auto;
 	margin-right: auto;
 	cursor: pointer;
@@ -27,7 +26,7 @@ html {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	max-width: 100%;
-	padding-right: 5%;
+	padding-right: 2%;
 }
 
 .box {
@@ -44,8 +43,8 @@ html {
 	height: 200px;
 
 	@media screen and (max-width: 1025px) {
-		width: 100px;
-		height: 100px;
+		width: 165px;
+		height: 165px;
 	}
 
 	background-size: cover;
@@ -115,10 +114,10 @@ html {
 
 	> p {
 		@media screen and (max-width: 1025px) {
-			font-size: 0.4rem;
+			font-size: 0.7rem;
 		}
 
-		font-size: small;
+		font-size: 0.8rem;
 		justify-content: space-evenly;
 	}
 }

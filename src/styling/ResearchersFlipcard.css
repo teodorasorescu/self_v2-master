@@ -4,6 +4,21 @@ html {
 	font-family: 'Raleway', sans-serif;
 	box-sizing: border-box;
 }
+.swipeContainer {
+	> img {
+		width: 30px;
+		height: 30px;
+	}
+
+	> p {
+		color: gray;
+		font-size: 1rem;
+	}
+
+	float: left;
+	display: flex;
+	flex-direction: row;
+}
 
 .textCenter {
 	text-align: center;

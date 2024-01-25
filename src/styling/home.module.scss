@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Literata:ital,opsz@1,7..72&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+.rotateContainer {
+	float: left;
+	padding-left: 2%;
+	padding-bottom: 1%;
+	margin-left: 3%;
+	> img {
+		width: 30px;
+		height: 30px;
+	}
+}
 .container {
 	height: 100%;
 
@@ -11,7 +21,6 @@
 	font-family: 'Raleway', sans-serif;
 	font-size: 70px;
 	text-align: center;
-
 	.textContainer {
 		// opacity: 1;
 		@media screen and (max-width: 1024px) {
@@ -67,11 +76,6 @@
 		transition: all 0.05s;
 		height: calc(100vh - 70px);
 		display: flex;
-		// margin-left: auto;
-		// margin-right: auto;
-		// width: 50vw;
-		// justify-content: center;
-		// align-items: center;
 	}
 
 	.imgContainer {
