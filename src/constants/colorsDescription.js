@@ -15,7 +15,7 @@ const colors = [
 		title: 'Verde',
 		color: '#0a9396',
 		summary: 'vindecare, echilibru, regenerare',
-		desc: 'Verdele este culoarea naturii și a vieții. Este adesea considerat culoarea vindecării și a echilibrului. În spiritualitate, verdele poate simboliza înflorirea spirituală, regenerarea și armonia cu mediul înconjurător. Poate sugera, de asemenea, încredere în procesul de creștere și transformare.',
+		desc: 'Verdele este culoarea naturii și a vieții. Este adesea considerat culoarea vindecării și a echilibrului. În spiritualitate, verdele poate simboliza înflorirea spirituală, regenerarea și armonie. Poate sugera, de asemenea, încredere în procesul de creștere și transformare.',
 	},
 	{
 		title: 'Galben',
