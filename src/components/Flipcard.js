@@ -6,6 +6,7 @@ import Body from '../images/body.png';
 import { useDispatch } from 'react-redux';
 import { loadProduct } from '../reducers/productSlice';
 import { Link } from 'react-router-dom';
+import RoundIcon from '../images/round-arrow.png';
 
 const Flipcard = () => {
 	const dispatch = useDispatch();
@@ -30,6 +31,9 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Mind})` }}
 					>
 						<div className='inner color-white'></div>
+						<div className='roundIconContainer'>
+							<img src={RoundIcon} alt='roundIcon' />
+						</div>
 					</div>
 					<div
 						className='flip-box-back text-center'
@@ -66,6 +70,9 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Soul})` }}
 					>
 						<div className='inner color-white'></div>
+						<div className='roundIconContainer'>
+							<img src={RoundIcon} alt='roundIcon' />
+						</div>
 					</div>
 					<div
 						className='flip-box-back text-center'
@@ -102,6 +109,9 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Body})` }}
 					>
 						<div className='inner color-white'></div>
+						<div className='roundIconContainer'>
+							<img src={RoundIcon} alt='roundIcon' />
+						</div>
 					</div>
 					<div
 						className='flip-box-back text-center'

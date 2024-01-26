@@ -2,7 +2,6 @@ import React from 'react';
 import Flipcard from './Flipcard';
 import styles from '../styling/home.module.scss';
 import Responsability from '../images/responsibility.png';
-import RotateIcon from '../images/rotate.png';
 
 const Home = () => {
 	return (
@@ -16,9 +15,6 @@ const Home = () => {
 						sentimentele prin culori.
 					</h1>
 				</div>
-			</div>
-			<div className={styles.rotateContainer}>
-				<img src={RotateIcon} alt='rotate' />
 			</div>
 			<Flipcard />
 			<div className={styles.container}>

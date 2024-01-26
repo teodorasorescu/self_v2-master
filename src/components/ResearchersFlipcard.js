@@ -18,6 +18,9 @@ const ResearchersFlipcard = () => {
 									<div className='nameContainer'>
 										<h3 className='flipBoxHeader'>{c.researcher}</h3>
 									</div>
+									<div className='swipeIconContainer'>
+										<img src={SwipeIcon} alt='swipeIcon' />
+									</div>
 								</div>
 								<div
 									className='flipBoxBack textCenter'
@@ -31,10 +34,6 @@ const ResearchersFlipcard = () => {
 						</div>
 					);
 				})}
-			</div>
-			<div className='swipeContainer'>
-				<img src={SwipeIcon} alt='swipeIcon' />
-				<p>Glișați spre stânga.</p>
 			</div>
 		</div>
 	);
