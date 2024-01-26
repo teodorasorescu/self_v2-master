@@ -8,14 +8,26 @@ import inspo8 from '../images/inspo8.jpg';
 import inspo9 from '../images/inspo9.jpg';
 import inspo10 from '../images/inspo10.jpg';
 import inspo11 from '../images/inspo11.jpg';
+import inspo12 from '../images/inspo12.jpg';
+import inspo13 from '../images/inspo13.jpg';
 
 export const inspoData = [
+	{
+		image: inspo12,
+		heading: 'Slide One',
+		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+
 	{
 		image: inspo4,
 		heading: 'Slide One',
 		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
 	},
-
+	{
+		image: inspo13,
+		heading: 'Slide One',
+		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
 	{
 		image: inspo8,
 		heading: 'Slide Five',

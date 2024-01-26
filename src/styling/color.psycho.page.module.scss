@@ -30,15 +30,10 @@
 .colors {
 	padding-top: 4%;
 }
-.rotateContainer {
-	> img {
-		width: 30px;
-		height: 30px;
-	}
-}
+
 .colorsContainer {
 	@media screen and (max-width: 1025px) {
-		width: 99vw;
+		width: 97vw;
 	}
 	width: 70vw;
 	border-radius: 5%;

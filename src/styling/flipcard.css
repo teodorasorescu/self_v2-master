@@ -130,6 +130,16 @@ html {
 	top: 50%;
 }
 
+.roundIconContainer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	> img {
+		width: 30px;
+		height: 30px;
+	}
+}
+
 .flip-box-header {
 	font-size: 34px;
 }

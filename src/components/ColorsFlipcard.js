@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styling/colorsflipcard.css';
 import colors from '../constants/colorsDescription';
+import RoundIcon from '../images/round-arrow.png';
 
 const ColorsFlipcard = () => {
 	return (
@@ -9,10 +10,11 @@ const ColorsFlipcard = () => {
 				return (
 					<div className='item' key={i}>
 						<div className='box'>
-							<div
-								className='front'
-								style={{ backgroundColor: `${c.color}` }}
-							></div>
+							<div className='front' style={{ backgroundColor: `${c.color}` }}>
+								<div className='roundIconContainer'>
+									<img src={RoundIcon} alt='roundIcon' />
+								</div>
+							</div>
 							<div
 								className='back'
 								style={{ backgroundColor: 'rgba(248, 221, 170, 0.3)' }}

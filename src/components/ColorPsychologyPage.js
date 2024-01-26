@@ -1,7 +1,6 @@
 import classes from '../styling/color.psycho.page.module.scss';
 import ColorsFlipcard from './ColorsFlipcard';
 import ResearchersFlipcard from './ResearchersFlipcard';
-import RotateIcon from '../images/rotate.png';
 
 const ColorPsychologyPage = () => {
 	return (
@@ -19,9 +18,6 @@ const ColorPsychologyPage = () => {
 			</div>
 
 			<div className={classes.flipcards}>
-				<div className={classes.rotateContainer}>
-					<img src={RotateIcon} alt='rotate' />
-				</div>
 				<ResearchersFlipcard />
 			</div>
 			<div className={classes.rowContainer}>
@@ -35,9 +31,6 @@ const ColorPsychologyPage = () => {
 						</p>
 					</div>
 					<div className={classes.colorsContainer}>
-						<div className={classes.rotateContainer}>
-							<img src={RotateIcon} alt='rotate' />
-						</div>
 						<ColorsFlipcard />
 					</div>
 				</div>

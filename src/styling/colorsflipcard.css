@@ -69,6 +69,16 @@ html {
 	transform-style: preserve-3d;
 }
 
+.roundIconContainer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	> img {
+		width: 30px;
+		height: 30px;
+	}
+}
+
 .box:hover .front {
 	-ms-transform: rotateY(-180deg);
 	-webkit-transform: rotateY(-180deg);
