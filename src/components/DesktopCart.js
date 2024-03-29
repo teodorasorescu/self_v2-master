@@ -16,6 +16,8 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { columns } from '../constants/cartColumns.js';
 import CartActions from './CartActions';
+import { price } from '../constants/productConstants.js';
+
 export const DesktopCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -45,7 +47,7 @@ export const DesktopCart = () => {
 	};
 
 	const calculateTotalPrice = () => {
-		return storedProducts.reduce((a, v) => (a = a + v.quantity * 120), 0);
+		return storedProducts.reduce((a, v) => (a = a + v.quantity * price), 0);
 	};
 
 	const goToCheckout = () => {
@@ -111,6 +113,7 @@ export const DesktopCart = () => {
 															{column.id === 'title' ? (
 																<div>
 																	{'Tablou personalizat ' + value}
+																	<p>{row['frameColor']}</p>
 																	<div
 																		style={{
 																			display: 'flex',
@@ -132,9 +135,11 @@ export const DesktopCart = () => {
 																	productId={index}
 																/>
 															) : column.id === 'total' ? (
-																'' + row['quantity'] * 120 + '.00 lei'
+																'' +
+																(row['quantity'] * price).toFixed(2) +
+																' lei'
 															) : column.id != 'colors' ? (
-																value
+																price.toFixed(2) + ' lei'
 															) : null}
 														</div>
 													</TableCell>

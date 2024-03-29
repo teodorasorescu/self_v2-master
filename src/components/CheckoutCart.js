@@ -7,11 +7,11 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/checkout.cart.module.scss';
-
+import { price } from '../constants/productConstants';
 export const CheckoutCart = () => {
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
-
+	console.log(storedProducts);
 	const columns = [
 		{ id: 'image', label: 'Articol' },
 		{ id: 'title', label: '' },
@@ -39,11 +39,15 @@ export const CheckoutCart = () => {
 		));
 	};
 
-	const total = storedProducts.reduce((a, v) => (a = a + v.quantity * 120), 0);
+	const total = storedProducts.reduce(
+		(a, v) => (a = a + v.quantity * price),
+		0
+	);
 
 	const calculateTotal = () => {
-		return total + 20;
+		return (total + 20).toFixed(2);
 	};
+
 	return (
 		<div className={styles.cartContainer}>
 			<div className={styles.container}>
@@ -87,9 +91,12 @@ export const CheckoutCart = () => {
 																</div>
 															</div>
 														) : column.id === 'total' ? (
-															'' + row['quantity'] * 120 + '.00 lei'
+															'' + (row['quantity'] * price).toFixed(2) + ' lei'
 														) : column.id === 'title' ? (
-															'Tablou personalizat ' + value
+															<>
+																{'Tablou personalizat ' + value}
+																<p>{row['frameColor']}</p>
+															</>
 														) : null}
 													</div>
 												</TableCell>
@@ -104,7 +111,9 @@ export const CheckoutCart = () => {
 				<div className={styles.priceContainer}>
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Subtotal</p>
-						<p className={styles.pRightContainer}>{'' + total + '.00 lei'}</p>
+						<p className={styles.pRightContainer}>
+							{'' + total.toFixed(2) + ' lei'}
+						</p>
 					</div>
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Transport</p>
@@ -113,7 +122,7 @@ export const CheckoutCart = () => {
 					<div className={styles.pTotalContainer}>
 						<p align='left'>Total</p>
 						<p className={styles.totalValueContainer}>
-							{'' + calculateTotal() + '.00 lei'}{' '}
+							{'' + calculateTotal() + ' lei'}{' '}
 						</p>
 					</div>
 				</div>

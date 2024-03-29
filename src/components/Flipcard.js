@@ -1,19 +1,26 @@
 import React from 'react';
 import '../styling/flipcard.css';
 import Mind from '../images/mind.png';
+import MindFrame from '../images/mind_buy.jpg';
+
 import Soul from '../images/soul.png';
+import SoulFrame from '../images/Soul_Buy.jpg';
 import Body from '../images/body.png';
+import BodyFrame from '../images/body_buy.jpg';
+
 import { useDispatch } from 'react-redux';
-import { loadProduct } from '../reducers/productSlice';
+import { loadProduct } from '../reducers/slices/productSlice';
 import { Link } from 'react-router-dom';
 import RoundIcon from '../images/round-arrow.png';
+import { price } from '../constants/productConstants';
 
 const Flipcard = () => {
 	const dispatch = useDispatch();
 
+	const priceValue = price.toFixed(2) + ' lei';
 	const computeProduct = (image, title, description) => {
 		const product = {
-			price: '120,00 lei',
+			price: price,
 			image: image,
 			title: title,
 			description: description,
@@ -28,7 +35,7 @@ const Flipcard = () => {
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${Mind})` }}
+						style={{ backgroundImage: `url(${MindFrame})` }}
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
@@ -61,13 +68,13 @@ const Flipcard = () => {
 					Tablou personalizat MIND <br />
 					Ramă lemn - dimensiune 30x40cm
 				</p>
-				<p style={{ fontSize: 'large', fontWeight: 600 }}>120 lei</p>
+				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>
 			<div className='box-item'>
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${Soul})` }}
+						style={{ backgroundImage: `url(${SoulFrame})` }}
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
@@ -100,13 +107,13 @@ const Flipcard = () => {
 					Tablou personalizat SOUL <br />
 					Ramă lemn - dimensiune 30x40cm
 				</p>
-				<p style={{ fontSize: 'large', fontWeight: 600 }}>120 lei</p>
+				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>
 			<div className='box-item'>
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${Body})` }}
+						style={{ backgroundImage: `url(${BodyFrame})` }}
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
@@ -118,7 +125,6 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Body})` }}
 					>
 						<div className='inner color-white'>
-							{/* <h3 className='flip-box-header'>"Foarte frumos"</h3> */}
 							<Link to='alegeculorile'>
 								<button
 									onClick={() =>
@@ -140,7 +146,7 @@ const Flipcard = () => {
 					Tablou personalizat BODY <br />
 					Ramă lemn - dimensiune 30x40cm
 				</p>
-				<p style={{ fontSize: 'large', fontWeight: 600 }}>120 lei</p>
+				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>
 		</div>
 	);

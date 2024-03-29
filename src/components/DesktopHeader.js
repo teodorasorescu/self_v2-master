@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styling/header.module.scss';
 import FacebookIcon from '../images/facebook_logo.png';
 import ShoppingBag from '../images/cart.png';
@@ -7,27 +7,36 @@ import InstaIcon from '../images/instagram_logo.png';
 import TikTokIcon from '../images/tiktok_logo.png';
 import Badge from '@material-ui/core/Badge';
 import Self from '../images/self_logo.png';
+import { TIKTOK_LINK } from '../constants/socialMediaLinks';
+import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
+import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
 
 const DesktopHeader = () => {
+	const navigate = useNavigate();
+
+	const goToHome = () => {
+		navigate('/');
+	};
+
 	return (
 		<div>
 			<div className={styles.promotionTextContainer}>
 				<div className={styles.socialMediaLogo}>
-					<Link>
+					<Link to={FACEBOOK_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={FacebookIcon}
 							alt='description'
 						/>
 					</Link>
-					<Link>
+					<Link to={INSTAGRAM_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={InstaIcon}
 							alt='description'
 						/>
 					</Link>
-					<Link>
+					<Link to={TIKTOK_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={TikTokIcon}
@@ -49,7 +58,7 @@ const DesktopHeader = () => {
 			</div>
 			<div className={styles.stillPositionContainer}>
 				<div className={styles.upperContainer}>
-					<img src={Self} />{' '}
+					<img src={Self} alt='selflogo' onClick={goToHome} />{' '}
 					<div className={styles.cartContainer}>
 						<Link to='/cos-de-cumparaturi' style={{ color: 'black' }}>
 							<Badge

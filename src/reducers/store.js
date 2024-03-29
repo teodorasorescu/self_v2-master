@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import itemsBagCount from './itemsCountBagSlice';
-import cartProductsReducer from './cartProductsSlice';
-import productsSlice from './productsSlice';
-import productSlice from './productSlice.js';
-import customerSlice from './customerSlice';
+import itemsBagCount from './slices/itemsCountBagSlice';
+import cartProductsReducer from './slices/cartProductsSlice';
+import productsSlice from './slices/productsSlice';
+import productSlice from './slices/productSlice.js';
+import customerSlice from './slices/customerSlice';
 
 export const store = configureStore({
 	reducer: {

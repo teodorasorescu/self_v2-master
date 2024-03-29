@@ -8,6 +8,8 @@ import { Checkout } from './components/Checkout';
 import { useStateContext } from './contexts/ContextProvider';
 import Inspiration from './components/Inspiration';
 import ColorPsychologyPage from './components/ColorPsychologyPage';
+import Footer from './components/Footer';
+import OrderConfirmation from './components/OrderConfirmation';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -32,8 +34,9 @@ function App() {
 						path='/psihologia-culorilor'
 						element={<ColorPsychologyPage />}
 					/>
+					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
 				</Routes>
-				{/* <Footer/> */}
+				{headerOn && <Footer />}
 			</BrowserRouter>
 		</div>
 	);

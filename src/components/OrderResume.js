@@ -4,6 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useStateContext } from '../contexts/ContextProvider';
 import { CheckoutCart } from './CheckoutCart';
+import { price } from '../constants/productConstants';
 
 export const OrderResume = () => {
 	const localStoreProducts = localStorage.getItem('products');
@@ -11,7 +12,7 @@ export const OrderResume = () => {
 	const { orderResume, setOrderResume } = useStateContext();
 
 	const total =
-		storedProducts.reduce((a, v) => (a = a + v.quantity * 120), 0) + 20;
+		storedProducts.reduce((a, v) => (a = a + v.quantity * price), 0) + 20;
 
 	const setOrderResumeTrue = () => {
 		setOrderResume(true);
@@ -31,7 +32,7 @@ export const OrderResume = () => {
 						<p>
 							Afișează rezumatul comenzii <KeyboardArrowDownIcon />
 						</p>
-						<p>{total + '.00 lei'}</p>
+						<p>{total.toFixed(2) + ' lei'}</p>
 					</div>
 				</div>
 			)}
@@ -44,7 +45,7 @@ export const OrderResume = () => {
 						<p>
 							Ascunde rezumatul comenzii <KeyboardArrowUpIcon />
 						</p>
-						<p>{total + '.00 lei'}</p>
+						<p>{total.toFixed(2) + ' lei'}</p>
 					</div>
 
 					<div className={styles.cartContainer}>

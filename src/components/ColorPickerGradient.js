@@ -6,13 +6,16 @@ import '../styling/flipcardSwatches.css';
 import { useStateContext } from '../contexts/ContextProvider';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { selectProduct } from '../reducers/productSlice';
-import { loadProducts } from '../reducers/productsSlice';
+import { selectProduct } from '../reducers/slices/productSlice';
+import { loadProducts } from '../reducers/slices/productsSlice';
 import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ProductCarousel from './ProductCarousel';
 import ColorPsychology from './ColorPsychology';
+import ProductInfo from './ProductInfo';
+import { frameColors } from '../constants/frameColors';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function ColorPickerGradient() {
 	const [colorSwatch1, setColorSwatch1] = useState({
@@ -43,15 +46,10 @@ function ColorPickerGradient() {
 		a: '1',
 	});
 
-	const [currentSlide, setCurrentSlide] = useState(0);
-	const slideLength = 2;
+	const [frameColor, setFrameColor] = useState('standard');
 
-	const nextSlide = () => {
-		setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
-	};
-
-	const prevSlide = () => {
-		setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1);
+	const setField = (event) => {
+		setFrameColor(event.target.value);
 	};
 
 	const dispatch = useDispatch();
@@ -84,6 +82,7 @@ function ColorPickerGradient() {
 		},
 	});
 
+	console.log(frameColor);
 	const computeProductCart = () => {
 		let productId = uuidv4();
 		const finalProduct = {
@@ -99,6 +98,7 @@ function ColorPickerGradient() {
 			],
 			quantity: 1,
 			description: product.description,
+			frameColor: frameColor,
 		};
 
 		const productsList = [...storedProducts, finalProduct];
@@ -126,6 +126,8 @@ function ColorPickerGradient() {
 						<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
 						<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
 					</div>
+
+					{wideScreen && <ProductInfo styleContainer='posterContainer' />}
 				</div>
 				<div className='descriptionContainer'>
 					<div className='titleContainer'>
@@ -133,7 +135,8 @@ function ColorPickerGradient() {
 							Personalizare tablou <br />
 							{product.title}
 							<br />
-							{product.price} <br />
+							{product.price.toFixed(2) + ' lei'}
+							<br />
 						</h1>
 					</div>
 					<div className='paragraphContainer'>
@@ -143,7 +146,18 @@ function ColorPickerGradient() {
 							vedea modificările tale pe parcurs.
 						</p>
 					</div>
-
+					<select
+						id='culoare_ramă'
+						name='culoare_ramă'
+						className='form-select'
+						placeholder='Culoare ramă'
+						onChange={setField}
+					>
+						<option value=''>Culoare ramă</option>
+						{frameColors.map((color, index) => {
+							return <option key={`color-${index}`}>{color}</option>;
+						})}
+					</select>
 					<div className='buttonContainer'>
 						<Link to='/cos-de-cumparaturi'>
 							<Button className='button' onClick={computeProductCart}>
@@ -158,9 +172,9 @@ function ColorPickerGradient() {
 							</p>
 						</div>
 					</div>
+					<ColorPsychology />
 				</div>
 			</div>
-			<ColorPsychology />
 		</div>
 	);
 }

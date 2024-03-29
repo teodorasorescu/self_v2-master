@@ -71,10 +71,10 @@
 		.container {
 			overflow: hidden;
 			position: relative;
+			font-family: 'Raleway', sans-serif;
 
 			@media screen and (width: 1024px) {
 				width: 80vw;
-				// padding-left: 15%;
 			}
 
 			transition: all 0.5s ease-in-out;
@@ -137,11 +137,6 @@
 						@media screen and (max-width: 320px) {
 							left: 70%;
 						}
-
-						// @media screen and (min-width: 600px) {
-						// 	left: 68vw;
-
-						// }
 
 						font-weight: 550;
 					}

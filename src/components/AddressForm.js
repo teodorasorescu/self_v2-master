@@ -6,9 +6,12 @@ import states from '../constants/states';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Shipping } from './Shipping';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { loadStripe } from '@stripe/stripe-js';
 
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
+	const localStoreProducts = localStorage.getItem('products');
+	const storedProducts = JSON.parse(localStoreProducts);
 
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
@@ -30,6 +33,41 @@ export const AddressForm = () => {
 	const setCustomerField = () => {
 		const newsletterChanged = !customer.newsletter;
 		setCustomer({ ...customer, newsletter: newsletterChanged });
+	};
+
+	const sendOrder = async () => {
+		const stripe = await loadStripe(process.env.PUBLIC_KEY_STRIPE);
+		console.log(products);
+		const products = storedProducts.map((product, i) => {
+			return {
+				quantity: product.quantity,
+				price: product.pFrice,
+			};
+		});
+
+		const body = {
+			products: products,
+		};
+
+		const headers = {
+			'Content-Type': 'application/json',
+		};
+
+		const response = await fetch('http://localhost:8080/checkout/create', {
+			method: 'POST',
+			headers: headers,
+			body: JSON.stringify(body),
+		});
+
+		const session = await response.json();
+
+		const result = stripe.redirectToCheckout({
+			sessionId: session.id,
+		});
+
+		if (result.error) {
+			console.log(result.error);
+		}
 	};
 
 	return (
@@ -232,7 +270,11 @@ export const AddressForm = () => {
 					<Shipping />
 
 					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
-						<button type='submit' className={styles.buttonContainer}>
+						<button
+							type='submit'
+							className={styles.buttonContainer}
+							onClick={() => sendOrder()}
+						>
 							PLĂTEȘTE ACUM
 						</button>
 					</div>

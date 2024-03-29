@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useStateContext } from '../contexts/ContextProvider';
 import styles from '../styling/header.module.scss';
 import FacebookIcon from '../images/facebook_logo.png';
@@ -11,6 +11,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@material-ui/core';
 import ShoppingBag from '../images/cart.png';
 import Self from '../images/self_logo.png';
+import { TIKTOK_LINK } from '../constants/socialMediaLinks';
+import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
+import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
+
 const headersData = [
 	{
 		label: 'Acasă',
@@ -39,6 +43,12 @@ const contactData = [
 
 const SmartphoneHeader = () => {
 	const { drawerOpen, setDrawerOpen } = useStateContext();
+
+	const navigate = useNavigate();
+
+	const goToHome = () => {
+		navigate('/');
+	};
 
 	const openDrawer = () => {
 		setDrawerOpen(true);
@@ -154,7 +164,7 @@ const SmartphoneHeader = () => {
 							}}
 						>
 							<MenuItem>
-								<Link>
+								<Link to={FACEBOOK_LINK}>
 									<img
 										style={{
 											width: '25px',
@@ -168,7 +178,7 @@ const SmartphoneHeader = () => {
 								</Link>
 							</MenuItem>
 							<MenuItem>
-								<Link>
+								<Link to={INSTAGRAM_LINK}>
 									<img
 										style={{
 											width: '25px',
@@ -182,7 +192,7 @@ const SmartphoneHeader = () => {
 								</Link>
 							</MenuItem>
 							<MenuItem>
-								<Link>
+								<Link to={TIKTOK_LINK}>
 									<img
 										style={{
 											width: '25px',
@@ -198,7 +208,7 @@ const SmartphoneHeader = () => {
 						</div>
 					</Drawer>
 				</Toolbar>
-				<img src={Self} />{' '}
+				<img src={Self} alt='logo' onClick={goToHome} />{' '}
 				<div className={styles.shoppingButton}>
 					<Link to='/cos-de-cumparaturi' style={{ color: 'black' }}>
 						<Badge
@@ -206,7 +216,7 @@ const SmartphoneHeader = () => {
 							className={styles.iconSize}
 							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
 						>
-							<img src={ShoppingBag} className={styles.iconSize} />{' '}
+							<img src={ShoppingBag} className={styles.iconSize} alt='' />{' '}
 						</Badge>
 					</Link>
 				</div>

@@ -1,20 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from '../styling/header.module.scss';
+import styles from '../styling/footer.module.scss';
+import FooterCategory from './FooterCategory';
+import {
+	aboutUsCategories,
+	infoCategories,
+} from '../constants/footerCategories';
+import Contact from './Contact';
+import Self from '../images/self_logo.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import DropdownSection from './DropdownSection';
 
 const Footer = () => {
-  return (
-    <div className={styles.container}>
-      <Link className={styles.link} to='/'>
-        Instagram
-      </Link>
-      <Link className={styles.link} to='/paintings'>
-        Politica de livrare
-      </Link>
-      <Link className={styles.link} to='/sculptures'>
-        Retur
-      </Link>
-    </div>
-  );
+	const wideScreen = useMediaQuery('(min-width:1025px)');
+
+	return (
+		<div className={styles.container}>
+			{wideScreen && (
+				<>
+					<FooterCategory title={'Informații'} categories={infoCategories} />
+					<FooterCategory title={''} categories={aboutUsCategories} />
+				</>
+			)}
+			{!wideScreen && (
+				<div className={styles.borderContainer}>
+					<DropdownSection
+						title={'Informații'}
+						infoCategories={infoCategories}
+						aboutUsCategories={aboutUsCategories}
+					/>
+				</div>
+			)}
+			<div className={styles.contactPadding}>
+				<Contact />
+			</div>
+			<img src={Self} alt='selflogo' />
+		</div>
+	);
 };
 export default Footer;

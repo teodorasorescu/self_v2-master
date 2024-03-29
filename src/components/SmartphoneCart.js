@@ -13,6 +13,7 @@ import Paper from '@mui/material/Paper';
 import Button from '@material-ui/core/Button';
 import emptyCart from '../images/emptyCart.jpeg';
 import CartActions from './CartActions';
+import { price } from '../constants/productConstants';
 
 export const SmartphoneCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -46,7 +47,10 @@ export const SmartphoneCart = () => {
 		));
 	};
 
-	const total = storedProducts.reduce((a, v) => (a = a + v.quantity * 120), 0);
+	const total = storedProducts.reduce(
+		(a, v) => (a = a + v.quantity * price),
+		0
+	);
 
 	const navigate = useNavigate();
 	const goToCheckout = () => {
@@ -116,7 +120,11 @@ export const SmartphoneCart = () => {
 																	}}
 																>
 																	{'Tablou personalizat ' + value}
-																	<p style={{ fontSize: '20px' }}>120,00 lei</p>
+																	<p>{row['frameColor']}</p>
+
+																	<p style={{ fontSize: '20px' }}>
+																		{price + ',00 lei'}
+																	</p>
 																	<div>
 																		<CartActions
 																			quantity={row['quantity']}
@@ -144,7 +152,7 @@ export const SmartphoneCart = () => {
 								}}
 								align='right'
 							>
-								{'Total:  ' + total + '.00 lei'}
+								{'Total:  ' + total.toFixed(2) + ' lei'}
 							</p>
 							<p
 								style={{
@@ -183,6 +191,7 @@ export const SmartphoneCart = () => {
 									fontStyle: 'italic',
 									textDecoration: 'none',
 									width: '100vw',
+									paddingBottom: '10%',
 								}}
 							>
 								<Link to='/' style={{ textDecoration: 'none', color: 'black' }}>

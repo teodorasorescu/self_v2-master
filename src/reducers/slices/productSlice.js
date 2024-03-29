@@ -10,7 +10,8 @@ export const productSlice = createSlice({
 			description: '',
 			colors: [],
 			quantity: 0,
-			price: '120 lei',
+			price: 120,
+			frameColor: '',
 		},
 	},
 

@@ -11,6 +11,7 @@
     "@mui/icons-material": "^5.15.3",
     "@mui/material": "^5.15.3",
     "@reduxjs/toolkit": "^1.9.5",
+    "@stripe/stripe-js": "^3.0.10",
     "@syncfusion/ej2-react-grids": "^22.2.11",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
