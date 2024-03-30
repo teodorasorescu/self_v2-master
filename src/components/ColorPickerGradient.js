@@ -16,6 +16,9 @@ import ColorPsychology from './ColorPsychology';
 import ProductInfo from './ProductInfo';
 import { frameColors } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
+import Dropdown from './Dropdown';
+import { details } from '../constants/productConstants';
+import { suport } from '../constants/productConstants';
 
 function ColorPickerGradient() {
 	const [colorSwatch1, setColorSwatch1] = useState({
@@ -165,11 +168,8 @@ function ColorPickerGradient() {
 							</Button>
 						</Link>
 						<div className='detailsContainer'>
-							<p>
-								Material: lemn natural <br />
-								Dimensiune: 30x40 cm <br />
-								Agățător: da
-							</p>
+							<Dropdown title='DETALII' content={details} />
+							<Dropdown title='SUPORT' content={suport} />
 						</div>
 					</div>
 					<ColorPsychology />

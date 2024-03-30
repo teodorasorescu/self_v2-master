@@ -19,7 +19,6 @@ export const ContextProvider = ({ children }) => {
 		country: '',
 		postalCode: '',
 		hasSubmited: false,
-		products: [],
 		newsletter: false,
 	});
 
