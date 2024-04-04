@@ -1,5 +1,5 @@
 export const frameColors = [
-	'standard',
+	'natur (lemn natural)',
 	'roșu',
 	'roz',
 	'albastru marin',

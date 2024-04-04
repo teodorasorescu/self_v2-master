@@ -112,8 +112,10 @@ export const DesktopCart = () => {
 														>
 															{column.id === 'title' ? (
 																<div>
-																	{'Tablou personalizat ' + value}
-																	<p>{row['frameColor']}</p>
+																	{'Poster ' + value}
+																	<p className={styles.frame}>
+																		Ramă: {row['frameColor']}
+																	</p>
 																	<div
 																		style={{
 																			display: 'flex',

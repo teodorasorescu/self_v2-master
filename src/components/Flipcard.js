@@ -18,12 +18,13 @@ const Flipcard = () => {
 	const dispatch = useDispatch();
 
 	const priceValue = price.toFixed(2) + ' lei';
-	const computeProduct = (image, title, description) => {
+	const computeProduct = (image, title, description, subtitle) => {
 		const product = {
 			price: price,
 			image: image,
 			title: title,
 			description: description,
+			subtitle: subtitle,
 		};
 
 		dispatch(loadProduct(product));
@@ -47,26 +48,27 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Mind})` }}
 					>
 						<div className='inner color-white'>
-							<Link to='alegeculorile'>
+							<Link to='/personalizare'>
 								<button
 									className='flip-box-button'
 									onClick={() =>
 										computeProduct(
 											'mind_buy.jpg',
 											'MIND',
-											'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.'
+											'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.',
+											'OPEN YOUR MIND'
 										)
 									}
 								>
-									Personalizează tabloul
+									Personalizează poster
 								</button>
 							</Link>
 						</div>
 					</div>
 				</div>
-				<p style={{ fontStyle: 'italic', paddingTop: '1%' }}>
-					Tablou personalizat MIND <br />
-					Ramă lemn - dimensiune 30x40cm
+				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
+					Poster canvas personalizat <br />
+					MIND
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>
@@ -86,26 +88,26 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Soul})` }}
 					>
 						<div className='inner color-white'>
-							<Link to='alegeculorile'>
+							<Link to='/personalizare'>
 								<button
 									className='flip-box-button'
 									onClick={() =>
 										computeProduct(
 											'Soul_Buy.jpg',
 											'SOUL',
-											'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.'
+											'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.',
+											'FOLLOW YOUR SOUL'
 										)
 									}
 								>
-									Personalizează tabloul
+									Personalizează poster{' '}
 								</button>
 							</Link>
 						</div>
 					</div>
 				</div>
-				<p style={{ fontStyle: 'italic', paddingTop: '1%' }}>
-					Tablou personalizat SOUL <br />
-					Ramă lemn - dimensiune 30x40cm
+				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
+					Poster canvas personalizat <br /> SOUL
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>
@@ -125,26 +127,27 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Body})` }}
 					>
 						<div className='inner color-white'>
-							<Link to='alegeculorile'>
+							<Link to='/personalizare'>
 								<button
 									onClick={() =>
 										computeProduct(
 											'body_buy.jpg',
 											'BODY',
-											'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.'
+											'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.',
+											'NOURISH YOUR BODY'
 										)
 									}
 									className='flip-box-button'
 								>
-									Personalizează tabloul
+									Personalizează poster{' '}
 								</button>
 							</Link>
 						</div>
 					</div>
 				</div>
-				<p style={{ fontStyle: 'italic', paddingTop: '1%' }}>
-					Tablou personalizat BODY <br />
-					Ramă lemn - dimensiune 30x40cm
+				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
+					Poster canvas personalizat <br />
+					BODY{' '}
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>

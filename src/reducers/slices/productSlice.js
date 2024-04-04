@@ -9,9 +9,11 @@ export const productSlice = createSlice({
 			title: '',
 			description: '',
 			colors: [],
+			fontColor: '',
 			quantity: 0,
 			price: 120,
 			frameColor: '',
+			subtitle: '',
 		},
 	},
 

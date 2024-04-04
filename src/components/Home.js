@@ -7,8 +7,8 @@ const Home = () => {
 	return (
 		<div>
 			<div className={styles.container}>
-				<div className={styles.imgContainer}></div>
-				<div className={styles.homeContainer}></div>
+				{/* <div className={styles.imgContainer}></div>
+				<div className={styles.homeContainer}></div> */}
 				<div className={styles.textContainer}>
 					<img src={Meditation} alt='meditation' />
 					<h1>
@@ -24,8 +24,8 @@ const Home = () => {
 					<img src={Responsability} alt='description' />
 					<p>
 						<br />
-						Confecționarea ramelor este facută din lemn natural certificat FSC,
-						astfel lemnul provine din surse prietenoase pentru păduri,
+						Confecționarea ramelor este facută din lemn natural certificat FSC
+						100%, astfel lemnul provine din surse prietenoase pentru păduri,
 						gestionate în mod responsabil.
 					</p>
 				</div>

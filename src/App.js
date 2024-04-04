@@ -10,6 +10,7 @@ import Inspiration from './components/Inspiration';
 import ColorPsychologyPage from './components/ColorPsychologyPage';
 import Footer from './components/Footer';
 import OrderConfirmation from './components/OrderConfirmation';
+import AddProduct from './components/AddProduct';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -26,7 +27,7 @@ function App() {
 				{headerOn && <Header />}
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/alegeculorile' element={<ColorPickerGradient />} />
+					<Route path='/personalizare' element={<ColorPickerGradient />} />
 					<Route path='/cos-de-cumparaturi' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiratie' element={<Inspiration />} />
@@ -34,6 +35,7 @@ function App() {
 						path='/psihologia-culorilor'
 						element={<ColorPsychologyPage />}
 					/>
+					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
 				</Routes>
 				{headerOn && <Footer />}

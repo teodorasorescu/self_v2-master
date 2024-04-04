@@ -24,6 +24,7 @@ const CartActions = ({ quantity, productId }) => {
 					quantity: Math.max(product.quantity + 1, 1),
 					description: product.description,
 					frameColor: product.frameColor,
+					subtitle: product.subtitle,
 				};
 
 				return updatedProduct;
@@ -49,6 +50,7 @@ const CartActions = ({ quantity, productId }) => {
 					quantity: Math.max(product.quantity - 1, 1),
 					description: product.description,
 					frameColor: product.frameColor,
+					subtitle: product.subtitle,
 				};
 
 				return updatedProduct;

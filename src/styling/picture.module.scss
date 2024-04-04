@@ -1,0 +1,43 @@
+.container {
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+		height: 80vh;
+	}
+
+	background-color: rgb(245, 245, 245);
+	height: 90vh;
+	width: 35vw;
+	justify-content: center;
+	display: grid;
+}
+
+@media screen and (min-width: 1025px) {
+	.picturesContainer {
+		transform-style: preserve-3d;
+		box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
+		justify-content: center;
+		width: 35vw;
+		height: 90vh;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.picturesContainer {
+		padding-left: 0%;
+		margin-left: 0%;
+		border-left: 0%;
+		width: 100vw;
+		height: 80vh;
+	}
+}
+
+@media screen and (width: 1024px) {
+	.picturesContainer {
+		padding-left: 2%;
+		margin-left: 0%;
+		border-left: 0%;
+		width: 100vw;
+		height: 80vh;
+		display: flex;
+	}
+}

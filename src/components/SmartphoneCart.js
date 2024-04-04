@@ -119,8 +119,8 @@ export const SmartphoneCart = () => {
 																		flexDirection: 'column',
 																	}}
 																>
-																	{'Tablou personalizat ' + value}
-																	<p>{row['frameColor']}</p>
+																	{'Poster personalizat ' + value}
+																	<p>Ramă {row['frameColor']}</p>
 
 																	<p style={{ fontSize: '20px' }}>
 																		{price + ',00 lei'}
