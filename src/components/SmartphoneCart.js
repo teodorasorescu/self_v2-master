@@ -120,7 +120,7 @@ export const SmartphoneCart = () => {
 																	}}
 																>
 																	{'Poster personalizat ' + value}
-																	<p>Ramă {row['frameColor']}</p>
+																	<p>Culoare ramă: {row['frameColor']}</p>
 
 																	<p style={{ fontSize: '20px' }}>
 																		{price + ',00 lei'}

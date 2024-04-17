@@ -1,5 +1,5 @@
 import styles from '../styling/product.info.module.scss';
-import Inspo from '../images/inspo10.jpg';
+import Posters from '../images/posters.jpeg';
 
 const ProductInfo = ({}) => {
 	return (
@@ -18,7 +18,7 @@ const ProductInfo = ({}) => {
 				Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
 				1.10.32
 			</p>
-			<img src={Inspo} alt='inspo_foto' />
+			<img src={Posters} alt='posters' />
 		</div>
 	);
 };

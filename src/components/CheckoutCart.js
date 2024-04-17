@@ -95,7 +95,7 @@ export const CheckoutCart = () => {
 														) : column.id === 'title' ? (
 															<>
 																{'Tablou personalizat ' + value}
-																<p>{row['frameColor']}</p>
+																<p>Culoare ramă: {row['frameColor']}</p>
 															</>
 														) : null}
 													</div>

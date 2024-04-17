@@ -2,6 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import classes from '../styling/picture.module.scss';
+
 const ProductCarousel = ({
 	product,
 	classGradient,
@@ -12,7 +13,9 @@ const ProductCarousel = ({
 	gradientSubtitle,
 }) => {
 	const navigate = useNavigate();
+
 	const isImageEmpty = product.image === '';
+
 	useEffect(() => {
 		if (isImageEmpty) {
 			navigate('/');
@@ -36,10 +39,12 @@ const ProductCarousel = ({
 			</Carousel.Item>
 			<Carousel.Item interval={600000}>
 				{!isImageEmpty && (
-					<img
-						src={require(`../images/${product.image}`)}
-						className={classes.picturesContainer}
-					/>
+					<div className={classes.container}>
+						<img
+							src={require(`../images/${product.image}`)}
+							className={classes.picturesContainer}
+						/>
+					</div>
 				)}
 			</Carousel.Item>
 		</Carousel>

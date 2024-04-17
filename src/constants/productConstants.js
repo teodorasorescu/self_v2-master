@@ -1,7 +1,7 @@
 export const price = 120;
 
 export const details =
-	'Print: canvas pânză cu finisaj mat\n Material ramă: lemn natural ceritificat FSC® 100% \n Dimensiune ramă: 30x40 cm\nAgățător: da';
+	'Print: canvas pânză cu finisaj mat\n Material ramă: lemn natural ceritificat FSC® 100% \n Dimensiune ramă: 30x40 cm\nModalitate de fixare: prevazută cu agățătoare\n Protecție poster: plexiglas';
 
 export const suport =
 	'Dacă aveți nelămuriri despre cum vor arătă exact culorile sau altele, nu ezitați să ne contactați la selfposters@gmail.com :)';

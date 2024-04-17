@@ -3,12 +3,14 @@ import styles from '../styling/footer.module.scss';
 import FooterCategory from './FooterCategory';
 import {
 	aboutUsCategories,
+	iconCardTypes,
 	infoCategories,
 } from '../constants/footerCategories';
 import Contact from './Contact';
 import Self from '../images/self_logo.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import DropdownSection from './DropdownSection';
+import CardTypes from '../images/cardTypes.png';
 
 const Footer = () => {
 	const wideScreen = useMediaQuery('(min-width:1025px)');
@@ -32,8 +34,9 @@ const Footer = () => {
 			)}
 			<div className={styles.contactPadding}>
 				<Contact />
+				<img className={styles.cardTypeImg} src={CardTypes} alt={`card`} />
 			</div>
-			<img src={Self} alt='selflogo' />
+			<img className={styles.logo} src={Self} alt='selflogo' />
 		</div>
 	);
 };

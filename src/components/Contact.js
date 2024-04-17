@@ -14,7 +14,7 @@ const Contact = () => {
 			<p>adresa sediului firmei</p>
 			<p>numar de telefon</p>
 			<div>
-				<Link to={TIKTOK_LINK}>
+				<Link to={FACEBOOK_LINK}>
 					<img
 						className={styles.socialMediaIcons}
 						src={FacebookIcon}

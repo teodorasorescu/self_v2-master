@@ -35,6 +35,8 @@ const AddProduct = () => {
 	const { itemCount, setItemCount } = useStateContext();
 	var product = useSelector(selectProduct);
 
+	const navigate = useNavigate();
+
 	const computeProductCart = () => {
 		let productId = uuidv4();
 		const finalProduct = {
@@ -56,27 +58,30 @@ const AddProduct = () => {
 		);
 	};
 
-	const gradientStyles = reactCSS({
-		default: {
-			gradient: {
-				background: `radial-gradient(circle at center,rgba(${product.colors[0][0][1]}, ${product.colors[0][1][1]}, ${product.colors[0][2][1]}, ${product.colors[0][3][1]}) 0,
+	const areColorsEmpty = product.colors.length === 0;
+	let gradientStyles = reactCSS({ gradient: {}, title: {}, subtitle: {} });
+	if (!areColorsEmpty) {
+		gradientStyles = reactCSS({
+			default: {
+				gradient: {
+					background: `radial-gradient(circle at center,rgba(${product.colors[0][0][1]}, ${product.colors[0][1][1]}, ${product.colors[0][2][1]}, ${product.colors[0][3][1]}) 0,
         rgba(${product.colors[0][0][1]}, ${product.colors[0][1][1]}, ${product.colors[0][2][1]}, ${product.colors[0][3][1]}),
 				rgba(${product.colors[1][0][1]}, ${product.colors[1][1][1]}, ${product.colors[1][2][1]}, ${product.colors[1][3][1]}),
 				rgba(${product.colors[2][0][1]}, ${product.colors[2][1][1]}, ${product.colors[2][2][1]}, ${product.colors[2][3][1]}),
 				rgba(${product.colors[3][0][1]}, ${product.colors[3][1][1]}, ${product.colors[3][2][1]}, ${product.colors[3][3][1]}),
        rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243)
         )`,
-			},
+				},
 
-			title: {
-				color: `rgba(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b}, ${product.fontColor.a})`,
+				title: {
+					color: `rgba(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b}, ${product.fontColor.a})`,
+				},
+				subtitle: {
+					color: `rgba(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b}, ${product.fontColor.a})`,
+				},
 			},
-			subtitle: {
-				color: `rgba(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b}, ${product.fontColor.a})`,
-			},
-		},
-	});
-
+		});
+	}
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
@@ -93,10 +98,10 @@ const AddProduct = () => {
 		));
 	};
 
-	const navigate = useNavigate();
 	const goToPrevious = () => {
 		navigate('/personalizare');
 	};
+
 	return (
 		<div className='bodyContainer'>
 			<ArrowBackIosIcon onClick={goToPrevious} />

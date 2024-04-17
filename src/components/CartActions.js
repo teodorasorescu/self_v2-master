@@ -10,7 +10,7 @@ const CartActions = ({ quantity, productId }) => {
 	const { itemCount, setItemCount } = useStateContext();
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
-
+	console.log(storedProducts);
 	const incrementQuantity = (index) => {
 		const updatedProducts = storedProducts.map((product, i) => {
 			if (i === index) {
@@ -79,7 +79,12 @@ const CartActions = ({ quantity, productId }) => {
 						data-field='quantity'
 						onClick={() => {
 							decrementQuantity(productId);
-							setItemCount(Math.max(itemCount - 1, 1));
+							setItemCount(
+								Math.max(
+									Number.parseInt(localStorage.getItem('itemCount')) - 1,
+									0
+								)
+							);
 						}}
 					/>
 				)}
@@ -102,14 +107,21 @@ const CartActions = ({ quantity, productId }) => {
 					data-field='quantity'
 					onClick={() => {
 						incrementQuantity(productId);
-						setItemCount(Math.max(itemCount + 1, 1));
+						setItemCount(
+							Math.max(
+								Number.parseInt(localStorage.getItem('itemCount')) + 1,
+								0
+							)
+						);
 					}}
 				/>
 			</div>
 			<Button
 				onClick={() => {
 					deleteProduct(productId);
-					setItemCount(Math.max(itemCount - quantity, 0));
+					setItemCount(
+						Math.max(localStorage.getItem('itemCount') - quantity, 0)
+					);
 				}}
 				style={{
 					right: '-5vw',

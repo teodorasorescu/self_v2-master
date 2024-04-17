@@ -9,9 +9,14 @@
 		padding-top: 2%;
 		padding-bottom: 2%;
 		font-size: 0.9rem;
-		> img {
+		.logo {
 			width: 160px;
 			height: 120px;
+		}
+
+		.cardTypeImg {
+			padding-top: 5%;
+			width: 200px;
 		}
 	}
 }
@@ -26,11 +31,17 @@
 		font-size: 0.9rem;
 		width: 90vw;
 		padding-left: 5%;
-		> img {
+		.logo {
 			width: 160px;
 			height: 120px;
 		}
 
+		.cardTypeImg {
+			padding-top: 5%;
+			padding-bottom: 5%;
+
+			width: 200px;
+		}
 		.contactPadding {
 			padding-top: 3%;
 		}

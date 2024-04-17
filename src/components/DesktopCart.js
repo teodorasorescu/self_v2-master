@@ -114,7 +114,7 @@ export const DesktopCart = () => {
 																<div>
 																	{'Poster ' + value}
 																	<p className={styles.frame}>
-																		Ramă: {row['frameColor']}
+																		Culoare ramă: {row['frameColor']}
 																	</p>
 																	<div
 																		style={{
