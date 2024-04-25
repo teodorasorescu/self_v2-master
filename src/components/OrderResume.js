@@ -6,9 +6,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 import { CheckoutCart } from './CheckoutCart';
 import { price } from '../constants/productConstants';
 
-export const OrderResume = () => {
-	const localStoreProducts = localStorage.getItem('products');
-	const storedProducts = JSON.parse(localStoreProducts);
+export const OrderResume = ({ storedProducts }) => {
 	const { orderResume, setOrderResume } = useStateContext();
 
 	const total =
@@ -49,7 +47,7 @@ export const OrderResume = () => {
 					</div>
 
 					<div className={styles.cartContainer}>
-						<CheckoutCart />
+						<CheckoutCart storedProducts={storedProducts} />
 					</div>
 				</div>
 			)}

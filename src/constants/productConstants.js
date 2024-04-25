@@ -1,4 +1,4 @@
-export const price = 120;
+export const price = 120.0;
 
 export const details =
 	'Print: canvas pânză cu finisaj mat\n Material ramă: lemn natural ceritificat FSC® 100% \n Dimensiune ramă: 30x40 cm\nModalitate de fixare: prevazută cu agățătoare\n Protecție poster: plexiglas';
@@ -9,6 +9,7 @@ export const suport =
 export const atentionareCuloare =
 	'Vă sfătuim să nu alegeți culori stridente. Tehnologia actuală nu permite printarea culorilor în format RGB, ci CMYK. Astfel, culorile stridente pot ieși la imprimare ușor mai închise.';
 
+export const shipping = 20;
 export const color0 = {
 	r: '255',
 	g: '190',

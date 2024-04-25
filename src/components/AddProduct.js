@@ -11,9 +11,14 @@ import ProductCarousel from './ProductCarousel';
 import { frameColors } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
-import { details, suport } from '../constants/productConstants';
+import {
+	atentionareCuloare,
+	details,
+	suport,
+} from '../constants/productConstants';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import reactCSS from 'reactcss';
+import AttentionPrint from '../images/cmyk.png';
 
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
@@ -25,7 +30,7 @@ const AddProduct = () => {
 	const dispatch = useDispatch();
 	const localStoreProducts = localStorage.getItem('products');
 
-	var storedProducts = [];
+	let storedProducts = [];
 	if (localStoreProducts != []) {
 		storedProducts = JSON.parse(localStoreProducts);
 	} else {
@@ -33,7 +38,7 @@ const AddProduct = () => {
 	}
 
 	const { itemCount, setItemCount } = useStateContext();
-	var product = useSelector(selectProduct);
+	let product = useSelector(selectProduct);
 
 	const navigate = useNavigate();
 
@@ -145,6 +150,11 @@ const AddProduct = () => {
 								return <option key={`color-${index}`}>{color}</option>;
 							})}
 						</select>
+					</div>
+					<div className='printAttention'>
+						<p>
+							<img src={AttentionPrint} alt='attprint' /> {atentionareCuloare}
+						</p>
 					</div>
 					<div className='addToCartContainer'>
 						<Link to='/cos-de-cumparaturi'>

@@ -8,9 +8,10 @@ import { noop } from 'lodash';
 const CartActions = ({ quantity, productId }) => {
 	const dispatch = useDispatch();
 	const { itemCount, setItemCount } = useStateContext();
-	const localStoreProducts = localStorage.getItem('products');
-	const storedProducts = JSON.parse(localStoreProducts);
+	const storedProducts = JSON.parse(localStorage.getItem('products'));
+
 	console.log(storedProducts);
+
 	const incrementQuantity = (index) => {
 		const updatedProducts = storedProducts.map((product, i) => {
 			if (i === index) {

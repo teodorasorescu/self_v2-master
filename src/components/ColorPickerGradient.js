@@ -162,7 +162,6 @@ function ColorPickerGradient() {
 						<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
 						<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
 					</div>
-
 					{wideScreen && <ProductInfo styleContainer='posterContainer' />}
 				</div>
 				<div className='descriptionContainer'>
@@ -201,11 +200,7 @@ function ColorPickerGradient() {
 							</Button>
 						</Link>
 					</div>
-					<div className='printAttention'>
-						<p>
-							<img src={AttentionPrint} alt='attprint' /> {atentionareCuloare}
-						</p>
-					</div>
+
 					<ColorPsychology />
 				</div>
 			</div>

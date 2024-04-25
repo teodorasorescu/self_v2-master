@@ -1,15 +1,16 @@
-import axios from 'axios';
 import { BACKEND_PATH } from '../../constants/links';
+import axios from 'axios';
+import { loadOrderFailed } from '../slices/orderFailedSlice';
 
-const sendOrder = async (dispatch, optionId) => {
-	await axios
-		.delete(`${BACKEND_PATH}/options/id/` + optionId)
+const sendOrderAction = (order, dispatch) => {
+	axios
+		.post(`${BACKEND_PATH}/order/create`, order)
 		.then(() => {
-			location.reload();
+			dispatch(loadOrderFailed(false));
 		})
 		.catch(() => {
-			//dispatch(loadDeletedSuccessfully(false));
+			dispatch(loadOrderFailed(true));
 		});
 };
 
-export default sendOrder;
+export default sendOrderAction;

@@ -48,4 +48,14 @@
 			bottom: 0px;
 		}
 	}
+
+	.failedOrderContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		> img {
+			width: 200px;
+			height: max-content;
+		}
+	}
 }

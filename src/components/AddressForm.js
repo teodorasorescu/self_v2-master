@@ -6,18 +6,37 @@ import states from '../constants/states';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Shipping } from './Shipping';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { loadStripe } from '@stripe/stripe-js';
+import { price, shipping } from '../constants/productConstants';
+import sendCheckoutAction from '../reducers/actions/sendCheckoutAction';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
+	const { itemCount, setItemCount } = useStateContext();
+
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
+
+	const dispatch = useDispatch();
 
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
 	};
 
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
+
+	console.log(storedProducts);
+	const total = storedProducts.reduce(
+		(a, v) => (a = a + v.quantity * price),
+		0
+	);
+
+	const getTotal = () => {
+		return (total + shipping).toFixed(2);
+	};
+
+	console.log(getTotal());
 
 	var heightT = '7vh';
 	if (smartphoneScreen) {
@@ -30,44 +49,22 @@ export const AddressForm = () => {
 		e.target.classList.add('was-validated');
 	}
 
+	const navigate = useNavigate();
 	const setCustomerField = () => {
 		const newsletterChanged = !customer.newsletter;
 		setCustomer({ ...customer, newsletter: newsletterChanged });
 	};
 
-	const sendOrder = async () => {
-		const stripe = await loadStripe(process.env.PUBLIC_KEY_STRIPE);
-		console.log(products);
-		const products = storedProducts.map((product, i) => {
-			return {
-				quantity: product.quantity,
-				price: product.pFrice,
-			};
-		});
-
-		const body = {
-			products: products,
-		};
-
-		const headers = {
-			'Content-Type': 'application/json',
-		};
-
-		const response = await fetch('http://localhost:8080/checkout/create', {
-			method: 'POST',
-			headers: headers,
-			body: JSON.stringify(body),
-		});
-
-		const session = await response.json();
-
-		const result = stripe.redirectToCheckout({
-			sessionId: session.id,
-		});
-
-		if (result.error) {
-			console.log(result.error);
-		}
+	localStorage.setItem('customer', JSON.stringify(customer));
+	const sendSession = () => {
+		sendCheckoutAction(
+			navigate,
+			dispatch,
+			{
+				total: getTotal(),
+			},
+			setItemCount
+		);
 	};
 
 	return (
@@ -273,7 +270,7 @@ export const AddressForm = () => {
 						<button
 							type='submit'
 							className={styles.buttonContainer}
-							onClick={() => sendOrder()}
+							onClick={() => sendSession()}
 						>
 							PLĂTEȘTE ACUM
 						</button>

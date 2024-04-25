@@ -13,12 +13,10 @@ export const ContextProvider = ({ children }) => {
 		email: '',
 		firstName: '',
 		lastName: '',
-		addressLine: '',
 		city: '',
 		state: '',
 		country: '',
 		postalCode: '',
-		hasSubmited: false,
 		newsletter: false,
 	});
 

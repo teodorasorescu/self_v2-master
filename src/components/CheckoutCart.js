@@ -8,9 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/checkout.cart.module.scss';
 import { price } from '../constants/productConstants';
-export const CheckoutCart = () => {
-	const localStoreProducts = localStorage.getItem('products');
-	const storedProducts = JSON.parse(localStoreProducts);
+export const CheckoutCart = ({ storedProducts }) => {
 	console.log(storedProducts);
 	const columns = [
 		{ id: 'image', label: 'Articol' },
