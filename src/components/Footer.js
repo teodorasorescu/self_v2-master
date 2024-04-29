@@ -13,7 +13,7 @@ import DropdownSection from './DropdownSection';
 import CardTypes from '../images/cardTypes.png';
 
 const Footer = () => {
-	const wideScreen = useMediaQuery('(min-width:1025px)');
+	const wideScreen = useMediaQuery('(min-width:1024px)');
 
 	return (
 		<div className={styles.container}>

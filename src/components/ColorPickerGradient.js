@@ -141,7 +141,7 @@ function ColorPickerGradient() {
 		dispatch(loadProduct(finalProduct));
 	};
 
-	const wideScreen = useMediaQuery('(min-width:1025px)');
+	const wideScreen = useMediaQuery('(min-width:1024px)');
 
 	return (
 		<div className='body'>
