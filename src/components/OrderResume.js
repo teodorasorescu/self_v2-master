@@ -4,14 +4,12 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useStateContext } from '../contexts/ContextProvider';
 import { CheckoutCart } from './CheckoutCart';
-import { price } from '../constants/productConstants';
+import { calculateTotalPrice } from '../constants/productConstants';
 
 export const OrderResume = ({ storedProducts }) => {
 	const { orderResume, setOrderResume } = useStateContext();
 
-	const total =
-		storedProducts.reduce((a, v) => (a = a + v.quantity * price), 0) + 20;
-
+	const total = calculateTotalPrice(storedProducts);
 	const setOrderResumeTrue = () => {
 		setOrderResume(true);
 	};

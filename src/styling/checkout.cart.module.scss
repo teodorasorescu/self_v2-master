@@ -12,6 +12,20 @@
 			display: flex;
 			flex-direction: column;
 
+			.discountContainer {
+				padding: 14px 0 0px 15px;
+				display: flex;
+				flex-direction: row;
+				font-size: 90%;
+				color: rgb(255, 0, 0);
+				.pRightContainer {
+					font-weight: 600;
+					text-align: right;
+					position: absolute;
+					left: 85%;
+				}
+			}
+
 			.pLeftContainer {
 				padding: 14px 0 0px 15px;
 				display: flex;
@@ -23,6 +37,7 @@
 					position: absolute;
 					left: 85%;
 				}
+
 				.pTransportContainer {
 					font-weight: 500;
 					text-align: right;
@@ -83,6 +98,27 @@
 				display: flex;
 				flex-direction: column;
 				transition: all 0.5s ease-in-out;
+
+				.discountContainer {
+					color: gray;
+					padding: 14px 0 0px 15px;
+					display: flex;
+					flex-direction: row;
+					font-size: 90%;
+					color: rgb(255, 0, 0);
+					.pRightContainer {
+						color: black;
+						text-align: right;
+						position: absolute;
+						@media screen and (max-width: 600px) {
+							left: 80%;
+						}
+						@media screen and (max-width: 320px) {
+							left: 76%;
+						}
+						left: 73vw;
+					}
+				}
 
 				.pLeftContainer {
 					color: gray;

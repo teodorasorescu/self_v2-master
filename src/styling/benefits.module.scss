@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container {
+	display: flex;
+	flex-direction: row;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 3%;
+	justify-content: space-evenly;
+	.benefits {
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		font-family: 'Raleway', sans-serif;
+		> h4 {
+			color: #6557ff;
+		}
+		.pContainer {
+			font-size: 1rem;
+		}
+	}
+}

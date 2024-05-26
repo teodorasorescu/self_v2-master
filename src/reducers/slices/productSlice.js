@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { price } from '../../constants/productConstants';
 
 export const productSlice = createSlice({
 	name: 'product',
@@ -11,7 +12,7 @@ export const productSlice = createSlice({
 			colors: [],
 			fontColor: '',
 			quantity: 0,
-			price: 120,
+			price: price,
 			frameColor: '',
 			subtitle: '',
 		},

@@ -7,3 +7,5 @@ export const frameColors = [
 	'galben',
 	'verde',
 ];
+
+export const framePrice = 50.0;

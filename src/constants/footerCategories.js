@@ -4,16 +4,16 @@ export const infoCategories = [
 		link: '/termeni-și-condiții',
 	},
 	{
-		name: 'Livrare',
-		link: '/livrare',
-	},
-	{
-		name: 'Retur',
-		link: '/retur',
-	},
-	{
 		name: 'Politica de confidențialitate',
-		link: '/confidențialitate',
+		link: '/politica-de-confidențialitate',
+	},
+	{
+		name: 'FAQ',
+		link: '/faq',
+	},
+	{
+		name: 'Contact',
+		link: '/contact',
 	},
 ];
 
@@ -25,9 +25,5 @@ export const aboutUsCategories = [
 	{
 		name: 'Sustenabilitate',
 		link: '/sustenabilitate',
-	},
-	{
-		name: 'Produsele noastre',
-		link: '/despre-produse',
 	},
 ];

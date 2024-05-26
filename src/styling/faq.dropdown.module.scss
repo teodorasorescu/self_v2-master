@@ -1,0 +1,17 @@
+.dropdownContainer {
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+	}
+	width: 60vw;
+
+	border-radius: 50px;
+	background-color: #fff7e3;
+	margin-top: 3%;
+
+	word-wrap: break-word;
+
+	.dropdown {
+		padding-left: 8%;
+		word-wrap: break-word;
+	}
+}

@@ -10,8 +10,6 @@ const CartActions = ({ quantity, productId }) => {
 	const { itemCount, setItemCount } = useStateContext();
 	const storedProducts = JSON.parse(localStorage.getItem('products'));
 
-	console.log(storedProducts);
-
 	const incrementQuantity = (index) => {
 		const updatedProducts = storedProducts.map((product, i) => {
 			if (i === index) {

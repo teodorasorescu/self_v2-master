@@ -7,9 +7,13 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/checkout.cart.module.scss';
-import { price } from '../constants/productConstants';
+import {
+	calculateTotalPrice,
+	computeProductsLength,
+	shipping,
+	price,
+} from '../constants/productConstants';
 export const CheckoutCart = ({ storedProducts }) => {
-	console.log(storedProducts);
 	const columns = [
 		{ id: 'image', label: 'Articol' },
 		{ id: 'title', label: '' },
@@ -37,13 +41,17 @@ export const CheckoutCart = ({ storedProducts }) => {
 		));
 	};
 
-	const total = storedProducts.reduce(
-		(a, v) => (a = a + v.quantity * price),
-		0
-	);
+	const total = calculateTotalPrice(storedProducts);
+
+	const discountNo = Math.floor(computeProductsLength(storedProducts) / 3);
+	const discount = false;
+	// computeProductsLength(storedProducts) / 3 >= 1;
 
 	const calculateTotal = () => {
-		return (total + 20).toFixed(2);
+		if (discount) {
+			return (total - price * discountNo + shipping).toFixed(2);
+		}
+		return (total + shipping).toFixed(2);
 	};
 
 	return (
@@ -89,7 +97,9 @@ export const CheckoutCart = ({ storedProducts }) => {
 																</div>
 															</div>
 														) : column.id === 'total' ? (
-															'' + (row['quantity'] * price).toFixed(2) + ' lei'
+															'' +
+															(row['quantity'] * row['price']).toFixed(2) +
+															' lei'
 														) : column.id === 'title' ? (
 															<>
 																{'Tablou personalizat ' + value}
@@ -113,6 +123,14 @@ export const CheckoutCart = ({ storedProducts }) => {
 							{'' + total.toFixed(2) + ' lei'}
 						</p>
 					</div>
+					{discount && (
+						<div className={styles.discountContainer}>
+							<p align='left'>Reducere</p>
+							<p className={styles.pRightContainer}>
+								{'-' + (price * discountNo).toFixed(2) + ' lei'}
+							</p>
+						</div>
+					)}
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Transport</p>
 						<p className={styles.pTransportContainer}>&nbsp; 20.00 lei</p>

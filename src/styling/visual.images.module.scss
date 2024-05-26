@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 500px;
+	margin: 3%;
+
+	.firstContainer {
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		transition: all 0.05s;
+		background-image: url('../images/frames.webp');
+		margin-right: 2%;
+	}
+	.secondContainer {
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		transition: all 0.05s;
+		height: 500px;
+		background-image: url('../images/visual.jpeg');
+	}
+}

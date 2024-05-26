@@ -3,7 +3,6 @@ import styles from '../styling/footer.module.scss';
 import FooterCategory from './FooterCategory';
 import {
 	aboutUsCategories,
-	iconCardTypes,
 	infoCategories,
 } from '../constants/footerCategories';
 import Contact from './Contact';
@@ -11,6 +10,8 @@ import Self from '../images/self_logo.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import DropdownSection from './DropdownSection';
 import CardTypes from '../images/cardTypes.png';
+import AnpcSal from '../images/anpcsal.JPG';
+import AnpcSol from '../images/anpcsol.JPG';
 
 const Footer = () => {
 	const wideScreen = useMediaQuery('(min-width:1024px)');
@@ -32,11 +33,30 @@ const Footer = () => {
 					/>
 				</div>
 			)}
+
 			<div className={styles.contactPadding}>
 				<Contact />
 				<img className={styles.cardTypeImg} src={CardTypes} alt={`card`} />
 			</div>
-			<img className={styles.logo} src={Self} alt='selflogo' />
+			<div className={styles.logoContainer}>
+				<img className={styles.logo} src={Self} alt='selflogo' />
+				<div className={styles.anpcContainer}>
+					<a href='https://anpc.ro/ce-este-sal/' target='_blank' rel='nofollow'>
+						{' '}
+						<img src={AnpcSal} alt='anpc-sal' />
+					</a>{' '}
+					<a />
+					<a
+						href='https://ec.europa.eu/consumers/odr'
+						target='_blank'
+						rel='nofollow'
+					>
+						{' '}
+						<img src={AnpcSol} alt='anpc-sal' />
+					</a>{' '}
+					<a />
+				</div>
+			</div>
 		</div>
 	);
 };

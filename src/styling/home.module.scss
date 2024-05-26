@@ -2,44 +2,128 @@
 
 .container {
 	height: 100%;
-	padding-top: 3%;
-
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 	justify-content: space-evenly;
 	font-family: 'Raleway', sans-serif;
 	font-size: 70px;
-	text-align: center;
 
-	.textContainer {
-		// opacity: 1;
-		@media screen and (max-width: 1024px) {
-			width: 100vw;
-			font-size: 8vw;
-		}
-		@media screen and (min-width: 880px) {
-			width: 90vw;
-			font-size: 4vw;
-		}
-
-		> img {
-			width: 300px;
-			padding-bottom: 3%;
-		}
-
-		padding: 2%;
+	.homePhoto {
+		margin-top: 3%;
+	}
+	.ourstory {
 		margin: 3%;
-		width: 55vw;
+		width: 50%;
+	}
+	.text {
+		margin-left: 3%;
+	}
+
+	.inspoImages {
+		margin-left: auto;
+		margin-right: auto;
+		font-family: 'Raleway', sans-serif;
+		width: 90vw;
+		text-align: center;
+
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+
+	.inspoImages::-webkit-scrollbar {
+		display: none;
+	}
+
+	.introductionContainer {
+		width: auto;
+		align-self: center;
 		text-align: center;
 		font-family: 'Raleway', sans-serif;
-		font-size: 2.5vw;
-		font-weight: 400;
-
-		color: #0f1928;
 		box-sizing: border-box;
 		border-collapse: separate;
-		font-weight: 550;
+		padding-top: 3%;
+
+		.title {
+			font-size: 2.5rem;
+			color: #6557ff;
+		}
+
+		.subtitle {
+			padding-top: 1%;
+			font-size: 2rem;
+		}
+
+		.buttonContainer {
+			.button {
+				width: auto;
+				height: auto;
+				font-family: 'Raleway', sans-serif;
+				font-size: 1.2rem;
+				transition: all 0.1s ease;
+				background-color: #fff7e3;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.button:hover {
+				text-decoration: none;
+				transition: none;
+				background-color: rgba(253, 231, 189, 0.6);
+			}
+		}
+	}
+
+	.colorsContainer {
+		display: flex;
+		flex-direction: row;
+		align-self: center;
+		.jumi {
+			width: 400px;
+			padding: 1%;
+			margin-right: 5%;
+		}
+
+		.colorsChoice {
+			.colors {
+				width: 50vw;
+			}
+			> h3 {
+				padding-bottom: 5%;
+				text-align: left;
+			}
+			.buttonContainer {
+				.button {
+					width: auto;
+					height: 50px;
+					font-family: 'Raleway', sans-serif;
+					border: 0.1px solid rgba(221, 204, 174, 0);
+					font-size: 1rem;
+					transition: all 0.1s ease;
+					background-color: #fff7e3;
+					cursor: pointer;
+					text-decoration: none;
+				}
+
+				.button:hover {
+					text-decoration: none;
+					transition: none;
+					background-color: rgba(248, 221, 170, 0.6);
+				}
+			}
+		}
+	}
+
+	.introductionImgContainer {
+		width: 100%;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		transition: all 0.05s;
+		height: 500px;
+		display: flex;
+		background-image: url('../images/homeimg.png');
+		background-blend-mode: lighten;
 	}
 
 	.sustenabilityTextContainer {
@@ -58,28 +142,6 @@
 		> img {
 			width: 70px;
 		}
-	}
-
-	@mixin myContainer($color, $url) {
-		width: 100%;
-		//background-color: rgb(255, 255, 255);
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-image: url($url);
-		@media screen and (max-width: 1024px) {
-			background-size: cover;
-		}
-		background-position: center;
-		transition: all 0.05s;
-		height: calc(100vh - 70px);
-		display: flex;
-	}
-
-	.imgContainer {
-		@include myContainer(black, '../images/body_picture.jpg');
-	}
-	.homeContainer {
-		@include myContainer(black, '../images/home.png');
 	}
 }
 

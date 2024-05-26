@@ -13,7 +13,7 @@ import Paper from '@mui/material/Paper';
 import Button from '@material-ui/core/Button';
 import emptyCart from '../images/emptyCart.jpeg';
 import CartActions from './CartActions';
-import { price } from '../constants/productConstants';
+import { calculateTotalPrice, price } from '../constants/productConstants';
 
 export const SmartphoneCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -47,10 +47,7 @@ export const SmartphoneCart = () => {
 		));
 	};
 
-	const total = storedProducts.reduce(
-		(a, v) => (a = a + v.quantity * price),
-		0
-	);
+	const total = calculateTotalPrice(storedProducts);
 
 	const navigate = useNavigate();
 	const goToCheckout = () => {
@@ -123,7 +120,9 @@ export const SmartphoneCart = () => {
 																	<p>Culoare ramă: {row['frameColor']}</p>
 
 																	<p style={{ fontSize: '20px' }}>
-																		{price + ',00 lei'}
+																		{(row['quantity'] * row['price']).toFixed(
+																			2
+																		) + ' lei'}
 																	</p>
 																	<div>
 																		<CartActions
@@ -163,7 +162,8 @@ export const SmartphoneCart = () => {
 								}}
 								align='right'
 							>
-								TVA inclus, costurile de livrare vor fi calculate in Checkout.
+								TVA inclus, costurile de livrare și reducere vor fi calculate in
+								Checkout.
 							</p>
 						</div>
 						<div

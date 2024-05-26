@@ -10,6 +10,7 @@ import Self from '../images/self_logo.png';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
+import { headerMessage } from '../constants/productConstants';
 
 const DesktopHeader = () => {
 	const navigate = useNavigate();
@@ -45,13 +46,16 @@ const DesktopHeader = () => {
 					</Link>
 				</div>
 
-				<p>Transport gratuit la comenzi peste 240 RON! </p>
+				{/* <p>{headerMessage}</p> */}
 				<div className={styles.contactText}>
-					<Link style={{ textDecoration: 'none', color: 'black' }}>
+					<Link style={{ textDecoration: 'none', color: 'black' }} to='/faq'>
 						<p>FAQ&nbsp;&nbsp;</p>
 					</Link>
 
-					<Link style={{ textDecoration: 'none', color: 'black' }}>
+					<Link
+						style={{ textDecoration: 'none', color: 'black' }}
+						to='/contact'
+					>
 						<p>Contact&nbsp;&nbsp;</p>
 					</Link>
 				</div>

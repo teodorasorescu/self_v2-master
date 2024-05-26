@@ -19,9 +19,7 @@ import {
 	color1,
 	color3,
 	fontColors,
-	atentionareCuloare,
 } from '../constants/productConstants';
-import AttentionPrint from '../images/cmyk.png';
 
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);

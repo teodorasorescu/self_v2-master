@@ -11,6 +11,12 @@ import ColorPsychologyPage from './components/ColorPsychologyPage';
 import Footer from './components/Footer';
 import OrderConfirmation from './components/OrderConfirmation';
 import AddProduct from './components/AddProduct';
+import OurStoryPage from './components/OurStoryPage';
+import SustenabilityPage from './components/SustenabilityPage';
+import TermsAndConditions from './components/TermsAndConditions';
+import Confidentiality from './components/Confidentiality';
+import FAQPage from './components/FAQPage';
+import ContactPage from './components/ContactPage';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -37,6 +43,15 @@ function App() {
 					/>
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
+					<Route path='/despre-self' element={<OurStoryPage />} />
+					<Route path='/sustenabilitate' element={<SustenabilityPage />} />
+					<Route path='/termeni-și-condiții' element={<TermsAndConditions />} />
+					<Route
+						path='/politica-de-confidențialitate'
+						element={<Confidentiality />}
+					/>
+					<Route path='/faq' element={<FAQPage />} />
+					<Route path='/contact' element={<ContactPage />} />
 				</Routes>
 				{headerOn && <Footer />}
 			</BrowserRouter>

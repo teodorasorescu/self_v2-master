@@ -40,6 +40,7 @@ const OrderConfirmation = () => {
 						title: product.title,
 						colors: product.colors.toString(),
 						image: product.image,
+						fontColor: JSON.stringify(product.fontColor),
 					};
 				});
 

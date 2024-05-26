@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { columns } from '../constants/cartColumns.js';
 import CartActions from './CartActions';
-import { price } from '../constants/productConstants.js';
+import { calculateTotalPrice } from '../constants/productConstants.js';
 
 export const DesktopCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -29,7 +29,7 @@ export const DesktopCart = () => {
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
 	const navigate = useNavigate();
-
+	console.log(storedProducts);
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
@@ -46,15 +46,10 @@ export const DesktopCart = () => {
 		));
 	};
 
-	const calculateTotalPrice = () => {
-		return storedProducts.reduce((a, v) => (a = a + v.quantity * price), 0);
-	};
-
 	const goToCheckout = () => {
 		setHeaderOn(false);
 		navigate('/checkout');
 	};
-
 	return (
 		<div className={styles.cart}>
 			<div className={styles.hContainer}>
@@ -138,10 +133,10 @@ export const DesktopCart = () => {
 																/>
 															) : column.id === 'total' ? (
 																'' +
-																(row['quantity'] * price).toFixed(2) +
+																(row['quantity'] * row['price']).toFixed(2) +
 																' lei'
 															) : column.id != 'colors' ? (
-																price.toFixed(2) + ' lei'
+																row['price'].toFixed(2) + ' lei'
 															) : null}
 														</div>
 													</TableCell>
@@ -155,10 +150,11 @@ export const DesktopCart = () => {
 					</TableContainer>
 					<div className={styles.textContainer}>
 						<p className={styles.pTotal} align='right'>
-							Total: {'' + calculateTotalPrice() + ' lei'}
+							Total: {'' + calculateTotalPrice(storedProducts) + ' lei'}
 						</p>
 						<p className={styles.pTva} align='right'>
-							TVA inclus, costurile de livrare vor fi calculate in Checkout.
+							TVA inclus, costurile de livrare și reducere vor fi calculate in
+							Checkout.
 						</p>
 					</div>
 					<div className={styles.buttonContainer}>

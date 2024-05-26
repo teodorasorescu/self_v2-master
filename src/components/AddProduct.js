@@ -8,7 +8,7 @@ import { loadProducts } from '../reducers/slices/productsSlice';
 import { v4 as uuidv4 } from 'uuid';
 import { Link, useNavigate } from 'react-router-dom';
 import ProductCarousel from './ProductCarousel';
-import { frameColors } from '../constants/frameColors';
+import { frameColors, framePrice } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
 import {
@@ -44,15 +44,21 @@ const AddProduct = () => {
 
 	const computeProductCart = () => {
 		let productId = uuidv4();
+		let finalPrice = product.price;
+		if (frameColor !== 'fără') {
+			finalPrice = product.price + framePrice;
+		}
+
 		const finalProduct = {
 			id: productId,
 			image: product.image,
-			price: product.price,
+			price: finalPrice,
 			title: product.title,
 			colors: product.colors,
 			quantity: 1,
 			description: product.description,
 			frameColor: frameColor,
+			fontColor: product.fontColor,
 		};
 
 		const productsList = [...storedProducts, finalProduct];
@@ -147,7 +153,11 @@ const AddProduct = () => {
 						>
 							<option value=''>Continuă fără ramă</option>
 							{frameColors.map((color, index) => {
-								return <option key={`color-${index}`}>{color}</option>;
+								return (
+									<option key={`color-${index}`} value={color}>
+										{color} + {framePrice} lei
+									</option>
+								);
 							})}
 						</select>
 					</div>
@@ -164,8 +174,8 @@ const AddProduct = () => {
 						</Link>
 					</div>
 					<div className='detailsDropdownContainer'>
-						<Dropdown title='DETALII' content={details} />
-						<Dropdown title='SUPORT' content={suport} />
+						<Dropdown title='DETALII' content={details} dropdownWidth='25vw' />
+						<Dropdown title='SUPORT' content={suport} dropdownWidth='25vw' />
 					</div>
 				</div>
 			</div>

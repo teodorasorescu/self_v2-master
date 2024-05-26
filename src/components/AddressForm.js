@@ -6,7 +6,12 @@ import states from '../constants/states';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Shipping } from './Shipping';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { price, shipping } from '../constants/productConstants';
+import {
+	calculateTotalPrice,
+	computeProductsLength,
+	price,
+	shipping,
+} from '../constants/productConstants';
 import sendCheckoutAction from '../reducers/actions/sendCheckoutAction';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -26,17 +31,17 @@ export const AddressForm = () => {
 
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
 
-	console.log(storedProducts);
-	const total = storedProducts.reduce(
-		(a, v) => (a = a + v.quantity * price),
-		0
-	);
+	const total = calculateTotalPrice(storedProducts);
+	const discountNo = Math.floor(computeProductsLength(storedProducts) / 3);
+	const discount = false;
+	//computeProductsLength(storedProducts) / 3 >= 1;
 
 	const getTotal = () => {
+		if (discount) {
+			return (total - price * discountNo + shipping).toFixed(2);
+		}
 		return (total + shipping).toFixed(2);
 	};
-
-	console.log(getTotal());
 
 	var heightT = '7vh';
 	if (smartphoneScreen) {
@@ -217,11 +222,7 @@ export const AddressForm = () => {
 							>
 								<option style={{ color: 'grey' }}>Județ</option>
 								{states.map((state, index) => {
-									return (
-										<option key={index} value={`state-${index}`}>
-											{state}
-										</option>
-									);
+									return <option key={index}>{state}</option>;
 								})}
 							</select>
 							<div className='invalid-feedback'>
