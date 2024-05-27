@@ -6,7 +6,6 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	font-family: 'Raleway', sans-serif;
-	font-size: 70px;
 
 	.homePhoto {
 		margin-top: 3%;
@@ -74,24 +73,41 @@
 	}
 
 	.colorsContainer {
+		@media screen and (max-width: 1024px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		display: flex;
 		flex-direction: row;
 		align-self: center;
 		.jumi {
+			@media screen and (max-width: 1024px) {
+				width: 300px;
+				margin-right: 0%;
+			}
 			width: 400px;
 			padding: 1%;
 			margin-right: 5%;
 		}
 
 		.colorsChoice {
+			display: flex;
+			flex-direction: column;
 			.colors {
+				@media screen and (max-width: 1024px) {
+					width: 95vw;
+				}
 				width: 50vw;
 			}
 			> h3 {
-				padding-bottom: 5%;
+				margin-top: 3%;
+				margin-left: 2%;
+				margin-bottom: 5%;
 				text-align: left;
 			}
 			.buttonContainer {
+				align-self: center;
 				.button {
 					width: auto;
 					height: 50px;

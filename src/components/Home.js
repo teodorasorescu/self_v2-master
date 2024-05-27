@@ -47,7 +47,7 @@ const Home = () => {
 				<div className={styles.colorsContainer}>
 					<img className={styles.jumi} src={Jumi} alt='jumi' />
 					<div className={styles.colorsChoice}>
-						<h3>Cum alegem culorile?</h3>
+						<h3>CUM ALEGEM CULORILE?</h3>
 						<img className={styles.colors} src={Colors} alt='colors' />
 						<div className={styles.buttonContainer}>
 							<Link to='/psihologia-culorilor'>

@@ -46,6 +46,10 @@ html {
 
 .flipBoxFront,
 .flipBoxBack {
+	@media screen and (max-width: 1024px) {
+		width: 200px;
+		height: 300px;
+	}
 	width: 350px;
 	background-size: cover;
 	background-position: center;
