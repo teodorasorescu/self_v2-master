@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const stockSlice = createSlice({
 	name: 'stock',
 	initialState: {
-		framesStock: 0,
-		postersStock: 0,
+		framesStock: 20,
+		postersStock: 100,
 	},
 
 	reducers: {
