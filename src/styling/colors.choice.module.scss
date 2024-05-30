@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container {
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+	}
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+	margin: 3%;
+
+	.firstContainer {
+		@media screen and (max-width: 1024px) {
+			width: 95vw;
+			margin-bottom: 3%;
+		}
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		transition: all 0.05s;
+		background-image: url('../images/jumi.png');
+		margin-right: 2%;
+		height: 500px;
+	}
+
+	.colorsChoice {
+		display: flex;
+		flex-direction: column;
+		.colors {
+			@media screen and (max-width: 1024px) {
+				width: 95vw;
+			}
+			width: 50vw;
+		}
+		> h3 {
+			margin-top: 3%;
+			margin-left: 2%;
+			margin-bottom: 5%;
+			text-align: left;
+		}
+		.buttonContainer {
+			align-self: center;
+			.button {
+				width: auto;
+				height: 50px;
+				font-family: 'Raleway', sans-serif;
+				border: 0.1px solid rgba(221, 204, 174, 0);
+				font-size: 1rem;
+				transition: all 0.1s ease;
+				background-color: #fff7e3;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.button:hover {
+				text-decoration: none;
+				transition: none;
+				background-color: rgba(248, 221, 170, 0.6);
+			}
+		}
+	}
+}

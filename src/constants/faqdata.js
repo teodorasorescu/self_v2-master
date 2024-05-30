@@ -47,7 +47,7 @@ export const orderQuestions = [
 	{
 		title: 'Pot returna poster-ul personalizat?',
 		content:
-			'Din păcate, produsele personalizate după cerințe și fără defecte, nu pot fi returnate.',
+			'Din păcate, produsele personalizate care respectă cerințele clientului și primite fără defecte, nu pot fi returnate.',
 	},
 	{
 		title: 'Ramele se pot returna?',

@@ -20,9 +20,11 @@ import reactCSS from 'reactcss';
 import AttentionPrint from '../images/cmyk.png';
 import { selectFramesStock } from '../reducers/slices/stockSlice';
 import getFramesStockAction from '../reducers/actions/getFramesStockAction';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
+	const width = useMediaQuery('(max-width:1024px)') ? '90vw' : '50vw';
 
 	const setField = (event) => {
 		setFrameColor(event.target.value);
@@ -177,8 +179,8 @@ const AddProduct = () => {
 						</Link>
 					</div>
 					<div className='detailsDropdownContainer'>
-						<Dropdown title='DETALII' content={details} dropdownWidth='25vw' />
-						<Dropdown title='SUPORT' content={suport} dropdownWidth='25vw' />
+						<Dropdown title='DETALII' content={details} dropdownWidth={width} />
+						<Dropdown title='SUPORT' content={suport} dropdownWidth={width} />
 					</div>
 				</div>
 			</div>
