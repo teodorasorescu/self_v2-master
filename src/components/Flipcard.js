@@ -45,7 +45,7 @@ const Flipcard = () => {
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${MindFrame})` }}
+						style={{ backgroundImage: `url(${Mind})` }}
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
@@ -89,7 +89,7 @@ const Flipcard = () => {
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${SoulFrame})` }}
+						style={{ backgroundImage: `url(${Soul})` }}
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
@@ -132,7 +132,7 @@ const Flipcard = () => {
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${BodyFrame})` }}
+						style={{ backgroundImage: `url(${Body})` }}
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
