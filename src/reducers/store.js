@@ -6,6 +6,8 @@ import productSlice from './slices/productSlice.js';
 import customerSlice from './slices/customerSlice';
 import paymentSessionSlice from './slices/paymentSessionSlice.js';
 import orderFailedSlice from './slices/orderFailedSlice.js';
+import stockSlice from './slices/stockSlice.js';
+
 export const store = configureStore({
 	reducer: {
 		itemCount: itemsBagCount,
@@ -15,5 +17,6 @@ export const store = configureStore({
 		customer: customerSlice,
 		sessionId: paymentSessionSlice,
 		orderFailed: orderFailedSlice,
+		stock: stockSlice,
 	},
 });

@@ -111,9 +111,9 @@ const SmartphoneHeader = () => {
 
 	return (
 		<div>
-			<div className={styles.promotionTextContainer}>
-				{/* <p>Transport gratuit la comenzi peste 240 RON! </p> */}
-			</div>
+			{/* <div className={styles.promotionTextContainer}>
+				<p>Transport gratuit la comenzi peste 240 RON! </p>
+			</div> */}
 			<div className={styles.stillPositionContainer}>
 				<Toolbar>
 					<IconButton

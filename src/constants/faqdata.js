@@ -54,4 +54,9 @@ export const orderQuestions = [
 		content:
 			'Returnarea ramelor este permisă, până la 14 zile de la primirea comenzii. Dacă se dorește returnarea unui produs, vă rugăm să inițiați acțiunea trimițându-ne un email pe comenzi@self.ro. ',
 	},
+	{
+		title: 'În cât timp se vor restitui banii în cazul unui retur?',
+		content:
+			'Restituirea va fi primită în termen de 5-10 zile de la primirea produsului returnat.',
+	},
 ];

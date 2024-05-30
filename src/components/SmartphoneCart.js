@@ -117,7 +117,11 @@ export const SmartphoneCart = () => {
 																	}}
 																>
 																	{'Poster personalizat ' + value}
-																	<p>Culoare ramă: {row['frameColor']}</p>
+																	{row['frameColor'] !== 'fără' && (
+																		<p className={styles.frame}>
+																			Culoare ramă: {row['frameColor']}
+																		</p>
+																	)}
 
 																	<p style={{ fontSize: '20px' }}>
 																		{(row['quantity'] * row['price']).toFixed(

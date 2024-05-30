@@ -51,7 +51,7 @@ export const AddressForm = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		e.stopPropagation();
-		e.target.classList.add('was-validated');
+		sendSession();
 	}
 
 	const navigate = useNavigate();
@@ -75,7 +75,7 @@ export const AddressForm = () => {
 	return (
 		<div>
 			<div className={styles.container}>
-				<form noValidate onSubmit={handleSubmit}>
+				<form onSubmit={handleSubmit}>
 					<div>
 						<h3 align='left' className={styles.hTitle}>
 							Contact
@@ -266,13 +266,34 @@ export const AddressForm = () => {
 						</div>
 					</div>
 					<Shipping />
-
-					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
-						<button
-							type='submit'
-							className={styles.buttonContainer}
-							onClick={() => sendSession()}
+					<div className='form-check' style={{ paddingBottom: '2%' }}>
+						<input
+							className='form-check-input'
+							id='policy'
+							type='checkbox'
+							name='policy'
+							style={{ paddingBottom: '2%' }}
+							required
+						/>
+						<label
+							className='form-check-label'
+							style={{
+								maxInlineSize: '100%',
+								display: 'block',
+								cursor: 'pointer',
+								marginTop: '3%',
+							}}
 						>
+							Am luat la cunoștiință{' '}
+							<a href='politica-de-confidențialitate'>
+								Politica de Confidențialitate
+							</a>{' '}
+							și
+							<a href='termeni-și-condiții'> Termenii și Condițiile </a>.*
+						</label>
+					</div>
+					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
+						<button type='submit' className={styles.buttonContainer}>
 							PLĂTEȘTE ACUM
 						</button>
 					</div>

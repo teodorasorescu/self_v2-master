@@ -17,6 +17,8 @@ import TermsAndConditions from './components/TermsAndConditions';
 import Confidentiality from './components/Confidentiality';
 import FAQPage from './components/FAQPage';
 import ContactPage from './components/ContactPage';
+import { useEffect } from 'react';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -27,9 +29,16 @@ function App() {
 	if (localStorage.getItem('products') == null) {
 		localStorage.setItem('products', JSON.stringify([]));
 	}
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<div className='App'>
 			<BrowserRouter>
+				<ScrollToTop />
+
 				{headerOn && <Header />}
 				<Routes>
 					<Route path='/' element={<Home />} />

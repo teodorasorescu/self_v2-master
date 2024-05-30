@@ -103,7 +103,11 @@ export const CheckoutCart = ({ storedProducts }) => {
 														) : column.id === 'title' ? (
 															<>
 																{'Tablou personalizat ' + value}
-																<p>Culoare ramă: {row['frameColor']}</p>
+																{row['frameColor'] !== 'fără' && (
+																	<p className={styles.frame}>
+																		Culoare ramă: {row['frameColor']}
+																	</p>
+																)}{' '}
 															</>
 														) : null}
 													</div>

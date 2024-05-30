@@ -10,8 +10,8 @@
 	}
 
 	@media screen and (min-width: 1024px) and (max-width: 1300px) {
-		height: 35vh;
-		width: 35vw;
+		width: 25vw;
+		height: 70vh;
 	}
 
 	background-color: rgb(245, 245, 245);
@@ -26,9 +26,8 @@
 		transform-style: preserve-3d;
 		box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
 		justify-content: center;
-		width: 30vw;
-		// height: 70vh;
-		object-fit: contain;
+		width: 25vw;
+		object-fit: fill;
 		align-self: center;
 	}
 }

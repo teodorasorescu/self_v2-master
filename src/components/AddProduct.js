@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import '../styling/addProduct.css';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectProduct } from '../reducers/slices/productSlice';
 import { loadProducts } from '../reducers/slices/productsSlice';
 import { v4 as uuidv4 } from 'uuid';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ProductCarousel from './ProductCarousel';
 import { frameColors, framePrice } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -16,9 +16,10 @@ import {
 	details,
 	suport,
 } from '../constants/productConstants';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import reactCSS from 'reactcss';
 import AttentionPrint from '../images/cmyk.png';
+import { selectFramesStock } from '../reducers/slices/stockSlice';
+import getFramesStockAction from '../reducers/actions/getFramesStockAction';
 
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
@@ -39,8 +40,6 @@ const AddProduct = () => {
 
 	const { itemCount, setItemCount } = useStateContext();
 	let product = useSelector(selectProduct);
-
-	const navigate = useNavigate();
 
 	const computeProductCart = () => {
 		let productId = uuidv4();
@@ -109,13 +108,13 @@ const AddProduct = () => {
 		));
 	};
 
-	const goToPrevious = () => {
-		navigate('/personalizare');
-	};
+	const framesStock = useSelector(selectFramesStock);
+	useEffect(() => {
+		getFramesStockAction(dispatch);
+	}, []);
 
 	return (
 		<div className='bodyContainer'>
-			<ArrowBackIosIcon onClick={goToPrevious} />
 			<div className='secondContainer'>
 				<div className='carouselContainer'>
 					<ProductCarousel
@@ -154,7 +153,11 @@ const AddProduct = () => {
 							<option value=''>Continuă fără ramă</option>
 							{frameColors.map((color, index) => {
 								return (
-									<option key={`color-${index}`} value={color}>
+									<option
+										disabled={framesStock == 0 ? true : false}
+										key={`color-${index}`}
+										value={color}
+									>
 										{color} + {framePrice} lei
 									</option>
 								);

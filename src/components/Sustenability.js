@@ -4,7 +4,7 @@ const Sustenability = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.text}>
-				<h3>Sustenabilitate</h3>
+				<h3>SUSTENABILITITATE</h3>
 
 				<p className={styles.subheadline}>
 					Confecționarea ramelor este facută din lemn natural certificat FSC
