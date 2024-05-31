@@ -28,7 +28,7 @@
 				box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
 				justify-content: center;
 				width: 30vw;
-				height: 30vh;
+				min-height: 80vh;
 				font-family: 'Alice', serif;
 				font-weight: 400;
 				font-style: normal;
@@ -37,6 +37,16 @@
 				flex-direction: column;
 				justify-content: space-between;
 				align-self: center;
+			}
+
+			@media screen and (min-width: 1400px) {
+				.gradientDiv {
+					padding-left: 2%;
+					margin-left: 0%;
+					width: 30vw;
+					min-height: 50vh;
+					display: flex;
+				}
 			}
 
 			.gradientTitle {
@@ -116,18 +126,18 @@
 	}
 }
 
-/* @media screen and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
 	.body {
 		padding-left: 0%;
 		margin-left: 0%;
 		border-left: 0;
 		.container {
-			flex-direction: column;
+			flex-direction: row;
 			padding-top: 5%;
 			padding-bottom: 5%;
 			padding-left: 0;
 			padding-right: 0;
-			margin-left: 0;
+
 			font-family: 'Raleway', sans-serif;
 			display: flex;
 			width: 100vw;
@@ -143,7 +153,7 @@
 				margin-left: 0%;
 				border-left: 0%;
 				width: 100vw;
-				height: 60vh;
+				min-height: 60vh;
 				font-family: 'Alice', serif;
 				font-weight: 400;
 				font-style: normal;
@@ -203,6 +213,8 @@
 				}
 
 				.printAttention {
+					margin-left: 3%;
+
 					width: 95vw;
 					padding-left: 1%;
 					display: flex;
@@ -210,6 +222,8 @@
 				}
 
 				.titleContainer {
+					margin-left: 3%;
+
 					width: 95vw;
 					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 					padding-left: 1%;
@@ -220,6 +234,8 @@
 				}
 
 				.paragraphContainer {
+					margin-left: 3%;
+
 					padding-top: 5%;
 					padding-left: 1%;
 					width: 95vw;
@@ -258,36 +274,3 @@
 		}
 	}
 }
-
-@media screen and (min-width: 1300px) {
-	.body {
-		.container {
-			.gradientDiv {
-				height: 70vh;
-				width: 35vw;
-			}
-		}
-	}
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1300px) {
-	.body {
-		.container {
-			.gradientDiv {
-				width: 25vw;
-				height: 70vh;
-			}
-		}
-	}
-}
-
-@media screen and (width: 1024px) and (max-height: 1400px) {
-	.body {
-		.container {
-			.gradientDiv {
-				width: 30vw;
-				height: 35vh;
-			}
-		}
-	}
-} */

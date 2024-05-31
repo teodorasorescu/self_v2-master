@@ -1,27 +1,20 @@
 .container {
 	@media screen and (max-width: 1023px) {
 		width: 100vw;
-		height: 60vh;
+		min-height: 60vh;
+
+		@media screen and (min-width: 700px) {
+			width: 100vw;
+			min-height: 60vh;
+		}
 	}
 
-	@media screen and (min-width: 1300px) {
-		height: 70vh;
-		width: 35vw;
-	}
-
-	@media screen and (min-width: 1025px) and (max-width: 1300px) {
-		width: 25vw;
-		height: 70vh;
-	}
-
-	@media screen and (width: 1024px) and (max-height: 1400px) {
-		width: 40vw;
-		height: 50vh;
+	@media screen and (min-width: 1024px) {
+		width: 50vw;
+		min-height: 100vh;
 	}
 
 	background-color: rgb(245, 245, 245);
-	height: 40vh;
-	width: 35vw;
 	justify-content: center;
 	display: grid;
 }
@@ -31,9 +24,10 @@
 		transform-style: preserve-3d;
 		box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
 		justify-content: center;
-		width: 25vw;
-		object-fit: fill;
+		background-size: contain;
 		align-self: center;
+		width: 50vw;
+		min-height: 80vh;
 	}
 }
 
@@ -45,9 +39,14 @@
 		width: 100vw;
 		height: 60vh;
 		object-fit: contain;
+		@media screen and (min-width: 700px) {
+			width: 100vw;
+			min-height: 60vh;
+		}
 	}
 }
 
+//big screens
 @media screen and (min-width: 1300px) {
 	.picturesContainer {
 		padding-left: 2%;

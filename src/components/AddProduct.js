@@ -24,7 +24,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
-	const width = useMediaQuery('(max-width:1024px)') ? '90vw' : '50vw';
+	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
 
 	const setField = (event) => {
 		setFrameColor(event.target.value);
