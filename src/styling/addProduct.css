@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
 	.bodyContainer {
 		.secondContainer {
 			display: flex;
@@ -48,13 +48,13 @@
 					padding-left: 2%;
 					margin-left: 0%;
 					width: 30vw;
-					min-height: 60vh;
+					min-height: 70vh;
 					display: flex;
 				}
 			}
 
 			.gradientTitle {
-				font-size: 2rem;
+				font-size: 3.5rem;
 				padding-top: 7%;
 			}
 
@@ -125,14 +125,13 @@
 	}
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
 	.bodyContainer {
 		padding-left: 0%;
 		margin-left: 0%;
 		border-left: 0;
 		.secondContainer {
 			flex-direction: column;
-			padding-top: 5%;
 			padding-bottom: 5%;
 			padding-left: 0;
 			padding-right: 0;

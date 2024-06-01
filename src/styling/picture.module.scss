@@ -1,5 +1,5 @@
 .container {
-	@media screen and (max-width: 1023px) {
+	@media screen and (max-width: 1024px) {
 		width: 100vw;
 		min-height: 60vh;
 
@@ -9,7 +9,7 @@
 		}
 	}
 
-	@media screen and (min-width: 1024px) {
+	@media screen and (min-width: 1025px) {
 		width: 50vw;
 		min-height: 100vh;
 	}
@@ -19,10 +19,9 @@
 	display: grid;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
 	.picturesContainer {
 		transform-style: preserve-3d;
-		box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
 		justify-content: center;
 		background-size: contain;
 		align-self: center;
@@ -31,7 +30,7 @@
 	}
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
 	.picturesContainer {
 		padding-left: 0%;
 		margin-left: 0%;
