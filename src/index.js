@@ -9,13 +9,11 @@ import { store } from './reducers/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<React.StrictMode>
-		<ContextProvider>
-			<Provider store={store}>
-				<App />
-			</Provider>
-		</ContextProvider>
-	</React.StrictMode>
+	<ContextProvider>
+		<Provider store={store}>
+			<App />
+		</Provider>
+	</ContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

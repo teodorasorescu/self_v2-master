@@ -12,7 +12,7 @@
 		position: relative;
 		top: 0;
 		vertical-align: baseline;
-		background-color: #fff3e6;
+		background-color: #fff7e3;
 
 		display: flex;
 		flex-direction: row; //default value
@@ -68,6 +68,7 @@
 			> img {
 				width: 200px;
 				padding: 1%;
+				cursor: pointer;
 			}
 
 			.cartContainer {
@@ -90,7 +91,8 @@
 			height: 60px;
 			width: 100%;
 			background-color: rgb(255, 255, 255);
-			border-top: 0.1ch solid rgba(159, 153, 153, 0.379);
+			border-top: 0.1ch solid rgba(135, 135, 135, 0.144);
+			border-bottom: 0.1ch solid rgba(135, 135, 135, 0.144);
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -119,7 +121,7 @@
 		position: relative;
 		top: 0;
 		padding-top: 1%;
-		background-color: #fff3e6;
+		background-color: #fff7e3;
 		display: block;
 		font-family: 'Raleway', sans-serif;
 		text-align: center;
@@ -135,7 +137,7 @@
 		font-family: 'Raleway', sans-serif;
 		align-items: center;
 		padding: 0;
-		border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+		border-bottom: 0.1ch solid rgba(135, 135, 135, 0.144);
 		.shoppingButton {
 			padding-right: 7%;
 			margin: 0;
@@ -176,6 +178,7 @@
 			padding-top: 3%;
 			padding-bottom: 3%;
 			padding-right: 16px;
+			cursor: pointer;
 		}
 
 		.socialMediaLogo {

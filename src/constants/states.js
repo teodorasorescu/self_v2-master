@@ -1,4 +1,5 @@
 const states = [
+	'București',
 	'Alba',
 	'Arad',
 	'Argeş',

@@ -6,7 +6,6 @@ html {
 }
 
 .container {
-	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
 	cursor: pointer;
@@ -18,6 +17,7 @@ html {
 
 	@media screen and (max-width: 1025px) {
 		gap: 0.5rem;
+		align-items: center;
 	}
 }
 

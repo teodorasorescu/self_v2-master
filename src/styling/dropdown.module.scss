@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.resumeContainer {
+	@media screen and (max-width: 1023px) {
+		width: 90vw;
+	}
+	cursor: pointer;
+	padding-top: 4%;
+	font-family: 'Raleway', sans-serif;
+	border-bottom: 0.1ch solid rgba(0, 0, 0, 0.201);
+	font-size: 0.9rem;
+	justify-content: center;
+
+	.textContainer {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.textContainerAfter {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 4%;
+	}
+}

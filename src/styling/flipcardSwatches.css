@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Literata:ital,opsz@1,7..72&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
 @media screen and (min-width: 1025px) {
 	.body {
 		.container {
-			/* width: 50vw; */
-
 			display: flex;
-			justify-content: center;
 			flex-direction: row;
 			padding-top: 5%;
 			padding-bottom: 5%;
@@ -31,8 +27,35 @@
 				transform-style: preserve-3d;
 				box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
 				justify-content: center;
-				width: 35vw;
-				height: 90vh;
+				width: 30vw;
+				min-height: 80vh;
+				font-family: 'Alice', serif;
+				font-weight: 400;
+				font-style: normal;
+				cursor: default;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-self: center;
+			}
+
+			@media screen and (min-width: 1300px) {
+				.gradientDiv {
+					padding-left: 2%;
+					margin-left: 0%;
+					width: 30vw;
+					min-height: 70vh;
+					display: flex;
+				}
+			}
+
+			.gradientTitle {
+				font-size: 3.5rem;
+				padding-top: 7%;
+			}
+
+			.frameContainer {
+				width: 25vw;
 			}
 
 			.descriptionContainer {
@@ -43,11 +66,10 @@
 
 				font-family: 'Raleway', sans-serif;
 				text-align: left;
-				justify-content: center;
+
 				.titleContainer {
 					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 					width: 25vw;
-
 					> h1 {
 						font-size: xx-large;
 						font-style: italic;
@@ -74,7 +96,7 @@
 						text-align: center;
 						font-size: 90%;
 						transition: all 0.1s ease;
-						background-color: rgba(248, 221, 170, 0.484);
+						background-color: rgb(252, 247, 243);
 						cursor: pointer;
 						text-decoration: none;
 					}
@@ -82,7 +104,7 @@
 					.button:hover {
 						text-decoration: none;
 						transition: none;
-						background-color: rgba(248, 221, 170, 0.8);
+						background-color: rgba(248, 221, 170, 0.6);
 					}
 				}
 
@@ -100,17 +122,18 @@
 }
 
 @media screen and (max-width: 1024px) {
-	.body {
+	.body {		
+		margin-top: 0%;
 		padding-left: 0%;
 		margin-left: 0%;
 		border-left: 0;
 		.container {
-			flex-direction: column;
-			padding-top: 5%;
+			flex-direction: row;
+			
 			padding-bottom: 5%;
 			padding-left: 0;
 			padding-right: 0;
-			margin-left: 0;
+
 			font-family: 'Raleway', sans-serif;
 			display: flex;
 			width: 100vw;
@@ -126,7 +149,23 @@
 				margin-left: 0%;
 				border-left: 0%;
 				width: 100vw;
-				height: 70vh;
+				min-height: 60vh;
+				font-family: 'Alice', serif;
+				font-weight: 400;
+				font-style: normal;
+				cursor: default;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.gradientTitle {
+				font-size: 3rem;
+				padding-top: 2%;
+			}
+
+			.frameContainer {
+				width: 90vw;
+				padding: 4%;
 			}
 
 			.imageSlideCorner {
@@ -138,13 +177,12 @@
 				height: 15vh;
 			}
 
-			@media screen and (width: 1024px) {
+			@media screen and (min-width: 700px) {
 				.gradientDiv {
 					padding-left: 2%;
 					margin-left: 0%;
-					border-left: 0%;
-					width: 100vw;
-					height: 70vh;
+					width: 70vw;
+					height: 60vh;
 					display: flex;
 				}
 			}
@@ -169,7 +207,10 @@
 
 					justify-content: center;
 				}
+
 				.titleContainer {
+					margin-left: 3%;
+
 					width: 95vw;
 					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 					padding-left: 1%;
@@ -180,6 +221,8 @@
 				}
 
 				.paragraphContainer {
+					margin-left: 3%;
+
 					padding-top: 5%;
 					padding-left: 1%;
 					width: 95vw;
@@ -199,7 +242,7 @@
 						border: 0.1px solid rgba(221, 204, 174, 0);
 						font-size: 90%;
 						transition: all 0.1s ease;
-						background-color: rgba(248, 221, 170, 0.484);
+						background-color: rgb(252, 247, 243);
 						cursor: pointer;
 						text-decoration: none;
 					}
@@ -207,7 +250,7 @@
 					.button:hover {
 						text-decoration: none;
 						transition: none;
-						background-color: rgba(248, 221, 170, 0.8);
+						background-color: rgba(248, 221, 170, 0.6);
 					}
 
 					.detailsContainer {

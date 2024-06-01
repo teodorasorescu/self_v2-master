@@ -6,19 +6,17 @@ export const ContextProvider = ({ children }) => {
 	const [itemCount, setItemCountt] = useState(0);
 	const [headerOn, setHeaderOn] = useState(true);
 	const [orderResume, setOrderResume] = useState(false);
+	const [resume, setResume] = useState(false);
 
 	const [customer, setCustomer] = useState({
 		id: '',
 		email: '',
 		firstName: '',
 		lastName: '',
-		addressLine: '',
 		city: '',
 		state: '',
 		country: '',
 		postalCode: '',
-		hasSubmited: false,
-		products: [],
 		newsletter: false,
 	});
 
@@ -30,7 +28,6 @@ export const ContextProvider = ({ children }) => {
 	};
 
 	return (
-		// eslint-disable-next-line react/jsx-no-constructed-context-values
 		<StateContext.Provider
 			value={{
 				itemCount,
@@ -42,7 +39,9 @@ export const ContextProvider = ({ children }) => {
 				drawerOpen,
 				setDrawerOpen,
 				orderResume,
-				setOrderResume
+				setOrderResume,
+				resume,
+				setResume,
 			}}
 		>
 			{children}

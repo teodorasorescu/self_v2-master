@@ -50,6 +50,10 @@ html {
 	width: 350px;
 	margin-bottom: 35px;
 	max-width: 100%;
+
+	@media screen and (min-width: 1300px) {
+		width: 500px;
+	}
 }
 
 .flip-box {
@@ -71,6 +75,10 @@ html {
 	-webkit-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+
+	@media screen and (min-width: 1300px) {
+		min-height: 700px;
+	}
 }
 
 .flip-box-front {

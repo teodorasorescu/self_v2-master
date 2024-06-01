@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .container {
-	@media screen and (max-width: 1025px) {
+	@media screen and (max-width: 1023px) {
 		display: block;
 		width: 90vw;
 	}
@@ -13,7 +13,7 @@
 	margin-right: auto;
 	font-family: 'Raleway', sans-serif;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	.title {
 		padding-top: 3%;
 		padding-bottom: 3%;

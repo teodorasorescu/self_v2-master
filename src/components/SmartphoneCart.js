@@ -13,6 +13,7 @@ import Paper from '@mui/material/Paper';
 import Button from '@material-ui/core/Button';
 import emptyCart from '../images/emptyCart.jpeg';
 import CartActions from './CartActions';
+import { calculateTotalPrice, price } from '../constants/productConstants';
 
 export const SmartphoneCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -46,7 +47,7 @@ export const SmartphoneCart = () => {
 		));
 	};
 
-	const total = storedProducts.reduce((a, v) => (a = a + v.quantity * 120), 0);
+	const total = calculateTotalPrice(storedProducts);
 
 	const navigate = useNavigate();
 	const goToCheckout = () => {
@@ -115,8 +116,18 @@ export const SmartphoneCart = () => {
 																		flexDirection: 'column',
 																	}}
 																>
-																	{'Tablou personalizat ' + value}
-																	<p style={{ fontSize: '20px' }}>120,00 lei</p>
+																	{'Poster personalizat ' + value}
+																	{row['frameColor'] !== 'fără' && (
+																		<p className={styles.frame}>
+																			Culoare ramă: {row['frameColor']}
+																		</p>
+																	)}
+
+																	<p style={{ fontSize: '20px' }}>
+																		{(row['quantity'] * row['price']).toFixed(
+																			2
+																		) + ' lei'}
+																	</p>
 																	<div>
 																		<CartActions
 																			quantity={row['quantity']}
@@ -144,7 +155,7 @@ export const SmartphoneCart = () => {
 								}}
 								align='right'
 							>
-								{'Total:  ' + total + '.00 lei'}
+								{'Total:  ' + total.toFixed(2) + ' lei'}
 							</p>
 							<p
 								style={{
@@ -155,7 +166,8 @@ export const SmartphoneCart = () => {
 								}}
 								align='right'
 							>
-								TVA inclus, costurile de livrare vor fi calculate in Checkout.
+								TVA inclus, costurile de livrare și reducere vor fi calculate in
+								Checkout.
 							</p>
 						</div>
 						<div
@@ -183,6 +195,7 @@ export const SmartphoneCart = () => {
 									fontStyle: 'italic',
 									textDecoration: 'none',
 									width: '100vw',
+									paddingBottom: '10%',
 								}}
 							>
 								<Link to='/' style={{ textDecoration: 'none', color: 'black' }}>

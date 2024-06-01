@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container {
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+	}
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 3%;
+	.imgContainer {
+		@media screen and (max-width: 1024px) {
+			width: 95vw;
+		}
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		transition: all 0.05s;
+		height: 500px;
+		background-image: url('../images/mission.jpg');
+	}
+
+	.text {
+		@media screen and (max-width: 1024px) {
+			width: 95vw;
+		}
+		align-self: center;
+		width: 50%;
+		padding-left: 3%;
+		margin-right: 2%;
+
+		.subheadline {
+			@media screen and (max-width: 1024px) {
+				text-align: center;
+			}
+			font-size: 1.1rem;
+		}
+		> p {
+			@media screen and (max-width: 1024px) {
+				text-align: center;
+			}
+			font-size: 1rem;
+			font-family: 'Raleway', sans-serif;
+		}
+	}
+}

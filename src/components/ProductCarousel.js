@@ -1,12 +1,21 @@
 import Carousel from 'react-bootstrap/Carousel';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import classes from '../styling/picture.module.scss';
 
-const ProductCarousel = ({ product, classGradient, styleGradient }) => {
+const ProductCarousel = ({
+	product,
+	classGradient,
+	styleGradient,
+	title,
+	subtitle,
+	gradientTitle,
+	gradientSubtitle,
+}) => {
 	const navigate = useNavigate();
+
 	const isImageEmpty = product.image === '';
+
 	useEffect(() => {
 		if (isImageEmpty) {
 			navigate('/');
@@ -14,21 +23,28 @@ const ProductCarousel = ({ product, classGradient, styleGradient }) => {
 	}, []);
 
 	return (
-		<Carousel
-			slide={false}
-			data-bs-theme='dark'
-			prevIcon={<ArrowBackIosIcon />}
-			nextIcon={<ArrowForwardIosIcon />}
-		>
+		<Carousel slide={false} data-bs-theme='dark'>
 			<Carousel.Item data-bs-theme='dark' interval={600000}>
-				<div className={classGradient} style={styleGradient}></div>
+				<div className={classes.container}>
+					{' '}
+					<div className={classGradient} style={styleGradient}>
+						<p className={gradientTitle} style={title}>
+							{product.title}
+						</p>
+						<p className={gradientSubtitle} style={subtitle}>
+							{product.subtitle}
+						</p>
+					</div>
+				</div>
 			</Carousel.Item>
 			<Carousel.Item interval={600000}>
 				{!isImageEmpty && (
-					<img
-						src={require(`../images/${product.image}`)}
-						className={classGradient}
-					/>
+					<div className={classes.container}>
+						<img
+							src={require(`../images/${product.image}`)}
+							className={classes.picturesContainer}
+						/>
+					</div>
 				)}
 			</Carousel.Item>
 		</Carousel>

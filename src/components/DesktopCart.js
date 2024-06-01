@@ -16,6 +16,8 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { columns } from '../constants/cartColumns.js';
 import CartActions from './CartActions';
+import { calculateTotalPrice } from '../constants/productConstants.js';
+
 export const DesktopCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -27,7 +29,7 @@ export const DesktopCart = () => {
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
 	const navigate = useNavigate();
-
+	console.log(storedProducts);
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
@@ -44,15 +46,10 @@ export const DesktopCart = () => {
 		));
 	};
 
-	const calculateTotalPrice = () => {
-		return storedProducts.reduce((a, v) => (a = a + v.quantity * 120), 0);
-	};
-
 	const goToCheckout = () => {
 		setHeaderOn(false);
 		navigate('/checkout');
 	};
-
 	return (
 		<div className={styles.cart}>
 			<div className={styles.hContainer}>
@@ -110,7 +107,13 @@ export const DesktopCart = () => {
 														>
 															{column.id === 'title' ? (
 																<div>
-																	{'Tablou personalizat ' + value}
+																	{'Poster ' + value}
+																	{row['frameColor'] !== 'fără' && (
+																		<p className={styles.frame}>
+																			Culoare ramă: {row['frameColor']}
+																		</p>
+																	)}
+
 																	<div
 																		style={{
 																			display: 'flex',
@@ -132,9 +135,11 @@ export const DesktopCart = () => {
 																	productId={index}
 																/>
 															) : column.id === 'total' ? (
-																'' + row['quantity'] * 120 + '.00 lei'
+																'' +
+																(row['quantity'] * row['price']).toFixed(2) +
+																' lei'
 															) : column.id != 'colors' ? (
-																value
+																row['price'].toFixed(2) + ' lei'
 															) : null}
 														</div>
 													</TableCell>
@@ -148,10 +153,11 @@ export const DesktopCart = () => {
 					</TableContainer>
 					<div className={styles.textContainer}>
 						<p className={styles.pTotal} align='right'>
-							Total: {'' + calculateTotalPrice() + ' lei'}
+							Total: {'' + calculateTotalPrice(storedProducts) + ' lei'}
 						</p>
 						<p className={styles.pTva} align='right'>
-							TVA inclus, costurile de livrare vor fi calculate in Checkout.
+							TVA inclus, costurile de livrare și reducere vor fi calculate in
+							Checkout.
 						</p>
 					</div>
 					<div className={styles.buttonContainer}>

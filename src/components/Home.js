@@ -1,32 +1,54 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Flipcard from './Flipcard';
 import styles from '../styling/home.module.scss';
-import Responsability from '../images/responsibility.png';
+import Button from '@material-ui/core/Button';
+import HomeInspirationShowcase from './HomeInspirationShowcase';
+import SelfMission from './SelfMission';
+import Benefits from './Benefits';
+import VisualImages from './VisiualImages';
+import Sustenability from './Sustenability';
+import OurStory from './OurStory';
+import ColorsChoice from './ColorsChoice';
 
 const Home = () => {
+	const myRef = useRef(null);
+	const executeScroll = () => {
+		myRef.current.scrollIntoView();
+	};
 	return (
 		<div>
 			<div className={styles.container}>
-				<div className={styles.imgContainer}></div>
-				<div className={styles.textContainer}>
-					<h1>
-						Suntem uniunea dintre minte, suflet și corp. <br />
-						Creează-ți un mediu care să reprezinte ființa ta și exprimă-ți
-						sentimentele prin culori.
+				<div className={styles.introductionImgContainer}></div>
+				<div className={styles.introductionContainer}>
+					<h1 className={styles.title}>
+						Creează-ți un mediu care să <br /> reprezinte ființa ta și
+						exprimă-ți <br /> sentimentele prin culori.
 					</h1>
+					<h1 className={styles.subtitle}>POSTERE GRADIENT PERSONALIZATE</h1>
+					<div className={styles.buttonContainer}>
+						{' '}
+						<Button onClick={executeScroll} className={styles.button}>
+							Începe Acum
+						</Button>
+					</div>
 				</div>
-			</div>
-			<Flipcard />
-			<div className={styles.container}>
-				<div className={styles.sustenabilityTextContainer}>
-					<img src={Responsability} alt='description' />
-					<p>
-						<br />
-						Confecționarea ramelor este facută din lemn natural certificat FSC,
-						astfel lemnul provine din surse prietenoase pentru păduri,
-						gestionate în mod responsabil.
-					</p>
+				<SelfMission />
+				<Benefits />
+				<VisualImages />
+				<div ref={myRef}>
+					<div className={styles.text}>
+						<h3>POSTERE</h3>
+					</div>
+					<Flipcard />
 				</div>
+
+				<ColorsChoice />
+				<div className={styles.inspoImages}>
+					<HomeInspirationShowcase />
+				</div>
+
+				<Sustenability />
+				<OurStory />
 			</div>
 		</div>
 	);

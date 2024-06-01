@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.gradientPhotosContainer {
+	.text {
+		font-family: 'Raleway', sans-serif;
+		text-align: left;
+	}
+}
+
+.imagesContainer {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	flex-flow: row nowrap;
+}
+
+.imgItem {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 100%;
+	padding-right: 5%;
+}
+.imgBox {
+	@media screen and (max-width: 1024px) {
+		width: 200px;
+		min-height: 300px;
+	}
+
+	width: 350px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 8px;
+	min-height: 500px;
+}

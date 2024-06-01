@@ -6,15 +6,42 @@ import states from '../constants/states';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Shipping } from './Shipping';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import {
+	calculateTotalPrice,
+	computeProductsLength,
+	price,
+	shipping,
+} from '../constants/productConstants';
+import sendCheckoutAction from '../reducers/actions/sendCheckoutAction';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
+	const { itemCount, setItemCount } = useStateContext();
+
+	const localStoreProducts = localStorage.getItem('products');
+	const storedProducts = JSON.parse(localStoreProducts);
+
+	const dispatch = useDispatch();
 
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
 	};
 
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
+
+	const total = calculateTotalPrice(storedProducts);
+	const discountNo = Math.floor(computeProductsLength(storedProducts) / 3);
+	const discount = false;
+	//computeProductsLength(storedProducts) / 3 >= 1;
+
+	const getTotal = () => {
+		if (discount) {
+			return (total - price * discountNo + shipping).toFixed(2);
+		}
+		return (total + shipping).toFixed(2);
+	};
 
 	var heightT = '7vh';
 	if (smartphoneScreen) {
@@ -24,18 +51,31 @@ export const AddressForm = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		e.stopPropagation();
-		e.target.classList.add('was-validated');
+		sendSession();
 	}
 
+	const navigate = useNavigate();
 	const setCustomerField = () => {
 		const newsletterChanged = !customer.newsletter;
 		setCustomer({ ...customer, newsletter: newsletterChanged });
 	};
 
+	localStorage.setItem('customer', JSON.stringify(customer));
+	const sendSession = () => {
+		sendCheckoutAction(
+			navigate,
+			dispatch,
+			{
+				total: getTotal(),
+			},
+			setItemCount
+		);
+	};
+
 	return (
 		<div>
 			<div className={styles.container}>
-				<form noValidate onSubmit={handleSubmit}>
+				<form onSubmit={handleSubmit}>
 					<div>
 						<h3 align='left' className={styles.hTitle}>
 							Contact
@@ -182,11 +222,7 @@ export const AddressForm = () => {
 							>
 								<option style={{ color: 'grey' }}>Județ</option>
 								{states.map((state, index) => {
-									return (
-										<option key={index} value={`state-${index}`}>
-											{state}
-										</option>
-									);
+									return <option key={index}>{state}</option>;
 								})}
 							</select>
 							<div className='invalid-feedback'>
@@ -230,7 +266,32 @@ export const AddressForm = () => {
 						</div>
 					</div>
 					<Shipping />
-
+					<div className='form-check' style={{ paddingBottom: '2%' }}>
+						<input
+							className='form-check-input'
+							id='policy'
+							type='checkbox'
+							name='policy'
+							style={{ paddingBottom: '2%' }}
+							required
+						/>
+						<label
+							className='form-check-label'
+							style={{
+								maxInlineSize: '100%',
+								display: 'block',
+								cursor: 'pointer',
+								marginTop: '3%',
+							}}
+						>
+							Am luat la cunoștiință{' '}
+							<a href='politica-de-confidențialitate'>
+								Politica de Confidențialitate
+							</a>{' '}
+							și
+							<a href='termeni-și-condiții'> Termenii și Condițiile </a>.*
+						</label>
+					</div>
 					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
 						<button type='submit' className={styles.buttonContainer}>
 							PLĂTEȘTE ACUM

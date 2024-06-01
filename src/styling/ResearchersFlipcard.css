@@ -8,7 +8,7 @@ html {
 .swipeIconContainer {
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	left: 0;
 	> img {
 		width: 30px;
 		height: 30px;
@@ -46,6 +46,10 @@ html {
 
 .flipBoxFront,
 .flipBoxBack {
+	@media screen and (max-width: 1024px) {
+		width: 250px;
+		min-height: 350px;
+	}
 	width: 350px;
 	background-size: cover;
 	background-position: center;
@@ -102,6 +106,9 @@ html {
 }
 
 .flipBox .inner {
+	@media screen and (max-width: 1024px) {
+		padding: 0px;
+	}
 	position: absolute;
 	left: 0;
 	padding: 60px;
@@ -120,20 +127,23 @@ html {
 	display: inline-block;
 	line-height: 1.5;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: bold;
 	padding: 15px 50px;
 }
 
 .flipBoxHeader {
-	font-size: 34px;
+	@media screen and (max-width: 1024px) {
+		font-size: 1.5rem;
+	}
+	font-size: 2rem;
 	border-radius: 5px;
 	text-align: center;
 	background-color: rgba(248, 221, 170, 0.133);
 }
 
 .flipBox p {
-	font-size: 20px;
+	font-size: 1rem;
 	line-height: 1.5em;
 }
 

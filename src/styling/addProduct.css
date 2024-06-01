@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+@media screen and (min-width: 1025px) {
+	.bodyContainer {
+		.secondContainer {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			justify-content: space-evenly;
+
+			.carouselContainer {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.bodySwatchesContainer {
+				display: flex;
+				flex-direction: 'row';
+				align-self: flex-start;
+				padding-bottom: 2%;
+				align-self: center;
+			}
+
+			.gradientContainer {
+				transform-style: preserve-3d;
+				box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
+				justify-content: center;
+				align-self: center;
+				width: 30vw;
+				min-height: 80vh;
+				filter: drop-shadow(-7px 7px 7px #b1acac);
+				font-family: 'Alice', serif;
+				font-weight: 400;
+				font-style: normal;
+
+				cursor: default;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			@media screen and (min-width: 1280px) {
+				.gradientContainer {
+					padding-left: 2%;
+					margin-left: 0%;
+					width: 30vw;
+					min-height: 70vh;
+					display: flex;
+				}
+			}
+
+			.gradientTitle {
+				font-size: 3.5rem;
+				padding-top: 7%;
+			}
+
+			.introductionContainer {
+				width: 25vw;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				font-family: 'Raleway', sans-serif;
+				text-align: left;
+				.titleContainer {
+					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+					width: 25vw;
+
+					> h1 {
+						font-size: xx-large;
+						font-style: italic;
+					}
+				}
+
+				.frameContainer {
+					width: 25vw;
+					padding: 4%;
+				}
+
+				.productContainer {
+					padding-top: 3%;
+
+					> p {
+						font-family: 'Raleway', sans-serif;
+						padding-top: 5%;
+					}
+				}
+
+				.addToCartContainer {
+					padding-top: 5%;
+					padding-bottom: 5%;
+					.cartButton {
+						width: 25vw;
+						height: 6vh;
+						font-family: 'Raleway', sans-serif;
+						border: 0.1px solid rgba(221, 204, 174, 0);
+						text-align: center;
+						font-size: 90%;
+						transition: all 0.1s ease;
+						background-color: rgb(252, 247, 243);
+						cursor: pointer;
+						text-decoration: none;
+					}
+
+					.cartButton:hover {
+						text-decoration: none;
+						transition: none;
+						background-color: rgba(248, 221, 170, 0.6);
+					}
+				}
+			}
+			.detailsDropdownContainer {
+				align-self: flex-start;
+				white-space: pre-line;
+			}
+			.current {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.bodyContainer {
+		padding-left: 0%;
+		margin-left: 0%;
+		border-left: 0;
+		.secondContainer {
+			flex-direction: column;
+			padding-bottom: 5%;
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 0;
+			font-family: 'Raleway', sans-serif;
+			display: flex;
+			width: 100vw;
+
+			.gradientContainer {
+				padding-left: 0%;
+				margin-left: 0%;
+				border-left: 0%;
+				width: 70vw;
+				height: 45vh;
+
+				transform-style: preserve-3d;
+				box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;
+				justify-content: center;
+				align-self: center;
+
+				filter: drop-shadow(-7px 7px 7px #b1acac);
+				font-family: 'Alice', serif;
+				font-weight: 400;
+				font-style: normal;
+
+				cursor: default;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.gradientTitle {
+				font-size: 2.5rem;
+				padding-top: 2%;
+			}
+
+			.frameContainer {
+				width: 90vw;
+				padding: 4%;
+			}
+
+			.imageSlideCorner {
+				transition: all 0.1s ease;
+
+				justify-content: center;
+				position: relative;
+				width: 7vw;
+				height: 15vh;
+			}
+
+			@media screen and (min-width: 700px) {
+				.gradientContainer {
+					padding-left: 2%;
+					margin-left: 0%;
+					width: 45vw;
+					height: 45vh;
+					display: flex;
+				}
+			}
+
+			.columnFlex {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.introductionContainer {
+				font-family: 'Raleway', sans-serif;
+				text-align: left;
+				justify-content: center;
+				.bodySwatchesContainer {
+					width: 95vw;
+					display: flex;
+					justify-content: center;
+				}
+
+				.printAttention {
+					margin-left: 3%;
+
+					width: 95vw;
+					padding-left: 1%;
+					display: flex;
+					flex-direction: row;
+				}
+				.titleContainer {
+					margin-left: 3%;
+					width: 95vw;
+					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+					padding-left: 1%;
+					> h1 {
+						font-size: xx-large;
+						font-style: italic;
+					}
+				}
+
+				.productContainer {
+					margin-left: 3%;
+
+					padding-top: 5%;
+					padding-left: 1%;
+					width: 95vw;
+
+					> p {
+						font-family: 'Raleway', sans-serif;
+						margin-left: 0;
+					}
+				}
+
+				.addToCartContainer {
+					padding-bottom: 2%;
+					.cartButton {
+						width: 100vw;
+						height: 50px;
+						font-family: 'Raleway', sans-serif;
+						border: 0.1px solid rgba(221, 204, 174, 0);
+						font-size: 90%;
+						transition: all 0.1s ease;
+						background-color: rgb(252, 247, 243);
+						cursor: pointer;
+						text-decoration: none;
+					}
+
+					.cartButton:hover {
+						text-decoration: none;
+						transition: none;
+						background-color: rgba(248, 221, 170, 0.6);
+					}
+				}
+
+				.detailsDropdownContainer {
+					white-space: pre-line;
+					display: grid;
+					justify-content: center;
+					padding-top: 3%;
+				}
+			}
+		}
+	}
+}
+
+/* @media screen and (min-width: 380px) and (max-width: 700px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 70vw;
+				height: 45vh;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 70vw;
+				height: 50vh;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 55vw;
+				height: 48vh;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 50vw;
+				height: 50vh;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 70vw;
+				height: 50vh;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-height: 600px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 25vw;
+				height: 60vh;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1300px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 20vw;
+				height: 55vh;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+	.bodyContainer {
+		.secondContainer {
+			.gradientContainer {
+				width: 15vw;
+				height: 45vh;
+			}
+		}
+	}
+}
+
+@media screen and (width: 1024px) and (max-height: 1400px) {
+	.body {
+		.container {
+			.gradientDiv {
+				width: 30vw;
+				height: 35vh;
+			}
+		}
+	}
+} */

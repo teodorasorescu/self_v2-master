@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.container {
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+		align-items: center;
+	}
+	display: flex;
+	flex-direction: row;
+	margin-right: 3%;
+	margin-left: 3%;
+	margin-top: 3%;
+	justify-content: space-evenly;
+	.benefits {
+		white-space: pre-wrap;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		font-family: 'Raleway', sans-serif;
+		> h4 {
+			@media screen and (max-width: 1024px) {
+				text-align: center;
+			}
+			color: #6557ff;
+		}
+		.pContainer {
+			@media screen and (max-width: 1024px) {
+				text-align: center;
+			}
+			font-size: 1rem;
+		}
+	}
+}

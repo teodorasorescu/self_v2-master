@@ -1,4 +1,4 @@
-import { loadProducts } from '../reducers/productsSlice';
+import { loadProducts } from '../reducers/slices/productsSlice';
 import { useDispatch } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -8,8 +8,7 @@ import { noop } from 'lodash';
 const CartActions = ({ quantity, productId }) => {
 	const dispatch = useDispatch();
 	const { itemCount, setItemCount } = useStateContext();
-	const localStoreProducts = localStorage.getItem('products');
-	const storedProducts = JSON.parse(localStoreProducts);
+	const storedProducts = JSON.parse(localStorage.getItem('products'));
 
 	const incrementQuantity = (index) => {
 		const updatedProducts = storedProducts.map((product, i) => {
@@ -23,6 +22,8 @@ const CartActions = ({ quantity, productId }) => {
 					colors: product.colors,
 					quantity: Math.max(product.quantity + 1, 1),
 					description: product.description,
+					frameColor: product.frameColor,
+					subtitle: product.subtitle,
 				};
 
 				return updatedProduct;
@@ -47,6 +48,8 @@ const CartActions = ({ quantity, productId }) => {
 					colors: product.colors,
 					quantity: Math.max(product.quantity - 1, 1),
 					description: product.description,
+					frameColor: product.frameColor,
+					subtitle: product.subtitle,
 				};
 
 				return updatedProduct;
@@ -75,7 +78,12 @@ const CartActions = ({ quantity, productId }) => {
 						data-field='quantity'
 						onClick={() => {
 							decrementQuantity(productId);
-							setItemCount(Math.max(itemCount - 1, 1));
+							setItemCount(
+								Math.max(
+									Number.parseInt(localStorage.getItem('itemCount')) - 1,
+									0
+								)
+							);
 						}}
 					/>
 				)}
@@ -98,14 +106,21 @@ const CartActions = ({ quantity, productId }) => {
 					data-field='quantity'
 					onClick={() => {
 						incrementQuantity(productId);
-						setItemCount(Math.max(itemCount + 1, 1));
+						setItemCount(
+							Math.max(
+								Number.parseInt(localStorage.getItem('itemCount')) + 1,
+								0
+							)
+						);
 					}}
 				/>
 			</div>
 			<Button
 				onClick={() => {
 					deleteProduct(productId);
-					setItemCount(Math.max(itemCount - quantity, 0));
+					setItemCount(
+						Math.max(localStorage.getItem('itemCount') - quantity, 0)
+					);
 				}}
 				style={{
 					right: '-5vw',
