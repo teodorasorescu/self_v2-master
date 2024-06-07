@@ -96,12 +96,13 @@ function ColorPickerGradient() {
 	const styles = reactCSS({
 		default: {
 			gradient: {
+				backgroundColor: 'rgba(249, 237, 223, 0.3)',
 				background: `radial-gradient(circle at center, rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, ${colorSwatch1.a}) 0,
-				rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, ${colorSwatch1.a}),
-          rgba(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}, ${colorSwatch2.a}),
-          rgba(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b}, ${colorSwatch3.a}),
-          rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, ${colorSwatch4.a}),
-					rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243)
+				rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, ${colorSwatch1.a}) ,
+				  rgba(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}, ${colorSwatch2.a}),
+				  rgba(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b}, ${colorSwatch3.a}) ,
+				  rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, ${colorSwatch4.a}) , rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, 0.2) ,
+					rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3)
 					`,
 			},
 
@@ -173,7 +174,7 @@ function ColorPickerGradient() {
 					<div className='paragraphContainer'>
 						<p>{product.description}</p>
 						<p>
-							Începe personalizarea tabloului, alegând cele patru culori. Vei
+							Începe personalizarea posterului, alegând cele patru culori. Vei
 							vedea modificările tale pe parcurs.
 						</p>
 					</div>

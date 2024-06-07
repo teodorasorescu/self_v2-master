@@ -81,6 +81,7 @@ const AddProduct = () => {
 				rgba(${product.colors[1][0][1]}, ${product.colors[1][1][1]}, ${product.colors[1][2][1]}, ${product.colors[1][3][1]}),
 				rgba(${product.colors[2][0][1]}, ${product.colors[2][1][1]}, ${product.colors[2][2][1]}, ${product.colors[2][3][1]}),
 				rgba(${product.colors[3][0][1]}, ${product.colors[3][1][1]}, ${product.colors[3][2][1]}, ${product.colors[3][3][1]}),
+			
        rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243)
         )`,
 				},
