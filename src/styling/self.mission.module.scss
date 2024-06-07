@@ -45,5 +45,19 @@
 			font-size: 1rem;
 			font-family: 'Raleway', sans-serif;
 		}
+
+		.paragraph {
+			text-align: justify;
+		}
+
+		.benefits {
+			display: flex;
+			flex-direction: row;
+
+			> img {
+				width: 50px;
+				height: auto;
+			}
+		}
 	}
 }

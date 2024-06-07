@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react';
 import '../styling/flipcard.css';
 import Mind from '../images/mind.png';
-import MindFrame from '../images/mind_buy.jpg';
-
 import Soul from '../images/soul.png';
-import SoulFrame from '../images/Soul_Buy.jpg';
 import Body from '../images/body.png';
-import BodyFrame from '../images/body_buy.jpg';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { loadProduct } from '../reducers/slices/productSlice';
@@ -67,7 +63,7 @@ const Flipcard = () => {
 											computeProduct(
 												'mind_buy.jpg',
 												'MIND',
-												'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.',
+												'Adu-ți întreaga atenție către mintea ta. Începe să te observi și găsește o asociere între gândurile și sentimentele tale. Acceptă-le și încearcă să-ți imaginezi că te afli în siguranță, într-o cameră emoțională. Fă loc pentru toate emoțiile, fie pozitive, fie negative și acceptă-le. Relaxează-te și oferă-ți timp pentru a transpune orice sentiment în culori.',
 												'OPEN YOUR MIND'
 											)
 										}
@@ -153,7 +149,7 @@ const Flipcard = () => {
 											computeProduct(
 												'body_buy.jpg',
 												'BODY',
-												'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.',
+												'Adu-ți întreaga atenție asupra corpului tău. Devin-o conștient asupra emoțiilor și senzațiilor pe care le simți și eliberează orice tensiune fizică care crezi că este conectată cu starea ta emoțională. Analizează-ți semnalele interne și imaginează-ți că ești înconjurat de o aură plină de culori. Transpune în posterul tău culorile și sentimentele pe care le-ai experimentat.',
 												'NOURISH YOUR BODY'
 											)
 										}

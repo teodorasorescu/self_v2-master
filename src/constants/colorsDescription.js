@@ -20,7 +20,7 @@ const colors = [
 	{
 		title: 'Galben',
 		color: '#fff185',
-		summary: 'claritate, înțelegere interioară, optimism',
+		summary: 'claritate, înțelegere, optimism',
 		desc: 'Galbenul este culoarea luminii și a energiei solare. Într-un context spiritual, galbenul poate simboliza iluminarea și înțelegerea interioară. Reprezintă optimismul, bucuria și claritatea mentală. Poate reprezenta și căutarea înțelepciunii și cunoașterea divină.',
 	},
 	{
@@ -32,20 +32,19 @@ const colors = [
 	{
 		title: 'Mov',
 		color: '#3a0ca3',
-		summary:
-			'evoluție spirituală, intuiție, conexiune cu planuri superioare de conștiință',
+		summary: 'evoluție spirituală, intuiție, integritate',
 		desc: 'Movul este o culoare misterioasă și profundă. În context spiritual, movul poate reprezenta transformarea și evoluția spirituală. Este adesea asociat cu intuiția și conexiunea cu planurile superioare de conștiință. Movul poate simboliza, de asemenea, vindecarea și echilibrul interior.',
 	},
 	{
 		title: 'Roz',
 		color: '#ffc8dd',
-		summary: 'dragoste divină, iertare, acceptare necondiționată',
+		summary: 'compasiune, blândeţe, acceptare',
 		desc: 'Rozul este culoarea iubirii și a compasiunii. Într-un context spiritual, rozul poate simboliza dragostea divină, bunătatea și îngrijirea față de ceilalți. Este adesea asociat cu iertarea și acceptarea necondiționată.',
 	},
 	{
 		title: 'Maro',
 		color: '#9e2a2b',
-		summary: 'înrădăcinare, siguranță interioară, conexiune cu sinele',
+		summary: 'stabilitate, siguranță, conexiune cu sinele',
 		desc: 'Maroul este culoarea pământului și a stabilității. În spiritualitate, maroul poate simboliza înrădăcinarea și siguranța interioară. Reprezintă încrederea în procesul vieții și a conexiunii cu energiile fundamentale ale universului.',
 	},
 	{

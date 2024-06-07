@@ -40,7 +40,7 @@ export const color3 = {
 	r: '255',
 	g: '0',
 	b: '110',
-	a: '1',
+	a: '0.8',
 };
 
 export const color1 = {
