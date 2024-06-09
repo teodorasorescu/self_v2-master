@@ -24,7 +24,8 @@ const Home = () => {
 						Creează-ți un mediu care să <br /> reprezinte ființa ta și
 						exprimă-ți <br /> sentimentele prin culori.
 					</h1>
-					<h1 className={styles.subtitle}>POSTERE GRADIENT PERSONALIZATE</h1>
+					<h1 className={styles.subtitle}>POSTERE PERSONALIZATE</h1>
+					<h1 className={styles.subtitle}>BODY MIND SOUL</h1>
 					<div className={styles.buttonContainer}>
 						{' '}
 						<Button onClick={executeScroll} className={styles.button}>
