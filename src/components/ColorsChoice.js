@@ -1,6 +1,5 @@
 import styles from '../styling/colors.choice.module.scss';
-import Jumi from '../images/jumi.png';
-import Colors from '../images/colors.png';
+import Colors from '../images/colors.webp';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';

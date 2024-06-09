@@ -1,16 +1,15 @@
 import { React } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styling/header.module.scss';
-import FacebookIcon from '../images/facebook_logo.png';
-import ShoppingBag from '../images/cart.png';
-import InstaIcon from '../images/instagram_logo.png';
-import TikTokIcon from '../images/tiktok_logo.png';
+import FacebookIcon from '../images/facebook_logo.webp';
+import ShoppingBag from '../images/cart.webp';
+import InstaIcon from '../images/instagram_logo.webp';
+import TikTokIcon from '../images/tiktok_logo.webp';
 import Badge from '@material-ui/core/Badge';
-import Self from '../images/self_logo.png';
+import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
-import { headerMessage } from '../constants/productConstants';
 
 const DesktopHeader = () => {
 	const navigate = useNavigate();

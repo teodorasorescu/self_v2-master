@@ -1,5 +1,5 @@
 import styles from '../styling/product.info.module.scss';
-import Posters from '../images/posters.jpeg';
+import Posters from '../images/posters.webp';
 import { headline } from '../constants/meditationTips';
 import { meditationTips } from '../constants/meditationTips';
 

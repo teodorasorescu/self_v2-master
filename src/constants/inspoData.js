@@ -1,13 +1,13 @@
-import inspo1 from '../images/inspo1.jpg';
-import inspo2 from '../images/inspo2.jpg';
-import inspo3 from '../images/inspo3.jpg';
-import inspo4 from '../images/inspo4.jpg';
-import inspo6 from '../images/inspo6.jpg';
-import inspo7 from '../images/inspo7.jpg';
-import inspo8 from '../images/inspo8.jpg';
-import inspo9 from '../images/inspo9.jpg';
-import inspo10 from '../images/inspo10.jpg';
-import inspo11 from '../images/inspo11.jpg';
+import inspo1 from '../images/inspo1.webp';
+import inspo2 from '../images/inspo2.webp';
+import inspo3 from '../images/inspo3.webp';
+import inspo4 from '../images/inspo4.webp';
+import inspo6 from '../images/inspo6.webp';
+import inspo7 from '../images/inspo7.webp';
+import inspo8 from '../images/inspo8.webp';
+import inspo9 from '../images/inspo9.webp';
+import inspo10 from '../images/inspo10.webp';
+import inspo11 from '../images/inspo11.webp';
 
 export const inspoData = [
 	{

@@ -11,9 +11,10 @@ import TableRow from '@mui/material/TableRow';
 import styles from '../styling/smartphone.cart.module.scss';
 import Paper from '@mui/material/Paper';
 import Button from '@material-ui/core/Button';
-import emptyCart from '../images/emptyCart.jpeg';
+import emptyCart from '../images/emptyCart.webp';
 import CartActions from './CartActions';
-import { calculateTotalPrice, price } from '../constants/productConstants';
+import { calculateTotalPrice } from '../constants/productConstants';
+import { createTheme, ThemeProvider } from '@mui/material';
 
 export const SmartphoneCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -30,6 +31,24 @@ export const SmartphoneCart = () => {
 		{ id: 'image', label: 'Articol' },
 		{ id: 'title', label: '' },
 	];
+
+	const theme = createTheme({
+		typography: {
+			fontFamily: 'Raleway',
+		},
+		components: {
+			MuiCssBaseline: {
+				styleOverrides: `
+					@font-face {
+						font-family: 'Raleway';
+						font-style: normal;
+						font-display: swap;
+						font-weight: 500;
+					}
+				`,
+			},
+		},
+	});
 
 	const listItems = (colors) => {
 		return colors.map((color) => (
@@ -64,147 +83,152 @@ export const SmartphoneCart = () => {
 			{storedProducts.length === 0 ? (
 				<img src={emptyCart} className={styles.image} alt='description' />
 			) : (
-				<Paper
-					sx={{
-						overflow: 'hidden',
-						boxShadow: 'none',
-					}}
-				>
-					<TableContainer>
-						<Table>
-							<TableBody>
-								{storedProducts.map((row, index) => {
-									return (
-										<TableRow
-											hover
-											role='checkbox'
-											tabIndex={-1}
-											key={Math.random() * 101}
-											style={{ width: '50vw' }}
-										>
-											{columns.map((column) => {
-												const value = row[column.id];
-												return (
-													<TableCell key={column.id} align={column.align}>
-														<div
-															style={{
-																fontSize: '100%',
-															}}
-														>
-															{column.id === 'image' ? (
-																<div>
+				<ThemeProvider theme={theme}>
+					<Paper
+						sx={{
+							overflow: 'hidden',
+							boxShadow: 'none',
+						}}
+					>
+						<TableContainer>
+							<Table>
+								<TableBody>
+									{storedProducts.map((row, index) => {
+										return (
+											<TableRow
+												hover
+												role='checkbox'
+												tabIndex={-1}
+												key={Math.random() * 101}
+												style={{ width: '50vw' }}
+											>
+												{columns.map((column) => {
+													const value = row[column.id];
+													return (
+														<TableCell key={column.id} align={column.align}>
+															<div
+																style={{
+																	fontSize: '100%',
+																}}
+															>
+																{column.id === 'image' ? (
 																	<div>
-																		<img
-																			src={require(`../images/${row['image']}`)}
-																			width='70'
-																			alt='description'
-																		/>{' '}
+																		<div>
+																			<img
+																				src={require(`../images/${row['image']}`)}
+																				width='70'
+																				alt='description'
+																			/>{' '}
+																		</div>
+																		<div
+																			style={{
+																				display: 'flex',
+																				flexDirection: 'row',
+																			}}
+																		>
+																			{listItems(row['colors'])}
+																		</div>
 																	</div>
+																) : column.id === 'title' ? (
 																	<div
 																		style={{
 																			display: 'flex',
-																			flexDirection: 'row',
+																			flexDirection: 'column',
 																		}}
 																	>
-																		{listItems(row['colors'])}
-																	</div>
-																</div>
-															) : column.id === 'title' ? (
-																<div
-																	style={{
-																		display: 'flex',
-																		flexDirection: 'column',
-																	}}
-																>
-																	{'Poster personalizat ' + value}
-																	{row['frameColor'] !== 'fără' && (
-																		<p className={styles.frame}>
-																			Culoare ramă: {row['frameColor']}
-																		</p>
-																	)}
+																		{'Poster personalizat ' + value}
+																		{row['frameColor'] !== 'fără' && (
+																			<p className={styles.frame}>
+																				Culoare ramă: {row['frameColor']}
+																			</p>
+																		)}
 
-																	<p style={{ fontSize: '20px' }}>
-																		{(row['quantity'] * row['price']).toFixed(
-																			2
-																		) + ' lei'}
-																	</p>
-																	<div>
-																		<CartActions
-																			quantity={row['quantity']}
-																			productId={index}
-																		/>
+																		<p style={{ fontSize: '20px' }}>
+																			{(row['quantity'] * row['price']).toFixed(
+																				2
+																			) + ' lei'}
+																		</p>
+																		<div>
+																			<CartActions
+																				quantity={row['quantity']}
+																				productId={index}
+																			/>
+																		</div>
 																	</div>
-																</div>
-															) : null}
-														</div>
-													</TableCell>
-												);
-											})}
-										</TableRow>
-									);
-								})}
-							</TableBody>
-						</Table>
-						<div style={{ paddingTop: '2%' }}>
-							<p
+																) : null}
+															</div>
+														</TableCell>
+													);
+												})}
+											</TableRow>
+										);
+									})}
+								</TableBody>
+							</Table>
+							<div style={{ paddingTop: '2%' }}>
+								<p
+									style={{
+										position: 'relative',
+										fontStyle: 'italic',
+										fontSize: '8vw',
+										paddingRight: '2%',
+									}}
+									align='right'
+								>
+									{'Total:  ' + total.toFixed(2) + ' lei'}
+								</p>
+								<p
+									style={{
+										position: 'relative',
+										fontStyle: 'italic',
+										fontSize: '4vw',
+										paddingRight: '2%',
+									}}
+									align='right'
+								>
+									TVA inclus, costurile de livrare și reducere vor fi calculate
+									in Checkout.
+								</p>
+							</div>
+							<div
 								style={{
+									display: 'flex',
+									flexDirection: 'column',
 									position: 'relative',
-									fontStyle: 'italic',
-									fontSize: '8vw',
-									paddingRight: '2%',
-								}}
-								align='right'
-							>
-								{'Total:  ' + total.toFixed(2) + ' lei'}
-							</p>
-							<p
-								style={{
-									position: 'relative',
-									fontStyle: 'italic',
-									fontSize: '4vw',
-									paddingRight: '2%',
-								}}
-								align='right'
-							>
-								TVA inclus, costurile de livrare și reducere vor fi calculate in
-								Checkout.
-							</p>
-						</div>
-						<div
-							style={{
-								display: 'flex',
-								flexDirection: 'column',
-								position: 'relative',
-							}}
-						>
-							<Button
-								style={{
-									backgroundColor: 'rgba(248, 221, 170, 0.484)',
-									height: '50px',
-									fontSize: '18px',
-									width: '100vw',
-								}}
-								onClick={() => {
-									goToCheckout();
 								}}
 							>
-								Mergi la Checkout
-							</Button>
-							<Button
-								style={{
-									fontStyle: 'italic',
-									textDecoration: 'none',
-									width: '100vw',
-									paddingBottom: '10%',
-								}}
-							>
-								<Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
-									Continuă cumpărăturile{' '}
-								</Link>
-							</Button>
-						</div>
-					</TableContainer>
-				</Paper>
+								<Button
+									style={{
+										backgroundColor: 'rgba(248, 221, 170, 0.484)',
+										height: '50px',
+										fontSize: '18px',
+										width: '100vw',
+									}}
+									onClick={() => {
+										goToCheckout();
+									}}
+								>
+									Mergi la Checkout
+								</Button>
+								<Button
+									style={{
+										fontStyle: 'italic',
+										textDecoration: 'none',
+										width: '100vw',
+										paddingBottom: '10%',
+									}}
+								>
+									<Link
+										to='/'
+										style={{ textDecoration: 'none', color: 'black' }}
+									>
+										Continuă cumpărăturile{' '}
+									</Link>
+								</Button>
+							</div>
+						</TableContainer>
+					</Paper>
+				</ThemeProvider>
 			)}
 		</div>
 	);

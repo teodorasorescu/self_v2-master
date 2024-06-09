@@ -17,7 +17,7 @@ import {
 	suport,
 } from '../constants/productConstants';
 import reactCSS from 'reactcss';
-import AttentionPrint from '../images/cmyk.png';
+import AttentionPrint from '../images/cmyk.webp';
 import { selectFramesStock } from '../reducers/slices/stockSlice';
 import getFramesStockAction from '../reducers/actions/getFramesStockAction';
 import useMediaQuery from '@mui/material/useMediaQuery';

@@ -13,6 +13,7 @@ import {
 	shipping,
 	price,
 } from '../constants/productConstants';
+import { createTheme, ThemeProvider } from '@mui/material';
 export const CheckoutCart = ({ storedProducts }) => {
 	const columns = [
 		{ id: 'image', label: 'Articol' },
@@ -47,6 +48,24 @@ export const CheckoutCart = ({ storedProducts }) => {
 	const discount = false;
 	// computeProductsLength(storedProducts) / 3 >= 1;
 
+	const theme = createTheme({
+		typography: {
+			fontFamily: 'Raleway',
+		},
+		components: {
+			MuiCssBaseline: {
+				styleOverrides: `
+					@font-face {
+						font-family: 'Raleway';
+						font-style: normal;
+						font-display: swap;
+						font-weight: 600;
+					}
+				`,
+			},
+		},
+	});
+
 	const calculateTotal = () => {
 		if (discount) {
 			return (total - price * discountNo + shipping).toFixed(2);
@@ -57,69 +76,71 @@ export const CheckoutCart = ({ storedProducts }) => {
 	return (
 		<div className={styles.cartContainer}>
 			<div className={styles.container}>
-				<TableContainer>
-					<Table>
-						<TableBody>
-							{storedProducts.map((row, index) => {
-								return (
-									<TableRow hover role='checkbox' tabIndex={-1} key={index}>
-										{columns.map((column) => {
-											const value = row[column.id];
-											return (
-												<TableCell key={column.id} align={column.align}>
-													<div
-														style={{
-															fontSize: '100%',
-														}}
-													>
-														{column.id === 'image' ? (
-															<div>
+				<ThemeProvider theme={theme}>
+					<TableContainer>
+						<Table>
+							<TableBody>
+								{storedProducts.map((row, index) => {
+									return (
+										<TableRow hover role='checkbox' tabIndex={-1} key={index}>
+											{columns.map((column) => {
+												const value = row[column.id];
+												return (
+													<TableCell key={column.id} align={column.align}>
+														<div
+															style={{
+																fontSize: '100%',
+															}}
+														>
+															{column.id === 'image' ? (
 																<div>
-																	<Badge
-																		color='primary'
-																		badgeContent={row['quantity']}
-																	>
-																		<img
-																			src={require(`../images/${row['image']}`)}
-																			width='70'
-																			alt='description'
-																		/>{' '}
-																	</Badge>
-																</div>
+																	<div>
+																		<Badge
+																			color='primary'
+																			badgeContent={row['quantity']}
+																		>
+																			<img
+																				src={require(`../images/${row['image']}`)}
+																				width='70'
+																				alt='description'
+																			/>{' '}
+																		</Badge>
+																	</div>
 
-																<div
-																	style={{
-																		display: 'flex',
-																		flexDirection: 'row',
-																	}}
-																>
-																	{listItems(row['colors'])}
+																	<div
+																		style={{
+																			display: 'flex',
+																			flexDirection: 'row',
+																		}}
+																	>
+																		{listItems(row['colors'])}
+																	</div>
 																</div>
-															</div>
-														) : column.id === 'total' ? (
-															'' +
-															(row['quantity'] * row['price']).toFixed(2) +
-															' lei'
-														) : column.id === 'title' ? (
-															<>
-																{'Tablou personalizat ' + value}
-																{row['frameColor'] !== 'fără' && (
-																	<p className={styles.frame}>
-																		Culoare ramă: {row['frameColor']}
-																	</p>
-																)}{' '}
-															</>
-														) : null}
-													</div>
-												</TableCell>
-											);
-										})}
-									</TableRow>
-								);
-							})}
-						</TableBody>
-					</Table>
-				</TableContainer>
+															) : column.id === 'total' ? (
+																'' +
+																(row['quantity'] * row['price']).toFixed(2) +
+																' lei'
+															) : column.id === 'title' ? (
+																<>
+																	{'Tablou personalizat ' + value}
+																	{row['frameColor'] !== 'fără' && (
+																		<p className={styles.frame}>
+																			Culoare ramă: {row['frameColor']}
+																		</p>
+																	)}{' '}
+																</>
+															) : null}
+														</div>
+													</TableCell>
+												);
+											})}
+										</TableRow>
+									);
+								})}
+							</TableBody>
+						</Table>
+					</TableContainer>
+				</ThemeProvider>
 				<div className={styles.priceContainer}>
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Subtotal</p>

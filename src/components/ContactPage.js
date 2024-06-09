@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import classes from '../styling/contact.page.module.scss';
-import Self from '../images/self_logo.png';
+import Self from '../images/self_logo.webp';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
-import InstaIcon from '../images/instagram_logo.png';
+import InstaIcon from '../images/instagram_logo.webp';
 
 const ContactPage = () => {
 	return (

@@ -1,4 +1,4 @@
-import OrderIllustration from '../images/order_confirmation.png';
+import OrderIllustration from '../images/order_confirmation.webp';
 import styles from '../styling/order.confirmation.module.scss';
 import { CheckoutCart } from './CheckoutCart';
 import { OrderResume } from './OrderResume';
@@ -7,13 +7,13 @@ import { useStateContext } from '../contexts/ContextProvider';
 import React, { useEffect, useState } from 'react';
 import sendOrderAction from '../reducers/actions/sendOrderAction';
 import getPaymentStatusAction from '../reducers/actions/getPaymentStatusAction';
-import PaymentFailed from '../images/declined.png';
+import PaymentFailed from '../images/declined.webp';
 import { useDispatch, useSelector } from 'react-redux';
 import {
 	loadOrderFailed,
 	selectOrderFailed,
 } from '../reducers/slices/orderFailedSlice';
-import OrderFailed from '../images/orderfailed.png';
+import OrderFailed from '../images/orderfailed.webp';
 const OrderConfirmation = () => {
 	const wideScreen = useMediaQuery('(min-width:1025px)');
 	const { headerOn, setHeaderOn } = useStateContext();

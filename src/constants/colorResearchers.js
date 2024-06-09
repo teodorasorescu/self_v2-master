@@ -1,6 +1,6 @@
-import Carl from '../images/CarlJung.jpg';
-import ML from '../images/ML.jpg';
-import EvaHeller from '../images/EvaHeller.jpg';
+import Carl from '../images/CarlJung.webp';
+import ML from '../images/ML.webp';
+import EvaHeller from '../images/EvaHeller.webp';
 const colorResearchers = [
 	{
 		researcher: 'Carl Jung',

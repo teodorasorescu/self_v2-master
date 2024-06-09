@@ -1,6 +1,6 @@
 import styles from '../styling/our.story.page.module.scss';
-import OurWorld from '../images/ourworld.JPG';
-import Motto from '../images/motto.png';
+import OurWorld from '../images/ourworld.webp';
+import Motto from '../images/motto.webp';
 
 const OurStoryPage = () => {
 	return (

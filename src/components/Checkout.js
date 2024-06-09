@@ -5,7 +5,7 @@ import AddressForm from './AddressForm';
 import { CheckoutCart } from './CheckoutCart';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { OrderResume } from './OrderResume';
-import Self from '../images/self_logo.png';
+import Self from '../images/self_logo.webp';
 
 export const Checkout = () => {
 	const { headerOn, setHeaderOn } = useStateContext();

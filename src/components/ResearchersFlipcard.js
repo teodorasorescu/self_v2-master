@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styling/ResearchersFlipcard.css';
 import colorResearchers from '../constants/colorResearchers';
-import SwipeIcon from '../images/hand.png';
+import SwipeIcon from '../images/hand.webp';
 
 const ResearchersFlipcard = () => {
 	return (

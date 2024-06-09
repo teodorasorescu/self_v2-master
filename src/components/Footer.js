@@ -6,12 +6,12 @@ import {
 	infoCategories,
 } from '../constants/footerCategories';
 import Contact from './Contact';
-import Self from '../images/self_logo.png';
+import Self from '../images/self_logo.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import DropdownSection from './DropdownSection';
-import CardTypes from '../images/cardTypes.png';
-import AnpcSal from '../images/anpcsal.JPG';
-import AnpcSol from '../images/anpcsol.JPG';
+import CardTypes from '../images/cardTypes.webp';
+import AnpcSal from '../images/anpcsal.webp';
+import AnpcSol from '../images/anpcsol.webp';
 
 const Footer = () => {
 	const wideScreen = useMediaQuery('(min-width:1024px)');
