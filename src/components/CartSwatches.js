@@ -10,8 +10,9 @@ export const CartSwatches = ({ colors }) => {
 				padding: '5%',
 			}}
 		>
-			{colors.map((color) => {
+			{colors.map((color, i) => {
 				<div
+					key={i}
 					style={{
 						width: '40px',
 						height: '30px',

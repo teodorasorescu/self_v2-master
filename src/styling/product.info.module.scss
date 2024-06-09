@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .container {
 	width: 35vw;
 	padding-top: 10%;
-
+	font-family: 'Raleway', sans-serif;
 	> img {
 		width: 35vw;
+	}
+
+	.meditation {
+		text-align: justify;
+		padding: 0;
+		.title {
+			font-weight: 500;
+		}
 	}
 }
