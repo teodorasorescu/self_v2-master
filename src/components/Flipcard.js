@@ -63,7 +63,7 @@ const Flipcard = () => {
 											computeProduct(
 												'mind_buy.jpg',
 												'MIND',
-												'Adu-ți întreaga atenție către mintea ta. Începe să te observi și găsește o asociere între gândurile și sentimentele tale. Acceptă-le și încearcă să-ți imaginezi că te afli în siguranță, într-o cameră emoțională. Fă loc pentru toate emoțiile, fie pozitive, fie negative și acceptă-le. Relaxează-te și oferă-ți timp pentru a transpune orice sentiment în culori.',
+												'Adu-ți întreaga atenție către mintea ta. Începe să te observi și găsește o asociere între gândurile și sentimentele tale. Acceptă-le și încearcă să-ți imaginezi că te afli în siguranță, într-o cameră emoțională. Fă loc pentru toate emoțiile, fie pozitive, fie negative. Relaxează-te și oferă-ți timp pentru a transpune orice sentiment în culori.',
 												'OPEN YOUR MIND'
 											)
 										}
@@ -107,7 +107,7 @@ const Flipcard = () => {
 											computeProduct(
 												'Soul_Buy.jpg',
 												'SOUL',
-												'Adu-ți întreaga atenție și conștientizare asupra senzatiilor pe care le observi în corpul tău si incearca sa exprimi prin culori sentimentele fata de acesta. Ex: Iubire, recunostinta, vindecare. Fie ca te raportezi la ceea ce simti sau ai vrea sa simti.',
+												'Adu-ți întreaga atenție către sufletul tău. Eliberează-ți mintea de gânduri și dă-i voie sufletului tău să vorbească. Permite emoțiilor ce apar să fie eliberate și să creeze claritate și lumină. Conectează-te profund la aspectele ființei tale și simte unitatea dintre sufletul tău și divin. Imaginează-ți că ești într-o călătorie de autocunoaștere și transpune-te într-un univers plin de culori și trăiri.',
 												'FOLLOW YOUR SOUL'
 											)
 										}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { SwatchGradient } from './SwatchGradient';
 import reactCSS from 'reactcss';
 import Button from '@material-ui/core/Button';
@@ -77,12 +77,18 @@ function ColorPickerGradient() {
 			: colorSwatch1
 	);
 
+	const myRef = useRef(null);
+	const executeScroll = () => {
+		myRef.current.scrollIntoView();
+	};
+
 	const colorsMap = new Map();
 
 	colorsMap.set('Prima culoare', colorSwatch1);
 	colorsMap.set('A doua culoare', colorSwatch2);
 	colorsMap.set('A treia culoare', colorSwatch3);
 	colorsMap.set('A patra culoare', colorSwatch4);
+
 	useEffect(() => {
 		if (isImageEmpty) {
 			navigate('/');
@@ -91,6 +97,7 @@ function ColorPickerGradient() {
 
 	const setField = (event) => {
 		setFontColor(colorsMap.get(event.target.value));
+		executeScroll();
 	};
 
 	const styles = reactCSS({
@@ -145,7 +152,7 @@ function ColorPickerGradient() {
 	return (
 		<div className='body'>
 			<div className='container'>
-				<div className='posterContainer'>
+				<div ref={myRef} className='posterContainer'>
 					<div className='gradientDiv' style={styles.gradient}>
 						<p className='gradientTitle' style={styles.title}>
 							{product.title}

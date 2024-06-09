@@ -167,11 +167,11 @@ const AddProduct = () => {
 							})}
 						</select>
 					</div>
-					<div className='printAttention'>
+					{/* <div className='printAttention'>
 						<p>
 							<img src={AttentionPrint} alt='attprint' /> {atentionareCuloare}
 						</p>
-					</div>
+					</div> */}
 					<div className='addToCartContainer'>
 						<Link to='/cos-de-cumparaturi'>
 							<Button className='cartButton' onClick={computeProductCart}>

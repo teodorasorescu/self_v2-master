@@ -209,8 +209,8 @@
 				}
 
 				.printAttention {
-					margin-left: 3%;
-
+					margin-left: 2%;
+					text-align: justify;
 					width: 95vw;
 					padding-left: 1%;
 					display: flex;
