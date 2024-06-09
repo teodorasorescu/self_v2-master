@@ -19,6 +19,7 @@ import FAQPage from './components/FAQPage';
 import ContactPage from './components/ContactPage';
 import { useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -41,6 +42,7 @@ function App() {
 
 				{headerOn && <Header />}
 				<Routes>
+					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
 					<Route path='/cos-de-cumparaturi' element={<Cart />} />

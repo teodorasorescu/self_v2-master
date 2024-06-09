@@ -41,16 +41,12 @@ const Footer = () => {
 			<div className={styles.logoContainer}>
 				<img className={styles.logo} src={Self} alt='selflogo' />
 				<div className={styles.anpcContainer}>
-					<a href='https://anpc.ro/ce-este-sal/' target='_blank' rel='nofollow'>
+					<a href='https://anpc.ro/ce-este-sal/' rel='noopener'>
 						{' '}
 						<img src={AnpcSal} alt='anpc-sal' />
 					</a>{' '}
 					<a />
-					<a
-						href='https://ec.europa.eu/consumers/odr'
-						target='_blank'
-						rel='nofollow'
-					>
+					<a href='https://ec.europa.eu/consumers/odr' rel='noopener'>
 						{' '}
 						<img src={AnpcSol} alt='anpc-sal' />
 					</a>{' '}
