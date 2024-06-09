@@ -1,5 +1,4 @@
 import { React } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styling/header.module.scss';
 import FacebookIcon from '../images/facebook_logo.webp';
 import ShoppingBag from '../images/cart.webp';
@@ -12,58 +11,51 @@ import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
 
 const DesktopHeader = () => {
-	const navigate = useNavigate();
-
-	const goToHome = () => {
-		navigate('/');
-	};
-
 	return (
 		<div>
 			<div className={styles.promotionTextContainer}>
 				<div className={styles.socialMediaLogo}>
-					<Link to={FACEBOOK_LINK}>
+					<a href={FACEBOOK_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={FacebookIcon}
-							alt='description'
+							alt='fb_description'
 						/>
-					</Link>
-					<Link to={INSTAGRAM_LINK}>
+					</a>
+					<a href={INSTAGRAM_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={InstaIcon}
-							alt='description'
+							alt='insta_description'
 						/>
-					</Link>
-					<Link to={TIKTOK_LINK}>
+					</a>
+					<a href={TIKTOK_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={TikTokIcon}
-							alt='description'
+							alt='tiktoK_description'
 						/>
-					</Link>
+					</a>
 				</div>
 
 				{/* <p>{headerMessage}</p> */}
 				<div className={styles.contactText}>
-					<Link style={{ textDecoration: 'none', color: 'black' }} to='/faq'>
+					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
 						<p>FAQ&nbsp;&nbsp;</p>
-					</Link>
+					</a>
 
-					<Link
-						style={{ textDecoration: 'none', color: 'black' }}
-						to='/contact'
-					>
+					<a style={{ textDecoration: 'none', color: 'black' }} href='/contact'>
 						<p>Contact&nbsp;&nbsp;</p>
-					</Link>
+					</a>
 				</div>
 			</div>
 			<div className={styles.stillPositionContainer}>
 				<div className={styles.upperContainer}>
-					<img src={Self} alt='selflogo' onClick={goToHome} />{' '}
+					<a href='/'>
+						<img src={Self} alt='selflogo' />
+					</a>
 					<div className={styles.cartContainer}>
-						<Link to='/cos-de-cumparaturi' style={{ color: 'black' }}>
+						<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
 							<Badge
 								color='primary'
 								className={styles.iconSize}
@@ -73,19 +65,19 @@ const DesktopHeader = () => {
 							>
 								<img src={ShoppingBag} className={styles.iconSize} />{' '}
 							</Badge>
-						</Link>
+						</a>
 					</div>
 				</div>
 				<div className={styles.underContainer}>
-					<Link className={styles.link} to='/'>
+					<a className={styles.link} href='/'>
 						Acasă
-					</Link>
-					<Link className={styles.link} to='/psihologia-culorilor'>
+					</a>
+					<a className={styles.link} href='/psihologia-culorilor'>
 						Psihologia culorilor
-					</Link>
-					<Link className={styles.link} to='/inspiratie'>
+					</a>
+					<a className={styles.link} href='/inspiratie'>
 						Inspirație
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>

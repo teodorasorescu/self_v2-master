@@ -1,5 +1,4 @@
 import { React } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { useStateContext } from '../contexts/ContextProvider';
 import styles from '../styling/header.module.scss';
 import FacebookIcon from '../images/facebook_logo.webp';
@@ -44,12 +43,6 @@ const contactData = [
 const SmartphoneHeader = () => {
 	const { drawerOpen, setDrawerOpen } = useStateContext();
 
-	const navigate = useNavigate();
-
-	const goToHome = () => {
-		navigate('/');
-	};
-
 	const openDrawer = () => {
 		setDrawerOpen(true);
 	};
@@ -60,9 +53,9 @@ const SmartphoneHeader = () => {
 	const getDrawerChoices = () => {
 		return headersData.map(({ label, href }) => {
 			return (
-				<Link
+				<a
+					href={href}
 					{...{
-						to: href,
 						style: {
 							textDecoration: 'none',
 							color: 'black',
@@ -80,7 +73,7 @@ const SmartphoneHeader = () => {
 					>
 						{label}
 					</MenuItem>
-				</Link>
+				</a>
 			);
 		});
 	};
@@ -88,9 +81,9 @@ const SmartphoneHeader = () => {
 	const getContactChoices = () => {
 		return contactData.map(({ label, href }) => {
 			return (
-				<Link
+				<a
+					href={href}
 					{...{
-						to: href,
 						style: { textDecoration: 'none', color: 'black' },
 						key: label,
 					}}
@@ -104,7 +97,7 @@ const SmartphoneHeader = () => {
 					>
 						{label}
 					</MenuItem>
-				</Link>
+				</a>
 			);
 		});
 	};
@@ -164,7 +157,7 @@ const SmartphoneHeader = () => {
 							}}
 						>
 							<MenuItem>
-								<Link to={FACEBOOK_LINK}>
+								<a href={FACEBOOK_LINK}>
 									<img
 										style={{
 											width: '25px',
@@ -173,12 +166,12 @@ const SmartphoneHeader = () => {
 											border: 'none',
 										}}
 										src={FacebookIcon}
-										alt='description'
+										alt='description_fb'
 									/>
-								</Link>
+								</a>
 							</MenuItem>
 							<MenuItem>
-								<Link to={INSTAGRAM_LINK}>
+								<a href={INSTAGRAM_LINK}>
 									<img
 										style={{
 											width: '25px',
@@ -187,12 +180,12 @@ const SmartphoneHeader = () => {
 											border: 'none',
 										}}
 										src={InstaIcon}
-										alt='description'
+										alt='description_insta'
 									/>
-								</Link>
+								</a>
 							</MenuItem>
 							<MenuItem>
-								<Link to={TIKTOK_LINK}>
+								<a href={TIKTOK_LINK}>
 									<img
 										style={{
 											width: '25px',
@@ -200,17 +193,19 @@ const SmartphoneHeader = () => {
 											margin: 'none',
 											border: 'none',
 										}}
-										alt='description'
+										alt='description_tiktok'
 										src={TikTokIcon}
 									/>
-								</Link>
+								</a>
 							</MenuItem>
 						</div>
 					</Drawer>
 				</Toolbar>
-				<img src={Self} alt='logo' onClick={goToHome} />{' '}
+				<a href='/'>
+					<img src={Self} alt='logo' />
+				</a>
 				<div className={styles.shoppingButton}>
-					<Link to='/cos-de-cumparaturi' style={{ color: 'black' }}>
+					<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
 						<Badge
 							color='primary'
 							className={styles.iconSize}
@@ -218,7 +213,7 @@ const SmartphoneHeader = () => {
 						>
 							<img src={ShoppingBag} className={styles.iconSize} alt='' />{' '}
 						</Badge>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</div>

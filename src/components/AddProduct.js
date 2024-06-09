@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectProduct } from '../reducers/slices/productSlice';
 import { loadProducts } from '../reducers/slices/productsSlice';
 import { v4 as uuidv4 } from 'uuid';
-import { Link } from 'react-router-dom';
 import ProductCarousel from './ProductCarousel';
 import { frameColors, framePrice } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -173,11 +172,11 @@ const AddProduct = () => {
 						</p>
 					</div> */}
 					<div className='addToCartContainer'>
-						<Link to='/cos-de-cumparaturi'>
+						<a href='/cos-de-cumparaturi'>
 							<Button className='cartButton' onClick={computeProductCart}>
 								ADAUGĂ ÎN COȘ
 							</Button>
-						</Link>
+						</a>
 					</div>
 					<div className='detailsDropdownContainer'>
 						<Dropdown title='DETALII' content={details} dropdownWidth={width} />

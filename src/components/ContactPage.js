@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import classes from '../styling/contact.page.module.scss';
 import Self from '../images/self_logo.webp';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
@@ -12,13 +11,13 @@ const ContactPage = () => {
 				{' '}
 				Scrie-ne la <b className={classes.email}>comenzi@self.ro</b>, sau pe
 				instagram <b className={classes.email}>@self.ro_ </b>
-				<Link to={INSTAGRAM_LINK}>
+				<a href={INSTAGRAM_LINK}>
 					<img
 						className={classes.socialMediaIcons}
 						src={InstaIcon}
 						alt='description'
 					/>
-				</Link>
+				</a>
 			</h2>
 			<img src={Self} alt='logo' />
 			<h4>0763382056</h4>

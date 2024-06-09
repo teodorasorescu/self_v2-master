@@ -8,14 +8,6 @@ const ColorPsychologyPage = () => {
 			<div className={classes.title}>
 				<h1>Psihologia culorilor</h1>
 			</div>
-			<div className={classes.paragraph}>
-				{' '}
-				<p>
-					Mai mulți psihologi, cercetători și specialiști au realizat studii în
-					domeniul psihologiei culorilor de-a lungul anilor. Iată câțiva exemple
-					de persoane care au contribuit la acest domeniu:
-				</p>
-			</div>
 
 			<div className={classes.flipcards}>
 				<ResearchersFlipcard />

@@ -15,6 +15,7 @@ export const Showcase = ({ jpg }) => {
 								src={el.image}
 								alt='house'
 								key={Math.random() * 101}
+								width={'40%'}
 							/>
 						);
 					})}

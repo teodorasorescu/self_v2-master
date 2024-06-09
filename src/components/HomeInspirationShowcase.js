@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styling/inspoHome.css';
 import { inspoHome } from '../constants/inspoHome';
-import { Link } from 'react-router-dom';
 
 export const HomeInspirationShowcase = () => {
 	return (
@@ -10,14 +9,14 @@ export const HomeInspirationShowcase = () => {
 			<div className='imagesContainer'>
 				{inspoHome.map((c, i) => {
 					return (
-						<Link to='/inspiratie' className='imgItem'>
+						<a href='/inspiratie' className='imgItem'>
 							<div key={i}>
 								<div
 									className='imgBox'
 									style={{ backgroundImage: `${c.image}` }}
 								></div>
 							</div>
-						</Link>
+						</a>
 					);
 				})}
 			</div>

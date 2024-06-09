@@ -12,7 +12,6 @@ import TableRow from '@mui/material/TableRow';
 import styles from '../styling/cart.module.scss';
 import '../styling/quantity.css';
 import emptyCart from '../images/emptyCart.webp';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { columns } from '../constants/cartColumns.js';
 import CartActions from './CartActions';
@@ -191,9 +190,9 @@ export const DesktopCart = () => {
 								Mergi la Checkout
 							</Button>
 							<Button className={styles.shopContainerButton}>
-								<Link to='/' style={{ textDecoration: 'none', color: 'black' }}>
+								<a href='/' style={{ textDecoration: 'none', color: 'black' }}>
 									Continuă cumpărăturile{' '}
-								</Link>
+								</a>
 							</Button>
 						</div>
 					</Paper>

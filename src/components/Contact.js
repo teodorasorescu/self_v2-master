@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styles from '../styling/contact.module.scss';
 import FacebookIcon from '../images/facebook_logo.webp';
 import InstaIcon from '../images/instagram_logo.webp';
@@ -14,27 +13,27 @@ const Contact = () => {
 			<p>adresa sediului firmei</p>
 			<p>numar de telefon</p>
 			<div>
-				<Link to={FACEBOOK_LINK}>
+				<a href={FACEBOOK_LINK}>
 					<img
 						className={styles.socialMediaIcons}
 						src={FacebookIcon}
-						alt='description'
+						alt='facebook_link'
 					/>
-				</Link>
-				<Link to={INSTAGRAM_LINK}>
+				</a>
+				<a href={INSTAGRAM_LINK}>
 					<img
 						className={styles.socialMediaIcons}
 						src={InstaIcon}
-						alt='description'
+						alt='instagram_link'
 					/>
-				</Link>
-				<Link to={TIKTOK_LINK}>
+				</a>
+				<a to={TIKTOK_LINK}>
 					<img
 						className={styles.socialMediaIcons}
 						src={TikTokIcon}
-						alt='description'
+						alt='tiktok_link'
 					/>
-				</Link>
+				</a>
 			</div>
 		</div>
 	);
