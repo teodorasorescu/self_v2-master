@@ -115,7 +115,7 @@ export const AddressForm = () => {
 									paddingTop: '0.5%',
 								}}
 							>
-								Doresc să primesc e-mailuri cu noutăți și oferte{' '}
+								Doresc să fiu la curent cu noutăți și oferte{' '}
 							</label>
 						</div>
 					</div>
@@ -235,13 +235,13 @@ export const AddressForm = () => {
 								id='country'
 								name='country'
 								className='form-select'
-								placeholder='Tară/Regiune'
+								placeholder='Țară/Regiune'
 								defaultValue={customer.country}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
 							>
-								<option value=''>Tară / Regiune</option>
+								<option value=''>Țară / Regiune</option>
 								{countries.map((country, index) => {
 									return <option key={`country-${index}`}>{country}</option>;
 								})}

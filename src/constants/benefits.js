@@ -5,7 +5,7 @@ const benefits = [
 	},
 	{
 		title: 'SENSE THE QUALITTY',
-		desc: 'Descoperă o nouă dimensiune a artei cu posterele noastre printate pe pânză, un material ce garantează calitatea și durabilitatea produsului. În plus, pânza scoate în evidență contrastul culorilor și asigură tabloului autenticitate.',
+		desc: 'Descoperă o nouă dimensiune a artei cu posterele noastre printate pe canvas 100% bumbac, un material ce garantează calitatea și durabilitatea produsului. În plus, pânza scoate în evidență contrastul culorilor și asigură tabloului autenticitate.',
 	},
 	{
 		title: 'INTROSPECT YOUR BEING',
