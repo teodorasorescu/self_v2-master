@@ -35,7 +35,7 @@ const DesktopHeader = () => {
 	const interiorDesignTopics = [
 		{
 			name: 'Ce este meditatia si cum se practica?',
-			path: 'ce-este-meditatia-si-cum-se-practica',
+			path: 'inspiratie',
 		},
 		{
 			name: 'Cum influenteaza emotiile comportamentul?',
@@ -120,14 +120,6 @@ const DesktopHeader = () => {
 
 					<a
 						className={styles.link}
-						href='/psihologia-culorilor'
-						onMouseOver={() => setSubHeadersOff()}
-					>
-						Psihologia Culorilor
-					</a>
-					<a
-						className={styles.link}
-						href='/inspiratie'
 						onMouseOver={() => setSubHeaderSpirituality(true)}
 					>
 						Spiritualitate
@@ -148,8 +140,13 @@ const DesktopHeader = () => {
 					</div>
 					<a
 						className={styles.link}
-						href='/inspiratie'
-						onMouseLeave={() => setSubHeadersOff()}
+						href='/psihologia-culorilor'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Psihologia Culorilor
+					</a>
+					<a
+						className={styles.link}
 						onMouseOver={() => setSubHeaderDesign(true)}
 					>
 						Interior Design
