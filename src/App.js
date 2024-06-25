@@ -41,11 +41,11 @@ function App() {
 			<BrowserRouter>
 				<ScrollToTop />
 
-				{/* {headerOn && <Header />} */}
+				{headerOn && <Header />}
 				<Routes>
-					<Route path='/' element={<ComingSoonPage />} />
-					{/* <Route path='*' element={<PageNotFound />} />
-					<Route path='/home' element={<Home />} />
+					{/* <Route path='/' element={<ComingSoonPage />} /> */}
+					<Route path='*' element={<PageNotFound />} />
+					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
 					<Route path='/cos-de-cumparaturi' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
@@ -64,9 +64,9 @@ function App() {
 						element={<Confidentiality />}
 					/>
 					<Route path='/faq' element={<FAQPage />} />
-					<Route path='/contact' element={<ContactPage />} /> */}
+					<Route path='/contact' element={<ContactPage />} />
 				</Routes>
-				{/* {headerOn && <Footer />} */}
+				{headerOn && <Footer />}
 			</BrowserRouter>
 		</div>
 	);

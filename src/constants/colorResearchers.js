@@ -1,7 +1,14 @@
 import Carl from '../images/CarlJung.webp';
 import ML from '../images/ML.webp';
 import EvaHeller from '../images/EvaHeller.webp';
+import KarenHaller from '../images/KarenHaller.webp';
+
 const colorResearchers = [
+	{
+		researcher: 'Karen Haller',
+		desc: 'Faimosul psihiatru și psihanalist elvețian, Carl Jung, a explorat conceptul de psihologie a culorilor în lucrările sale. A asociat diferite culori cu diverse stări psihologice și arhetipuri, integrând culoarea în teoriile sale despre mintea inconștientă.',
+		image: `url(${KarenHaller})`,
+	},
 	{
 		researcher: 'Carl Jung',
 		desc: 'Faimosul psihiatru și psihanalist elvețian, Carl Jung, a explorat conceptul de psihologie a culorilor în lucrările sale. A asociat diferite culori cu diverse stări psihologice și arhetipuri, integrând culoarea în teoriile sale despre mintea inconștientă.',

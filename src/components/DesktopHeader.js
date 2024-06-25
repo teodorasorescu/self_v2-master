@@ -1,4 +1,4 @@
-import { React } from 'react';
+import { React, useState } from 'react';
 import styles from '../styling/header.module.scss';
 import FacebookIcon from '../images/facebook_logo.webp';
 import ShoppingBag from '../images/cart.webp';
@@ -9,10 +9,51 @@ import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
+import Subheader from './Subheader';
+import Spirituality from '../images/spirituality.webp';
+import InteriorDesign from '../images/interiorDesign.webp';
 
 const DesktopHeader = () => {
+	const [subHeaderSpiritualityOn, setSubHeaderSpirituality] = useState(false);
+	const [subHeaderDesignOn, setSubHeaderDesign] = useState(false);
+
+	const spiritualityTopics = [
+		{
+			name: 'Ce este meditatia si cum se practica?',
+			path: 'ce-este-meditatia-si-cum-se-practica',
+		},
+		{
+			name: 'Cum influenteaza emotiile comportamentul?',
+			path: 'ce-este-meditatia-si-cum-se-practica',
+		},
+		{
+			name: 'Intuitive vs Sensing',
+			path: 'ce-este-meditatia-si-cum-se-practica',
+		},
+	];
+
+	const interiorDesignTopics = [
+		{
+			name: 'Ce este meditatia si cum se practica?',
+			path: 'ce-este-meditatia-si-cum-se-practica',
+		},
+		{
+			name: 'Cum influenteaza emotiile comportamentul?',
+			path: 'ce-este-meditatia-si-cum-se-practica',
+		},
+		{
+			name: 'Intuitive vs Sensing',
+			path: 'ce-este-meditatia-si-cum-se-practica',
+		},
+	];
+
+	const setSubHeadersOff = () => {
+		setSubHeaderSpirituality(false);
+		setSubHeaderDesign(false);
+	};
+
 	return (
-		<div>
+		<div className={styles.container}>
 			<div className={styles.promotionTextContainer}>
 				<div className={styles.socialMediaLogo}>
 					<a href={FACEBOOK_LINK}>
@@ -52,7 +93,7 @@ const DesktopHeader = () => {
 			<div className={styles.stillPositionContainer}>
 				<div className={styles.upperContainer}>
 					<a href='/'>
-						<img src={Self} alt='selflogo' />
+						<img src={Self} width='200' alt='selflogo' />
 					</a>
 					<div className={styles.cartContainer}>
 						<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
@@ -69,14 +110,77 @@ const DesktopHeader = () => {
 					</div>
 				</div>
 				<div className={styles.underContainer}>
-					<a className={styles.link} href='/'>
+					<a
+						className={styles.link}
+						href='/'
+						onMouseOver={() => setSubHeadersOff()}
+					>
 						Acasă
 					</a>
-					<a className={styles.link} href='/psihologia-culorilor'>
-						Psihologia culorilor
+
+					<a
+						className={styles.link}
+						href='/psihologia-culorilor'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Psihologia Culorilor
 					</a>
-					<a className={styles.link} href='/inspiratie'>
-						Inspirație
+					<a
+						className={styles.link}
+						href='/inspiratie'
+						onMouseOver={() => setSubHeaderSpirituality(true)}
+					>
+						Spiritualitate
+					</a>
+					<div
+						onMouseLeave={() => setSubHeadersOff(false)}
+						className={`${styles.subheader} ${
+							subHeaderSpiritualityOn ? styles.visible : ''
+						}`}
+					>
+						{subHeaderSpiritualityOn && (
+							<Subheader
+								topics={spiritualityTopics}
+								headline='Spiritualitate'
+								imgTitle={Spirituality}
+							/>
+						)}
+					</div>
+					<a
+						className={styles.link}
+						href='/inspiratie'
+						onMouseLeave={() => setSubHeadersOff()}
+						onMouseOver={() => setSubHeaderDesign(true)}
+					>
+						Interior Design
+					</a>
+					<div
+						onMouseLeave={() => setSubHeaderDesign(false)}
+						className={`${styles.subheader} ${
+							subHeaderDesignOn ? styles.visible : ''
+						}`}
+					>
+						{subHeaderDesignOn && (
+							<Subheader
+								topics={interiorDesignTopics}
+								headline='Interior Design'
+								imgTitle={InteriorDesign}
+							/>
+						)}
+					</div>
+					<a
+						className={styles.link}
+						href='/despre-self'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Despre SELF
+					</a>
+					<a
+						className={styles.link}
+						href='/sustenabilitate'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Sustenabilitate
 					</a>
 				</div>
 			</div>

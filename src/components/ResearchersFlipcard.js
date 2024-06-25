@@ -15,6 +15,7 @@ const ResearchersFlipcard = () => {
 									className='flipBoxFront textCenter'
 									style={{ backgroundImage: `${c.image}` }}
 								>
+									{' '}
 									<div className='nameContainer'>
 										<h3 className='flipBoxHeader'>{c.researcher}</h3>
 									</div>

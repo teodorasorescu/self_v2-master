@@ -7,6 +7,11 @@ const ColorPsychologyPage = () => {
 		<div className={classes.container}>
 			<div className={classes.title}>
 				<h1>Psihologia culorilor</h1>
+				<h2>
+					"The more we can love colour, the more that we can express who we
+					truly are.”
+				</h2>
+				<h2 className={classes.author}>Karen Haller</h2>
 			</div>
 
 			<div className={classes.flipcards}>

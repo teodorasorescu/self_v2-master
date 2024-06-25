@@ -1,9 +1,10 @@
 .cart {
+	position: relative;
 	align-items: center;
 	justify-content: space-evenly;
 	padding: 3%;
 	text-decoration: none;
-
+	z-index: 1;
 	.hContainer {
 		margin-bottom: 3%;
 		text-align: center;
