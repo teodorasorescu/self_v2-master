@@ -2,7 +2,6 @@ import React from 'react';
 import '../styling/colorsflipcard.css';
 import colors from '../constants/colorsDescription';
 import RoundIcon from '../images/round-arrow.webp';
-
 const ColorsFlipcard = () => {
 	return (
 		<div className='container'>

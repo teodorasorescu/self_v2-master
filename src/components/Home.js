@@ -20,9 +20,7 @@ const Home = () => {
 			<div className={styles.container}>
 				<div className={styles.introductionImgContainer}></div>
 				<div className={styles.introductionContainer}>
-					<h1 className={styles.title}>
-						Tickle the eye and inject some personality
-					</h1>
+					<h1 className={styles.title}>Show your true colors</h1>
 					<h1 className={styles.subtitle}>Tablouri Personalizate Canvas</h1>
 					<h1 className={styles.subtitle}>BODY MIND SOUL</h1>
 					<div className={styles.buttonContainer}>

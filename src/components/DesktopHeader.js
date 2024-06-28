@@ -34,15 +34,19 @@ const DesktopHeader = () => {
 
 	const interiorDesignTopics = [
 		{
-			name: 'Ce este meditatia si cum se practica?',
+			name: 'Best practices for using gradient in design',
 			path: 'inspiratie',
 		},
 		{
-			name: 'Cum influenteaza emotiile comportamentul?',
+			name: 'How to decorate my room to match my personality?',
 			path: 'ce-este-meditatia-si-cum-se-practica',
 		},
 		{
-			name: 'Intuitive vs Sensing',
+			name: 'What happened nowadays to detail?',
+			path: 'ce-este-meditatia-si-cum-se-practica',
+		},
+		{
+			name: 'How do colors in my home change my mood?',
 			path: 'ce-este-meditatia-si-cum-se-practica',
 		},
 	];

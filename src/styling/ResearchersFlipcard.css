@@ -48,7 +48,7 @@ html {
 		width: 250px;
 		min-height: 350px;
 	}
-	width: 350px;
+	min-width: 350px;
 	background-size: cover;
 	background-position: center;
 	border-radius: 8px;
