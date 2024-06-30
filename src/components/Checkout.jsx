@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from '../styling/checkout.module.scss';
 import { useStateContext } from '../contexts/ContextProvider';
-import AddressForm from './AddressForm.jsx';
+import AddressForm from './AddressForm';
 import { CheckoutCart } from './CheckoutCart';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { OrderResume } from './OrderResume';

@@ -2,8 +2,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useState } from 'react';
 import styles from '../styling/dropdown.module.scss';
-const Dropdown = ({ title, content, dropdownWidth }) => {
-	const [resumeDetails, setResumeDetails] = useState(false);
+const Dropdown = ({ title, content, dropdownWidth, value }) => {
+	const [resumeDetails, setResumeDetails] = useState(value);
 
 	const setResumeTrue = () => {
 		setResumeDetails(true);

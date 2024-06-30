@@ -11,7 +11,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { Link, useNavigate } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ColorPsychology from './ColorPsychology';
-import ProductInfo from './ProductInfo';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
 	color0,
@@ -20,6 +19,7 @@ import {
 	color3,
 	fontColors,
 } from '../constants/productConstants';
+import Jumi from '../images/jumi.webp';
 
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
@@ -168,12 +168,16 @@ function ColorPickerGradient() {
 						<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
 						<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
 					</div>
-					{wideScreen && <ProductInfo styleContainer='posterContainer' />}
+					{wideScreen && (
+						<>
+							<img width='500' src={Jumi} alt='maschota SELF' />{' '}
+						</>
+					)}
 				</div>
 				<div className='descriptionContainer'>
 					<div className='titleContainer'>
 						<h1>
-							Personalizare poster <br />
+							Personalizare tablou <br />
 							{product.title}
 							<br />
 						</h1>
@@ -181,7 +185,7 @@ function ColorPickerGradient() {
 					<div className='paragraphContainer'>
 						<p>{product.description}</p>
 						<p>
-							Începe personalizarea posterului, alegând cele patru culori. Vei
+							Începe personalizarea tabloului, alegând cele patru culori. Vei
 							vedea modificările tale pe parcurs.
 						</p>
 					</div>

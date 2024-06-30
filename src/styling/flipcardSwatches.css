@@ -1,6 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap'); */
-
 @media screen and (min-width: 1025px) {
 	.body {
 		.container {
@@ -13,6 +10,10 @@
 			.posterContainer {
 				display: flex;
 				flex-direction: column;
+				> img {
+					align-self: center;
+					margin-top: 4%;
+				}
 			}
 
 			.bodySwatches {

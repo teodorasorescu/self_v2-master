@@ -62,13 +62,13 @@ const Flipcard = () => {
 											computeProduct(
 												'body_buy.webp',
 												'BODY',
-												'Adu-ți întreaga atenție asupra corpului tău. Devin-o conștient asupra emoțiilor și senzațiilor pe care le simți și eliberează orice tensiune fizică care crezi că este conectată cu starea ta emoțională. Analizează-ți semnalele interne și imaginează-ți că ești înconjurat de o aură plină de culori. Transpune în posterul tău culorile și sentimentele pe care le-ai experimentat.',
+												'Adu-ți întreaga atenție asupra corpului tău. Devin-o conștient asupra emoțiilor și senzațiilor pe care le simți și eliberează orice tensiune fizică care crezi că este conectată cu starea ta emoțională. Analizează-ți semnalele interne și imaginează-ți că ești înconjurat de o aură plină de culori. Transpune în tabloul tău culorile și sentimentele pe care le-ai experimentat.',
 												'NOURISH YOUR BODY'
 											)
 										}
 										className='flip-box-button'
 									>
-										Personalizează poster{' '}
+										Personalizează tablou{' '}
 									</button>
 								</Link>
 							)}
@@ -76,7 +76,7 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
-					Poster canvas personalizat <br />
+					Tablou canvas personalizat <br />
 					BODY{' '}
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
@@ -112,7 +112,7 @@ const Flipcard = () => {
 											)
 										}
 									>
-										Personalizează poster
+										Personalizează tablou
 									</button>
 								</Link>
 							)}
@@ -120,7 +120,7 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
-					Poster canvas personalizat <br />
+					Tablou canvas personalizat <br />
 					MIND
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
@@ -156,7 +156,7 @@ const Flipcard = () => {
 											)
 										}
 									>
-										Personalizează poster{' '}
+										Personalizează tablou{' '}
 									</button>
 								</Link>
 							)}
@@ -164,7 +164,7 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
-					Poster canvas personalizat <br /> SOUL
+					Tablou canvas personalizat <br /> SOUL
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>

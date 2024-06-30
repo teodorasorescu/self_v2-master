@@ -7,7 +7,7 @@ import { Cart } from './components/Cart';
 import { Checkout } from './components/Checkout';
 import { useStateContext } from './contexts/ContextProvider';
 import Inspiration from './components/Inspiration';
-import ColorPsychologyPage from './components/ColorPsychologyPage';
+import ColorPsychologyPage from './components/ColorPsychologyPage.jsx';
 import Footer from './components/Footer';
 import OrderConfirmation from './components/OrderConfirmation';
 import AddProduct from './components/AddProduct';

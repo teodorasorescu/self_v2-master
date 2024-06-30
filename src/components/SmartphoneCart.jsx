@@ -136,7 +136,7 @@ export const SmartphoneCart = () => {
 																			flexDirection: 'column',
 																		}}
 																	>
-																		{'Poster personalizat ' + value}
+																		{'Tablou personalizat ' + value}
 																		{row['frameColor'] !== 'fără' && (
 																			<p className={styles.frame}>
 																				Culoare ramă: {row['frameColor']}

@@ -132,14 +132,14 @@ const AddProduct = () => {
 				<div className='introductionContainer'>
 					<div className='titleContainer'>
 						<h1>
-							Poster Canvas {product.title}
+							Tablou Canvas {product.title}
 							<br />
 							{product.price.toFixed(2) + ' lei'}
 							<br />
 						</h1>
 					</div>
 					<div className='productContainer'>
-						<h5>Personalizarea posterului</h5>
+						<h5>Personalizarea tabloului</h5>
 					</div>
 					<div className='bodySwatchesContainer'>
 						{listItems(product.colors)}
@@ -179,8 +179,18 @@ const AddProduct = () => {
 						</a>
 					</div>
 					<div className='detailsDropdownContainer'>
-						<Dropdown title='DETALII' content={details} dropdownWidth={width} />
-						<Dropdown title='SUPORT' content={suport} dropdownWidth={width} />
+						<Dropdown
+							title='DETALII'
+							content={details}
+							dropdownWidth={width}
+							value={true}
+						/>
+						<Dropdown
+							title='SUPORT'
+							content={suport}
+							dropdownWidth={width}
+							value={false}
+						/>
 					</div>
 				</div>
 			</div>

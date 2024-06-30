@@ -35,7 +35,7 @@ const Home = () => {
 				<VisualImages />
 				<div ref={myRef}>
 					<div className={styles.text}>
-						<h3>POSTERE</h3>
+						<h3>TABLOURI</h3>
 					</div>
 					<Flipcard />
 				</div>

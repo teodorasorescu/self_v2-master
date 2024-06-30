@@ -10,11 +10,11 @@ export const productQuestions = [
 			'Deoarece înainte de printare, facem conversia de culori de la RGB la CMYK pentru a obține cea mai bună calitate. Astfel, vă îndrumăm să nu alegeți culori RGB foarte aprinse, ce nu se regăsesc în CMYK.',
 	},
 	{
-		title: 'Care sunt pașii de personalizare a poster-ului?',
+		title: 'Care sunt pașii de personalizare al tabloului?',
 		content:
-			'Alege ce fel de poster ai dori și accesează pagina de personalizare aferentă. ' +
-			'în funcție de poster-ul ales, consultă semnificația fiecărei culori și fă-ți propriul design. \n' +
-			'Alege și culoarea font-ului dintre culorile deja alese pentru poster. Selectează o ramă potrivită pentru poster-ul tău :)',
+			'Alege ce fel de tablou ai dori și accesează pagina de personalizare aferentă. ' +
+			'în funcție de tabloul ales, consultă semnificația fiecărei culori și fă-ți propriul design. \n' +
+			'Alege și culoarea font-ului dintre culorile deja alese pentru tablou. Selectează o ramă potrivită pentru tabloul tău :)',
 	},
 ];
 
@@ -30,9 +30,9 @@ export const orderQuestions = [
 			'Pregătirea și ambalarea comenzii pot dura până la 2 zile lucrătoare, iar serviciul de curierat face tot posibilul să livreze comandă în 1-2 zile lucrătoare de la momentul plasării.',
 	},
 	{
-		title: 'Pot avea și alte cerințe de personalizare a poster-ului?',
+		title: 'Pot avea și alte cerințe de personalizare al tabloului?',
 		content:
-			'În cazul în care dorești să faci o modificare în plus poster-ului (de exemplu, eliminarea textului),  trimite un mesaj la comenzi@self.ro sau scrie-ne pe instagram la @self.ro_',
+			'În cazul în care dorești să faci o modificare în plus tabloului (de exemplu, eliminarea textului),  trimite un mesaj la comenzi@self.ro sau scrie-ne pe instagram la @self.ro_',
 	},
 	{
 		title: 'Ce fac dacă comanda mea nu a sosit?',
@@ -45,7 +45,7 @@ export const orderQuestions = [
 			'Ne pare rău pentru această experienţă, ştim că pot exista greşeli în procesare, dar împreună cu suportul comunităţii noastre reuşim întotdeauna să remediem situaţiile neplăcute. Contactează-ne pe email la comenzi@self.ro sau pe instagram la @self.ro_ şi vom rezolva în cel mai scurt timp.',
 	},
 	{
-		title: 'Pot returna poster-ul personalizat?',
+		title: 'Pot returna tabloul personalizat?',
 		content:
 			'Din păcate, produsele personalizate care respectă cerințele clientului și primite fără defecte, nu pot fi returnate.',
 	},

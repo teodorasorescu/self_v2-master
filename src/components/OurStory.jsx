@@ -19,12 +19,12 @@ const OurStory = () => {
 						dedicat introspecției asupra sentimentelor și a trăirilor. <br />{' '}
 						Cum? Ei bine, punând accent pe autocunoaștere și dezvoltare
 						personală. Self încurajează clienții să-și exploreze identitatea și
-						să-și îmbunătățească relația cu sinele prin compunerea unor postere
+						să-și îmbunătățească relația cu sinele prin compunerea unor tablouri
 						estetice personalizate, în raport cu sufletul, corpul și mintea lor.
 					</p>
 					<p className={styles.subheadline}>
 						SELF se dedică asigurării calității și longevității produselor, prin
-						alegerea atentă a materialelor, atât pentru postere, cât și pentru
+						alegerea atentă a materialelor, atât pentru tablouri, cât și pentru
 						rame. Prin această abordare, brandul, nu doar că garantează
 						durabilitatea produselor, însă contribuie și la un nivel mai mare de
 						sustenabilitate.

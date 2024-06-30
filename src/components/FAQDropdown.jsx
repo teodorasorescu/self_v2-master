@@ -13,6 +13,7 @@ const FAQDropdown = ({ questions }) => {
 							title={q.title}
 							content={q.content}
 							dropdownWidth={width}
+							value={false}
 						/>
 					</div>
 				);
