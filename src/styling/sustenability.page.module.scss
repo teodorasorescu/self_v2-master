@@ -4,6 +4,7 @@
 	height: auto;
 	margin-right: 3%;
 	margin-left: 3%;
+
 	.imgContainer {
 		width: 100%;
 		background-repeat: no-repeat;
@@ -14,16 +15,39 @@
 		background-image: url('../images/sustenability.webp');
 	}
 
+	.canvasContainer {
+		margin-top: 3%;
+		align-self: center;
+
+		> img {
+			@media screen and (max-width: 1024px) {
+				width: 90vw;
+				object-fit: contain;
+				height: fit-content;
+			}
+
+			border-radius: 60px;
+
+			height: 500px;
+		}
+	}
 	.text {
+		margin-top: 3%;
 		@media screen and (max-width: 1024px) {
 			width: 90vw;
+			padding: 5%;
 		}
+		border-radius: 60px;
+		background-color: #fff7e3;
+		padding: 3%;
 		align-self: center;
 		width: 50%;
-		padding-left: 3%;
+		padding-left: 2%;
 		margin-right: 2%;
 		font-family: 'Raleway', sans-serif;
-
+		> img {
+			margin-bottom: 3%;
+		}
 		> h3 {
 			padding-top: 3%;
 			padding-bottom: 3%;

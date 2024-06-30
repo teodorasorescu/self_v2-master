@@ -4,7 +4,6 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	font-family: 'Raleway', sans-serif;
-
 	.homePhoto {
 		margin-top: 3%;
 	}
@@ -39,16 +38,16 @@
 		box-sizing: border-box;
 		border-collapse: separate;
 		padding-top: 3%;
-
 		.title {
 			font-size: 2.5rem;
 			color: #4255ff;
-			font-style: italic;
+			//font-style: italic;
 		}
 
 		.subtitle {
 			padding-top: 1%;
 			font-size: 2rem;
+			color: #fff7e3;
 		}
 
 		.buttonContainer {
@@ -132,17 +131,14 @@
 
 	.introductionImgContainer {
 		width: 100%;
-
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 		transition: all 0.05s;
-		height: 500px;
 		display: flex;
-		background-image: url('../images/homeimg.webp');
-		background-blend-mode: lighten;
+		height: 690px;
+		background-image: url('../images/homeImg.jpeg');
 	}
-
 	.sustenabilityTextContainer {
 		padding: 1%;
 		margin: 3%;

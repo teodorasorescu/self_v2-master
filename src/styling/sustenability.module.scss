@@ -6,11 +6,16 @@
 	margin-left: 3%;
 	margin-top: 3%;
 	align-items: center;
+	border-radius: 60px;
+	background-color: #fff7e3;
+
 	@media screen and (max-width: 1024px) {
 		flex-direction: column;
 	}
 	.imgContainer {
 		width: 50%;
+		border-radius: 60px;
+
 		@media screen and (max-width: 1024px) {
 			width: 95vw;
 		}
@@ -27,6 +32,7 @@
 		@media screen and (max-width: 1024px) {
 			width: 95vw;
 			justify-content: center;
+			padding: 10%;
 		}
 		align-self: center;
 		width: 50%;

@@ -18,21 +18,23 @@ const Home = () => {
 	return (
 		<div>
 			<div className={styles.container}>
-				<div className={styles.introductionImgContainer}></div>
-				<div className={styles.introductionContainer}>
-					<h1 className={styles.title}>Show your true colors</h1>
-					<h1 className={styles.subtitle}>Tablouri Personalizate Canvas</h1>
-					<h1 className={styles.subtitle}>BODY MIND SOUL</h1>
-					<div className={styles.buttonContainer}>
-						{' '}
-						<Button onClick={executeScroll} className={styles.button}>
-							Începe Acum
-						</Button>
+				<div className={styles.introductionImgContainer}>
+					<div className={styles.introductionContainer}>
+						<h1 className={styles.title}>SHOW YOUR TRUE COLORS</h1>
+						<h1 className={styles.subtitle}>Tablouri Personalizate Canvas</h1>
+						<h1 className={styles.subtitle}>BODY MIND SOUL</h1>
+						<div className={styles.buttonContainer}>
+							{' '}
+							<Button onClick={executeScroll} className={styles.button}>
+								Începe Acum
+							</Button>
+						</div>
 					</div>
 				</div>
-				<SelfMission />
 				<Benefits />
+
 				<VisualImages />
+				<SelfMission />
 				<div ref={myRef}>
 					<div className={styles.text}>
 						<h3>TABLOURI</h3>

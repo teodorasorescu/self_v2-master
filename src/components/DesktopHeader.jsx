@@ -11,7 +11,7 @@ import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
 import Subheader from './Subheader';
 import Spirituality from '../images/spirituality.webp';
-import InteriorDesign from '../images/interiorDesign.webp';
+import InteriorDesign from '../images/interiorDesign.jpeg';
 
 const DesktopHeader = () => {
 	const [subHeaderSpiritualityOn, setSubHeaderSpirituality] = useState(false);
