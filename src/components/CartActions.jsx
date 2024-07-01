@@ -91,12 +91,15 @@ const CartActions = ({ quantity, productId }) => {
 					style={{
 						width: '40px',
 						backgroundColor: '#ffffff00',
+						textAlign: 'center',
+						margin: '0 5px',
 					}}
 					type='number'
 					step='1'
 					name='quantity'
 					max=''
 					defaultValue={quantity}
+					readOnly
 				/>
 
 				<input

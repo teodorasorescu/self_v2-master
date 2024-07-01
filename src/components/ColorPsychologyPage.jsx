@@ -88,9 +88,7 @@ const ColorPsychologyPage = () => {
 								semnifică explorarea interioară și atingerea unui nivel înalt de
 								cunoaștere.
 							</p>
-							<p>
-								Întoarce cardul și află ce semnificație spirituală are culoarea!
-							</p>
+							<p>Explorează lumea culorilor, întorcând pe rând cardurile.</p>
 						</div>
 						<div className={classes.colorsContainer}>
 							<ColorsFlipcard />

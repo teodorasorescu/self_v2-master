@@ -1,34 +1,46 @@
+/* visual.images.module.scss */
+
 .container {
-	@media screen and (max-width: 1024px) {
-		flex-direction: column;
-	}
 	display: flex;
 	flex-direction: row;
 	min-height: 600px;
 	margin: 3%;
+}
+
+.firstContainer,
+.secondContainer {
+	width: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transition: all 0.05s;
+}
+
+.firstContainer {
+	background-image: url('../images/frames.webp');
+	margin-right: 2%;
+}
+
+.secondContainer {
+	background-image: url('../images/photo1.webp');
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		display: flex;
+
+		flex-direction: column;
+	}
+
+	.firstContainer,
+	.secondContainer {
+		width: 95vw;
+		min-height: 500px;
+		width: 95vw;
+		margin-bottom: 3%;
+	}
 
 	.firstContainer {
-		@media screen and (max-width: 1024px) {
-			width: 95vw;
-			margin-bottom: 3%;
-		}
-		width: 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		transition: all 0.05s;
-		background-image: url('../images/frames.webp');
-		margin-right: 2%;
-	}
-	.secondContainer {
-		@media screen and (max-width: 1024px) {
-			width: 95vw;
-		}
-		width: 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		transition: all 0.05s;
-		background-image: url('../images//photo2.webp');
+		margin-right: 0;
 	}
 }
