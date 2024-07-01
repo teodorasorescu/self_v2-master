@@ -136,6 +136,8 @@
 			animation: fadeToRight 3s ease forwards;
 
 			.title {
+				margin-top: 3%;
+
 				font-optical-sizing: auto;
 				font-weight: 500;
 				font-style: italic;
@@ -160,25 +162,8 @@
 			}
 
 			.buttonContainer {
-				margin-bottom: 1%;
+				margin-bottom: 5%;
 				margin-top: auto; /* Push the button container to the bottom */
-				.button {
-					width: auto;
-					height: auto;
-					font-family: 'Raleway', sans-serif;
-					font-size: 1.2rem;
-					transition: all 0.1s ease;
-					background-color: #fff7e3;
-					cursor: pointer;
-					text-decoration: none;
-					border-radius: 10px;
-				}
-
-				.button:hover {
-					text-decoration: none;
-					transition: none;
-					color: #3947c6;
-				}
 			}
 		}
 	}
@@ -258,7 +243,7 @@
 
 		@media screen and (max-width: 768px) {
 			background-image: url('../images/2.jpeg');
-			height: 60vh; /* Height for screens up to 768px */
+			height: 80vh; /* Height for screens up to 768px */
 		}
 	}
 
