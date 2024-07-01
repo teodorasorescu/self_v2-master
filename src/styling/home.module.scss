@@ -123,20 +123,22 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between; /* Distribute space between items */
-			background: linear-gradient(
-				to right,
-				rgba(158, 147, 124, 0.308),
-				rgba(225, 212, 185, 0)
-			); /* Adjust colors and transparency here */
+
 			border-radius: 10px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 			transition: transform 0.3s ease;
 			margin-top: 0;
 			padding: 0;
+			height: auto;
 			animation: fadeToRight 3s ease forwards;
 
 			.title {
-				margin-top: 3%;
+				background: linear-gradient(
+					to bottom,
+					rgba(158, 147, 124, 0.3),
+					rgba(225, 212, 185, 0)
+				); /* Adjust colors and transparency here */
+				padding-top: 3%;
 
 				font-optical-sizing: auto;
 				font-weight: 500;
@@ -162,7 +164,7 @@
 			}
 
 			.buttonContainer {
-				margin-bottom: 5%;
+				margin-bottom: 10%;
 				margin-top: auto; /* Push the button container to the bottom */
 			}
 		}
