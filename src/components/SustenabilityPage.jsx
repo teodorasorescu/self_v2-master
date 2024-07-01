@@ -38,7 +38,6 @@ const SustenabilityPage = () => {
 							Pentru a afla mai multe despre Consiliul pentru Administrarea
 							Pădurilor®, vizitați www.fsc.org
 						</a>
-						.
 					</p>
 					Deoarece majoritatea produselor noastre sunt fabricate din lemn,
 					obținerea certificării FSC® este crucială pentru noi. Mai important,
