@@ -15,25 +15,9 @@
 		background-image: url('../images/sustenability.webp');
 	}
 
-	.canvasContainer {
-		margin-top: 3%;
-		align-self: center;
-
-		> img {
-			@media screen and (max-width: 1024px) {
-				width: 90vw;
-				object-fit: contain;
-				height: fit-content;
-				border-radius: 60px;
-			}
-
-			border-radius: 60px;
-			height: 500px;
-		}
-	}
-
 	.text {
 		margin-top: 3%;
+		text-align: justify;
 		@media screen and (max-width: 1024px) {
 			width: 100vw;
 			padding: 5%;

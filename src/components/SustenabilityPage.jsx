@@ -1,5 +1,4 @@
 import styles from '../styling/sustenability.page.module.scss';
-import Canvas from '../images/canvas.webp';
 const SustenabilityPage = () => {
 	return (
 		<div className={styles.container}>
@@ -45,9 +44,6 @@ const SustenabilityPage = () => {
 					gestionarea responsabilă a pădurilor lumii.
 				</p>
 			</div>{' '}
-			<div className={styles.canvasContainer}>
-				<img src={Canvas} alt='canvas 100% bumbac, printare personalizata' />
-			</div>
 		</div>
 	);
 };
