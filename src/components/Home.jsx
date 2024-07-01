@@ -33,29 +33,29 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<SelfMission />
-			{smartphoneSize ? (
-				<>
-					<Benefits /> <VisualImages />
-				</>
-			) : (
-				<>
-					<VisualImages />
-					<Benefits />
-				</>
-			)}
+			<SelfMission />{' '}
 			<div ref={myRef}>
 				<div className={styles.text}>
 					<h3>TABLOURI</h3>
 				</div>
 				<Flipcard />
 			</div>
-
+			{smartphoneSize ? (
+				<>
+					<Benefits /> <VisualImages />
+				</>
+			) : (
+				<div ref={myRef}>
+					<div className={styles.text}>
+						<h3>TABLOURI</h3>
+					</div>
+					<Flipcard />
+				</div>
+			)}
 			<ColorsChoice />
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
 			</div>
-
 			<Sustenability />
 			<OurStory />
 		</div>
