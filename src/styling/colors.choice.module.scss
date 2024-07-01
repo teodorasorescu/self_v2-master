@@ -41,20 +41,20 @@
 			align-self: center;
 			.button {
 				width: auto;
-				height: 50px;
+				height: auto;
 				font-family: 'Raleway', sans-serif;
-				border: 0.1px solid rgba(221, 204, 174, 0);
-				font-size: 1rem;
+				font-size: 1.2rem;
 				transition: all 0.1s ease;
 				background-color: #fff7e3;
 				cursor: pointer;
 				text-decoration: none;
+				border-radius: 10px;
 			}
 
 			.button:hover {
 				text-decoration: none;
 				transition: none;
-				background-color: rgba(248, 221, 170, 0.6);
+				color: #3947c6;
 			}
 		}
 	}
