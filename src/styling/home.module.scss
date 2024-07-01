@@ -4,6 +4,7 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	font-family: 'Raleway', sans-serif;
+
 	.homePhoto {
 		margin-top: 3%;
 	}
@@ -31,23 +32,55 @@
 	}
 
 	.introductionContainer {
-		width: auto;
-		align-self: center;
+		width: 50vw;
 		text-align: center;
-		font-family: 'Raleway', sans-serif;
 		box-sizing: border-box;
-		border-collapse: separate;
-		padding-top: 3%;
+		margin-top: 30%;
+		font-family: 'Raleway', sans-serif;
+		display: flex;
+		flex-direction: column;
+		background: linear-gradient(
+			to right,
+			rgba(158, 147, 124, 0.308),
+			rgba(225, 212, 185, 0)
+		); /* Adjust colors and transparency here */
+		padding: 2rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+		/* Animation properties */
+		animation: fadeToRight 3s ease forwards;
+
 		.title {
-			font-size: 2.5rem;
+			font-optical-sizing: auto;
+			font-weight: 500;
+			font-style: italic;
+			font-size: 3.5rem;
+			text-align: center;
 			color: #4255ff;
-			//font-style: italic;
 		}
 
-		.subtitle {
+		.subtitle,
+		.secondSubtitle {
+			padding-left: 1%;
+
+			font-weight: 500;
 			padding-top: 1%;
 			font-size: 2rem;
-			color: #fff7e3;
+			color: #000000;
+		}
+
+		/* Media queries for responsiveness */
+		@media (max-width: 1300px) {
+			margin-top: 25%;
+			.title {
+				font-size: 2.5rem;
+			}
+
+			.subtitle,
+			.secondSubtitle {
+				font-size: 1.8rem;
+			}
 		}
 
 		.buttonContainer {
@@ -60,12 +93,92 @@
 				background-color: #fff7e3;
 				cursor: pointer;
 				text-decoration: none;
+				border-radius: 10px;
 			}
 
 			.button:hover {
 				text-decoration: none;
 				transition: none;
-				background-color: rgba(253, 231, 189, 0.6);
+				color: #3947c6;
+			}
+		}
+
+		/* Keyframes for fade-to-right animation */
+		@keyframes fadeToRight {
+			0% {
+				transform: translateX(0);
+				opacity: 0;
+			}
+			100% {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		@media (max-width: 768px) {
+			width: 100vw;
+			text-align: center;
+			box-sizing: border-box;
+			font-family: 'Raleway', sans-serif;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between; /* Distribute space between items */
+			background: linear-gradient(
+				to right,
+				rgba(158, 147, 124, 0.308),
+				rgba(225, 212, 185, 0)
+			); /* Adjust colors and transparency here */
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease;
+			margin-top: 0;
+			padding: 0;
+			animation: fadeToRight 3s ease forwards;
+
+			.title {
+				font-optical-sizing: auto;
+				font-weight: 500;
+				font-style: italic;
+				font-size: 2.5rem;
+				text-align: center;
+				color: #4255ff;
+				margin-top: 1rem; /* Add some spacing at the top */
+			}
+
+			.subtitle {
+				opacity: 1;
+				padding-left: 1%;
+
+				font-weight: 500;
+				padding-top: 1%;
+				font-size: 1.7rem;
+				color: #fff7e3;
+			}
+
+			.secondSubtitle {
+				opacity: 0;
+			}
+
+			.buttonContainer {
+				margin-bottom: 1%;
+				margin-top: auto; /* Push the button container to the bottom */
+				.button {
+					width: auto;
+					height: auto;
+					font-family: 'Raleway', sans-serif;
+					font-size: 1.2rem;
+					transition: all 0.1s ease;
+					background-color: #fff7e3;
+					cursor: pointer;
+					text-decoration: none;
+					border-radius: 10px;
+				}
+
+				.button:hover {
+					text-decoration: none;
+					transition: none;
+					color: #3947c6;
+				}
 			}
 		}
 	}
@@ -136,9 +249,19 @@
 		background-position: center;
 		transition: all 0.05s;
 		display: flex;
-		height: 690px;
-		background-image: url('../images/homeImg.jpeg');
+		height: 100vh;
+		background-image: url('../images/1.jpeg');
+
+		@media screen and (max-width: 1024px) {
+			height: 80vh; /* Height for screens up to 1024px */
+		}
+
+		@media screen and (max-width: 768px) {
+			background-image: url('../images/2.jpeg');
+			height: 60vh; /* Height for screens up to 768px */
+		}
 	}
+
 	.sustenabilityTextContainer {
 		padding: 1%;
 		margin: 3%;
