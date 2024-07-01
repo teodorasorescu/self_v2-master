@@ -160,7 +160,7 @@
 		padding: 0;
 		border-bottom: 0.1ch solid rgba(135, 135, 135, 0.144);
 		.shoppingButton {
-			padding-right: 7%;
+			padding: 15px;
 			margin: 0;
 			text-decoration: none;
 			color: rgb(0, 0, 0);
@@ -194,12 +194,14 @@
 			padding: 10%;
 		}
 
-		> a > img {
-			width: 200px;
-			padding-top: 3%;
-			padding-bottom: 3%;
-			padding-right: 16px;
-			cursor: pointer;
+		> a {
+			> img {
+				width: 200px;
+				margin-top: 6%;
+				margin-bottom: 6%;
+				padding: 12px;
+				cursor: pointer;
+			}
 		}
 
 		.socialMediaLogo {

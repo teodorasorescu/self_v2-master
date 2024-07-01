@@ -5,6 +5,8 @@ import FacebookIcon from '../images/facebook_logo.webp';
 import InstaIcon from '../images/instagram_logo.webp';
 import TikTokIcon from '../images/tiktok_logo.webp';
 import Badge from '@material-ui/core/Badge';
+import { makeStyles } from '@material-ui/core/styles';
+
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@material-ui/core';
@@ -46,7 +48,15 @@ const SmartphoneHeader = () => {
 	const openDrawer = () => {
 		setDrawerOpen(true);
 	};
-
+	const useStyles = makeStyles((theme) => ({
+		// Override MuiToolbar-gutters class
+		toolbar: {
+			paddingRight: 0,
+			paddingLeft: 0,
+			// Add any other styles you need here
+		},
+	}));
+	const classes = useStyles();
 	const closeDrawer = () => {
 		setDrawerOpen(false);
 	};
@@ -108,7 +118,7 @@ const SmartphoneHeader = () => {
 				<p>Transport gratuit la comenzi peste 240 RON! </p>
 			</div> */}
 			<div className={styles.stillPositionContainer}>
-				<Toolbar>
+				<Toolbar className={classes.toolbar}>
 					<IconButton
 						{...{
 							color: 'inherit',
