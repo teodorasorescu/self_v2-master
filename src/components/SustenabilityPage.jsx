@@ -20,9 +20,6 @@ const SustenabilityPage = () => {
 					înconjurător și de a promova un stil de viață ecologic.
 				</p>
 			</div>{' '}
-			<div className={styles.canvasContainer}>
-				<img src={Canvas} alt='canvas 100% bumbac, printare personalizata' />
-			</div>
 			<div className={styles.text}>
 				<h4>
 					<b>FOREST STEWARDSHIP COUNCIL® (FSC®)</b>
@@ -48,6 +45,9 @@ const SustenabilityPage = () => {
 					prin alegerea produselor certificate FSC®, clienții sprijină
 					gestionarea responsabilă a pădurilor lumii.
 				</p>
+			</div>{' '}
+			<div className={styles.canvasContainer}>
+				<img src={Canvas} alt='canvas 100% bumbac, printare personalizata' />
 			</div>
 		</div>
 	);
