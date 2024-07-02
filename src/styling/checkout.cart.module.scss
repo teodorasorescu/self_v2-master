@@ -5,6 +5,9 @@
 		padding: 0;
 		font-family: 'Raleway', sans-serif;
 
+		.frame {
+			font-size: small;
+		}
 		.priceContainer {
 			display: flex;
 			flex-direction: column;
@@ -84,7 +87,9 @@
 			overflow: hidden;
 			position: relative;
 			font-family: 'Raleway', sans-serif;
-
+			.frame {
+				font-size: small;
+			}
 			@media screen and (width: 1024px) {
 				width: 80vw;
 			}

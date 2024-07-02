@@ -68,7 +68,9 @@
 				.titleContainer {
 					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 					width: 25vw;
-
+					> h2 {
+						font-size: x-large;
+					}
 					> h1 {
 						font-size: xx-large;
 						font-style: italic;
@@ -93,6 +95,7 @@
 					padding-top: 5%;
 					padding-bottom: 5%;
 					.cartButton {
+						border-radius: 20px;
 						width: 25vw;
 						height: 6vh;
 						font-family: 'Raleway', sans-serif;
@@ -100,7 +103,7 @@
 						text-align: center;
 						font-size: 90%;
 						transition: all 0.1s ease;
-						background-color: rgb(252, 247, 243);
+						background-color: #fff7e3;
 						cursor: pointer;
 						text-decoration: none;
 					}
@@ -224,6 +227,9 @@
 						font-size: xx-large;
 						font-style: italic;
 					}
+					> h2 {
+						font-size: x-large;
+					}
 				}
 
 				.productContainer {
@@ -248,7 +254,8 @@
 						border: 0.1px solid rgba(221, 204, 174, 0);
 						font-size: 90%;
 						transition: all 0.1s ease;
-						background-color: rgb(252, 247, 243);
+						border-radius: 20px;
+						background-color: #fff7e3;
 						cursor: pointer;
 						text-decoration: none;
 					}

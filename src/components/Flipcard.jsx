@@ -76,7 +76,7 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
-					Tablou canvas personalizat <br />
+					Tablou Canvas Personalizat <br />
 					BODY{' '}
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
@@ -120,7 +120,7 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
-					Tablou canvas personalizat <br />
+					Tablou Canvas Personalizat <br />
 					MIND
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
@@ -164,7 +164,7 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
-					Tablou canvas personalizat <br /> SOUL
+					Tablou Canvas Personalizat <br /> SOUL
 				</p>
 				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
 			</div>

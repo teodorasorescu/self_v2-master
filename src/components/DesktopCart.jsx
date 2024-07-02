@@ -126,7 +126,12 @@ export const DesktopCart = () => {
 															>
 																{column.id === 'title' ? (
 																	<div>
-																		{'Tablou ' + value}
+																		{'Tablou Canvas ' + value}
+																		{row['chassis'] === true && (
+																			<p className={styles.frame}>
+																				Montare pe șasiu de lemn
+																			</p>
+																		)}
 																		{row['frameColor'] !== 'fără' && (
 																			<p className={styles.frame}>
 																				Culoare ramă: {row['frameColor']}

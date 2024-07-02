@@ -37,6 +37,7 @@ const OrderConfirmation = () => {
 						quantity: product.quantity,
 						price: product.price,
 						frameColor: product.frameColor,
+						chassis: product.chassis,
 						title: product.title,
 						colors: product.colors.toString(),
 						image: product.image,
@@ -81,10 +82,11 @@ const OrderConfirmation = () => {
 				<>
 					<div className={styles.confirmationContainer}>
 						<img src={OrderIllustration} alt='orderill' />
+						<h5>Mulțumim pentru comandă!</h5>
 						<p>
-							Comanda ta este confirmată și va fi livrată în cel târziu 3-5 zile
-							lucrătoare . Îți vom trimite un email cu confirmarea în cel mai
-							scurt timp.
+							Comanda ta este confirmată și va fi procesată în următoarea zi
+							lucrătoare, iar în cel târziu 3-5 zile lucrătoare va fi livrată.
+							Îți vom trimite un email cu confirmarea în cel mai scurt timp.
 						</p>
 					</div>
 					<div className={styles.orderResumeContainer}>

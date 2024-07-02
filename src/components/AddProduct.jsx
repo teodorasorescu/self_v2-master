@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
 import {
 	atentionareCuloare,
+	chassisPrice,
 	details,
 	suport,
 } from '../constants/productConstants';
@@ -23,10 +24,17 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
+	const [chassis, setChassis] = useState(false);
+	const { itemCount, setItemCount } = useStateContext();
+
 	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
 
 	const setField = (event) => {
 		setFrameColor(event.target.value);
+	};
+
+	const setChassisField = (value) => {
+		setChassis(value);
 	};
 
 	const dispatch = useDispatch();
@@ -39,14 +47,17 @@ const AddProduct = () => {
 		storedProducts = localStoreProducts;
 	}
 
-	const { itemCount, setItemCount } = useStateContext();
 	let product = useSelector(selectProduct);
 
+	console.log(chassis);
 	const computeProductCart = () => {
 		let productId = uuidv4();
 		let finalPrice = product.price;
 		if (frameColor !== 'fără') {
 			finalPrice = product.price + framePrice;
+		}
+		if (chassis) {
+			finalPrice = finalPrice + chassisPrice;
 		}
 
 		const finalProduct = {
@@ -58,6 +69,7 @@ const AddProduct = () => {
 			quantity: 1,
 			description: product.description,
 			frameColor: frameColor,
+			chassis: chassis,
 			fontColor: product.fontColor,
 		};
 
@@ -131,12 +143,8 @@ const AddProduct = () => {
 				</div>
 				<div className='introductionContainer'>
 					<div className='titleContainer'>
-						<h1>
-							Tablou Canvas {product.title}
-							<br />
-							{product.price.toFixed(2) + ' lei'}
-							<br />
-						</h1>
+						<h1>Tablou Canvas {product.title}</h1>
+						<h2>{product.price.toFixed(2) + ' lei'}</h2>
 					</div>
 					<div className='productContainer'>
 						<h5>Personalizarea tabloului</h5>
@@ -145,6 +153,21 @@ const AddProduct = () => {
 						{listItems(product.colors)}
 					</div>
 					<div className='frameContainer'>
+						<h5>Montare pe șasiu de lemn</h5>
+						<select
+							id='chassis'
+							name='chassis'
+							className='form-select'
+							placeholder='Montare pe șasiu de lemn'
+							onChange={(e) => setChassisField(e.target.value === 'true')}
+						>
+							<option value='false'>Nu</option>
+							<option value='true'>Da + {chassisPrice} lei</option>
+						</select>
+					</div>
+
+					<div className='frameContainer'>
+						<h5>Rame din lemn natural 30x40cm</h5>
 						<select
 							id='culoare_ramă'
 							name='culoare_ramă'

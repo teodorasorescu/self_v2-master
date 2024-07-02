@@ -14,6 +14,7 @@ import {
 	price,
 } from '../constants/productConstants';
 import { createTheme, ThemeProvider } from '@mui/material';
+import { LocalConvenienceStoreOutlined } from '@material-ui/icons';
 export const CheckoutCart = ({ storedProducts }) => {
 	const columns = [
 		{ id: 'image', label: 'Articol' },
@@ -73,6 +74,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 		return (total + shipping).toFixed(2);
 	};
 
+	console.log(storedProducts);
 	return (
 		<div className={styles.cartContainer}>
 			<div className={styles.container}>
@@ -122,12 +124,17 @@ export const CheckoutCart = ({ storedProducts }) => {
 																' lei'
 															) : column.id === 'title' ? (
 																<>
-																	{'Tablou personalizat ' + value}
+																	{'Tablou Canvas ' + value}
+																	{row['chassis'] === true && (
+																		<p className={styles.frame}>
+																			Montare pe șasiu de lemn
+																		</p>
+																	)}
 																	{row['frameColor'] !== 'fără' && (
 																		<p className={styles.frame}>
 																			Culoare ramă: {row['frameColor']}
 																		</p>
-																	)}{' '}
+																	)}
 																</>
 															) : null}
 														</div>

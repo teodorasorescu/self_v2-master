@@ -1,7 +1,7 @@
-export const price = 70.0;
-
+export const price = 98.0;
+export const chassisPrice = 36.0;
 export const details =
-	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Material ramă: lemn natural ceritificat FSC® 100% \n Dimensiune ramă: 30x40 cm\nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas';
+	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material șasiu: lemn uscat de rășinoase';
 
 export const suport =
 	'Dacă aveți nelămuriri despre cum vor arătă exact culorile sau altele, nu ezitați să ne contactați la selfposters@gmail.com :)';

@@ -100,7 +100,8 @@
 						text-align: center;
 						font-size: 90%;
 						transition: all 0.1s ease;
-						background-color: rgb(252, 247, 243);
+						border-radius: 20px;
+						background-color: #fff7e3;
 						cursor: pointer;
 						text-decoration: none;
 					}
@@ -133,11 +134,12 @@
 		border-left: 0;
 		.container {
 			flex-direction: row;
-
+			align-items: center;
 			padding-bottom: 5%;
 			padding-left: 0;
 			padding-right: 0;
-
+			margin-left: auto;
+			margin-right: auto;
 			font-family: 'Raleway', sans-serif;
 			display: flex;
 			width: 100vw;
@@ -246,7 +248,8 @@
 						border: 0.1px solid rgba(221, 204, 174, 0);
 						font-size: 90%;
 						transition: all 0.1s ease;
-						background-color: rgb(252, 247, 243);
+						border-radius: 20px;
+						background-color: #fff7e3;
 						cursor: pointer;
 						text-decoration: none;
 					}
