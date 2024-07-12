@@ -18,8 +18,13 @@ import {
 } from '../constants/productConstants';
 import reactCSS from 'reactcss';
 import AttentionPrint from '../images/cmyk.webp';
-import { selectFramesStock } from '../reducers/slices/stockSlice';
+import {
+	selectChassisStock,
+	selectFramesStock,
+} from '../reducers/slices/stockSlice';
 import getFramesStockAction from '../reducers/actions/getFramesStockAction';
+import getChassisStockAction from '../reducers/actions/getChassisStockAction';
+
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const AddProduct = () => {
@@ -123,8 +128,11 @@ const AddProduct = () => {
 	};
 
 	const framesStock = useSelector(selectFramesStock);
+	const chassisStock = useSelector(selectChassisStock);
+
 	useEffect(() => {
 		getFramesStockAction(dispatch);
+		getChassisStockAction(dispatch);
 	}, []);
 
 	return (
@@ -133,6 +141,7 @@ const AddProduct = () => {
 				<div className='carouselContainer'>
 					<ProductCarousel
 						product={product}
+						altDescription='Adu-ti culoare in casa ta prin tablourile personalizate BODY MIND SOUL'
 						classGradient='gradientContainer'
 						styleGradient={gradientStyles.gradient}
 						title={gradientStyles.title}
@@ -153,7 +162,7 @@ const AddProduct = () => {
 						{listItems(product.colors)}
 					</div>
 					<div className='frameContainer'>
-						<h5>Montare pe șasiu de lemn</h5>
+						<h6>Montare pe șasiu de lemn</h6>
 						<select
 							id='chassis'
 							name='chassis'
@@ -162,12 +171,19 @@ const AddProduct = () => {
 							onChange={(e) => setChassisField(e.target.value === 'true')}
 						>
 							<option value='false'>Nu</option>
-							<option value='true'>Da + {chassisPrice} lei</option>
+							<option
+								disabled={
+									chassisStock == 0 || frameColor !== 'fără' ? true : false
+								}
+								value='true'
+							>
+								Da + {chassisPrice} lei
+							</option>
 						</select>
 					</div>
 
 					<div className='frameContainer'>
-						<h5>Rame din lemn natural 30x40cm</h5>
+						<h6>Rame din lemn natural 30x40cm</h6>
 						<select
 							id='culoare_ramă'
 							name='culoare_ramă'
@@ -175,11 +191,13 @@ const AddProduct = () => {
 							placeholder='Culoare ramă'
 							onChange={setField}
 						>
-							<option value=''>Continuă fără ramă</option>
+							<option value='fără'>Continuă fără ramă</option>
 							{frameColors.map((color, index) => {
 								return (
 									<option
-										disabled={framesStock == 0 ? true : false}
+										disabled={
+											framesStock == 0 || chassis == true ? true : false
+										}
 										key={`color-${index}`}
 										value={color}
 									>

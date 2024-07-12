@@ -1,11 +1,21 @@
 import styles from '../styling/our.story.module.scss';
-import OurWorld from '../images/ourworld.webp';
+import OurWorld from '../images/aboutSelf.jpg';
+import OurWorldSmartphone from '../images/aboutSelfSmartphone.jpg';
+import Button from '@material-ui/core/Button';
+
 import Motto from '../images/motto.webp';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const OurStory = () => {
+	const smartphoneScreen = useMediaQuery('(max-width:768px)');
+
 	return (
 		<div className={styles.container}>
-			<img className={styles.ourWorldImg} src={OurWorld} alt='ourworld' />
+			<img
+				className={styles.ourWorldImg}
+				src={smartphoneScreen ? OurWorldSmartphone : OurWorld}
+				alt='Inspiration Board For Self'
+			/>
 			<div className={styles.rowContainer}>
 				<div className={styles.text}>
 					<p className={styles.headline}>
@@ -29,9 +39,12 @@ const OurStory = () => {
 						durabilitatea produselor, însă contribuie și la un nivel mai mare de
 						sustenabilitate.
 					</p>
+					<Button href='/despre-self' className={styles.button}>
+						Descoperă mai multe despre universul SELF
+					</Button>
 				</div>
 				<div className={styles.imgContainer}>
-					<img src={Motto} alt='motto' />
+					<img src={Motto} alt='Embrace yourself with colors' />
 				</div>
 			</div>
 		</div>

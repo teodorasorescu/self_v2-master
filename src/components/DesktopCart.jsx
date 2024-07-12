@@ -75,7 +75,11 @@ export const DesktopCart = () => {
 			</div>
 			{storedProducts.length === 0 && setItemCount(0)}
 			{storedProducts.length === 0 ? (
-				<img src={emptyCart} className={styles.image} alt='description' />
+				<img
+					src={emptyCart}
+					className={styles.image}
+					alt='Nimic in cos. Mai ai timp sa-ti personalizezi tabloul'
+				/>
 			) : (
 				<ThemeProvider theme={theme}>
 					<Paper
@@ -151,7 +155,7 @@ export const DesktopCart = () => {
 																	<img
 																		src={require(`../images/${value}`)}
 																		width='130'
-																		alt='description'
+																		alt='Tablou Canvas Gradient Personalizat'
 																	/>
 																) : column.id === 'quantity' ? (
 																	<CartActions

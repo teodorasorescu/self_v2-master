@@ -13,7 +13,7 @@ export const Showcase = ({ jpg }) => {
 							<img
 								className='photo'
 								src={el.image}
-								alt='house'
+								alt='Inspiratie Tablouri Gradient Design Interior Contemporan'
 								key={Math.random() * 101}
 								width={'40%'}
 							/>

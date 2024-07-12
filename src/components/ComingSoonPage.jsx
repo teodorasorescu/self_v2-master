@@ -12,18 +12,19 @@ const ComingSoonPage = () => {
 	return (
 		<div className={classes.container}>
 			{smartphoneSize ? (
-				<img
-					width='350'
-					src={ComingSoonSmartphone}
-					alt='ComingSoonsmartphone'
-				/>
+				<img width='350' src={ComingSoonSmartphone} alt='SELF Coming Soon' />
 			) : (
-				<img width='450' src={ComingSoon} alt='comingsoon' />
+				<img width='450' src={ComingSoon} alt='SELF Coming Soon' />
 			)}
 			<h3>Be the first to find out what we are up to.</h3>
 
 			<NewsletterForm />
-			<img className={classes.logo} width='200' src={Self} alt='selflogo' />
+			<img
+				className={classes.logo}
+				width='200'
+				src={Self}
+				alt='SELF Logo - Embrace yourself'
+			/>
 		</div>
 	);
 };

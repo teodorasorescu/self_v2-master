@@ -11,7 +11,10 @@ const ColorsFlipcard = () => {
 						<div className='box'>
 							<div className='front' style={{ backgroundColor: `${c.color}` }}>
 								<div className='roundIconContainer'>
-									<img src={RoundIcon} alt='roundIcon' />
+									<img
+										src={RoundIcon}
+										alt='intoarce cardul si personalizeaza tabloul'
+									/>
 								</div>
 							</div>
 							<div

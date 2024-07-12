@@ -20,7 +20,10 @@ const ResearchersFlipcard = () => {
 										<h3 className='flipBoxHeader'>{c.researcher}</h3>
 									</div>
 									<div className='swipeIconContainer'>
-										<img src={SwipeIcon} alt='swipeIcon' />
+										<img
+											src={SwipeIcon}
+											alt='Gliseaza catre dreapta si exploareaza lumea oamenilor ce au studit psihologia culorilor'
+										/>
 									</div>
 								</div>
 								<div

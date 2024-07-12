@@ -9,9 +9,12 @@ import VisualImages from './VisiualImages';
 import Sustenability from './Sustenability';
 import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Home = () => {
 	const [imgHeight, setImgHeight] = useState('1000px'); // Default width to 100%
+
+	const smartphoneScreen = useMediaQuery('(max-width:768px)');
 
 	useEffect(() => {
 		const img = new Image();
@@ -29,10 +32,26 @@ const Home = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.introductionImgContainer}>
+				{smartphoneScreen && (
+					<div className={styles.introductionContainer}>
+						<h1 className={styles.title}>
+							Reflect on Your True SELF: The Journey Begins Within
+						</h1>
+						<h1 className={styles.subtitle}>Tablouri Personalizate Canvas</h1>
+						<div className={styles.buttonContainer}>
+							{' '}
+							<Button onClick={executeScroll} className={styles.button}>
+								Începe Acum
+							</Button>
+						</div>
+					</div>
+				)}
+			</div>
+			{!smartphoneScreen && (
 				<div className={styles.introductionContainer}>
-					<h1 className={styles.title}>SHOW YOUR TRUE COLORS</h1>
-					<h1 className={styles.subtitle}>Tablouri Personalizate Canvas</h1>
-					<h1 className={styles.secondSubtitle}>BODY MIND SOUL</h1>
+					<h1 className={styles.title}>Reflect on Your True SELF</h1>
+					<h1 className={styles.title}>The Journey Begins Within</h1>
+					<h1 className={styles.subtitle}>TABLOURI PERSONALIZATE CANVAS</h1>
 					<div className={styles.buttonContainer}>
 						{' '}
 						<Button onClick={executeScroll} className={styles.button}>
@@ -40,7 +59,7 @@ const Home = () => {
 						</Button>
 					</div>
 				</div>
-			</div>
+			)}
 			<SelfMission />{' '}
 			<div ref={myRef}>
 				<div className={styles.text}>

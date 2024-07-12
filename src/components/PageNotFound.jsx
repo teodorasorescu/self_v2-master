@@ -16,14 +16,14 @@ const PageNotFound = () => {
 					<img
 						className={classes.socialMediaIcons}
 						src={InstaIcon}
-						alt='description_insta'
+						alt='Follow us on Instagram - @selfposters.ro'
 					/>
 				</a>
 				<a href={TIKTOK_LINK}>
 					<img
 						className={classes.socialMediaIcons}
 						src={TikTokIcon}
-						alt='description_tiktok'
+						alt='Follow us on Tiktok - @selfposters.ro'
 					/>
 				</a>
 			</h2>

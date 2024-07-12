@@ -1,6 +1,5 @@
 import { React, useState } from 'react';
 import styles from '../styling/header.module.scss';
-import FacebookIcon from '../images/facebook_logo.webp';
 import ShoppingBag from '../images/cart.webp';
 import InstaIcon from '../images/instagram_logo.webp';
 import TikTokIcon from '../images/tiktok_logo.webp';
@@ -8,7 +7,6 @@ import Badge from '@material-ui/core/Badge';
 import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
-import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
 import Subheader from './Subheader';
 import Spirituality from '../images/spirituality.webp';
 import InteriorDesign from '../images/interiorDesign.jpeg';
@@ -60,25 +58,18 @@ const DesktopHeader = () => {
 		<div className={styles.container}>
 			<div className={styles.promotionTextContainer}>
 				<div className={styles.socialMediaLogo}>
-					<a href={FACEBOOK_LINK}>
-						<img
-							className={styles.socialMediaIcons}
-							src={FacebookIcon}
-							alt='fb_description'
-						/>
-					</a>
 					<a href={INSTAGRAM_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={InstaIcon}
-							alt='insta_description'
+							alt='Follow us on Instagram - @selfposters.ro'
 						/>
 					</a>
 					<a href={TIKTOK_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={TikTokIcon}
-							alt='tiktoK_description'
+							alt='Follow us on Tiktok - @selfposters.ro'
 						/>
 					</a>
 				</div>
@@ -97,7 +88,11 @@ const DesktopHeader = () => {
 			<div className={styles.stillPositionContainer}>
 				<div className={styles.upperContainer}>
 					<a href='/'>
-						<img src={Self} width='200' alt='selflogo' />
+						<img
+							src={Self}
+							width='200'
+							alt='SELF Logo - Embrace yourself with colors'
+						/>
 					</a>
 					<div className={styles.cartContainer}>
 						<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
@@ -108,7 +103,11 @@ const DesktopHeader = () => {
 									localStorage.getItem('itemCount')
 								)}
 							>
-								<img src={ShoppingBag} className={styles.iconSize} />{' '}
+								<img
+									src={ShoppingBag}
+									className={styles.iconSize}
+									alt='cosul de cumparaturi'
+								/>{' '}
 							</Badge>
 						</a>
 					</div>
@@ -139,6 +138,7 @@ const DesktopHeader = () => {
 								topics={spiritualityTopics}
 								headline='Spiritualitate'
 								imgTitle={Spirituality}
+								imgAlt='Descopera ce este spiritualitatea, cum sa meditezi si cum sa te regasesti pe tine'
 							/>
 						)}
 					</div>
@@ -166,6 +166,7 @@ const DesktopHeader = () => {
 								topics={interiorDesignTopics}
 								headline='Interior Design'
 								imgTitle={InteriorDesign}
+								imgAlt='Explore our topics about Interior Design - about gradients, how to personalize your room and more'
 							/>
 						)}
 					</div>

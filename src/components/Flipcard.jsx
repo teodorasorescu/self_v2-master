@@ -45,7 +45,10 @@ const Flipcard = () => {
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
-							<img src={RoundIcon} alt='roundIcon' />
+							<img
+								src={RoundIcon}
+								alt='Intoarce cardul si personalizeaza-ti tabloul gradient canvas'
+							/>
 						</div>
 					</div>
 					<div
@@ -89,7 +92,10 @@ const Flipcard = () => {
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
-							<img src={RoundIcon} alt='roundIcon' />
+							<img
+								src={RoundIcon}
+								alt='Intoarce cardul si personalizeaza-ti tabloul gradient canvas'
+							/>
 						</div>
 					</div>
 					<div
@@ -133,7 +139,10 @@ const Flipcard = () => {
 					>
 						<div className='inner color-white'></div>
 						<div className='roundIconContainer'>
-							<img src={RoundIcon} alt='roundIcon' />
+							<img
+								src={RoundIcon}
+								alt='Intoarce cardul si personalizeaza-ti tabloul gradient canvas'
+							/>
 						</div>
 					</div>
 					<div

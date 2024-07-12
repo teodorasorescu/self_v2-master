@@ -4,7 +4,7 @@ const Subheader = ({ headline, topics, imgTitle, imgAlt }) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.imgContainer}>
-				<img src={imgTitle} />
+				<img src={imgTitle} alt={imgAlt} />
 			</div>
 
 			<div className={styles.text}>

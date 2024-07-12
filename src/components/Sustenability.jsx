@@ -3,6 +3,8 @@ import styles from '../styling/sustenability.module.scss';
 const Sustenability = () => {
 	return (
 		<div className={styles.container}>
+			{' '}
+			<div className={styles.imgContainer}></div>
 			<div className={styles.text}>
 				<h3>SUSTENABILITITATE</h3>
 				<p className={styles.subheadline}>
@@ -14,7 +16,6 @@ const Sustenability = () => {
 					</a>
 				</p>
 			</div>
-			<div className={styles.imgContainer}></div>
 		</div>
 	);
 };

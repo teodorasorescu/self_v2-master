@@ -46,15 +46,18 @@
 				font-size: 1.2rem;
 				transition: all 0.1s ease;
 				background-color: #fff7e3;
+				border: 0.1px solid #7684ff;
 				cursor: pointer;
 				text-decoration: none;
-				border-radius: 10px;
+				border-radius: 60px;
+				color: #7684ff;
 			}
 
 			.button:hover {
 				text-decoration: none;
 				transition: none;
-				color: #3947c6;
+				color: #fff7e3;
+				background-color: #acb4ff;
 			}
 		}
 	}

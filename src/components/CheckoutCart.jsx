@@ -104,7 +104,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																			<img
 																				src={require(`../images/${row['image']}`)}
 																				width='70'
-																				alt='description'
+																				alt='tablou personalizat gradient canvas'
 																			/>{' '}
 																		</Badge>
 																	</div>

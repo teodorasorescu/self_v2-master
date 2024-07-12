@@ -81,7 +81,11 @@ export const SmartphoneCart = () => {
 			</div>
 			{storedProducts.length === 0 && setItemCount(0)}
 			{storedProducts.length === 0 ? (
-				<img src={emptyCart} className={styles.image} alt='description' />
+				<img
+					src={emptyCart}
+					className={styles.image}
+					alt='cos de cumparaturi gol'
+				/>
 			) : (
 				<ThemeProvider theme={theme}>
 					<Paper
@@ -117,7 +121,7 @@ export const SmartphoneCart = () => {
 																			<img
 																				src={require(`../images/${row['image']}`)}
 																				width='70'
-																				alt='description'
+																				alt='Tablou Canvas Gradient Personalizat - Body Mind Soul'
 																			/>{' '}
 																		</div>
 																		<div

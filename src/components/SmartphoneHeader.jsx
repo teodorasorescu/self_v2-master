@@ -1,7 +1,6 @@
 import { React } from 'react';
 import { useStateContext } from '../contexts/ContextProvider';
 import styles from '../styling/header.module.scss';
-import FacebookIcon from '../images/facebook_logo.webp';
 import InstaIcon from '../images/instagram_logo.webp';
 import TikTokIcon from '../images/tiktok_logo.webp';
 import Badge from '@material-ui/core/Badge';
@@ -14,7 +13,6 @@ import ShoppingBag from '../images/cart.webp';
 import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
-import { FACEBOOK_LINK } from '../constants/socialMediaLinks';
 
 const headersData = [
 	{
@@ -167,20 +165,6 @@ const SmartphoneHeader = () => {
 							}}
 						>
 							<MenuItem>
-								<a href={FACEBOOK_LINK}>
-									<img
-										style={{
-											width: '25px',
-											height: '25px',
-											margin: 'none',
-											border: 'none',
-										}}
-										src={FacebookIcon}
-										alt='description_fb'
-									/>
-								</a>
-							</MenuItem>
-							<MenuItem>
 								<a href={INSTAGRAM_LINK}>
 									<img
 										style={{
@@ -190,7 +174,7 @@ const SmartphoneHeader = () => {
 											border: 'none',
 										}}
 										src={InstaIcon}
-										alt='description_insta'
+										alt='Follow us on Instagram - @selfposters.ro'
 									/>
 								</a>
 							</MenuItem>
@@ -203,7 +187,7 @@ const SmartphoneHeader = () => {
 											margin: 'none',
 											border: 'none',
 										}}
-										alt='description_tiktok'
+										alt='Follow us on Tiktok - @selfposters.ro'
 										src={TikTokIcon}
 									/>
 								</a>
@@ -212,7 +196,7 @@ const SmartphoneHeader = () => {
 					</Drawer>
 				</Toolbar>
 				<a href='/'>
-					<img src={Self} alt='logo' />
+					<img src={Self} alt='SELF Logo - Embrace yourself with colors' />
 				</a>
 				<div className={styles.shoppingButton}>
 					<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
@@ -221,7 +205,11 @@ const SmartphoneHeader = () => {
 							className={styles.iconSize}
 							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
 						>
-							<img src={ShoppingBag} className={styles.iconSize} alt='' />{' '}
+							<img
+								src={ShoppingBag}
+								className={styles.iconSize}
+								alt='cos de cumparaturi'
+							/>{' '}
 						</Badge>
 					</a>
 				</div>

@@ -20,7 +20,7 @@ import {
 	fontColors,
 } from '../constants/productConstants';
 import Jumi from '../images/jumi.webp';
-
+import Cards from '../images/image00001.jpeg';
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
 	const isColorChanged =
@@ -170,7 +170,16 @@ function ColorPickerGradient() {
 					</div>
 					{wideScreen && (
 						<>
-							<img width='500' src={Jumi} alt='maschota SELF' />{' '}
+							<img
+								width='400'
+								src={Cards}
+								alt='motto SELF, embrace yourself with colors'
+							/>{' '}
+							<img
+								width='300'
+								src={Jumi}
+								alt='maschota SELF, embrace yourself with colors'
+							/>{' '}
 						</>
 					)}
 				</div>

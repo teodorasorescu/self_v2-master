@@ -81,7 +81,10 @@ const OrderConfirmation = () => {
 			) : (
 				<>
 					<div className={styles.confirmationContainer}>
-						<img src={OrderIllustration} alt='orderill' />
+						<img
+							src={OrderIllustration}
+							alt='Comanda ta cu tablouri personalizate canvas gradient este confirmata!'
+						/>
 						<h5>Mulțumim pentru comandă!</h5>
 						<p>
 							Comanda ta este confirmată și va fi procesată în următoarea zi

@@ -22,7 +22,10 @@ export const Checkout = () => {
 		<div className={styles.container}>
 			<div className={styles.checkoutContainer}>
 				<div className={styles.image}>
-					<img src={Self} />
+					<img
+						src={Self}
+						alt='embrace yourself, tablouri personalizate canvas'
+					/>
 				</div>
 				{!wideScreen && <OrderResume storedProducts={storedProducts} />}
 				<AddressForm />

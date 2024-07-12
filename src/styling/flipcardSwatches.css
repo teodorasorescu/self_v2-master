@@ -61,6 +61,15 @@
 				width: 25vw;
 			}
 
+			.titleContainer {
+				border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+				width: 25vw;
+				> h1 {
+					font-size: xx-large;
+					font-style: italic;
+				}
+			}
+
 			.descriptionContainer {
 				width: 25vw;
 				display: flex;
@@ -69,15 +78,6 @@
 
 				font-family: 'Raleway', sans-serif;
 				text-align: left;
-
-				.titleContainer {
-					border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
-					width: 25vw;
-					> h1 {
-						font-size: xx-large;
-						font-style: italic;
-					}
-				}
 
 				.paragraphContainer {
 					padding-top: 3%;

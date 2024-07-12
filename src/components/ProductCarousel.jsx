@@ -5,6 +5,7 @@ import classes from '../styling/picture.module.scss';
 
 const ProductCarousel = ({
 	product,
+	altDescription,
 	classGradient,
 	styleGradient,
 	title,
@@ -43,6 +44,7 @@ const ProductCarousel = ({
 						<img
 							src={require(`../images/${product.image}`)}
 							className={classes.picturesContainer}
+							alt={altDescription}
 						/>
 					</div>
 				)}

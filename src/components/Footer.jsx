@@ -36,10 +36,18 @@ const Footer = () => {
 
 			<div className={styles.contactPadding}>
 				<Contact />
-				<img className={styles.cardTypeImg} src={CardTypes} alt={`card`} />
+				<img
+					className={styles.cardTypeImg}
+					src={CardTypes}
+					alt='La SELF ai numeroase variante de platit cu cardul Visa, Mastercard, Google Pay, Apple Pay'
+				/>
 			</div>
 			<div className={styles.logoContainer}>
-				<img className={styles.logo} src={Self} alt='selflogo' />
+				<img
+					className={styles.logo}
+					src={Self}
+					alt='SELF Logo - Embrace yourself with colors'
+				/>
 				<div className={styles.anpcContainer}>
 					<a href='https://anpc.ro/ce-este-sal/' rel='noopener'>
 						{' '}

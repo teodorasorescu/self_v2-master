@@ -1,4 +1,4 @@
-export const headline = 'Vrei să-i aduci casei tale AUTENTICITATE și CULOARE?';
+export const headline = 'Embrace the Colors of Your Being and Feelings';
 
 export const subheadline =
 	'Explorează-ți identitatea și personalizează-ți tabloul!';
@@ -8,6 +8,7 @@ export const description =
 
 export const benefits = [
 	'Print pe canvas 100% bumbac',
-	'Rame colorate din lemn natural ceritificat FSC® 100%',
-	'Analiză culori și personalizare',
+	'Rame din lemn natural ceritificat FSC® 100%',
+	'Montare pe șasiu de lemn',
+	'Personalizare și semnificație culori',
 ];

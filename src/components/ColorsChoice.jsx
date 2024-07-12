@@ -13,7 +13,11 @@ const ColorsChoice = () => {
 				<>
 					<div className={styles.colorsChoice}>
 						<h3>CUM ALEGEM CULORILE?</h3>
-						<img className={styles.colors} src={Colors} alt='colors' />
+						<img
+							className={styles.colors}
+							src={Colors}
+							alt='semnificatie spirituala culori, psihologie, grafica, tablouri'
+						/>
 						<div className={styles.buttonContainer}>
 							<Link to='/psihologia-culorilor'>
 								<Button className={styles.button}>PSIHOLOGIA CULORILOR</Button>
@@ -27,7 +31,11 @@ const ColorsChoice = () => {
 					<div className={styles.firstContainer}></div>
 					<div className={styles.colorsChoice}>
 						<h3>CUM ALEGEM CULORILE?</h3>
-						<img className={styles.colors} src={Colors} alt='colors' />
+						<img
+							className={styles.colors}
+							src={Colors}
+							alt='semnificatie spirituala culori, psihologie, grafica, tablouri'
+						/>
 						<div className={styles.buttonContainer}>
 							<Link to='/psihologia-culorilor'>
 								<Button className={styles.button}>PSIHOLOGIA CULORILOR</Button>

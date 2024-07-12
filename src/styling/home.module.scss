@@ -32,54 +32,41 @@
 	}
 
 	.introductionContainer {
-		width: 50vw;
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
 		text-align: center;
 		box-sizing: border-box;
-		margin-top: 30%;
 		font-family: 'Raleway', sans-serif;
 		display: flex;
 		flex-direction: column;
-		background: linear-gradient(
-			to right,
-			rgba(158, 147, 124, 0.308),
-			rgba(225, 212, 185, 0)
-		); /* Adjust colors and transparency here */
 		padding: 2rem;
 		border-radius: 10px;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-		transition: transform 0.3s ease;
-		/* Animation properties */
-		animation: fadeToRight 3s ease forwards;
+		font-family: Alice, serif;
 
 		.title {
 			font-optical-sizing: auto;
-			font-weight: 500;
+			color: #7684ff;
+			font-size: 4rem;
 			font-style: italic;
-			font-size: 3.5rem;
 			text-align: center;
-			color: #4255ff;
 		}
 
-		.subtitle,
-		.secondSubtitle {
-			padding-left: 1%;
-
-			font-weight: 500;
+		.subtitle {
 			padding-top: 1%;
-			font-size: 2rem;
+			padding-bottom: 2%;
+			font-size: 2.5rem;
 			color: #000000;
 		}
 
-		/* Media queries for responsiveness */
+		/* Smaller screen */
 		@media (max-width: 1300px) {
-			margin-top: 25%;
 			.title {
-				font-size: 2.5rem;
+				font-size: 3.5rem;
 			}
 
-			.subtitle,
-			.secondSubtitle {
-				font-size: 1.8rem;
+			.subtitle {
+				font-size: 2rem;
 			}
 		}
 
@@ -88,19 +75,24 @@
 				width: auto;
 				height: auto;
 				font-family: 'Raleway', sans-serif;
-				font-size: 1.2rem;
+				font-size: 1.5rem;
 				transition: all 0.1s ease;
 				background-color: #fff7e3;
 
 				cursor: pointer;
 				text-decoration: none;
-				border-radius: 10px;
+				border-radius: 60px;
+				color: #7684ff;
+				margin-bottom: 3%;
+				text-align: center;
+				border: 0.1px solid #7684ff;
 			}
 
 			.button:hover {
 				text-decoration: none;
 				transition: none;
-				color: #3947c6;
+				color: #fff7e3;
+				background-color: #acb4ff;
 			}
 		}
 
@@ -132,7 +124,7 @@
 			padding: 0;
 			height: auto;
 			animation: fadeToRight 3s ease forwards;
-
+			font-family: Alice, serif;
 			.title {
 				background: linear-gradient(
 					to bottom,
@@ -146,7 +138,7 @@
 				font-style: italic;
 				font-size: 2.5rem;
 				text-align: center;
-				color: #4255ff;
+				color: #acb4ff;
 			}
 
 			.subtitle {
@@ -237,8 +229,8 @@
 		transition: all 0.05s;
 		display: flex;
 		height: 100vh;
-		background-image: url('../images/1.jpeg');
-
+		background-image: url('../images/image00023.jpeg');
+		border-radius: 0 0 60px 60px;
 		@media screen and (max-width: 1024px) {
 			height: 80vh; /* Height for screens up to 1024px */
 		}

@@ -4,7 +4,7 @@ export const details =
 	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material șasiu: lemn uscat de rășinoase';
 
 export const suport =
-	'Dacă aveți nelămuriri despre cum vor arătă exact culorile sau altele, nu ezitați să ne contactați la selfposters@gmail.com :)';
+	'Dacă aveți nelămuriri, nu ezitați să ne contactați la selfposters@gmail.com, sau pe instagram/tiktok @selfposters.ro ♡';
 
 export const atentionareCuloare =
 	'Vă sfătuim să nu alegeți culori stridente. Tehnologia actuală nu permite printarea culorilor în format RGB, ci CMYK. Astfel, culorile stridente pot ieși la imprimare ușor mai închise.';

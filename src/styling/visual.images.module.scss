@@ -10,6 +10,7 @@
 .firstContainer,
 .secondContainer {
 	width: 50%;
+	height: 80vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -17,26 +18,24 @@
 }
 
 .firstContainer {
-	background-image: url('../images/frames.webp');
+	background-image: url('../images/image00003.jpeg');
 	margin-right: 2%;
 }
 
 .secondContainer {
-	background-image: url('../images/photo1.webp');
+	background-image: url('../images/image00011.jpeg');
 }
 
 @media screen and (max-width: 1024px) {
 	.container {
 		display: flex;
-
 		flex-direction: column;
 	}
 
 	.firstContainer,
 	.secondContainer {
 		width: 95vw;
-		min-height: 500px;
-		width: 95vw;
+		height: 50vh;
 		margin-bottom: 3%;
 	}
 

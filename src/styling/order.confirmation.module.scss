@@ -14,9 +14,15 @@
 		flex-direction: column;
 		width: 430px;
 
+		> h5 {
+			text-align: center;
+			padding-top: 3%;
+		}
+
 		@media screen and (max-width: 1024px) {
 			width: 100vw;
 		}
+
 		> p {
 			text-align: center;
 		}

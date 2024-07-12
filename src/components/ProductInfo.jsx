@@ -17,7 +17,7 @@ const ProductInfo = () => {
 					</div>
 				);
 			})}
-			<img src={Posters} alt='posters' />
+			<img src={Posters} alt='Set Body Mind Soul, tablouri personalizate' />
 		</div>
 	);
 };
