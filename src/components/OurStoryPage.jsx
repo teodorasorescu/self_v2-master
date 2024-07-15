@@ -29,8 +29,9 @@ const OurStoryPage = () => {
 						spiritualitatea. Noi ne concentrăm pe crearea unui spațiu favorabil,
 						dedicat introspecției asupra sentimentelor și a trăirilor. <br />{' '}
 						Cum? Ei bine, încurajând clienții să-și exploreze identitatea și
-						să-și îmbunătățească relația cu sinele prin compunerea unor tablouri
-						estetice personalizate, în raport cu sufletul, corpul și mintea lor.
+						să-și îmbunătățească relația cu sinele, prin compunerea unor
+						tablouri estetice personalizate, în raport cu sufletul, corpul și
+						mintea lor.
 					</p>
 					<p className={styles.subheadline}>
 						SELF se dedică asigurării calității și longevității produselor, prin
@@ -51,8 +52,8 @@ const OurStoryPage = () => {
 						în fiecare casă, iar fiecare tablouri să se simtă ca o îmbrățisare
 						de sine. Suntem dedicați să îndemnăm oamenii să se reconecteze cu
 						sinele lor autentic și să exploreze universul creativității prin
-						artă și culori. Fiecare tablouri și ramă este concepută pentru a
-						aduce o notă de frumusețe și semnificație în spațiul personal al
+						artă și culori. Atât tablourile, cât și ramele sunt concepute pentru
+						a aduce o notă de frumusețe și semnificație în spațiul personal al
 						clienților noștri. Ne străduim să transmitem un mesaj de
 						pozitivitate și să aducem o sursă constantă de inspirație în viața
 						celor care aleg SELF.
@@ -64,7 +65,7 @@ const OurStoryPage = () => {
 					</h4>
 					<p className={styles.subheadline}>
 						Utilizarea materialelor de înaltă calitate este esențială pentru
-						Self, deoarece se dorește ca produsele să fie rezistente și să-și
+						SELF, deoarece se dorește ca produsele să fie rezistente și să-și
 						păstreze aspectul în timp. Pe viitor, Self speră să intensifice
 						eforturile în această direcție, explorând noi modalități de a reduce
 						impactul asupra mediului înconjurător și de a promova un stil de

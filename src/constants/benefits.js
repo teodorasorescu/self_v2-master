@@ -1,7 +1,7 @@
 const benefits = [
 	{
 		title: 'ELEVATE YOUR WALLS',
-		desc: 'Descoperă combinația ideală între design modern și funcționalitate. Creează un ambient plin de viață, cu ramele noastre colorate din lemn natural.',
+		desc: 'Descoperă combinația ideală între design modern și funcționalitate. Creează un ambient plin de viață, cu ramele noastre colorate din lemn natural sau pune tabloul în prim plan prin montarea lui pe șasiu de lemn. ',
 	},
 	{
 		title: 'SENSE THE QUALITTY',

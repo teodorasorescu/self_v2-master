@@ -184,8 +184,7 @@ export const DesktopCart = () => {
 								Total: {'' + calculateTotalPrice(storedProducts) + ' lei'}
 							</p>
 							<p className={styles.pTva} align='right'>
-								TVA inclus, costurile de livrare și reducere vor fi calculate in
-								Checkout.
+								Costurile de livrare și reducere vor fi calculate in Checkout.
 							</p>
 						</div>
 						<div className={styles.buttonContainer}>
