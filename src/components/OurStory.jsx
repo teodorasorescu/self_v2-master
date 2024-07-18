@@ -19,17 +19,16 @@ const OurStory = () => {
 			<div className={styles.rowContainer}>
 				<div className={styles.text}>
 					<p className={styles.headline}>
-						SELF este un brand <b className={styles.italic}>românesc</b>, care a
-						luat naștere dintr-o dorință de exprimare personală, iubire față de
-						design interior contemporan și simpatie față de artă și culori.
+						SELF este un brand care a luat naștere dintr-o dorință de exprimare
+						personală, iubire față de design interior contemporan și simpatie
+						față de artă și culori.
 					</p>
 					<p className={styles.subheadline}>
 						Acesta este locul care îmbină estetica contemporană cu
 						spiritualitatea. Noi ne concentrăm pe crearea unui spațiu favorabil,
 						dedicat introspecției asupra sentimentelor și a trăirilor. <br />{' '}
-						Cum? Ei bine, punând accent pe autocunoaștere și dezvoltare
-						personală. Self încurajează clienții să-și exploreze identitatea și
-						să-și îmbunătățească relația cu sinele prin compunerea unor tablouri
+						Noi încurajăm clienții să-și exploreze identitatea și să-și
+						îmbunătățească relația cu sinele prin compunerea unor tablouri
 						estetice personalizate, în raport cu sufletul, corpul și mintea lor.
 					</p>
 					<p className={styles.subheadline}>

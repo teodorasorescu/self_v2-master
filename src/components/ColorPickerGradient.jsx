@@ -19,8 +19,7 @@ import {
 	color3,
 	fontColors,
 } from '../constants/productConstants';
-import Jumi from '../images/jumi.webp';
-import Cards from '../images/image00001.jpeg';
+import Details from '../images/details.jpg';
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
 	const isColorChanged =
@@ -171,14 +170,9 @@ function ColorPickerGradient() {
 					{wideScreen && (
 						<>
 							<img
-								width='400'
-								src={Cards}
-								alt='motto SELF, embrace yourself with colors'
-							/>{' '}
-							<img
-								width='300'
-								src={Jumi}
-								alt='maschota SELF, embrace yourself with colors'
+								className='detailsPosters'
+								src={Details}
+								alt='montare șasiu, ramă din lemn, card cu culorile alese'
 							/>{' '}
 						</>
 					)}

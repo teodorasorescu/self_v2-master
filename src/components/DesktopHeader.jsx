@@ -121,13 +121,13 @@ const DesktopHeader = () => {
 						Acasă
 					</a>
 
-					<a
+					{/* <a
 						className={styles.link}
 						onMouseOver={() => setSubHeaderSpirituality(true)}
 					>
 						Spiritualitate
-					</a>
-					<div
+					</a> */}
+					{/* <div
 						onMouseLeave={() => setSubHeadersOff(false)}
 						className={`${styles.subheader} ${
 							subHeaderSpiritualityOn ? styles.visible : ''
@@ -141,7 +141,7 @@ const DesktopHeader = () => {
 								imgAlt='Descopera ce este spiritualitatea, cum sa meditezi si cum sa te regasesti pe tine'
 							/>
 						)}
-					</div>
+					</div> */}
 					<a
 						className={styles.link}
 						href='/psihologia-culorilor'
@@ -149,7 +149,7 @@ const DesktopHeader = () => {
 					>
 						Psihologia Culorilor
 					</a>
-					<a
+					{/* <a
 						className={styles.link}
 						onMouseOver={() => setSubHeaderDesign(true)}
 					>
@@ -169,7 +169,7 @@ const DesktopHeader = () => {
 								imgAlt='Explore our topics about Interior Design - about gradients, how to personalize your room and more'
 							/>
 						)}
-					</div>
+					</div> */}
 					<a
 						className={styles.link}
 						href='/despre-self'

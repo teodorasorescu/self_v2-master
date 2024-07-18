@@ -195,8 +195,7 @@ export const SmartphoneCart = () => {
 									}}
 									align='right'
 								>
-									TVA inclus, costurile de livrare și reducere vor fi calculate
-									in Checkout.
+									Costurile de livrare și reducere vor fi calculate in Checkout.
 								</p>
 							</div>
 							<div

@@ -24,6 +24,10 @@
 				align-self: center;
 			}
 
+			.detailsPosters {
+				padding-top: 10%;
+				width: 30vw;
+			}
 			.gradientDiv {
 				transform-style: preserve-3d;
 				box-shadow: rgba(209, 204, 176, 0.493) 0px 1px 5px;

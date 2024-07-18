@@ -8,15 +8,29 @@ const SustenabilityPage = () => {
 					<b>SUSTENABILITITATE</b>
 				</h3>
 				<p className={styles.subheadline}>
-					Confecționarea ramelor este facută din lemn natural certificat FSC
-					100%, astfel lemnul provine din surse prietenoase pentru păduri,
-					gestionate în mod responsabil. <br />
-					Utilizarea materialelor de înaltă calitate este esențială pentru Self,
-					deoarece se dorește ca produsele să fie rezistente și să-și păstreze
-					aspectul în timp. Astfel, printarea se face pe canvas 100% bumbac. Pe
-					viitor, Self speră să intensifice eforturile în această direcție,
+					Confecționarea <b>ramelor</b> este facută din lemn natural certificat
+					FSC 100%, astfel lemnul provine din surse prietenoase pentru păduri,
+					gestionate în mod responsabil. Totodată, <b>tuburile</b> și{' '}
+					<b>cutiile</b> în care sunt livrate tablourile din pânză, sunt
+					confecționate din carton, susținând astfel folosirea materialelor
+					ecologice, fără plastic. Utilizarea materialelor de înaltă calitate
+					este esențială pentru Self, deoarece se dorește ca produsele să fie
+					rezistente și să-și păstreze aspectul în timp. Astfel, printarea se
+					face pe <b>canvas 100% bumbac</b>. <br /> <br />
+					Mai mult de atât, <b>tuburile</b> sunt confecționate din carton de
+					înaltă calitate, ce poate fi reciclat cu usurință chiar și de mai
+					multe ori. Producătorii tuburilor au redus poluarea procesării
+					acestora cu 95%, prin reutilizarea fibrei. Aceștia au un sistem de
+					management al calităţii conform standardelor ISO 9001, sistem de
+					management de mediu ISO 14001 și sistem de management al securității
+					și sănătății ocupaționale ISO 45001. <br />
+					<br />
+					Pe viitor, SELF speră să intensifice eforturile în această direcție,
 					explorând noi modalități de a reduce impactul asupra mediului
-					înconjurător și de a promova un stil de viață ecologic.
+					înconjurător și de a promova un stil de viață ecologic. Din păcate,
+					ambalarea tablourilor nu este în totalitate ecologică, însă vrem să
+					atingem un nivel cât mai mare de sustenabilitate pe viitor, înlocuind
+					elemente de plastic (folia de protecție cu bule, pungi, benzi).
 				</p>
 			</div>{' '}
 			<div className={styles.text}>
