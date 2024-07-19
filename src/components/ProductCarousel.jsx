@@ -2,6 +2,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import classes from '../styling/picture.module.scss';
+import Details from '../images/details.jpg';
+import Frames from '../images/frames.jpeg';
+import PostersAndFrames from '../images/postersAndFrames.jpeg';
 
 const ProductCarousel = ({
 	product,
@@ -38,11 +41,45 @@ const ProductCarousel = ({
 					</div>
 				</div>
 			</Carousel.Item>
-			<Carousel.Item interval={600000}>
+			{/* poza de produs*/}
+			{/* <Carousel.Item interval={600000}>
 				{!isImageEmpty && (
 					<div className={classes.container}>
 						<img
 							src={require(`../images/${product.image}`)}
+							className={classes.picturesContainer}
+							alt={altDescription}
+						/>
+					</div>
+				)}
+			</Carousel.Item> */}
+			<Carousel.Item interval={600000}>
+				{!isImageEmpty && (
+					<div className={classes.container}>
+						<img
+							src={Details}
+							className={classes.picturesContainer}
+							alt={altDescription}
+						/>
+					</div>
+				)}
+			</Carousel.Item>
+			<Carousel.Item interval={600000}>
+				{!isImageEmpty && (
+					<div className={classes.container}>
+						<img
+							src={Frames}
+							className={classes.picturesContainer}
+							alt={altDescription}
+						/>
+					</div>
+				)}
+			</Carousel.Item>
+			<Carousel.Item interval={600000}>
+				{!isImageEmpty && (
+					<div className={classes.container}>
+						<img
+							src={PostersAndFrames}
 							className={classes.picturesContainer}
 							alt={altDescription}
 						/>

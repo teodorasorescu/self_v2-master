@@ -8,6 +8,7 @@ import paymentSessionSlice from './slices/paymentSessionSlice.js';
 import orderFailedSlice from './slices/orderFailedSlice.js';
 import stockSlice from './slices/stockSlice.js';
 import newsletterFormSlice from './slices/newsletterFormSlice.js';
+import shippingCitiesSlice from './slices/shippingCitiesSlice.js';
 
 export const store = configureStore({
 	reducer: {
@@ -20,5 +21,6 @@ export const store = configureStore({
 		orderFailed: orderFailedSlice,
 		stock: stockSlice,
 		newsletterSuccess: newsletterFormSlice,
+		cities: shippingCitiesSlice,
 	},
 });
