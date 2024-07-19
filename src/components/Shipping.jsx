@@ -6,12 +6,14 @@ import { getLockerPluginInstance } from './EasyboxLocker';
 export const Shipping = () => {
 	const [shippingMethod, setShippingMethod] = useState(0);
 	console.log(shippingMethod);
-	//let pluginInstance = getLockerPluginInstance();
+	let pluginInstance = getLockerPluginInstance();
 	//myCustomFunction is your callback function to be executed when locker plugin pushes a post message with selected locker
 	//pluginInstance.subscribe(myCustomFunction);
 
 	//display the modal iframe window
-	//pluginInstance.open();
+	if (shippingMethod === 2) {
+		pluginInstance.open();
+	}
 
 	function myCustomFunction(msg) {
 		console.log('I received this msg from locker plugin:', msg);

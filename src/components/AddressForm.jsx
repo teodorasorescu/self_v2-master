@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import styles from '../styling/address.form.module.scss';
 import countries from '../constants/countries';
@@ -13,8 +13,10 @@ import {
 	shipping,
 } from '../constants/productConstants';
 import sendCheckoutAction from '../reducers/actions/sendCheckoutAction';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { selectShippingCities } from '../reducers/slices/shippingCitiesSlice';
+import getCitiesByCountyAction from '../reducers/actions/getCitiesByCountyAction';
 
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
@@ -55,6 +57,7 @@ export const AddressForm = () => {
 	}
 
 	const navigate = useNavigate();
+
 	const setCustomerField = () => {
 		const newsletterChanged = !customer.newsletter;
 		setCustomer({ ...customer, newsletter: newsletterChanged });
@@ -71,6 +74,12 @@ export const AddressForm = () => {
 			setItemCount
 		);
 	};
+
+	let cities = useSelector(selectShippingCities);
+
+	useEffect(() => {
+		getCitiesByCountyAction(dispatch, customer.state);
+	}, [customer.state]);
 
 	return (
 		<div>
@@ -184,53 +193,6 @@ export const AddressForm = () => {
 						</div>
 
 						<div className='form-group' style={{ paddingTop: '2%' }}>
-							<input
-								id='postalCode'
-								name='postalCode'
-								type='text'
-								className='form-control'
-								placeholder='Cod poștal'
-								value={customer.postalCode}
-								onChange={setField}
-								style={{ height: heightT }}
-							/>
-						</div>
-
-						<div className='form-group' style={{ paddingTop: '2%' }}>
-							<input
-								id='city'
-								name='city'
-								type='text'
-								className='form-control'
-								placeholder='Localitate'
-								value={customer.city}
-								onChange={setField}
-								style={{ height: heightT }}
-								required
-							/>
-							<div className='invalid-feedback'>Introdu o localitate</div>
-						</div>
-						<div className='form-group' style={{ paddingTop: '2%' }}>
-							<select
-								className='form-select'
-								id='state'
-								name='state'
-								defaultValue={customer.state}
-								onChange={setField}
-								style={{ height: heightT }}
-								required
-							>
-								<option style={{ color: 'grey' }}>Județ</option>
-								{states.map((state, index) => {
-									return <option key={index}>{state}</option>;
-								})}
-							</select>
-							<div className='invalid-feedback'>
-								{' '}
-								<div className='invalid-feedback'>Introdu un județ</div>
-							</div>
-						</div>
-						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<select
 								id='country'
 								name='country'
@@ -247,6 +209,54 @@ export const AddressForm = () => {
 								})}
 							</select>
 							<div className='invalid-feedback'>Introdu o țară</div>
+						</div>
+						<div className='form-group' style={{ paddingTop: '2%' }}>
+							<select
+								className='form-select'
+								id='state'
+								name='state'
+								defaultValue={customer.state}
+								onChange={setField}
+								style={{ height: heightT }}
+								required
+							>
+								<option style={{ color: 'grey' }}>Județ</option>
+								{states.map((state, index) => {
+									return <option key={index}>{state}</option>;
+								})}
+							</select>
+							<div className='invalid-feedback'>Introdu un județ</div>
+						</div>
+						<div className='form-group' style={{ paddingTop: '2%' }}>
+							<select
+								className='form-select'
+								id='city'
+								name='city'
+								type='text'
+								placeholder='Localitate'
+								value={customer.city}
+								onChange={setField}
+								style={{ height: heightT }}
+								required
+							>
+								<option style={{ color: 'grey' }}>Județ</option>
+								{cities.map((city, index) => {
+									return <option key={index}>{city.name}</option>;
+								})}
+							</select>
+							<div className='invalid-feedback'>Introdu o localitate</div>
+						</div>
+						<div className='form-group' style={{ paddingTop: '2%' }}>
+							<input
+								id='postalCode'
+								name='postalCode'
+								type='text'
+								className='form-control'
+								placeholder='Cod poștal'
+								value={customer.postalCode}
+								onChange={setField}
+								style={{ height: heightT }}
+							/>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<input
