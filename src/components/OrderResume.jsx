@@ -17,6 +17,7 @@ export const OrderResume = ({ storedProducts }) => {
 	const setOrderResumeFalse = () => {
 		setOrderResume(false);
 	};
+
 	return (
 		<div className={styles.container}>
 			{orderResume === false && (

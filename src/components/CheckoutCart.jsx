@@ -10,11 +10,12 @@ import styles from '../styling/checkout.cart.module.scss';
 import {
 	calculateTotalPrice,
 	computeProductsLength,
-	shipping,
 	price,
 } from '../constants/productConstants';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { LocalConvenienceStoreOutlined } from '@material-ui/icons';
+import { useSelector } from 'react-redux';
+import { selectDeliveryPrice } from '../reducers/slices/deliveryPriceSlice';
+
 export const CheckoutCart = ({ storedProducts }) => {
 	const columns = [
 		{ id: 'image', label: 'Articol' },
@@ -49,6 +50,12 @@ export const CheckoutCart = ({ storedProducts }) => {
 	const discount = false;
 	// computeProductsLength(storedProducts) / 3 >= 1;
 
+	let deliveryPrice = useSelector(selectDeliveryPrice);
+
+	if (deliveryPrice === 0) {
+		deliveryPrice = parseInt(localStorage.getItem('deliveryPrice'), 10);
+	}
+
 	const theme = createTheme({
 		typography: {
 			fontFamily: 'Raleway',
@@ -69,9 +76,9 @@ export const CheckoutCart = ({ storedProducts }) => {
 
 	const calculateTotal = () => {
 		if (discount) {
-			return (total - price * discountNo + shipping).toFixed(2);
+			return (total - price * discountNo + deliveryPrice).toFixed(2);
 		}
-		return (total + shipping).toFixed(2);
+		return (total + deliveryPrice).toFixed(2);
 	};
 
 	console.log(storedProducts);
@@ -165,7 +172,9 @@ export const CheckoutCart = ({ storedProducts }) => {
 					)}
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Transport</p>
-						<p className={styles.pTransportContainer}>&nbsp; 20.00 lei</p>
+						<p className={styles.pTransportContainer}>
+							&nbsp;{deliveryPrice.toFixed(2)} lei
+						</p>
 					</div>
 					<div className={styles.pTotalContainer}>
 						<p align='left'>Total</p>

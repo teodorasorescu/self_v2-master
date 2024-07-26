@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { selectShippingCities } from '../reducers/slices/shippingCitiesSlice';
 import getCitiesByCountyAction from '../reducers/actions/getCitiesByCountyAction';
+import { selectDeliveryPrice } from '../reducers/slices/deliveryPriceSlice';
 
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
@@ -38,11 +39,14 @@ export const AddressForm = () => {
 	const discount = false;
 	//computeProductsLength(storedProducts) / 3 >= 1;
 
+	const deliveryPrice = useSelector(selectDeliveryPrice);
+	localStorage.setItem('deliveryPrice', deliveryPrice);
+
 	const getTotal = () => {
 		if (discount) {
-			return (total - price * discountNo + shipping).toFixed(2);
+			return (total - price * discountNo + deliveryPrice).toFixed(2);
 		}
-		return (total + shipping).toFixed(2);
+		return (total + deliveryPrice).toFixed(2);
 	};
 
 	var heightT = '7vh';
@@ -64,6 +68,7 @@ export const AddressForm = () => {
 	};
 
 	localStorage.setItem('customer', JSON.stringify(customer));
+
 	const sendSession = () => {
 		sendCheckoutAction(
 			navigate,
@@ -230,18 +235,22 @@ export const AddressForm = () => {
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<select
 								className='form-select'
-								id='city'
-								name='city'
+								id='cityId'
+								name='cityId'
 								type='text'
 								placeholder='Localitate'
-								value={customer.city}
+								value={customer.cityId}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
 							>
-								<option style={{ color: 'grey' }}>Județ</option>
+								<option style={{ color: 'grey' }}>Localitate</option>
 								{cities.map((city, index) => {
-									return <option key={index}>{city.name}</option>;
+									return (
+										<option key={index} value={city.id}>
+											{city.name}
+										</option>
+									);
 								})}
 							</select>
 							<div className='invalid-feedback'>Introdu o localitate</div>
@@ -276,6 +285,7 @@ export const AddressForm = () => {
 						</div>
 					</div>
 					<Shipping />
+
 					<div className='form-check' style={{ paddingBottom: '2%' }}>
 						<input
 							className='form-check-input'

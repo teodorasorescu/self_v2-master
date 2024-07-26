@@ -11,9 +11,7 @@ export const Checkout = () => {
 	const { headerOn, setHeaderOn } = useStateContext();
 	const wideScreen = useMediaQuery('(min-width:1025px)');
 	const storedProducts = JSON.parse(localStorage.getItem('products'));
-	const { orderConfirmation, setOrderConfirmation } = useStateContext();
 
-	console.log('checkout', orderConfirmation);
 	useEffect(() => {
 		setHeaderOn(false);
 	}, []);

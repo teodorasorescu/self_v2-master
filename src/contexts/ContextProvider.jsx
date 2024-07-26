@@ -13,11 +13,16 @@ export const ContextProvider = ({ children }) => {
 		email: '',
 		firstName: '',
 		lastName: '',
-		city: '',
+		address: '',
+		addressInfo: '',
+		phoneNumber: '',
+		cityId: 0,
 		state: '',
 		country: '',
 		postalCode: '',
+		lockerId: 0,
 		newsletter: false,
+		shippingMethod: 1,
 	});
 
 	const [drawerOpen, setDrawerOpen] = useState(false);

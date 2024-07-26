@@ -1,5 +1,11 @@
 export const price = 98.0;
 export const chassisPrice = 36.0;
+
+export const HOME_DELIVERY_SMALL = 20;
+export const LOCKER_DELIVERY_SMALL = 13;
+export const HOME_DELIVERY_BIG = 23;
+export const LOCKER_DELIVERY_BIG = 16;
+
 export const details =
 	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material șasiu: lemn uscat de rășinoase';
 
@@ -16,8 +22,6 @@ export const calculateTotalPrice = (storedProducts) => {
 export const computeProductsLength = (storedProducts) => {
 	return storedProducts.reduce((a, p) => (a = a + p.quantity), 0);
 };
-
-export const shipping = 20;
 
 export const shippingMessage = 'Transport gratuit la comenzi peste 240 RON!';
 

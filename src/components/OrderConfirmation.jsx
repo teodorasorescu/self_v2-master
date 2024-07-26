@@ -9,10 +9,7 @@ import sendOrderAction from '../reducers/actions/sendOrderAction';
 import getPaymentStatusAction from '../reducers/actions/getPaymentStatusAction';
 import PaymentFailed from '../images/declined.webp';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-	loadOrderFailed,
-	selectOrderFailed,
-} from '../reducers/slices/orderFailedSlice';
+import { selectOrderFailed } from '../reducers/slices/orderFailedSlice';
 import OrderFailed from '../images/orderfailed.webp';
 const OrderConfirmation = () => {
 	const wideScreen = useMediaQuery('(min-width:1025px)');
@@ -25,6 +22,7 @@ const OrderConfirmation = () => {
 	const dispatch = useDispatch();
 	const sessionId = localStorage.getItem('sessionId');
 	const orderFailed = useSelector(selectOrderFailed);
+
 	const failure = orderFailed || unpaidOrder;
 	useEffect(() => {
 		setHeaderOn(true);
@@ -87,9 +85,9 @@ const OrderConfirmation = () => {
 						/>
 						<h5>Mulțumim pentru comandă!</h5>
 						<p>
-							Comanda ta este confirmată și va fi procesată în următoarea zi
-							lucrătoare, iar în cel târziu 3-5 zile lucrătoare va fi livrată.
-							Îți vom trimite un email cu confirmarea în cel mai scurt timp.
+							Comanda ta este confirmată și va fi livrată în cel târziu 3-5 zile
+							lucrătoare. Îți vom trimite un email cu confirmarea în cel mai
+							scurt timp.
 						</p>
 					</div>
 					<div className={styles.orderResumeContainer}>
