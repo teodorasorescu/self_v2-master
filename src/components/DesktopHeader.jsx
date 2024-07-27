@@ -8,8 +8,6 @@ import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import Subheader from './Subheader';
-import Spirituality from '../images/spirituality.webp';
-import InteriorDesign from '../images/interiorDesign.jpeg';
 
 const DesktopHeader = () => {
 	const [subHeaderSpiritualityOn, setSubHeaderSpirituality] = useState(false);

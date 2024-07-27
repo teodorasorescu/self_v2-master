@@ -2,9 +2,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import classes from '../styling/picture.module.scss';
-import Details from '../images/details.jpg';
-import Frames from '../images/frames.jpeg';
-import PostersAndFrames from '../images/postersAndFrames.jpeg';
+import Details from '../images/details.webp';
+import Frames from '../images/frames.webp';
+import PostersAndFrames from '../images/postersAndFrames.webp';
 
 const ProductCarousel = ({
 	product,

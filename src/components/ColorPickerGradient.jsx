@@ -19,7 +19,7 @@ import {
 	color3,
 	fontColors,
 } from '../constants/productConstants';
-import Details from '../images/details.jpg';
+import Details from '../images/details.webp';
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
 	const isColorChanged =

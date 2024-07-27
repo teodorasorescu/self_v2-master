@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import '../styling/flipcard.css';
-import Mind from '../images/mind.png';
-import Soul from '../images/soul.png';
-import Body from '../images/body.png';
+import Mind from '../images/mind.webp';
+import Soul from '../images/soul.webp';
+import Body from '../images/body.webp';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { loadProduct } from '../reducers/slices/productSlice';
