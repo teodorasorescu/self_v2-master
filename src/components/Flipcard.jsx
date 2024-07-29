@@ -56,7 +56,7 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Body})` }}
 					>
 						<div className='inner color-white'>
-							{postersStock == 0 ? (
+							{postersStock === 0 ? (
 								<button className='flip-box-button'>Stoc epuizat</button>
 							) : (
 								<Link to='/personalizare'>
@@ -103,7 +103,7 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Mind})` }}
 					>
 						<div className='inner color-white'>
-							{postersStock == 0 ? (
+							{postersStock === 0 ? (
 								<button className='flip-box-button'>Stoc epuizat</button>
 							) : (
 								<Link to='/personalizare'>
@@ -150,7 +150,7 @@ const Flipcard = () => {
 						style={{ backgroundImage: `url(${Soul})` }}
 					>
 						<div className='inner color-white'>
-							{postersStock == 0 ? (
+							{postersStock === 0 ? (
 								<button className='flip-box-button'>Stoc epuizat</button>
 							) : (
 								<Link to='/personalizare'>

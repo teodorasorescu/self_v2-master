@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import Flipcard from './Flipcard';
 import styles from '../styling/home.module.scss';
 import Button from '@material-ui/core/Button';
@@ -12,18 +12,18 @@ import ColorsChoice from './ColorsChoice';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Home = () => {
-	const [imgHeight, setImgHeight] = useState('1000px'); // Default width to 100%
+	//const [imgHeight, setImgHeight] = useState('1000px'); // Default width to 100%
 
 	const smartphoneScreen = useMediaQuery('(max-width:768px)');
 
-	useEffect(() => {
-		const img = new Image();
-		img.src = require('../images/1.jpeg'); // Use require to import the image
+	// useEffect(() => {
+	// 	const img = new Image();
+	// 	img.src = require('../images/1.jpeg'); // Use require to import the image
 
-		img.onload = () => {
-			setImgHeight(`${img.naturalHeight}px`);
-		};
-	}, []);
+	// 	img.onload = () => {
+	// 		setImgHeight(`${img.naturalHeight}px`);
+	// 	};
+	// }, []);
 
 	const myRef = useRef(null);
 	const executeScroll = () => {
