@@ -4,11 +4,9 @@ export const subheadline =
 	'Explorează-ți identitatea și personalizează-ți tabloul!';
 
 export const description =
-	'Pentru fiecare culoare, găsești o semnificație pe pagina de personalizare și sperăm ca prin aceste tablouri';
-
+	'SELF te îndrumă să te reconectezi cu tine însuți prin personalizarea tablourilor BODY, MIND și SOUL. Îți oferim ghidare în explorarea sentimentelor tale, apoi te ajutăm să le exprimi vizual prin culori, astfel încât să creezi un tablou care te reprezintă cu adevărat.';
 export const benefits = [
-	'Print pe canvas 100% bumbac',
+	'Print personalizat canvas 100% bumbac',
 	'Rame din lemn natural certificat FSC® 100%',
 	'Montare pe șasiu de lemn',
-	'Personalizare și semnificație culori',
 ];

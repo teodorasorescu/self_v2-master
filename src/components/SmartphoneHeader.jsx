@@ -27,6 +27,10 @@ const headersData = [
 		label: 'Inspirație',
 		href: '/inspiratie',
 	},
+	{
+		label: 'Despre SELF',
+		href: '/despre-self',
+	},
 ];
 
 const contactData = [

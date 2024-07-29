@@ -21,7 +21,7 @@ const Contact = () => {
 						alt='Follow selfposters.ro on Instagram'
 					/>
 				</a>
-				<a to={TIKTOK_LINK}>
+				<a href={TIKTOK_LINK}>
 					<img
 						className={styles.socialMediaIcons}
 						src={TikTokIcon}

@@ -14,7 +14,7 @@ const SelfMission = () => {
 						<div className={styles.benefits} key={i}>
 							<img
 								src={Hands}
-								alt='Self te indruma spre a te iubi si a te imbratisa'
+								alt=' SELF te va îndruma să te reconectezi cu sinele tău autentic și să explorezi universul creativității prin artă și culori.'
 							/>
 							<p>{t}</p>
 						</div>

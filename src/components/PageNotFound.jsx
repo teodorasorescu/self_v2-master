@@ -1,5 +1,4 @@
 import classes from '../styling/contact.page.module.scss';
-import Self from '../images/self_logo.webp';
 import { INSTAGRAM_LINK, TIKTOK_LINK } from '../constants/socialMediaLinks';
 import InstaIcon from '../images/instagram_logo.webp';
 import TikTokIcon from '../images/tiktok_logo.webp';
@@ -11,7 +10,8 @@ const PageNotFound = () => {
 
 			<h2>
 				{' '}
-				Dar sigur ne găsești aici: <b className={classes.email}>@self.ro_ </b>
+				Dar sigur ne găsești aici:{' '}
+				<b className={classes.email}>@selfposters.ro </b>
 				<a href={INSTAGRAM_LINK}>
 					<img
 						className={classes.socialMediaIcons}

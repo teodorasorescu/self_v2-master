@@ -39,7 +39,7 @@ const Home = () => {
 			</div>
 			{!smartphoneScreen && (
 				<div className={styles.introductionContainer}>
-					<h1 className={styles.title}>Reflect on Your True SELF</h1>
+					<h1 className={styles.title}>Reflect on Your True SELF:</h1>
 					<h1 className={styles.title}>The Journey Begins Within</h1>
 					<h1 className={styles.subtitle}>TABLOURI PERSONALIZATE CANVAS</h1>
 					<div className={styles.buttonContainer}>
