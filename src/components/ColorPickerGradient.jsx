@@ -19,7 +19,9 @@ import {
 	color3,
 	fontColors,
 } from '../constants/productConstants';
-import Details from '../images/details.webp';
+import ProductInfo from './ProductInfo';
+import VisualImagesPickerGradient from './VisiualImagesPickerGradient';
+
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
 	const isColorChanged =
@@ -167,15 +169,7 @@ function ColorPickerGradient() {
 						<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
 						<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
 					</div>
-					{wideScreen && (
-						<>
-							<img
-								className='detailsPosters'
-								src={Details}
-								alt='montare șasiu, ramă din lemn, card cu culorile alese'
-							/>{' '}
-						</>
-					)}
+					{wideScreen && <ProductInfo />}
 				</div>
 				<div className='descriptionContainer'>
 					<div className='titleContainer'>
@@ -217,6 +211,7 @@ function ColorPickerGradient() {
 					<ColorPsychology />
 				</div>
 			</div>
+			<VisualImagesPickerGradient />
 		</div>
 	);
 }

@@ -182,6 +182,13 @@ const DesktopHeader = () => {
 					>
 						Sustenabilitate
 					</a>
+					<a
+						className={styles.link}
+						href='/inspiratie'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Inspirație
+					</a>
 				</div>
 			</div>
 		</div>

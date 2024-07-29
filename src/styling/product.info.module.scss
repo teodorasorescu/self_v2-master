@@ -2,6 +2,7 @@
 	width: 35vw;
 	padding-top: 10%;
 	font-family: 'Raleway', sans-serif;
+	cursor: default;
 	> img {
 		width: 35vw;
 	}
@@ -9,8 +10,9 @@
 	.meditation {
 		text-align: justify;
 		padding: 0;
-		.title {
-			font-weight: 500;
-		}
+	}
+
+	> h3 {
+		font-style: italic;
 	}
 }

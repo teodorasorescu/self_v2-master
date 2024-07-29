@@ -12,23 +12,13 @@ import ColorsChoice from './ColorsChoice';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Home = () => {
-	//const [imgHeight, setImgHeight] = useState('1000px'); // Default width to 100%
-
 	const smartphoneScreen = useMediaQuery('(max-width:768px)');
-
-	// useEffect(() => {
-	// 	const img = new Image();
-	// 	img.src = require('../images/1.jpeg'); // Use require to import the image
-
-	// 	img.onload = () => {
-	// 		setImgHeight(`${img.naturalHeight}px`);
-	// 	};
-	// }, []);
-
 	const myRef = useRef(null);
+
 	const executeScroll = () => {
 		myRef.current.scrollIntoView();
 	};
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.introductionImgContainer}>

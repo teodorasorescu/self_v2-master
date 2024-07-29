@@ -26,4 +26,8 @@ export const aboutUsCategories = [
 		name: 'Sustenabilitate',
 		link: '/sustenabilitate',
 	},
+	{
+		name: 'Inspirație',
+		link: '/inspiratie',
+	},
 ];

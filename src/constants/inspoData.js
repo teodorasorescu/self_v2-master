@@ -9,7 +9,20 @@ import inspo9 from '../images/inspo9.webp';
 import inspo10 from '../images/inspo10.webp';
 import inspo11 from '../images/inspo11.webp';
 
+import inspo14 from '../images/inspo14.webp';
+import inspo15 from '../images/inspo15.webp';
+
 export const inspoData = [
+	{
+		image: inspo14,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: inspo15,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
 	{
 		image: inspo4,
 		heading: 'Slide One',

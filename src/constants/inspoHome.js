@@ -8,8 +8,20 @@ import inspo8 from '../images/inspo8.webp';
 import inspo9 from '../images/inspo9.webp';
 import inspo10 from '../images/inspo10.webp';
 import inspo11 from '../images/inspo11.webp';
-
+import inspo14 from '../images/inspo14.webp';
+import inspo15 from '../images/inspo15.webp';
 export const inspoHome = [
+	{
+		image: `url(${inspo14})`,
+		heading: 'Slide One',
+		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo15})`,
+		heading: 'Slide One',
+		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+
 	{
 		image: `url(${inspo4})`,
 		heading: 'Slide One',
