@@ -18,6 +18,13 @@
 	margin-top: 150px;
 }
 
+.text {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
 .section-houses {
 	margin-left: auto;
 	margin-right: auto;
