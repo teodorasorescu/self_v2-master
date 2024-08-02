@@ -10,7 +10,6 @@ import {
 	calculateTotalPrice,
 	computeProductsLength,
 	price,
-	shipping,
 } from '../constants/productConstants';
 import sendCheckoutAction from '../reducers/actions/sendCheckoutAction';
 import { useDispatch, useSelector } from 'react-redux';
@@ -181,7 +180,7 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div className='invalid-feedback'>Introdu o adresă</div>
+							<div className='invalid-feedback'>Introdu strada</div>
 						</div>
 
 						<div className='form-group' style={{ paddingTop: '2%' }}>
@@ -194,9 +193,12 @@ export const AddressForm = () => {
 								value={customer.addressInfo}
 								onChange={setField}
 								style={{ height: heightT }}
-							/>
+								required
+							/>{' '}
+							<div className='invalid-feedback'>
+								Introdu scară, etaj, apartament, etc
+							</div>
 						</div>
-
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<select
 								id='country'
