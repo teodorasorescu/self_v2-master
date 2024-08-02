@@ -8,7 +8,7 @@ const sendCheckoutAction = async (
 	checkout,
 	setItemCount
 ) => {
-	const stripe = await loadStripe(process.env.REACT_APP_PUBLIC_KEY_STRIPE);
+	const stripe = await loadStripe(process.env.REACT_APP_PUBLIC_KEY_STRIPE_TEST);
 
 	const headers = {
 		'Content-Type': 'application/json',

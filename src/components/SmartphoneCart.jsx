@@ -211,6 +211,7 @@ export const SmartphoneCart = () => {
 										height: '50px',
 										fontSize: '18px',
 										width: '100vw',
+										color: 'black',
 									}}
 									onClick={() => {
 										goToCheckout();

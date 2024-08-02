@@ -39,6 +39,9 @@
 		padding-left: 3%;
 		margin-right: 2%;
 		> h3 {
+			@media screen and (max-width: 1024px) {
+				text-align: center;
+			}
 			color: #4255ff;
 		}
 		.subheadline {
