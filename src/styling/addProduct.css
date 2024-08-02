@@ -106,6 +106,7 @@
 						background-color: #fff7e3;
 						cursor: pointer;
 						text-decoration: none;
+						color: black;
 					}
 
 					.cartButton:hover {
@@ -258,6 +259,7 @@
 						background-color: #fff7e3;
 						cursor: pointer;
 						text-decoration: none;
+						color: black;
 					}
 
 					.cartButton:hover {

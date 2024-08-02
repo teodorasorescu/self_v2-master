@@ -63,6 +63,7 @@
 		position: relative;
 		font-family: 'Raleway', sans-serif;
 		float: right;
+		color: black;
 		.checkoutContainer {
 			background-color: rgba(248, 221, 170, 0.484);
 			@media screen and (min-width: 1025px) {
@@ -84,6 +85,7 @@
 			font-style: italic;
 			text-decoration: none;
 			font-size: 20px;
+			color: black;
 		}
 	}
 }

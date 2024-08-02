@@ -1,6 +1,6 @@
 import styles from '../styling/colors.choice.module.scss';
 import Colors from '../images/colors.webp';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 

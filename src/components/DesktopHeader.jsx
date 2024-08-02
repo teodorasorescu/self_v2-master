@@ -3,7 +3,7 @@ import styles from '../styling/header.module.scss';
 import ShoppingBag from '../images/cart.webp';
 import InstaIcon from '../images/instagram_logo.webp';
 import TikTokIcon from '../images/tiktok_logo.webp';
-import Badge from '@material-ui/core/Badge';
+import Badge from '@mui/material/Badge';
 import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
@@ -96,10 +96,15 @@ const DesktopHeader = () => {
 						<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
 							<Badge
 								color='primary'
-								className={styles.iconSize}
 								badgeContent={Number.parseInt(
 									localStorage.getItem('itemCount')
 								)}
+								sx={{
+									'& .MuiBadge-colorPrimary': {
+										backgroundColor: '#7684ff',
+										color: '#fff7e3', // Set text color for better contrast
+									},
+								}}
 							>
 								<img
 									src={ShoppingBag}

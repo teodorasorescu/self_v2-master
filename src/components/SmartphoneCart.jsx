@@ -10,7 +10,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/smartphone.cart.module.scss';
 import Paper from '@mui/material/Paper';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import emptyCart from '../images/emptyCart.webp';
 import CartActions from './CartActions';
 import { calculateTotalPrice } from '../constants/productConstants';

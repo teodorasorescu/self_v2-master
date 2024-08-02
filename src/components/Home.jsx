@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Flipcard from './Flipcard';
 import styles from '../styling/home.module.scss';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
 import SelfMission from './SelfMission';
 import Benefits from './Benefits';

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { SwatchGradient } from './SwatchGradient';
 import reactCSS from 'reactcss';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import '../styling/flipcardSwatches.css';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';

@@ -32,10 +32,6 @@ function App() {
 		localStorage.setItem('products', JSON.stringify([]));
 	}
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
 	return (
 		<div className='App'>
 			<BrowserRouter>

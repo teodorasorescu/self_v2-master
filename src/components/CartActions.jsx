@@ -1,6 +1,6 @@
 import { loadProducts } from '../reducers/slices/productsSlice';
 import { useDispatch } from 'react-redux';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { useStateContext } from '../contexts/ContextProvider';
 import PropTypes from 'prop-types';
 import { noop } from 'lodash';
@@ -130,6 +130,7 @@ const CartActions = ({ quantity, productId }) => {
 				style={{
 					right: '-5vw',
 					backgroundColor: '#ffffff00',
+					color: 'black',
 				}}
 			>
 				Elimină x

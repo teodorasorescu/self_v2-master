@@ -1,5 +1,5 @@
 import classes from '../styling/faq.module.scss';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import React, { useRef } from 'react';
 import FAQDropdown from './FAQDropdown';
 import { orderQuestions, productQuestions } from '../constants/faqdata';

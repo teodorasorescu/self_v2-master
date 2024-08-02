@@ -3,12 +3,11 @@ import { useStateContext } from '../contexts/ContextProvider';
 import styles from '../styling/header.module.scss';
 import InstaIcon from '../images/instagram_logo.webp';
 import TikTokIcon from '../images/tiktok_logo.webp';
-import Badge from '@material-ui/core/Badge';
-import { makeStyles } from '@material-ui/core/styles';
-
+import Badge from '@mui/material/Badge';
+import { makeStyles } from '@mui/styles';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
-import MenuIcon from '@material-ui/icons/Menu';
-import { IconButton, Drawer, MenuItem, Toolbar } from '@material-ui/core';
+import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton, Drawer, MenuItem, Toolbar } from '@mui/material';
 import ShoppingBag from '../images/cart.webp';
 import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';

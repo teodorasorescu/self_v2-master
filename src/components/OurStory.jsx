@@ -1,8 +1,7 @@
 import styles from '../styling/our.story.module.scss';
 import OurWorld from '../images/aboutSelf.jpg';
 import OurWorldSmartphone from '../images/aboutSelfSmartphone.jpg';
-import Button from '@material-ui/core/Button';
-
+import Button from '@mui/material/Button';
 import Motto from '../images/motto.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
 

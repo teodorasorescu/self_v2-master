@@ -13,5 +13,5 @@ export default function ScrollToTop({ children }) {
 		window.scrollTo(0, 0);
 	}, [pathname]);
 
-	return children;
+	return <>{children}</>;
 }
