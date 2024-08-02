@@ -205,7 +205,12 @@ const SmartphoneHeader = () => {
 					<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
 						<Badge
 							color='primary'
-							className={styles.iconSize}
+							sx={{
+								'& .MuiBadge-colorPrimary': {
+									backgroundColor: '#7684ff',
+									color: '#fff7e3', // Set text color for better contrast
+								},
+							}}
 							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
 						>
 							<img

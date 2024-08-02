@@ -21,4 +21,12 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new CompressionPlugin({
+			algorithm: 'brotliCompress', // or 'gzip'
+			test: /\.(js|css|html|svg|png|jpg|woff2|tff|mp3|wav)$/,
+			compressionOptions: { level: 11 },
+			filename: '[path][base].gz',
+		}),
+	],
 };
