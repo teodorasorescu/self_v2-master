@@ -12,7 +12,7 @@ const ComingSoonPage = () => {
 	return (
 		<div className={classes.container}>
 			{smartphoneSize ? (
-				<img width='350' src={ComingSoonSmartphone} alt='SELF Coming Soon' />
+				<img width='350' src={ComingSoon} alt='SELF Coming Soon' />
 			) : (
 				<img width='450' src={ComingSoon} alt='SELF Coming Soon' />
 			)}
