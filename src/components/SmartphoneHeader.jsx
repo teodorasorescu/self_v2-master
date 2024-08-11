@@ -49,18 +49,20 @@ const SmartphoneHeader = () => {
 	const openDrawer = () => {
 		setDrawerOpen(true);
 	};
-	const useStyles = makeStyles((theme) => ({
-		// Override MuiToolbar-gutters class
+
+	const useStyles = makeStyles(() => ({
 		toolbar: {
 			paddingRight: 0,
 			paddingLeft: 0,
-			// Add any other styles you need here
 		},
 	}));
+
 	const classes = useStyles();
+
 	const closeDrawer = () => {
 		setDrawerOpen(false);
 	};
+
 	const getDrawerChoices = () => {
 		return headersData.map(({ label, href }) => {
 			return (
@@ -119,14 +121,12 @@ const SmartphoneHeader = () => {
 				<p>Transport gratuit la comenzi peste 240 RON! </p>
 			</div> */}
 			<div className={styles.stillPositionContainer}>
-				<Toolbar className={classes.toolbar}>
+				<Toolbar sx={{ paddingRight: 0, paddingLeft: 0 }}>
 					<IconButton
-						{...{
-							color: 'inherit',
-							'aria-label': 'menu',
-							'aria-haspopup': 'true',
-							onClick: openDrawer,
-						}}
+						color='inherit'
+						aria-label='menu'
+						aria-haspopup='true'
+						onClick={openDrawer}
 					>
 						<MenuIcon />
 					</IconButton>
@@ -208,7 +208,7 @@ const SmartphoneHeader = () => {
 							sx={{
 								'& .MuiBadge-colorPrimary': {
 									backgroundColor: '#7684ff',
-									color: '#fff7e3', // Set text color for better contrast
+									color: '#fff7e3',
 								},
 							}}
 							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
