@@ -65,10 +65,10 @@ const ColorPsychologyPage = () => {
 								<h2 className={classes.author}>Sadhguru</h2>
 							</div>
 							<p>
-								Cum evidențiază și Sadguru, contează ceea ce transmiți, nu ceea
-								ce vezi. Dacă radiezi iubire, oamenii te vor percepe ca pe o
-								ființă iubitoare, însă dacă îți rezervi toată iubirea pentru
-								sine, oamenii nu te vor experimenta asemenea. Aceasta este
+								Cum evidențiază și Sadhguru, contează ceea ce transmiți, nu ceea
+								ce vezi. Dacă emani iubire, oamenii te vor vedea ca pe o
+								persoană iubitoare, însă dacă păstrezi toată iubirea pentru
+								tine, ceilalți nu te vor percepe în același fel. Aceasta este
 								natura existenței în sine. Oamenii observă doar ceea ce alegi să
 								le dăruiești, iar acest lucru este calitatea ta, nu ceea ce
 								rezervi pentru tine. Cum este culoarea semnificativă pentru
@@ -76,17 +76,9 @@ const ColorPsychologyPage = () => {
 								semnificativă, deoarece culoarea pe care o reflectezi se va
 								adăuga, în mod natural, aurei pe care o porți. Orice materie
 								fizică reflectă lumină. Odată ce reflectă lumină, această
-								materie va avea o culoare în percepția ta.
-							</p>
-							<p>
-								Astfel, în funcție de nivelul la care ești în procesul tău de
-								creștere spirituală, vei transmite anumite culori. De exemplu,
-								oamenii introverți care vor doar să observe viața, fără să fie
-								alterați de exterior, vor emite mai multă lumină albă. Cei care
-								sunt într-un proces mai intens de creștere, vor radia mai mult
-								portocaliu, culoarea asociată unei chakre numită Agna, deoarece
-								semnifică explorarea interioară și atingerea unui nivel înalt de
-								cunoaștere.
+								materie va avea o culoare în percepția ta. Astfel, în funcție de
+								nivelul la care ești în procesul tău de creștere spirituală, vei
+								transmite anumite culori prin aura ta.
 							</p>
 							<p>Explorează lumea culorilor, întorcând pe rând cardurile.</p>
 						</div>

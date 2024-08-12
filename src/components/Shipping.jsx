@@ -56,12 +56,10 @@ export const Shipping = () => {
 
 	const saveCustomerShippingMethod = (value) => {
 		let shippingPrice = 0;
-		let packageType = '0';
 		if (value === 2) {
 			pluginInstance.open();
 			shippingPrice = lockerDeliveryAmount;
 			dispatch(loadDeliveryPriceState(lockerDeliveryAmount));
-			packageType = '1';
 		} else {
 			shippingPrice = homeDeliveryAmount;
 			dispatch(loadDeliveryPriceState(homeDeliveryAmount));
@@ -72,7 +70,6 @@ export const Shipping = () => {
 			...customer,
 			shippingMethod: value,
 			shippingPrice: shippingPrice,
-			packageType: packageType,
 		});
 	};
 
