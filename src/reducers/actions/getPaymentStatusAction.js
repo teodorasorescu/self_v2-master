@@ -2,7 +2,7 @@ import { loadOrderFailed } from '../slices/orderFailedSlice';
 
 const getPaymentStatusAction = async (sessionId, dispatch) => {
 	const headers = {
-		Authorization: `Bearer sk_test_51OAJQaCX4Aqjzt59akKm7XedT3EDIhh4ePdonQ0zghBtfbnzEfQ6BxOOy49CKyVqdrMLqEO5faEF1a7t7aycOlul00IWWI1v4c`,
+		Authorization: `Bearer ${process.env.REACT_APP_SECRET_KEY_STRIPE_PROD}`,
 	};
 
 	const address = await fetch(
