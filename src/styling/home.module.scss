@@ -132,14 +132,17 @@
 					rgba(158, 147, 124, 0.3),
 					rgba(225, 212, 185, 0)
 				); /* Adjust colors and transparency here */
-				margin-top: 5%;
-
+				// margin-top: 5%;
+				border-radius: 20px;
 				font-optical-sizing: auto;
 				font-weight: 500;
 				font-style: italic;
 				font-size: 2.5rem;
 				text-align: center;
 				color: #fff7e3;
+			}
+			> h1 {
+				padding-top: 2%;
 			}
 
 			.subtitle {
