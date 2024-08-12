@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import styles from '../styling/address.form.module.scss';
 import countries from '../constants/countries';
@@ -21,6 +21,7 @@ import { selectDeliveryPrice } from '../reducers/slices/deliveryPriceSlice';
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
 	const { itemCount, setItemCount } = useStateContext();
+	const [errors, setErrors] = useState({});
 
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
@@ -29,6 +30,23 @@ export const AddressForm = () => {
 
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
+		// Validate the postal code
+		if (event.target.name === 'postalCode') {
+			validatePostalCode(event.target.value);
+		}
+	};
+
+	const validatePostalCode = (value) => {
+		if (value.length !== 6) {
+			setErrors({
+				...errors,
+				postalCode: 'Codul poștal trebuie să conțină 6 caractere.',
+			});
+		} else {
+			// Remove error if the postal code is valid
+			const { postalCode, ...otherErrors } = errors;
+			setErrors(otherErrors);
+		}
 	};
 
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
@@ -80,7 +98,7 @@ export const AddressForm = () => {
 	};
 
 	let cities = useSelector(selectShippingCities);
-
+	console.log(customer);
 	useEffect(() => {
 		getCitiesByCountyAction(dispatch, customer.state);
 	}, [customer.state]);
@@ -262,12 +280,17 @@ export const AddressForm = () => {
 								id='postalCode'
 								name='postalCode'
 								type='text'
-								className='form-control'
+								className={`form-control ${
+									errors.postalCode ? 'is-invalid' : ''
+								}`}
 								placeholder='Cod poștal'
 								value={customer.postalCode}
 								onChange={setField}
-								style={{ height: heightT }}
+								style={{ height: 'heightT' }}
 							/>
+							{errors.postalCode && (
+								<div className='invalid-feedback'>{errors.postalCode}</div>
+							)}
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<input
