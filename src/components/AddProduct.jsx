@@ -54,7 +54,6 @@ const AddProduct = () => {
 
 	let product = useSelector(selectProduct);
 
-	console.log(chassis);
 	const computeProductCart = () => {
 		let productId = uuidv4();
 		let finalPrice = product.price;

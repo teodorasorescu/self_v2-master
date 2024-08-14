@@ -98,7 +98,6 @@ export const AddressForm = () => {
 	};
 
 	let cities = useSelector(selectShippingCities);
-	console.log(customer);
 	useEffect(() => {
 		getCitiesByCountyAction(dispatch, customer.state);
 	}, [customer.state]);

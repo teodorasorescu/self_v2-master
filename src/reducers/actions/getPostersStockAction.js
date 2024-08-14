@@ -6,7 +6,6 @@ const getPostersStockAction = (dispatch) => {
 	axios
 		.get(`${BACKEND_PATH}/stock/posters`)
 		.then((response) => {
-			console.log('heelo', response);
 			dispatch(loadPostersStock(response.data));
 		})
 		.catch(() => {});
