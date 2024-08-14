@@ -81,7 +81,6 @@ export const CheckoutCart = ({ storedProducts }) => {
 		return (total + deliveryPrice).toFixed(2);
 	};
 
-	console.log(storedProducts);
 	return (
 		<div className={styles.cartContainer}>
 			<div className={styles.container}>

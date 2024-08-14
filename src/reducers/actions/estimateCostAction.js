@@ -7,7 +7,6 @@ const estimateCostAction = (request, dispatch) => {
 	axios
 		.post(`${BACKEND_PATH}/shipping/cost-estimate`, request)
 		.then((response) => {
-			console.log(response);
 			const amount = response.data.amount;
 
 			if (request.shippingMethod == 2) {
