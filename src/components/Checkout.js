@@ -15,6 +15,12 @@ export const Checkout = () => {
 
 	useEffect(() => {
 		setHeaderOn(false);
+		window.gtag('event', 'conversion', {
+			send_to: 'AW-16617160410/TSFuCKyNtcsZENr91vM9',
+			value: 1.0,
+			currency: 'RON',
+			transaction_id: '',
+		});
 	}, []);
 
 	return (
