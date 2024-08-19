@@ -39,15 +39,11 @@ const Footer = () => {
 				<img
 					className={styles.cardTypeImg}
 					src={CardTypes}
-					alt='La SELF ai numeroase variante de platit cu cardul Visa, Mastercard, Google Pay, Apple Pay'
+					alt='Visa, Mastercard, Google Pay, Apple Pay'
 				/>
 			</div>
 			<div className={styles.logoContainer}>
-				<img
-					className={styles.logo}
-					src={Self}
-					alt='SELF Logo - Embrace yourself with colors'
-				/>
+				<img className={styles.logo} src={Self} alt='SELF Logo' />
 				<div className={styles.anpcContainer}>
 					<a href='https://anpc.ro/ce-este-sal/' rel='noopener'>
 						{' '}

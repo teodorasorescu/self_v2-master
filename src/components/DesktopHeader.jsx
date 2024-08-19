@@ -60,14 +60,14 @@ const DesktopHeader = () => {
 						<img
 							className={styles.socialMediaIcons}
 							src={InstaIcon}
-							alt='Follow us on Instagram - @selfposters.ro'
+							alt='instagram'
 						/>
 					</a>
 					<a href={TIKTOK_LINK}>
 						<img
 							className={styles.socialMediaIcons}
 							src={TikTokIcon}
-							alt='Follow us on Tiktok - @selfposters.ro'
+							alt='tiktok'
 						/>
 					</a>
 				</div>

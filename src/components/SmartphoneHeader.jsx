@@ -177,7 +177,7 @@ const SmartphoneHeader = () => {
 											border: 'none',
 										}}
 										src={InstaIcon}
-										alt='Follow us on Instagram - @selfposters.ro'
+										alt='instagram'
 									/>
 								</a>
 							</MenuItem>
@@ -190,7 +190,7 @@ const SmartphoneHeader = () => {
 											margin: 'none',
 											border: 'none',
 										}}
-										alt='Follow us on Tiktok - @selfposters.ro'
+										alt='tiktok'
 										src={TikTokIcon}
 									/>
 								</a>

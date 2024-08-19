@@ -15,7 +15,7 @@ const ContactPage = () => {
 					<img
 						className={classes.socialMediaIcons}
 						src={InstaIcon}
-						alt='Follow selfposters.ro on Instagram'
+						alt='instagram'
 					/>
 				</a>
 			</h2>

@@ -18,14 +18,14 @@ const Contact = () => {
 					<img
 						className={styles.socialMediaIcons}
 						src={InstaIcon}
-						alt='Follow selfposters.ro on Instagram'
+						alt='instagram'
 					/>
 				</a>
 				<a href={TIKTOK_LINK}>
 					<img
 						className={styles.socialMediaIcons}
 						src={TikTokIcon}
-						alt='Follow selfposters.ro on Tiktok'
+						alt='tiktok'
 					/>
 				</a>
 			</div>
