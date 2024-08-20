@@ -92,6 +92,8 @@ function ColorPickerGradient() {
 	colorsMap.set('A patra culoare', colorSwatch4);
 
 	useEffect(() => {
+		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
+
 		if (isImageEmpty) {
 			navigate('/');
 		}
@@ -128,12 +130,8 @@ function ColorPickerGradient() {
 	const isImageEmpty = product.image === '';
 
 	const computeColors = () => {
-		ReactGA.pageview('/personalizare');
-
-		ReactGA.event({
-			category: 'Button',
-			action: 'Click',
-			label: 'Mergi mai departe',
+		ReactGA.event('button_click', {
+			button_label: 'Mergi mai departe',
 		});
 
 		let productId = uuidv4();

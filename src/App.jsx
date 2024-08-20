@@ -1,4 +1,5 @@
 import './App.css';
+
 import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -20,6 +21,7 @@ import ContactPage from './components/ContactPage';
 import ScrollToTop from './components/ScrollToTop';
 import PageNotFound from './components/PageNotFound';
 import ReactGA from 'react-ga4';
+import { useEffect } from 'react';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -27,7 +29,10 @@ function App() {
 		localStorage.setItem('itemCount', 0);
 	}
 
-	ReactGA.initialize('G-VBCPDM60NT');
+	useEffect(() => {
+		// Initialize GA4 with your measurement ID
+		ReactGA.initialize('G-VBCPDM60NT');
+	}, []);
 
 	if (localStorage.getItem('products') == null) {
 		localStorage.setItem('products', JSON.stringify([]));

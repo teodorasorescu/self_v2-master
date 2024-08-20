@@ -56,12 +56,8 @@ const AddProduct = () => {
 	let product = useSelector(selectProduct);
 
 	const computeProductCart = () => {
-		ReactGA.pageview('/adaugă-produs');
-
-		ReactGA.event({
-			category: 'Button',
-			action: 'Click',
-			label: 'Adauga produs buton',
+		ReactGA.event('button_click', {
+			button_label: 'Adauga produs buton',
 		});
 
 		let productId = uuidv4();
@@ -141,6 +137,7 @@ const AddProduct = () => {
 	useEffect(() => {
 		getFramesStockAction(dispatch);
 		getChassisStockAction(dispatch);
+		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 	}, []);
 
 	return (

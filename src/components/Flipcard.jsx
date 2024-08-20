@@ -18,12 +18,8 @@ const Flipcard = () => {
 
 	const priceValue = price.toFixed(2) + ' lei';
 	const computeProduct = (image, title, description, subtitle) => {
-		ReactGA.pageview('/');
-
-		ReactGA.event({
-			category: 'Button',
-			action: 'Click',
-			label: 'Personalizeaza home buton',
+		ReactGA.event('button_click', {
+			button_label: 'Personalizeaza home buton',
 		});
 
 		const product = {
@@ -40,6 +36,7 @@ const Flipcard = () => {
 	const postersStock = useSelector(selectPostersStock);
 	useEffect(() => {
 		getPostersStockAction(dispatch);
+		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 	}, []);
 
 	//useEffect and check if is the stock,
