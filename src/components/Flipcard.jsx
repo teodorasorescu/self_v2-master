@@ -18,10 +18,12 @@ const Flipcard = () => {
 
 	const priceValue = price.toFixed(2) + ' lei';
 	const computeProduct = (image, title, description, subtitle) => {
-		ReactGA.send({
-			hitType: 'pageView',
-			page: '/',
-			title: 'Personalizare buton',
+		ReactGA.pageview('/');
+
+		ReactGA.event({
+			category: 'Button',
+			action: 'Click',
+			label: 'Personalizeaza home buton',
 		});
 
 		const product = {

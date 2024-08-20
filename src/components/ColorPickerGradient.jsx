@@ -128,10 +128,12 @@ function ColorPickerGradient() {
 	const isImageEmpty = product.image === '';
 
 	const computeColors = () => {
-		ReactGA.send({
-			hitType: 'pageView',
-			page: '/personalizare',
-			title: 'Mergi mai departe buton',
+		ReactGA.pageview('/personalizare');
+
+		ReactGA.event({
+			category: 'Button',
+			action: 'Click',
+			label: 'Mergi mai departe',
 		});
 
 		let productId = uuidv4();

@@ -56,10 +56,12 @@ const AddProduct = () => {
 	let product = useSelector(selectProduct);
 
 	const computeProductCart = () => {
-		ReactGA.send({
-			hitType: 'pageView',
-			page: '/adaugă-produs',
-			title: 'Adauga produs buton',
+		ReactGA.pageview('/adaugă-produs');
+
+		ReactGA.event({
+			category: 'Button',
+			action: 'Click',
+			label: 'Adauga produs buton',
 		});
 
 		let productId = uuidv4();
