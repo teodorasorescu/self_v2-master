@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://self-v2-master.vercel.app/sitemap.xml
+Sitemap: https://selfposters.ro/sitemap.xml

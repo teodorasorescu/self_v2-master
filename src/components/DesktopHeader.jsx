@@ -8,6 +8,7 @@ import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import Subheader from './Subheader';
+import { Helmet } from 'react-helmet';
 
 const DesktopHeader = () => {
 	const [subHeaderSpiritualityOn, setSubHeaderSpirituality] = useState(false);
@@ -54,6 +55,13 @@ const DesktopHeader = () => {
 
 	return (
 		<div className={styles.container}>
+			<Helmet>
+				<link
+					rel='icon'
+					type='image/png'
+					href='https://selfposters.ro/favicon.png'
+				/>
+			</Helmet>
 			<div className={styles.promotionTextContainer}>
 				<div className={styles.socialMediaLogo}>
 					<a href={INSTAGRAM_LINK}>

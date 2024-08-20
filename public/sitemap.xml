@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://self.ro/</loc>
+        <loc>https://selfposters.ro/</loc>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://self.ro/</loc>
+        <loc>https://selfposters.ro/despre-self</loc>
         <priority>0.80</priority>
     </url>
      <url>
-        <loc>https://self.ro/contact/</loc>
+        <loc>https://selfposters.ro/psihologia-culorilor/</loc>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://self.ro/faq</loc>
+        <loc>https://selfposters.ro/sustenabilitate</loc>
         <priority>0.80</priority>
     </url>
      <url>
-        <loc>https://self.ro/despre-self</loc>
+        <loc>https://selfposters.ro/faq</loc>
         <priority>0.80</priority>
     </url>
      <url>
-        <loc>https://self.ro/inspiratie</loc>
+        <loc>https://selfposters.ro/inspiratie</loc>
         <priority>0.80</priority>
     </url>
-    <url>
-        <loc>https://self.ro/psihologia-culorilor</loc>
-        <priority>0.80</priority>
-    </url>
-    <url>
-      <loc>https://self.ro/sustenabilitate</loc>
-      <priority>0.80</priority>
-   </url>
+
 </urlset>

@@ -17,10 +17,8 @@ import TermsAndConditions from './components/TermsAndConditions';
 import Confidentiality from './components/Confidentiality';
 import FAQPage from './components/FAQPage';
 import ContactPage from './components/ContactPage';
-import { useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import PageNotFound from './components/PageNotFound';
-import ComingSoonPage from './components/ComingSoonPage';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();

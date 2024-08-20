@@ -12,6 +12,7 @@ import ShoppingBag from '../images/cart.webp';
 import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
+import { Helmet } from 'react-helmet';
 
 const headersData = [
 	{
@@ -120,6 +121,13 @@ const SmartphoneHeader = () => {
 			{/* <div className={styles.promotionTextContainer}>
 				<p>Transport gratuit la comenzi peste 240 RON! </p>
 			</div> */}
+			<Helmet>
+				<link
+					rel='icon'
+					type='image/png'
+					href='https://selfposters.ro/favicon.png'
+				/>
+			</Helmet>
 			<div className={styles.stillPositionContainer}>
 				<Toolbar sx={{ paddingRight: 0, paddingLeft: 0 }}>
 					<IconButton
