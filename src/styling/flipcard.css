@@ -80,18 +80,18 @@ html {
 }
 
 .flip-box-front {
-	-ms-transform: rotateY(0deg);
+	/* -ms-transform: rotateY(0deg);
 	-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
+	transform: rotateY(0deg); */
 	-webkit-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
 .flip-box:hover .flip-box-front {
-	-ms-transform: rotateY(-180deg);
+	/* -ms-transform: rotateY(-180deg);
 	-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
+	transform: rotateY(-180deg); */
 	-webkit-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -103,18 +103,18 @@ html {
 	left: 0;
 	width: 100%;
 
-	-ms-transform: rotateY(180deg);
+	/* -ms-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-	-webkit-transform-style: preserve-3d;
+	transform: rotateY(180deg); */
+	/* -webkit-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+	transform-style: preserve-3d; */
 }
 
 .flip-box:hover .flip-box-back {
-	-ms-transform: rotateY(0deg);
+	/* -ms-transform: rotateY(0deg);
 	-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
+	transform: rotateY(0deg); */
 	-webkit-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -160,13 +160,14 @@ html {
 }
 
 .flip-box-button {
-	background-color: transparent;
-	border: 2px solid #fff;
-	border-radius: 2px;
-	color: #fff;
+	background-color: #e8debda9;
+	border: 3px solid white;
+	border-radius: 5px;
+	color: black;
+	font-weight: 600;
 	cursor: pointer;
 	font-size: 20px;
-	font-weight: bold;
+
 	margin-top: 25px;
 	padding: 15px 20px;
 	text-transform: uppercase;
