@@ -11,12 +11,19 @@ import RoundIcon from '../images/round-arrow.webp';
 import { price } from '../constants/productConstants';
 import { selectPostersStock } from '../reducers/slices/stockSlice';
 import getPostersStockAction from '../reducers/actions/getPostersStockAction';
+import ReactGA from 'react-ga4';
 
 const Flipcard = () => {
 	const dispatch = useDispatch();
 
 	const priceValue = price.toFixed(2) + ' lei';
 	const computeProduct = (image, title, description, subtitle) => {
+		ReactGA.send({
+			hitType: 'pageView',
+			page: '/',
+			title: 'Personalizare buton',
+		});
+
 		const product = {
 			price: price,
 			image: image,

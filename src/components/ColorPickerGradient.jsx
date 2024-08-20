@@ -21,6 +21,7 @@ import {
 } from '../constants/productConstants';
 import ProductInfo from './ProductInfo';
 import VisualImagesPickerGradient from './VisiualImagesPickerGradient';
+import ReactGA from 'react-ga4';
 
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
@@ -127,6 +128,12 @@ function ColorPickerGradient() {
 	const isImageEmpty = product.image === '';
 
 	const computeColors = () => {
+		ReactGA.send({
+			hitType: 'pageView',
+			page: '/personalizare',
+			title: 'Mergi mai departe buton',
+		});
+
 		let productId = uuidv4();
 		const finalProduct = {
 			id: productId,

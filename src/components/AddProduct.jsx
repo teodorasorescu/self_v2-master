@@ -24,6 +24,7 @@ import {
 } from '../reducers/slices/stockSlice';
 import getFramesStockAction from '../reducers/actions/getFramesStockAction';
 import getChassisStockAction from '../reducers/actions/getChassisStockAction';
+import ReactGA from 'react-ga4';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -55,6 +56,12 @@ const AddProduct = () => {
 	let product = useSelector(selectProduct);
 
 	const computeProductCart = () => {
+		ReactGA.send({
+			hitType: 'pageView',
+			page: '/adaugă-produs',
+			title: 'Adauga produs buton',
+		});
+
 		let productId = uuidv4();
 		let finalPrice = product.price;
 		if (frameColor !== 'fără') {

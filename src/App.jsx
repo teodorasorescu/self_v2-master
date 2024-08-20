@@ -19,12 +19,15 @@ import FAQPage from './components/FAQPage';
 import ContactPage from './components/ContactPage';
 import ScrollToTop from './components/ScrollToTop';
 import PageNotFound from './components/PageNotFound';
+import ReactGA from 'react-ga4';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 	if (localStorage.getItem('itemCount') == null) {
 		localStorage.setItem('itemCount', 0);
 	}
+
+	ReactGA.initialize('G-VBCPDM60NT');
 
 	if (localStorage.getItem('products') == null) {
 		localStorage.setItem('products', JSON.stringify([]));
