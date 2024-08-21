@@ -202,17 +202,12 @@ export const SmartphoneCart = () => {
 								style={{
 									display: 'flex',
 									flexDirection: 'column',
-									position: 'relative',
+									justifyContent: 'center',
+									alignItems: 'center',
 								}}
 							>
 								<Button
-									style={{
-										backgroundColor: 'rgba(248, 221, 170, 0.484)',
-										height: '50px',
-										fontSize: '18px',
-										width: '100vw',
-										color: 'black',
-									}}
+									className={styles.checkoutButton}
 									onClick={() => {
 										goToCheckout();
 									}}

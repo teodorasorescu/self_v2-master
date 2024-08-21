@@ -160,15 +160,45 @@ html {
 }
 
 .flip-box-button {
-	background-color: #e8debda9;
-	border: 3px solid white;
-	border-radius: 5px;
-	color: black;
+	background-color: #7684ff;
+	border: 0.1px solid #7684ff;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 10px;
+	color: #fff7e3;
+	border: 0.1px solid #7684ff;
+
 	font-weight: 600;
 	cursor: pointer;
 	font-size: 20px;
+	animation: bounce 3s ease-in-out;
 
 	margin-top: 25px;
 	padding: 15px 20px;
 	text-transform: uppercase;
+}
+
+.flip-box-button:hover {
+	border: 0.1px solid #7684ff;
+	text-decoration: none;
+	transition: none;
+	color: #7684ff;
+	animation: none;
+	background-color: #fff7e3;
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-10px);
+	}
+	60% {
+		transform: translateY(-5px);
+	}
 }

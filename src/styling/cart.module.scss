@@ -60,12 +60,19 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		position: relative;
+
 		font-family: 'Raleway', sans-serif;
 		float: right;
 		color: black;
+		justify-items: space-between;
 		.checkoutContainer {
-			background-color: rgba(248, 221, 170, 0.484);
+			background-color: rgba(248, 221, 170, 0.2);
+			font-weight: 600;
+			border: 2px solid rgba(248, 221, 170, 0.8);
+			color: black;
+			border-radius: 10px;
+			transition: all 0.1s ease;
+
 			@media screen and (min-width: 1025px) {
 				width: 30vw;
 				height: 60px;
@@ -77,10 +84,17 @@
 			}
 		}
 
+		.checkoutContainer:hover {
+			text-decoration: none;
+			transition: none;
+			background-color: rgba(248, 221, 170, 0.8);
+		}
+
 		.shopContainerButton {
 			@media screen and (min-width: 880px) {
 				width: 35vw;
 			}
+
 			width: 30vw;
 			font-style: italic;
 			text-decoration: none;

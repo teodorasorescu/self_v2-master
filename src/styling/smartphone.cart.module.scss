@@ -17,3 +17,28 @@
 .container {
 	text-align: center;
 }
+
+.cart {
+	.checkoutButton {
+		width: 85vw;
+		height: 60px;
+		font-family: 'Raleway', sans-serif;
+
+		font-size: 100%;
+		transition: all 0.1s ease;
+		border-radius: 10px;
+
+		cursor: pointer;
+		text-decoration: none;
+		background-color: rgba(248, 221, 170, 0.2);
+		font-weight: 600;
+		border: 2px solid rgba(248, 221, 170, 0.8);
+		color: black;
+	}
+
+	.checkoutButton:hover {
+		text-decoration: none;
+		transition: none;
+		background-color: rgba(248, 221, 170, 0.8);
+	}
+}

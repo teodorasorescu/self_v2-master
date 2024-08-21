@@ -31,19 +31,21 @@
 
 		.button {
 			font-family: Raleway;
-
 			margin-bottom: 3%;
 			text-align: center;
-			border-radius: 60px;
-			color: #7684ff;
+			border-radius: 10px;
+			background-color: #7684ff;
 			border: 0.1px solid #7684ff;
+
+			color: #fff7e3;
 		}
 
 		.button:hover {
+			border: 0.1px solid #7684ff;
 			text-decoration: none;
 			transition: none;
-			color: #fff7e3;
-			background-color: #acb4ff;
+			color: #7684ff;
+			background-color: #fff7e3;
 		}
 
 		.homePhoto {

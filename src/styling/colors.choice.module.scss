@@ -46,19 +46,22 @@
 				font-family: 'Raleway', sans-serif;
 				font-size: 0.9rem;
 				transition: all 0.1s ease;
-				background-color: #fff7e3;
+				background-color: #7684ff;
 				border: 0.1px solid #7684ff;
 				cursor: pointer;
 				text-decoration: none;
-				border-radius: 60px;
-				color: #7684ff;
+				border-radius: 10px;
+				color: #fff7e3;
+				border: 0.1px solid #7684ff;
 			}
 
 			.button:hover {
+				border: 0.1px solid #7684ff;
 				text-decoration: none;
 				transition: none;
-				color: #fff7e3;
-				background-color: #acb4ff;
+				color: #7684ff;
+				animation: none;
+				background-color: #fff7e3;
 			}
 		}
 	}
