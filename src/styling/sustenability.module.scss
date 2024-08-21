@@ -44,11 +44,31 @@
 
 		.subheadline {
 			font-size: 1.1rem;
-			.redirectUrl {
-				text-decoration: none;
-				color: black;
-				font-size: 0.9rem;
-				font-style: italic;
+			.buttonContainer {
+				align-self: center;
+				.button {
+					width: auto;
+					height: auto;
+					font-family: 'Raleway', sans-serif;
+					font-size: 0.9rem;
+					transition: all 0.1s ease;
+					background-color: #7684ff;
+					border: 0.1px solid #7684ff;
+					cursor: pointer;
+					text-decoration: none;
+					border-radius: 10px;
+					color: #fff7e3;
+					border: 0.1px solid #7684ff;
+				}
+
+				.button:hover {
+					border: 0.1px solid #7684ff;
+					text-decoration: none;
+					transition: none;
+					color: #7684ff;
+					animation: none;
+					background-color: #fff7e3;
+				}
 			}
 		}
 

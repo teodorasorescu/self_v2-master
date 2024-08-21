@@ -37,9 +37,9 @@ const ColorsChoice = () => {
 							alt='semnificatie spirituala culori, psihologie, grafica, tablouri'
 						/>
 						<div className={styles.buttonContainer}>
-							<Link to='/psihologia-culorilor'>
+							<a href='/psihologia-culorilor'>
 								<Button className={styles.button}>PSIHOLOGIA CULORILOR</Button>
-							</Link>
+							</a>
 						</div>
 					</div>
 				</>

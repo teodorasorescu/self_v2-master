@@ -1,4 +1,5 @@
 import styles from '../styling/sustenability.module.scss';
+import Button from '@mui/material/Button';
 
 const Sustenability = () => {
 	return (
@@ -16,9 +17,15 @@ const Sustenability = () => {
 					reutilizate.
 					<br />
 					<br />
-					<a className={styles.redirectUrl} href='/sustenabilitate'>
-						Citește mai mult despre sustenabilitatea tablourilor noastre
-					</a>
+					<div className={styles.buttonContainer}>
+						{' '}
+						<a href='/sustenabilitate'>
+							<Button className={styles.button}>
+								{' '}
+								Citește mai multe despre sustenabilitatea tablourilor noastre
+							</Button>
+						</a>
+					</div>
 				</p>
 			</div>
 		</div>
