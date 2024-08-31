@@ -22,7 +22,7 @@ const Sustenability = () => {
 						<a href='/sustenabilitate'>
 							<Button className={styles.button}>
 								{' '}
-								Citește mai multe despre sustenabilitatea tablourilor noastre
+								Cum contribuie SELF la sănătatea mediului?
 							</Button>
 						</a>
 					</div>
