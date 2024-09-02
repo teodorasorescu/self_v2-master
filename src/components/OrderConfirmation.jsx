@@ -11,6 +11,8 @@ import PaymentFailed from '../images/declined.webp';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectOrderFailed } from '../reducers/slices/orderFailedSlice';
 import OrderFailed from '../images/orderfailed.webp';
+import { selectPaymentStatus } from '../reducers/slices/paymentStatusSlice';
+
 const OrderConfirmation = () => {
 	const wideScreen = useMediaQuery('(min-width:1025px)');
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -22,41 +24,40 @@ const OrderConfirmation = () => {
 	const dispatch = useDispatch();
 	const sessionId = localStorage.getItem('sessionId');
 	const orderFailed = useSelector(selectOrderFailed);
-
+	const payment = useSelector(selectPaymentStatus);
 	const failure = orderFailed || unpaidOrder;
+
 	useEffect(() => {
 		setHeaderOn(true);
-		const session = getPaymentStatusAction(sessionId, dispatch);
+		getPaymentStatusAction(sessionId, dispatch);
+		if (payment.paymentStatus === 'paid') {
+			const products = productsOrder.map((product, i) => {
+				return {
+					quantity: product.quantity,
+					price: product.price,
+					frameColor: product.frameColor,
+					chassis: product.chassis,
+					title: product.title,
+					colors: product.colors.toString(),
+					image: product.image,
+					fontColor: JSON.stringify(product.fontColor),
+				};
+			});
 
-		session.then(function (s) {
-			if (s.payment_status === 'paid') {
-				const products = productsOrder.map((product, i) => {
-					return {
-						quantity: product.quantity,
-						price: product.price,
-						frameColor: product.frameColor,
-						chassis: product.chassis,
-						title: product.title,
-						colors: product.colors.toString(),
-						image: product.image,
-						fontColor: JSON.stringify(product.fontColor),
-					};
-				});
+			sendOrderAction(
+				{
+					products: products,
+					customer: customer,
+				},
+				dispatch
+			);
+			setUnpaidOrder(false);
+		}
 
-				sendOrderAction(
-					{
-						products: products,
-						customer: customer,
-					},
-					dispatch
-				);
-				setUnpaidOrder(false);
-			}
-			if (s.payment_status === 'unpaid') {
-				setUnpaidOrder(true);
-				localStorage.setItem('productsOrder', JSON.stringify([]));
-			}
-		});
+		if (payment.paymentStatus === 'unpaid') {
+			setUnpaidOrder(true);
+			localStorage.setItem('productsOrder', JSON.stringify([]));
+		}
 	}, []);
 
 	return (

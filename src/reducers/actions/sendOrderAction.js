@@ -9,6 +9,7 @@ const sendOrderAction = (order, dispatch) => {
 			dispatch(loadOrderFailed(false));
 		})
 		.catch(() => {
+			localStorage.setItem('productsOrder', JSON.stringify([]));
 			dispatch(loadOrderFailed(true));
 		});
 };
