@@ -1,32 +1,20 @@
 import { loadOrderFailed } from '../slices/orderFailedSlice';
+import { loadPaymentStatus } from '../slices/paymentStatusSlice';
+import { BACKEND_PATH } from '../../constants/links';
+import axios from 'axios';
 
-const getPaymentStatusAction = async (sessionId, dispatch) => {
-	const headers = {
-		Authorization: `Bearer ${process.env.REACT_APP_SECRET_KEY_STRIPE_PROD}`,
-	};
-
-	const address = await fetch(
-		`https://api.stripe.com/v1/checkout/sessions/${sessionId}`,
-		{
-			method: 'GET',
-			headers: headers,
-		}
-	)
+const getPaymentStatusAction = (sessionId, dispatch) => {
+	axios
+		.get(`${BACKEND_PATH}/checkout/payment/` + sessionId)
 		.then((response) => {
-			return response.json();
-		})
-		.then((session) => {
 			localStorage.setItem('sessionId', '');
-			if (session.error) {
-				dispatch(loadOrderFailed(true));
-				localStorage.setItem('productsOrder', JSON.stringify([]));
-			} else {
-				dispatch(loadOrderFailed(false));
-			}
-			return session;
+			dispatch(loadOrderFailed(false));
+			dispatch(loadPaymentStatus(response.data));
+		})
+		.catch(() => {
+			localStorage.setItem('sessionId', '');
+			dispatch(loadOrderFailed(true));
 		});
-
-	return address;
 };
 
 export default getPaymentStatusAction;
