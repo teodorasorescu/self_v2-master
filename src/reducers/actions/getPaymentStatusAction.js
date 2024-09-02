@@ -1,20 +1,25 @@
 import { loadOrderFailed } from '../slices/orderFailedSlice';
-import { loadPaymentStatus } from '../slices/paymentStatusSlice';
 import { BACKEND_PATH } from '../../constants/links';
-import axios from 'axios';
 
-const getPaymentStatusAction = (sessionId, dispatch) => {
-	axios
-		.get(`${BACKEND_PATH}/checkout/payment/` + sessionId)
+const getPaymentStatusAction = async (sessionId, dispatch) => {
+	const address = await fetch(`${BACKEND_PATH}/checkout/payment/${sessionId}`, {
+		method: 'GET',
+	})
 		.then((response) => {
-			localStorage.setItem('sessionId', '');
-			dispatch(loadOrderFailed(false));
-			dispatch(loadPaymentStatus(response.data));
+			return response.json();
 		})
-		.catch(() => {
+		.then((session) => {
 			localStorage.setItem('sessionId', '');
-			dispatch(loadOrderFailed(true));
+			if (session.error) {
+				dispatch(loadOrderFailed(true));
+				localStorage.setItem('productsOrder', JSON.stringify([]));
+			} else {
+				dispatch(loadOrderFailed(false));
+			}
+			return session;
 		});
+
+	return address;
 };
 
 export default getPaymentStatusAction;
