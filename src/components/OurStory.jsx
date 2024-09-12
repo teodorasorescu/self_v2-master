@@ -24,11 +24,10 @@ const OurStory = () => {
 					</p>
 					<p className={styles.subheadline}>
 						Acesta este locul care îmbină estetica contemporană cu
-						spiritualitatea. Noi ne concentrăm pe crearea unui spațiu favorabil,
-						dedicat introspecției asupra sentimentelor și a trăirilor. <br />{' '}
-						Noi încurajăm clienții să-și exploreze identitatea și să-și
-						îmbunătățească relația cu sinele prin compunerea unor tablouri
-						estetice personalizate, în raport cu sufletul, corpul și mintea lor.
+						spiritualitatea. <br /> Noi încurajăm clienții să-și exploreze
+						identitatea și să-și îmbunătățească relația cu sinele prin
+						compunerea unor tablouri estetice personalizate, în raport cu
+						sufletul, corpul și mintea lor.
 					</p>
 					<p className={styles.subheadline}>
 						SELF se dedică asigurării calității și longevității produselor, prin
