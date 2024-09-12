@@ -44,7 +44,7 @@ const colors = [
 	{
 		title: 'Maro',
 		color: '#9e2a2b',
-		summary: 'stabilitate, siguranță, conexiune cu sinele',
+		summary: 'stabilitate, siguranță, autenticitate',
 		desc: 'Maroul este culoarea pământului și a stabilității. În spiritualitate, maroul poate simboliza înrădăcinarea și siguranța interioară. Reprezintă încrederea în procesul vieții și a conexiunii cu energiile fundamentale ale universului.',
 	},
 	{
