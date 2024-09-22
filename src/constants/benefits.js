@@ -8,7 +8,7 @@ const benefits = [
 		desc: 'Descoperă o nouă dimensiune a artei cu tablouri noastre printate pe canvas 100% bumbac, un material ce garantează calitatea și durabilitatea produsului. În plus, pânza scoate în evidență contrastul culorilor și asigură tabloului autenticitate.',
 	},
 	{
-		title: 'INTROSPECT YOUR BEING',
+		title: 'FEELINGS ON CANVAS',
 		desc: 'Explorează-ți sinele și formează-ți un spațiu care îți reflectă identitatea. Aruncă o privire pe pagina de psihologie a culorilor și construiește-ți tabloul în relație cu sufletul, corpul și mintea ta.',
 	},
 ];

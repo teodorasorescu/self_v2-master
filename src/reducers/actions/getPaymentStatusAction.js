@@ -1,17 +1,10 @@
 import { loadOrderFailed } from '../slices/orderFailedSlice';
+import { BACKEND_PATH } from '../../constants/links';
 
 const getPaymentStatusAction = async (sessionId, dispatch) => {
-	const headers = {
-		Authorization: `Bearer ${process.env.REACT_APP_SECRET_KEY_STRIPE_PROD}`,
-	};
-
-	const address = await fetch(
-		`https://api.stripe.com/v1/checkout/sessions/${sessionId}`,
-		{
-			method: 'GET',
-			headers: headers,
-		}
-	)
+	const address = await fetch(`${BACKEND_PATH}/checkout/payment/${sessionId}`, {
+		method: 'GET',
+	})
 		.then((response) => {
 			return response.json();
 		})

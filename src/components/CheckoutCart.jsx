@@ -106,6 +106,12 @@ export const CheckoutCart = ({ storedProducts }) => {
 																		<Badge
 																			color='primary'
 																			badgeContent={row['quantity']}
+																			sx={{
+																				'& .MuiBadge-colorPrimary': {
+																					backgroundColor: '#7684ff',
+																					color: '#fff7e3', // Set text color for better contrast
+																				},
+																			}}
 																		>
 																			<img
 																				src={require(`../images/${row['image']}`)}

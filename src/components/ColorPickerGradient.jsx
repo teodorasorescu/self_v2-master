@@ -25,6 +25,7 @@ import ReactGA from 'react-ga4';
 
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
+
 	const isColorChanged =
 		product.colors !== undefined && product.colors.length !== 0;
 	const [colorSwatch1, setColorSwatch1] = useState(
@@ -157,6 +158,20 @@ function ColorPickerGradient() {
 
 	const wideScreen = useMediaQuery('(min-width:1025px)');
 
+	const shuffleSwatches = () => {
+		const swatches = [colorSwatch1, colorSwatch2, colorSwatch3, colorSwatch4];
+		// Shuffle the swatches array
+		for (let i = swatches.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[swatches[i], swatches[j]] = [swatches[j], swatches[i]];
+		}
+		// Update the state with the shuffled colors
+		setColorSwatch1(swatches[0]);
+		setColorSwatch2(swatches[1]);
+		setColorSwatch3(swatches[2]);
+		setColorSwatch4(swatches[3]);
+	};
+
 	return (
 		<div className='body'>
 			<div className='container'>
@@ -176,6 +191,12 @@ function ColorPickerGradient() {
 						<SwatchGradient color={colorSwatch3} setColor={setColorSwatch3} />
 						<SwatchGradient color={colorSwatch4} setColor={setColorSwatch4} />
 					</div>
+					<div className='buttonContainer'>
+						<Button className='button' onClick={shuffleSwatches}>
+							SHUFFLE
+						</Button>
+					</div>
+
 					{wideScreen && <ProductInfo />}
 				</div>
 				<div className='descriptionContainer'>

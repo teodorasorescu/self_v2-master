@@ -10,14 +10,8 @@ import ProductCarousel from './ProductCarousel';
 import { frameColors, framePrice } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
-import {
-	atentionareCuloare,
-	chassisPrice,
-	details,
-	suport,
-} from '../constants/productConstants';
+import { chassisPrice, details, suport } from '../constants/productConstants';
 import reactCSS from 'reactcss';
-import AttentionPrint from '../images/cmyk.webp';
 import {
 	selectChassisStock,
 	selectFramesStock,
@@ -32,6 +26,9 @@ const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
 	const [chassis, setChassis] = useState(false);
 	const { itemCount, setItemCount } = useStateContext();
+
+	let product = useSelector(selectProduct);
+	const [finalPrice, setFinalPrice] = useState(product.price);
 
 	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
 
@@ -53,21 +50,12 @@ const AddProduct = () => {
 		storedProducts = localStoreProducts;
 	}
 
-	let product = useSelector(selectProduct);
-
 	const computeProductCart = () => {
 		ReactGA.event('button_click', {
 			button_label: 'Adauga produs buton',
 		});
 
 		let productId = uuidv4();
-		let finalPrice = product.price;
-		if (frameColor !== 'fără') {
-			finalPrice = product.price + framePrice;
-		}
-		if (chassis) {
-			finalPrice = finalPrice + chassisPrice;
-		}
 
 		const finalProduct = {
 			id: productId,
@@ -135,10 +123,21 @@ const AddProduct = () => {
 	const chassisStock = useSelector(selectChassisStock);
 
 	useEffect(() => {
+		let updatedPrice = product.price;
+		if (frameColor !== 'fără') {
+			updatedPrice += framePrice;
+		}
+		if (chassis) {
+			updatedPrice += chassisPrice;
+		}
+		setFinalPrice(updatedPrice);
+	}, [frameColor, chassis]);
+
+	useEffect(() => {
 		getFramesStockAction(dispatch);
 		getChassisStockAction(dispatch);
 		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
-	}, []);
+	}, []); // Empty dependency array ensures this runs only once when the component mounts
 
 	return (
 		<div className='bodyContainer'>
@@ -158,7 +157,7 @@ const AddProduct = () => {
 				<div className='introductionContainer'>
 					<div className='titleContainer'>
 						<h1>Tablou Canvas {product.title}</h1>
-						<h2>{product.price.toFixed(2) + ' lei'}</h2>
+						<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
 					</div>
 					<div className='productContainer'>
 						<h5>Personalizarea tabloului</h5>
@@ -212,11 +211,7 @@ const AddProduct = () => {
 							})}
 						</select>
 					</div>
-					{/* <div className='printAttention'>
-						<p>
-							<img src={AttentionPrint} alt='attprint' /> {atentionareCuloare}
-						</p>
-					</div> */}
+
 					<div className='addToCartContainer'>
 						<a href='/cos-de-cumparaturi'>
 							<Button className='cartButton' onClick={computeProductCart}>
