@@ -1,0 +1,22 @@
+.container {
+	.inputContainer {
+		border: 2px solid rgba(248, 221, 170, 0.8);
+		display: flex;
+		border-radius: 10px;
+		flex-direction: row;
+	}
+	.buttonContainer {
+		background-color: rgba(248, 221, 170, 0.2);
+		font-weight: 600;
+		color: black;
+		transition: all 0.1s ease;
+	}
+
+	.buttonText {
+		color: black;
+		text-decoration: none;
+	}
+	.buttonContainer:hover {
+		background-color: rgba(248, 221, 170, 0.8);
+	}
+}

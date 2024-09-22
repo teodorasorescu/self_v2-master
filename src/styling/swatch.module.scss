@@ -12,7 +12,9 @@
 .popover {
 	position: absolute;
 	display: block;
-	@media screen and (min-width: 1025px) {
+	@media screen and (max-width: 1024px) {
+		transform: scale(1.3);
+		transform-origin: top;
 	}
 
 	@media screen and (max-width: 800px) {
