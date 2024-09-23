@@ -8,5 +8,5 @@ export const description =
 export const benefits = [
 	'Print personalizat canvas 100% bumbac',
 	'Rame din lemn natural certificat FSC® 100%',
-	'Montare pe șasiu de lemn',
+	'Montare pe cadru de lemn',
 ];

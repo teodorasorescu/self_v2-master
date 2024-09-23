@@ -165,12 +165,12 @@ const AddProduct = () => {
 						{listItems(product.colors)}
 					</div>
 					<div className='frameContainer'>
-						<h6>Montare pe șasiu de lemn</h6>
+						<h6>Montare pe cadru de lemn</h6>
 						<select
 							id='chassis'
 							name='chassis'
 							className='form-select'
-							placeholder='Montare pe șasiu de lemn'
+							placeholder='Montare pe cadru de lemn'
 							onChange={(e) => setChassisField(e.target.value === 'true')}
 						>
 							<option value='false'>Nu</option>

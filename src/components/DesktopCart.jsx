@@ -133,7 +133,7 @@ export const DesktopCart = () => {
 																		{'Tablou Canvas ' + value}
 																		{row['chassis'] === true && (
 																			<p className={styles.frame}>
-																				Montare pe șasiu de lemn
+																				Montare pe cadru de lemn
 																			</p>
 																		)}
 																		{row['frameColor'] !== 'fără' && (
