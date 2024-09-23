@@ -25,7 +25,6 @@ import ReactGA from 'react-ga4';
 
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
-
 	const isColorChanged =
 		product.colors !== undefined && product.colors.length !== 0;
 	const [colorSwatch1, setColorSwatch1] = useState(
@@ -34,7 +33,7 @@ function ColorPickerGradient() {
 					r: product.colors[0][0][1],
 					g: product.colors[0][1][1],
 					b: product.colors[0][2][1],
-					a: product.colors[0][3][1],
+					a: 1,
 			  }
 			: color0
 	);
@@ -45,7 +44,7 @@ function ColorPickerGradient() {
 					r: product.colors[1][0][1],
 					g: product.colors[1][1][1],
 					b: product.colors[1][2][1],
-					a: product.colors[1][3][1],
+					a: 1,
 			  }
 			: color1
 	);
@@ -56,7 +55,7 @@ function ColorPickerGradient() {
 					r: product.colors[2][0][1],
 					g: product.colors[2][1][1],
 					b: product.colors[2][2][1],
-					a: product.colors[2][3][1],
+					a: 1,
 			  }
 			: color2
 	);
@@ -67,7 +66,7 @@ function ColorPickerGradient() {
 					r: product.colors[3][0][1],
 					g: product.colors[3][1][1],
 					b: product.colors[3][2][1],
-					a: product.colors[3][3][1],
+					a: 1,
 			  }
 			: color3
 	);
@@ -109,20 +108,20 @@ function ColorPickerGradient() {
 		default: {
 			gradient: {
 				backgroundColor: 'rgba(249, 237, 223, 0.3)',
-				background: `radial-gradient(circle at center, rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, ${colorSwatch1.a}) 0,
-				rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, ${colorSwatch1.a}) ,
-				  rgba(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}, ${colorSwatch2.a}),
-				  rgba(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b}, ${colorSwatch3.a}) ,
-				  rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, ${colorSwatch4.a}) , rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, 0.2) ,
+				background: `radial-gradient(circle at center, rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, 1) 0,
+				rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, 1) ,
+				  rgba(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}, 1),
+				  rgba(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b},1) ,
+				  rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, 1) , rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, 0.2) ,
 					rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3)
 					`,
 			},
 
 			title: {
-				color: `rgba(${fontColor.r}, ${fontColor.g}, ${fontColor.b}, ${fontColor.a})`,
+				color: `rgba(${fontColor.r}, ${fontColor.g}, ${fontColor.b}, 1)`,
 			},
 			subtitle: {
-				color: `rgba(${fontColor.r}, ${fontColor.g}, ${fontColor.b}, ${fontColor.a})`,
+				color: `rgba(${fontColor.r}, ${fontColor.g}, ${fontColor.b}, 1)`,
 			},
 		},
 	});
@@ -157,7 +156,6 @@ function ColorPickerGradient() {
 	};
 
 	const wideScreen = useMediaQuery('(min-width:1025px)');
-
 	const shuffleSwatches = () => {
 		const swatches = [colorSwatch1, colorSwatch2, colorSwatch3, colorSwatch4];
 		// Shuffle the swatches array
