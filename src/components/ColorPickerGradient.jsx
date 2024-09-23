@@ -33,7 +33,6 @@ function ColorPickerGradient() {
 					r: product.colors[0][0][1],
 					g: product.colors[0][1][1],
 					b: product.colors[0][2][1],
-					a: 1,
 			  }
 			: color0
 	);
@@ -44,7 +43,6 @@ function ColorPickerGradient() {
 					r: product.colors[1][0][1],
 					g: product.colors[1][1][1],
 					b: product.colors[1][2][1],
-					a: 1,
 			  }
 			: color1
 	);
@@ -55,7 +53,6 @@ function ColorPickerGradient() {
 					r: product.colors[2][0][1],
 					g: product.colors[2][1][1],
 					b: product.colors[2][2][1],
-					a: 1,
 			  }
 			: color2
 	);
@@ -66,7 +63,6 @@ function ColorPickerGradient() {
 					r: product.colors[3][0][1],
 					g: product.colors[3][1][1],
 					b: product.colors[3][2][1],
-					a: 1,
 			  }
 			: color3
 	);
@@ -108,20 +104,20 @@ function ColorPickerGradient() {
 		default: {
 			gradient: {
 				backgroundColor: 'rgba(249, 237, 223, 0.3)',
-				background: `radial-gradient(circle at center, rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, 1) 0,
-				rgba(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}, 1) ,
-				  rgba(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}, 1),
-				  rgba(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b},1) ,
-				  rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, 1) , rgba(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, 0.2) ,
+				background: `radial-gradient(circle at center, rgb(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}) 0,
+				rgb(${colorSwatch1.r}, ${colorSwatch1.g}, ${colorSwatch1.b}) ,
+				  rgb(${colorSwatch2.r}, ${colorSwatch2.g}, ${colorSwatch2.b}),
+				  rgb(${colorSwatch3.r}, ${colorSwatch3.g}, ${colorSwatch3.b}) ,
+				  rgb(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}) , rgb(${colorSwatch4.r}, ${colorSwatch4.g}, ${colorSwatch4.b}, 0.2) ,
 					rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3), rgba(249, 237, 223, 0.3)
 					`,
 			},
 
 			title: {
-				color: `rgba(${fontColor.r}, ${fontColor.g}, ${fontColor.b}, 1)`,
+				color: `rgb(${fontColor.r}, ${fontColor.g}, ${fontColor.b})`,
 			},
 			subtitle: {
-				color: `rgba(${fontColor.r}, ${fontColor.g}, ${fontColor.b}, 1)`,
+				color: `rgb(${fontColor.r}, ${fontColor.g}, ${fontColor.b})`,
 			},
 		},
 	});

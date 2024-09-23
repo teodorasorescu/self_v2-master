@@ -20,18 +20,10 @@ export function SwatchGradient({ color, setColor }) {
 				width: '40px',
 				height: '30px',
 				borderRadius: '3px',
-				background: `rgba(${color.r}, ${color.g}, ${color.b}, 1)`,
+				background: `rgb(${color.r}, ${color.g}, ${color.b})`,
 			},
 		},
 	});
-
-	const customStyles = {
-		default: {
-			picker: {
-				//width: '250px',
-			},
-		},
-	};
 
 	return (
 		<div>
@@ -45,7 +37,6 @@ export function SwatchGradient({ color, setColor }) {
 						className={styleSwatch.container}
 						color={color}
 						onChange={setColor}
-						styles={customStyles} // Apply custom styles here
 					/>
 				</div>
 			) : null}

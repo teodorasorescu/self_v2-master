@@ -84,21 +84,21 @@ const AddProduct = () => {
 		gradientStyles = reactCSS({
 			default: {
 				gradient: {
-					background: `radial-gradient(circle at center,rgba(${product.colors[0][0][1]}, ${product.colors[0][1][1]}, ${product.colors[0][2][1]}, 1) 0,
-        rgba(${product.colors[0][0][1]}, ${product.colors[0][1][1]}, ${product.colors[0][2][1]}, 1),
-				rgba(${product.colors[1][0][1]}, ${product.colors[1][1][1]}, ${product.colors[1][2][1]}, 1),
-				rgba(${product.colors[2][0][1]}, ${product.colors[2][1][1]}, ${product.colors[2][2][1]}, 1),
-				rgba(${product.colors[3][0][1]}, ${product.colors[3][1][1]}, ${product.colors[3][2][1]}, 1),
+					background: `radial-gradient(circle at center,rgb(${product.colors[0][0][1]}, ${product.colors[0][1][1]}, ${product.colors[0][2][1]}) 0,
+        rgb(${product.colors[0][0][1]}, ${product.colors[0][1][1]}, ${product.colors[0][2][1]}),
+				rgb(${product.colors[1][0][1]}, ${product.colors[1][1][1]}, ${product.colors[1][2][1]}),
+				rgb(${product.colors[2][0][1]}, ${product.colors[2][1][1]}, ${product.colors[2][2][1]}),
+				rgb(${product.colors[3][0][1]}, ${product.colors[3][1][1]}, ${product.colors[3][2][1]}),
 			
        rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243),rgb(252, 247, 243)
         )`,
 				},
 
 				title: {
-					color: `rgba(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b}, 1)`,
+					color: `rgb(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b})`,
 				},
 				subtitle: {
-					color: `rgba(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b},1)`,
+					color: `rgb(${product.fontColor.r}, ${product.fontColor.g}, ${product.fontColor.b})`,
 				},
 			},
 		});
@@ -112,7 +112,7 @@ const AddProduct = () => {
 					height: '30px',
 					borderRadius: '3px',
 					margin: '1%',
-					background: `rgba(${color[0][1]}, ${color[1][1]}, ${color[2][1]}, 1)`,
+					background: `rgb(${color[0][1]}, ${color[1][1]}, ${color[2][1]})`,
 					cursor: 'default',
 				}}
 			></div>
