@@ -30,28 +30,24 @@ export const color0 = {
 	r: '255',
 	g: '190',
 	b: '11',
-	a: '1',
 };
 
 export const color2 = {
 	r: '251',
 	g: '86',
 	b: '7',
-	a: '1',
 };
 
 export const color3 = {
 	r: '255',
 	g: '0',
 	b: '110',
-	a: '0.8',
 };
 
 export const color1 = {
 	r: '255',
 	g: '163',
 	b: '163',
-	a: '1',
 };
 
 export const fontColors = [

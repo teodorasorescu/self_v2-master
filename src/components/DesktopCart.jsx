@@ -39,7 +39,7 @@ export const DesktopCart = () => {
 					borderRadius: '3px',
 					margin: '1%',
 					marginTop: '5%',
-					background: `rgba(${color[0][1]}, ${color[1][1]}, ${color[2][1]}, ${color[3][1]})`,
+					background: `rgb(${color[0][1]}, ${color[1][1]}, ${color[2][1]})`,
 				}}
 			></div>
 		));
