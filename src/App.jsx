@@ -37,6 +37,10 @@ function App() {
 			localStorage.setItem('discountValue', 0);
 			localStorage.setItem('discountCode', '');
 		}
+		if (localStorage.getItem('discountValue') == null) {
+			localStorage.setItem('discountValue', 0);
+		}
+
 		ReactGA.initialize('G-VBCPDM60NT');
 	}, []);
 
