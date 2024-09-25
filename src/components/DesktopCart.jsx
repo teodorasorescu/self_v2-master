@@ -71,13 +71,6 @@ export const DesktopCart = () => {
 
 	useEffect(() => {
 		setHeaderOn(true);
-		/*remove at next deploy*/
-		const hasUndefinedPrice = storedProducts.some(
-			(product) => product.initialPrice === undefined
-		);
-
-		const finalProducts = hasUndefinedPrice ? [] : storedProducts;
-		localStorage.setItem('products', JSON.stringify(finalProducts));
 	}, []);
 
 	useEffect(() => {
@@ -195,10 +188,7 @@ export const DesktopCart = () => {
 																				</p>
 																			</>
 																		) : (
-																			<p>
-																				{row['initialPrice'].toFixed(2) +
-																					' lei'}
-																			</p>
+																			<p>{row['price'].toFixed(2) + ' lei'}</p>
 																		)}
 																	</div>
 																) : null}
