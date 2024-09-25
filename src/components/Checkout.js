@@ -11,7 +11,6 @@ export const Checkout = () => {
 	const { headerOn, setHeaderOn } = useStateContext();
 	const wideScreen = useMediaQuery('(min-width:1025px)');
 	const storedProducts = JSON.parse(localStorage.getItem('products'));
-	const deliveryPrice = parseInt(localStorage.getItem('deliveryPrice'), 10);
 
 	useEffect(() => {
 		setHeaderOn(false);
@@ -26,21 +25,13 @@ export const Checkout = () => {
 						alt='embrace yourself, tablouri personalizate canvas'
 					/>
 				</div>
-				{!wideScreen && (
-					<OrderResume
-						storedProducts={storedProducts}
-						deliveryPrice={deliveryPrice}
-					/>
-				)}
+				{!wideScreen && <OrderResume storedProducts={storedProducts} />}
 				<AddressForm />
 			</div>
 			{wideScreen && (
 				<div className={styles.shoppingContainer}>
 					<div className={styles.fixedContainer}>
-						<CheckoutCart
-							storedProducts={storedProducts}
-							deliveryPrice={deliveryPrice}
-						/>
+						<CheckoutCart storedProducts={storedProducts} />
 					</div>
 				</div>
 			)}

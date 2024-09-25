@@ -10,7 +10,12 @@ import ProductCarousel from './ProductCarousel';
 import { frameColors, framePrice } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
-import { chassisPrice, details, suport } from '../constants/productConstants';
+import {
+	chassisPrice,
+	computeDiscount,
+	details,
+	suport,
+} from '../constants/productConstants';
 import reactCSS from 'reactcss';
 import {
 	selectChassisStock,
@@ -50,6 +55,8 @@ const AddProduct = () => {
 		storedProducts = localStoreProducts;
 	}
 
+	const discountCodeValue = parseInt(localStorage.getItem('discountValue'), 10);
+
 	const computeProductCart = () => {
 		ReactGA.event('button_click', {
 			button_label: 'Adauga produs buton',
@@ -58,16 +65,17 @@ const AddProduct = () => {
 		let productId = uuidv4();
 
 		const finalProduct = {
+			...product,
 			id: productId,
-			image: product.image,
-			price: finalPrice,
-			title: product.title,
-			colors: product.colors,
+			initialPrice: finalPrice,
 			quantity: 1,
-			description: product.description,
-			frameColor: frameColor,
-			chassis: chassis,
-			fontColor: product.fontColor,
+			discount: discountCodeValue !== 0 ? discountCodeValue : product.discount,
+			price:
+				discountCodeValue !== 0
+					? computeDiscount(finalPrice, discountCodeValue)
+					: finalPrice,
+			frameColor,
+			chassis,
 		};
 
 		const productsList = [...storedProducts, finalProduct];

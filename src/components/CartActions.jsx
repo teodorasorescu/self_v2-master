@@ -15,16 +15,8 @@ const CartActions = ({ quantity, productId }) => {
 			if (i === index) {
 				// Increment the clicked counter
 				const updatedProduct = {
-					id: product.id,
-					image: product.image,
-					price: product.price,
-					title: product.title,
-					colors: product.colors,
+					...product,
 					quantity: Math.max(product.quantity + 1, 1),
-					description: product.description,
-					frameColor: product.frameColor,
-					chassis: product.chassis,
-					subtitle: product.subtitle,
 				};
 
 				return updatedProduct;
@@ -39,19 +31,9 @@ const CartActions = ({ quantity, productId }) => {
 	const decrementQuantity = (index) => {
 		const updatedProducts = storedProducts.map((product, i) => {
 			if (i === index) {
-				// Increment the clicked counter
-
 				const updatedProduct = {
-					id: product.id,
-					image: product.image,
-					price: product.price,
-					title: product.title,
-					colors: product.colors,
+					...product,
 					quantity: Math.max(product.quantity - 1, 1),
-					description: product.description,
-					frameColor: product.frameColor,
-					chassis: product.chassis,
-					subtitle: product.subtitle,
 				};
 
 				return updatedProduct;

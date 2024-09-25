@@ -36,6 +36,7 @@ const sendCheckoutAction = async (
 		setItemCount(0);
 		localStorage.setItem('productsOrder', localStorage.getItem('products'));
 		localStorage.setItem('products', JSON.stringify([]));
+		localStorage.setItem('discountValue', 0);
 	} catch (error) {
 		dispatch(loadOrderFailed(true));
 		navigate('/confirmare-comanda');

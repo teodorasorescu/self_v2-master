@@ -1,20 +1,29 @@
 .container {
-	font-family: 'Gilda Display', serif;
-
-	> h3 {
+	h3 {
 		font-size: 2rem;
 		color: black;
 	}
 
-	.thankYou {
-		margin-top: 10%;
-		margin-bottom: 10%;
-	}
 	.inputContainer {
-		//background-color: white;
-
-		.buttonContainer:hover {
-			background-color: antiquewhite;
+		height: auto;
+		padding: 1%;
+		background-color: rgba(248, 221, 170, 0.2);
+		border: 2px solid rgba(248, 221, 170, 0.8);
+		border-radius: 10px;
+		color: black;
+		&:hover {
+			background-color: rgba(248, 221, 170, 0.8);
+			transition: background-color 0.3s ease;
 		}
+	}
+
+	.formInput {
+		border: 2px solid rgba(248, 221, 170, 0.8);
+		border-radius: 10px;
+	}
+
+	.buttonContainer {
+		font-weight: 600;
+		color: black;
 	}
 }

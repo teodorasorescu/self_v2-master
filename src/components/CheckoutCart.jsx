@@ -17,6 +17,9 @@ import { useSelector } from 'react-redux';
 import { selectDeliveryPrice } from '../reducers/slices/deliveryPriceSlice';
 
 export const CheckoutCart = ({ storedProducts }) => {
+	const discountCodeValue = parseInt(localStorage.getItem('discountValue'), 10);
+	const discountCode = localStorage.getItem('discountCode');
+
 	const columns = [
 		{ id: 'image', label: 'Articol' },
 		{ id: 'title', label: '' },
@@ -45,7 +48,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 	};
 
 	const total = calculateTotalPrice(storedProducts);
-
+	console.log(storedProducts);
 	const discountNo = Math.floor(computeProductsLength(storedProducts) / 3);
 	const discount = false;
 	// computeProductsLength(storedProducts) / 3 >= 1;
@@ -131,9 +134,20 @@ export const CheckoutCart = ({ storedProducts }) => {
 																	</div>
 																</div>
 															) : column.id === 'total' ? (
-																'' +
-																(row['quantity'] * row['price']).toFixed(2) +
-																' lei'
+																<div>
+																	<p
+																		className={
+																			discountCodeValue != 0 &&
+																			styles.discountedPrice
+																		}
+																	>
+																		{'' +
+																			(row['quantity'] * row['price']).toFixed(
+																				2
+																			) +
+																			' lei'}
+																	</p>
+																</div>
 															) : column.id === 'title' ? (
 																<>
 																	{'Tablou Canvas ' + value}
@@ -167,14 +181,14 @@ export const CheckoutCart = ({ storedProducts }) => {
 							{'' + total.toFixed(2) + ' lei'}
 						</p>
 					</div>
-					{discount && (
+
+					{discountCodeValue != 0 && (
 						<div className={styles.discountContainer}>
 							<p align='left'>Reducere</p>
-							<p className={styles.pRightContainer}>
-								{'-' + (price * discountNo).toFixed(2) + ' lei'}
-							</p>
+							<p className={styles.pRightContainer}>{discountCode}</p>
 						</div>
 					)}
+
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Transport</p>
 						<p className={styles.pTransportContainer}>

@@ -16,6 +16,8 @@ export const productSlice = createSlice({
 			price: price,
 			frameColor: '',
 			subtitle: '',
+			discount: 0,
+			initialPrice: price,
 		},
 	},
 
