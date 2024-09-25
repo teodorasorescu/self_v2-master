@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
 
-import classes from '../styling/newsletter.form.module.scss';
+import classes from '../styling/discount.form.module.scss';
 import sendDiscountAction from '../reducers/actions/sendDiscountAction';
 import { selectDiscountCodeState } from '../reducers/slices/discountCodeSlice';
 

@@ -137,8 +137,9 @@ export const CheckoutCart = ({ storedProducts }) => {
 																<div>
 																	<p
 																		className={
-																			discountCodeValue != 0 &&
-																			styles.discountedPrice
+																			discountCodeValue != 0
+																				? styles.discountedPrice
+																				: undefined
 																		}
 																	>
 																		{'' +
