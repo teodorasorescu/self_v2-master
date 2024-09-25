@@ -8,6 +8,10 @@
 		.frame {
 			font-size: small;
 		}
+
+		.discountedPrice {
+			color: #7684ff;
+		}
 		.priceContainer {
 			display: flex;
 			flex-direction: column;
@@ -17,7 +21,7 @@
 				display: flex;
 				flex-direction: row;
 				font-size: 90%;
-				color: rgb(255, 0, 0);
+				color: #7684ff;
 				.pRightContainer {
 					font-weight: 600;
 					text-align: right;
@@ -90,6 +94,9 @@
 			.frame {
 				font-size: small;
 			}
+			.discountedPrice {
+				color: #7684ff;
+			}
 			@media screen and (width: 1024px) {
 				width: 80vw;
 			}
@@ -107,9 +114,9 @@
 					display: flex;
 					flex-direction: row;
 					font-size: 90%;
-					color: rgb(255, 0, 0);
+					color: #7684ff;
 					.pRightContainer {
-						color: black;
+						font-weight: 600;
 						text-align: right;
 						position: absolute;
 						@media screen and (max-width: 600px) {

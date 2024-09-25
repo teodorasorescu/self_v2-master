@@ -6,7 +6,7 @@ import productSlice from './slices/productSlice.js';
 import paymentSessionSlice from './slices/paymentSessionSlice.js';
 import orderFailedSlice from './slices/orderFailedSlice.js';
 import stockSlice from './slices/stockSlice.js';
-import newsletterFormSlice from './slices/newsletterFormSlice.js';
+import discountCodeSlice from './slices/discountCodeSlice.js';
 import shippingCitiesSlice from './slices/shippingCitiesSlice.js';
 import deliveryPriceSlice from './slices/deliveryPriceSlice.js';
 
@@ -19,7 +19,7 @@ export const store = configureStore({
 		sessionId: paymentSessionSlice,
 		orderFailed: orderFailedSlice,
 		stock: stockSlice,
-		newsletterSuccess: newsletterFormSlice,
+		discountCode: discountCodeSlice,
 		cities: shippingCitiesSlice,
 		deliveryPrice: deliveryPriceSlice,
 	},

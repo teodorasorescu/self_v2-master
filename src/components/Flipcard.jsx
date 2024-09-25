@@ -5,7 +5,7 @@ import Soul from '../images/soul.webp';
 import Body from '../images/body.webp';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { loadProduct } from '../reducers/slices/productSlice';
+import { loadProduct, selectProduct } from '../reducers/slices/productSlice';
 import { Link } from 'react-router-dom';
 import RoundIcon from '../images/round-arrow.webp';
 import { price } from '../constants/productConstants';
@@ -15,6 +15,7 @@ import ReactGA from 'react-ga4';
 
 const Flipcard = () => {
 	const dispatch = useDispatch();
+	const product = useSelector(selectProduct);
 
 	const priceValue = price.toFixed(2) + ' lei';
 	const computeProduct = (image, title, description, subtitle) => {
@@ -22,7 +23,8 @@ const Flipcard = () => {
 			button_label: 'Personalizeaza home buton',
 		});
 
-		const product = {
+		const updatedProduct = {
+			...product,
 			price: price,
 			image: image,
 			title: title,
@@ -30,7 +32,7 @@ const Flipcard = () => {
 			subtitle: subtitle,
 		};
 
-		dispatch(loadProduct(product));
+		dispatch(loadProduct(updatedProduct));
 	};
 
 	const postersStock = useSelector(selectPostersStock);

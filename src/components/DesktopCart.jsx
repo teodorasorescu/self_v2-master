@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Button from '@mui/material/Button';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -15,20 +15,21 @@ import emptyCart from '../images/emptyCart.webp';
 import { useNavigate } from 'react-router-dom';
 import { columns } from '../constants/cartColumns.js';
 import CartActions from './CartActions';
+
+import DiscountForm from './DiscountForm.jsx';
 import { calculateTotalPrice } from '../constants/productConstants.js';
 import { ThemeProvider, createTheme } from '@mui/material';
 
 export const DesktopCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
-
-	useEffect(() => {
-		setHeaderOn(true);
-	}, []);
-
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
+	const [total, setTotal] = useState(calculateTotalPrice(storedProducts));
+	const discountCodeValue = localStorage.getItem('discountValue');
+	console.log(discountCodeValue);
 	const navigate = useNavigate();
+
 	const listItems = (colors) => {
 		return colors.map((color) => (
 			<div
@@ -67,6 +68,14 @@ export const DesktopCart = () => {
 		setHeaderOn(false);
 		navigate('/checkout');
 	};
+
+	useEffect(() => {
+		setHeaderOn(true);
+	}, []);
+
+	useEffect(() => {
+		setTotal(calculateTotalPrice(storedProducts));
+	}, [storedProducts]);
 
 	return (
 		<div className={styles.cart}>
@@ -163,11 +172,28 @@ export const DesktopCart = () => {
 																		productId={index}
 																	/>
 																) : column.id === 'total' ? (
-																	'' +
 																	(row['quantity'] * row['price']).toFixed(2) +
 																	' lei'
 																) : column.id != 'colors' ? (
-																	row['price'].toFixed(2) + ' lei'
+																	<div>
+																		{discountCodeValue != 0 ? (
+																			<>
+																				{' '}
+																				<p className={styles.discountedPrice}>
+																					{row['initialPrice'].toFixed(2) +
+																						' lei'}
+																				</p>
+																				<p className={styles.newPrice}>
+																					{row['price'].toFixed(2) + ' lei'}
+																				</p>
+																			</>
+																		) : (
+																			<p>
+																				{row['initialPrice'].toFixed(2) +
+																					' lei'}
+																			</p>
+																		)}
+																	</div>
 																) : null}
 															</div>
 														</TableCell>
@@ -181,13 +207,11 @@ export const DesktopCart = () => {
 						</TableContainer>
 						<div className={styles.textContainer}>
 							<p className={styles.pTotal} align='right'>
-								Total: {'' + calculateTotalPrice(storedProducts) + ' lei'}
-							</p>
-							<p className={styles.pTva} align='right'>
-								Costurile de livrare și reducere vor fi calculate in Checkout.
+								Total: {'' + total.toFixed(2) + ' lei'}
 							</p>
 						</div>
 						<div className={styles.buttonContainer}>
+							<DiscountForm />
 							<Button
 								className={styles.checkoutContainer}
 								style={{ textDecoration: 'none', color: 'black' }}

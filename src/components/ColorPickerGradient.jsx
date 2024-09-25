@@ -131,21 +131,18 @@ function ColorPickerGradient() {
 		});
 
 		let productId = uuidv4();
+
 		const finalProduct = {
+			...product,
 			id: productId,
-			image: product.image,
-			price: product.price,
-			title: product.title,
 			colors: [
 				Object.entries(colorSwatch1),
 				Object.entries(colorSwatch2),
 				Object.entries(colorSwatch3),
 				Object.entries(colorSwatch4),
 			],
-			fontColor: fontColor,
+			fontColor,
 			quantity: 1,
-			description: product.description,
-			subtitle: product.subtitle,
 		};
 
 		dispatch(loadProduct(finalProduct));

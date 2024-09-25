@@ -1,7 +1,5 @@
 import OrderIllustration from '../images/order_confirmation.webp';
 import styles from '../styling/order.confirmation.module.scss';
-import { CheckoutCart } from './CheckoutCart';
-import { OrderResume } from './OrderResume';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useStateContext } from '../contexts/ContextProvider';
 import React, { useEffect, useState } from 'react';
@@ -24,7 +22,7 @@ const OrderConfirmation = () => {
 	const sessionId = localStorage.getItem('sessionId');
 	const orderFailed = useSelector(selectOrderFailed);
 	const failure = orderFailed || unpaidOrder;
-
+	const discountCode = localStorage.getItem('discountCode');
 	useEffect(() => {
 		setHeaderOn(true);
 		if (sessionId !== '') {
@@ -41,6 +39,7 @@ const OrderConfirmation = () => {
 							colors: product.colors.toString(),
 							image: product.image,
 							fontColor: JSON.stringify(product.fontColor),
+							discount: product.discount,
 						};
 					});
 
@@ -48,11 +47,14 @@ const OrderConfirmation = () => {
 						{
 							products: products,
 							customer: customer,
+							discountCode: discountCode,
 						},
 						dispatch
 					);
 					setUnpaidOrder(false);
 				}
+				localStorage.setItem('discountCode', '');
+
 				if (s.paymentStatus === 'unpaid') {
 					setUnpaidOrder(true);
 					localStorage.setItem('productsOrder', JSON.stringify([]));
@@ -91,11 +93,6 @@ const OrderConfirmation = () => {
 							lucrătoare. Îți vom trimite un email cu confirmarea în cel mai
 							scurt timp.
 						</p>
-					</div>
-					<div className={styles.orderResumeContainer}>
-						{wideScreen && <h4>Rezumatul comenzii</h4>}
-						{wideScreen && <CheckoutCart storedProducts={productsOrder} />}
-						{!wideScreen && <OrderResume storedProducts={productsOrder} />}
 					</div>
 				</>
 			)}

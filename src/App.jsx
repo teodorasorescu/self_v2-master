@@ -22,15 +22,21 @@ import ScrollToTop from './components/ScrollToTop';
 import PageNotFound from './components/PageNotFound';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
+import PosterDetailsPage from './components/PosterDetailsPage.jsx';
+import PostersPage from './components/PostersPage.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 	if (localStorage.getItem('itemCount') == null) {
 		localStorage.setItem('itemCount', 0);
 	}
-
+	const localStoreProducts = localStorage.getItem('products');
+	const storedProducts = JSON.parse(localStoreProducts);
 	useEffect(() => {
-		// Initialize GA4 with your measurement ID
+		if (storedProducts.length == 0) {
+			localStorage.setItem('discountValue', 0);
+			localStorage.setItem('discountCode', '');
+		}
 		ReactGA.initialize('G-VBCPDM60NT');
 	}, []);
 
@@ -44,6 +50,8 @@ function App() {
 				<ScrollToTop />
 				{headerOn && <Header />}
 				<Routes>
+					<Route path='/poster/:id' element={<PosterDetailsPage />} />
+					<Route path='/posters' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />

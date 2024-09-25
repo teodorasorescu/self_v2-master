@@ -1,14 +1,16 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
+
 import classes from '../styling/discount.form.module.scss';
-import { selectDiscountState } from '../reducers/slices/discountFormSlice';
 import sendDiscountAction from '../reducers/actions/sendDiscountAction';
+import { selectDiscountCodeState } from '../reducers/slices/discountCodeSlice';
 
 const DiscountForm = () => {
 	const [discountCode, setDiscountCode] = useState('');
-
-	const validDiscountCode = useSelector(selectDiscountState);
+	const localStoreProducts = localStorage.getItem('products');
+	const storedProducts = JSON.parse(localStoreProducts);
+	const discountCodeSuccess = useSelector(selectDiscountCodeState);
 	const dispatch = useDispatch();
 
 	const setField = (event) => {
@@ -17,33 +19,38 @@ const DiscountForm = () => {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		e.stopPropagation();
-		sendDiscountAction({ discount: discountCode }, dispatch);
+		sendDiscountAction(discountCode, dispatch, storedProducts);
 	}
 
 	return (
 		<div className={classes.container}>
 			<form onSubmit={handleSubmit}>
-				<div className={classes.inputContainer}>
+				<div className='input-group mb-3'>
 					<input
+						className={`${classes.formInput} form-control`}
 						type='text'
-						class='form-control'
 						placeholder='Cod de reducere'
-						aria-label='Cod de reducere'
 						aria-describedby='basic-addon2'
 						required
 						value={discountCode}
-						onChange={(e) => {
-							setField(e);
-						}}
+						onChange={setField}
 					/>
-					<div class='input-group-append' className={classes.buttonContainer}>
-						<Button className={classes.buttonText} type='submit'>
+					<div className={`input-group-append ${classes.inputContainer}`}>
+						<Button className={classes.buttonContainer} type='submit'>
 							Aplică
 						</Button>
 					</div>
 				</div>
 			</form>
+			{discountCodeSuccess != null && (
+				<>
+					{discountCodeSuccess === true ? (
+						<p>Codul a fost aplicat cu succes!</p>
+					) : (
+						<p>Codul introdus este invalid.</p>
+					)}
+				</>
+			)}
 		</div>
 	);
 };

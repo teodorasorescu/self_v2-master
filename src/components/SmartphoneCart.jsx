@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -15,18 +15,16 @@ import emptyCart from '../images/emptyCart.webp';
 import CartActions from './CartActions';
 import { calculateTotalPrice } from '../constants/productConstants';
 import { createTheme, ThemeProvider } from '@mui/material';
+import DiscountForm from './DiscountForm.jsx';
 
 export const SmartphoneCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
 
-	useEffect(() => {
-		setHeaderOn(true);
-	}, []);
-
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
-
+	const [total, setTotal] = useState(calculateTotalPrice(storedProducts));
+	const discountCodeValue = localStorage.getItem('discountValue');
 	const columns = [
 		{ id: 'image', label: 'Articol' },
 		{ id: 'title', label: '' },
@@ -66,13 +64,19 @@ export const SmartphoneCart = () => {
 		));
 	};
 
-	const total = calculateTotalPrice(storedProducts);
-
 	const navigate = useNavigate();
 	const goToCheckout = () => {
 		setHeaderOn(false);
 		navigate('/checkout');
 	};
+
+	useEffect(() => {
+		setHeaderOn(true);
+	}, []);
+
+	useEffect(() => {
+		setTotal(calculateTotalPrice(storedProducts));
+	}, [storedProducts]);
 
 	return (
 		<div className={styles.cart}>
@@ -152,11 +156,31 @@ export const SmartphoneCart = () => {
 																			</p>
 																		)}
 
-																		<p style={{ fontSize: '20px' }}>
-																			{(row['quantity'] * row['price']).toFixed(
-																				2
-																			) + ' lei'}
-																		</p>
+																		<div>
+																			{discountCodeValue != 0 ? (
+																				<>
+																					<p className={styles.discountedPrice}>
+																						{(
+																							row['quantity'] *
+																							row['initialPrice']
+																						).toFixed(2) + ' lei'}
+																					</p>
+																					<p className={styles.newPrice}>
+																						{(
+																							row['quantity'] * row['price']
+																						).toFixed(2) + ' lei'}
+																					</p>
+																				</>
+																			) : (
+																				<p className={styles.price}>
+																					{(
+																						row['quantity'] *
+																						row['initialPrice']
+																					).toFixed(2) + ' lei'}
+																				</p>
+																			)}
+																		</div>
+
 																		<div>
 																			<CartActions
 																				quantity={row['quantity']}
@@ -186,18 +210,8 @@ export const SmartphoneCart = () => {
 								>
 									{'Total:  ' + total.toFixed(2) + ' lei'}
 								</p>
-								<p
-									style={{
-										position: 'relative',
-										fontStyle: 'italic',
-										fontSize: '4vw',
-										paddingRight: '2%',
-									}}
-									align='right'
-								>
-									Costurile de livrare și reducere vor fi calculate in Checkout.
-								</p>
 							</div>
+
 							<div
 								style={{
 									display: 'flex',
@@ -206,6 +220,8 @@ export const SmartphoneCart = () => {
 									alignItems: 'center',
 								}}
 							>
+								{' '}
+								<DiscountForm />
 								<Button
 									className={styles.checkoutButton}
 									onClick={() => {
