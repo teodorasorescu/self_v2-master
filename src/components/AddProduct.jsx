@@ -5,17 +5,11 @@ import { useStateContext } from '../contexts/ContextProvider';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProduct } from '../reducers/slices/productSlice';
 import { loadProducts } from '../reducers/slices/productsSlice';
-import { v4 as uuidv4 } from 'uuid';
 import ProductCarousel from './ProductCarousel';
 import { frameColors, framePrice } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
-import {
-	chassisPrice,
-	computeDiscount,
-	details,
-	suport,
-} from '../constants/productConstants';
+import { chassisPrice, details, suport } from '../constants/productConstants';
 import reactCSS from 'reactcss';
 import {
 	selectChassisStock,
@@ -26,6 +20,7 @@ import getChassisStockAction from '../reducers/actions/getChassisStockAction';
 import ReactGA from 'react-ga4';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { computeProduct, updatePrice } from '../constants/utils';
 
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
@@ -62,22 +57,13 @@ const AddProduct = () => {
 			button_label: 'Adauga produs buton',
 		});
 
-		let productId = uuidv4();
-
-		const finalProduct = {
-			...product,
-			id: productId,
-			initialPrice: finalPrice,
-			quantity: 1,
-			discount: discountCodeValue !== 0 ? discountCodeValue : product.discount,
-			price:
-				discountCodeValue !== 0
-					? computeDiscount(finalPrice, discountCodeValue)
-					: finalPrice,
+		const finalProduct = computeProduct(
+			product,
+			finalPrice,
+			discountCodeValue,
 			frameColor,
-			chassis,
-		};
-
+			chassis
+		);
 		const productsList = [...storedProducts, finalProduct];
 		dispatch(loadProducts(productsList));
 
@@ -130,14 +116,7 @@ const AddProduct = () => {
 	const framesStock = useSelector(selectFramesStock);
 	const chassisStock = useSelector(selectChassisStock);
 	useEffect(() => {
-		let updatedPrice = product.price;
-		if (frameColor !== 'fără') {
-			updatedPrice += framePrice;
-		}
-		if (chassis) {
-			updatedPrice += chassisPrice;
-		}
-		setFinalPrice(updatedPrice);
+		setFinalPrice(updatePrice(product, frameColor, chassis));
 	}, [frameColor, chassis]);
 
 	useEffect(() => {

@@ -22,7 +22,7 @@ import ScrollToTop from './components/ScrollToTop';
 import PageNotFound from './components/PageNotFound';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
-import PosterDetailsPage from './components/PosterDetailsPage.jsx';
+import PosterDetails from './components/PosterDetails.jsx';
 import PostersPage from './components/PostersPage.jsx';
 
 function App() {
@@ -33,15 +33,7 @@ function App() {
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
 	useEffect(() => {
-		if (storedProducts.length == 0) {
-			localStorage.setItem('discountValue', 0);
-			localStorage.setItem('discountCode', '');
-		}
-		if (localStorage.getItem('discountValue') == null) {
-			localStorage.setItem('discountValue', 0);
-		}
-
-		ReactGA.initialize('G-VBCPDM60NT');
+		//ReactGA.initialize('G-VBCPDM60NT');
 	}, []);
 
 	if (localStorage.getItem('products') == null) {
@@ -54,7 +46,7 @@ function App() {
 				<ScrollToTop />
 				{headerOn && <Header />}
 				<Routes>
-					<Route path='/poster/:id' element={<PosterDetailsPage />} />
+					<Route path='/posters/:urlTitle' element={<PosterDetails />} />
 					<Route path='/posters' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />

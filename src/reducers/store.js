@@ -9,6 +9,8 @@ import stockSlice from './slices/stockSlice.js';
 import discountCodeSlice from './slices/discountCodeSlice.js';
 import shippingCitiesSlice from './slices/shippingCitiesSlice.js';
 import deliveryPriceSlice from './slices/deliveryPriceSlice.js';
+import posterSlice from './slices/posterSlice.js';
+import postersSlice from './slices/postersSlice.js';
 
 export const store = configureStore({
 	reducer: {
@@ -16,11 +18,13 @@ export const store = configureStore({
 		cartProducts: cartProductsReducer,
 		product: productSlice,
 		products: productsSlice,
+		posters: postersSlice,
 		sessionId: paymentSessionSlice,
 		orderFailed: orderFailedSlice,
 		stock: stockSlice,
 		discountCode: discountCodeSlice,
 		cities: shippingCitiesSlice,
 		deliveryPrice: deliveryPriceSlice,
+		poster: posterSlice,
 	},
 });
