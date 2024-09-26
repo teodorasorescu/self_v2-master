@@ -17,8 +17,8 @@ export function SwatchGradient({ color, setColor }) {
 	const styles = reactCSS({
 		default: {
 			color: {
-				width: '40px',
-				height: '40px',
+				width: '43px',
+				height: '43px',
 				borderRadius: '50%',
 				background: `rgb(${color.r}, ${color.g}, ${color.b})`,
 			},
