@@ -18,8 +18,8 @@ export function SwatchGradient({ color, setColor }) {
 		default: {
 			color: {
 				width: '40px',
-				height: '30px',
-				borderRadius: '3px',
+				height: '40px',
+				borderRadius: '50%',
 				background: `rgb(${color.r}, ${color.g}, ${color.b})`,
 			},
 		},

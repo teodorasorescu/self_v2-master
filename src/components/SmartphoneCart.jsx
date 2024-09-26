@@ -54,8 +54,8 @@ export const SmartphoneCart = () => {
 				key={Math.random() * 101}
 				style={{
 					width: '25px',
-					height: '20px',
-					borderRadius: '3px',
+					height: '25px',
+					borderRadius: '50%',
 					margin: '1%',
 					marginTop: '5%',
 					background: `rgb(${color[0][1]}, ${color[1][1]}, ${color[2][1]})`,

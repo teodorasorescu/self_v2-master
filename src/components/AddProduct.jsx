@@ -117,9 +117,9 @@ const AddProduct = () => {
 				key={Math.random() * 101}
 				style={{
 					width: '40px',
-					height: '30px',
-					borderRadius: '3px',
-					margin: '1%',
+					height: '40px',
+					borderRadius: '50%',
+					margin: '3px',
 					background: `rgb(${color[0][1]}, ${color[1][1]}, ${color[2][1]})`,
 					cursor: 'default',
 				}}
