@@ -19,6 +19,7 @@ const headersData = [
 		label: 'Acasă',
 		href: '/',
 	},
+	{ lable: 'Posters', href: '/posters' },
 	{
 		label: 'Psihologia Culorilor',
 		href: '/psihologia-culorilor',

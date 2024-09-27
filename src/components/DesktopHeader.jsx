@@ -155,6 +155,13 @@ const DesktopHeader = () => {
 					</div> */}
 					<a
 						className={styles.link}
+						href='/posters'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Posters
+					</a>
+					<a
+						className={styles.link}
 						href='/psihologia-culorilor'
 						onMouseOver={() => setSubHeadersOff()}
 					>

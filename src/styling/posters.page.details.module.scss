@@ -1,0 +1,48 @@
+.container {
+	display: block;
+	padding-top: 3%;
+	text-align: center;
+	font-family: Raleway, sans-serif;
+	width: 100%;
+	cursor: default;
+
+	> h2 {
+		@media screen and (max-width: 1024px) {
+			width: 90vw;
+		}
+		width: 70vw;
+		font-size: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 5%;
+	}
+
+	> h1 {
+		font-size: 2.3rem;
+	}
+
+	.postersList {
+		margin-left: 3%;
+		margin-right: 3%;
+		display: flex;
+		flex-wrap: wrap; // Allow items to wrap
+		justify-content: space-between; // Space items evenly
+	}
+
+	.poster {
+		width: calc(50% - 10px); // Default to 2 items per row for small screens
+		> a {
+			text-decoration: none;
+			text-decoration-line: none;
+		}
+		@media (min-width: 768px) {
+			// For tablets and small desktops
+			width: calc(33.33% - 10px); // 3 items per row
+		}
+
+		@media (min-width: 1024px) {
+			// For larger desktops
+			width: calc(25% - 10px); // 4 items per row
+		}
+	}
+}

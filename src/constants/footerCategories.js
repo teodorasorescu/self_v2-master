@@ -18,6 +18,7 @@ export const infoCategories = [
 ];
 
 export const aboutUsCategories = [
+	{ name: 'Posters', link: '/posters' },
 	{
 		name: 'Despre SELF',
 		link: '/despre-self',

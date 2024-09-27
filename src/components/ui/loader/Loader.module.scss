@@ -8,22 +8,32 @@
 	border-radius: 20px;
 	margin: 0 auto;
 	margin-top: 3rem;
-}
+	position: relative; // Added to position child elements easily
 
-.flex-cloumn {
-	flex-direction: column;
-}
-
-.fade-in-text {
-	margin-top: 10px;
-	animation: fadeIn 5s;
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
+	.loaderImage {
+		animation: spin 2s ease-in-out infinite; // Apply fade animation
 	}
-	100% {
-		opacity: 1;
+
+	.fadeInText {
+		margin-top: 10px;
+		animation: fadeIn 5s;
+		text-align: center; // Center the text below the image
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 }

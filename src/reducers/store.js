@@ -18,7 +18,6 @@ export const store = configureStore({
 		cartProducts: cartProductsReducer,
 		product: productSlice,
 		products: productsSlice,
-		posters: postersSlice,
 		sessionId: paymentSessionSlice,
 		orderFailed: orderFailedSlice,
 		stock: stockSlice,
@@ -26,5 +25,6 @@ export const store = configureStore({
 		cities: shippingCitiesSlice,
 		deliveryPrice: deliveryPriceSlice,
 		poster: posterSlice,
+		posters: postersSlice,
 	},
 });

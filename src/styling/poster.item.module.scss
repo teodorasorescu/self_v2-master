@@ -1,0 +1,41 @@
+.container {
+	display: flex; // Use Flexbox for layout
+	flex-direction: column; // Stack items vertically
+	align-items: flex-start; // Align items to the left
+	position: relative; // Position for absolute children
+
+	.pictureContainer {
+		height: auto;
+		width: 100%;
+	}
+
+	.fadeOut {
+		opacity: 0; // Fade out effect
+	}
+
+	.fadeIn {
+		opacity: 1; // Fade in effect
+		position: absolute; // Position above the original image
+		top: 0; // Align with original image
+		left: 0; // Align with original image
+	}
+	.textContainer {
+		display: flex; // Use Flexbox for text alignment
+		flex-direction: column; // Stack text vertically
+		justify-content: flex-start; // Align text to the top
+		text-align: left;
+		margin-top: 3%;
+
+		> h3 {
+			color: black;
+
+			font-size: 1rem;
+		}
+
+		> h4 {
+			color: rgb(139, 139, 139);
+			margin-top: 3%;
+			font-size: 0.8rem;
+		}
+	}
+}

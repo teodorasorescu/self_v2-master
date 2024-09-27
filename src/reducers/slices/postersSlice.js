@@ -33,4 +33,4 @@ export const arePostersLoading = (state) => state.posters.arePostersLoading;
 
 export const postersLoadingError = (state) => state.posters.postersLoadingError;
 
-export default postersSlice;
+export default postersSlice.reducer;

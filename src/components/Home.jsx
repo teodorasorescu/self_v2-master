@@ -10,8 +10,10 @@ import Sustenability from './Sustenability';
 import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import PostersHomeShowcase from './PostersHomeShowcase';
+import PostersHomeLoading from './PostersHomeLoading';
 
-const Home = () => {
+const Home = ({ posters }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:768px)');
 	const myRef = useRef(null);
 
@@ -50,6 +52,9 @@ const Home = () => {
 					</div>
 				</div>
 			)}
+			<div className={styles.inspoImages}>
+				<PostersHomeLoading />
+			</div>
 			<SelfMission />{' '}
 			<div ref={myRef}>
 				<div className={styles.text}>

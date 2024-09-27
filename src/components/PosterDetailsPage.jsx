@@ -25,7 +25,7 @@ const PosterDetailsPage = ({ poster }) => {
 	const [chassis, setChassis] = useState(false);
 	const { itemCount, setItemCount } = useStateContext();
 
-	//const [finalPrice, setFinalPrice] = useState(poster.price);
+	const [finalPrice, setFinalPrice] = useState(poster.price);
 	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
 
 	const localStoreProducts = localStorage.getItem('products');
@@ -59,9 +59,9 @@ const PosterDetailsPage = ({ poster }) => {
 		);
 	};
 
-	// useEffect(() => {
-	// 	setFinalPrice(updatePrice(poster, frameColor, chassis));
-	// }, [frameColor, chassis]);
+	useEffect(() => {
+		setFinalPrice(updatePrice(poster, frameColor, chassis));
+	}, [frameColor, chassis]);
 
 	return (
 		<div className='bodyContainer'>
@@ -72,7 +72,7 @@ const PosterDetailsPage = ({ poster }) => {
 				<div className='introductionContainer'>
 					<div className='titleContainer'>
 						<h1>{poster.title}</h1>
-						<h2>{poster.price.toFixed(2)}</h2>
+						<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
 					</div>
 
 					<FrameAndChassisSelect

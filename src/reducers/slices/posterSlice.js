@@ -10,6 +10,8 @@ export const posterSlice = createSlice({
 			price: 0,
 			urlTitle: '',
 			cardTitle: '',
+			altDescription: '',
+			hoverImgTitle: '',
 		},
 		isPosterLoading: false,
 		posterLoadingError: '',

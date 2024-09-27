@@ -11,7 +11,7 @@ export const updatePrice = (product, frameColor, chassis) => {
 		updatedPrice += chassisPrice;
 	}
 
-	return updatePrice;
+	return updatedPrice;
 };
 
 export const computeProduct = (
