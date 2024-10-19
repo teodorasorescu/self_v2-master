@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 
 import { computeDiscount, updatePrice } from '../../../constants/utils';
-import '../../../styling/addProduct.css';
+import classes from './poster.page.module.scss';
 import { useStateContext } from '../../../contexts/ContextProvider';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from '../../Dropdown';
@@ -65,46 +65,44 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	}, [frameColor, chassis]);
 
 	return (
-		<div className='bodyContainer'>
-			<div className='secondContainer'>
-				<div className='carouselContainer'>
-					<ItemImagesCarousel product={product} />
+		<div className={classes.container}>
+			<div className={classes.carouselContainer}>
+				<ItemImagesCarousel product={product} />
+			</div>
+			<div className={classes.introductionContainer}>
+				<div className={classes.titleContainer}>
+					<h1>{product.title}</h1>
+					<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
 				</div>
-				<div className='introductionContainer'>
-					<div className='titleContainer'>
-						<h1>{product.title}</h1>
-						<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
-					</div>
 
-					<FrameAndChassisSelect
-						frameColor={frameColor}
-						chassis={chassis}
-						setChassis={setChassis}
-						setFrameColor={setFrameColor}
+				<FrameAndChassisSelect
+					frameColor={frameColor}
+					chassis={chassis}
+					setChassis={setChassis}
+					setFrameColor={setFrameColor}
+				/>
+
+				<div className={classes.addToCartContainer}>
+					<a href='/cos-de-cumparaturi'>
+						<Button className={classes.cartButton} onClick={computeProductCart}>
+							ADAUGĂ ÎN COȘ
+						</Button>
+					</a>
+				</div>
+
+				<div className={classes.detailsDropdownContainer}>
+					<Dropdown
+						title='DETALII'
+						content={details}
+						dropdownWidth={width}
+						value={true}
 					/>
-
-					<div className='addToCartContainer'>
-						<a href='/cos-de-cumparaturi'>
-							<Button className='cartButton' onClick={computeProductCart}>
-								ADAUGĂ ÎN COȘ
-							</Button>
-						</a>
-					</div>
-
-					<div className='detailsDropdownContainer'>
-						<Dropdown
-							title='DETALII'
-							content={details}
-							dropdownWidth={width}
-							value={true}
-						/>
-						<Dropdown
-							title='SUPORT'
-							content={suport}
-							dropdownWidth={width}
-							value={false}
-						/>
-					</div>
+					<Dropdown
+						title='SUPORT'
+						content={suport}
+						dropdownWidth={width}
+						value={false}
+					/>
 				</div>
 			</div>
 		</div>

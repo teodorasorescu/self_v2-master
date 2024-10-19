@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+@media screen and (min-width: 1025px) {
+	.container {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		padding-top: 5%;
+		padding-bottom: 5%;
+		justify-content: space-evenly;
+
+		.carouselContainer {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.introductionContainer {
+			width: 25vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			font-family: 'Raleway', sans-serif;
+			text-align: left;
+			.titleContainer {
+				border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+				width: 25vw;
+				font-family: 'Frank Ruhl Libre', serif;
+
+				> h2 {
+					font-size: x-large;
+				}
+				> h1 {
+					font-size: xx-large;
+					font-style: italic;
+				}
+			}
+
+			.addToCartContainer {
+				padding-top: 5%;
+				padding-bottom: 5%;
+				.cartButton {
+					border-radius: 10px;
+					width: 25vw;
+					height: 8vh;
+					font-family: 'Raleway', sans-serif;
+					text-align: center;
+					font-size: 100%;
+					transition: all 0.1s ease;
+					cursor: pointer;
+					text-decoration: none;
+					background-color: rgba(248, 221, 170, 0.2);
+					font-weight: 600;
+					border: 2px solid rgba(248, 221, 170, 0.8);
+					color: black;
+				}
+
+				.cartButton:hover {
+					background-color: rgba(248, 221, 170, 0.8);
+					color: black;
+
+					text-decoration: none;
+					transition: none;
+				}
+			}
+		}
+
+		.detailsDropdownContainer {
+			align-self: flex-start;
+			white-space: pre-line;
+		}
+
+		.current {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		flex-direction: column;
+		padding-bottom: 5%;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		font-family: 'Raleway', sans-serif;
+		display: flex;
+		width: 100vw;
+
+		.introductionContainer {
+			font-family: 'Raleway', sans-serif;
+			text-align: left;
+			justify-content: center;
+
+			.titleContainer {
+				margin-left: 3%;
+				width: 95vw;
+				border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
+				padding-left: 1%;
+				> h1 {
+					font-size: xx-large;
+					font-style: italic;
+				}
+				> h2 {
+					font-size: x-large;
+				}
+			}
+
+			.addToCartContainer {
+				padding-bottom: 5%;
+				display: flex; /* Use flexbox to center the button */
+				justify-content: center; /* Center horizontally */
+				align-items: center; /* Center vertically (if needed) */
+				.cartButton {
+					width: 85vw;
+					height: 60px;
+					font-family: 'Raleway', sans-serif;
+
+					font-size: 100%;
+					transition: all 0.1s ease;
+					border-radius: 10px;
+
+					cursor: pointer;
+					text-decoration: none;
+					background-color: rgba(248, 221, 170, 0.2);
+					font-weight: 600;
+					border: 2px solid rgba(248, 221, 170, 0.8);
+					color: black;
+				}
+
+				.cartButton:hover {
+					text-decoration: none;
+					transition: none;
+					background-color: rgba(248, 221, 170, 0.8);
+				}
+			}
+
+			.detailsDropdownContainer {
+				white-space: pre-line;
+				display: grid;
+				justify-content: center;
+				padding-top: 3%;
+			}
+		}
+	}
+}
