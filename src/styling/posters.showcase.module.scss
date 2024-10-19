@@ -72,6 +72,12 @@
 	cursor: pointer;
 	padding-top: 10%;
 	padding-bottom: 10%;
+
+	@media screen and (max-width: 1024px) {
+		padding-top: 20%;
+		padding-bottom: 20%;
+	}
+
 	&.prev {
 		left: 10px; // Position the previous arrow
 	}

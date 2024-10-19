@@ -12,6 +12,7 @@ const PostersPage = () => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(arePostersLoading);
 	let posters = useSelector(selectPosters);
+	//put in localstorage!
 	useEffect(() => {
 		if (posters.length === 0) {
 			getPostersAction(dispatch);
