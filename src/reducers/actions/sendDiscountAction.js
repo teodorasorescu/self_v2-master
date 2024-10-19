@@ -7,7 +7,7 @@ import {
 import {
 	modifyExistingDiscount,
 	modifyProductPrices,
-} from '../../constants/productConstants';
+} from '../../constants/utils';
 
 const sendDiscountAction = (discountCode, dispatch, storedProducts) => {
 	axios

@@ -8,9 +8,8 @@ import {
 
 const getPostersAction = (dispatch) => {
 	dispatch(loadPostersStarted());
-
 	axios
-		.get(`${BACKEND_PATH}/posters/`)
+		.get(`${BACKEND_PATH}/products/posters`)
 		.then((response) => {
 			dispatch(loadPostersSuccess(response.data));
 		})

@@ -1,6 +1,8 @@
 import styles from '../styling/self.mission.module.scss';
-import Hands from '../images/hands.svg';
 import { benefits, headline, description } from '../constants/homeMission';
+import { S3_BUCKET } from '../constants/links';
+
+const handsImg = S3_BUCKET + '/hands.svg';
 
 const SelfMission = () => {
 	return (
@@ -13,7 +15,7 @@ const SelfMission = () => {
 					return (
 						<div className={styles.benefits} key={i}>
 							<img
-								src={Hands}
+								src={handsImg}
 								alt=' SELF te va îndruma să te reconectezi cu sinele tău autentic și să explorezi universul creativității prin artă și culori.'
 							/>
 							<p>{t}</p>

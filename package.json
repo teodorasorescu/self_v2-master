@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.668.0",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.15.3",
@@ -27,9 +28,11 @@
     "react-redux": "^7.2.9",
     "react-router-dom": "^6.26.0",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.2",
     "react-spinners": "^0.14.1",
     "reactcss": "^1.2.3",
     "sass-loader": "^12.0.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.2"
   },
   "scripts": {

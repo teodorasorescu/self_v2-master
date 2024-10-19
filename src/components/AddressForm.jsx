@@ -6,11 +6,9 @@ import states from '../constants/states';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Shipping } from './Shipping';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import {
-	calculateTotalPrice,
-	computeProductsLength,
-	price,
-} from '../constants/productConstants';
+import { calculateTotalPrice, computeProductsLength } from '../constants/utils';
+import { price } from '../constants/productConstants';
+
 import sendCheckoutAction from '../reducers/actions/sendCheckoutAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';

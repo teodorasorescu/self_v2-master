@@ -1,0 +1,42 @@
+.container {
+	display: block;
+	padding-top: 3%;
+	text-align: center;
+	font-family: Raleway, sans-serif;
+	width: 100%;
+	cursor: default;
+
+	> h3 {
+		font-family: 'Frank Ruhl Libre', serif;
+
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 2.5rem;
+		font-style: italic;
+		text-align: center;
+		font-style: italic;
+	}
+
+	& .postersList {
+		margin-left: 3%;
+		margin-right: 3%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	& .poster {
+		margin-bottom: 2%;
+		display: block;
+		justify-content: center;
+		width: calc(33.33% - 10px);
+
+		@media screen and (max-width: 1024px) {
+			width: calc(50% - 10px);
+		}
+		> a {
+			text-decoration: none;
+			text-decoration-line: none;
+		}
+	}
+}

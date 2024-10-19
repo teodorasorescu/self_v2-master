@@ -5,13 +5,13 @@ import AddressForm from './AddressForm.jsx';
 import { CheckoutCart } from './CheckoutCart';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { OrderResume } from './OrderResume';
-import Self from '../images/self_logo.webp';
+import { S3_BUCKET } from '../constants/links.js';
 
 export const Checkout = () => {
 	const { headerOn, setHeaderOn } = useStateContext();
 	const wideScreen = useMediaQuery('(min-width:1025px)');
 	const storedProducts = JSON.parse(localStorage.getItem('products'));
-
+	const Self = S3_BUCKET + '/self_logo.webp';
 	useEffect(() => {
 		setHeaderOn(false);
 	}, []);

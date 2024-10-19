@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styling/ResearchersFlipcard.css';
 import colorResearchers from '../constants/colorResearchers';
-import SwipeIcon from '../images/hand.webp';
+import { S3_BUCKET } from '../constants/links';
+
+const swipeIconImg = S3_BUCKET + '/hand.webp';
 
 const ResearchersFlipcard = () => {
 	return (
@@ -21,7 +23,7 @@ const ResearchersFlipcard = () => {
 									</div>
 									<div className='swipeIconContainer'>
 										<img
-											src={SwipeIcon}
+											src={swipeIconImg}
 											alt='Gliseaza catre dreapta si exploareaza lumea oamenilor ce au studit psihologia culorilor'
 										/>
 									</div>

@@ -1,11 +1,12 @@
 import styles from '../styling/colors.choice.module.scss';
-import Colors from '../images/colors.webp';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { S3_BUCKET } from '../constants/links';
 
 const ColorsChoice = () => {
 	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
+	const colorsImg = S3_BUCKET + '/colors.webp';
 
 	return (
 		<div className={styles.container}>
@@ -15,7 +16,7 @@ const ColorsChoice = () => {
 						<h3>CUM ALEGEM CULORILE?</h3>
 						<img
 							className={styles.colors}
-							src={Colors}
+							src={colorsImg}
 							alt='semnificatie spirituala culori, psihologie, grafica, tablouri'
 						/>
 						<div className={styles.buttonContainer}>
@@ -33,7 +34,7 @@ const ColorsChoice = () => {
 						<h3>CUM ALEGEM CULORILE?</h3>
 						<img
 							className={styles.colors}
-							src={Colors}
+							src={colorsImg}
 							alt='semnificatie spirituala culori, psihologie, grafica, tablouri'
 						/>
 						<div className={styles.buttonContainer}>

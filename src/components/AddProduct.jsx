@@ -98,6 +98,9 @@ const AddProduct = () => {
 		});
 	}
 	const listItems = (colors) => {
+		if (colors === undefined) {
+			return;
+		}
 		return colors.map((color) => (
 			<div
 				key={Math.random() * 101}

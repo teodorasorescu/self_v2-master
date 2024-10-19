@@ -1,16 +1,18 @@
-import inspo1 from '../images/inspo1.webp';
-import inspo2 from '../images/inspo2.webp';
-import inspo3 from '../images/inspo3.webp';
-import inspo4 from '../images/inspo4.webp';
-import inspo6 from '../images/inspo6.webp';
-import inspo7 from '../images/inspo7.webp';
-import inspo8 from '../images/inspo8.webp';
-import inspo9 from '../images/inspo9.webp';
-import inspo10 from '../images/inspo10.webp';
-import inspo11 from '../images/inspo11.webp';
+import { S3_BUCKET } from './links';
 
-import inspo14 from '../images/inspo14.webp';
-import inspo15 from '../images/inspo15.webp';
+const inspo1 = S3_BUCKET + '/inspo1.webp';
+const inspo2 = S3_BUCKET + '/inspo2.webp';
+const inspo3 = S3_BUCKET + '/inspo3.webp';
+const inspo4 = S3_BUCKET + '/inspo4.webp';
+const inspo6 = S3_BUCKET + '/inspo6.webp';
+const inspo7 = S3_BUCKET + '/inspo7.webp';
+const inspo8 = S3_BUCKET + '/inspo8.webp';
+const inspo9 = S3_BUCKET + '/inspo9.webp';
+const inspo10 = S3_BUCKET + '/inspo10.webp';
+const inspo11 = S3_BUCKET + '/inspo11.webp';
+
+const inspo14 = S3_BUCKET + '/inspo14.webp';
+const inspo15 = S3_BUCKET + '/inspo15.webp';
 
 export const inspoData = [
 	{

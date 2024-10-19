@@ -11,11 +11,13 @@ import TableRow from '@mui/material/TableRow';
 import styles from '../styling/smartphone.cart.module.scss';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
-import emptyCart from '../images/emptyCart.webp';
 import CartActions from './CartActions';
-import { calculateTotalPrice } from '../constants/productConstants';
+import { calculateTotalPrice } from '../constants/utils';
 import { createTheme, ThemeProvider } from '@mui/material';
 import DiscountForm from './DiscountForm.jsx';
+import { S3_BUCKET } from '../constants/links.js';
+
+const emptyCart = S3_BUCKET + '/emptyCart.webp';
 
 export const SmartphoneCart = () => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -49,6 +51,9 @@ export const SmartphoneCart = () => {
 	});
 
 	const listItems = (colors) => {
+		if (colors === undefined) {
+			return;
+		}
 		return colors.map((color) => (
 			<div
 				key={Math.random() * 101}
@@ -123,11 +128,12 @@ export const SmartphoneCart = () => {
 																	<div>
 																		<div>
 																			<img
-																				src={require(`../images/${row['image']}`)}
+																				src={`${S3_BUCKET}/${value}`}
 																				width='70'
 																				alt='Tablou Canvas Gradient Personalizat - Body Mind Soul'
 																			/>{' '}
 																		</div>
+
 																		<div
 																			style={{
 																				display: 'flex',

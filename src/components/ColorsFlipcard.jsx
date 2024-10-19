@@ -1,8 +1,11 @@
 import React from 'react';
 import '../styling/colorsflipcard.css';
 import colors from '../constants/colorsDescription';
-import RoundIcon from '../images/round-arrow.webp';
+import { S3_BUCKET } from '../constants/links';
+
 const ColorsFlipcard = () => {
+	const roundIconImg = S3_BUCKET + '/round-arrow.webp';
+
 	return (
 		<div className='container'>
 			{colors.map((c, i) => {
@@ -12,7 +15,7 @@ const ColorsFlipcard = () => {
 							<div className='front' style={{ backgroundColor: `${c.color}` }}>
 								<div className='roundIconContainer'>
 									<img
-										src={RoundIcon}
+										src={roundIconImg}
 										alt='intoarce cardul si personalizeaza tabloul'
 									/>
 								</div>

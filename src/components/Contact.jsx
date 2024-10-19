@@ -1,10 +1,13 @@
 import styles from '../styling/contact.module.scss';
-import InstaIcon from '../images/instagram_logo.webp';
-import TikTokIcon from '../images/tiktok_logo.webp';
+
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
+import { S3_BUCKET } from '../constants/links';
 
 const Contact = () => {
+	const instaIcon = S3_BUCKET + '/instagram_logo.webp';
+	const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
+
 	return (
 		<div>
 			<h5>Contact</h5>
@@ -17,14 +20,14 @@ const Contact = () => {
 				<a href={INSTAGRAM_LINK}>
 					<img
 						className={styles.socialMediaIcons}
-						src={InstaIcon}
+						src={instaIcon}
 						alt='instagram'
 					/>
 				</a>
 				<a href={TIKTOK_LINK}>
 					<img
 						className={styles.socialMediaIcons}
-						src={TikTokIcon}
+						src={tiktokIcon}
 						alt='tiktok'
 					/>
 				</a>

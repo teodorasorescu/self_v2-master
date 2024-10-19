@@ -7,14 +7,13 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/checkout.cart.module.scss';
-import {
-	calculateTotalPrice,
-	computeProductsLength,
-	price,
-} from '../constants/productConstants';
+import { calculateTotalPrice, computeProductsLength } from '../constants/utils';
+
 import { createTheme, ThemeProvider } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { selectDeliveryPrice } from '../reducers/slices/deliveryPriceSlice';
+import { S3_BUCKET } from '../constants/links';
+import { price } from '../constants/productConstants';
 
 export const CheckoutCart = ({ storedProducts }) => {
 	const discountCodeValue = parseInt(localStorage.getItem('discountValue'), 10);
@@ -32,6 +31,9 @@ export const CheckoutCart = ({ storedProducts }) => {
 	];
 
 	const listItems = (colors) => {
+		if (colors === undefined) {
+			return;
+		}
 		return colors.map((color) => (
 			<div
 				key={Math.random() * 101}
@@ -48,7 +50,6 @@ export const CheckoutCart = ({ storedProducts }) => {
 	};
 
 	const total = calculateTotalPrice(storedProducts);
-	console.log(storedProducts);
 	const discountNo = Math.floor(computeProductsLength(storedProducts) / 3);
 	const discount = false;
 	// computeProductsLength(storedProducts) / 3 >= 1;
@@ -117,7 +118,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																			}}
 																		>
 																			<img
-																				src={require(`../images/${row['image']}`)}
+																				src={`${S3_BUCKET}/${value}`}
 																				width='70'
 																				alt='tablou personalizat gradient canvas'
 																			/>{' '}

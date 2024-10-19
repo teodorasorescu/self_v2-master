@@ -1,49 +1,21 @@
 import { React } from 'react';
 import { useStateContext } from '../contexts/ContextProvider';
 import styles from '../styling/header.module.scss';
-import InstaIcon from '../images/instagram_logo.webp';
-import TikTokIcon from '../images/tiktok_logo.webp';
+
 import Badge from '@mui/material/Badge';
 import { makeStyles } from '@mui/styles';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@mui/material';
-import ShoppingBag from '../images/cart.webp';
-import Self from '../images/self_logo.webp';
+import { Helmet } from 'react-helmet';
+import { contactData, headersData } from '../constants/productConstants';
+import { S3_BUCKET } from '../constants/links';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
-import { Helmet } from 'react-helmet';
-
-const headersData = [
-	{
-		label: 'Acasă',
-		href: '/',
-	},
-	{ lable: 'Posters', href: '/posters' },
-	{
-		label: 'Psihologia Culorilor',
-		href: '/psihologia-culorilor',
-	},
-	{
-		label: 'Inspirație',
-		href: '/inspiratie',
-	},
-	{
-		label: 'Despre SELF',
-		href: '/despre-self',
-	},
-];
-
-const contactData = [
-	{
-		label: 'FAQ',
-		href: '/faq',
-	},
-	{
-		label: 'Contact',
-		href: '/contact',
-	},
-];
+const instaIcon = S3_BUCKET + '/instagram_logo.webp';
+const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
+const shoppingBagImg = S3_BUCKET + '/cart.webp';
+const selfLogo = S3_BUCKET + '/self_logo.webp';
 
 const SmartphoneHeader = () => {
 	const { drawerOpen, setDrawerOpen } = useStateContext();
@@ -185,7 +157,7 @@ const SmartphoneHeader = () => {
 											margin: 'none',
 											border: 'none',
 										}}
-										src={InstaIcon}
+										src={instaIcon}
 										alt='instagram'
 									/>
 								</a>
@@ -200,7 +172,7 @@ const SmartphoneHeader = () => {
 											border: 'none',
 										}}
 										alt='tiktok'
-										src={TikTokIcon}
+										src={tiktokIcon}
 									/>
 								</a>
 							</MenuItem>
@@ -208,7 +180,7 @@ const SmartphoneHeader = () => {
 					</Drawer>
 				</Toolbar>
 				<a href='/'>
-					<img src={Self} alt='SELF Logo - Embrace yourself with colors' />
+					<img src={selfLogo} alt='SELF Logo - Embrace yourself with colors' />
 				</a>
 				<div className={styles.shoppingButton}>
 					<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
@@ -223,7 +195,7 @@ const SmartphoneHeader = () => {
 							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
 						>
 							<img
-								src={ShoppingBag}
+								src={shoppingBagImg}
 								className={styles.iconSize}
 								alt='cos de cumparaturi'
 							/>{' '}

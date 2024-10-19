@@ -1,25 +1,17 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Flipcard from './Flipcard';
 import styles from '../styling/home.module.scss';
 import Button from '@mui/material/Button';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
-import SelfMission from './SelfMission';
 import Benefits from './Benefits';
 import VisualImages from './VisiualImages';
-import Sustenability from './Sustenability';
 import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import PostersHomeShowcase from './PostersHomeShowcase';
-import PostersHomeLoading from './PostersHomeLoading';
+import PostersHomeLoading from './features/posters/PostersHomeLoading';
 
-const Home = ({ posters }) => {
+const Home = () => {
 	const smartphoneScreen = useMediaQuery('(max-width:768px)');
-	const myRef = useRef(null);
-
-	const executeScroll = () => {
-		myRef.current.scrollIntoView();
-	};
 
 	return (
 		<div className={styles.container}>
@@ -27,47 +19,46 @@ const Home = ({ posters }) => {
 				{smartphoneScreen && (
 					<div className={styles.introductionContainer}>
 						<h1 className={styles.title}>
-							Reflect on Your True SELF: The Journey Begins Within
-						</h1>
-						<h1 className={styles.subtitle}>Tablouri Personalizate Canvas</h1>
+							Embrace the Colors <br /> of Your Being and Feelings
+						</h1>{' '}
+						<h3 className={styles.subtitle}>
+							New Canvas Art Prints Available Now - Limited Edition
+						</h3>
 						<div className={styles.buttonContainer}>
-							{' '}
-							<Button onClick={executeScroll} className={styles.button}>
-								Începe Acum
-							</Button>
+							<a href='/posters'>
+								<Button className={styles.button}>GET YOURS</Button>
+							</a>{' '}
 						</div>
 					</div>
 				)}
 			</div>
 			{!smartphoneScreen && (
 				<div className={styles.introductionContainer}>
-					<h1 className={styles.title}>Reflect on Your True SELF:</h1>
-					<h1 className={styles.title}>The Journey Begins Within</h1>
-					<h1 className={styles.subtitle}>TABLOURI PERSONALIZATE CANVAS</h1>
+					<h1 className={styles.title}>
+						Embrace the Colors of Your Being and Feelings
+					</h1>
+					<h3 className={styles.subtitle}>
+						New Canvas Art Prints and Frames Available Now <br />
+						Limited Edition
+					</h3>
 					<div className={styles.buttonContainer}>
-						{' '}
-						<Button onClick={executeScroll} className={styles.button}>
-							Începe Acum
-						</Button>
+						<a href='/posters'>
+							<Button className={styles.button}>GET YOURS</Button>
+						</a>
 					</div>
 				</div>
 			)}
-			<div className={styles.inspoImages}>
-				<PostersHomeLoading />
+			<PostersHomeLoading />
+			<VisualImages />
+			{/* <FramesHomeLoading /> */}
+			<div className={styles.text}>
+				<h3>Tablouri Personalizate Canvas</h3>
 			</div>
-			<SelfMission />{' '}
-			<div ref={myRef}>
-				<div className={styles.text}>
-					<h3>TABLOURI</h3>
-				</div>
-				<Flipcard />
-			</div>
-			<VisualImages /> <Benefits />
+			<Flipcard />
 			<ColorsChoice />
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
 			</div>
-			<Sustenability />
 			<OurStory />
 		</div>
 	);

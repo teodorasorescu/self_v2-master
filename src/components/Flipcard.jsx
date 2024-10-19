@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
 import '../styling/flipcard.css';
-import Mind from '../images/mind.webp';
-import Soul from '../images/soul.webp';
-import Body from '../images/body.webp';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { loadProduct, selectProduct } from '../reducers/slices/productSlice';
 import { Link } from 'react-router-dom';
-import RoundIcon from '../images/round-arrow.webp';
 import { price } from '../constants/productConstants';
 import { selectPostersStock } from '../reducers/slices/stockSlice';
 import getPostersStockAction from '../reducers/actions/getPostersStockAction';
 import ReactGA from 'react-ga4';
+import { S3_BUCKET } from '../constants/links';
+import Button from './ui/button/Button';
+
+const mind = S3_BUCKET + '/mind.webp';
+const soul = S3_BUCKET + '/soul.webp';
+const body = S3_BUCKET + '/body.webp';
 
 const Flipcard = () => {
 	const dispatch = useDispatch();
@@ -43,32 +44,27 @@ const Flipcard = () => {
 
 	//useEffect and check if is the stock,
 	// if yes than personalizare msg , else stop epuizat msg
+
 	return (
 		<div className='box-container'>
 			<div className='box-item'>
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${Body})` }}
+						style={{ backgroundImage: `url(${body})` }}
 					>
 						<div className='inner color-white'></div>
-						<div className='roundIconContainer'>
-							<img
-								src={RoundIcon}
-								alt='Intoarce cardul si personalizeaza-ti tabloul gradient canvas'
-							/>
-						</div>
 					</div>
 					<div
 						className='flip-box-back text-center'
-						style={{ backgroundImage: `url(${Body})` }}
+						style={{ backgroundImage: `url(${body})` }}
 					>
 						<div className='inner color-white'>
 							{postersStock === 0 ? (
-								<button className='flip-box-button'>Stoc epuizat</button>
+								<Button style='flip-box-button' msg='Stoc epuizat' />
 							) : (
 								<Link to='/personalizare'>
-									<button
+									<Button
 										onClick={() =>
 											computeProduct(
 												'body_buy.webp',
@@ -77,46 +73,38 @@ const Flipcard = () => {
 												'NOURISH YOUR BODY'
 											)
 										}
-										className='flip-box-button'
-									>
-										Personalizează tablou{' '}
-									</button>
+										msg={'Personalizează tablou'}
+										style='flip-box-button'
+									/>
 								</Link>
 							)}
 						</div>
 					</div>
 				</div>
-				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
+				<p className='textContainer'>
 					Tablou Canvas Personalizat <br />
 					BODY{' '}
 				</p>
-				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
+				<p className='priceContainer'>{'From ' + priceValue}</p>
 			</div>
 			<div className='box-item'>
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${Mind})` }}
+						style={{ backgroundImage: `url(${mind})` }}
 					>
 						<div className='inner color-white'></div>
-						<div className='roundIconContainer'>
-							<img
-								src={RoundIcon}
-								alt='Intoarce cardul si personalizeaza-ti tabloul gradient canvas'
-							/>
-						</div>
 					</div>
 					<div
 						className='flip-box-back text-center'
-						style={{ backgroundImage: `url(${Mind})` }}
+						style={{ backgroundImage: `url(${mind})` }}
 					>
 						<div className='inner color-white'>
 							{postersStock === 0 ? (
-								<button className='flip-box-button'>Stoc epuizat</button>
+								<Button style='flip-box-button' msg='Stoc epuizat' />
 							) : (
 								<Link to='/personalizare'>
-									<button
-										className='flip-box-button'
+									<Button
 										onClick={() =>
 											computeProduct(
 												'mind_buy.webp',
@@ -125,45 +113,38 @@ const Flipcard = () => {
 												'OPEN YOUR MIND'
 											)
 										}
-									>
-										Personalizează tablou
-									</button>
+										msg={'Personalizează tablou'}
+										style='flip-box-button'
+									/>
 								</Link>
 							)}
 						</div>
 					</div>
 				</div>
-				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
+				<p className='textContainer'>
 					Tablou Canvas Personalizat <br />
 					MIND
 				</p>
-				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
+				<p className='priceContainer'>{'From ' + priceValue}</p>
 			</div>
 			<div className='box-item'>
 				<div className='flip-box'>
 					<div
 						className='flip-box-front text-center'
-						style={{ backgroundImage: `url(${Soul})` }}
+						style={{ backgroundImage: `url(${soul})` }}
 					>
 						<div className='inner color-white'></div>
-						<div className='roundIconContainer'>
-							<img
-								src={RoundIcon}
-								alt='Intoarce cardul si personalizeaza-ti tabloul gradient canvas'
-							/>
-						</div>
 					</div>
 					<div
 						className='flip-box-back text-center'
-						style={{ backgroundImage: `url(${Soul})` }}
+						style={{ backgroundImage: `url(${soul})` }}
 					>
 						<div className='inner color-white'>
 							{postersStock === 0 ? (
-								<button className='flip-box-button'>Stoc epuizat</button>
+								<Button style='flip-box-button' msg='Stoc epuizat' />
 							) : (
 								<Link to='/personalizare'>
-									<button
-										className='flip-box-button'
+									<Button
 										onClick={() =>
 											computeProduct(
 												'Soul_Buy.webp',
@@ -172,18 +153,18 @@ const Flipcard = () => {
 												'FOLLOW YOUR SOUL'
 											)
 										}
-									>
-										Personalizează tablou{' '}
-									</button>
+										msg={'Personalizează tablou'}
+										style='flip-box-button'
+									/>
 								</Link>
 							)}
 						</div>
 					</div>
 				</div>
-				<p style={{ fontStyle: 'italic', paddingTop: '1%', fontSize: 'large' }}>
+				<p className='textContainer'>
 					Tablou Canvas Personalizat <br /> SOUL
 				</p>
-				<p style={{ fontSize: 'large', fontWeight: 600 }}>{priceValue}</p>
+				<p className='priceContainer'>{'From ' + priceValue}</p>
 			</div>
 		</div>
 	);

@@ -11,6 +11,8 @@ import shippingCitiesSlice from './slices/shippingCitiesSlice.js';
 import deliveryPriceSlice from './slices/deliveryPriceSlice.js';
 import posterSlice from './slices/posterSlice.js';
 import postersSlice from './slices/postersSlice.js';
+import frameSlice from './slices/frameSlice.js';
+import framesSlice from './slices/framesSlice.js';
 
 export const store = configureStore({
 	reducer: {
@@ -26,5 +28,7 @@ export const store = configureStore({
 		deliveryPrice: deliveryPriceSlice,
 		poster: posterSlice,
 		posters: postersSlice,
+		frame: frameSlice,
+		frames: framesSlice,
 	},
 });

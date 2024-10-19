@@ -4,7 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useStateContext } from '../contexts/ContextProvider';
 import { CheckoutCart } from './CheckoutCart';
-import { calculateTotalPrice } from '../constants/productConstants';
+import { calculateTotalPrice } from '../constants/utils';
 
 export const OrderResume = ({ storedProducts }) => {
 	const { orderResume, setOrderResume } = useStateContext();

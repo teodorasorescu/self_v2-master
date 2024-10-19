@@ -2,9 +2,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import classes from '../styling/picture.module.scss';
-import Details from '../images/details.webp';
-import Frames from '../images/frames.webp';
-import PostersAndFrames from '../images/postersAndFrames.webp';
+import { S3_BUCKET } from '../constants/links';
+
+const detailsImg = S3_BUCKET + '/details.webp';
+const framesImg = S3_BUCKET + '/frames.webp';
+const postersAndFramesImg = S3_BUCKET + '/postersAndFrames.webp';
 
 const ProductCarousel = ({
 	product,
@@ -41,23 +43,12 @@ const ProductCarousel = ({
 					</div>
 				</div>
 			</Carousel.Item>
-			{/* poza de produs*/}
-			{/* <Carousel.Item interval={600000}>
-				{!isImageEmpty && (
-					<div className={classes.container}>
-						<img
-							src={require(`../images/${product.image}`)}
-							className={classes.picturesContainer}
-							alt={altDescription}
-						/>
-					</div>
-				)}
-			</Carousel.Item> */}
+
 			<Carousel.Item interval={600000}>
 				{!isImageEmpty && (
 					<div className={classes.container}>
 						<img
-							src={Details}
+							src={detailsImg}
 							className={classes.picturesContainer}
 							alt={altDescription}
 						/>
@@ -68,7 +59,7 @@ const ProductCarousel = ({
 				{!isImageEmpty && (
 					<div className={classes.container}>
 						<img
-							src={Frames}
+							src={framesImg}
 							className={classes.picturesContainer}
 							alt={altDescription}
 						/>
@@ -79,7 +70,7 @@ const ProductCarousel = ({
 				{!isImageEmpty && (
 					<div className={classes.container}>
 						<img
-							src={PostersAndFrames}
+							src={postersAndFramesImg}
 							className={classes.picturesContainer}
 							alt={altDescription}
 						/>

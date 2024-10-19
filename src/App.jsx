@@ -18,27 +18,31 @@ import TermsAndConditions from './components/TermsAndConditions';
 import Confidentiality from './components/Confidentiality';
 import FAQPage from './components/FAQPage';
 import ContactPage from './components/ContactPage';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/ui/scroll/ScrollToTop.js';
 import PageNotFound from './components/PageNotFound';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
-import PosterDetails from './components/PosterDetails.jsx';
-import PostersPage from './components/PostersPage.jsx';
+import PosterDetails from './components/features/posters/PosterDetails.jsx';
+import PostersPage from './components/pages/posters/PostersPage.jsx';
+import CustomPosterPage from './components/CustomPosterPage.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
-	if (localStorage.getItem('itemCount') == null) {
-		localStorage.setItem('itemCount', 0);
-	}
-	const localStoreProducts = localStorage.getItem('products');
-	const storedProducts = JSON.parse(localStoreProducts);
+
 	useEffect(() => {
 		//ReactGA.initialize('G-VBCPDM60NT');
-	}, []);
 
-	if (localStorage.getItem('products') == null) {
-		localStorage.setItem('products', JSON.stringify([]));
-	}
+		if (localStorage.getItem('discountValue') === null) {
+			localStorage.setItem('discountValue', 0);
+		}
+
+		if (localStorage.getItem('products') == null) {
+			localStorage.setItem('products', JSON.stringify([]));
+		}
+		if (localStorage.getItem('itemCount') == null) {
+			localStorage.setItem('itemCount', 0);
+		}
+	}, []);
 
 	return (
 		<div className='App'>
@@ -51,6 +55,10 @@ function App() {
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
+					<Route
+						path='/tablouri-personalizate'
+						element={<CustomPosterPage />}
+					/>
 					<Route path='/cos-de-cumparaturi' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiratie' element={<Inspiration />} />

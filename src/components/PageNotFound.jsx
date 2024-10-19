@@ -1,7 +1,9 @@
 import classes from '../styling/contact.page.module.scss';
 import { INSTAGRAM_LINK, TIKTOK_LINK } from '../constants/socialMediaLinks';
-import InstaIcon from '../images/instagram_logo.webp';
-import TikTokIcon from '../images/tiktok_logo.webp';
+import { S3_BUCKET } from '../constants/links';
+
+const instaIcon = S3_BUCKET + '/instagram_logo.webp';
+const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
 
 const PageNotFound = () => {
 	return (
@@ -15,14 +17,14 @@ const PageNotFound = () => {
 				<a href={INSTAGRAM_LINK}>
 					<img
 						className={classes.socialMediaIcons}
-						src={InstaIcon}
+						src={instaIcon}
 						alt='instagram - @selfposters.ro'
 					/>
 				</a>
 				<a href={TIKTOK_LINK}>
 					<img
 						className={classes.socialMediaIcons}
-						src={TikTokIcon}
+						src={tiktokIcon}
 						alt='tiktok - @selfposters.ro'
 					/>
 				</a>

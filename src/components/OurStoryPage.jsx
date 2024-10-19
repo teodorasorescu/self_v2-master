@@ -1,8 +1,11 @@
 import styles from '../styling/our.story.page.module.scss';
-import OurWorld from '../images/aboutSelf.jpg';
-import Motto from '../images/motto.webp';
+
 import useMediaQuery from '@mui/material/useMediaQuery';
-import OurWorldSmartphone from '../images/aboutSelfSmartphone.jpg';
+import { S3_BUCKET } from '../constants/links';
+
+const ourWorldImgSmartphone = S3_BUCKET + '/aboutSelfSmartphone.jpg';
+const ourWorld = S3_BUCKET + '/aboutSelf.jpg';
+const mottoImg = S3_BUCKET + '/motto.webp';
 
 const OurStoryPage = () => {
 	const smartphoneScreen = useMediaQuery('(max-width:768px)');
@@ -11,7 +14,7 @@ const OurStoryPage = () => {
 		<div className={styles.container}>
 			<img
 				className={styles.ourWorldImg}
-				src={smartphoneScreen ? OurWorldSmartphone : OurWorld}
+				src={smartphoneScreen ? ourWorldImgSmartphone : ourWorld}
 				alt='Inspiration Board For Self'
 			/>
 			<div className={styles.textContainer}>
@@ -74,7 +77,7 @@ const OurStoryPage = () => {
 				</div>
 
 				<div className={styles.imgContainer}>
-					<img src={Motto} alt='Embrace yourself with colors' />
+					<img src={mottoImg} alt='Embrace yourself with colors' />
 				</div>
 			</div>
 		</div>

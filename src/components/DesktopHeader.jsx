@@ -1,14 +1,16 @@
 import { React, useState } from 'react';
 import styles from '../styling/header.module.scss';
-import ShoppingBag from '../images/cart.webp';
-import InstaIcon from '../images/instagram_logo.webp';
-import TikTokIcon from '../images/tiktok_logo.webp';
 import Badge from '@mui/material/Badge';
-import Self from '../images/self_logo.webp';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import Subheader from './Subheader';
 import { Helmet } from 'react-helmet';
+import { S3_BUCKET } from '../constants/links';
+
+const instaIcon = S3_BUCKET + '/instagram_logo.webp';
+const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
+const selfLogo = S3_BUCKET + '/self_logo.webp';
+const shoppingBagIcon = S3_BUCKET + '/cart.webp';
 
 const DesktopHeader = () => {
 	const [subHeaderSpiritualityOn, setSubHeaderSpirituality] = useState(false);
@@ -67,14 +69,14 @@ const DesktopHeader = () => {
 					<a href={INSTAGRAM_LINK}>
 						<img
 							className={styles.socialMediaIcons}
-							src={InstaIcon}
+							src={instaIcon}
 							alt='instagram'
 						/>
 					</a>
 					<a href={TIKTOK_LINK}>
 						<img
 							className={styles.socialMediaIcons}
-							src={TikTokIcon}
+							src={tiktokIcon}
 							alt='tiktok'
 						/>
 					</a>
@@ -95,7 +97,7 @@ const DesktopHeader = () => {
 				<div className={styles.upperContainer}>
 					<a href='/'>
 						<img
-							src={Self}
+							src={selfLogo}
 							width='200'
 							alt='SELF Logo - Embrace yourself with colors'
 						/>
@@ -115,7 +117,7 @@ const DesktopHeader = () => {
 								}}
 							>
 								<img
-									src={ShoppingBag}
+									src={shoppingBagIcon}
 									className={styles.iconSize}
 									alt='cosul de cumparaturi'
 								/>{' '}
@@ -129,7 +131,7 @@ const DesktopHeader = () => {
 						href='/'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Acasă
+						ACASĂ
 					</a>
 
 					{/* <a
@@ -158,14 +160,21 @@ const DesktopHeader = () => {
 						href='/posters'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Posters
+						CANVAS ART PRINTS
+					</a>
+					<a
+						className={styles.link}
+						href='/tablouri-personalizate'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						PERSONALIZARE CANVAS
 					</a>
 					<a
 						className={styles.link}
 						href='/psihologia-culorilor'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Psihologia Culorilor
+						PSIHOLOGIA CULORILOR
 					</a>
 					{/* <a
 						className={styles.link}
@@ -188,26 +197,13 @@ const DesktopHeader = () => {
 							/>
 						)}
 					</div> */}
-					<a
-						className={styles.link}
-						href='/despre-self'
-						onMouseOver={() => setSubHeadersOff()}
-					>
-						Despre SELF
-					</a>
-					<a
-						className={styles.link}
-						href='/sustenabilitate'
-						onMouseOver={() => setSubHeadersOff()}
-					>
-						Sustenabilitate
-					</a>
+
 					<a
 						className={styles.link}
 						href='/inspiratie'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Inspirație
+						INSPIRAȚIE
 					</a>
 				</div>
 			</div>

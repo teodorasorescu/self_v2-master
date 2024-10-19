@@ -8,9 +8,8 @@ import {
 
 const getPosterByUrlTitle = (urlTitle, dispatch) => {
 	dispatch(loadPosterStarted());
-	console.log(urlTitle);
 	axios
-		.get(`${BACKEND_PATH}/posters/` + urlTitle)
+		.get(`${BACKEND_PATH}/products/posters/` + urlTitle)
 		.then((response) => {
 			dispatch(loadPoster(response.data));
 		})

@@ -11,16 +11,17 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/cart.module.scss';
 import '../styling/quantity.css';
-import emptyCart from '../images/emptyCart.webp';
 import { useNavigate } from 'react-router-dom';
 import { columns } from '../constants/cartColumns.js';
 import CartActions from './CartActions';
 
 import DiscountForm from './DiscountForm.jsx';
-import { calculateTotalPrice } from '../constants/productConstants.js';
+import { calculateTotalPrice } from '../constants/utils.js';
 import { ThemeProvider, createTheme } from '@mui/material';
+import { S3_BUCKET } from '../constants/links.js';
 
 export const DesktopCart = () => {
+	const emptyCart = S3_BUCKET + '/emptyCart.webp';
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
 	const localStoreProducts = localStorage.getItem('products');
@@ -31,6 +32,9 @@ export const DesktopCart = () => {
 	const navigate = useNavigate();
 
 	const listItems = (colors) => {
+		if (colors === undefined) {
+			return;
+		}
 		return colors.map((color) => (
 			<div
 				key={Math.random() * 101}
@@ -162,7 +166,7 @@ export const DesktopCart = () => {
 																	</div>
 																) : column.id === 'image' ? (
 																	<img
-																		src={require(`../images/${value}`)}
+																		src={`${S3_BUCKET}/${value}`}
 																		width='130'
 																		alt='Tablou Canvas Gradient Personalizat'
 																	/>

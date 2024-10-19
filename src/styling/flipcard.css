@@ -125,7 +125,6 @@ html {
 	left: 0;
 	width: 100%;
 	padding: 60px;
-	outline: 1px solid transparent;
 	-webkit-perspective: inherit;
 	perspective: inherit;
 	z-index: 2;
@@ -134,16 +133,6 @@ html {
 	-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
 	-ms-transform: translateY(-50%) translateZ(60px) scale(0.94);
 	top: 50%;
-}
-
-.roundIconContainer {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	> img {
-		width: 30px;
-		height: 30px;
-	}
 }
 
 .flip-box-header {
@@ -160,28 +149,23 @@ html {
 }
 
 .flip-box-button {
-	background-color: #7684ff;
-	border: 0.1px solid #7684ff;
 	cursor: pointer;
 	text-decoration: none;
-	border-radius: 10px;
-	color: #fff7e3;
-	border: 0.1px solid #7684ff;
-
-	font-weight: 600;
-	cursor: pointer;
-	font-size: 20px;
 
 	margin-top: 25px;
 	padding: 15px 20px;
 	text-transform: uppercase;
 }
 
-.flip-box-button:hover {
-	border: 0.1px solid #7684ff;
-	text-decoration: none;
-	transition: none;
-	color: #7684ff;
-	animation: none;
-	background-color: #fff7e3;
+.textContainer {
+	font-family: Raleway, sans-serif;
+	font-size: large;
+	font-weight: 500;
+	padding-top: 1%;
+}
+
+.priceContainer {
+	font-family: Raleway, sans-serif;
+	font-weight: 500;
+	color: gray;
 }

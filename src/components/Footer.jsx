@@ -6,12 +6,14 @@ import {
 	infoCategories,
 } from '../constants/footerCategories';
 import Contact from './Contact';
-import Self from '../images/self_logo.webp';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import DropdownSection from './DropdownSection';
-import CardTypes from '../images/cardTypes.webp';
-import AnpcSal from '../images/anpcsal.webp';
-import AnpcSol from '../images/anpcsol.webp';
+import { S3_BUCKET } from '../constants/links';
+
+const selfLogo = S3_BUCKET + '/self_logo.webp';
+const cartTypesImg = S3_BUCKET + '/cardTypes.webp';
+const anpcSalImg = S3_BUCKET + '/anpcsal.webp';
+const anpcSolImg = S3_BUCKET + '/anpcsol.webp';
 
 const Footer = () => {
 	const wideScreen = useMediaQuery('(min-width:1024px)');
@@ -38,21 +40,21 @@ const Footer = () => {
 				<Contact />
 				<img
 					className={styles.cardTypeImg}
-					src={CardTypes}
+					src={cartTypesImg}
 					alt='Visa, Mastercard, Google Pay, Apple Pay'
 				/>
 			</div>
 			<div className={styles.logoContainer}>
-				<img className={styles.logo} src={Self} alt='SELF Logo' />
+				<img className={styles.logo} src={selfLogo} alt='SELF Logo' />
 				<div className={styles.anpcContainer}>
 					<a href='https://anpc.ro/ce-este-sal/' rel='noopener'>
 						{' '}
-						<img src={AnpcSal} alt='anpc-sal' />
+						<img src={anpcSalImg} alt='anpc-sal' />
 					</a>{' '}
 					<a />
 					<a href='https://ec.europa.eu/consumers/odr' rel='noopener'>
 						{' '}
-						<img src={AnpcSol} alt='anpc-sal' />
+						<img src={anpcSolImg} alt='anpc-sal' />
 					</a>{' '}
 					<a />
 				</div>

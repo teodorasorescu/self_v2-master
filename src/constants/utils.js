@@ -1,5 +1,5 @@
 import { framePrice } from './frameColors';
-import { chassisPrice, computeDiscount } from './productConstants';
+import { chassisPrice } from './productConstants';
 import { v4 as uuidv4 } from 'uuid';
 
 export const updatePrice = (product, frameColor, chassis) => {
@@ -34,4 +34,41 @@ export const computeProduct = (
 		frameColor,
 		chassis,
 	};
+};
+
+export const calculateTotalPrice = (storedProducts) => {
+	return storedProducts.reduce((a, p) => (a = a + p.quantity * p.price), 0);
+};
+
+export const computeProductsLength = (storedProducts) => {
+	return storedProducts.reduce((a, p) => (a = a + p.quantity), 0);
+};
+
+export const computeDiscount = (price, discount) => {
+	return price - price * (discount / 100);
+};
+
+export const modifyProductPrices = (products, discount) => {
+	const modifiedProducts = products.map((product) => {
+		return {
+			...product,
+			price:
+				product.discount !== 0
+					? product.price
+					: computeDiscount(product.price, discount),
+			discount: product.discount !== 0 ? product.discount : discount,
+		};
+	});
+	localStorage.setItem('products', JSON.stringify(modifiedProducts));
+};
+
+export const modifyExistingDiscount = (products, newDiscount) => {
+	const modifiedProducts = products.map((product) => {
+		return {
+			...product,
+			price: computeDiscount(product.initialPrice, newDiscount),
+			discount: newDiscount,
+		};
+	});
+	localStorage.setItem('products', JSON.stringify(modifiedProducts));
 };

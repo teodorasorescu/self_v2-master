@@ -1,7 +1,9 @@
-import Goethe from '../images/Goethe.webp';
-import ML from '../images/ML.webp';
-import EvaHeller from '../images/EvaHeller.webp';
-import KarenHaller from '../images/KarenHaller.webp';
+import { S3_BUCKET } from './links';
+
+const Goethe = S3_BUCKET + '/Goethe.webp';
+const ML = S3_BUCKET + '/ML.webp';
+const EvaHeller = S3_BUCKET + '/EvaHeller.webp';
+const KarenHaller = S3_BUCKET + '/KarenHaller.webp';
 
 const colorResearchers = [
 	{

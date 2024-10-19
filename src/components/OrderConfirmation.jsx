@@ -1,17 +1,17 @@
-import OrderIllustration from '../images/order_confirmation.webp';
 import styles from '../styling/order.confirmation.module.scss';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { useStateContext } from '../contexts/ContextProvider';
 import React, { useEffect, useState } from 'react';
 import sendOrderAction from '../reducers/actions/sendOrderAction';
 import getPaymentStatusAction from '../reducers/actions/getPaymentStatusAction';
-import PaymentFailed from '../images/declined.webp';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectOrderFailed } from '../reducers/slices/orderFailedSlice';
-import OrderFailed from '../images/orderfailed.webp';
+import { S3_BUCKET } from '../constants/links';
+
+const orderConfirmationImg = S3_BUCKET + '/order_confirmation.webp';
+const orderFailedImg = S3_BUCKET + '/orderfailed.webp';
+const declinedImg = S3_BUCKET + '/declined.webp';
 
 const OrderConfirmation = () => {
-	const wideScreen = useMediaQuery('(min-width:1025px)');
 	const { headerOn, setHeaderOn } = useStateContext();
 	const [unpaidOrder, setUnpaidOrder] = useState(false);
 
@@ -69,13 +69,13 @@ const OrderConfirmation = () => {
 				<div className={styles.failedOrderContainer}>
 					{unpaidOrder && (
 						<>
-							<img src={PaymentFailed} alt='paymentfailed' />
+							<img src={declinedImg} alt='paymentfailed' />
 							<h3>Tranzacție nereușită</h3>
 						</>
 					)}
 					{orderFailed && (
 						<>
-							<img src={OrderFailed} alt='orderfailed' />
+							<img src={orderFailedImg} alt='orderfailed' />
 							<h3>A apărut o eroare. Încearcă mai târziu.</h3>
 						</>
 					)}
@@ -84,7 +84,7 @@ const OrderConfirmation = () => {
 				<>
 					<div className={styles.confirmationContainer}>
 						<img
-							src={OrderIllustration}
+							src={orderConfirmationImg}
 							alt='Comanda ta cu tablouri personalizate canvas gradient este confirmata!'
 						/>
 						<h5>Mulțumim pentru comandă!</h5>
