@@ -6,9 +6,7 @@ import { S3_BUCKET } from '../../../constants/links.js';
 const ProductItem = ({ product }) => {
 	const [hovered, setHovered] = useState(false);
 
-	console.log(product);
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
-
 	const imgTitle = S3_BUCKET + '/' + product.imgTitle;
 	const imgHoverTitle = S3_BUCKET + '/' + product.hoverImgTitle;
 

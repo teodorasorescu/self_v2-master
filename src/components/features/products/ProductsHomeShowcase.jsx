@@ -3,40 +3,39 @@ import classes from '../../../styling/posters.showcase.module.scss';
 import Slider from 'react-slick';
 import PostersGroup from '../posters/postersGroup/PostersGroup';
 import Button from '../../ui/button/Button';
-
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import useMediaQuery from '@mui/material/useMediaQuery';
+let arrowSize;
 const NextArrow = (props) => {
-	const { className, onClick } = props;
+	const { onClick } = props;
 	return (
-		<div className={classes.arrowContainer}>
-			<div
-				className={`${className} ${classes.customArrow} ${classes.customNextArrow}`}
-				onClick={onClick}
-			></div>
+		<div className={`${classes.customArrow} ${classes.next}`} onClick={onClick}>
+			<ArrowForwardIosIcon style={{ fontSize: arrowSize, color: 'gray' }} />
 		</div>
 	);
 };
 
 const PrevArrow = (props) => {
-	const { className, onClick } = props;
+	const { onClick } = props;
 	return (
-		<div className={classes.arrowContainer}>
-			<div
-				className={`${className} ${classes.customArrow} ${classes.customPrevArrow}`}
-				onClick={onClick}
-			></div>
+		<div className={`${classes.customArrow} ${classes.prev}`} onClick={onClick}>
+			<ArrowBackIosIcon style={{ fontSize: arrowSize, color: 'gray' }} />
 		</div>
 	);
 };
-
 export const ProductsHomeShowcase = ({ products }) => {
+	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
+	arrowSize = smartphoneScreen ? '1rem' : '2rem';
+
 	const smartphoneSettings = {
 		dots: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1, // Show 4 products per slide
 		slidesToScroll: 1, // Scroll one slide at a time
-		nextArrow: <NextArrow />, // Custom next arrow
-		prevArrow: <PrevArrow />, // Custom previous arrow
+		nextArrow: <NextArrow arrowSize={arrowSize} />, // Custom next arrow
+		prevArrow: <PrevArrow arrowSize={arrowSize} />, // Custom previous arrow
 		responsive: [
 			{
 				breakpoint: 600,
@@ -60,8 +59,8 @@ export const ProductsHomeShowcase = ({ products }) => {
 		'Group 2',
 		'Group 3',
 		'Group 4',
-		'Group 5',
-		'Group 6',
+		'Burst of Emotion',
+		'Dear Self...',
 		'Group 7',
 	];
 

@@ -64,29 +64,18 @@
 	}
 }
 
-.arrowContainer {
-	.customArrow {
-		position: absolute;
-		top: 50%; /* Center vertically */
-		transform: translateY(-50%); /* Adjust for perfect vertical centering */
-		z-index: 1; /* Ensure arrows are on top of other elements */
-		border-radius: 50%; /* Optional: Make the arrows circular */
-		display: flex;
-		justify-content: center;
-		background-color: rgb(70, 70, 70);
+.customArrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); // Centers vertically
+	z-index: 1; // Ensures the arrows are above the other content
+	cursor: pointer;
 
-		cursor: pointer; /* Change cursor to indicate clickable arrows */
+	&.prev {
+		left: 10px; // Position the previous arrow
 	}
 
-	.customArrow:hover {
-		background-color: rgba(70, 70, 70, 0.367);
+	&.next {
+		right: 10px; // Position the next arrow
 	}
-}
-
-.customNextArrow {
-	right: 0; // Adjust the position as needed
-}
-
-.customPrevArrow {
-	left: 0; // Adjust the position as needed
 }
