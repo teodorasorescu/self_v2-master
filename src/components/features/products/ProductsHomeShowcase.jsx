@@ -26,7 +26,7 @@ const PrevArrow = (props) => {
 };
 export const ProductsHomeShowcase = ({ products }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
-	arrowSize = smartphoneScreen ? '1rem' : '2rem';
+	arrowSize = smartphoneScreen ? '1.3rem' : '2rem';
 
 	const smartphoneSettings = {
 		dots: true,
