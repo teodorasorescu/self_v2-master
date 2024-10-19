@@ -67,10 +67,11 @@
 .customArrow {
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%); // Centers vertically
-	z-index: 1; // Ensures the arrows are above the other content
+	transform: translateY(-50%);
+	z-index: 1;
 	cursor: pointer;
-
+	padding-top: 10%;
+	padding-bottom: 10%;
 	&.prev {
 		left: 10px; // Position the previous arrow
 	}
@@ -78,4 +79,8 @@
 	&.next {
 		right: 10px; // Position the next arrow
 	}
+}
+
+.customArrow:hover {
+	background-color: #fff4e7;
 }
