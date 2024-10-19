@@ -40,8 +40,8 @@ export const DesktopCart = () => {
 				key={Math.random() * 101}
 				style={{
 					width: '40px',
-					height: '30px',
-					borderRadius: '3px',
+					height: '40px',
+					borderRadius: '50%',
 					margin: '1%',
 					marginTop: '5%',
 					background: `rgb(${color[0][1]}, ${color[1][1]}, ${color[2][1]})`,

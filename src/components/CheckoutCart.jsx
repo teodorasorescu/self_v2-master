@@ -39,10 +39,10 @@ export const CheckoutCart = ({ storedProducts }) => {
 				key={Math.random() * 101}
 				style={{
 					width: '25px',
-					height: '20px',
-					borderRadius: '3px',
-					margin: '1%',
+					height: '25px',
+					borderRadius: '50%',
 					marginTop: '5%',
+					margin: '2px',
 					background: `rgb(${color[0][1]}, ${color[1][1]}, ${color[2][1]})`,
 				}}
 			></div>
