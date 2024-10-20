@@ -3,11 +3,11 @@ import classes from '../../../styling/poster.item.module.scss';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { S3_BUCKET } from '../../../constants/links.js';
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, posterImg }) => {
 	const [hovered, setHovered] = useState(false);
 
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
-	const imgTitle = S3_BUCKET + '/' + product.imgTitle;
+	const imgTitle = S3_BUCKET + '/' + posterImg;
 	const imgHoverTitle = S3_BUCKET + '/' + product.hoverImgTitle;
 
 	return (

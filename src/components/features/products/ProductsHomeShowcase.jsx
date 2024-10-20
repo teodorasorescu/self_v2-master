@@ -68,8 +68,8 @@ export const ProductsHomeShowcase = ({ products }) => {
 		<div className={classes.container}>
 			<Slider {...smartphoneSettings}>
 				{' '}
-				{groups.map((group) => (
-					<PostersGroup group={group} posters={products} />
+				{groups.map((group, index) => (
+					<PostersGroup group={group} key={index} posters={products} />
 				))}
 			</Slider>
 			<div className={classes.buttonContainer}>

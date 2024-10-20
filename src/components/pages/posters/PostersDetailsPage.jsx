@@ -13,10 +13,17 @@ const PostersDetailsPage = ({ posters }) => {
 				shapes.
 			</h2>
 			<div className={classes.postersList}>
-				{posters.map((poster) => (
-					<div key={poster.urlTitle} className={classes.poster}>
+				{posters.map((poster, index) => (
+					<div
+						key={poster.urlTitle}
+						className={classes.poster}
+						style={{ '--delay': index }}
+					>
 						<a href={`/posters/${poster.urlTitle}`}>
-							<ProductItem product={poster} />
+							<ProductItem
+								product={poster}
+								posterImg={poster.imgTitlePosterList}
+							/>
 						</a>
 					</div>
 				))}

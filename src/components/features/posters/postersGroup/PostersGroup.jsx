@@ -11,10 +11,14 @@ const PostersGroup = ({ group, posters }) => {
 		<div className={classes.container}>
 			<h3>{group}</h3>
 			<div className={classes.postersList}>
-				{filteredPosters.map((poster) => (
-					<div key={poster.urlTitle} className={classes.poster}>
+				{filteredPosters.map((poster, index) => (
+					<div
+						key={poster.urlTitle}
+						className={classes.poster}
+						style={{ '--delay': index }}
+					>
 						<a href={`/posters/${poster.urlTitle}`}>
-							<ProductItem product={poster} />
+							<ProductItem product={poster} posterImg={poster.imgTitle} />
 						</a>
 					</div>
 				))}

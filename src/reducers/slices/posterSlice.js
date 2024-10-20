@@ -6,10 +6,11 @@ export const posterSlice = createSlice({
 		poster: {
 			id: '',
 			imgTitle: '',
+			imgTitlePosterList: '',
+			imgTitlePosterSmartphone: '',
 			title: '',
 			price: 0,
 			urlTitle: '',
-			cardTitle: '',
 			altDescription: '',
 			hoverImgTitle: '',
 			posterGroup: '',

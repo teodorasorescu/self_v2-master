@@ -12,6 +12,7 @@ export const postersSlice = createSlice({
 	reducers: {
 		loadPostersSuccess: (state, action) => {
 			state.posters = action.payload;
+			localStorage.setItem('posters', JSON.stringify(state.posters));
 			state.arePostersLoading = false;
 		},
 		loadPostersStarted: (state) => {

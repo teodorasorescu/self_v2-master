@@ -5,7 +5,8 @@
 	@media screen and (max-width: 1024px) {
 		margin-top: 3%;
 	}
-	.headerContainer {
+
+	& .headerContainer {
 		font-family: 'Raleway', sans-serif;
 		display: flex;
 		flex-direction: row;
@@ -16,34 +17,14 @@
 		> h3 {
 			font-style: italic;
 		}
-		.text {
+		& .text {
 			color: black;
 			text-decoration: underline;
 			font-size: 1rem;
 		}
 	}
 
-	.imgItem {
-		display: flex;
-		justify-content: center;
-		box-sizing: border-box;
-		padding: 10px;
-		position: relative; /* Ensure this is positioned */
-
-		> a {
-			text-decoration: none;
-			color: black;
-		}
-	}
-
-	.imgBox {
-		@media screen and (max-width: 1024px) {
-			width: 200px;
-			min-height: 300px;
-		}
-	}
-
-	.buttonContainer {
+	& .buttonContainer {
 		display: flex; /* Use flexbox to center the button */
 		justify-content: center; /* Center horizontally */
 		align-items: center;
