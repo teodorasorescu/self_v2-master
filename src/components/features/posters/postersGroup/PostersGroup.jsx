@@ -1,11 +1,13 @@
 import { React } from 'react';
 import classes from './posters.group.module.scss';
 import ProductItem from '../../products/ProductItem.jsx';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const PostersGroup = ({ group, posters }) => {
 	const filteredPosters = posters.filter(
 		(poster) => poster.posterGroup === group
 	);
+	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 
 	return (
 		<div className={classes.container}>
@@ -18,7 +20,12 @@ const PostersGroup = ({ group, posters }) => {
 						style={{ '--delay': index }}
 					>
 						<a href={`/posters/${poster.urlTitle}`}>
-							<ProductItem product={poster} posterImg={poster.imgTitle} />
+							<ProductItem
+								product={poster}
+								posterImg={
+									smartphoneScreen ? poster.imgTitle : poster.imgTitlePosterList
+								}
+							/>
 						</a>
 					</div>
 				))}
