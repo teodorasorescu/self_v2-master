@@ -11,10 +11,10 @@ const PostersHomeLoading = () => {
 	const storedPosters = JSON.parse(localStorage.getItem('posters'));
 
 	useEffect(() => {
-		if (storedPosters.length === 0) {
-			getPostersAction(dispatch);
-		}
-	}, [storedPosters, dispatch]);
+		//if (storedPosters.length === 0) {
+		getPostersAction(dispatch);
+		///}
+	}, [dispatch]);
 
 	let content;
 
