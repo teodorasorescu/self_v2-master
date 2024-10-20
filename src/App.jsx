@@ -40,9 +40,7 @@ function App() {
 			localStorage.setItem('products', JSON.stringify([]));
 		}
 
-		if (localStorage.getItem('posters') == null) {
-			localStorage.setItem('posters', JSON.stringify([]));
-		}
+		localStorage.setItem('posters', JSON.stringify([]));
 
 		if (localStorage.getItem('itemCount') == null) {
 			localStorage.setItem('itemCount', 0);

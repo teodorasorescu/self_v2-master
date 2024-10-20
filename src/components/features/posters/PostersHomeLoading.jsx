@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { arePostersLoading } from '../../../reducers/slices/postersSlice';
+import {
+	arePostersLoading,
+	selectPosters,
+} from '../../../reducers/slices/postersSlice';
 import getPostersAction from '../../../reducers/actions/getPostersAction';
 import Loader from '../../ui/loader/Loader';
 import ProductsHomeShowcase from '../products/ProductsHomeShowcase';
@@ -8,7 +11,8 @@ import ProductsHomeShowcase from '../products/ProductsHomeShowcase';
 const PostersHomeLoading = () => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(arePostersLoading);
-	const storedPosters = JSON.parse(localStorage.getItem('posters'));
+	let storedPosters = useSelector(selectPosters);
+	// JSON.parse(localStorage.getItem('posters'));
 
 	useEffect(() => {
 		//if (storedPosters.length === 0) {
