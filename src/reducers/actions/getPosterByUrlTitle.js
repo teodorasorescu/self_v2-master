@@ -11,7 +11,16 @@ const getPosterByUrlTitle = (urlTitle, dispatch) => {
 	axios
 		.get(`${BACKEND_PATH}/products/posters/` + urlTitle)
 		.then((response) => {
-			dispatch(loadPoster(response.data));
+			const resp = response.data;
+			console.log(resp);
+			const listShowcaseImgs = resp.showcase.split(',');
+
+			const poster = {
+				...resp,
+				showcase: listShowcaseImgs,
+			};
+
+			dispatch(loadPoster(poster));
 		})
 		.catch(() => {
 			dispatch(loadPosterFailed(BACKEND_ERROR_MESSAGE));

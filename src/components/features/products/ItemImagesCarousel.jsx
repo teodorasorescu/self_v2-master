@@ -19,6 +19,17 @@ const ItemImagesCarousel = ({ product }) => {
 								/>
 							</div>
 						</Carousel.Item>
+						{product.showcase.map((posterImg, index) => (
+							<Carousel.Item interval={600000} key={index}>
+								<div className={classes.container}>
+									<img
+										src={`${S3_BUCKET}/${posterImg}`}
+										className={classes.picturesContainer}
+										alt={product.altDescription}
+									/>
+								</div>
+							</Carousel.Item>
+						))}
 					</Carousel>
 				</>
 			)}

@@ -14,6 +14,7 @@ export const posterSlice = createSlice({
 			altDescription: '',
 			hoverImgTitle: '',
 			posterGroup: '',
+			showcase: [],
 		},
 		isPosterLoading: false,
 		posterLoadingError: '',
