@@ -55,13 +55,13 @@ export const ProductsHomeShowcase = ({ products }) => {
 	};
 
 	const groups = [
-		'Group 1',
-		'Group 2',
-		'Group 3',
-		'Group 4',
 		'Burst of Emotion',
+		'The Art of Becoming',
+		'Sky Whispers',
 		'Dear Self...',
-		'Group 7',
+		'Self Embrace',
+		'Group 2',
+		'Sun Rays',
 	];
 
 	return (
