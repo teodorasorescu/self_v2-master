@@ -150,7 +150,7 @@ export const SmartphoneCart = () => {
 																			flexDirection: 'column',
 																		}}
 																	>
-																		{'Tablou Canvas ' + value}
+																		{value}
 																		{row['chassis'] === true && (
 																			<p className={styles.frame}>
 																				Montare pe cadru de lemn

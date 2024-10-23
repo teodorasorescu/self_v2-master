@@ -3,7 +3,6 @@ import { useStateContext } from '../contexts/ContextProvider';
 import styles from '../styling/header.module.scss';
 
 import Badge from '@mui/material/Badge';
-import { makeStyles } from '@mui/styles';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@mui/material';
@@ -23,15 +22,6 @@ const SmartphoneHeader = () => {
 	const openDrawer = () => {
 		setDrawerOpen(true);
 	};
-
-	const useStyles = makeStyles(() => ({
-		toolbar: {
-			paddingRight: 0,
-			paddingLeft: 0,
-		},
-	}));
-
-	const classes = useStyles();
 
 	const closeDrawer = () => {
 		setDrawerOpen(false);
@@ -53,7 +43,7 @@ const SmartphoneHeader = () => {
 					<MenuItem
 						style={{
 							fontSize: '20px',
-							fontFamily: "'Roboto', sans-serif",
+							fontFamily: "'Raleway', sans-serif",
 							paddingTop: '3%',
 						}}
 						onClick={closeDrawer}
@@ -80,6 +70,7 @@ const SmartphoneHeader = () => {
 							borderTop: '0.1ch solid rgba(159, 153, 153, 0.379)',
 							paddingBottom: '3%',
 							paddingTop: '3%',
+							fontFamily: "'Raleway', sans-serif",
 						}}
 					>
 						{label}
@@ -91,9 +82,9 @@ const SmartphoneHeader = () => {
 
 	return (
 		<div>
-			{/* <div className={styles.promotionTextContainer}>
-				<p>Transport gratuit la comenzi peste 240 RON! </p>
-			</div> */}
+			<div className={styles.promotionTextContainer}>
+				<p>Folosește codul CANVAS10 pentru 10% reducere! </p>
+			</div>
 			<Helmet>
 				<link
 					rel='icon'

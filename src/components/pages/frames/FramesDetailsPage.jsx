@@ -15,7 +15,7 @@ const FramesDetailsPage = ({ frames }) => {
 			<div className={classes.postersList}>
 				{frames.map((f) => (
 					<div key={f.urlTitle} className={classes.poster}>
-						<a href={`/posters/${f.urlTitle}`}>
+						<a href={`/canvas-art-prints/${f.urlTitle}`}>
 							<ProductItem product={f} posterImg={f.imgTitle} />
 						</a>
 					</div>

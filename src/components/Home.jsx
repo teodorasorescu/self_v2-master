@@ -25,7 +25,7 @@ const Home = () => {
 							New Canvas Art Prints Available Now - Limited Edition
 						</h3>
 						<div className={styles.buttonContainer}>
-							<a href='/posters'>
+							<a href='/canvas-art-prints'>
 								<Button className={styles.button}>GET YOURS</Button>
 							</a>{' '}
 						</div>
@@ -42,17 +42,17 @@ const Home = () => {
 						Limited Edition
 					</h3>
 					<div className={styles.buttonContainer}>
-						<a href='/posters'>
+						<a href='/canvas-art-prints'>
 							<Button className={styles.button}>GET YOURS</Button>
 						</a>
 					</div>
 				</div>
 			)}
 			<PostersHomeLoading />
+			<Benefits />
 			<VisualImages />
-			{/* <FramesHomeLoading /> */}
 			<div className={styles.text}>
-				<h3>Tablouri Personalizate Canvas</h3>
+				<h3>TABLOURI PERSONALIZATE</h3>
 			</div>
 			<Flipcard />
 			<ColorsChoice />

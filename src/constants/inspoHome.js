@@ -38,16 +38,7 @@ export const inspoHome = [
 		heading: 'Slide One',
 		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
 	},
-	{
-		image: `url(${inspo16})`,
-		heading: 'Slide One',
-		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
-	},
-	{
-		image: `url(${inspo17})`,
-		heading: 'Slide One',
-		desc: 'This is the description of slide one Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
-	},
+
 	{
 		image: `url(${inspo15})`,
 		heading: 'Slide One',

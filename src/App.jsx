@@ -53,15 +53,15 @@ function App() {
 				<ScrollToTop />
 				{headerOn && <Header />}
 				<Routes>
-					<Route path='/posters/:urlTitle' element={<PosterDetails />} />
-					<Route path='/posters' element={<PostersPage />} />
+					<Route
+						path='/canvas-art-prints/:urlTitle'
+						element={<PosterDetails />}
+					/>
+					<Route path='/canvas-art-prints' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
-					<Route
-						path='/tablouri-personalizate'
-						element={<CustomPosterPage />}
-					/>
+					<Route path='/custom-canvas' element={<CustomPosterPage />} />
 					<Route path='/cos-de-cumparaturi' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiratie' element={<Inspiration />} />

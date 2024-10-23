@@ -152,7 +152,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																</div>
 															) : column.id === 'title' ? (
 																<>
-																	{'Tablou Canvas ' + value}
+																	{value}
 																	{row['chassis'] === true && (
 																		<p className={styles.frame}>
 																			Montare pe cadru de lemn

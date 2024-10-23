@@ -108,7 +108,7 @@ const Flipcard = () => {
 										onClick={() =>
 											computeProduct(
 												'mind_buy.webp',
-												'MIND',
+												'Tablou Canvas MIND',
 												'Adu-ți întreaga atenție către mintea ta. Începe să te observi și găsește o asociere între gândurile și sentimentele tale. Acceptă-le și încearcă să-ți imaginezi că te afli în siguranță, într-o cameră emoțională. Fă loc pentru toate emoțiile, fie pozitive, fie negative. Relaxează-te și oferă-ți timp pentru a transpune orice sentiment în culori.',
 												'OPEN YOUR MIND'
 											)

@@ -145,7 +145,7 @@ const AddProduct = () => {
 				</div>
 				<div className='introductionContainer'>
 					<div className='titleContainer'>
-						<h1>Tablou Canvas {product.title}</h1>
+						<h1>{product.title}</h1>
 						<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
 					</div>
 					<div className='productContainer'>

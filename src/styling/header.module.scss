@@ -61,7 +61,6 @@
 				align-items: center; /* Center items vertically */
 				justify-content: space-between; /* Space between items */
 				padding-top: 1%;
-				padding-bottom: 1%;
 
 				> a {
 					flex-grow: 1; /* Allow the anchor to grow and take available space */
@@ -148,7 +147,7 @@
 		text-decoration: none;
 		color: rgb(0, 0, 0);
 		font-size: 15px;
-		font-weight: 600;
+		font-weight: 500;
 		font-family: 'Raleway', sans-serif;
 	}
 

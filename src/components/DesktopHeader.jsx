@@ -82,7 +82,7 @@ const DesktopHeader = () => {
 					</a>
 				</div>
 
-				{/* <p>{headerMessage}</p> */}
+				<p>Folosește codul CANVAS10 pentru 10% reducere! </p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
 						<p>FAQ&nbsp;&nbsp;</p>
@@ -131,7 +131,7 @@ const DesktopHeader = () => {
 						href='/'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						ACASĂ
+						Acasă
 					</a>
 
 					{/* <a
@@ -157,24 +157,24 @@ const DesktopHeader = () => {
 					</div> */}
 					<a
 						className={styles.link}
-						href='/posters'
+						href='/canvas-art-prints'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						CANVAS ART PRINTS
+						Canvas Art Prints
 					</a>
 					<a
 						className={styles.link}
 						href='/tablouri-personalizate'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						PERSONALIZARE CANVAS
+						Personalizare Canvas
 					</a>
 					<a
 						className={styles.link}
 						href='/psihologia-culorilor'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						PSIHOLOGIA CULORILOR
+						Psihologia Culorilor
 					</a>
 					{/* <a
 						className={styles.link}
@@ -203,7 +203,7 @@ const DesktopHeader = () => {
 						href='/inspiratie'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						INSPIRAȚIE
+						Inspirație
 					</a>
 				</div>
 			</div>

@@ -19,7 +19,7 @@ const PostersDetailsPage = ({ posters }) => {
 						className={classes.poster}
 						style={{ '--delay': index }}
 					>
-						<a href={`/posters/${poster.urlTitle}`}>
+						<a href={`/canvas-art-prints/${poster.urlTitle}`}>
 							<ProductItem
 								product={poster}
 								posterImg={poster.imgTitlePosterList}

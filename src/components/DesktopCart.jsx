@@ -143,7 +143,7 @@ export const DesktopCart = () => {
 															>
 																{column.id === 'title' ? (
 																	<div>
-																		{'Tablou Canvas ' + value}
+																		{value}
 																		{row['chassis'] === true && (
 																			<p className={styles.frame}>
 																				Montare pe cadru de lemn
