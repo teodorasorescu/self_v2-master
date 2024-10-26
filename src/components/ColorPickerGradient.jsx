@@ -169,7 +169,7 @@ function ColorPickerGradient() {
 				<div ref={myRef} className='posterContainer'>
 					<div className='gradientDiv' style={styles.gradient}>
 						<p className='gradientTitle' style={styles.title}>
-							{product.title}
+							{product.customTitle}
 						</p>
 						<p className='gradientSubtitle' style={styles.subtitle}>
 							{product.subtitle}

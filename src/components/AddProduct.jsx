@@ -126,7 +126,7 @@ const AddProduct = () => {
 		getFramesStockAction(dispatch);
 		getChassisStockAction(dispatch);
 		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
-	}, []); // Empty dependency array ensures this runs only once when the component mounts
+	}, []);
 
 	return (
 		<div className='bodyContainer'>
@@ -137,7 +137,7 @@ const AddProduct = () => {
 						altDescription='Adu-ti culoare in casa ta prin tablourile personalizate BODY MIND SOUL'
 						classGradient='gradientContainer'
 						styleGradient={gradientStyles.gradient}
-						title={gradientStyles.title}
+						title={gradientStyles.customTitle}
 						subtitle={gradientStyles.subtitle}
 						gradientTitle='gradientTitle'
 						gradientSubtitle='gradientSubtitle'

@@ -12,12 +12,9 @@ const PostersHomeLoading = () => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(arePostersLoading);
 	let storedPosters = useSelector(selectPosters);
-	// JSON.parse(localStorage.getItem('posters'));
 
 	useEffect(() => {
-		//if (storedPosters.length === 0) {
 		getPostersAction(dispatch);
-		///}
 	}, [dispatch]);
 
 	let content;

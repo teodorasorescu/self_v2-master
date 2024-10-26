@@ -217,7 +217,7 @@
 		transition: all 0.05s;
 		display: flex;
 		height: 100vh;
-		background-image: url('https://myselfbucket11.s3.eu-north-1.amazonaws.com/image00023.webp');
+		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/image00023.webp');
 		border-radius: 0 0 60px 60px;
 		margin-top: 2%;
 
@@ -226,7 +226,7 @@
 		}
 
 		@media screen and (max-width: 768px) {
-			background-image: url('https://myselfbucket11.s3.eu-north-1.amazonaws.com/homeSmartphone.webp');
+			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homeSmartphone.webp');
 			border-radius: 20px 20px 0 0;
 			height: 80vh; /* Height for screens up to 768px */
 		}

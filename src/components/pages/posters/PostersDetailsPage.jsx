@@ -5,7 +5,7 @@ import ProductItem from '../../features/products/ProductItem';
 const PostersDetailsPage = ({ posters }) => {
 	return (
 		<div className={classes.container}>
-			<h1>Posters</h1>
+			<h1>Canvas Art Prints</h1>
 			<h2>
 				A carefully crafted series of 152 original art prints. Every piece in
 				the collection has been created with intention, embodying the essence of
@@ -23,6 +23,7 @@ const PostersDetailsPage = ({ posters }) => {
 							<ProductItem
 								product={poster}
 								posterImg={poster.imgTitlePosterList}
+								hasHoverImg={true}
 							/>
 						</a>
 					</div>

@@ -8,6 +8,7 @@ export const LOCKER_DELIVERY_BIG = 14;
 
 export const details =
 	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material cadru (șasiu): lemn uscat de rășinoase';
+export const stickerDetails = 'Mărime: 15x20cm';
 
 export const postersDetails =
 	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material cadru (șasiu): lemn uscat de rășinoase';

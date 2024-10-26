@@ -1,0 +1,49 @@
+.container {
+	margin-bottom: 3%;
+	position: relative;
+	padding-top: 3%;
+	text-align: center;
+	font-family: Raleway, sans-serif;
+	cursor: default;
+	width: 100%;
+	> h3 {
+		font-family: 'Frank Ruhl Libre', serif;
+
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 2.5rem;
+		font-style: italic;
+		text-align: center;
+	}
+
+	@media screen and (max-width: 1024px) {
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}
+}
+
+.sticker {
+	margin-bottom: 2%;
+	animation: fadeIn 0.8s ease forwards;
+	animation-delay: calc(var(--delay) * 0.2s);
+	max-width: 50%; // Optional max width for large screens
+	box-sizing: border-box;
+
+	@media screen and (max-width: 1024px) {
+		max-width: 70%;
+	}
+	> a {
+		text-decoration: none;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

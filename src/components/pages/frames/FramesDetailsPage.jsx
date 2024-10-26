@@ -16,7 +16,11 @@ const FramesDetailsPage = ({ frames }) => {
 				{frames.map((f) => (
 					<div key={f.urlTitle} className={classes.poster}>
 						<a href={`/canvas-art-prints/${f.urlTitle}`}>
-							<ProductItem product={f} posterImg={f.imgTitle} />
+							<ProductItem
+								product={f}
+								posterImg={f.imgTitle}
+								hasHoverImg={true}
+							/>
 						</a>
 					</div>
 				))}

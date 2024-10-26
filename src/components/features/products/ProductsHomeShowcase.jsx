@@ -24,6 +24,7 @@ const PrevArrow = (props) => {
 		</div>
 	);
 };
+
 export const ProductsHomeShowcase = ({ products }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	arrowSize = smartphoneScreen ? '1.3rem' : '2rem';
@@ -60,8 +61,8 @@ export const ProductsHomeShowcase = ({ products }) => {
 		'Sky Whispers',
 		'Dear Self...',
 		'Self Embrace',
-		'Group 2',
-		'Sun Rays',
+		'Acts of Grace',
+		'Serenity of the Sun',
 	];
 
 	return (
@@ -73,7 +74,7 @@ export const ProductsHomeShowcase = ({ products }) => {
 				))}
 			</Slider>
 			<div className={classes.buttonContainer}>
-				<a href='/posters'>
+				<a href='/canvas-art-prints'>
 					{' '}
 					<Button msg={'View All'} style={classes.buttonStyle} />
 				</a>

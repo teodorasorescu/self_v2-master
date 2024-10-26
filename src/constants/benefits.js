@@ -1,15 +1,15 @@
 const benefits = [
 	{
 		title: 'ELEVATE YOUR WALLS',
-		desc: 'Descoperă combinația ideală între design modern și funcționalitate. Creează un ambient plin de viață, cu ramele noastre colorate din lemn natural sau pune tabloul în prim plan prin montarea lui pe cadru de lemn. ',
+		desc: 'Adaugă personalitate și culoare casei tale cu selecția noastră de tablouri printate pe canvas.',
 	},
 	{
-		title: 'SENSE THE QUALITTY',
-		desc: 'Descoperă o nouă dimensiune a artei cu tablouri noastre printate pe canvas 100% bumbac, un material ce garantează calitatea și durabilitatea produsului. În plus, pânza scoate în evidență contrastul culorilor și asigură tabloului autenticitate.',
+		title: 'SENSE THE QUALITY',
+		desc: 'Folosim canvas 100% bumbac, un material ce garantează calitatea și durabilitatea produsului.',
 	},
 	{
 		title: 'FEELINGS ON CANVAS',
-		desc: 'Explorează-ți sinele și formează-ți un spațiu care îți reflectă identitatea. Aruncă o privire pe pagina de psihologie a culorilor și construiește-ți tabloul în relație cu sufletul, corpul și mintea ta.',
+		desc: 'Explorează-ți sinele și formează-ți un spațiu care îți reflectă identitatea și construiește-ți tabloul în relație cu sufletul, corpul și mintea ta.',
 	},
 ];
 

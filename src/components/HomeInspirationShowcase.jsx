@@ -7,9 +7,9 @@ export const HomeInspirationShowcase = () => {
 		<div className='gradientPhotosContainer'>
 			<h3 className='text'>INSPIRAȚIE</h3>
 			<div className='imagesContainer'>
-				{inspoHome.map((c) => {
+				{inspoHome.map((c, i) => {
 					return (
-						<a href='/inspiratie' key={Math.random() * 101} className='imgItem'>
+						<a key={i} href='/inspiratie' className='imgItem'>
 							<div
 								className='imgBox'
 								style={{ backgroundImage: `${c.image}` }}

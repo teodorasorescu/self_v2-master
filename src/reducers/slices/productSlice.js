@@ -8,6 +8,7 @@ export const productSlice = createSlice({
 			id: '', //generat random
 			image: '',
 			title: '',
+			customTitle: '',
 			description: '',
 			colors: [],
 			fontColor: '',

@@ -9,6 +9,7 @@ import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
+import StickersHomeLoading from './features/stickers/StickersHomeLoading';
 
 const Home = () => {
 	const smartphoneScreen = useMediaQuery('(max-width:768px)');
@@ -48,8 +49,8 @@ const Home = () => {
 					</div>
 				</div>
 			)}
-			<PostersHomeLoading />
-			<Benefits />
+			<PostersHomeLoading /> <Benefits />
+			<StickersHomeLoading />
 			<VisualImages />
 			<div className={styles.text}>
 				<h3>TABLOURI PERSONALIZATE</h3>

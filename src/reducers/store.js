@@ -13,6 +13,8 @@ import posterSlice from './slices/posterSlice.js';
 import postersSlice from './slices/postersSlice.js';
 import frameSlice from './slices/frameSlice.js';
 import framesSlice from './slices/framesSlice.js';
+import stickerSlice from './slices/stickerSlice.js';
+import stickersSlice from './slices/stickersSlice.js';
 
 export const store = configureStore({
 	reducer: {
@@ -30,5 +32,7 @@ export const store = configureStore({
 		posters: postersSlice,
 		frame: frameSlice,
 		frames: framesSlice,
+		sticker: stickerSlice,
+		stickers: stickersSlice,
 	},
 });

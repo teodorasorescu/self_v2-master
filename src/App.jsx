@@ -25,6 +25,8 @@ import { useEffect } from 'react';
 import PosterDetails from './components/features/posters/PosterDetails.jsx';
 import PostersPage from './components/pages/posters/PostersPage.jsx';
 import CustomPosterPage from './components/CustomPosterPage.jsx';
+import StickerInfoPage from './components/pages/stickers/StickerInfoPage.jsx';
+import StickerDetails from './components/features/stickers/StickerDetails.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -57,6 +59,11 @@ function App() {
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
+					<Route
+						path='/sticker-sheets/:urlTitle'
+						element={<StickerDetails />}
+					/>
+
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />

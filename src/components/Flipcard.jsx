@@ -19,7 +19,7 @@ const Flipcard = () => {
 	const product = useSelector(selectProduct);
 
 	const priceValue = price.toFixed(2) + ' lei';
-	const computeProduct = (image, title, description, subtitle) => {
+	const computeProduct = (image, title, customTitle, description, subtitle) => {
 		ReactGA.event('button_click', {
 			button_label: 'Personalizeaza home buton',
 		});
@@ -29,6 +29,7 @@ const Flipcard = () => {
 			price: price,
 			image: image,
 			title: title,
+			customTitle: customTitle,
 			description: description,
 			subtitle: subtitle,
 		};
@@ -68,6 +69,7 @@ const Flipcard = () => {
 										onClick={() =>
 											computeProduct(
 												'body_buy.webp',
+												'Tablou Canvas BODY',
 												'BODY',
 												'Adu-ți întreaga atenție asupra corpului tău. Devin-o conștient asupra emoțiilor și senzațiilor pe care le simți și eliberează orice tensiune fizică care crezi că este conectată cu starea ta emoțională. Analizează-ți semnalele interne și imaginează-ți că ești înconjurat de o aură plină de culori. Transpune în tabloul tău culorile și sentimentele pe care le-ai experimentat.',
 												'NOURISH YOUR BODY'
@@ -109,6 +111,7 @@ const Flipcard = () => {
 											computeProduct(
 												'mind_buy.webp',
 												'Tablou Canvas MIND',
+												'MIND',
 												'Adu-ți întreaga atenție către mintea ta. Începe să te observi și găsește o asociere între gândurile și sentimentele tale. Acceptă-le și încearcă să-ți imaginezi că te afli în siguranță, într-o cameră emoțională. Fă loc pentru toate emoțiile, fie pozitive, fie negative. Relaxează-te și oferă-ți timp pentru a transpune orice sentiment în culori.',
 												'OPEN YOUR MIND'
 											)
@@ -148,6 +151,7 @@ const Flipcard = () => {
 										onClick={() =>
 											computeProduct(
 												'Soul_Buy.webp',
+												'Tablou Canvas SOUL',
 												'SOUL',
 												'Adu-ți întreaga atenție către sufletul tău. Eliberează-ți mintea de gânduri și dă-i voie sufletului tău să vorbească. Permite emoțiilor ce apar să fie eliberate și să creeze claritate și lumină. Conectează-te profund la aspectele ființei tale și simte unitatea dintre sufletul tău și divin. Imaginează-ți că ești într-o călătorie de autocunoaștere și transpune-te într-un univers plin de culori și trăiri.',
 												'FOLLOW YOUR SOUL'

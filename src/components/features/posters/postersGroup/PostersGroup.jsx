@@ -7,8 +7,8 @@ const PostersGroup = ({ group, posters }) => {
 	const filteredPosters = posters.filter(
 		(poster) => poster.posterGroup === group
 	);
-	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 
+	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	return (
 		<div className={classes.container}>
 			<h3>{group}</h3>
@@ -25,6 +25,7 @@ const PostersGroup = ({ group, posters }) => {
 								posterImg={
 									smartphoneScreen ? poster.imgTitle : poster.imgTitlePosterList
 								}
+								hasHoverImg={true}
 							/>
 						</a>
 					</div>

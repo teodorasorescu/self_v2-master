@@ -164,7 +164,7 @@ const DesktopHeader = () => {
 					</a>
 					<a
 						className={styles.link}
-						href='/tablouri-personalizate'
+						href='/custom-canvas'
 						onMouseOver={() => setSubHeadersOff()}
 					>
 						Personalizare Canvas
