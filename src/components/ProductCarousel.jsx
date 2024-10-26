@@ -35,7 +35,7 @@ const ProductCarousel = ({
 					{' '}
 					<div className={classGradient} style={styleGradient}>
 						<p className={gradientTitle} style={title}>
-							{product.title}
+							{product.customTitle}
 						</p>
 						<p className={gradientSubtitle} style={subtitle}>
 							{product.subtitle}

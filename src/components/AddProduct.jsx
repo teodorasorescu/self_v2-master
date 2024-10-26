@@ -137,7 +137,7 @@ const AddProduct = () => {
 						altDescription='Adu-ti culoare in casa ta prin tablourile personalizate BODY MIND SOUL'
 						classGradient='gradientContainer'
 						styleGradient={gradientStyles.gradient}
-						title={gradientStyles.customTitle}
+						title={gradientStyles.title}
 						subtitle={gradientStyles.subtitle}
 						gradientTitle='gradientTitle'
 						gradientSubtitle='gradientSubtitle'

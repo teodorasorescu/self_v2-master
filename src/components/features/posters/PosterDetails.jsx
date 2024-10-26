@@ -10,6 +10,7 @@ import getPosterByUrlTitle from '../../../reducers/actions/getPosterByUrlTitle';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { postersDetails, suport } from '../../../constants/productConstants';
+import ReactGA from 'react-ga4';
 
 const PosterDetails = () => {
 	const { urlTitle } = useParams();
@@ -32,6 +33,7 @@ const PosterDetails = () => {
 	}
 
 	useEffect(() => {
+		ReactGA.send({ hitType: 'pageview', page: urlTitle });
 		getPosterByUrlTitle(urlTitle, dispatch);
 	}, []);
 

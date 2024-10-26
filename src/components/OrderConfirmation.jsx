@@ -36,7 +36,10 @@ const OrderConfirmation = () => {
 							frameColor: product.frameColor,
 							chassis: product.chassis,
 							title: product.title,
-							colors: product.colors.toString(),
+							colors:
+								product.colors != undefined && product.colors != null
+									? product.colors.toString()
+									: null,
 							image: product.image,
 							fontColor: JSON.stringify(product.fontColor),
 							discount: product.discount,

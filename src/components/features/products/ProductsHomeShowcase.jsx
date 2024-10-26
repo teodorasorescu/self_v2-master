@@ -6,6 +6,7 @@ import Button from '../../ui/button/Button';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import ReactGA from 'react-ga4';
 let arrowSize;
 const NextArrow = (props) => {
 	const { onClick } = props;
@@ -65,6 +66,12 @@ export const ProductsHomeShowcase = ({ products }) => {
 		'Serenity of the Sun',
 	];
 
+	const sendEvent = () => {
+		ReactGA.event('button_click', {
+			button_label: 'ViewAllPosters',
+		});
+	};
+
 	return (
 		<div className={classes.container}>
 			<Slider {...smartphoneSettings}>
@@ -76,7 +83,11 @@ export const ProductsHomeShowcase = ({ products }) => {
 			<div className={classes.buttonContainer}>
 				<a href='/canvas-art-prints'>
 					{' '}
-					<Button msg={'View All'} style={classes.buttonStyle} />
+					<Button
+						msg={'View All'}
+						style={classes.buttonStyle}
+						onClick={sendEvent}
+					/>
 				</a>
 			</div>
 		</div>

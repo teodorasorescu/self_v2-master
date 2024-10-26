@@ -34,7 +34,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 
 	const computeProductCart = () => {
 		ReactGA.event('button_click', {
-			button_label: 'Adauga produs buton',
+			button_label: `Adauga In Cos ${product.title}`,
 		});
 
 		const finalProduct = {

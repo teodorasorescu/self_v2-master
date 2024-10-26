@@ -17,6 +17,7 @@ import {
 	stickerLoadingError,
 } from '../../../reducers/slices/stickerSlice';
 import getStickerByUrlTitle from '../../../reducers/actions/getStickerByUrlTitle';
+import ReactGA from 'react-ga4';
 
 const StickerDetails = () => {
 	const { urlTitle } = useParams();
@@ -39,6 +40,8 @@ const StickerDetails = () => {
 	}
 
 	useEffect(() => {
+		ReactGA.send({ hitType: 'pageview', page: urlTitle });
+
 		getStickerByUrlTitle(urlTitle, dispatch);
 	}, []);
 

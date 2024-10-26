@@ -10,15 +10,23 @@
 		@media screen and (max-width: 1024px) {
 			width: 90vw;
 		}
-		width: 70vw;
-		font-size: 0.9rem;
+		width: 50vw;
+		font-size: 1rem;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 5%;
+		font-optical-sizing: auto;
+		color: #000000;
+		font-style: italic;
+		text-align: justify;
 	}
 
 	> h1 {
-		font-size: 2.3rem;
+		font-family: 'Frank Ruhl Libre', serif;
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 2.5rem;
+		font-style: italic;
 	}
 
 	& .postersList {

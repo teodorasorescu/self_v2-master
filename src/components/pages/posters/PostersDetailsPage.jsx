@@ -7,10 +7,11 @@ const PostersDetailsPage = ({ posters }) => {
 		<div className={classes.container}>
 			<h1>Canvas Art Prints</h1>
 			<h2>
-				A carefully crafted series of 152 original art prints. Every piece in
-				the collection has been created with intention, embodying the essence of
-				the season through a harmonious blend of fall colors, textures, and
-				shapes.
+				A carefully crafted series of stunning canvas art prints, created with
+				intention, embodying the essence of being through a harmonious blend of
+				colors. Each piece is perfect for adding personality to your space,
+				transforming ordinary rooms into vibrant expressions of style and
+				creativity.
 			</h2>
 			<div className={classes.postersList}>
 				{posters.map((poster, index) => (
