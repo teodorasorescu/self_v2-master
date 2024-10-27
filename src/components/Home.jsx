@@ -7,17 +7,14 @@ import Benefits from './Benefits';
 import VisualImages from './VisiualImages';
 import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import StickersHomeLoading from './features/stickers/StickersHomeLoading';
 
 const Home = () => {
-	const smartphoneScreen = useMediaQuery('(max-width:768px)');
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.introductionImgContainer}>
-				{smartphoneScreen && (
+				{
 					<div className={styles.introductionContainer}>
 						<h1 className={styles.title}>
 							Embrace the Colors <br /> of Your Being and Feelings
@@ -31,9 +28,9 @@ const Home = () => {
 							</a>{' '}
 						</div>
 					</div>
-				)}
+				}
 			</div>
-			{!smartphoneScreen && (
+			{/* {!smartphoneScreen && (
 				<div className={styles.introductionContainer}>
 					<h1 className={styles.title}>
 						Embrace the Colors of Your Being and Feelings
@@ -48,7 +45,7 @@ const Home = () => {
 						</a>
 					</div>
 				</div>
-			)}
+			)} */}
 			<PostersHomeLoading /> <Benefits />
 			<StickersHomeLoading />
 			<VisualImages />

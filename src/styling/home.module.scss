@@ -33,8 +33,7 @@
 
 	.introductionContainer {
 		width: auto;
-		margin-left: auto;
-		margin-right: auto;
+		margin: auto;
 		text-align: center;
 		box-sizing: border-box;
 		display: flex;
@@ -42,12 +41,11 @@
 		padding: 2rem;
 		border-radius: 10px;
 		animation: fadeToRight 3s ease forwards;
-
+		align-items: center;
 		.title {
 			font-family: 'Frank Ruhl Libre', serif;
-
 			font-optical-sizing: auto;
-			color: #7684ff;
+			color: #fff7e3;
 			font-size: 3.3rem;
 			font-style: italic;
 			text-align: center;
@@ -57,7 +55,7 @@
 			padding-top: 1%;
 			padding-bottom: 2%;
 			font-size: 2rem;
-			color: #000000;
+			color: #c9ccff;
 		}
 
 		/* Smaller screen */
@@ -134,26 +132,16 @@
 			width: 100vw;
 			text-align: center;
 			box-sizing: border-box;
-			font-family: 'Raleway', sans-serif;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between; /* Distribute space between items */
-
 			border-radius: 10px;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 			transition: transform 0.3s ease;
-			margin-top: 0;
+			padding: auto;
 			padding: 0;
 			height: auto;
 			animation: fadeToRight 3s ease forwards;
-			font-family: Alice, serif;
+
 			.title {
-				background: linear-gradient(
-					to bottom,
-					rgba(158, 147, 124, 0.3),
-					rgba(225, 212, 185, 0)
-				); /* Adjust colors and transparency here */
-				// margin-top: 5%;
 				border-radius: 20px;
 				font-optical-sizing: auto;
 				font-weight: 500;
@@ -169,6 +157,7 @@
 			.subtitle {
 				opacity: 1;
 				padding-left: 1%;
+				font-family: 'Frank Ruhl Libre', serif;
 
 				font-weight: 500;
 				padding-top: 1%;
@@ -217,7 +206,7 @@
 		transition: all 0.05s;
 		display: flex;
 		height: 100vh;
-		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/image00023.webp');
+		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homeLight.jpg');
 		border-radius: 0 0 60px 60px;
 		margin-top: 2%;
 
@@ -226,7 +215,7 @@
 		}
 
 		@media screen and (max-width: 768px) {
-			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homeSmartphone.webp');
+			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homeLightSmartphone.jpg');
 			border-radius: 20px 20px 0 0;
 			height: 80vh; /* Height for screens up to 768px */
 		}
