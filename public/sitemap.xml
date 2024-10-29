@@ -5,24 +5,11 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://selfposters.ro/despre-self</loc>
+        <loc>https://selfposters.ro/canvas-art-prints</loc>
         <priority>0.80</priority>
     </url>
      <url>
         <loc>https://selfposters.ro/psihologia-culorilor/</loc>
         <priority>0.80</priority>
     </url>
-    <url>
-        <loc>https://selfposters.ro/sustenabilitate</loc>
-        <priority>0.80</priority>
-    </url>
-     <url>
-        <loc>https://selfposters.ro/faq</loc>
-        <priority>0.80</priority>
-    </url>
-     <url>
-        <loc>https://selfposters.ro/inspiratie</loc>
-        <priority>0.80</priority>
-    </url>
-
 </urlset>
