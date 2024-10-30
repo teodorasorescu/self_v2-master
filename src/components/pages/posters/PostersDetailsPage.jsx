@@ -1,10 +1,12 @@
 import { React } from 'react';
 import classes from '../../../styling/posters.page.details.module.scss';
 import ProductItem from '../../features/products/ProductItem';
+import Breadcrumbs from '../../Breadcrumbs';
 
 const PostersDetailsPage = ({ posters }) => {
 	return (
 		<div className={classes.container}>
+			<Breadcrumbs />
 			<h1>Canvas Art Prints</h1>
 			<h2>
 				A carefully crafted series of stunning canvas art prints, created with

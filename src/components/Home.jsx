@@ -9,10 +9,12 @@ import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import StickersHomeLoading from './features/stickers/StickersHomeLoading';
+import Breadcrumbs from './Breadcrumbs';
 
 const Home = () => {
 	return (
 		<div className={styles.container}>
+			<Breadcrumbs />
 			<div className={styles.introductionImgContainer}>
 				{
 					<div className={styles.introductionContainer}>

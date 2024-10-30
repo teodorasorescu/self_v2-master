@@ -3,10 +3,11 @@ import React from 'react';
 import classes from '../styling/color.psycho.page.module.scss';
 import ColorsFlipcard from './ColorsFlipcard';
 import ResearchersFlipcard from './ResearchersFlipcard';
+import Breadcrumbs from './Breadcrumbs';
 const ColorPsychologyPage = () => {
 	return (
 		<>
-			{' '}
+			<Breadcrumbs />
 			<div className={classes.container}>
 				<div className={classes.title}>
 					<h1>Psihologia culorilor</h1>
