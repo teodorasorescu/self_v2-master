@@ -28,7 +28,6 @@ export const DesktopCart = () => {
 	const storedProducts = JSON.parse(localStoreProducts);
 	const [total, setTotal] = useState(calculateTotalPrice(storedProducts));
 	const discountCodeValue = localStorage.getItem('discountValue');
-	console.log(discountCodeValue);
 	const navigate = useNavigate();
 
 	const listItems = (colors) => {
@@ -192,7 +191,11 @@ export const DesktopCart = () => {
 																				</p>
 																			</>
 																		) : (
-																			<p>{row['price'].toFixed(2) + ' lei'}</p>
+																			<>
+																				<p className={styles.newPrice}>
+																					{row['price'].toFixed(2) + ' lei'}
+																				</p>
+																			</>
 																		)}
 																	</div>
 																) : null}

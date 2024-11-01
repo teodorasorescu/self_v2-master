@@ -136,13 +136,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																</div>
 															) : column.id === 'total' ? (
 																<div>
-																	<p
-																		className={
-																			discountCodeValue != 0
-																				? styles.discountedPrice
-																				: undefined
-																		}
-																	>
+																	<p className={styles.discountedPrice}>
 																		{'' +
 																			(row['quantity'] * row['price']).toFixed(
 																				2

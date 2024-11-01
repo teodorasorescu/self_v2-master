@@ -82,7 +82,7 @@ const DesktopHeader = () => {
 					</a>
 				</div>
 
-				<p>Folosește codul CANVAS10 pentru 10% reducere! </p>
+				<p>BLACK FRIDAY 40% REDUCERE</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
 						<p>FAQ&nbsp;&nbsp;</p>

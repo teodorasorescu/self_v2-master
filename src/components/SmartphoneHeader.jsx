@@ -83,7 +83,7 @@ const SmartphoneHeader = () => {
 	return (
 		<div>
 			<div className={styles.promotionTextContainer}>
-				<p>Folosește codul CANVAS10 pentru 10% reducere! </p>
+				<p>BLACK FRIDAY 40% REDUCERE</p>
 			</div>
 			<Helmet>
 				<link

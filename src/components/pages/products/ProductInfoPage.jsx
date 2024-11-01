@@ -1,7 +1,11 @@
 import { React, useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 
-import { computeDiscount, updatePrice } from '../../../constants/utils';
+import {
+	calculatePromotionPrice,
+	computeDiscount,
+	updatePrice,
+} from '../../../constants/utils';
 import classes from './poster.page.module.scss';
 import { useStateContext } from '../../../contexts/ContextProvider';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -72,7 +76,13 @@ const ProductInfoPage = ({ product, suport, details }) => {
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
 					<h1>{product.title}</h1>
-					<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
+					<h2>
+						{finalPrice.toFixed(2) + ' lei'}{' '}
+						<h2 className={classes.textPromotion}>
+							{' '}
+							{calculatePromotionPrice(finalPrice) + ' lei'}
+						</h2>
+					</h2>
 				</div>
 
 				<FrameAndChassisSelect
