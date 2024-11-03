@@ -6,7 +6,7 @@ export const LOCKER_DELIVERY_SMALL = 14;
 export const HOME_DELIVERY_BIG = 25;
 export const LOCKER_DELIVERY_BIG = 14;
 export const freeFraming =
-	'When you purchase an canvas art print and frame in matching sizes, we will frame it for free.';
+	'When you purchase a canvas art print and frame in matching sizes, we will frame it for free.';
 export const deliveryDetails =
 	'Delivery is made by Sameday and it takes up to 3-5 days. You can choose between home or easybox locker delivery.';
 export const details =
