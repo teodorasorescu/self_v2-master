@@ -18,7 +18,7 @@ export const infoCategories = [
 ];
 
 export const aboutUsCategories = [
-	{ name: 'Posters', link: '/posters' },
+	{ name: 'Canvas Art Prints', link: '/canvas-art-prints' },
 	{
 		name: 'Despre Noi',
 		link: '/despre-self-posters',
