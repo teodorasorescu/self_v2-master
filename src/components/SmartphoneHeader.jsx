@@ -83,7 +83,7 @@ const SmartphoneHeader = () => {
 	return (
 		<div>
 			<div className={styles.promotionTextContainer}>
-				<p>BLACK FRIDAY WEEK - 40% REDUCERE! 04-10 noiembrie</p>
+				<p>BLACK FRIDAY WEEK - 40% REDUCERE</p>
 			</div>
 			<Helmet>
 				<link
