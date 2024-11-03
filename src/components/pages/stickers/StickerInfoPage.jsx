@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 
 import {
 	calculatePromotionPrice,
+	calculateStickerPrice,
 	computeDiscount,
 } from '../../../constants/utils';
 import classes from '../products/poster.page.module.scss';
@@ -70,7 +71,7 @@ const StickerInfoPage = ({ product, suport, details }) => {
 						{product.price.toFixed(2) + ' lei'}{' '}
 						<h2 className={classes.textPromotion}>
 							{' '}
-							{calculatePromotionPrice(product.price) + ' lei'}
+							{calculateStickerPrice(product.price) + ' lei'}
 						</h2>
 					</h2>
 				</div>
