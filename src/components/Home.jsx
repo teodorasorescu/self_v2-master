@@ -9,21 +9,19 @@ import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import StickersHomeLoading from './features/stickers/StickersHomeLoading';
-import Breadcrumbs from './Breadcrumbs';
 
 const Home = () => {
 	return (
 		<div className={styles.container}>
-			<Breadcrumbs />
 			<div className={styles.introductionImgContainer}>
 				{
 					<div className={styles.introductionContainer}>
-						<h1 className={styles.title}>
+						{/* <h1 className={styles.title}>
 							Embrace the Colors <br /> of Your Being and Feelings
 						</h1>{' '}
 						<h3 className={styles.subtitle}>
 							New Canvas Art Prints Available Now - Limited Edition
-						</h3>
+						</h3> */}
 						<div className={styles.buttonContainer}>
 							<a href='/canvas-art-prints'>
 								<Button className={styles.button}>GET YOURS</Button>

@@ -14,6 +14,9 @@ export const updatePrice = (product, frameColor, chassis) => {
 	return updatedPrice;
 };
 
+export const calculatePromotionPrice = (price) => {
+	return price + 0.4 * price;
+};
 export const computeProduct = (
 	product,
 	finalPrice,

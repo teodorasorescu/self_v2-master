@@ -6,21 +6,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectProduct } from '../reducers/slices/productSlice';
 import { loadProducts } from '../reducers/slices/productsSlice';
 import ProductCarousel from './ProductCarousel';
-import { frameColors, framePrice } from '../constants/frameColors';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
-import { chassisPrice, details, suport } from '../constants/productConstants';
-import reactCSS from 'reactcss';
 import {
-	selectChassisStock,
-	selectFramesStock,
-} from '../reducers/slices/stockSlice';
-import getFramesStockAction from '../reducers/actions/getFramesStockAction';
-import getChassisStockAction from '../reducers/actions/getChassisStockAction';
+	deliveryDetails,
+	details,
+	freeFraming,
+	suport,
+} from '../constants/productConstants';
+import reactCSS from 'reactcss';
 import ReactGA from 'react-ga4';
-
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { computeProduct, updatePrice } from '../constants/utils';
+import {
+	calculatePromotionPrice,
+	computeProduct,
+	updatePrice,
+} from '../constants/utils';
+import FrameAndChassisSelect from './FrameAndChassisSelect';
 
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
@@ -31,14 +33,6 @@ const AddProduct = () => {
 	const [finalPrice, setFinalPrice] = useState(product.price);
 
 	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
-
-	const setField = (event) => {
-		setFrameColor(event.target.value);
-	};
-
-	const setChassisField = (value) => {
-		setChassis(value);
-	};
 
 	const dispatch = useDispatch();
 	const localStoreProducts = localStorage.getItem('products');
@@ -116,15 +110,11 @@ const AddProduct = () => {
 		));
 	};
 
-	const framesStock = useSelector(selectFramesStock);
-	const chassisStock = useSelector(selectChassisStock);
 	useEffect(() => {
 		setFinalPrice(updatePrice(product, frameColor, chassis));
 	}, [frameColor, chassis]);
 
 	useEffect(() => {
-		getFramesStockAction(dispatch);
-		getChassisStockAction(dispatch);
 		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 	}, []);
 
@@ -146,7 +136,7 @@ const AddProduct = () => {
 				<div className='introductionContainer'>
 					<div className='titleContainer'>
 						<h1>{product.title}</h1>
-						<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
+						<h2>{finalPrice.toFixed(2) + ' lei'} </h2>
 					</div>
 					<div className='productContainer'>
 						<h5>Personalizarea tabloului</h5>
@@ -154,52 +144,12 @@ const AddProduct = () => {
 					<div className='bodySwatchesContainer'>
 						{listItems(product.colors)}
 					</div>
-					<div className='frameContainer'>
-						<h6>Montare pe cadru de lemn</h6>
-						<select
-							id='chassis'
-							name='chassis'
-							className='form-select'
-							placeholder='Montare pe cadru de lemn'
-							onChange={(e) => setChassisField(e.target.value === 'true')}
-						>
-							<option value='false'>Nu</option>
-							<option
-								disabled={
-									chassisStock == 0 || frameColor !== 'fără' ? true : false
-								}
-								value='true'
-							>
-								Da + {chassisPrice} lei
-							</option>
-						</select>
-					</div>
-
-					<div className='frameContainer'>
-						<h6>Rame din lemn natural 30x40cm</h6>
-						<select
-							id='culoare_ramă'
-							name='culoare_ramă'
-							className='form-select'
-							placeholder='Culoare ramă'
-							onChange={setField}
-						>
-							<option value='fără'>Continuă fără ramă</option>
-							{frameColors.map((color, index) => {
-								return (
-									<option
-										disabled={
-											framesStock == 0 || chassis == true ? true : false
-										}
-										key={`color-${index}`}
-										value={color}
-									>
-										{color} + {framePrice} lei
-									</option>
-								);
-							})}
-						</select>
-					</div>
+					<FrameAndChassisSelect
+						frameColor={frameColor}
+						chassis={chassis}
+						setChassis={setChassis}
+						setFrameColor={setFrameColor}
+					/>
 
 					<div className='addToCartContainer'>
 						<a href='/cos-de-cumparaturi'>
@@ -210,13 +160,26 @@ const AddProduct = () => {
 					</div>
 					<div className='detailsDropdownContainer'>
 						<Dropdown
-							title='DETALII'
+							title='Poster Details'
 							content={details}
 							dropdownWidth={width}
 							value={true}
 						/>
 						<Dropdown
-							title='SUPORT'
+							title='Free Framing Service'
+							content={freeFraming}
+							dropdownWidth={width}
+							value={false}
+						/>
+						<Dropdown
+							title='Delivery'
+							content={deliveryDetails}
+							dropdownWidth={width}
+							value={false}
+						/>
+
+						<Dropdown
+							title='Support'
 							content={suport}
 							dropdownWidth={width}
 							value={false}

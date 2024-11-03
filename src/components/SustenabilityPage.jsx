@@ -14,9 +14,9 @@ const SustenabilityPage = () => {
 					<b>cutiile</b> în care sunt livrate tablourile din pânză, sunt
 					confecționate din carton, susținând astfel folosirea materialelor
 					ecologice, fără plastic. Utilizarea materialelor de înaltă calitate
-					este esențială pentru Self, deoarece se dorește ca produsele să fie
-					rezistente și să-și păstreze aspectul în timp. Astfel, printarea se
-					face pe <b>canvas 100% bumbac</b>. <br /> <br />
+					este esențială pentru Self Posters, deoarece se dorește ca produsele
+					să fie rezistente și să-și păstreze aspectul în timp. Astfel,
+					printarea se face pe <b>canvas 100% bumbac</b>. <br /> <br />
 					Mai mult de atât, <b>tuburile</b> sunt confecționate din carton de
 					înaltă calitate, ce poate fi reciclat cu usurință chiar și de mai
 					multe ori. Producătorii tuburilor au redus poluarea procesării
@@ -25,12 +25,13 @@ const SustenabilityPage = () => {
 					management de mediu ISO 14001 și sistem de management al securității
 					și sănătății ocupaționale ISO 45001. <br />
 					<br />
-					Pe viitor, SELF speră să intensifice eforturile în această direcție,
-					explorând noi modalități de a reduce impactul asupra mediului
-					înconjurător și de a promova un stil de viață ecologic. Din păcate,
-					ambalarea tablourilor nu este în totalitate ecologică, însă vrem să
-					atingem un nivel cât mai mare de sustenabilitate pe viitor, înlocuind
-					elemente de plastic (folia de protecție cu bule, pungi, benzi).
+					Pe viitor, Self Posters speră să intensifice eforturile în această
+					direcție, explorând noi modalități de a reduce impactul asupra
+					mediului înconjurător și de a promova un stil de viață ecologic. Din
+					păcate, ambalarea tablourilor nu este în totalitate ecologică, însă
+					vrem să atingem un nivel cât mai mare de sustenabilitate pe viitor,
+					înlocuind elemente de plastic (folia de protecție cu bule, pungi,
+					benzi).
 				</p>
 			</div>{' '}
 			<div className={styles.text}>

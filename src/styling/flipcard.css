@@ -171,5 +171,9 @@ html {
 .priceContainer {
 	font-family: Raleway, sans-serif;
 	font-weight: 500;
-	color: gray;
+	color: #7684ff;
+}
+.promotion {
+	color: black;
+	text-decoration: line-through;
 }

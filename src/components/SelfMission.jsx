@@ -16,7 +16,7 @@ const SelfMission = () => {
 						<div className={styles.benefits} key={i}>
 							<img
 								src={handsImg}
-								alt=' SELF te va îndruma să te reconectezi cu sinele tău autentic și să explorezi universul creativității prin artă și culori.'
+								alt=' Self Posters te va îndruma să te reconectezi cu sinele tău autentic și să explorezi universul creativității prin artă și culori.'
 							/>
 							<p>{t}</p>
 						</div>

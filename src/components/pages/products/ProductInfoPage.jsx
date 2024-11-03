@@ -1,7 +1,11 @@
 import { React, useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
 
-import { computeDiscount, updatePrice } from '../../../constants/utils';
+import {
+	calculatePromotionPrice,
+	computeDiscount,
+	updatePrice,
+} from '../../../constants/utils';
 import classes from './poster.page.module.scss';
 import { useStateContext } from '../../../contexts/ContextProvider';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -12,6 +16,10 @@ import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDispatch } from 'react-redux';
 import { loadProducts } from '../../../reducers/slices/productsSlice';
+import {
+	deliveryDetails,
+	freeFraming,
+} from '../../../constants/productConstants';
 
 const ProductInfoPage = ({ product, suport, details }) => {
 	const [frameColor, setFrameColor] = useState('fără');
@@ -72,7 +80,13 @@ const ProductInfoPage = ({ product, suport, details }) => {
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
 					<h1>{product.title}</h1>
-					<h2>{finalPrice.toFixed(2) + ' lei'}</h2>
+					<h2>
+						{finalPrice.toFixed(2) + ' lei'}{' '}
+						<h2 className={classes.textPromotion}>
+							{' '}
+							{calculatePromotionPrice(finalPrice) + ' lei'}
+						</h2>
+					</h2>
 				</div>
 
 				<FrameAndChassisSelect
@@ -92,13 +106,26 @@ const ProductInfoPage = ({ product, suport, details }) => {
 
 				<div className={classes.detailsDropdownContainer}>
 					<Dropdown
-						title='DETALII'
+						title='Poster Details'
 						content={details}
 						dropdownWidth={width}
 						value={true}
 					/>
 					<Dropdown
-						title='SUPORT'
+						title='Free Framing Service'
+						content={freeFraming}
+						dropdownWidth={width}
+						value={false}
+					/>
+					<Dropdown
+						title='Delivery'
+						content={deliveryDetails}
+						dropdownWidth={width}
+						value={false}
+					/>
+
+					<Dropdown
+						title='Support'
 						content={suport}
 						dropdownWidth={width}
 						value={false}

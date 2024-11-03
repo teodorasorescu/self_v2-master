@@ -178,7 +178,7 @@ export const SmartphoneCart = () => {
 																					</p>
 																				</>
 																			) : (
-																				<p className={styles.price}>
+																				<p className={styles.newPrice}>
 																					{(
 																						row['quantity'] * row['price']
 																					).toFixed(2) + ' lei'}

@@ -33,9 +33,9 @@ function App() {
 	useEffect(() => {
 		ReactGA.initialize('G-VBCPDM60NT');
 
-		if (localStorage.getItem('discountValue') === null) {
-			localStorage.setItem('discountValue', 0);
-		}
+		//if (localStorage.getItem('discountValue') === null) {
+		localStorage.setItem('discountValue', 0);
+		//}
 
 		if (localStorage.getItem('products') == null) {
 			localStorage.setItem('products', JSON.stringify([]));
@@ -77,7 +77,7 @@ function App() {
 					/>
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
-					<Route path='/despre-self' element={<OurStoryPage />} />
+					<Route path='/despre-self-posters' element={<OurStoryPage />} />
 					<Route path='/sustenabilitate' element={<SustenabilityPage />} />
 					<Route path='/termeni-și-condiții' element={<TermsAndConditions />} />
 					<Route

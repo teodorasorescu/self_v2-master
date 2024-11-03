@@ -1,7 +1,10 @@
 import { React } from 'react';
 import Button from '@mui/material/Button';
 
-import { computeDiscount } from '../../../constants/utils';
+import {
+	calculatePromotionPrice,
+	computeDiscount,
+} from '../../../constants/utils';
 import classes from '../products/poster.page.module.scss';
 import { useStateContext } from '../../../contexts/ContextProvider';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -11,6 +14,7 @@ import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDispatch } from 'react-redux';
 import { loadProducts } from '../../../reducers/slices/productsSlice';
+import { deliveryDetails } from '../../../constants/productConstants';
 
 const StickerInfoPage = ({ product, suport, details }) => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -62,7 +66,13 @@ const StickerInfoPage = ({ product, suport, details }) => {
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
 					<h1>{product.title}</h1>
-					<h2>{product.price.toFixed(2) + ' lei'}</h2>
+					<h2>
+						{product.price.toFixed(2) + ' lei'}{' '}
+						<h2 className={classes.textPromotion}>
+							{' '}
+							{calculatePromotionPrice(product.price) + ' lei'}
+						</h2>
+					</h2>
 				</div>
 
 				<div className={classes.addToCartContainer}>
@@ -75,13 +85,19 @@ const StickerInfoPage = ({ product, suport, details }) => {
 
 				<div className={classes.detailsDropdownContainer}>
 					<Dropdown
-						title='DETALII'
+						title='Delivery'
+						content={deliveryDetails}
+						dropdownWidth={width}
+						value={true}
+					/>
+					<Dropdown
+						title='Details'
 						content={details}
 						dropdownWidth={width}
 						value={true}
 					/>
 					<Dropdown
-						title='SUPORT'
+						title='Support'
 						content={suport}
 						dropdownWidth={width}
 						value={false}

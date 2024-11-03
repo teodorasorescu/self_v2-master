@@ -36,7 +36,15 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 				)}
 				<div className={classes.textContainer}>
 					<h3>{product.title}</h3>
-					<h4>{'From ' + product.price.toFixed(2) + ' lei'}</h4>
+					<div className={classes.promotion}>
+						{' '}
+						<h4>
+							{product.price.toFixed(2) + ' lei'}{' '}
+							<h4 className={classes.textPromotion}>
+								{hasHoverImg ? `90 lei` : '35 lei'}
+							</h4>
+						</h4>
+					</div>
 				</div>
 			</div>
 		</>

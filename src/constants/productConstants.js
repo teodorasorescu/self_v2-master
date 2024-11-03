@@ -1,24 +1,26 @@
-export const price = 90.0;
-export const chassisPrice = 50.0;
+export const price = 54.0;
+export const chassisPrice = 30.0;
 
 export const HOME_DELIVERY_SMALL = 19;
 export const LOCKER_DELIVERY_SMALL = 14;
 export const HOME_DELIVERY_BIG = 25;
 export const LOCKER_DELIVERY_BIG = 14;
-
+export const freeFraming =
+	'When you purchase a canvas art print and frame in matching sizes, we will frame it for free.';
+export const deliveryDetails =
+	'Delivery is made by Sameday and it takes up to 3-5 days. You can choose between home or easybox locker delivery.';
 export const details =
-	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material cadru (șasiu): lemn uscat de rășinoase';
-export const stickerDetails = 'Mărime: 15x20cm';
+	'Print: 100% cotton canvas with a matte finish\nSize: 30x40 cm\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
+export const stickerDetails = 'Size: 15x20cm\nSticker Sheet';
 
 export const postersDetails =
-	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material cadru (șasiu): lemn uscat de rășinoase';
+	'Print: 100% cotton canvas with a matte finish\nSize: 30x40 cm\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 
 export const framesDetails =
-	'Print: canvas (pânză) 100% bumbac cu finisaj mat\n Dimensiune: 30x40 cm\n Material ramă: lemn natural ceritificat FSC® 100% \nModalitate de fixare: prevazută cu agățătoare\n Protecție tablou: plexiglas\n Material cadru (șasiu): lemn uscat de rășinoase';
+	'Print: 100% cotton canvas with a matte finish\nSize: 30x40 cm\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 
 export const suport =
-	'Dacă aveți nelămuriri, nu ezitați să ne contactați la selfposters@gmail.com, sau pe instagram/tiktok @selfposters.ro ♡';
-
+	"For questions, don't hesitate to contact us at selfposters@gmail.com, or on Instagram/TikTok @selfposters.ro ♡";
 export const atentionareCuloare =
 	'Vă sfătuim să nu alegeți culori stridente. Tehnologia actuală nu permite printarea culorilor în format RGB, ci CMYK. Astfel, culorile stridente pot ieși la imprimare ușor mai închise.';
 
@@ -79,8 +81,8 @@ export const headersData = [
 		href: '/inspiratie',
 	},
 	{
-		label: 'Despre SELF',
-		href: '/despre-self',
+		label: 'Despre Noi',
+		href: '/despre-self-posters',
 	},
 ];
 
