@@ -26,7 +26,7 @@ export const termsandcontions = [
 	},
 	{
 		title: 'Transferul proprietății produselor',
-		desc: 'În afara de cazul în care este agreat de către SELF și client diferit, proprietatea asupra produselor va fi transferată la livrare, după efectuarea plății din partea clientului în locația indicată în comandă (înțelegând prin livrare – semnarea de primire a documentului de transport furnizat de către curier).\n\n',
+		desc: 'În afara de cazul în care este agreat de către Self Posters și client diferit, proprietatea asupra produselor va fi transferată la livrare, după efectuarea plății din partea clientului în locația indicată în comandă (înțelegând prin livrare – semnarea de primire a documentului de transport furnizat de către curier).\n\n',
 	},
 	{
 		title: 'Retur',
@@ -34,7 +34,7 @@ export const termsandcontions = [
 	},
 	{
 		title: 'Responsabilitate',
-		desc: 'SELF nu poate fi responsabil pentru daune de orice fel pe care clientul sau orice terță parte le poate suferi ca rezultat al îndeplinirii de către SELF a oricăreia dintre obligațiile sale conform comenzii și pentru daune care rezultă din utilizarea produselor după livrare și, în special, pentru pierderea acestora\n',
+		desc: 'Self Posters nu poate fi responsabil pentru daune de orice fel pe care clientul sau orice terță parte le poate suferi ca rezultat al îndeplinirii de către SELF a oricăreia dintre obligațiile sale conform comenzii și pentru daune care rezultă din utilizarea produselor după livrare și, în special, pentru pierderea acestora\n',
 	},
 	{
 		title: 'Legea Aplicabilă',

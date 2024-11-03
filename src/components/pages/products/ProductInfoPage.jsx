@@ -16,6 +16,10 @@ import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDispatch } from 'react-redux';
 import { loadProducts } from '../../../reducers/slices/productsSlice';
+import {
+	deliveryDetails,
+	freeFraming,
+} from '../../../constants/productConstants';
 
 const ProductInfoPage = ({ product, suport, details }) => {
 	const [frameColor, setFrameColor] = useState('fără');
@@ -102,13 +106,26 @@ const ProductInfoPage = ({ product, suport, details }) => {
 
 				<div className={classes.detailsDropdownContainer}>
 					<Dropdown
-						title='DETALII'
+						title='Poster Details'
 						content={details}
 						dropdownWidth={width}
 						value={true}
 					/>
 					<Dropdown
-						title='SUPORT'
+						title='Free Framing Service'
+						content={freeFraming}
+						dropdownWidth={width}
+						value={false}
+					/>
+					<Dropdown
+						title='Delivery'
+						content={deliveryDetails}
+						dropdownWidth={width}
+						value={false}
+					/>
+
+					<Dropdown
+						title='Support'
 						content={suport}
 						dropdownWidth={width}
 						value={false}

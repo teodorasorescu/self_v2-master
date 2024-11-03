@@ -20,12 +20,13 @@ const OurStoryPage = () => {
 			<div className={styles.textContainer}>
 				<div className={styles.text}>
 					<h2>
-						<b> DESPRE SELF </b>
+						<b> DESPRE noi </b>
 					</h2>
 					<p className={styles.headline}>
-						SELF este un brand <b className={styles.italic}>românesc</b>, care a
-						luat naștere dintr-o dorință de exprimare personală, iubire față de
-						design interior contemporan și simpatie față de artă și culori.
+						SELF POSTERS este un brand <b className={styles.italic}>românesc</b>
+						, care a luat naștere dintr-o dorință de exprimare personală, iubire
+						față de design interior contemporan și simpatie față de artă și
+						culori.
 					</p>
 					<p className={styles.subheadline}>
 						Acesta este locul care îmbină estetica contemporană cu
@@ -37,11 +38,11 @@ const OurStoryPage = () => {
 						mintea lor.
 					</p>
 					<p className={styles.subheadline}>
-						SELF se dedică asigurării calității și longevității produselor, prin
-						alegerea atentă a materialelor, atât pentru tablouri, cât și pentru
-						rame. Prin această abordare, brandul, nu doar că garantează
-						durabilitatea produselor, însă contribuie și la un nivel mai mare de
-						sustenabilitate.
+						SELF POSTERS se dedică asigurării calității și longevității
+						produselor, prin alegerea atentă a materialelor, atât pentru
+						tablouri, cât și pentru rame. Prin această abordare, brandul, nu
+						doar că garantează durabilitatea produselor, însă contribuie și la
+						un nivel mai mare de sustenabilitate.
 					</p>
 				</div>
 				<div className={styles.text}>
@@ -59,7 +60,7 @@ const OurStoryPage = () => {
 						a aduce o notă de frumusețe și semnificație în spațiul personal al
 						clienților noștri. Ne străduim să transmitem un mesaj de
 						pozitivitate și să aducem o sursă constantă de inspirație în viața
-						celor care aleg SELF.
+						celor care aleg SELF POSTERS.
 					</p>
 				</div>
 				<div className={styles.text}>
@@ -68,11 +69,11 @@ const OurStoryPage = () => {
 					</h4>
 					<p className={styles.subheadline}>
 						Utilizarea materialelor de înaltă calitate este esențială pentru
-						SELF, deoarece se dorește ca produsele să fie rezistente și să-și
-						păstreze aspectul în timp. Pe viitor, Self speră să intensifice
-						eforturile în această direcție, explorând noi modalități de a reduce
-						impactul asupra mediului înconjurător și de a promova un stil de
-						viață ecologic.
+						SELF POSTERS, deoarece se dorește ca produsele să fie rezistente și
+						să-și păstreze aspectul în timp. Pe viitor, noi sperăm să
+						intensificăm eforturile în această direcție, explorând noi
+						modalități de a reduce impactul asupra mediului înconjurător și de a
+						promova un stil de viață ecologic.
 					</p>
 				</div>
 

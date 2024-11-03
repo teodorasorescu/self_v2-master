@@ -45,7 +45,7 @@ const Footer = () => {
 				/>
 			</div>
 			<div className={styles.logoContainer}>
-				<img className={styles.logo} src={selfLogo} alt='SELF Logo' />
+				<img className={styles.logo} src={selfLogo} alt='Self Posters Logo' />
 				<div className={styles.anpcContainer}>
 					<a href='https://anpc.ro/ce-este-sal/' rel='noopener'>
 						{' '}

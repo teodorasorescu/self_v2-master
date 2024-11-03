@@ -77,7 +77,7 @@ function App() {
 					/>
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
-					<Route path='/despre-self' element={<OurStoryPage />} />
+					<Route path='/despre-self-posters' element={<OurStoryPage />} />
 					<Route path='/sustenabilitate' element={<SustenabilityPage />} />
 					<Route path='/termeni-și-condiții' element={<TermsAndConditions />} />
 					<Route

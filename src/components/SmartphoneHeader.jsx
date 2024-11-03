@@ -83,7 +83,7 @@ const SmartphoneHeader = () => {
 	return (
 		<div>
 			<div className={styles.promotionTextContainer}>
-				<p>BLACK FRIDAY 40% REDUCERE</p>
+				<p>BLACK FRIDAY WEEK - 40% REDUCERE! 04-10 noiembrie</p>
 			</div>
 			<Helmet>
 				<link
@@ -171,7 +171,10 @@ const SmartphoneHeader = () => {
 					</Drawer>
 				</Toolbar>
 				<a href='/'>
-					<img src={selfLogo} alt='SELF Logo - Embrace yourself with colors' />
+					<img
+						src={selfLogo}
+						alt='SELF POSTERS Logo - Embrace yourself with colors'
+					/>
 				</a>
 				<div className={styles.shoppingButton}>
 					<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>

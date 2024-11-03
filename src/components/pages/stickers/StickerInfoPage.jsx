@@ -14,6 +14,7 @@ import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDispatch } from 'react-redux';
 import { loadProducts } from '../../../reducers/slices/productsSlice';
+import { deliveryDetails } from '../../../constants/productConstants';
 
 const StickerInfoPage = ({ product, suport, details }) => {
 	const { itemCount, setItemCount } = useStateContext();
@@ -84,13 +85,19 @@ const StickerInfoPage = ({ product, suport, details }) => {
 
 				<div className={classes.detailsDropdownContainer}>
 					<Dropdown
-						title='DETALII'
+						title='Delivery'
+						content={deliveryDetails}
+						dropdownWidth={width}
+						value={true}
+					/>
+					<Dropdown
+						title='Details'
 						content={details}
 						dropdownWidth={width}
 						value={true}
 					/>
 					<Dropdown
-						title='SUPORT'
+						title='Support'
 						content={suport}
 						dropdownWidth={width}
 						value={false}

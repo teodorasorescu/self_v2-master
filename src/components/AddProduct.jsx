@@ -8,7 +8,12 @@ import { loadProducts } from '../reducers/slices/productsSlice';
 import ProductCarousel from './ProductCarousel';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from './Dropdown';
-import { details, suport } from '../constants/productConstants';
+import {
+	deliveryDetails,
+	details,
+	freeFraming,
+	suport,
+} from '../constants/productConstants';
 import reactCSS from 'reactcss';
 import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -155,13 +160,26 @@ const AddProduct = () => {
 					</div>
 					<div className='detailsDropdownContainer'>
 						<Dropdown
-							title='DETALII'
+							title='Poster Details'
 							content={details}
 							dropdownWidth={width}
 							value={true}
 						/>
 						<Dropdown
-							title='SUPORT'
+							title='Free Framing Service'
+							content={freeFraming}
+							dropdownWidth={width}
+							value={false}
+						/>
+						<Dropdown
+							title='Delivery'
+							content={deliveryDetails}
+							dropdownWidth={width}
+							value={false}
+						/>
+
+						<Dropdown
+							title='Support'
 							content={suport}
 							dropdownWidth={width}
 							value={false}

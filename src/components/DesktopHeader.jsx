@@ -82,7 +82,7 @@ const DesktopHeader = () => {
 					</a>
 				</div>
 
-				<p>BLACK FRIDAY 40% REDUCERE</p>
+				<p>BLACK FRIDAY WEEK - 40% REDUCERE! 04-10 noiembrie</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
 						<p>FAQ&nbsp;&nbsp;</p>
@@ -99,7 +99,7 @@ const DesktopHeader = () => {
 						<img
 							src={selfLogo}
 							width='200'
-							alt='SELF Logo - Embrace yourself with colors'
+							alt='Self Posters Logo - Embrace yourself with colors'
 						/>
 					</a>
 					<div className={styles.cartContainer}>

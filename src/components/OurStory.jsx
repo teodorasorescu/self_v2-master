@@ -10,9 +10,9 @@ const OurStory = () => {
 			<div className={styles.rowContainer}>
 				<div className={styles.text}>
 					<p className={styles.headline}>
-						SELF este un brand care a luat naștere dintr-o dorință de exprimare
-						personală, iubire față de design interior contemporan și simpatie
-						față de artă și culori.
+						SELF POSTERS este un brand care a luat naștere dintr-o dorință de
+						exprimare personală, iubire față de design interior contemporan și
+						simpatie față de artă și culori.
 					</p>
 					<p className={styles.subheadline}>
 						Acesta este locul care îmbină estetica contemporană cu
@@ -22,14 +22,14 @@ const OurStory = () => {
 						sufletul, corpul și mintea lor.
 					</p>
 					<p className={styles.subheadline}>
-						SELF se dedică asigurării calității și longevității produselor, prin
-						alegerea atentă a materialelor, atât pentru tablouri, cât și pentru
-						rame. Prin această abordare, brandul, nu doar că garantează
-						durabilitatea produselor, însă contribuie și la un nivel mai mare de
-						sustenabilitate.
+						SELF POSTERS se dedică asigurării calității și longevității
+						produselor, prin alegerea atentă a materialelor, atât pentru
+						tablouri, cât și pentru rame. Prin această abordare, brandul, nu
+						doar că garantează durabilitatea produselor, însă contribuie și la
+						un nivel mai mare de sustenabilitate.
 					</p>
-					<Button href='/despre-self' className={styles.button}>
-						Descoperă mai multe despre universul SELF
+					<Button href='/despre-self-posters' className={styles.button}>
+						Descoperă mai multe despre universul SELF POSTERS
 					</Button>
 				</div>
 				<div className={styles.imgContainer}>
