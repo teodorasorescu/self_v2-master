@@ -26,6 +26,7 @@ import PosterDetails from './components/features/posters/PosterDetails.jsx';
 import PostersPage from './components/pages/posters/PostersPage.jsx';
 import CustomPosterPage from './components/CustomPosterPage.jsx';
 import StickerDetails from './components/features/stickers/StickerDetails.jsx';
+import NewsletterPage from './components/NewsletterPage.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -33,9 +34,9 @@ function App() {
 	useEffect(() => {
 		ReactGA.initialize('G-VBCPDM60NT');
 
-		//if (localStorage.getItem('discountValue') === null) {
-		localStorage.setItem('discountValue', 0);
-		//}
+		if (localStorage.getItem('discountValue') === null) {
+			localStorage.setItem('discountValue', 0);
+		}
 
 		if (localStorage.getItem('products') == null) {
 			localStorage.setItem('products', JSON.stringify([]));
@@ -71,6 +72,7 @@ function App() {
 					<Route path='/cos-de-cumparaturi' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiratie' element={<Inspiration />} />
+					<Route path='/our-club' element={<NewsletterPage />} />
 					<Route
 						path='/psihologia-culorilor'
 						element={<ColorPsychologyPage />}

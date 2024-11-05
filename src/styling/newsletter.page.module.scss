@@ -1,0 +1,26 @@
+.container {
+	@media screen and (max-width: 1024px) {
+		margin-top: 3%;
+		width: 90vw;
+	}
+
+	> h1 {
+		font-family: 'Frank Ruhl Libre', serif;
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 2.5rem;
+		font-style: italic;
+		text-align: center;
+	}
+	> h2 {
+		font-family: 'Raleway', sans-serif;
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 0.9rem;
+		text-align: center;
+	}
+	width: 25vw;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

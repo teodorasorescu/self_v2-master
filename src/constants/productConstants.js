@@ -81,6 +81,10 @@ export const headersData = [
 		href: '/inspiratie',
 	},
 	{
+		label: 'Self Posters Club',
+		href: '/our-club',
+	},
+	{
 		label: 'Despre Noi',
 		href: '/despre-self-posters',
 	},
