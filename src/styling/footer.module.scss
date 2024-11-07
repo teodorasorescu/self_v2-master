@@ -1,12 +1,14 @@
 @media screen and (min-width: 1024px) {
 	.container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		font-family: 'Raleway', sans-serif;
-		padding-top: 2%;
-		padding-bottom: 2%;
-		font-size: 0.9rem;
+		.infoContainer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			font-family: 'Raleway', sans-serif;
+			padding-top: 2%;
+			padding-bottom: 2%;
+			font-size: 0.9rem;
+		}
 		.logo {
 			width: 160px;
 			height: 120px;
@@ -19,16 +21,19 @@
 
 		.logoContainer {
 			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		.anpcContainer {
-			display: flex;
 			flex-direction: row;
-			> a > img {
-				width: 150px;
-			}
+			justify-content: space-around;
 		}
+	}
+}
+.anpcContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-top: 1%;
+
+	> a > img {
+		width: 150px;
 	}
 }
 

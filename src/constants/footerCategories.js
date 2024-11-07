@@ -1,4 +1,17 @@
 export const infoCategories = [
+	{ name: 'Canvas Art Prints', link: '/canvas-art-prints' },
+	{
+		name: 'Despre Noi',
+		link: '/despre-self-posters',
+	},
+	{
+		name: 'Sustenabilitate',
+		link: '/sustenabilitate',
+	},
+	{
+		name: 'Inspirație',
+		link: '/inspiratie',
+	},
 	{
 		name: 'Termeni și condiții',
 		link: '/termeni-și-condiții',
@@ -14,21 +27,5 @@ export const infoCategories = [
 	{
 		name: 'Contact',
 		link: '/contact',
-	},
-];
-
-export const aboutUsCategories = [
-	{ name: 'Canvas Art Prints', link: '/canvas-art-prints' },
-	{
-		name: 'Despre Noi',
-		link: '/despre-self-posters',
-	},
-	{
-		name: 'Sustenabilitate',
-		link: '/sustenabilitate',
-	},
-	{
-		name: 'Inspirație',
-		link: '/inspiratie',
 	},
 ];

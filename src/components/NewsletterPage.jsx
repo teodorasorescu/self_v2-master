@@ -11,6 +11,10 @@ const NewsletterPage = () => {
 				tailored just for you!
 			</h2>
 			<NewsletterForm />
+			<h3>
+				By submitting your email, you agree to our Terms & Conditions and
+				Privacy Policy.
+			</h3>
 		</div>
 	);
 };
