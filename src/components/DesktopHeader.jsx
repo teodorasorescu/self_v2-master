@@ -82,7 +82,7 @@ const DesktopHeader = () => {
 					</a>
 				</div>
 
-				<p>BLACK FRIDAY WEEK - 40% REDUCERE! 04-10 noiembrie</p>
+				{/* <p></p> */}
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
 						<p>FAQ&nbsp;&nbsp;</p>

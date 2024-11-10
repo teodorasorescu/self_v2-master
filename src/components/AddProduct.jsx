@@ -17,11 +17,7 @@ import {
 import reactCSS from 'reactcss';
 import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import {
-	calculatePromotionPrice,
-	computeProduct,
-	updatePrice,
-} from '../constants/utils';
+import { computeProduct, updatePrice } from '../constants/utils';
 import FrameAndChassisSelect from './FrameAndChassisSelect';
 
 const AddProduct = () => {

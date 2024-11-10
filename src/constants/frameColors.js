@@ -8,4 +8,4 @@ export const frameColors = [
 	'verde',
 ];
 
-export const framePrice = 33.0;
+export const framePrice = 55.0;

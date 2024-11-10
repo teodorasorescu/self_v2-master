@@ -9,17 +9,22 @@ import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import StickersHomeLoading from './features/stickers/StickersHomeLoading';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Home = () => {
+	const smartphoneScreen = useMediaQuery('max-width:1024px');
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.introductionImgContainer}>
 				{
 					<div className={styles.introductionContainer}>
-						{/* <h1 className={styles.title}>
-							Embrace the Colors <br /> of Your Being and Feelings
-						</h1>{' '}
-						<h3 className={styles.subtitle}>
+						{!smartphoneScreen && (
+							<h1 className={styles.title}>
+								Embrace the Colors <br /> of Your Being and Feelings
+							</h1>
+						)}
+						{/* <h3 className={styles.subtitle}>
 							New Canvas Art Prints Available Now - Limited Edition
 						</h3> */}
 						<div className={styles.buttonContainer}>

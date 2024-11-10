@@ -50,7 +50,6 @@ const FrameAndChassisSelect = ({
 					<option
 						disabled={chassisStock == 0 || frameColor !== 'fără' ? true : false}
 						value='true'
-						style={{ color: '#7684ff' }}
 					>
 						Da + {chassisPrice} lei
 					</option>
@@ -72,7 +71,6 @@ const FrameAndChassisSelect = ({
 								disabled={framesStock == 0 || chassis == true ? true : false}
 								key={`color-${index}`}
 								value={color}
-								style={{ color: '#7684ff' }}
 							>
 								{color} + {framePrice} lei
 							</option>

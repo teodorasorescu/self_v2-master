@@ -186,16 +186,12 @@ export const DesktopCart = () => {
 																					{row['initialPrice'].toFixed(2) +
 																						' lei'}
 																				</p>
-																				<p className={styles.newPrice}>
+																				<p className={styles.price}>
 																					{row['price'].toFixed(2) + ' lei'}
 																				</p>
 																			</>
 																		) : (
-																			<>
-																				<p className={styles.newPrice}>
-																					{row['price'].toFixed(2) + ' lei'}
-																				</p>
-																			</>
+																			<p>{row['price'].toFixed(2) + ' lei'}</p>
 																		)}
 																	</div>
 																) : null}

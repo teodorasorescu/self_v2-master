@@ -87,9 +87,7 @@ const Flipcard = () => {
 					Tablou Canvas Personalizat <br />
 					BODY{' '}
 				</p>
-				<p className='priceContainer'>
-					{priceValue} <p className='promotion'>90 lei</p>
-				</p>{' '}
+				<p className='priceContainer'>From {priceValue}</p>{' '}
 			</div>
 			<div className='box-item'>
 				<div className='flip-box'>
@@ -130,9 +128,7 @@ const Flipcard = () => {
 					Tablou Canvas Personalizat <br />
 					MIND
 				</p>
-				<p className='priceContainer'>
-					{priceValue} <p className='promotion'>90 lei</p>
-				</p>{' '}
+				<p className='priceContainer'>From {priceValue}</p>{' '}
 			</div>
 			<div className='box-item'>
 				<div className='flip-box'>
@@ -172,9 +168,7 @@ const Flipcard = () => {
 				<p className='textContainer'>
 					Tablou Canvas Personalizat <br /> SOUL
 				</p>
-				<p className='priceContainer'>
-					{priceValue} <p className='promotion'>90 lei</p>
-				</p>{' '}
+				<p className='priceContainer'>From {priceValue}</p>{' '}
 			</div>
 		</div>
 	);

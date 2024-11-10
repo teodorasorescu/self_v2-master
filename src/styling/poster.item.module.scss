@@ -36,18 +36,10 @@
 				font-size: 0.9rem;
 			}
 		}
-
-		.promotion {
-			> h4 {
-				color: #7684ff;
-				margin-top: 2%;
-				font-size: 1rem;
-				.textPromotion {
-					color: rgb(59, 59, 59);
-					text-decoration: line-through;
-					font-size: 1rem;
-				}
-			}
+		> h4 {
+			margin-top: 2%;
+			font-size: 0.8rem;
+			color: grey;
 		}
 	}
 }

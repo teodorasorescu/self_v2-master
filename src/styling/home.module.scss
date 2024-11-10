@@ -43,11 +43,12 @@
 		animation: fadeToRight 3s ease forwards;
 		align-items: center;
 		margin-bottom: 2%;
+
 		.title {
 			font-family: 'Frank Ruhl Libre', serif;
 			font-optical-sizing: auto;
 			color: #fff7e3;
-			font-size: 3.3rem;
+			font-size: 2rem;
 			font-style: italic;
 			text-align: center;
 		}
@@ -55,14 +56,35 @@
 		.subtitle {
 			padding-top: 1%;
 			padding-bottom: 2%;
-			font-size: 2rem;
+			font-size: 1rem;
 			color: #c9ccff;
+		}
+
+		.title {
+			font-family: 'Frank Ruhl Libre', serif;
+			font-optical-sizing: auto;
+			color: #fff7e3;
+			font-size: 2rem;
+			font-style: italic;
+			text-align: center;
+		}
+
+		/* Smaller screen */
+		@media (max-width: 1024) {
+			.title {
+				font-size: 3.3rem;
+			}
+
+			.subtitle {
+				font-size: 1.5rem;
+			}
 		}
 
 		/* Smaller screen */
 		@media (max-width: 1300px) {
 			.title {
-				font-size: 3.3rem;
+				font-size: 2.2rem;
+				margin-bottom: 30%;
 			}
 
 			.subtitle {
@@ -207,14 +229,14 @@
 		transition: all 0.05s;
 		display: flex;
 		height: 100vh;
-		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/BlackFriday.png');
+		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homeImage.webp');
 
 		@media screen and (max-width: 1024px) {
 			height: 80vh; /* Height for screens up to 1024px */
 		}
 
 		@media screen and (max-width: 768px) {
-			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/Black Friday.png');
+			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homeImageSmartphone.webp');
 			height: 70vh; /* Height for screens up to 768px */
 		}
 	}

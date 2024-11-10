@@ -82,9 +82,9 @@ const SmartphoneHeader = () => {
 
 	return (
 		<div>
-			<div className={styles.promotionTextContainer}>
+			{/* <div className={styles.promotionTextContainer}>
 				<p>BLACK FRIDAY WEEK - 40% REDUCERE</p>
-			</div>
+			</div> */}
 			<Helmet>
 				<link
 					rel='icon'
