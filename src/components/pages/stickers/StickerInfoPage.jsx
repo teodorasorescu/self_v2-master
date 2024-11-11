@@ -1,11 +1,7 @@
 import { React } from 'react';
 import Button from '@mui/material/Button';
 
-import {
-	calculatePromotionPrice,
-	calculateStickerPrice,
-	computeDiscount,
-} from '../../../constants/utils';
+import { computeDiscount } from '../../../constants/utils';
 import classes from '../products/poster.page.module.scss';
 import { useStateContext } from '../../../contexts/ContextProvider';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -67,13 +63,7 @@ const StickerInfoPage = ({ product, suport, details }) => {
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
 					<h1>{product.title}</h1>
-					<h2>
-						{product.price.toFixed(2) + ' lei'}{' '}
-						<h2 className={classes.textPromotion}>
-							{' '}
-							{calculateStickerPrice(product.price) + ' lei'}
-						</h2>
-					</h2>
+					<h2>{product.price.toFixed(2) + ' lei'}</h2>
 				</div>
 
 				<div className={classes.addToCartContainer}>
