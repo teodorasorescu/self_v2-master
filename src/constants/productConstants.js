@@ -1,5 +1,5 @@
 export const price = 90.0;
-export const chassisPrice = 0.0;
+export const chassisPrice = 50.0;
 
 export const HOME_DELIVERY_SMALL = 19;
 export const LOCKER_DELIVERY_SMALL = 14;
