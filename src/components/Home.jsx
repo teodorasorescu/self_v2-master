@@ -12,7 +12,7 @@ import StickersHomeLoading from './features/stickers/StickersHomeLoading';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Home = () => {
-	const smartphoneScreen = useMediaQuery('max-width:1024px');
+	const smartphoneScreen = useMediaQuery('(max-width:1024px)');
 
 	return (
 		<div className={styles.container}>
@@ -24,9 +24,7 @@ const Home = () => {
 								Embrace the Colors <br /> of Your Being and Feelings
 							</h1>
 						)}
-						{/* <h3 className={styles.subtitle}>
-							New Canvas Art Prints Available Now - Limited Edition
-						</h3> */}
+
 						<div className={styles.buttonContainer}>
 							<a href='/canvas-art-prints'>
 								<Button className={styles.button}>GET YOURS</Button>
