@@ -41,6 +41,11 @@
 				}
 			}
 
+			> p > a {
+				text-decoration: none;
+				color: #7684ff;
+			}
+
 			.contactText {
 				display: flex;
 				flex-direction: row;
@@ -149,6 +154,11 @@
 		font-size: 15px;
 		font-weight: 500;
 		font-family: 'Raleway', sans-serif;
+
+		> p > a {
+			text-decoration: none;
+			color: #7684ff;
+		}
 	}
 
 	.stillPositionContainer {

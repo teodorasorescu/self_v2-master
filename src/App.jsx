@@ -26,7 +26,7 @@ import PosterDetails from './components/features/posters/PosterDetails.jsx';
 import PostersPage from './components/pages/posters/PostersPage.jsx';
 import CustomPosterPage from './components/CustomPosterPage.jsx';
 import StickerDetails from './components/features/stickers/StickerDetails.jsx';
-import NewsletterPage from './components/NewsletterPage.jsx';
+import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -43,7 +43,6 @@ function App() {
 		}
 
 		localStorage.setItem('posters', JSON.stringify([]));
-
 		if (localStorage.getItem('itemCount') == null) {
 			localStorage.setItem('itemCount', 0);
 		}
@@ -72,7 +71,7 @@ function App() {
 					<Route path='/cos-de-cumparaturi' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiratie' element={<Inspiration />} />
-					<Route path='/our-club' element={<NewsletterPage />} />
+					<Route path='/our-club' element={<OurClubPage />} />
 					<Route
 						path='/psihologia-culorilor'
 						element={<ColorPsychologyPage />}

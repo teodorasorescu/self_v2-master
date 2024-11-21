@@ -6,7 +6,7 @@ import Contact from './Contact';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import DropdownSection from './DropdownSection';
 import { S3_BUCKET } from '../constants/links';
-import NewsletterPage from './NewsletterPage';
+import Newsletter from './Newsletter';
 import FooterAnpc from './FooterAnpc';
 
 const selfLogo = S3_BUCKET + '/self_logo.webp';
@@ -22,7 +22,7 @@ const Footer = () => {
 					<>
 						<div className={styles.newsletter}>
 							{' '}
-							<NewsletterPage />
+							<Newsletter />
 						</div>
 						<FooterCategory title={'Informații'} categories={infoCategories} />
 					</>
@@ -35,7 +35,7 @@ const Footer = () => {
 						/>
 						<div className={styles.newsletter}>
 							{' '}
-							<NewsletterPage />
+							<Newsletter />
 						</div>
 					</div>
 				)}

@@ -19,6 +19,7 @@ const selfLogo = S3_BUCKET + '/self_logo.webp';
 const SmartphoneHeader = () => {
 	const { drawerOpen, setDrawerOpen } = useStateContext();
 
+	const itemCount = Number.parseInt(localStorage.getItem('itemCount'));
 	const openDrawer = () => {
 		setDrawerOpen(true);
 	};
@@ -82,9 +83,11 @@ const SmartphoneHeader = () => {
 
 	return (
 		<div>
-			{/* <div className={styles.promotionTextContainer}>
-				<p>BLACK FRIDAY WEEK - 40% REDUCERE</p>
-			</div> */}
+			<div className={styles.promotionTextContainer}>
+				<p>
+					GET 10% OFF BY JOINING <a href='our-club'>OUR CLUB</a>!
+				</p>
+			</div>
 			<Helmet>
 				<link
 					rel='icon'
@@ -180,13 +183,13 @@ const SmartphoneHeader = () => {
 					<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
 						<Badge
 							color='primary'
+							badgeContent={Number.isNaN(itemCount) ? 0 : itemCount}
 							sx={{
 								'& .MuiBadge-colorPrimary': {
 									backgroundColor: '#7684ff',
 									color: '#fff7e3',
 								},
 							}}
-							badgeContent={Number.parseInt(localStorage.getItem('itemCount'))}
 						>
 							<img
 								src={shoppingBagImg}
