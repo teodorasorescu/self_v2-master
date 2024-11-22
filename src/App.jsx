@@ -67,18 +67,18 @@ function App() {
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
-					<Route path='/custom-canvas' element={<CustomPosterPage />} />
-					<Route path='/cos-de-cumparaturi' element={<Cart />} />
-					<Route path='/checkout' element={<Checkout />} />
-					<Route path='/inspiratie' element={<Inspiration />} />
-					<Route path='/our-club' element={<OurClubPage />} />
 					<Route
-						path='/psihologia-culorilor'
-						element={<ColorPsychologyPage />}
+						path='/customized-canvas-posters'
+						element={<CustomPosterPage />}
 					/>
+					<Route path='/cart' element={<Cart />} />
+					<Route path='/checkout' element={<Checkout />} />
+					<Route path='/inspiration' element={<Inspiration />} />
+					<Route path='/our-club' element={<OurClubPage />} />
+					<Route path='/color-psychology' element={<ColorPsychologyPage />} />
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
-					<Route path='/despre-self-posters' element={<OurStoryPage />} />
+					<Route path='/about-us' element={<OurStoryPage />} />
 					<Route path='/sustenabilitate' element={<SustenabilityPage />} />
 					<Route path='/termeni-și-condiții' element={<TermsAndConditions />} />
 					<Route

@@ -61,7 +61,7 @@ export const fontColors = [
 
 export const headersData = [
 	{
-		label: 'Acasă',
+		label: 'Home',
 		href: '/',
 	},
 	{
@@ -69,24 +69,24 @@ export const headersData = [
 		href: '/canvas-art-prints',
 	},
 	{
-		label: 'Personalizare Canvas',
-		href: '/custom-canvas',
+		label: 'Customized Canvas Posters',
+		href: '/customized-canvas-posters',
 	},
 	{
-		label: 'Psihologia Culorilor',
-		href: '/psihologia-culorilor',
+		label: 'Color Psychology',
+		href: '/color-psychology',
 	},
 	{
-		label: 'Inspirație',
-		href: '/inspiratie',
+		label: 'Inspiration',
+		href: '/inspiration',
 	},
 	{
 		label: 'Self Posters Club',
 		href: '/our-club',
 	},
 	{
-		label: 'Despre Noi',
-		href: '/despre-self-posters',
+		label: 'About Us',
+		href: '/about-us',
 	},
 ];
 

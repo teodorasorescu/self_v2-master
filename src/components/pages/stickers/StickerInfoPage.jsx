@@ -67,7 +67,7 @@ const StickerInfoPage = ({ product, suport, details }) => {
 				</div>
 
 				<div className={classes.addToCartContainer}>
-					<a href='/cos-de-cumparaturi'>
+					<a href='/cart'>
 						<Button className={classes.cartButton} onClick={computeProductCart}>
 							ADAUGĂ ÎN COȘ
 						</Button>

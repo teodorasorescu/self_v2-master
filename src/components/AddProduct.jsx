@@ -148,7 +148,7 @@ const AddProduct = () => {
 					/>
 
 					<div className='addToCartContainer'>
-						<a href='/cos-de-cumparaturi'>
+						<a href='/cart'>
 							<Button className='cartButton' onClick={computeProductCart}>
 								ADAUGĂ ÎN COȘ
 							</Button>

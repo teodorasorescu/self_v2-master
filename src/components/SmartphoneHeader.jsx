@@ -13,7 +13,7 @@ import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 const instaIcon = S3_BUCKET + '/instagram_logo.webp';
 const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
-const shoppingBagImg = S3_BUCKET + '/cart.webp';
+const shoppingBagImg = S3_BUCKET + '/box.webp';
 const selfLogo = S3_BUCKET + '/self_logo.webp';
 
 const SmartphoneHeader = () => {
@@ -180,7 +180,7 @@ const SmartphoneHeader = () => {
 					/>
 				</a>
 				<div className={styles.shoppingButton}>
-					<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
+					<a href='/cart' style={{ color: 'black' }}>
 						<Badge
 							color='primary'
 							badgeContent={Number.isNaN(itemCount) ? 0 : itemCount}

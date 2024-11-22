@@ -1,23 +1,23 @@
 export const infoCategories = [
 	{ name: 'Canvas Art Prints', link: '/canvas-art-prints' },
 	{
-		name: 'Despre Noi',
-		link: '/despre-self-posters',
+		name: 'About Us',
+		link: '/about-us',
 	},
 	{
-		name: 'Sustenabilitate',
+		name: 'Sustenability',
 		link: '/sustenabilitate',
 	},
 	{
-		name: 'Inspirație',
-		link: '/inspiratie',
+		name: 'Inspiration',
+		link: '/inspiration',
 	},
 	{
-		name: 'Termeni și condiții',
+		name: 'Terms & Conditions',
 		link: '/termeni-și-condiții',
 	},
 	{
-		name: 'Politica de confidențialitate',
+		name: 'Privacy Policy',
 		link: '/politica-de-confidențialitate',
 	},
 	{

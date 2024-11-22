@@ -10,7 +10,7 @@ import { S3_BUCKET } from '../constants/links';
 const instaIcon = S3_BUCKET + '/instagram_logo.webp';
 const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
 const selfLogo = S3_BUCKET + '/self_logo.webp';
-const shoppingBagIcon = S3_BUCKET + '/cart.webp';
+const shoppingBagIcon = S3_BUCKET + '/box.webp';
 
 const DesktopHeader = () => {
 	const [subHeaderSpiritualityOn, setSubHeaderSpirituality] = useState(false);
@@ -105,7 +105,7 @@ const DesktopHeader = () => {
 						/>
 					</a>
 					<div className={styles.cartContainer}>
-						<a href='/cos-de-cumparaturi' style={{ color: 'black' }}>
+						<a href='/cart' style={{ color: 'black' }}>
 							<Badge
 								color='primary'
 								badgeContent={Number.parseInt(
@@ -133,7 +133,7 @@ const DesktopHeader = () => {
 						href='/'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Acasă
+						Home
 					</a>
 
 					{/* <a
@@ -166,17 +166,17 @@ const DesktopHeader = () => {
 					</a>
 					<a
 						className={styles.link}
-						href='/custom-canvas'
+						href='/customized-canvas-posters'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Personalizare Canvas
+						Customized Canvas Posters
 					</a>
 					<a
 						className={styles.link}
-						href='/psihologia-culorilor'
+						href='/color-psychology'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Psihologia Culorilor
+						Color Psychology
 					</a>
 					{/* <a
 						className={styles.link}
@@ -202,10 +202,10 @@ const DesktopHeader = () => {
 
 					<a
 						className={styles.link}
-						href='/inspiratie'
+						href='/inspiration'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Inspirație
+						Inspiration
 					</a>
 				</div>
 			</div>
