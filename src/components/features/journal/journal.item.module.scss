@@ -1,0 +1,40 @@
+.container {
+	display: flex; // Use Flexbox for layout
+	flex-direction: column; // Stack items vertically
+	align-items: flex-start; // Align items to the left
+	position: relative; // Position for absolute children
+
+	.pictureContainer {
+		height: auto;
+		width: 100%;
+		transition: all 1s ease;
+	}
+
+	.textContainer {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		margin-top: 3%;
+
+		font-family: 'Raleway';
+		font-style: normal;
+		font-display: swap;
+		font-weight: 500;
+		.desc {
+			font-size: 0.8rem;
+			color: black;
+		}
+		> h3 {
+			color: black;
+			font-size: 1rem;
+			@media screen and (max-width: 1024px) {
+				font-size: 0.9rem;
+			}
+		}
+		> h4 {
+			margin-top: 2%;
+			font-size: 0.8rem;
+			color: gray;
+		}
+	}
+}

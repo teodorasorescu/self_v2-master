@@ -18,16 +18,20 @@ const DesktopHeader = () => {
 
 	const spiritualityTopics = [
 		{
-			name: 'Ce este meditatia si cum se practica?',
-			path: 'ce-este-meditatia-si-cum-se-practica',
+			name: 'Gift Guide',
+			path: '/journal/gift-guide',
 		},
 		{
-			name: 'Cum influenteaza emotiile comportamentul?',
-			path: 'ce-este-meditatia-si-cum-se-practica',
+			name: 'About Us',
+			path: '/about-us',
 		},
 		{
-			name: 'Intuitive vs Sensing',
-			path: 'ce-este-meditatia-si-cum-se-practica',
+			name: 'Inspiration',
+			path: '/inspiration',
+		},
+		{
+			name: 'Color Psychology',
+			path: '/color-psychology',
 		},
 	];
 
@@ -83,7 +87,7 @@ const DesktopHeader = () => {
 				</div>
 
 				<p>
-					GET 10% OFF BY JOINING <a href='/our-club'>OUR CLUB</a>!
+					Get 10% off by joining <a href='/our-club'>our club</a>!
 				</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
@@ -135,28 +139,22 @@ const DesktopHeader = () => {
 					>
 						Home
 					</a>
-
-					{/* <a
+					<a
 						className={styles.link}
 						onMouseOver={() => setSubHeaderSpirituality(true)}
 					>
-						Spiritualitate
-					</a> */}
-					{/* <div
+						Journal
+					</a>{' '}
+					<div
 						onMouseLeave={() => setSubHeadersOff(false)}
 						className={`${styles.subheader} ${
 							subHeaderSpiritualityOn ? styles.visible : ''
 						}`}
 					>
 						{subHeaderSpiritualityOn && (
-							<Subheader
-								topics={spiritualityTopics}
-								headline='Spiritualitate'
-								imgTitle={Spirituality}
-								imgAlt='Descopera ce este spiritualitatea, cum sa meditezi si cum sa te regasesti pe tine'
-							/>
+							<Subheader topics={spiritualityTopics} />
 						)}
-					</div> */}
+					</div>
 					<a
 						className={styles.link}
 						href='/canvas-art-prints'
@@ -170,13 +168,6 @@ const DesktopHeader = () => {
 						onMouseOver={() => setSubHeadersOff()}
 					>
 						Customized Canvas Posters
-					</a>
-					<a
-						className={styles.link}
-						href='/color-psychology'
-						onMouseOver={() => setSubHeadersOff()}
-					>
-						Color Psychology
 					</a>
 					{/* <a
 						className={styles.link}
@@ -199,14 +190,6 @@ const DesktopHeader = () => {
 							/>
 						)}
 					</div> */}
-
-					<a
-						className={styles.link}
-						href='/inspiration'
-						onMouseOver={() => setSubHeadersOff()}
-					>
-						Inspiration
-					</a>
 				</div>
 			</div>
 		</div>

@@ -7,7 +7,6 @@ import SmartphoneHeader from './SmartphoneHeader';
 
 const Header = () => {
 	const wideScreen = useMediaQuery('(min-width:1025px)');
-
 	return (
 		<div>{wideScreen === true ? <DesktopHeader /> : <SmartphoneHeader />}</div>
 	);

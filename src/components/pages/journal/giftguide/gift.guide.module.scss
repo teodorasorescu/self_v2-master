@@ -1,0 +1,84 @@
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 3%;
+	font-family: 'Raleway';
+	font-style: normal;
+	text-align: center;
+	font-display: swap;
+	font-weight: 500;
+	margin-bottom: 5%;
+	> img {
+		width: 40vw;
+		@media screen and (max-width: 1024px) {
+			width: 90vw;
+		}
+	}
+	> h1 {
+		font-family: 'Frank Ruhl Libre', serif;
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 2.5rem;
+		font-style: italic;
+		text-align: center;
+	}
+	> h4 {
+		margin-top: 3%;
+		margin-right: auto;
+		margin-left: auto;
+		color: black;
+		width: 50vw;
+		font-size: 0.9rem;
+		font-family: 'Raleway';
+		text-align: center;
+		font-style: normal;
+		font-display: swap;
+		font-weight: 500;
+		@media screen and (max-width: 1024px) {
+			font-size: 0.6rem;
+		}
+	}
+	> h2 {
+		font-size: 1.1rem;
+		margin-left: 3%;
+		margin-right: 3%;
+
+		@media screen and (max-width: 1024px) {
+			font-size: 1rem;
+		}
+	}
+	> h3 {
+		color: black;
+		font-size: 1rem;
+
+		@media screen and (max-width: 1024px) {
+			font-size: 0.9rem;
+		}
+	}
+
+	& .postersList {
+		margin-left: 3%;
+		margin-right: 3%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@media screen and (max-width: 1024px) {
+			align-items: center;
+		}
+	}
+
+	& .poster {
+		margin-bottom: 2%;
+		display: block;
+		justify-content: center;
+		width: calc(33.33% - 10px);
+
+		@media screen and (max-width: 1024px) {
+			width: calc(50% - 10px);
+		}
+		> a {
+			text-decoration: none;
+			text-decoration-line: none;
+		}
+	}
+}

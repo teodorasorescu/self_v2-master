@@ -27,12 +27,14 @@ import PostersPage from './components/pages/posters/PostersPage.jsx';
 import CustomPosterPage from './components/CustomPosterPage.jsx';
 import StickerDetails from './components/features/stickers/StickerDetails.jsx';
 import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
+import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
+import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 
 	useEffect(() => {
-		ReactGA.initialize('G-VBCPDM60NT');
+		//ReactGA.initialize('G-VBCPDM60NT');
 
 		if (localStorage.getItem('discountValue') === null) {
 			localStorage.setItem('discountValue', 0);
@@ -62,7 +64,7 @@ function App() {
 						path='/sticker-sheets/:urlTitle'
 						element={<StickerDetails />}
 					/>
-
+					<Route path='/journal/gift-guide' element={<GiftGuide />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
@@ -71,6 +73,7 @@ function App() {
 						path='/customized-canvas-posters'
 						element={<CustomPosterPage />}
 					/>
+					<Route path='/journal' element={<JournalPage />} />
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiration' element={<Inspiration />} />

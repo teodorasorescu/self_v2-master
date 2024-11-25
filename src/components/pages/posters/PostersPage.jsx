@@ -17,7 +17,6 @@ const PostersPage = () => {
 		getPostersAction(dispatch);
 	}, [dispatch]);
 
-	console.log(storedPosters);
 	let content;
 
 	if (isPageLoading) {

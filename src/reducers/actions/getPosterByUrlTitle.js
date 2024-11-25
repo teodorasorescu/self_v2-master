@@ -12,7 +12,6 @@ const getPosterByUrlTitle = (urlTitle, dispatch) => {
 		.get(`${BACKEND_PATH}/products/posters/` + urlTitle)
 		.then((response) => {
 			const resp = response.data;
-			console.log(resp);
 			const listShowcaseImgs = resp.showcase.split(',');
 
 			const poster = {

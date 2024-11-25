@@ -10,7 +10,6 @@ const NewsletterForm = () => {
 	const dispatch = useDispatch();
 	const newsletterSubmitted = useSelector(selectNewsletterState);
 
-	console.log(email);
 	const setField = (event) => {
 		setEmail(event.target.value);
 	};

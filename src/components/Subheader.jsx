@@ -1,12 +1,8 @@
 import styles from '../styling/sub.header.module.scss';
 
-const Subheader = ({ headline, topics, imgTitle, imgAlt }) => {
+const Subheader = ({ headline, topics }) => {
 	return (
 		<div className={styles.container}>
-			<div className={styles.imgContainer}>
-				<img src={imgTitle} alt={imgAlt} />
-			</div>
-
 			<div className={styles.text}>
 				<h1>{headline}</h1>
 

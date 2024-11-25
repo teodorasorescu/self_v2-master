@@ -85,7 +85,7 @@ const SmartphoneHeader = () => {
 		<div>
 			<div className={styles.promotionTextContainer}>
 				<p>
-					GET 10% OFF BY JOINING <a href='our-club'>OUR CLUB</a>!
+					Get 10% off by joining <a href='our-club'>our club</a>
 				</p>
 			</div>
 			<Helmet>
