@@ -1,7 +1,6 @@
 import React from 'react';
 import Flipcard from './Flipcard';
 import styles from '../styling/home.module.scss';
-import Button from '@mui/material/Button';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
 import Benefits from './Benefits';
 import VisualImages from './VisiualImages';
@@ -10,13 +9,14 @@ import ColorsChoice from './ColorsChoice';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import StickersHomeLoading from './features/stickers/StickersHomeLoading';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Countdown from './features/countdown/Countdown';
 
 const Home = () => {
 	const smartphoneScreen = useMediaQuery('(max-width:1024px)');
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.introductionImgContainer}>
+			{/* <div className={styles.introductionImgContainer}>
 				{
 					<div className={styles.introductionContainer}>
 						{!smartphoneScreen && (
@@ -32,7 +32,7 @@ const Home = () => {
 						</div>
 					</div>
 				}
-			</div>
+			</div> */}
 			{/* {!smartphoneScreen && (
 				<div className={styles.introductionContainer}>
 					<h1 className={styles.title}>
@@ -49,6 +49,7 @@ const Home = () => {
 					</div>
 				</div>
 			)} */}
+			<Countdown targetDate={'2024-12-15T23:59:59'} />
 			<PostersHomeLoading /> <Benefits />
 			<StickersHomeLoading />
 			<VisualImages />
