@@ -151,6 +151,9 @@ export const SmartphoneCart = () => {
 																		}}
 																	>
 																		{value}
+																		<p className={styles.frame}>
+																			Size: {row['size']}
+																		</p>
 																		{row['chassis'] === true && (
 																			<p className={styles.frame}>
 																				Montare pe cadru de lemn

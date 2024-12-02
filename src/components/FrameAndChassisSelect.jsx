@@ -6,8 +6,8 @@ import {
 	selectChassisStock,
 	selectFramesStock,
 } from '../reducers/slices/stockSlice';
-import { frameColors, framePrice } from '../constants/frameColors';
-import { chassisPrice } from '../constants/productConstants';
+import { frameColors } from '../constants/frameColors';
+import { chassisPrices, framePrices } from '../constants/productConstants';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { noop } from 'lodash';
@@ -17,6 +17,8 @@ const FrameAndChassisSelect = ({
 	chassis,
 	setFrameColor,
 	setChassis,
+	setSize,
+	size,
 }) => {
 	const setField = (event) => {
 		setFrameColor(event.target.value);
@@ -24,6 +26,10 @@ const FrameAndChassisSelect = ({
 
 	const setChassisField = (value) => {
 		setChassis(value);
+	};
+
+	const setSizeField = (event) => {
+		setSize(event.target.value);
 	};
 
 	const framesStock = useSelector(selectFramesStock);
@@ -38,6 +44,20 @@ const FrameAndChassisSelect = ({
 	return (
 		<div>
 			<div className='frameContainer'>
+				<h6>Size</h6>
+				<select
+					id='size'
+					name='size'
+					className='form-select'
+					placeholder='Size'
+					onChange={setSizeField}
+				>
+					<option value='21x30cm'>21x30cm</option>
+					<option value='30x40cm'>30x40cm</option>
+				</select>
+			</div>
+
+			<div className='frameContainer'>
 				<h6>Montare pe cadru de lemn</h6>
 				<select
 					id='chassis'
@@ -51,12 +71,12 @@ const FrameAndChassisSelect = ({
 						disabled={chassisStock == 0 || frameColor !== 'fără' ? true : false}
 						value='true'
 					>
-						Da + {chassisPrice} lei
+						Da + {chassisPrices.get(size)} lei
 					</option>
 				</select>
 			</div>
 			<div className='frameContainer'>
-				<h6>Rame din lemn natural 30x40cm</h6>
+				<h6>Rame din lemn natural</h6>
 				<select
 					id='culoare_ramă'
 					name='culoare_ramă'
@@ -72,7 +92,7 @@ const FrameAndChassisSelect = ({
 								key={`color-${index}`}
 								value={color}
 							>
-								{color} + {framePrice} lei
+								{color} + {framePrices.get(size)} lei
 							</option>
 						);
 					})}
@@ -85,8 +105,11 @@ const FrameAndChassisSelect = ({
 FrameAndChassisSelect.propTypes = {
 	chassis: PropTypes.bool,
 	frameColor: PropTypes.string,
+	size: PropTypes.string,
+
 	setFrameColor: PropTypes.func,
 	setChassis: PropTypes.func,
+	setSize: PropTypes.func,
 };
 
 FrameAndChassisSelect.defaultProps = {
@@ -94,6 +117,8 @@ FrameAndChassisSelect.defaultProps = {
 	frameColor: noop,
 	setFrameColor: noop,
 	setChassis: noop,
+	size: noop,
+	setSize: noop,
 };
 
 export default FrameAndChassisSelect;

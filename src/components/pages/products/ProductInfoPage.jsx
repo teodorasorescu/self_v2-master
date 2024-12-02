@@ -19,6 +19,8 @@ import {
 const ProductInfoPage = ({ product, suport, details }) => {
 	const [frameColor, setFrameColor] = useState('fără');
 	const [chassis, setChassis] = useState(false);
+	const [size, setSize] = useState('21x30cm');
+
 	const { itemCount, setItemCount } = useStateContext();
 
 	const [finalPrice, setFinalPrice] = useState(product.price);
@@ -53,6 +55,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 			title: product.title,
 			frameColor,
 			chassis,
+			size,
 		};
 
 		const productsList = [...storedProducts, finalProduct];
@@ -64,8 +67,8 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	};
 
 	useEffect(() => {
-		setFinalPrice(updatePrice(product, frameColor, chassis));
-	}, [frameColor, chassis]);
+		setFinalPrice(updatePrice(product, frameColor, chassis, size));
+	}, [frameColor, chassis, size]);
 
 	return (
 		<div className={classes.container}>
@@ -83,6 +86,8 @@ const ProductInfoPage = ({ product, suport, details }) => {
 					chassis={chassis}
 					setChassis={setChassis}
 					setFrameColor={setFrameColor}
+					setSize={setSize}
+					size={size}
 				/>
 
 				<div className={classes.addToCartContainer}>
