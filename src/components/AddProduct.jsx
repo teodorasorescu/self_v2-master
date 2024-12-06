@@ -110,7 +110,7 @@ const AddProduct = () => {
 	};
 
 	useEffect(() => {
-		setFinalPrice(updatePrice(product, frameColor, chassis, size));
+		setFinalPrice(updatePrice(frameColor, chassis, size));
 	}, [frameColor, chassis, size]);
 
 	useEffect(() => {

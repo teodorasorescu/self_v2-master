@@ -45,6 +45,7 @@ const StickerInfoPage = ({ product, suport, details }) => {
 					: product.price,
 			title: product.title,
 			frameColor: 'fără',
+			size: product.size,
 		};
 
 		const productsList = [...storedProducts, finalProduct];

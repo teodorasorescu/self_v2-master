@@ -1,5 +1,4 @@
 export const price = 60.0;
-export const chassisPrice = 50.0;
 
 export const HOME_DELIVERY_SMALL = 19;
 export const LOCKER_DELIVERY_SMALL = 14;
@@ -104,9 +103,15 @@ export const chassisPrices = new Map([
 	['21x30cm', 30],
 	['30x40cm', 50],
 ]);
+
 export const framePrices = new Map([
 	['21x30cm', 35],
 	['30x40cm', 55],
+]);
+
+export const posterPrices = new Map([
+	['21x30cm', 60],
+	['30x40cm', 90],
 ]);
 
 export const contactData = [
