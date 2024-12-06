@@ -1,14 +1,13 @@
-import { framePrice } from './frameColors';
-import { chassisPrice } from './productConstants';
+import { chassisPrices, framePrices, posterPrices } from './productConstants';
 import { v4 as uuidv4 } from 'uuid';
 
-export const updatePrice = (product, frameColor, chassis) => {
-	let updatedPrice = product.price;
+export const updatePrice = (frameColor, chassis, size) => {
+	let updatedPrice = posterPrices.get(size);
 	if (frameColor !== 'fără') {
-		updatedPrice += framePrice;
+		updatedPrice += framePrices.get(size);
 	}
 	if (chassis) {
-		updatedPrice += chassisPrice;
+		updatedPrice += chassisPrices.get(size);
 	}
 
 	return updatedPrice;
@@ -26,20 +25,22 @@ export const computeProduct = (
 	finalPrice,
 	discountCodeValue,
 	frameColor,
-	chassis
+	chassis,
+	size
 ) => {
 	return {
 		...product,
 		id: uuidv4(),
 		initialPrice: finalPrice,
 		quantity: 1,
-		discount: discountCodeValue !== 0 ? discountCodeValue : product.discount,
+		discount: discountCodeValue !== 0 ? discountCodeValue : 0,
 		price:
 			discountCodeValue !== 0
 				? computeDiscount(finalPrice, discountCodeValue)
 				: finalPrice,
 		frameColor,
 		chassis,
+		size,
 	};
 };
 

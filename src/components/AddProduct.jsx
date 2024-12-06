@@ -23,6 +23,7 @@ import FrameAndChassisSelect from './FrameAndChassisSelect';
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('fără');
 	const [chassis, setChassis] = useState(false);
+	const [size, setSize] = useState('21x30cm');
 	const { itemCount, setItemCount } = useStateContext();
 
 	let product = useSelector(selectProduct);
@@ -52,8 +53,10 @@ const AddProduct = () => {
 			finalPrice,
 			discountCodeValue,
 			frameColor,
-			chassis
+			chassis,
+			size
 		);
+
 		const productsList = [...storedProducts, finalProduct];
 		dispatch(loadProducts(productsList));
 
@@ -107,8 +110,8 @@ const AddProduct = () => {
 	};
 
 	useEffect(() => {
-		setFinalPrice(updatePrice(product, frameColor, chassis));
-	}, [frameColor, chassis]);
+		setFinalPrice(updatePrice(frameColor, chassis, size));
+	}, [frameColor, chassis, size]);
 
 	useEffect(() => {
 		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
@@ -145,6 +148,8 @@ const AddProduct = () => {
 						chassis={chassis}
 						setChassis={setChassis}
 						setFrameColor={setFrameColor}
+						setSize={setSize}
+						size={size}
 					/>
 
 					<div className='addToCartContainer'>

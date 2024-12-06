@@ -29,7 +29,7 @@ const OrderConfirmation = () => {
 			const session = getPaymentStatusAction(sessionId, dispatch);
 			session.then(function (s) {
 				if (s.paymentStatus === 'paid') {
-					const products = productsOrder.map((product, i) => {
+					const products = productsOrder.map((product) => {
 						return {
 							quantity: product.quantity,
 							price: product.price,
@@ -43,6 +43,7 @@ const OrderConfirmation = () => {
 							image: product.image,
 							fontColor: JSON.stringify(product.fontColor),
 							discount: product.discount,
+							size: product.size,
 						};
 					});
 
