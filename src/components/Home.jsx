@@ -50,13 +50,14 @@ const Home = () => {
 				</div>
 			)} */}
 			<Countdown targetDate={'2024-12-15T23:59:59'} />
-			<PostersHomeLoading /> <Benefits />
-			<StickersHomeLoading />
-			<VisualImages />
 			<div className={styles.text}>
 				<h3>TABLOURI PERSONALIZATE</h3>
 			</div>
 			<Flipcard />
+			<Benefits />
+			<PostersHomeLoading />
+			<StickersHomeLoading />
+			<VisualImages />
 			<ColorsChoice />
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
