@@ -86,9 +86,7 @@ const DesktopHeader = () => {
 					</a>
 				</div>
 
-				<p>
-					Get 30% off by joining <a href='/our-club'>our club</a>!
-				</p>
+				<p>Use code XMAS30 for 30% off!</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
 						<p>FAQ&nbsp;&nbsp;</p>

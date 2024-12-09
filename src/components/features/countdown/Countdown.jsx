@@ -46,6 +46,10 @@ const Countdown = ({ targetDate }) => {
 							{timeLeft.seconds}s
 						</h1>
 						<h1>Until you can get your order delivered by Christmas!</h1>
+						<h2 style={{ color: '#910000', textAlign: 'center' }}>
+							XMAS30 for 30% off
+						</h2>
+
 						<div className={classes.button}>
 							<Button onClick={goToGiftGuide} msg={'Gift Guide'} />
 						</div>
