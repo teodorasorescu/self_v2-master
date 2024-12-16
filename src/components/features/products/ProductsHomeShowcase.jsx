@@ -57,12 +57,12 @@ export const ProductsHomeShowcase = ({ products }) => {
 	};
 
 	const groups = [
+		'Self Embrace',
+		'Acts of Grace',
+		'Dear Self...',
 		'Burst of Emotion',
 		'The Art of Becoming',
 		'Sky Whispers',
-		'Dear Self...',
-		'Self Embrace',
-		'Acts of Grace',
 		'Serenity of the Sun',
 	];
 
