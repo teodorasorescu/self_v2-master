@@ -11,7 +11,7 @@ const SelfMission = () => {
 				<h3>{headline}</h3>
 				<p className={styles.paragraph}>{description}</p>
 
-				{benefits.map((t, i) => {
+				{/* {benefits.map((t, i) => {
 					return (
 						<div className={styles.benefits} key={i}>
 							<img
@@ -21,7 +21,7 @@ const SelfMission = () => {
 							<p>{t}</p>
 						</div>
 					);
-				})}
+				})} */}
 			</div>
 			<div className={styles.imgContainer}></div>
 		</div>

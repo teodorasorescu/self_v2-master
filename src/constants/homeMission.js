@@ -1,12 +1,12 @@
-export const headline = 'Embrace the Colors of Your Being and Feelings';
+export const headline = 'Made to Create Visual Comfort & Emotion';
 
 export const subheadline =
 	'Explorează-ți identitatea și personalizează-ți tabloul!';
 
 export const description =
-	'Self Posters te îndrumă să te reconectezi cu tine însuți prin personalizarea tablourilor BODY, MIND și SOUL. Îți oferim ghidare în explorarea sentimentelor tale, apoi te ajutăm să le exprimi vizual prin culori, astfel încât să creezi un tablou care te reprezintă cu adevărat.';
+	'Our mission is to evoke and amplify emotions through stunning  color-based posters, creating visual experiences that resonate deeply and inspire connection. Express your deepest emotions through art forms and colors, fostering creativity, understanding, and emotional well-being.';
 export const benefits = [
-	'Print personalizat canvas 100% bumbac',
-	'Rame din lemn natural certificat FSC® 100%',
-	'Montare pe cadru de lemn',
+	'Stunning collection of canvas art prints',
+	'Natural wood frames',
+	'Customized canvas posters',
 ];

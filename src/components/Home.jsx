@@ -10,6 +10,7 @@ import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import StickersHomeLoading from './features/stickers/StickersHomeLoading';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Button from '@mui/material/Button';
+import SelfMission from './SelfMission';
 
 const Home = () => {
 	const smartphoneScreen = useMediaQuery('(max-width:1024px)');
@@ -33,6 +34,7 @@ const Home = () => {
 					</div>
 				}
 			</div>
+			<SelfMission />
 			<PostersHomeLoading /> <Benefits />
 			<div className={styles.text}>
 				<h3>TABLOURI PERSONALIZATE</h3>
@@ -44,7 +46,6 @@ const Home = () => {
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
 			</div>
-			<OurStory />
 		</div>
 	);
 };
