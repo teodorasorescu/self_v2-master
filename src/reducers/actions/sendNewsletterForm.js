@@ -4,7 +4,7 @@ import { loadNewsletterState } from '../slices/newsletterState';
 
 const sendNewsletterAction = (email, dispatch) => {
 	axios
-		.post(`${BACKEND_PATH}/newsletter/add`, { email })
+		.post(`${BACKEND_PATH}/newsletter/send`, { email })
 		.then(() => {
 			dispatch(loadNewsletterState(true));
 		})

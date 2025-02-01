@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
-import { selectNewsletterState } from '../../../reducers/slices/newsletterState';
 import classes from './email-form.module.scss';
 import sendEarlyAccessEmail from '../../../reducers/actions/sendEarlyAcessEmail';
+import { selectNewsletterState } from '../../../reducers/slices/newsletterState';
 
 const EmailForm = ({ afterMessage }) => {
 	const [email, setEmail] = useState('');
 	const dispatch = useDispatch();
-	const newsletterSubmitted = useSelector(selectNewsletterState);
+	const accessCode = useSelector(selectNewsletterState);
 
 	const setField = (event) => {
 		setEmail(event.target.value);
@@ -39,8 +39,8 @@ const EmailForm = ({ afterMessage }) => {
 					</div>
 				</div>
 			</form>
-			{newsletterSubmitted != null && (
-				<>{newsletterSubmitted === true && <p>{afterMessage}</p>}</>
+			{accessCode != null && (
+				<>{accessCode === true && <p>{afterMessage}</p>}</>
 			)}
 		</div>
 	);

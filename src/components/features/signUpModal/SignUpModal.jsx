@@ -38,8 +38,8 @@ const SignUpModal = () => {
 		isOpen && (
 			<div className={styles['modal-overlay']}>
 				<div className={styles.modal}>
-					<h2>Get Early Access! 🚀</h2>
-					<p>Sign up now to be the first to know about our launch.</p>
+					<h2>Get Early Access!</h2>
+					<p>Sign up now to be the first to know about our Vday launch.</p>
 					<EmailForm afterMessage={'You will receive an access code soon!'} />
 					<Button
 						msg={'Close'}
