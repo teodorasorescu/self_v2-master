@@ -16,6 +16,7 @@ import framesSlice from './slices/framesSlice.js';
 import stickerSlice from './slices/stickerSlice.js';
 import stickersSlice from './slices/stickersSlice.js';
 import newsletterStateSlice from './slices/newsletterState.js';
+import accessStateSlice from './slices/accessCodeSlice.js';
 
 export const store = configureStore({
 	reducer: {
@@ -36,5 +37,6 @@ export const store = configureStore({
 		sticker: stickerSlice,
 		stickers: stickersSlice,
 		newsletterState: newsletterStateSlice,
+		accessState: accessStateSlice,
 	},
 });

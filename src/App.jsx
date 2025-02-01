@@ -21,7 +21,7 @@ import ContactPage from './components/ContactPage';
 import ScrollToTop from './components/ui/scroll/ScrollToTop.js';
 import PageNotFound from './components/PageNotFound';
 import ReactGA from 'react-ga4';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PosterDetails from './components/features/posters/PosterDetails.jsx';
 import PostersPage from './components/pages/posters/PostersPage.jsx';
 import CustomPosterPage from './components/CustomPosterPage.jsx';
@@ -29,9 +29,11 @@ import StickerDetails from './components/features/stickers/StickerDetails.jsx';
 import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
 import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
+import EarlyAccessPage from './components/pages/earlyAccess/EarlyAccess.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
+	const [accessOn, setAccessOn] = useState(false);
 
 	useEffect(() => {
 		ReactGA.initialize('G-VBCPDM60NT');
@@ -48,50 +50,76 @@ function App() {
 		if (localStorage.getItem('itemCount') == null) {
 			localStorage.setItem('itemCount', 0);
 		}
+
+		if (
+			localStorage.getItem('accessCode') != null &&
+			localStorage.getItem('accessCode') == 'true'
+		) {
+			setAccessOn(true);
+		}
 	}, []);
 
 	return (
 		<div className='App'>
 			<BrowserRouter>
 				<ScrollToTop />
-				{headerOn && <Header />}
-				<Routes>
-					<Route
-						path='/canvas-art-prints/:urlTitle'
-						element={<PosterDetails />}
-					/>
-					<Route
-						path='/sticker-sheets/:urlTitle'
-						element={<StickerDetails />}
-					/>
-					<Route path='/journal/gift-guide' element={<GiftGuide />} />
-					<Route path='/canvas-art-prints' element={<PostersPage />} />
-					<Route path='*' element={<PageNotFound />} />
-					<Route path='/' element={<Home />} />
-					<Route path='/personalizare' element={<ColorPickerGradient />} />
-					<Route
-						path='/customized-canvas-posters'
-						element={<CustomPosterPage />}
-					/>
-					<Route path='/journal' element={<JournalPage />} />
-					<Route path='/cart' element={<Cart />} />
-					<Route path='/checkout' element={<Checkout />} />
-					<Route path='/inspiration' element={<Inspiration />} />
-					<Route path='/our-club' element={<OurClubPage />} />
-					<Route path='/color-psychology' element={<ColorPsychologyPage />} />
-					<Route path='/adaugă-produs' element={<AddProduct />} />
-					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
-					<Route path='/about-us' element={<OurStoryPage />} />
-					<Route path='/sustenabilitate' element={<SustenabilityPage />} />
-					<Route path='/termeni-și-condiții' element={<TermsAndConditions />} />
-					<Route
-						path='/politica-de-confidențialitate'
-						element={<Confidentiality />}
-					/>
-					<Route path='/faq' element={<FAQPage />} />
-					<Route path='/contact' element={<ContactPage />} />
-				</Routes>
-				{headerOn && <Footer />}
+				{accessOn == true ? (
+					<>
+						{headerOn && <Header />}
+						<Routes>
+							<Route
+								path='/canvas-art-prints/:urlTitle'
+								element={<PosterDetails />}
+							/>
+							<Route
+								path='/sticker-sheets/:urlTitle'
+								element={<StickerDetails />}
+							/>
+							{/* <Route path='/quiz' element={<QuizPage />} /> */}
+
+							<Route path='/journal/gift-guide' element={<GiftGuide />} />
+							<Route path='/canvas-art-prints' element={<PostersPage />} />
+							<Route path='*' element={<PageNotFound />} />
+							<Route path='/' element={<Home />} />
+							<Route path='/personalizare' element={<ColorPickerGradient />} />
+							<Route
+								path='/customized-canvas-posters'
+								element={<CustomPosterPage />}
+							/>
+							<Route path='/journal' element={<JournalPage />} />
+							<Route path='/cart' element={<Cart />} />
+							<Route path='/checkout' element={<Checkout />} />
+							<Route path='/inspiration' element={<Inspiration />} />
+							<Route path='/our-club' element={<OurClubPage />} />
+							<Route
+								path='/color-psychology'
+								element={<ColorPsychologyPage />}
+							/>
+							<Route path='/adaugă-produs' element={<AddProduct />} />
+							<Route
+								path='/confirmare-comanda'
+								element={<OrderConfirmation />}
+							/>
+							<Route path='/about-us' element={<OurStoryPage />} />
+							<Route path='/sustenabilitate' element={<SustenabilityPage />} />
+							<Route
+								path='/termeni-și-condiții'
+								element={<TermsAndConditions />}
+							/>
+							<Route
+								path='/politica-de-confidențialitate'
+								element={<Confidentiality />}
+							/>
+							<Route path='/faq' element={<FAQPage />} />
+							<Route path='/contact' element={<ContactPage />} />
+						</Routes>
+						{headerOn && <Footer />}{' '}
+					</>
+				) : (
+					<Routes>
+						<Route path='/' element={<EarlyAccessPage />} />
+					</Routes>
+				)}
 			</BrowserRouter>
 		</div>
 	);
