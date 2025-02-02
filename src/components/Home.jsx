@@ -32,8 +32,7 @@ const Home = () => {
 					</div>
 				}
 			</div>
-			<SelfMission />
-			<PostersHomeLoading /> <Benefits />
+			<PostersHomeLoading /> <Benefits /> <SelfMission />
 			<div className={styles.text}>
 				<h3>TABLOURI PERSONALIZATE</h3>
 			</div>

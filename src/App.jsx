@@ -30,10 +30,12 @@ import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
 import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
 import EarlyAccessPage from './components/pages/earlyAccess/EarlyAccess.jsx';
+import Loader from './components/ui/loader/Loader.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 	const [accessOn, setAccessOn] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		ReactGA.initialize('G-VBCPDM60NT');
@@ -57,7 +59,13 @@ function App() {
 		) {
 			setAccessOn(true);
 		}
+
+		setIsLoading(false); // Indicate that state has been determined
 	}, []);
+
+	if (isLoading) {
+		return <Loader />;
+	}
 
 	return (
 		<div className='App'>

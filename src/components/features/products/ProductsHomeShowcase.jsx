@@ -34,7 +34,7 @@ export const ProductsHomeShowcase = ({ products }) => {
 		dots: true,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 3, // Show 4 products per slide
+		slidesToShow: 1, // Show 4 products per slide
 		slidesToScroll: 1, // Scroll one slide at a time
 		nextArrow: <NextArrow arrowSize={arrowSize} />, // Custom next arrow
 		prevArrow: <PrevArrow arrowSize={arrowSize} />, // Custom previous arrow
@@ -55,15 +55,7 @@ export const ProductsHomeShowcase = ({ products }) => {
 			},
 		],
 	};
-	const groups = [
-		'Self Embrace',
-		'Acts of Grace',
-		'Dear Self...',
-		'Burst of Emotion',
-		'The Art of Becoming',
-		'Sky Whispers',
-		'Serenity of the Sun',
-	];
+	const groups = ['Vday1 Collection', 'Vday2 Collection'];
 
 	const sendEvent = () => {
 		ReactGA.event('button_click', {
