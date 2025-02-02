@@ -4,10 +4,8 @@ import styles from '../styling/home.module.scss';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
 import Benefits from './Benefits';
 import VisualImages from './VisiualImages';
-import OurStory from './OurStory';
 import ColorsChoice from './ColorsChoice';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
-import StickersHomeLoading from './features/stickers/StickersHomeLoading';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Button from '@mui/material/Button';
 import SelfMission from './SelfMission';
@@ -40,7 +38,6 @@ const Home = () => {
 				<h3>TABLOURI PERSONALIZATE</h3>
 			</div>
 			<Flipcard />
-			<StickersHomeLoading />
 			<VisualImages />
 			<ColorsChoice />
 			<div className={styles.inspoImages}>

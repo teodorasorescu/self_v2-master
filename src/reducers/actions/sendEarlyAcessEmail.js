@@ -2,9 +2,9 @@ import { BACKEND_PATH } from '../../constants/links';
 import axios from 'axios';
 import { loadNewsletterState } from '../slices/newsletterState';
 
-const sendNewsletterAction = (email, dispatch) => {
+const sendEarlyAccessEmail = (email, dispatch) => {
 	axios
-		.post(`${BACKEND_PATH}/newsletter/send`, { email })
+		.post(`${BACKEND_PATH}/newsletter/add`, { email })
 		.then(() => {
 			dispatch(loadNewsletterState(true));
 		})
@@ -13,4 +13,4 @@ const sendNewsletterAction = (email, dispatch) => {
 		});
 };
 
-export default sendNewsletterAction;
+export default sendEarlyAccessEmail;

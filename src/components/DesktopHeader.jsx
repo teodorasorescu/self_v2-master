@@ -38,7 +38,7 @@ const DesktopHeader = () => {
 	const interiorDesignTopics = [
 		{
 			name: 'Best practices for using gradient in design',
-			path: 'inspiratie',
+			path: 'inspiration',
 		},
 		{
 			name: 'How to decorate my room to match my personality?',
