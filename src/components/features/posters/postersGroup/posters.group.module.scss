@@ -17,8 +17,6 @@
 	}
 
 	& .postersList {
-		margin-left: 3%;
-		margin-right: 3%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -34,8 +32,8 @@
 		padding: 1%;
 		justify-content: center;
 		width: calc(33.33% - 10px);
-		animation: fadeIn 0.8s ease forwards;
-		animation-delay: calc(var(--delay) * 0.2s); /* Stagger animation delay */
+		//animation: fadeIn 0.8s ease forwards;
+		//animation-delay: calc(var(--delay) * 0.2s); /* Stagger animation delay */
 
 		@media screen and (max-width: 1024px) {
 			width: calc(50% - 10px);

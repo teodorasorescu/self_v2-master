@@ -91,11 +91,20 @@ const ProductInfoPage = ({ product, suport, details }) => {
 				/>
 
 				<div className={classes.addToCartContainer}>
-					<a href='/cart'>
-						<Button className={classes.cartButton} onClick={computeProductCart}>
-							ADAUGĂ ÎN COȘ
-						</Button>
-					</a>
+					{product.stock !== null && product.stock <= 0 ? (
+						<>
+							<Button className={classes.cartButton}>OUT OF STOCK</Button>
+						</>
+					) : (
+						<a href='/cart'>
+							<Button
+								className={classes.cartButton}
+								onClick={computeProductCart}
+							>
+								ADAUGĂ ÎN COȘ
+							</Button>
+						</a>
+					)}
 				</div>
 
 				<div className={classes.detailsDropdownContainer}>

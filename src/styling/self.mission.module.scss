@@ -9,24 +9,17 @@
 	flex-direction: row;
 	height: auto;
 	border-radius: 60px;
-	background-color: #fff7e3;
 	margin-right: 3%;
 	margin-left: 3%;
 	margin-top: 3%;
 	margin-bottom: 3%;
 	.imgContainer {
 		@media screen and (max-width: 1024px) {
-			width: 100vw;
+			width: 90vw;
 		}
-		border-radius: 60px 60px 60px 60px;
-		width: 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-
-		transition: all 0.05s;
-		height: 500px;
-		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/mission.webp');
+		width: 40%;
+		margin-right: 3%;
+		margin-left: 3%;
 	}
 
 	.text {
@@ -34,16 +27,16 @@
 			width: 95vw;
 			padding: 10%;
 		}
-		align-self: center;
+		align-self: left;
+		margin-top: auto;
+		margin-bottom: auto;
 		width: 50%;
 		padding-left: 3%;
 		margin-right: 2%;
 		> h3 {
 			font-family: 'Frank Ruhl Libre', serif;
 			font-style: italic;
-			@media screen and (max-width: 1024px) {
-				text-align: center;
-			}
+
 			color: #4255ff;
 		}
 		.subheadline {

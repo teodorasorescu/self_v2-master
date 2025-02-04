@@ -9,21 +9,10 @@ const SelfMission = () => {
 		<div className={styles.container}>
 			<div className={styles.text}>
 				<h3>{headline}</h3>
-				<p className={styles.paragraph}>{description}</p>
-
-				{/* {benefits.map((t, i) => {
-					return (
-						<div className={styles.benefits} key={i}>
-							<img
-								src={handsImg}
-								alt=' Self Posters te va îndruma să te reconectezi cu sinele tău autentic și să explorezi universul creativității prin artă și culori.'
-							/>
-							<p>{t}</p>
-						</div>
-					);
-				})} */}
 			</div>
-			<div className={styles.imgContainer}></div>
+			<div className={styles.imgContainer}>
+				<p className={styles.paragraph}>{description}</p>
+			</div>
 		</div>
 	);
 };

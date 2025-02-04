@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import classes from '../../../styling/poster.item.module.scss';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { S3_BUCKET } from '../../../constants/links.js';
+import Tag from '../../ui/tag/Tag.jsx';
 
 const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const [hovered, setHovered] = useState(false);
@@ -24,6 +25,13 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					}`}
 					alt={product.altDescription}
 				/>
+				{product.limitedEdition && product.stock > 0 && (
+					<Tag title='Limited Edition' />
+				)}
+
+				{product.stock !== null && product.stock <= 0 && (
+					<Tag title='Out of Stock' />
+				)}
 				{hasHoverImg && (
 					<img
 						src={imgHoverTitle}
