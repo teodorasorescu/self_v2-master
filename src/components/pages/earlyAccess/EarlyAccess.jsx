@@ -26,7 +26,7 @@ const EarlyAccessPage = () => {
 		<div className={classes.container}>
 			<SignUpModal />
 
-			<h1>Valentine's Day Collection</h1>
+			<h1>Will you be my Valentine?</h1>
 			<img src={Heart} width={100} alt='vdaycollection' />
 			<form onSubmit={handleSubmit}>
 				<div className='input-group mb-3'>
