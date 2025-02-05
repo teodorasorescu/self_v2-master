@@ -18,7 +18,7 @@ const SignUpModal = () => {
 		if (!hasVisited) {
 			setTimeout(() => {
 				setIsOpen(true); // Show modal after delay
-			}, 3000); // ⏳ Adjust delay time (5000ms = 5 seconds)
+			}, 1000); // ⏳ Adjust delay time (5000ms = 5 seconds)
 		}
 
 		if (newsLetterState == true) {
