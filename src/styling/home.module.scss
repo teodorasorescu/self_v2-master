@@ -90,11 +90,11 @@
 				font-family: 'Raleway', sans-serif;
 				font-size: 1rem;
 				transition: all 0.1s ease;
-				background-color: #7684ff;
+				background-color: #91191c;
 				border-radius: 10px;
 				cursor: pointer;
 				text-decoration: none;
-				border: 0.1px solid #7684ff;
+				border: 0.1px solid #91191c;
 
 				color: #fff7e3;
 				margin-bottom: 3%;
@@ -105,10 +105,10 @@
 
 			.button:hover {
 				text-decoration: none;
-				border: 0.1px solid #7684ff;
+				border: 0.1px solid #91191c;
 
 				transition: none;
-				color: #7684ff;
+				color: #91191c;
 				animation: none;
 				background-color: #fff7e3;
 			}
@@ -219,7 +219,7 @@
 		transition: all 0.05s;
 		display: flex;
 		height: 100vh;
-		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homeImage.webp');
+		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/vdayhome.png');
 
 		@media screen and (max-width: 1024px) {
 			height: 80vh; /* Height for screens up to 1024px */

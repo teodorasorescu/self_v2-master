@@ -25,6 +25,16 @@
 .firstContainer {
 	background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/image00003.webp');
 	margin-right: 2%;
+	justify-items: center;
+	> h1 {
+		padding-top: 50%;
+		text-align: center;
+	}
+
+	.buttonStyle {
+		padding: 1%;
+		font-size: 1.3rem;
+	}
 }
 
 .secondContainer {
