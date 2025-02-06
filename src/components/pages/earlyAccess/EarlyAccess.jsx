@@ -28,8 +28,6 @@ const EarlyAccessPage = () => {
 
 			<h1>Will you be my Valentine?</h1>
 			<img src={Heart} width={100} alt='vdaycollection' />
-
-			<h3>Sign up for Early Access</h3>
 			<form onSubmit={handleSubmit}>
 				<div className='input-group mb-3'>
 					<input
