@@ -1,15 +1,15 @@
 const benefits = [
 	{
 		title: 'ELEVATE YOUR WALLS',
-		desc: 'Adaugă personalitate și culoare casei tale cu selecția noastră de tablouri printate pe canvas.',
+		desc: 'Transform your space with our premium color-based canvas posters, designed to add depth, character, and a touch of personality to any room.',
 	},
 	{
 		title: 'SENSE THE QUALITY',
-		desc: 'Folosim canvas 100% bumbac, un material ce garantează calitatea și durabilitatea produsului.',
+		desc: 'We use 100% cotton canvas, a material that guarantees quality and durability of colors.',
 	},
 	{
-		title: 'FEELINGS ON CANVAS',
-		desc: 'Explorează-ți sinele și formează-ți un spațiu care îți reflectă identitatea și construiește-ți tabloul în relație cu sufletul, corpul și mintea ta.',
+		title: 'EXPRESS YOURSELF',
+		desc: 'Let your walls reflect your personality. Each piece helps you create a space that feels truly yours—bold, artistic, and full of character.',
 	},
 ];
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Flipcard from './Flipcard';
 import styles from '../styling/home.module.scss';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
 import Benefits from './Benefits';
@@ -34,12 +33,7 @@ const Home = () => {
 			</div>
 			<SelfMission />
 			<PostersHomeLoading /> <Benefits />
-			<div className={styles.text}>
-				<h3>TABLOURI PERSONALIZATE</h3>
-			</div>
-			<Flipcard />
 			<VisualImages />
-			<ColorsChoice />
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
 			</div>
