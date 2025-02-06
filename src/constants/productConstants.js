@@ -72,10 +72,6 @@ export const headersData = [
 		href: '/customized-canvas-posters',
 	},
 	{
-		label: 'Gift Guide',
-		href: '/journal/gift-guide',
-	},
-	{
 		label: 'Color Psychology',
 		href: '/color-psychology',
 	},
