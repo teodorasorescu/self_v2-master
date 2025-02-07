@@ -1,9 +1,11 @@
 import Carousel from 'react-bootstrap/Carousel';
 import classes from '../../../styling/posters.carousel.module.scss';
 import { S3_BUCKET } from '../../../constants/links';
+import Tag from '../../ui/tag/Tag';
 
 const ItemImagesCarousel = ({ product }) => {
 	const isImageEmpty = product.imgTitle === '';
+
 	return (
 		<>
 			{' '}
@@ -17,6 +19,12 @@ const ItemImagesCarousel = ({ product }) => {
 									className={classes.picturesContainer}
 									alt={product.altDescription}
 								/>
+								{product.limitedEdition && product.stock > 0 && (
+									<Tag title='Limited Edition' />
+								)}
+								{product.stock !== null && product.stock <= 0 && (
+									<Tag title='Out of Stock' />
+								)}
 							</div>
 						</Carousel.Item>
 						{product.showcase != undefined &&
