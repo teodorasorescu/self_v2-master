@@ -4,7 +4,7 @@ import { loadNewsletterState } from '../slices/newsletterState';
 
 const sendEarlyAccessEmail = (email, dispatch) => {
 	axios
-		.post(`${BACKEND_PATH}/newsletter/add`, { email })
+		.post(`${BACKEND_PATH}/newsletter/early-access`, { email })
 		.then(() => {
 			dispatch(loadNewsletterState(true));
 		})
