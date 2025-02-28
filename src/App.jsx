@@ -30,6 +30,7 @@ import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
 import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
 import EarlyAccessPage from './components/pages/earlyAccess/EarlyAccess.jsx';
+import FreePosterClub from './components/pages/freePoster/FreePosterClub.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -81,6 +82,8 @@ function App() {
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiration' element={<Inspiration />} />
 					<Route path='/our-club' element={<OurClubPage />} />
+					<Route path='/free-poster' element={<FreePosterClub />} />
+
 					<Route path='/color-psychology' element={<ColorPsychologyPage />} />
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />

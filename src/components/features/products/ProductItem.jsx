@@ -25,13 +25,8 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					}`}
 					alt={product.altDescription}
 				/>
-				{product.limitedEdition && product.stock > 0 && (
-					<Tag title='Limited Edition' />
-				)}
+				{product.limitedEdition && <Tag title='Limited Edition' />}
 
-				{product.stock !== null && product.stock <= 0 && (
-					<Tag title='Out of Stock' />
-				)}
 				{hasHoverImg && (
 					<img
 						src={imgHoverTitle}
@@ -44,7 +39,11 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 				)}
 				<div className={classes.textContainer}>
 					<h3>{product.title}</h3>
-					<h4>From {product.price.toFixed(2)} lei</h4>
+					{product.stock !== null && product.stock <= 0 ? (
+						<h4>Out of Stock</h4>
+					) : (
+						<h4>From {product.price.toFixed(2)} lei</h4>
+					)}
 				</div>
 			</div>
 		</>

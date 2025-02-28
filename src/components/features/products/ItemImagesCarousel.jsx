@@ -19,12 +19,7 @@ const ItemImagesCarousel = ({ product }) => {
 									className={classes.picturesContainer}
 									alt={product.altDescription}
 								/>
-								{product.limitedEdition && product.stock > 0 && (
-									<Tag title='Limited Edition' />
-								)}
-								{product.stock !== null && product.stock <= 0 && (
-									<Tag title='Out of Stock' />
-								)}
+								<Tag title='Limited Edition' />
 							</div>
 						</Carousel.Item>
 						{product.showcase != undefined &&
