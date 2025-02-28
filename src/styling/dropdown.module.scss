@@ -12,11 +12,20 @@
 	.textContainer {
 		display: flex;
 		justify-content: space-between;
+		> p {
+			font-weight: 550;
+		}
 	}
 
 	.textContainerAfter {
 		display: flex;
 		justify-content: space-between;
 		padding-bottom: 4%;
+		> p {
+			font-weight: 550;
+		}
+	}
+	.imgContainer {
+		margin-bottom: 2%;
 	}
 }

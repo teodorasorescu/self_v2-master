@@ -143,6 +143,12 @@ export const DesktopCart = () => {
 																{column.id === 'title' ? (
 																	<div>
 																		{value}
+																		{row['artist'] !== null && (
+																			<p className={styles.artist}>
+																				{row['artist'].artist}
+																			</p>
+																		)}
+
 																		<p className={styles.frame}>
 																			Size: {row['size']}
 																		</p>

@@ -20,6 +20,7 @@ export const productSlice = createSlice({
 			discount: 0,
 			initialPrice: price,
 			size: '21x30cm',
+			artist: {},
 		},
 	},
 

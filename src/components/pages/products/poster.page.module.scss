@@ -33,6 +33,16 @@
 					font-size: xx-large;
 					font-style: italic;
 				}
+
+				> a {
+					text-decoration: none;
+					> h3 {
+						color: rgb(126, 106, 255);
+
+						font-family: 'Raleway', sans-serif;
+						font-size: large;
+					}
+				}
 			}
 
 			.addToCartContainer {
@@ -109,6 +119,15 @@
 						color: rgb(59, 59, 59);
 						text-decoration: line-through;
 						font-size: x-large;
+					}
+				}
+				> a {
+					text-decoration: none;
+					> h3 {
+						color: rgb(126, 106, 255);
+
+						font-family: 'Raleway', sans-serif;
+						font-size: large;
 					}
 				}
 			}

@@ -23,6 +23,8 @@ export const suport =
 export const atentionareCuloare =
 	'Vă sfătuim să nu alegeți culori stridente. Tehnologia actuală nu permite printarea culorilor în format RGB, ci CMYK. Astfel, culorile stridente pot ieși la imprimare ușor mai închise.';
 
+export const daia_description =
+	'Daia currently living and working in Bucharest as a visual artist and as a graphic designer. Her artworks are characterized by vibrant, bold colors — with a soft spot for the depth of purple — all merging together with organic lines and shapes. She draws inspiration mostly from nature and from little day-to-day thoughts and happenings.';
 export const shippingMessage = 'Transport gratuit la comenzi peste 240 RON!';
 
 export const headerMessage = 'La 3 tablouri cumpărate, al 3 lea este gratuit';

@@ -4,6 +4,7 @@ import ProductItem from '../../products/ProductItem.jsx';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const PostersGroup = ({ group, posters }) => {
+	//change that to a separate group
 	const filteredPosters = posters.filter(
 		(poster) => poster.posterGroup === group
 	);
@@ -11,7 +12,7 @@ const PostersGroup = ({ group, posters }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	return (
 		<div className={classes.container}>
-			<h3>Will you be my Valentine?</h3>
+			<h3>{group}</h3>
 			<div className={classes.postersList}>
 				{filteredPosters.map((poster, index) => (
 					<div

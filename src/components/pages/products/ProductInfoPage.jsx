@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
-import { computeDiscount, updatePrice } from '../../../constants/utils';
+import { computeProduct, updatePrice } from '../../../constants/utils';
 import classes from './poster.page.module.scss';
 import { useStateContext } from '../../../contexts/ContextProvider';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -22,6 +22,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	const [size, setSize] = useState('21x30cm');
 
 	const { itemCount, setItemCount } = useStateContext();
+	const isArtist = product.artist !== null;
 
 	const [finalPrice, setFinalPrice] = useState(product.price);
 	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
@@ -42,23 +43,17 @@ const ProductInfoPage = ({ product, suport, details }) => {
 			button_label: `Adauga In Cos ${product.title}`,
 		});
 
-		const finalProduct = {
-			id: product.id,
-			initialPrice: finalPrice,
-			quantity: 1,
-			image: product.imgTitle,
-			discount: discountCodeValue !== 0 ? discountCodeValue : 0,
-			price:
-				discountCodeValue !== 0
-					? computeDiscount(finalPrice, discountCodeValue)
-					: finalPrice,
-			title: product.title,
+		const finalProduct = computeProduct(
+			product,
+			finalPrice,
+			discountCodeValue,
 			frameColor,
 			chassis,
-			size,
-		};
+			size
+		);
 
 		const productsList = [...storedProducts, finalProduct];
+
 		dispatch(loadProducts(productsList));
 
 		setItemCount(
@@ -78,6 +73,11 @@ const ProductInfoPage = ({ product, suport, details }) => {
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
 					<h1>{product.title}</h1>
+					{isArtist && (
+						<a href={`/journal/${product.artist.artistUrl}`}>
+							<h3>{product.artist.artist}</h3>
+						</a>
+					)}
 					<h2>{finalPrice.toFixed(2) + ' lei'} </h2>
 				</div>
 
@@ -109,10 +109,17 @@ const ProductInfoPage = ({ product, suport, details }) => {
 
 				<div className={classes.detailsDropdownContainer}>
 					<Dropdown
-						title='Poster Details'
-						content={details}
+						title='About Artist'
+						content={product.artist.artistDescription}
 						dropdownWidth={width}
 						value={true}
+						artistImg={product.artist.aboutArtistImg}
+					/>
+					<Dropdown
+						title='Print & Frame Specifications'
+						content={details}
+						dropdownWidth={width}
+						value={false}
 					/>
 					<Dropdown
 						title='Free Framing Service'
@@ -121,7 +128,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 						value={false}
 					/>
 					<Dropdown
-						title='Delivery'
+						title='Delivery & Returns'
 						content={deliveryDetails}
 						dropdownWidth={width}
 						value={false}

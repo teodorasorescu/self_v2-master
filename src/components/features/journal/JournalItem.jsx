@@ -1,14 +1,14 @@
 import { React } from 'react';
 import classes from './journal.item.module.scss';
 import { S3_BUCKET } from '../../../constants/links.js';
-import Image from './giftguide.webp';
+
 const JournalItem = ({ article }) => {
-	// const imgTitle = S3_BUCKET + '/' + item.imgTitle;
+	const imgTitle = S3_BUCKET + '/' + article.imgTitle;
 
 	return (
 		<div className={classes.container}>
 			<img
-				src={Image}
+				src={imgTitle}
 				className={classes.pictureContainer}
 				alt={article.altDescription}
 			/>

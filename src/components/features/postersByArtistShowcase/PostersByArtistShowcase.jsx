@@ -1,12 +1,11 @@
 import React from 'react';
-import classes from '../../../styling/posters.showcase.module.scss';
+import classes from './posters.artist.showcase.module.scss';
 import Slider from 'react-slick';
-import PostersGroup from '../posters/postersGroup/PostersGroup';
-import Button from '../../ui/button/Button';
+
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import ReactGA from 'react-ga4';
+import ProductItem from '../products/ProductItem';
 let arrowSize;
 const NextArrow = (props) => {
 	const { onClick } = props;
@@ -26,7 +25,7 @@ const PrevArrow = (props) => {
 	);
 };
 
-export const ProductsHomeShowcase = ({ products }) => {
+export const PostersByArtistShowcase = ({ products }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	arrowSize = smartphoneScreen ? '1.3rem' : '2rem';
 
@@ -55,34 +54,36 @@ export const ProductsHomeShowcase = ({ products }) => {
 			},
 		],
 	};
-	const groups = ['Water'];
-
-	const sendEvent = () => {
-		ReactGA.event('button_click', {
-			button_label: 'ViewAllPosters',
-		});
-	};
 
 	return (
 		<div className={classes.container}>
 			<Slider {...smartphoneSettings}>
-				{' '}
-				{groups.map((group, index) => (
-					<PostersGroup group={group} key={index} posters={products} />
-				))}
+				<div className={classes.postersContainer}>
+					<div className={classes.postersList}>
+						{products.map((poster, index) => (
+							<div
+								key={poster.urlTitle}
+								className={classes.poster}
+								style={{ '--delay': index }}
+							>
+								<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+									<ProductItem
+										product={poster}
+										posterImg={
+											smartphoneScreen
+												? poster.imgTitle
+												: poster.imgTitlePosterList
+										}
+										hasHoverImg={true}
+									/>
+								</a>
+							</div>
+						))}
+					</div>
+				</div>
 			</Slider>
-			<div className={classes.buttonContainer}>
-				<a href='/canvas-art-prints'>
-					{' '}
-					<Button
-						msg={'View All'}
-						style={classes.buttonStyle}
-						onClick={sendEvent}
-					/>
-				</a>
-			</div>
 		</div>
 	);
 };
 
-export default ProductsHomeShowcase;
+export default PostersByArtistShowcase;

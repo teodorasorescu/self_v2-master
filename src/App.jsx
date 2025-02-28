@@ -29,13 +29,13 @@ import StickerDetails from './components/features/stickers/StickerDetails.jsx';
 import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
 import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
-import EarlyAccessPage from './components/pages/earlyAccess/EarlyAccess.jsx';
+import ArtistJournalPage from './components/pages/artistJournalPage/ArtistJournalPage.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 
 	useEffect(() => {
-		ReactGA.initialize('G-VBCPDM60NT');
+		//ReactGA.initialize('G-VBCPDM60NT');
 
 		if (localStorage.getItem('discountValue') === null) {
 			localStorage.setItem('discountValue', 0);
@@ -66,6 +66,7 @@ function App() {
 						element={<StickerDetails />}
 					/>
 					{/* <Route path='/quiz' element={<QuizPage />} /> */}
+					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 
 					<Route path='/journal/gift-guide' element={<GiftGuide />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />

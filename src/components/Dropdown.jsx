@@ -2,9 +2,10 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useState } from 'react';
 import styles from '../styling/dropdown.module.scss';
-const Dropdown = ({ title, content, dropdownWidth, value }) => {
+import { S3_BUCKET } from '../constants/links';
+const Dropdown = ({ title, content, dropdownWidth, value, artistImg }) => {
 	const [resumeDetails, setResumeDetails] = useState(value);
-
+	const aboutArtistImg = S3_BUCKET + '/' + artistImg;
 	const setResumeTrue = () => {
 		setResumeDetails(true);
 	};
@@ -37,6 +38,14 @@ const Dropdown = ({ title, content, dropdownWidth, value }) => {
 						<p>{title}</p>
 						<KeyboardArrowUpIcon />
 					</div>
+					{artistImg !== undefined && (
+						<img
+							className={styles.imgContainer}
+							width='350'
+							src={aboutArtistImg}
+							alt='about artist'
+						/>
+					)}
 					<p>{content}</p>
 				</div>
 			)}

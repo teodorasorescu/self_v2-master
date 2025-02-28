@@ -17,6 +17,8 @@ export const posterSlice = createSlice({
 			showcase: [],
 			stock: 100,
 			limitedEdition: false,
+			artist: {},
+			style: '',
 		},
 		isPosterLoading: false,
 		posterLoadingError: '',

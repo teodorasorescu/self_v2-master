@@ -1,0 +1,85 @@
+.mainContainer {
+	margin: 3%;
+
+	> h3 {
+		font-family: 'Frank Ruhl Libre', serif;
+		font-optical-sizing: auto;
+		font-size: 2rem;
+		font-style: italic;
+		text-align: left;
+	}
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	min-height: 600px;
+	margin-bottom: 0;
+	@media screen and (min-width: 1400px) {
+		margin-bottom: 3%;
+	}
+}
+
+.firstContainer,
+.secondContainer {
+	width: 50%;
+	height: 80vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transition: all 0.05s;
+}
+
+.firstContainer {
+	margin-bottom: 0;
+	background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/aboutDaia.webp');
+	margin-right: 2%;
+	justify-items: center;
+	> h1 {
+		padding-top: 50%;
+		text-align: center;
+	}
+
+	.buttonStyle {
+		padding: 1%;
+		font-size: 1.3rem;
+	}
+}
+
+.secondContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; /* Pushes content to the bottom */
+	> h1 {
+		font-family: 'Frank Ruhl Libre', serif;
+		font-optical-sizing: auto;
+		font-size: 2.5rem;
+		font-style: italic;
+		text-align: left;
+		color: #7684ff;
+	}
+	> h2 {
+		font-family: 'Raleway', sans-serif;
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 1rem;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.firstContainer,
+	.secondContainer {
+		width: 95vw;
+		height: 50vh;
+		margin-bottom: 3%;
+	}
+
+	.firstContainer {
+		margin-right: 0;
+	}
+}

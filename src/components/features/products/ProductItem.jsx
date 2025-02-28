@@ -10,7 +10,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	const imgTitle = S3_BUCKET + '/' + posterImg;
 	const imgHoverTitle = S3_BUCKET + '/' + product.hoverImgTitle;
-
+	const isArtist = product.artist !== null;
 	return (
 		<>
 			<div
@@ -44,7 +44,12 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 				)}
 				<div className={classes.textContainer}>
 					<h3>{product.title}</h3>
-					<h4>From {product.price.toFixed(2)} lei</h4>
+					{isArtist ? (
+						<h4 className={classes.artist}> {product.artist.artist}</h4>
+					) : (
+						<h4 className={classes.artist}>Self Posters</h4>
+					)}
+					<h4 className={classes.price}>From {product.price.toFixed(2)} lei</h4>
 				</div>
 			</div>
 		</>
