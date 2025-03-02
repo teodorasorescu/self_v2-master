@@ -5,7 +5,7 @@ const NewsletterFreePoster = () => {
 	return (
 		<div className={styles.container}>
 			<h1>Claim your FREE Poster</h1>
-			<h2>Happy Spring! Hoped you liked the flowers! </h2>
+			<h2>Happy Spring! Hope you liked the flowers! </h2>
 			<h2>
 				{' '}
 				Sign up & give us a follow on{' '}
