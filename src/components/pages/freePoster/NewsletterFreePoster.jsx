@@ -4,12 +4,11 @@ import FreeNewsletterForm from '../../FreeNewsletterForm';
 const NewsletterFreePoster = () => {
 	return (
 		<div className={styles.container}>
-			<h1>
-				Giveaway <br /> Win a FREE Poster
-			</h1>
+			<h1 className={styles.give}>Giveaway</h1>
+			<h1>Change your room with 1 FREE Poster in 7 days</h1>
 			<h2>Happy Spring! Hope you liked the flowers! </h2>
 			<h2>
-				{' '}
+				Instrustions <br />
 				Sign up & give us a follow on{' '}
 				<a href={INSTAGRAM_LINK}>selfposters.ro</a> <br /> The winner will be
 				announced on instagram on 8th March. Good luck!
