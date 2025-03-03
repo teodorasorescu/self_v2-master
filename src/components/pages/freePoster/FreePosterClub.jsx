@@ -1,6 +1,6 @@
 import styles from './our.club.page.module.scss';
 
-import freePoster from './freePosters.jpeg';
+import freePoster from './giveaway.jpeg';
 import NewsletterFreePoster from './NewsletterFreePoster';
 const FreePosterClub = () => {
 	return (
