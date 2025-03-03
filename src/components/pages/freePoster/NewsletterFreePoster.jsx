@@ -5,7 +5,7 @@ const NewsletterFreePoster = () => {
 	return (
 		<div className={styles.container}>
 			<h1 className={styles.give}>Giveaway</h1>
-			<h1>Change your room with 1 FREE Poster in 7 days</h1>
+			<h1>On Women's Day We Offer You a Free Poster</h1>
 			<h2>Happy Spring! Hope you liked the flowers! </h2>
 			<h2>
 				Instrustions <br />
