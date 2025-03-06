@@ -11,31 +11,31 @@ export const PostersByArtistShowcase = ({ products }) => {
 
 	return (
 		<div className={classes.container}>
-			<Slider {...sliderSettings}>
-				<div className={classes.postersContainer}>
-					<div className={classes.postersList}>
-						{products.map((poster, index) => (
-							<div
-								key={poster.urlTitle}
-								className={classes.poster}
-								style={{ '--delay': index }}
-							>
-								<a href={`/canvas-art-prints/${poster.urlTitle}`}>
-									<ProductItem
-										product={poster}
-										posterImg={
-											smartphoneScreen
-												? poster.imgTitle
-												: poster.imgTitlePosterList
-										}
-										hasHoverImg={true}
-									/>
-								</a>
-							</div>
-						))}
-					</div>
+			{/* <Slider {...sliderSettings}> */}
+			<div className={classes.postersContainer}>
+				<div className={classes.postersList}>
+					{products.map((poster, index) => (
+						<div
+							key={poster.urlTitle}
+							className={classes.poster}
+							style={{ '--delay': index }}
+						>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem
+									product={poster}
+									posterImg={
+										smartphoneScreen
+											? poster.imgTitle
+											: poster.imgTitlePosterList
+									}
+									hasHoverImg={true}
+								/>
+							</a>
+						</div>
+					))}
 				</div>
-			</Slider>
+			</div>
+			{/* </Slider> */}
 		</div>
 	);
 };

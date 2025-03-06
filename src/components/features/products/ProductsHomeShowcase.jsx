@@ -17,12 +17,11 @@ export const ProductsHomeShowcase = ({ products }) => {
 
 	return (
 		<div className={classes.container}>
-			<Slider {...sliderSettings}>
-				{' '}
-				{groups.map((group, index) => (
-					<PostersGroup group={group} key={index} posters={products} />
-				))}
-			</Slider>
+			{/* <Slider {...sliderSettings}> */}{' '}
+			{groups.map((group, index) => (
+				<PostersGroup group={group} key={index} posters={products} />
+			))}
+			{/* </Slider> */}
 			<div className={classes.buttonContainer}>
 				<a href='/canvas-art-prints'>
 					{' '}
