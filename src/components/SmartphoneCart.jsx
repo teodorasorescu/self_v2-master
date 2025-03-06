@@ -151,12 +151,6 @@ export const SmartphoneCart = () => {
 																		}}
 																	>
 																		<p className={styles.title}>{value}</p>
-																		{row['artist'] !== null &&
-																			row['artist'] !== '' && (
-																				<p className={styles.artist}>
-																					{row['artist']}
-																				</p>
-																			)}
 
 																		<p className={styles.frame}>
 																			Size: {row['size']}

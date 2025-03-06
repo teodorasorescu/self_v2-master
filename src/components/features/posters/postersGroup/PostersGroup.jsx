@@ -9,10 +9,11 @@ const PostersGroup = ({ group, posters }) => {
 		(poster) => poster.posterGroup === group
 	);
 
+	console.log(posters);
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	return (
 		<div className={classes.container}>
-			<h3>{group}</h3>
+			<h3>New Arrivals</h3>
 			<div className={classes.postersList}>
 				{filteredPosters.map((poster, index) => (
 					<div

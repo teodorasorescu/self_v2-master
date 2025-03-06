@@ -1,6 +1,5 @@
 .container {
 	margin-bottom: 3%;
-	position: relative; /* Add this to contain absolute children */
 
 	@media screen and (max-width: 1024px) {
 		margin-top: 3%;
@@ -47,33 +46,6 @@
 			}
 		}
 	}
-}
-
-.customArrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 1;
-	cursor: pointer;
-	padding-top: 10%;
-	padding-bottom: 10%;
-
-	@media screen and (max-width: 1024px) {
-		padding-top: 20%;
-		padding-bottom: 20%;
-	}
-
-	&.prev {
-		left: 10px; // Position the previous arrow
-	}
-
-	&.next {
-		right: 10px; // Position the next arrow
-	}
-}
-
-.customArrow:hover {
-	background-color: #fff4e7;
 }
 
 .postersContainer {

@@ -13,7 +13,6 @@ const getArtistAction = (dispatch, urlTitle) => {
 	axios
 		.get(`${BACKEND_PATH}/artist/` + urlTitle)
 		.then((response) => {
-			console.log(response.data);
 			dispatch(loadArtist(response.data));
 		})
 		.catch(() => {
