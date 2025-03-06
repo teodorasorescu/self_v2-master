@@ -23,7 +23,10 @@ const ArtistsPostersLoading = ({ artist }) => {
 		content = <Loader />;
 	} else {
 		const filteredPosters = storedPosters.filter(
-			(poster) => poster.artist.id === artist.id
+			(poster) =>
+				artist.id !== null &&
+				poster.artist !== null &&
+				poster.artist.id === artist.id
 		);
 		content = <PostersByArtistShowcase products={filteredPosters} />;
 	}
