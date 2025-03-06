@@ -58,7 +58,7 @@ function App() {
 				<ScrollToTop />
 				{headerOn && <Header />}
 				<Routes>
-					<Route
+					{/* <Route
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
@@ -68,9 +68,9 @@ function App() {
 					/>
 					{/* <Route path='/quiz' element={<QuizPage />} /> */}
 
-					<Route path='/journal/gift-guide' element={<GiftGuide />} />
+					{/* <Route path='/journal/gift-guide' element={<GiftGuide />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
-					<Route path='*' element={<PageNotFound />} />
+					 />
 					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
 					<Route
@@ -81,9 +81,10 @@ function App() {
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/inspiration' element={<Inspiration />} />
-					<Route path='/our-club' element={<OurClubPage />} />
+					<Route path='/our-club' element={<OurClubPage />} /> */}
 					<Route path='/free-poster' element={<FreePosterClub />} />
-
+					<Route path='*' element={<FreePosterClub />} />
+					{/* 
 					<Route path='/color-psychology' element={<ColorPsychologyPage />} />
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
@@ -95,7 +96,7 @@ function App() {
 						element={<Confidentiality />}
 					/>
 					<Route path='/faq' element={<FAQPage />} />
-					<Route path='/contact' element={<ContactPage />} />
+					<Route path='/contact' element={<ContactPage />} /> */}
 				</Routes>
 				{headerOn && <Footer />}{' '}
 			</BrowserRouter>
