@@ -26,12 +26,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					alt={product.altDescription}
 				/>{' '}
 				{product.posterGroup == 'Salt Water' && <Tag title='Coming Soon' />}
-				{product.limitedEdition && product.stock > 0 && (
-					<Tag title='Limited Edition' />
-				)}
-				{product.stock !== null && product.stock <= 0 && (
-					<Tag title='Out of Stock' />
-				)}
+				{product.limitedEdition && <Tag title='Limited Edition' />}
 				{hasHoverImg && (
 					<img
 						src={imgHoverTitle}
@@ -49,7 +44,13 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					) : (
 						<h4 className={classes.artist}>Self Posters</h4>
 					)}
-					<h4 className={classes.price}>From {product.price.toFixed(2)} lei</h4>
+					{product.stock !== null && product.stock <= 0 ? (
+						<h4 className={classes.price}>Out of Stock</h4>
+					) : (
+						<h4 className={classes.price}>
+							From {product.price.toFixed(2)} lei
+						</h4>
+					)}
 				</div>
 			</div>
 		</>

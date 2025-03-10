@@ -22,11 +22,11 @@ const ItemImagesCarousel = ({ product }) => {
 								{product.posterGroup == 'Salt Water' && (
 									<Tag title='Coming Soon' />
 								)}
-								{product.limitedEdition && product.stock > 0 && (
-									<Tag title='Limited Edition' />
-								)}
 								{product.stock !== null && product.stock <= 0 && (
 									<Tag title='Out of Stock' />
+								)}
+								{product.limitedEdition != null && (
+									<Tag title='Limited Edition' />
 								)}
 							</div>
 						</Carousel.Item>
