@@ -35,7 +35,7 @@ function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 
 	useEffect(() => {
-		//ReactGA.initialize('G-VBCPDM60NT');
+		ReactGA.initialize('G-VBCPDM60NT');
 
 		if (localStorage.getItem('discountValue') === null) {
 			localStorage.setItem('discountValue', 0);
@@ -80,9 +80,12 @@ function App() {
 					<Route path='/journal' element={<JournalPage />} />
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
-					<Route path='/inspiration' element={<Inspiration />} />
+					<Route path='/journal/inspiration' element={<Inspiration />} />
 					<Route path='/our-club' element={<OurClubPage />} />
-					<Route path='/color-psychology' element={<ColorPsychologyPage />} />
+					<Route
+						path='/journal/color-psychology'
+						element={<ColorPsychologyPage />}
+					/>
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
 					<Route path='/about-us' element={<OurStoryPage />} />

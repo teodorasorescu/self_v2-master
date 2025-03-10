@@ -7,11 +7,14 @@ const JournalItem = ({ article }) => {
 
 	return (
 		<div className={classes.container}>
-			<img
-				src={imgTitle}
-				className={classes.pictureContainer}
-				alt={article.altDescription}
-			/>
+			<div className={classes.pictureContainer}>
+				<img
+					src={imgTitle}
+					alt={article.altDescription}
+					style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+				/>
+			</div>
+
 			<div className={classes.textContainer}>
 				<h3>{article.title}</h3>
 				<h4 className={classes.desc}>{article.description}</h4>

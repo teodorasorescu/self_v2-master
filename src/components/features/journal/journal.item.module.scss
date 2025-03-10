@@ -1,12 +1,13 @@
 .container {
-	display: flex; // Use Flexbox for layout
-	flex-direction: column; // Stack items vertically
-	align-items: flex-start; // Align items to the left
-	position: relative; // Position for absolute children
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
 
 	.pictureContainer {
-		height: auto;
 		width: 100%;
+		height: 250px; // Adjust height as needed
+		background-position: cover; // Ensures images maintain aspect ratio
 		transition: all 1s ease;
 	}
 

@@ -59,6 +59,18 @@ export const fontColors = [
 	'A treia culoare',
 	'A patra culoare',
 ];
+export const subheadersLabelData = ['Featured'];
+export const subheadersData = new Map([
+	[
+		'Featured',
+		[
+			{
+				label: 'Daia Grigore Collection',
+				href: '/journal/daia-grigore',
+			},
+		],
+	],
+]);
 
 export const headersData = [
 	{
@@ -74,20 +86,8 @@ export const headersData = [
 		href: '/customized-canvas-posters',
 	},
 	{
-		label: 'Color Psychology',
-		href: '/color-psychology',
-	},
-	{
-		label: 'Inspiration',
-		href: '/inspiration',
-	},
-	{
-		label: 'Self Posters Club',
-		href: '/our-club',
-	},
-	{
-		label: 'About Us',
-		href: '/about-us',
+		label: 'Journal',
+		href: '/journal',
 	},
 ];
 
@@ -115,6 +115,14 @@ export const posterPrices = new Map([
 ]);
 
 export const contactData = [
+	{
+		label: 'Self Posters Club',
+		href: '/our-club',
+	},
+	{
+		label: 'About Us',
+		href: '/about-us',
+	},
 	{
 		label: 'FAQ',
 		href: '/faq',

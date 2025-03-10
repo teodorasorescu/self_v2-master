@@ -95,6 +95,8 @@ const ProductInfoPage = ({ product, suport, details }) => {
 						<>
 							<Button className={classes.cartButton}>OUT OF STOCK</Button>
 						</>
+					) : product.posterGroup == 'Salt Water' ? (
+						<Button className={classes.cartButton}>Coming Soon</Button>
 					) : (
 						<a href='/cart'>
 							<Button
@@ -108,13 +110,15 @@ const ProductInfoPage = ({ product, suport, details }) => {
 				</div>
 
 				<div className={classes.detailsDropdownContainer}>
-					<Dropdown
-						title='About Artist'
-						content={product.artist.artistDescription}
-						dropdownWidth={width}
-						value={true}
-						artistImg={product.artist.aboutArtistImg}
-					/>
+					{product.artist != null && (
+						<Dropdown
+							title='About Artist'
+							content={product.artist.artistDescription}
+							dropdownWidth={width}
+							value={true}
+							artistImg={product.artist.aboutArtistImg}
+						/>
+					)}
 					<Dropdown
 						title='Print & Frame Specifications'
 						content={details}

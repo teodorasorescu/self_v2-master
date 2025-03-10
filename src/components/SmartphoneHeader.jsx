@@ -7,10 +7,17 @@ import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Drawer, MenuItem, Toolbar } from '@mui/material';
 import { Helmet } from 'react-helmet';
-import { contactData, headersData } from '../constants/productConstants';
+import {
+	contactData,
+	headersData,
+	subheadersData,
+	subheadersLabelData,
+} from '../constants/productConstants';
 import { S3_BUCKET } from '../constants/links';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
+import SubheaderDropdown from './features/subheaderSmartphone/SubheaderDropdown';
+
 const instaIcon = S3_BUCKET + '/instagram_logo.webp';
 const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
 const shoppingBagImg = S3_BUCKET + '/box.webp';
@@ -52,6 +59,26 @@ const SmartphoneHeader = () => {
 						{label}
 					</MenuItem>
 				</a>
+			);
+		});
+	};
+
+	const getSubheaders = () => {
+		return subheadersLabelData.map((label) => {
+			return (
+				<MenuItem
+					disableRipple
+					style={{
+						fontSize: '20px',
+						fontFamily: "'Raleway', sans-serif",
+						paddingTop: '3%',
+					}}
+				>
+					<SubheaderDropdown
+						label={label}
+						subheaders={subheadersData.get(label)}
+					/>
+				</MenuItem>
 			);
 		});
 	};
@@ -131,6 +158,7 @@ const SmartphoneHeader = () => {
 							/>
 						</div>
 						<div style={{ width: '350px' }}>{getDrawerChoices()}</div>
+						<div style={{ width: '350px' }}>{getSubheaders()}</div>
 
 						<div style={{ paddingTop: '10%' }}>{getContactChoices()}</div>
 						<div

@@ -18,7 +18,11 @@
 	@media screen and (min-width: 1400px) {
 		margin-bottom: 3%;
 	}
-	> h1 {
+	& a {
+		color: #7684ff;
+		text-decoration: none;
+	}
+	& h1 {
 		font-family: 'Frank Ruhl Libre', serif;
 		font-optical-sizing: auto;
 		font-size: 2.5rem;
@@ -26,7 +30,7 @@
 		text-align: left;
 		color: #7684ff;
 	}
-	> h2 {
+	& h2 {
 		font-family: 'Raleway', sans-serif;
 		font-optical-sizing: auto;
 		color: #000000;
@@ -65,7 +69,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end; /* Pushes content to the bottom */
-	> h1 {
+	& h1 {
 		font-family: 'Frank Ruhl Libre', serif;
 		font-optical-sizing: auto;
 		font-size: 2.5rem;
@@ -73,12 +77,16 @@
 		text-align: left;
 		color: #7684ff;
 	}
-	> h2 {
+	& h2 {
 		font-family: 'Raleway', sans-serif;
 		font-optical-sizing: auto;
 		color: #000000;
 		font-size: 1rem;
 		text-align: left;
+	}
+	& a {
+		color: #7684ff;
+		text-decoration: none;
 	}
 }
 

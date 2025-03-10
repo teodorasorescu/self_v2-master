@@ -18,20 +18,20 @@ const DesktopHeader = () => {
 
 	const spiritualityTopics = [
 		{
-			name: 'Gift Guide',
-			path: '/journal/gift-guide',
+			name: 'Journal',
+			path: '/journal',
+		},
+		{
+			name: 'Daia Grigore Collection',
+			path: '/journal/daia-grigore',
 		},
 		{
 			name: 'About Us',
 			path: '/about-us',
 		},
 		{
-			name: 'Inspiration',
-			path: '/inspiration',
-		},
-		{
-			name: 'Color Psychology',
-			path: '/color-psychology',
+			name: 'Self Posters Club',
+			path: '/our-club',
 		},
 	];
 
