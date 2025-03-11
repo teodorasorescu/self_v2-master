@@ -150,7 +150,8 @@ export const SmartphoneCart = () => {
 																			flexDirection: 'column',
 																		}}
 																	>
-																		{value}
+																		<p className={styles.title}>{value}</p>
+
 																		<p className={styles.frame}>
 																			Size: {row['size']}
 																		</p>

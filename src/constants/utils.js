@@ -32,6 +32,7 @@ export const computeProduct = (
 		...product,
 		id: uuidv4(),
 		initialPrice: finalPrice,
+		image: product.imgTitle,
 		quantity: 1,
 		discount: discountCodeValue !== 0 ? discountCodeValue : 0,
 		price:

@@ -143,6 +143,7 @@ export const DesktopCart = () => {
 																{column.id === 'title' ? (
 																	<div>
 																		{value}
+
 																		<p className={styles.frame}>
 																			Size: {row['size']}
 																		</p>

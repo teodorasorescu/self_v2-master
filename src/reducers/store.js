@@ -17,6 +17,8 @@ import stickerSlice from './slices/stickerSlice.js';
 import stickersSlice from './slices/stickersSlice.js';
 import newsletterStateSlice from './slices/newsletterState.js';
 import accessStateSlice from './slices/accessCodeSlice.js';
+import artistSlice from './slices/artistSlice.js';
+import posterShowcaseSlice from './slices/posterShowcaseSlice.js';
 
 export const store = configureStore({
 	reducer: {
@@ -38,5 +40,7 @@ export const store = configureStore({
 		stickers: stickersSlice,
 		newsletterState: newsletterStateSlice,
 		accessState: accessStateSlice,
+		artist: artistSlice,
+		posterShowcase: posterShowcaseSlice,
 	},
 });

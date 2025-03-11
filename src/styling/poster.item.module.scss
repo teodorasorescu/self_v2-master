@@ -28,6 +28,7 @@
 		margin-top: 3%;
 		margin-left: auto;
 		margin-right: auto;
+
 		> h3 {
 			color: black;
 			font-size: 1rem;
@@ -36,8 +37,11 @@
 				font-size: 0.9rem;
 			}
 		}
-		> h4 {
-			margin-top: 2%;
+		.price {
+			font-size: 0.9rem;
+			color: grey;
+		}
+		.artist {
 			font-size: 0.8rem;
 			color: grey;
 		}

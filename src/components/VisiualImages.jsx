@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styles from '../styling/visual.images.module.scss';
-import Button from './ui/button/Button';
+import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 
 const VisualImages = () => {
 	const navigate = useNavigate();

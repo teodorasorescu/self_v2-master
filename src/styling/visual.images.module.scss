@@ -39,6 +39,21 @@
 
 .secondContainer {
 	background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/image00011.webp');
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: self-end;
+	padding: 1%;
+	> h3 {
+		color: #fff7e3;
+		font-size: 1.3rem;
+		> a {
+			color: #7684ff;
+			font-family: 'Raleway', sans-serif;
+			font-size: x-large;
+			font-weight: 600;
+		}
+	}
 }
 
 @media screen and (max-width: 1024px) {

@@ -1,0 +1,27 @@
+.container {
+	width: 100%;
+	.resumeContainer {
+		cursor: pointer;
+		font-family: 'Raleway', sans-serif;
+		.textContainer {
+			& p {
+				margin: 0;
+			}
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.textContainerAfter {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		& p {
+			margin: 0;
+			& a {
+				text-decoration: none;
+				color: black;
+			}
+		}
+	}
+}

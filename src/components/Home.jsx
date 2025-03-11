@@ -15,7 +15,7 @@ const Home = () => {
 					<div className={styles.introductionContainer}>
 						<div className={styles.buttonContainer}>
 							<a href='/canvas-art-prints'>
-								<Button className={styles.button}>SHOP ALL</Button>
+								<Button className={styles.button}>SHOP NOW</Button>
 							</a>{' '}
 						</div>
 					</div>

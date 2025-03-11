@@ -5,7 +5,7 @@ import { inspoHome } from '../constants/inspoHome';
 export const HomeInspirationShowcase = () => {
 	return (
 		<div className='gradientPhotosContainer'>
-			<h3 className='text'>INSPIRAȚIE</h3>
+			<h3 className='text'>Inspiration</h3>
 			<div className='imagesContainer'>
 				{inspoHome.map((c, i) => {
 					return (

@@ -15,22 +15,33 @@
 		margin-left: 3%;
 		margin-right: 3%;
 		display: flex;
-		//justify-content: space-between; // Space items evenly
+		flex-wrap: wrap;
+		gap: 2%; // Adds uniform spacing
+		justify-content: space-evenly; // Distributes items evenly
 	}
 
 	& .article {
 		margin-bottom: 2%;
 		animation: fadeIn 0.8s ease forwards;
-		animation-delay: calc(var(--delay) * 0.2s); /* Stagger animation delay */
+		animation-delay: calc(var(--delay) * 0.2s);
 
-		@media (min-width: 768px) {
-			// For tablets and small desktops
-			width: calc(33.33% - 10px); // 3 items per row
+		// Default: 3 articles per row
+		width: calc(33.33% - 2%);
+
+		@media (max-width: 1024px) {
+			width: calc(50% - 2%); // 2 articles per row on tablets
+		}
+
+		@media (max-width: 600px) {
+			width: calc(50% - 2%); // 2 articles per row on smartphones
+		}
+
+		@media (max-width: 400px) {
+			width: 100%; // 1 article per row on very small screens
 		}
 
 		> a {
 			text-decoration: none;
-			text-decoration-line: none;
 		}
 	}
 }

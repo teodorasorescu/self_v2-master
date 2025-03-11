@@ -1,45 +1,69 @@
+import { useState } from 'react';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { useState } from 'react';
 import styles from '../styling/dropdown.module.scss';
-const Dropdown = ({ title, content, dropdownWidth, value }) => {
+import { S3_BUCKET } from '../constants/links';
+import '../components/ui/dropdown/dropdownTransitions.css';
+
+const Dropdown = ({ title, content, dropdownWidth, value, artistImg }) => {
 	const [resumeDetails, setResumeDetails] = useState(value);
+	const aboutArtistImg = S3_BUCKET + '/' + artistImg;
 
-	const setResumeTrue = () => {
-		setResumeDetails(true);
-	};
-
-	const setResumeFalse = () => {
-		setResumeDetails(false);
+	const toggleDetails = () => {
+		setResumeDetails((prev) => !prev);
 	};
 
 	return (
 		<div>
-			{resumeDetails === false && (
-				<div
-					className={styles.resumeContainer}
-					style={{ width: dropdownWidth }}
-					onClick={() => setResumeTrue()}
-				>
-					<div className={styles.textContainer}>
-						<p>{title}</p>
-						<KeyboardArrowDownIcon />
-					</div>
+			{/* Clickable header */}
+			<div
+				className={styles.resumeContainer}
+				style={{ width: dropdownWidth }}
+				onClick={toggleDetails}
+			>
+				<div className={styles.textContainer}>
+					<p>{title}</p>
+					<SwitchTransition>
+						<CSSTransition
+							key={resumeDetails ? 'up' : 'down'}
+							timeout={300}
+							classNames='icon-slide'
+						>
+							<span>
+								{resumeDetails ? (
+									<KeyboardArrowUpIcon />
+								) : (
+									<KeyboardArrowDownIcon />
+								)}
+							</span>
+						</CSSTransition>
+					</SwitchTransition>
 				</div>
-			)}
-			{resumeDetails === true && (
+			</div>
+
+			{/* Slide effect for content */}
+			<CSSTransition
+				in={resumeDetails}
+				timeout={300}
+				classNames='slide'
+				unmountOnExit
+			>
 				<div
 					className={styles.resumeContainer}
-					onClick={() => setResumeFalse()}
 					style={{ width: dropdownWidth }}
 				>
-					<div className={styles.textContainerAfter}>
-						<p>{title}</p>
-						<KeyboardArrowUpIcon />
-					</div>
+					{artistImg && (
+						<img
+							className={styles.imgContainer}
+							width='350'
+							src={aboutArtistImg}
+							alt='about artist'
+						/>
+					)}
 					<p>{content}</p>
 				</div>
-			)}
+			</CSSTransition>
 		</div>
 	);
 };

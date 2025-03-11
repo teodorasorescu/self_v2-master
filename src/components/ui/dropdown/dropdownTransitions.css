@@ -1,0 +1,45 @@
+/* Slide effect for content */
+.slide-enter {
+	opacity: 0;
+	transform: translateY(-10px);
+}
+
+.slide-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.slide-exit {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.slide-exit-active {
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+/* Icon transition effect */
+.icon-slide-enter {
+	opacity: 0;
+	transform: translateY(-5px);
+}
+
+.icon-slide-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.icon-slide-exit {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.icon-slide-exit-active {
+	opacity: 0;
+	transform: translateY(5px);
+	transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}

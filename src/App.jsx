@@ -29,8 +29,7 @@ import StickerDetails from './components/features/stickers/StickerDetails.jsx';
 import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
 import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
-import EarlyAccessPage from './components/pages/earlyAccess/EarlyAccess.jsx';
-import FreePosterClub from './components/pages/freePoster/FreePosterClub.jsx';
+import ArtistJournalPage from './components/pages/artistJournalPage/ArtistJournalPage.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -58,7 +57,7 @@ function App() {
 				<ScrollToTop />
 				{headerOn && <Header />}
 				<Routes>
-					{/* <Route
+					<Route
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
@@ -67,10 +66,11 @@ function App() {
 						element={<StickerDetails />}
 					/>
 					{/* <Route path='/quiz' element={<QuizPage />} /> */}
+					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 
-					{/* <Route path='/journal/gift-guide' element={<GiftGuide />} />
+					<Route path='/journal/gift-guide' element={<GiftGuide />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
-					 />
+					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
 					<Route
@@ -80,12 +80,12 @@ function App() {
 					<Route path='/journal' element={<JournalPage />} />
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
-					<Route path='/inspiration' element={<Inspiration />} />
-					<Route path='/our-club' element={<OurClubPage />} /> */}
-					<Route path='/free-poster' element={<FreePosterClub />} />
-					<Route path='*' element={<FreePosterClub />} />
-					{/* 
-					<Route path='/color-psychology' element={<ColorPsychologyPage />} />
+					<Route path='/journal/inspiration' element={<Inspiration />} />
+					<Route path='/our-club' element={<OurClubPage />} />
+					<Route
+						path='/journal/color-psychology'
+						element={<ColorPsychologyPage />}
+					/>
 					<Route path='/adaugă-produs' element={<AddProduct />} />
 					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
 					<Route path='/about-us' element={<OurStoryPage />} />
@@ -96,7 +96,7 @@ function App() {
 						element={<Confidentiality />}
 					/>
 					<Route path='/faq' element={<FAQPage />} />
-					<Route path='/contact' element={<ContactPage />} /> */}
+					<Route path='/contact' element={<ContactPage />} />
 				</Routes>
 				{headerOn && <Footer />}{' '}
 			</BrowserRouter>

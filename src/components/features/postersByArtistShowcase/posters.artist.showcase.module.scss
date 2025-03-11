@@ -1,7 +1,6 @@
 .container {
 	margin-bottom: 3%;
-	position: relative; /* Add this to contain absolute children */
-
+	font-family: 'Raleway', sans-serif;
 	@media screen and (max-width: 1024px) {
 		margin-top: 3%;
 	}
@@ -45,6 +44,47 @@
 			@media screen and (max-width: 1024px) {
 				width: 30vw;
 			}
+		}
+	}
+}
+
+.postersContainer {
+	& .postersList {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@media screen and (max-width: 1024px) {
+			align-items: center;
+			height: 90vh;
+		}
+	}
+
+	& .poster {
+		margin-bottom: 2%;
+		display: block;
+		padding: 1%;
+		justify-content: center;
+		width: calc(33.33% - 10px);
+		//animation: fadeIn 0.8s ease forwards;
+		//animation-delay: calc(var(--delay) * 0.2s); /* Stagger animation delay */
+
+		@media screen and (max-width: 1024px) {
+			width: calc(50% - 10px);
+		}
+		> a {
+			text-decoration: none;
+			text-decoration-line: none;
+		}
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }
