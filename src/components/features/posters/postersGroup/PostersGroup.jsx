@@ -9,7 +9,6 @@ const PostersGroup = ({ group, posters }) => {
 		(poster) => poster.posterGroup === group
 	);
 
-	console.log(posters);
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	return (
 		<div className={classes.container}>

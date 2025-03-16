@@ -95,8 +95,6 @@ const ProductInfoPage = ({ product, suport, details }) => {
 						<>
 							<Button className={classes.cartButton}>OUT OF STOCK</Button>
 						</>
-					) : product.posterGroup == 'Salt Water' ? (
-						<Button className={classes.cartButton}>Coming Soon</Button>
 					) : (
 						<a href='/cart'>
 							<Button
