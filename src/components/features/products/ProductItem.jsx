@@ -25,7 +25,6 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					}`}
 					alt={product.altDescription}
 				/>{' '}
-				{product.posterGroup == 'Salt Water' && <Tag title='Coming Soon' />}
 				{product.limitedEdition && <Tag title='Limited Edition' />}
 				{hasHoverImg && (
 					<img

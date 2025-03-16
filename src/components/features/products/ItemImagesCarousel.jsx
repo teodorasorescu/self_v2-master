@@ -19,9 +19,6 @@ const ItemImagesCarousel = ({ product }) => {
 									className={classes.picturesContainer}
 									alt={product.altDescription}
 								/>
-								{product.posterGroup == 'Salt Water' && (
-									<Tag title='Coming Soon' />
-								)}
 								{product.stock !== null && product.stock <= 0 && (
 									<Tag title='Out of Stock' />
 								)}
