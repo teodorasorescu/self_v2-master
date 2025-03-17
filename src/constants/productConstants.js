@@ -108,10 +108,20 @@ export const framePrices = new Map([
 ]);
 
 export const posterPrices = new Map([
-	['21x30cm', 60],
-	['30x40cm', 90],
-	['21x30cm', 120],
-	['30x40cm', 150],
+	[
+		'21x30cm',
+		new Map([
+			[60, 60],
+			[120, 120],
+		]),
+	],
+	[
+		'30x40cm',
+		new Map([
+			[60, 90],
+			[120, 150],
+		]),
+	],
 ]);
 
 export const contactData = [

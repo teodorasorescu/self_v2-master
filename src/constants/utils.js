@@ -1,8 +1,8 @@
 import { chassisPrices, framePrices, posterPrices } from './productConstants';
 import { v4 as uuidv4 } from 'uuid';
 
-export const updatePrice = (frameColor, chassis, size) => {
-	let updatedPrice = posterPrices.get(size);
+export const updatePrice = (frameColor, chassis, size, initialPrice) => {
+	let updatedPrice = posterPrices.get(size)?.get(initialPrice);
 	if (frameColor !== 'fără') {
 		updatedPrice += framePrices.get(size);
 	}
