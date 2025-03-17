@@ -62,7 +62,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	};
 
 	useEffect(() => {
-		setFinalPrice(updatePrice(frameColor, chassis, size));
+		setFinalPrice(updatePrice(frameColor, chassis, size, product.price));
 	}, [frameColor, chassis, size]);
 
 	return (
