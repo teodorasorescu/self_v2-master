@@ -1,19 +1,11 @@
 .container {
 	display: flex;
 	flex-direction: column;
-
-	.ourWorldImg {
-		margin-bottom: 3%;
-		border-radius: 0 0 60px 60px;
-	}
-
 	.textContainer {
 		height: auto;
 		display: flex;
 		flex-direction: column;
-		.homePhoto {
-			margin-top: 3%;
-		}
+
 		.imgContainer {
 			@media screen and (max-width: 1024px) {
 				width: 100vw;
@@ -47,10 +39,8 @@
 				margin-right: 0%;
 				margin-left: 0%;
 			}
-			padding: 3%;
+			padding-top: 3%;
 			margin-top: 3%;
-			border-radius: 60px;
-			background-color: #fff7e3;
 			align-self: center;
 			width: 50%;
 			padding-left: 3%;
@@ -60,7 +50,6 @@
 
 			> h2 > h4 {
 				padding-top: 3%;
-				padding-bottom: 3%;
 			}
 			.subheadline {
 				font-size: 1.1rem;
@@ -74,6 +63,9 @@
 			> p {
 				font-size: 1rem;
 				font-family: 'Raleway', sans-serif;
+				> b {
+					color: #7684ff;
+				}
 			}
 		}
 	}

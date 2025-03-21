@@ -3,8 +3,6 @@ import styles from '../styling/our.story.page.module.scss';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { S3_BUCKET } from '../constants/links';
 
-const ourWorldImgSmartphone = S3_BUCKET + '/aboutSelfSmartphone.jpg';
-const ourWorld = S3_BUCKET + '/aboutSelf.jpg';
 const mottoImg = S3_BUCKET + '/motto.webp';
 
 const OurStoryPage = () => {
@@ -12,73 +10,47 @@ const OurStoryPage = () => {
 
 	return (
 		<div className={styles.container}>
-			<img
-				className={styles.ourWorldImg}
-				src={smartphoneScreen ? ourWorldImgSmartphone : ourWorld}
-				alt='Inspiration Board For Self'
-			/>
 			<div className={styles.textContainer}>
 				<div className={styles.text}>
 					<h2>
-						<b> DESPRE noi </b>
+						<b>About Us</b>
 					</h2>
-					<p className={styles.headline}>
-						SELF POSTERS este un brand <b className={styles.italic}>românesc</b>
-						, care a luat naștere dintr-o dorință de exprimare personală, iubire
-						față de design interior contemporan și simpatie față de artă și
-						culori.
-					</p>
 					<p className={styles.subheadline}>
-						Acesta este locul care îmbină estetica contemporană cu
-						spiritualitatea. Noi ne concentrăm pe crearea unui spațiu favorabil,
-						dedicat introspecției asupra sentimentelor și a trăirilor. <br />{' '}
-						Cum? Ei bine, încurajând clienții să-și exploreze identitatea și
-						să-și îmbunătățească relația cu sinele, prin compunerea unor
-						tablouri estetice personalizate, în raport cu sufletul, corpul și
-						mintea lor.
+						Self Posters was born from the idea that the{' '}
+						<b className={styles.boldColor}>colors</b> around us shape our mood
+						and well-being. More than just décor, our posters are designed to
+						bring energy, inspiration, and a touch of art to your space.{' '}
+						<b className={styles.boldColor}>Embrace yourself</b> — each of us
+						carries a unique perspective and our designs are separate
+						interpretations of this foundation. By collaborating with{' '}
+						<b className={styles.boldColor}>independent artists</b>, we create a
+						collection where every piece tells a story while sharing a common
+						thread:{' '}
+						<b className={styles.boldColor}>
+							the power of self-expression through art
+						</b>
+						. Self Posters is more than a shop; it’s a space where creativity
+						thrives and where walls become a canvas for personality.
 					</p>
-					<p className={styles.subheadline}>
-						SELF POSTERS se dedică asigurării calității și longevității
-						produselor, prin alegerea atentă a materialelor, atât pentru
-						tablouri, cât și pentru rame. Prin această abordare, brandul, nu
-						doar că garantează durabilitatea produselor, însă contribuie și la
-						un nivel mai mare de sustenabilitate.
-					</p>
-				</div>
-				<div className={styles.text}>
-					<h4>
-						<b>SCOPUL NOSTRU</b>
-					</h4>
-					<p className={styles.subheadline}>
-						Misiunea noastră este de a construi un cadru, în care fiecare
-						persoană să se simtă încurajată să-și exprime sentimentele într-un
-						mod artistic și să-și analizeze trăirile. Ne dorim să aducem bucurie
-						în fiecare casă, iar fiecare tablouri să se simtă ca o îmbrățisare
-						de sine. Suntem dedicați să îndemnăm oamenii să se reconecteze cu
-						sinele lor autentic și să exploreze universul creativității prin
-						artă și culori. Atât tablourile, cât și ramele sunt concepute pentru
-						a aduce o notă de frumusețe și semnificație în spațiul personal al
-						clienților noștri. Ne străduim să transmitem un mesaj de
-						pozitivitate și să aducem o sursă constantă de inspirație în viața
-						celor care aleg SELF POSTERS.
-					</p>
-				</div>
-				<div className={styles.text}>
-					<h4>
-						<b>PE VIITOR</b>
-					</h4>
-					<p className={styles.subheadline}>
-						Utilizarea materialelor de înaltă calitate este esențială pentru
-						SELF POSTERS, deoarece se dorește ca produsele să fie rezistente și
-						să-și păstreze aspectul în timp. Pe viitor, noi sperăm să
-						intensificăm eforturile în această direcție, explorând noi
-						modalități de a reduce impactul asupra mediului înconjurător și de a
-						promova un stil de viață ecologic.
-					</p>
-				</div>
-
+				</div>{' '}
 				<div className={styles.imgContainer}>
 					<img src={mottoImg} alt='Embrace yourself with colors' />
+				</div>
+				<div className={styles.text}>
+					<h4>
+						<b>Our Mission</b>
+					</h4>
+					<p className={styles.subheadline}>
+						Our mission is to bridge the gap between{' '}
+						<b className={styles.boldColor}>talented independent artists</b> and
+						those looking to bring{' '}
+						<b className={styles.boldColor}>unique expressive designs</b>, into
+						their homes. We collaborate with creatives from diverse backgrounds,
+						giving them a platform to showcase their work. By fostering this{' '}
+						<b className={styles.boldColor}>community</b>, we not only bring
+						exclusive artwork to our customers but also support the artists
+						behind each piece.
+					</p>
 				</div>
 			</div>
 		</div>
