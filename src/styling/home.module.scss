@@ -189,28 +189,6 @@
 		}
 	}
 
-	.colorsContainer {
-		@media screen and (max-width: 1024px) {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		display: flex;
-		flex-direction: row;
-		align-self: center;
-		.jumi {
-			@media screen and (max-width: 1024px) {
-				width: 300px;
-				margin-right: 0%;
-				height: auto;
-			}
-			width: 400px;
-			height: 400px;
-			padding: 1%;
-			margin-right: 5%;
-		}
-	}
-
 	.introductionImgContainer {
 		width: 100%;
 		background-repeat: no-repeat;

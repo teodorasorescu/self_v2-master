@@ -4,7 +4,7 @@ export const subheadline =
 	'Explorează-ți identitatea și personalizează-ți tabloul!';
 
 export const description =
-	's to bridge the gap between talented independent artists and those looking to bring unique expressive designs, into their homes. Our mission is to evoke and amplify emotions through stunning  color-based posters, creating visual experiences that resonate deeply and inspire connection. Express your deepest emotions through art forms and colors, fostering creativity, understanding, and emotional well-being.';
+	'Our mission is to evoke and amplify emotions through stunning  color-based posters, creating visual experiences that resonate deeply and inspire connection. Express your deepest emotions through art forms and colors, fostering creativity, understanding, and emotional well-being.';
 export const benefits = [
 	'Stunning collection of canvas art prints',
 	'Natural wood frames',
