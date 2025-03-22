@@ -24,13 +24,13 @@ const Footer = () => {
 							{' '}
 							<Newsletter />
 						</div>
-						<FooterCategory title={'Informații'} categories={infoCategories} />
+						<FooterCategory title={'Information'} categories={infoCategories} />
 					</>
 				)}
 				{!wideScreen && (
 					<div className={styles.borderContainer}>
 						<DropdownSection
-							title={'Informații'}
+							title={'Information'}
 							infoCategories={infoCategories}
 						/>
 						<div className={styles.newsletter}>

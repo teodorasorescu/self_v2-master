@@ -1,10 +1,7 @@
 import React from 'react';
 import classes from './posters.artist.showcase.module.scss';
-import Slider from 'react-slick';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
 import ProductItem from '../products/ProductItem';
-import { sliderSettings } from '../../ui/slider/PostersSlider';
 
 export const PostersByArtistShowcase = ({ products }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
@@ -35,7 +32,6 @@ export const PostersByArtistShowcase = ({ products }) => {
 					))}
 				</div>
 			</div>
-			{/* </Slider> */}
 		</div>
 	);
 };

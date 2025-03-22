@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styling/inspoHome.css';
+import '../styling/inspoHome.scss';
 import { inspoHome } from '../constants/inspoHome';
 
 export const HomeInspirationShowcase = () => {
@@ -9,7 +9,7 @@ export const HomeInspirationShowcase = () => {
 			<div className='imagesContainer'>
 				{inspoHome.map((c, i) => {
 					return (
-						<a key={i} href='/inspiration' className='imgItem'>
+						<a key={i} href='/journal/inspiration' className='imgItem'>
 							<div
 								className='imgBox'
 								style={{ backgroundImage: `${c.image}` }}

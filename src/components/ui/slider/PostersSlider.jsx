@@ -30,7 +30,7 @@ export const sliderSettings = {
 	dots: true,
 	infinite: false,
 	speed: 500,
-	slidesToShow: 1, // Show 4 products per slide
+	slidesToShow: 4, // Show 4 products per slide
 	slidesToScroll: 1, // Scroll one slide at a time
 	nextArrow: <NextArrow arrowSize={arrowSize} />, // Custom next arrow
 	prevArrow: <PrevArrow arrowSize={arrowSize} />, // Custom previous arrow

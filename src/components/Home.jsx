@@ -6,6 +6,7 @@ import VisualImages from './VisiualImages';
 import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import Button from '@mui/material/Button';
 import SelfMission from './SelfMission';
+import SelectedForYouShowcase from './features/selectedForYou/SelectedForYouShowcase';
 
 const Home = () => {
 	return (
@@ -23,6 +24,7 @@ const Home = () => {
 			</div>
 			<SelfMission />
 			<PostersHomeLoading /> <Benefits />
+			{/* <SelectedForYouShowcase /> */}
 			<VisualImages />
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
