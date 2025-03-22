@@ -45,6 +45,30 @@ export const computeProduct = (
 	};
 };
 
+export const computeCustomProduct = (
+	product,
+	finalPrice,
+	discountCodeValue,
+	frameColor,
+	chassis,
+	size
+) => {
+	return {
+		...product,
+		id: uuidv4(),
+		initialPrice: finalPrice,
+		quantity: 1,
+		discount: discountCodeValue !== 0 ? discountCodeValue : 0,
+		price:
+			discountCodeValue !== 0
+				? computeDiscount(finalPrice, discountCodeValue)
+				: finalPrice,
+		frameColor,
+		chassis,
+		size,
+	};
+};
+
 export const calculateTotalPrice = (storedProducts) => {
 	return storedProducts.reduce((a, p) => (a = a + p.quantity * p.price), 0);
 };

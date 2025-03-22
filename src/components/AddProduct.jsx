@@ -17,7 +17,7 @@ import {
 import reactCSS from 'reactcss';
 import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { computeProduct, updatePrice } from '../constants/utils';
+import { computeCustomProduct, updatePrice } from '../constants/utils';
 import FrameAndChassisSelect from './FrameAndChassisSelect';
 
 const AddProduct = () => {
@@ -48,7 +48,7 @@ const AddProduct = () => {
 			button_label: 'Adauga produs buton',
 		});
 
-		const finalProduct = computeProduct(
+		const finalProduct = computeCustomProduct(
 			product,
 			finalPrice,
 			discountCodeValue,
@@ -110,7 +110,7 @@ const AddProduct = () => {
 	};
 
 	useEffect(() => {
-		setFinalPrice(updatePrice(frameColor, chassis, size));
+		setFinalPrice(updatePrice(frameColor, chassis, size, product.price));
 	}, [frameColor, chassis, size]);
 
 	useEffect(() => {
