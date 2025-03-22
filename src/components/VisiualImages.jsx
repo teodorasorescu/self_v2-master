@@ -1,13 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import styles from '../styling/visual.images.module.scss';
-import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
-import Button from './ui/button/Button';
 
 const VisualImages = () => {
-	const navigate = useNavigate();
-	const sendToCustom = () => {
-		navigate('/customized-canvas-posters');
-	};
 	return (
 		<div className={styles.container}>
 			<div className={styles.imgContainer}>
