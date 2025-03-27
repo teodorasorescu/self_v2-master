@@ -24,7 +24,7 @@ const Home = () => {
 			</div>
 			<SelfMission />
 			<PostersHomeLoading /> <Benefits />
-			{/* <SelectedForYouShowcase /> */}
+			<SelectedForYouShowcase />
 			<VisualImages />
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
