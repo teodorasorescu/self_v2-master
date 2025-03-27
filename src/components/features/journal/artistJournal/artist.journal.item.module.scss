@@ -8,6 +8,16 @@
 		font-style: italic;
 		text-align: left;
 	}
+	& h2 {
+		font-family: 'Raleway', sans-serif;
+		font-optical-sizing: auto;
+		color: #000000;
+		font-size: 1.2rem;
+		text-align: center;
+		& b {
+			color: #7684ff;
+		}
+	}
 }
 
 .container {
@@ -34,8 +44,11 @@
 		font-family: 'Raleway', sans-serif;
 		font-optical-sizing: auto;
 		color: #000000;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		text-align: left;
+		& b {
+			color: #7684ff;
+		}
 	}
 }
 

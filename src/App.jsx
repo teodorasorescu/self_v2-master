@@ -30,6 +30,7 @@ import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
 import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
 import ArtistJournalPage from './components/pages/artistJournalPage/ArtistJournalPage.jsx';
+import Preframe from './components/pages/preframeCollection/Preframe.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -67,7 +68,7 @@ function App() {
 					/>
 					{/* <Route path='/quiz' element={<QuizPage />} /> */}
 					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
-
+					<Route path='/new-collection' element={<Preframe />} />
 					<Route path='/journal/gift-guide' element={<GiftGuide />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />

@@ -2,11 +2,9 @@ import { React } from 'react';
 import classes from './artist.journal.item.module.scss';
 import ArtistsPostersLoading from '../../posters/ArtistsPostersLoading';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { S3_BUCKET } from '../../../../constants/links';
 
 const ArtistJournalItem = ({ artist }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
-	const instaIcon = S3_BUCKET + '/instagram_logo.webp';
 	return (
 		<div className={classes.mainContainer}>
 			<div className={classes.container}>
