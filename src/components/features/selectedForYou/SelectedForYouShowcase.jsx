@@ -8,7 +8,7 @@ import classes from './selected.module.scss';
 import { selectPosters } from '../../../reducers/slices/postersSlice';
 import { useSelector } from 'react-redux';
 import ProductItem from '../products/ProductItem';
-import 'swiper/css/mousewheel'; // Import mousewheel CSS
+import 'swiper/css/mousewheel';
 
 const SelectedForYouShowcase = () => {
 	const products = useSelector(selectPosters);
@@ -27,53 +27,60 @@ const SelectedForYouShowcase = () => {
 	return (
 		<div className={classes.productSlider}>
 			<h2>Selected for you</h2>
-			<div className={classes.swiperContainer}>
-				<Swiper
-					modules={[Navigation, Autoplay, Mousewheel]}
-					spaceBetween={20}
-					slidesPerView={4}
-					navigation={{
-						nextEl: '.swiper-button-next',
-						prevEl: '.swiper-button-prev',
-					}}
-					loop={true}
-					mousewheel={{
-						// Enable mousewheel control
-						forceToAxis: true, // Restrict scrolling to the slider axis
-						releaseOnEdges: true, // Allow release when reaching the first/last slide
-						sensitivity: 1, // Adjust scroll sensitivity
-					}}
-					breakpoints={{
-						320: {
-							slidesPerView: 1, // Changed from 4 to 1 for mobile
-							spaceBetween: 10,
-						},
-						768: {
-							slidesPerView: 2,
-							spaceBetween: 15,
-						},
-						1024: {
-							slidesPerView: 4,
-							spaceBetween: 20,
-						},
-					}}
-				>
-					{filteredData.map((product) => (
-						<SwiperSlide key={product.urlTitle}>
-							<div className={classes.productCard}>
-								<a href={`/canvas-art-prints/${product.urlTitle}`}>
-									<ProductItem
-										product={product}
-										posterImg={product.imgTitlePosterList}
-										hasHoverImg={true}
-									/>
-								</a>
-							</div>
-						</SwiperSlide>
-					))}
-				</Swiper>
-				<div className={`swiper-button-prev ${classes.navButton}`}></div>
-				<div className={`swiper-button-next ${classes.navButton}`}></div>{' '}
+			<div className={classes.swiperWrapper}>
+				<div className={`${classes.navButton} ${classes.prevButton}`}></div>
+				<div className={classes.swiperContainer}>
+					<Swiper
+						modules={[Navigation, Autoplay, Mousewheel]}
+						spaceBetween={20}
+						slidesPerView={4}
+						navigation={
+							filteredData.length > 2
+								? {
+										nextEl: `.${classes.nextButton}`,
+										prevEl: `.${classes.prevButton}`,
+								  }
+								: false
+						}
+						loop={filteredData.length >= 4}
+						observer={true}
+						observeParents={true}
+						mousewheel={{
+							forceToAxis: true,
+							releaseOnEdges: true,
+							sensitivity: 1,
+						}}
+						breakpoints={{
+							320: {
+								slidesPerView: 2,
+								spaceBetween: 10,
+							},
+							768: {
+								slidesPerView: 2,
+								spaceBetween: 15,
+							},
+							1024: {
+								slidesPerView: 4,
+								spaceBetween: 20,
+							},
+						}}
+					>
+						{filteredData.map((product) => (
+							<SwiperSlide key={product.urlTitle}>
+								<div className={classes.productCard}>
+									<a href={`/canvas-art-prints/${product.urlTitle}`}>
+										<ProductItem
+											product={product}
+											posterImg={product.imgTitlePosterList}
+											hasHoverImg={true}
+										/>
+									</a>
+								</div>
+							</SwiperSlide>
+						))}
+					</Swiper>
+				</div>
+				<div className={`${classes.navButton} ${classes.nextButton}`}></div>
 			</div>
 		</div>
 	);

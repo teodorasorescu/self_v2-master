@@ -1,6 +1,6 @@
 .productSlider {
 	position: relative;
-	padding: 0 40px; // Add padding for navigation buttons
+
 	padding: 3%;
 	& h2 {
 		font-family: 'Frank Ruhl Libre', serif;
@@ -11,32 +11,47 @@
 	}
 	.swiperContainer {
 		position: relative;
-	}
-
-	& a {
-		text-decoration: none;
+		padding: 5%;
 	}
 	.navButton {
 		position: absolute;
-		top: 45%;
+		top: 50%;
 		transform: translateY(-50%);
 		width: 10px;
-		height: 10px;
+		height: 80px;
+		background-color: #fff;
 		z-index: 10;
 		cursor: pointer;
+		padding: 3%;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border-top: 2px solid #000;
+			border-right: 2px solid #000;
+			top: 50%;
+			left: 50%;
+		}
+	}
+
+	.prevButton {
+		left: 0;
 
 		&::after {
-			font-size: 20px;
-			color: #000;
+			transform: translate(-50%, -50%) rotate(-135deg);
 		}
+	}
 
-		&.swiper-button-prev {
-			left: 0;
-		}
+	.nextButton {
+		right: 0;
 
-		&.swiper-button-next {
-			right: 0;
+		&::after {
+			transform: translate(-50%, -50%) rotate(45deg);
 		}
+	}
+	& a {
+		text-decoration: none;
 	}
 
 	.swiper {
