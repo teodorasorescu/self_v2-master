@@ -41,12 +41,8 @@ const NewsletterForm = () => {
 			</form>
 			{newsletterSubmitted != null && (
 				<>
-					{newsletterSubmitted === true && (
-						<p>
-							Welcome to Self Posters Club!
-							<br /> Check your inbox!{' '}
-						</p>
-					)}
+					{newsletterSubmitted === true &&
+						"Welcome to our community! I'm sure you're a cool artsy person!"}
 				</>
 			)}
 		</div>

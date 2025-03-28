@@ -169,27 +169,6 @@ const DesktopHeader = () => {
 					>
 						Customized Canvas Posters
 					</a>
-					{/* <a
-						className={styles.link}
-						onMouseOver={() => setSubHeaderDesign(true)}
-					>
-						Interior Design
-					</a>
-					<div
-						onMouseLeave={() => setSubHeaderDesign(false)}
-						className={`${styles.subheader} ${
-							subHeaderDesignOn ? styles.visible : ''
-						}`}
-					>
-						{subHeaderDesignOn && (
-							<Subheader
-								topics={interiorDesignTopics}
-								headline='Interior Design'
-								imgTitle={InteriorDesign}
-								imgAlt='Explore our topics about Interior Design - about gradients, how to personalize your room and more'
-							/>
-						)}
-					</div> */}
 				</div>
 			</div>
 		</div>

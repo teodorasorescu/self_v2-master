@@ -21,7 +21,7 @@ import ContactPage from './components/ContactPage';
 import ScrollToTop from './components/ui/scroll/ScrollToTop.js';
 import PageNotFound from './components/PageNotFound';
 import ReactGA from 'react-ga4';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import PosterDetails from './components/features/posters/PosterDetails.jsx';
 import PostersPage from './components/pages/posters/PostersPage.jsx';
 import CustomPosterPage from './components/CustomPosterPage.jsx';
@@ -31,6 +31,7 @@ import JournalPage from './components/pages/journal/principalPage/JournalPage.js
 import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
 import ArtistJournalPage from './components/pages/artistJournalPage/ArtistJournalPage.jsx';
 import Preframe from './components/pages/preframeCollection/Preframe.jsx';
+import SignUpModal from './components/features/signUpModal/SignUpModal.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -54,6 +55,8 @@ function App() {
 
 	return (
 		<div className='App'>
+			<SignUpModal />
+
 			<BrowserRouter>
 				<ScrollToTop />
 				{headerOn && <Header />}

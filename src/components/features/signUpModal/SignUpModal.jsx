@@ -3,8 +3,8 @@ import Cookies from 'js-cookie';
 import styles from './signup-modal.module.scss';
 import { useSelector } from 'react-redux';
 import { selectNewsletterState } from '../../../reducers/slices/newsletterState';
-import EmailForm from '../emailForm/EmailForm';
-import Button from '../../ui/button/Button';
+import CloseIcon from '@mui/icons-material/Close';
+import NewsletterForm from '../../NewsletterForm';
 
 const SignUpModal = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const SignUpModal = () => {
 		if (!hasVisited) {
 			setTimeout(() => {
 				setIsOpen(true); // Show modal after delay
-			}, 1000); // ⏳ Adjust delay time (5000ms = 5 seconds)
+			}, 5000); // ⏳ Adjust delay time (5000ms = 5 seconds)
 		}
 
 		if (newsLetterState == true) {
@@ -38,14 +38,13 @@ const SignUpModal = () => {
 		isOpen && (
 			<div className={styles['modal-overlay']}>
 				<div className={styles.modal}>
-					<h2>Self</h2>
-					<p>Sign up now to be the first to know about our Vday launch.</p>
-					<EmailForm afterMessage={'You will receive an access code soon!'} />
-					<Button
-						msg={'Close'}
-						style={styles['close-button']}
-						onClick={handleClose}
-					></Button>
+					<CloseIcon className={styles.xIcon} onClick={handleClose} />
+					<h2>Self Posters Club</h2>
+					<p>
+						Sign up and be part of an artsy community with special offers and
+						insider updates!
+					</p>
+					<NewsletterForm />
 				</div>
 			</div>
 		)
