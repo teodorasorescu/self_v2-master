@@ -9,24 +9,22 @@ import NewsletterForm from '../../NewsletterForm';
 const SignUpModal = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const newsLetterState = useSelector(selectNewsletterState);
-	const [popupClosed, setPopupClosed] = useState(false);
 
 	useEffect(() => {
 		const hasVisited =
 			Cookies.get('early_access_popup') ||
 			localStorage.getItem('early_access_popup');
+		const popupClosed = localStorage.getItem('popUpClosed') === 'true';
 
-		if (!hasVisited) {
-			setTimeout(() => {
-				setIsOpen(true);
-			}, 5000);
+		if (!hasVisited && !popupClosed) {
+			setTimeout(() => setIsOpen(true), 5000);
 		}
 
-		if (popupClosed === true) {
+		if (popupClosed && !hasVisited) {
 			setTimeout(() => {
 				setIsOpen(true);
-				setPopupClosed(false);
-			}, 100000);
+				localStorage.setItem('popUpClosed', 'false');
+			}, 600000);
 		}
 
 		if (newsLetterState == true) {
@@ -40,7 +38,7 @@ const SignUpModal = () => {
 
 	const handleClose = () => {
 		setIsOpen(false);
-		setPopupClosed(true);
+		localStorage.setItem('popUpClosed', 'true');
 	};
 
 	return (
