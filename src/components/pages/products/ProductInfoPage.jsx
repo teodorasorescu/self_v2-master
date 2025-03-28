@@ -15,17 +15,17 @@ import {
 	deliveryDetails,
 	freeFraming,
 } from '../../../constants/productConstants';
+import SelectedForYouPage from '../selectedForYouShowcase/SelectedForYouPage';
 
 const ProductInfoPage = ({ product, suport, details }) => {
 	const [frameColor, setFrameColor] = useState('fără');
 	const [chassis, setChassis] = useState(false);
 	const [size, setSize] = useState('21x30cm');
-
 	const { itemCount, setItemCount } = useStateContext();
 	const isArtist = product.artist !== null;
-
+	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	const [finalPrice, setFinalPrice] = useState(product.price);
-	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
+	const width = smartphoneScreen ? '90vw' : '25vw';
 	const dispatch = useDispatch();
 	const localStoreProducts = localStorage.getItem('products');
 
@@ -69,6 +69,24 @@ const ProductInfoPage = ({ product, suport, details }) => {
 		<div className={classes.container}>
 			<div className={classes.carouselContainer}>
 				<ItemImagesCarousel product={product} />
+				{!smartphoneScreen && (
+					<div className={classes.productsShowcase}>
+						<div className={classes.productsShowcase}>
+							<SelectedForYouPage
+								data={[
+									'Love Feeling 2',
+									'Love Feeling 1',
+									'A table for two, please!',
+									'Sunset Feelings',
+									'There is Strength in Vulnerability',
+									'Inner Blooming',
+									'Soul Compassion',
+									'Graceful Mind',
+								]}
+							/>{' '}
+						</div>
+					</div>
+				)}
 			</div>
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
@@ -143,6 +161,24 @@ const ProductInfoPage = ({ product, suport, details }) => {
 						value={false}
 					/>
 				</div>
+				{smartphoneScreen && (
+					<div className={classes.productsShowcase}>
+						<div className={classes.productsShowcase}>
+							<SelectedForYouPage
+								data={[
+									'Love Feeling 2',
+									'Love Feeling 1',
+									'A table for two, please!',
+									'Sunset Feelings',
+									'There is Strength in Vulnerability',
+									'Inner Blooming',
+									'Soul Compassion',
+									'Graceful Mind',
+								]}
+							/>{' '}
+						</div>
+					</div>
+				)}
 			</div>
 		</div>
 	);

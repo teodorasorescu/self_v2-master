@@ -14,7 +14,9 @@
 					align-self: center;
 					margin-top: 4%;
 				}
-
+				.productsShowcase {
+					width: 50vw;
+				}
 				.buttonContainer {
 					padding-top: 1%;
 					position: relative; /* Add this if it's not already present */

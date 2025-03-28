@@ -19,9 +19,9 @@ import {
 	color3,
 	fontColors,
 } from '../constants/productConstants';
-import ProductInfo from './ProductInfo';
 import VisualImagesPickerGradient from './VisiualImagesPickerGradient';
 import ReactGA from 'react-ga4';
+import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage';
 
 function ColorPickerGradient() {
 	let product = useSelector(selectProduct);
@@ -187,13 +187,30 @@ function ColorPickerGradient() {
 							SHUFFLE
 						</Button>
 					</div>
-
-					{wideScreen && <ProductInfo />}
+					{wideScreen && (
+						<div className='productsShowcase'>
+							<SelectedForYouPage
+								data={[
+									'Water',
+									'Salty Thoughts',
+									'Starry Coral',
+									'Love Feeling 2',
+									'Love Feeling 1',
+									'A table for two, please!',
+									'Sunset Feelings',
+									'There is Strength in Vulnerability',
+									'Inner Blooming',
+									'Soul Compassion',
+									'Graceful Mind',
+								]}
+							/>{' '}
+						</div>
+					)}
 				</div>
 				<div className='descriptionContainer'>
 					<div className='titleContainer'>
 						<h1>
-							Personalizare tablou <br />
+							Custom Your Canvas Poster <br />
 							{product.title}
 							<br />
 						</h1>
@@ -201,8 +218,8 @@ function ColorPickerGradient() {
 					<div className='paragraphContainer'>
 						<p>{product.description}</p>
 						<p>
-							Începe personalizarea tabloului, alegând cele patru culori. Vei
-							vedea modificările tale pe parcurs.
+							Start personalizing the artwork by choosing the four colors. You
+							will see your changes in real time.
 						</p>
 					</div>
 					<div className='frameContainer'>
@@ -222,7 +239,7 @@ function ColorPickerGradient() {
 					<div className='buttonContainer'>
 						<Link to='/adaugă-produs'>
 							<Button className='button' onClick={computeColors}>
-								MERGI MAI DEPARTE
+								NEXT
 							</Button>
 						</Link>
 					</div>
@@ -230,7 +247,27 @@ function ColorPickerGradient() {
 					<ColorPsychology />
 				</div>
 			</div>
+
 			<VisualImagesPickerGradient />
+			{!wideScreen && (
+				<div className='productsShowcase'>
+					<SelectedForYouPage
+						data={[
+							'Water',
+							'Salty Thoughts',
+							'Starry Coral',
+							'Love Feeling 2',
+							'Love Feeling 1',
+							'A table for two, please!',
+							'Sunset Feelings',
+							'There is Strength in Vulnerability',
+							'Inner Blooming',
+							'Soul Compassion',
+							'Graceful Mind',
+						]}
+					/>{' '}
+				</div>
+			)}
 		</div>
 	);
 }

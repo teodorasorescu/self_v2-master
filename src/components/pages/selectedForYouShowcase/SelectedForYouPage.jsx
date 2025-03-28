@@ -8,7 +8,7 @@ import getPostersAction from '../../../reducers/actions/getPostersAction';
 import Loader from '../../ui/loader/Loader';
 import SelectedForYouShowcase from '../../features/selectedForYou/SelectedForYouShowcase';
 
-const SelectedForYouPage = () => {
+const SelectedForYouPage = ({ data }) => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(arePostersLoading);
 	let storedPosters = useSelector(selectPosters);
@@ -24,7 +24,7 @@ const SelectedForYouPage = () => {
 	if (isPageLoading) {
 		content = <Loader />;
 	} else {
-		content = <SelectedForYouShowcase products={storedPosters} />;
+		content = <SelectedForYouShowcase products={storedPosters} data={data} />;
 	}
 
 	return <>{content}</>;

@@ -69,13 +69,13 @@ const Flipcard = () => {
 										onClick={() =>
 											computeProduct(
 												'body_buy.webp',
-												'Tablou Canvas BODY',
+												'Custom Canvas Artwork BODY',
 												'BODY',
-												'Adu-ți întreaga atenție asupra corpului tău. Devin-o conștient asupra emoțiilor și senzațiilor pe care le simți și eliberează orice tensiune fizică care crezi că este conectată cu starea ta emoțională. Analizează-ți semnalele interne și imaginează-ți că ești înconjurat de o aură plină de culori. Transpune în tabloul tău culorile și sentimentele pe care le-ai experimentat.',
+												'Bring your full attention to your body. Become aware of the emotions and sensations you feel and release any physical tension you believe is connected to your emotional state. Analyze your internal signals and imagine yourself surrounded by an aura full of colors. Translate into your artwork the colors and feelings you experienced.',
 												'NOURISH YOUR BODY'
 											)
 										}
-										msg={'Personalizează tablou'}
+										msg={'Customize artwork'}
 										style='flip-box-button'
 									/>
 								</Link>
@@ -84,7 +84,7 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p className='textContainer'>
-					Tablou Canvas Personalizat <br />
+					Canvas Artwork <br />
 					BODY{' '}
 				</p>
 				<p className='priceContainer'>From {priceValue}</p>{' '}
@@ -110,13 +110,13 @@ const Flipcard = () => {
 										onClick={() =>
 											computeProduct(
 												'mind_buy.webp',
-												'Tablou Canvas MIND',
+												'Custom Canvas Artwork MIND',
 												'MIND',
-												'Adu-ți întreaga atenție către mintea ta. Începe să te observi și găsește o asociere între gândurile și sentimentele tale. Acceptă-le și încearcă să-ți imaginezi că te afli în siguranță, într-o cameră emoțională. Fă loc pentru toate emoțiile, fie pozitive, fie negative. Relaxează-te și oferă-ți timp pentru a transpune orice sentiment în culori.',
+												'Bring your full attention to your mind. Begin to observe yourself and find an association between your thoughts and feelings. Accept them and try to imagine yourself being safe in an emotional room. Make room for all emotions, whether positive or negative. Relax and give yourself time to translate any feeling into colors.',
 												'OPEN YOUR MIND'
 											)
 										}
-										msg={'Personalizează tablou'}
+										msg={'Customize artwork'}
 										style='flip-box-button'
 									/>
 								</Link>
@@ -125,8 +125,8 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p className='textContainer'>
-					Tablou Canvas Personalizat <br />
-					MIND
+					Canvas Artwork <br />
+					MIND{' '}
 				</p>
 				<p className='priceContainer'>From {priceValue}</p>{' '}
 			</div>
@@ -151,13 +151,13 @@ const Flipcard = () => {
 										onClick={() =>
 											computeProduct(
 												'Soul_Buy.webp',
-												'Tablou Canvas SOUL',
+												'Custom Canvas Artwork SOUL',
 												'SOUL',
-												'Adu-ți întreaga atenție către sufletul tău. Eliberează-ți mintea de gânduri și dă-i voie sufletului tău să vorbească. Permite emoțiilor ce apar să fie eliberate și să creeze claritate și lumină. Conectează-te profund la aspectele ființei tale și simte unitatea dintre sufletul tău și divin. Imaginează-ți că ești într-o călătorie de autocunoaștere și transpune-te într-un univers plin de culori și trăiri.',
+												'Bring your full attention to your soul. Free your mind from thoughts and let your soul speak. Allow emerging emotions to be released and create clarity and light. Connect deeply with aspects of your being and feel the unity between your soul and the divine. Imagine yourself on a journey of self-discovery and translate yourself into a universe full of colors and experiences.',
 												'FOLLOW YOUR SOUL'
 											)
 										}
-										msg={'Personalizează tablou'}
+										msg={'Customize artwork'}
 										style='flip-box-button'
 									/>
 								</Link>
@@ -166,7 +166,8 @@ const Flipcard = () => {
 					</div>
 				</div>
 				<p className='textContainer'>
-					Tablou Canvas Personalizat <br /> SOUL
+					Canvas Artwork <br />
+					SOUL{' '}
 				</p>
 				<p className='priceContainer'>From {priceValue}</p>{' '}
 			</div>

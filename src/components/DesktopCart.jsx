@@ -235,7 +235,18 @@ export const DesktopCart = () => {
 					</Paper>
 				</ThemeProvider>
 			)}{' '}
-			<SelectedForYouPage />
+			<SelectedForYouPage
+				data={[
+					'Love Feeling 2',
+					'Love Feeling 1',
+					'A table for two, please!',
+					'Sunset Feelings',
+					'There is Strength in Vulnerability',
+					'Inner Blooming',
+					'Soul Compassion',
+					'Graceful Mind',
+				]}
+			/>
 		</div>
 	);
 };

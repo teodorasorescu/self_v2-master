@@ -10,17 +10,7 @@ import { useSelector } from 'react-redux';
 import ProductItem from '../products/ProductItem';
 import 'swiper/css/mousewheel';
 
-const SelectedForYouShowcase = ({ products }) => {
-	const data = [
-		'Love Feeling 2',
-		'Love Feeling 1',
-		'A table for two, please!',
-		'Sunset Feelings',
-		'There is Strength in Vulnerability',
-		'Inner Blooming',
-		'Soul Compassion',
-		'Graceful Mind',
-	];
+const SelectedForYouShowcase = ({ products, data }) => {
 	const filteredData = products.filter((item) => data.includes(item.title));
 
 	return (
