@@ -14,7 +14,9 @@ const ArtistsPostersLoading = ({ artist }) => {
 	let storedPosters = useSelector(selectPosters);
 
 	useEffect(() => {
-		getPostersAction(dispatch);
+		if (storedPosters.length === 0) {
+			getPostersAction(dispatch);
+		}
 	}, [dispatch]);
 
 	let content;

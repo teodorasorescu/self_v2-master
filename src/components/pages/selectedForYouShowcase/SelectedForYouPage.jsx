@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
 	arePostersLoading,
@@ -6,9 +6,9 @@ import {
 } from '../../../reducers/slices/postersSlice';
 import getPostersAction from '../../../reducers/actions/getPostersAction';
 import Loader from '../../ui/loader/Loader';
-import PostersDetailsPage from './PostersDetailsPage';
+import SelectedForYouShowcase from '../../features/selectedForYou/SelectedForYouShowcase';
 
-const PostersPage = () => {
+const SelectedForYouPage = () => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(arePostersLoading);
 	let storedPosters = useSelector(selectPosters);
@@ -24,10 +24,10 @@ const PostersPage = () => {
 	if (isPageLoading) {
 		content = <Loader />;
 	} else {
-		content = <PostersDetailsPage posters={storedPosters} />;
+		content = <SelectedForYouShowcase products={storedPosters} />;
 	}
 
 	return <>{content}</>;
 };
 
-export default PostersPage;
+export default SelectedForYouPage;

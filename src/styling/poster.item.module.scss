@@ -32,18 +32,20 @@
 		> h3 {
 			color: black;
 			font-size: 1rem;
-
 			@media screen and (max-width: 1024px) {
 				font-size: 0.9rem;
 			}
+			font-weight: 400;
 		}
 		.price {
 			font-size: 0.9rem;
 			color: grey;
+			font-weight: 400;
 		}
 		.artist {
 			font-size: 0.8rem;
 			color: grey;
+			font-weight: 400;
 		}
 	}
 }

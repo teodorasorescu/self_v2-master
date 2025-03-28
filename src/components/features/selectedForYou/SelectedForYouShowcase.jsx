@@ -10,8 +10,7 @@ import { useSelector } from 'react-redux';
 import ProductItem from '../products/ProductItem';
 import 'swiper/css/mousewheel';
 
-const SelectedForYouShowcase = () => {
-	const products = useSelector(selectPosters);
+const SelectedForYouShowcase = ({ products }) => {
 	const data = [
 		'Love Feeling 2',
 		'Love Feeling 1',

@@ -19,6 +19,7 @@ import DiscountForm from './DiscountForm.jsx';
 import { calculateTotalPrice } from '../constants/utils.js';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { S3_BUCKET } from '../constants/links.js';
+import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage.jsx';
 
 export const DesktopCart = () => {
 	const emptyCart = S3_BUCKET + '/emptyCart.webp';
@@ -233,7 +234,8 @@ export const DesktopCart = () => {
 						</div>
 					</Paper>
 				</ThemeProvider>
-			)}
+			)}{' '}
+			<SelectedForYouPage />
 		</div>
 	);
 };

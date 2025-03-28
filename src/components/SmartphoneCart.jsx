@@ -16,6 +16,7 @@ import { calculateTotalPrice } from '../constants/utils';
 import { createTheme, ThemeProvider } from '@mui/material';
 import DiscountForm from './DiscountForm.jsx';
 import { S3_BUCKET } from '../constants/links.js';
+import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage.jsx';
 
 const emptyCart = S3_BUCKET + '/emptyCart.webp';
 
@@ -259,6 +260,7 @@ export const SmartphoneCart = () => {
 					</Paper>
 				</ThemeProvider>
 			)}
+			<SelectedForYouPage />
 		</div>
 	);
 };

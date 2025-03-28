@@ -12,7 +12,9 @@ const GiftGuide = () => {
 	const storedPosters = useSelector(selectPosters);
 
 	useEffect(() => {
-		getPostersAction(dispatch);
+		if (storedPosters.length === 0) {
+			getPostersAction(dispatch);
+		}
 	}, [dispatch]);
 
 	const filter = (n1, n2) => {
