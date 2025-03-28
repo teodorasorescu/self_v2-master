@@ -9,6 +9,7 @@ import NewsletterForm from '../../NewsletterForm';
 const SignUpModal = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const newsLetterState = useSelector(selectNewsletterState);
+	const [popupClosed, setPopupClosed] = useState(false);
 
 	useEffect(() => {
 		const hasVisited =
@@ -17,8 +18,15 @@ const SignUpModal = () => {
 
 		if (!hasVisited) {
 			setTimeout(() => {
-				setIsOpen(true); // Show modal after delay
-			}, 5000); // ⏳ Adjust delay time (5000ms = 5 seconds)
+				setIsOpen(true);
+			}, 5000);
+		}
+
+		if (popupClosed === true) {
+			setTimeout(() => {
+				setIsOpen(true);
+				setPopupClosed(false);
+			}, 100000);
 		}
 
 		if (newsLetterState == true) {
@@ -32,6 +40,7 @@ const SignUpModal = () => {
 
 	const handleClose = () => {
 		setIsOpen(false);
+		setPopupClosed(true);
 	};
 
 	return (
