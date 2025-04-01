@@ -32,17 +32,17 @@ export const orderQuestions = [
 	{
 		title: 'Pot avea și alte cerințe de personalizare al tabloului?',
 		content:
-			'În cazul în care dorești să faci o modificare în plus tabloului (de exemplu, eliminarea textului),  trimite un mesaj la selfposters@gmail.com sau scrie-ne pe instagram la @selfposters.ro',
+			'În cazul în care dorești să faci o modificare în plus tabloului (de exemplu, eliminarea textului),  trimite un mesaj la hello@selfposters.ro sau scrie-ne pe instagram la @selfposters.ro',
 	},
 	{
 		title: 'Ce fac dacă comanda mea nu a sosit?',
 		content:
-			'Facem tot posibilul să nu existe astfel de experienţe. Dacă totuşi au trecut mai mult de 5 zile lucrătoare şi comanda nu s-a livrat, scrie-ne la selfposters@gmail.com sau pe instagram la @selfposters.ro şi ne vom asigura că produsele vor ajunge în cel mai scurt timp.',
+			'Facem tot posibilul să nu existe astfel de experienţe. Dacă totuşi au trecut mai mult de 5 zile lucrătoare şi comanda nu s-a livrat, scrie-ne la hello@selfposters.ro sau pe instagram la @selfposters.ro şi ne vom asigura că produsele vor ajunge în cel mai scurt timp.',
 	},
 	{
 		title: 'Am primit un produse defect, ce să fac?',
 		content:
-			'Ne pare rău pentru această experienţă, ştim că pot exista greşeli în procesare, dar împreună cu suportul comunităţii noastre reuşim întotdeauna să remediem situaţiile neplăcute. Contactează-ne pe email la selfposters@gmail.com sau pe instagram la @selfposters.ro şi vom rezolva în cel mai scurt timp.',
+			'Ne pare rău pentru această experienţă, ştim că pot exista greşeli în procesare, dar împreună cu suportul comunităţii noastre reuşim întotdeauna să remediem situaţiile neplăcute. Contactează-ne pe email la hello@selfposters.ro sau pe instagram la @selfposters.ro şi vom rezolva în cel mai scurt timp.',
 	},
 	{
 		title: 'Pot returna tabloul personalizat?',
@@ -52,7 +52,7 @@ export const orderQuestions = [
 	{
 		title: 'Ramele se pot returna?',
 		content:
-			'Returnarea ramelor este permisă, până la 14 zile de la primirea comenzii. Dacă se dorește returnarea unui produs, vă rugăm să inițiați acțiunea trimițându-ne un email pe selfposters@gmail.com. ',
+			'Returnarea ramelor este permisă, până la 14 zile de la primirea comenzii. Dacă se dorește returnarea unui produs, vă rugăm să inițiați acțiunea trimițându-ne un email pe hello@selfposters.ro. ',
 	},
 	{
 		title: 'În cât timp se vor restitui banii în cazul unui retur?',

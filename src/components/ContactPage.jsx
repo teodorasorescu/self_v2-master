@@ -11,7 +11,7 @@ const ContactPage = () => {
 			<h2>Suntem aici să te ajutăm.</h2>
 			<h2>
 				{' '}
-				Scrie-ne la <b className={classes.email}>selfposters@gmail.com</b>, sau
+				Scrie-ne la <b className={classes.email}>hello@selfposters.ro </b>, sau
 				pe instagram <b className={classes.email}>@selfposters.ro</b>
 				<a href={INSTAGRAM_LINK}>
 					<img
