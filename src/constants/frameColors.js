@@ -1,11 +1,3 @@
-export const frameColors = [
-	'natur (lemn natural)',
-	'roșu',
-	'roz',
-	'albastru marin',
-	'portocaliu',
-	'galben',
-	'verde',
-];
+export const frameColors = ['natur (lemn natural)', 'roz', 'albastru marin'];
 
 export const framePrice = 55.0;
