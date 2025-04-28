@@ -14,6 +14,7 @@ import { loadProducts } from '../../../reducers/slices/productsSlice';
 import {
 	deliveryDetails,
 	freeFraming,
+	selectedShowcaseProducts,
 } from '../../../constants/productConstants';
 import SelectedForYouPage from '../selectedForYouShowcase/SelectedForYouPage';
 
@@ -69,24 +70,6 @@ const ProductInfoPage = ({ product, suport, details }) => {
 		<div className={classes.container}>
 			<div className={classes.carouselContainer}>
 				<ItemImagesCarousel product={product} />
-				{!smartphoneScreen && (
-					<div className={classes.productsShowcase}>
-						<div className={classes.productsShowcase}>
-							<SelectedForYouPage
-								data={[
-									'Love Feeling 2',
-									'Love Feeling 1',
-									'A table for two, please!',
-									'Sunset Feelings',
-									'There is Strength in Vulnerability',
-									'Inner Blooming',
-									'Soul Compassion',
-									'Graceful Mind',
-								]}
-							/>{' '}
-						</div>
-					</div>
-				)}
 			</div>
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
@@ -164,18 +147,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 				{smartphoneScreen && (
 					<div className={classes.productsShowcase}>
 						<div className={classes.productsShowcase}>
-							<SelectedForYouPage
-								data={[
-									'Love Feeling 2',
-									'Love Feeling 1',
-									'A table for two, please!',
-									'Sunset Feelings',
-									'There is Strength in Vulnerability',
-									'Inner Blooming',
-									'Soul Compassion',
-									'Graceful Mind',
-								]}
-							/>{' '}
+							<SelectedForYouPage data={selectedShowcaseProducts} />{' '}
 						</div>
 					</div>
 				)}

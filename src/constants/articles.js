@@ -1,7 +1,14 @@
 export const articles = [
 	{
+		imgTitle: 'SilviaShowcase2.webp',
+		title: 'The Spring Blossom Collection | Silvia Stanescu',
+		date: '29th April 2025',
+		urlTitle: 'silvia-stanescu',
+		description: 'Read more about Silvia and her artworks.',
+	},
+	{
 		imgTitle: 'aboutDaia.webp',
-		title: 'Daia Grigore Collection | Salt Water',
+		title: 'Salt Water Collection | Daia Grigore',
 		date: '7th March 2025',
 		urlTitle: 'daia-grigore',
 		description: 'Read more about Daia and her artworks.',

@@ -20,6 +20,7 @@ import { calculateTotalPrice } from '../constants/utils.js';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { S3_BUCKET } from '../constants/links.js';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage.jsx';
+import { selectedShowcaseProducts } from '../constants/productConstants.js';
 
 export const DesktopCart = () => {
 	const emptyCart = S3_BUCKET + '/emptyCart.webp';
@@ -235,18 +236,7 @@ export const DesktopCart = () => {
 					</Paper>
 				</ThemeProvider>
 			)}{' '}
-			<SelectedForYouPage
-				data={[
-					'Love Feeling 2',
-					'Love Feeling 1',
-					'A table for two, please!',
-					'Sunset Feelings',
-					'There is Strength in Vulnerability',
-					'Inner Blooming',
-					'Soul Compassion',
-					'Graceful Mind',
-				]}
-			/>
+			<SelectedForYouPage data={selectedShowcaseProducts} />
 		</div>
 	);
 };

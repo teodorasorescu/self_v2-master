@@ -5,7 +5,7 @@ import Button from '../../ui/button/Button';
 import ReactGA from 'react-ga4';
 
 export const ProductsHomeShowcase = ({ products }) => {
-	const groups = ['Salt Water'];
+	const groups = ['The Spring Blossom'];
 
 	const sendEvent = () => {
 		ReactGA.event('button_click', {

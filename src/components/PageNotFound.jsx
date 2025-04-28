@@ -8,7 +8,7 @@ const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
 const PageNotFound = () => {
 	return (
 		<div className={classes.container}>
-			<h2>Sorry, we are working on a new collection. Launch: 29th April </h2>
+			<h2>Sorry, this page does not exist! </h2>
 
 			<h2>
 				{' '}

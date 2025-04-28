@@ -22,7 +22,11 @@ const DesktopHeader = () => {
 			path: '/journal',
 		},
 		{
-			name: 'Daia Grigore Collection',
+			name: 'The Spring Blossom Collection',
+			path: '/journal/silvia-stanescu',
+		},
+		{
+			name: 'Salt Water Collection',
 			path: '/journal/daia-grigore',
 		},
 		{

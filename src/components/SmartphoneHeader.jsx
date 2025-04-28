@@ -68,10 +68,13 @@ const SmartphoneHeader = () => {
 			return (
 				<MenuItem
 					disableRipple
-					style={{
-						fontSize: '20px',
-						fontFamily: "'Raleway', sans-serif",
-						paddingTop: '3%',
+					{...{
+						style: {
+							fontSize: '20px',
+							fontFamily: "'Raleway', sans-serif",
+							paddingTop: '3%',
+						},
+						key: label,
 					}}
 				>
 					<SubheaderDropdown
