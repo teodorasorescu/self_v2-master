@@ -8,12 +8,11 @@ const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
 const PageNotFound = () => {
 	return (
 		<div className={classes.container}>
-			<h2>Pagina accesată nu există! :(</h2>
+			<h2>Sorry, we are working on a new collection. Launch: 29th April </h2>
 
 			<h2>
 				{' '}
-				Dar sigur ne găsești aici:{' '}
-				<b className={classes.email}>@selfposters.ro </b>
+				You can find us here: <b className={classes.email}>@selfposters.ro </b>
 				<a href={INSTAGRAM_LINK}>
 					<img
 						className={classes.socialMediaIcons}

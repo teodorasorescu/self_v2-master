@@ -59,9 +59,9 @@ function App() {
 
 			<BrowserRouter>
 				<ScrollToTop />
-				{headerOn && <Header />}
+				{/* {headerOn && <Header />} */}
 				<Routes>
-					<Route
+					{/* <Route
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
@@ -70,12 +70,12 @@ function App() {
 						element={<StickerDetails />}
 					/>
 					{/* <Route path='/quiz' element={<QuizPage />} /> */}
-					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
+					{/*	<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 					<Route path='/new-collection' element={<Preframe />} />
 					<Route path='/journal/gift-guide' element={<GiftGuide />} />
-					<Route path='/canvas-art-prints' element={<PostersPage />} />
+					<Route path='/canvas-art-prints' element={<PostersPage />} /> */}
 					<Route path='*' element={<PageNotFound />} />
-					<Route path='/' element={<Home />} />
+					{/* <Route path='/' element={<Home />} />
 					<Route path='/personalizare' element={<ColorPickerGradient />} />
 					<Route
 						path='/customized-canvas-posters'
@@ -100,9 +100,9 @@ function App() {
 						element={<Confidentiality />}
 					/>
 					<Route path='/faq' element={<FAQPage />} />
-					<Route path='/contact' element={<ContactPage />} />
+					<Route path='/contact' element={<ContactPage />} /> */}
 				</Routes>
-				{headerOn && <Footer />}{' '}
+				{/* {headerOn && <Footer />}{' '} */}
 			</BrowserRouter>
 		</div>
 	);
