@@ -15,7 +15,6 @@ const Home = () => {
 			<div className={styles.introductionImgContainer}>
 				{
 					<div className={styles.introductionContainer}>
-						<h1 className={styles.title}>The Spring Blossom Collection</h1>
 						<div className={styles.buttonContainer}>
 							<a href='/canvas-art-prints'>
 								<Button className={styles.button}>SHOP NOW</Button>
