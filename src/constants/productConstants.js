@@ -60,12 +60,26 @@ export const fontColors = [
 	'A patra culoare',
 ];
 export const subheadersLabelData = ['Featured'];
+
+export const selectedShowcaseProducts = [
+	'Love Feeling 2',
+	'Love Feeling 1',
+	'Water',
+	'Salty Thoughts',
+	'A table for two, please!',
+	'Sunset Feelings',
+	'There is Strength in Vulnerability',
+];
 export const subheadersData = new Map([
 	[
 		'Featured',
 		[
 			{
-				label: 'Daia Grigore Collection',
+				label: 'The Spring Blossom Collection',
+				href: '/journal/silvie-illustrations',
+			},
+			{
+				label: 'Salt Water Collection',
 				href: '/journal/daia-grigore',
 			},
 		],

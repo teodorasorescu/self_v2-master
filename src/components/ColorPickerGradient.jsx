@@ -18,6 +18,7 @@ import {
 	color1,
 	color3,
 	fontColors,
+	selectedShowcaseProducts,
 } from '../constants/productConstants';
 import VisualImagesPickerGradient from './VisiualImagesPickerGradient';
 import ReactGA from 'react-ga4';
@@ -187,25 +188,6 @@ function ColorPickerGradient() {
 							SHUFFLE
 						</Button>
 					</div>
-					{wideScreen && (
-						<div className='productsShowcase'>
-							<SelectedForYouPage
-								data={[
-									'Water',
-									'Salty Thoughts',
-									'Starry Coral',
-									'Love Feeling 2',
-									'Love Feeling 1',
-									'A table for two, please!',
-									'Sunset Feelings',
-									'There is Strength in Vulnerability',
-									'Inner Blooming',
-									'Soul Compassion',
-									'Graceful Mind',
-								]}
-							/>{' '}
-						</div>
-					)}
 				</div>
 				<div className='descriptionContainer'>
 					<div className='titleContainer'>
@@ -251,21 +233,7 @@ function ColorPickerGradient() {
 			<VisualImagesPickerGradient />
 			{!wideScreen && (
 				<div className='productsShowcase'>
-					<SelectedForYouPage
-						data={[
-							'Water',
-							'Salty Thoughts',
-							'Starry Coral',
-							'Love Feeling 2',
-							'Love Feeling 1',
-							'A table for two, please!',
-							'Sunset Feelings',
-							'There is Strength in Vulnerability',
-							'Inner Blooming',
-							'Soul Compassion',
-							'Graceful Mind',
-						]}
-					/>{' '}
+					<SelectedForYouPage data={selectedShowcaseProducts} />{' '}
 				</div>
 			)}
 		</div>

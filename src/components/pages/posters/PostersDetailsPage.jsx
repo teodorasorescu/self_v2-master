@@ -23,7 +23,7 @@ const PostersDetailsPage = ({ posters }) => {
 						<a href={`/canvas-art-prints/${poster.urlTitle}`}>
 							<ProductItem
 								product={poster}
-								posterImg={poster.imgTitlePosterList}
+								posterImg={poster.imgTitle}
 								hasHoverImg={true}
 							/>
 						</a>

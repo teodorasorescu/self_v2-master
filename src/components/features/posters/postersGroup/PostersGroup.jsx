@@ -12,7 +12,7 @@ const PostersGroup = ({ group, posters }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	return (
 		<div className={classes.container}>
-			<h3>New Arrivals</h3>
+			<h3>The Spring Blossom Collection</h3>
 			<div className={classes.postersList}>
 				{filteredPosters.map((poster, index) => (
 					<div
@@ -24,7 +24,7 @@ const PostersGroup = ({ group, posters }) => {
 							<ProductItem
 								product={poster}
 								posterImg={
-									smartphoneScreen ? poster.imgTitle : poster.imgTitlePosterList
+									smartphoneScreen ? poster.imgTitlePosterList : poster.imgTitle
 								}
 								hasHoverImg={true}
 							/>

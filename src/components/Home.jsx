@@ -7,6 +7,7 @@ import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import Button from '@mui/material/Button';
 import SelfMission from './SelfMission';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage';
+import { selectedShowcaseProducts } from '../constants/productConstants';
 
 const Home = () => {
 	return (
@@ -24,18 +25,7 @@ const Home = () => {
 			</div>
 			<SelfMission />
 			<PostersHomeLoading /> <Benefits />
-			<SelectedForYouPage
-				data={[
-					'Love Feeling 2',
-					'Love Feeling 1',
-					'A table for two, please!',
-					'Sunset Feelings',
-					'There is Strength in Vulnerability',
-					'Inner Blooming',
-					'Soul Compassion',
-					'Graceful Mind',
-				]}
-			/>
+			<SelectedForYouPage data={selectedShowcaseProducts} />
 			<VisualImages />
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
