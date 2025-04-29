@@ -1,7 +1,7 @@
 export const articles = [
 	{
 		imgTitle: 'SilviaShowcase2.webp',
-		title: 'The Spring Blossom Collection | Silvia Stanescu',
+		title: 'The Spring Blossom Collection | Silvie Illustrations',
 		date: '29th April 2025',
 		urlTitle: 'silvia-stanescu',
 		description: 'Read more about Silvia and her artworks.',
