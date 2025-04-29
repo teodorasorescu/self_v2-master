@@ -76,7 +76,7 @@ export const subheadersData = new Map([
 		[
 			{
 				label: 'The Spring Blossom Collection',
-				href: '/journal/silvia-stanescu',
+				href: '/journal/silvie-illustrations',
 			},
 			{
 				label: 'Salt Water Collection',
