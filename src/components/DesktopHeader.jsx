@@ -23,7 +23,7 @@ const DesktopHeader = () => {
 		},
 		{
 			name: 'The Spring Blossom Collection',
-			path: '/journal/silvia-stanescu',
+			path: '/journal/silvie-illustrations',
 		},
 		{
 			name: 'Salt Water Collection',
