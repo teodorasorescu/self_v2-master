@@ -22,9 +22,10 @@ const ItemImagesCarousel = ({ product }) => {
 								{product.stock !== null && product.stock <= 0 && (
 									<Tag title='Out of Stock' />
 								)}
-								{product.limitedEdition != null && (
-									<Tag title='Limited Edition' />
-								)}
+								{product.limitedEdition != null &&
+									product.limitedEdition === 1 && (
+										<Tag title='Limited Edition' />
+									)}
 							</div>
 						</Carousel.Item>
 						{product.showcase != undefined &&
