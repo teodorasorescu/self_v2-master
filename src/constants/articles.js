@@ -1,6 +1,6 @@
 export const articles = [
 	{
-		imgTitle: '1.webp',
+		imgTitle: 'frontImg.webp',
 		title: 'Still Life, Still Home Collection | Ciocârlica',
 		date: '19th May 2025',
 		urlTitle: 'ciocarlica',
