@@ -1,5 +1,12 @@
 export const articles = [
 	{
+		imgTitle: 'frontImg.webp',
+		title: 'Still Life, Still Home Collection | Ciocârlica',
+		date: '19th May 2025',
+		urlTitle: 'ciocarlica',
+		description: 'Read more about Ciocârlica and her artworks.',
+	},
+	{
 		imgTitle: 'SilviaShowcase2.webp',
 		title: 'The Spring Blossom Collection | Silvie Illustrations',
 		date: '29th April 2025',
