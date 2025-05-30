@@ -4,11 +4,10 @@ import NewsletterForm from './NewsletterForm';
 const Newsletter = () => {
 	return (
 		<div className={styles.container}>
-			<h1>Self Posters Club</h1>
+			<h1>Happy Children's Day!</h1>
 			<h2>
-				GET 10% OFF ON YOUR ORDER! <br />
-				Always extra discounts, access to events, early product releases, and
-				insider updates tailored just for you!
+				Because kids are the best artists join and get 20% off code! <br />
+				Only this weekend!
 			</h2>
 			<NewsletterForm />
 			<h3>
