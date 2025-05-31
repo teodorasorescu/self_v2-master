@@ -12,7 +12,7 @@ const PostersGroup = ({ group, posters }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	return (
 		<div className={classes.container}>
-			<h3>The Spring Blossom Collection</h3>
+			<h3>Still Life, Still Home</h3>
 			<div className={classes.postersList}>
 				{filteredPosters.map((poster, index) => (
 					<div

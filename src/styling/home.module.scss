@@ -187,14 +187,14 @@
 		transition: all 0.05s;
 		display: flex;
 		height: 100vh;
-		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/SilviaShowcase1.webp');
+		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/2.webp');
 
 		@media screen and (max-width: 1024px) {
 			height: 80vh; /* Height for screens up to 1024px */
 		}
 
 		@media screen and (max-width: 768px) {
-			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/SilviaShowcase1.webp');
+			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/frontImg.webp');
 			height: 70vh; /* Height for screens up to 768px */
 		}
 	}

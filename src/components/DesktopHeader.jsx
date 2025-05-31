@@ -22,6 +22,10 @@ const DesktopHeader = () => {
 			path: '/journal',
 		},
 		{
+			name: 'Still Life, Still Home Collection',
+			path: '/journal/ciocarlica',
+		},
+		{
 			name: 'The Spring Blossom Collection',
 			path: '/journal/silvie-illustrations',
 		},
@@ -91,7 +95,8 @@ const DesktopHeader = () => {
 				</div>
 
 				<p>
-					Get 10% off by joining <a href='/our-club'>our club</a>!
+					Happy Children's Day! Get 20% only this weekend by joining{' '}
+					<a href='/our-club'>our club</a>!
 				</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>

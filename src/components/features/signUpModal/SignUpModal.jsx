@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import styles from './signup-modal.module.scss';
 import { useSelector } from 'react-redux';
@@ -46,10 +46,10 @@ const SignUpModal = () => {
 			<div className={styles['modal-overlay']}>
 				<div className={styles.modal}>
 					<CloseIcon className={styles.xIcon} onClick={handleClose} />
-					<h2>Self Posters Club</h2>
+					<h2>Happy Children's Day!</h2>
 					<p>
-						Sign up and be part of an artsy community with special offers and
-						insider updates!
+						Because kids are the best artists join and get 20% off code! <br />
+						Only this weekend!
 					</p>
 					<NewsletterForm />
 				</div>

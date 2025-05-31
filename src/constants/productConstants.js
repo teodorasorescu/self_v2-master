@@ -62,6 +62,9 @@ export const fontColors = [
 export const subheadersLabelData = ['Featured'];
 
 export const selectedShowcaseProducts = [
+	'Peonies',
+	'Next Chapter',
+	'Self Love',
 	'Love Feeling 2',
 	'Love Feeling 1',
 	'Water',
@@ -74,6 +77,10 @@ export const subheadersData = new Map([
 	[
 		'Featured',
 		[
+			{
+				label: 'Still Life, Still Home Collection',
+				href: '/journal/ciocarlica',
+			},
 			{
 				label: 'The Spring Blossom Collection',
 				href: '/journal/silvie-illustrations',
