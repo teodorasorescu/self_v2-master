@@ -62,6 +62,9 @@ export const fontColors = [
 export const subheadersLabelData = ['Featured'];
 
 export const selectedShowcaseProducts = [
+	'The Blue Hour',
+	'Where She Stood',
+	'Morning in Stillness',
 	'Peonies',
 	'Next Chapter',
 	'Self Love',
@@ -77,6 +80,10 @@ export const subheadersData = new Map([
 	[
 		'Featured',
 		[
+			{
+				label: 'La Siesta Collection',
+				href: '/journal/ana-liana',
+			},
 			{
 				label: 'Still Life, Still Home Collection',
 				href: '/journal/ciocarlica',

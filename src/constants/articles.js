@@ -1,5 +1,12 @@
 export const articles = [
 	{
+		imgTitle: 'Siesta_Smartphone.webp',
+		title: 'La Siesta Collection | Ana Liana',
+		date: '1st June 2025',
+		urlTitle: 'ana-liana',
+		description: 'Read more about Ana Liana and her artworks.',
+	},
+	{
 		imgTitle: 'frontImg.webp',
 		title: 'Still Life, Still Home Collection | Ciocârlica',
 		date: '19th May 2025',

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../styling/home.module.scss';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
 import Benefits from './Benefits';
