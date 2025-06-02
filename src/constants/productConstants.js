@@ -155,7 +155,7 @@ export const posterPrices = new Map([
 export const contactData = [
 	{
 		label: 'Self Posters Club',
-		href: '/our-club',
+		href: '/artsy-club',
 	},
 	{
 		label: 'About Us',

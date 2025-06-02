@@ -85,7 +85,7 @@ function App() {
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 					<Route path='/journal/inspiration' element={<Inspiration />} />
-					<Route path='/our-club' element={<OurClubPage />} />
+					<Route path='/artsy-club' element={<OurClubPage />} />
 					<Route
 						path='/journal/color-psychology'
 						element={<ColorPsychologyPage />}
