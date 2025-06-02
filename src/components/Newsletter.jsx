@@ -4,11 +4,11 @@ import NewsletterForm from './NewsletterForm';
 const Newsletter = () => {
 	return (
 		<div className={styles.container}>
-			<h1>Cool Artsy Club</h1>
+			<h1>Are you artsy enough for our club?</h1>
 			<h2>
-				GET 10% OFF ON YOUR ORDER! <br />
-				Add commentMore actions Always extra discounts, access to events, early
-				product releases, and insider updates tailored just for you!
+				If yes, join & GET 10% OFF ON YOUR ORDER! <br />
+				Always extra discounts, access to events, early product releases, and
+				insider updates tailored just for you!
 			</h2>
 			<NewsletterForm />
 			<h3>
