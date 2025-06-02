@@ -46,10 +46,10 @@ const SignUpModal = () => {
 			<div className={styles['modal-overlay']}>
 				<div className={styles.modal}>
 					<CloseIcon className={styles.xIcon} onClick={handleClose} />
-					<h2>You're artsy?</h2>
+					<h2>Are you artsy enough for our club?</h2>
 					<p>
-						Sign up and be part of an artsy community with special offers and
-						insider updates!
+						If yes, then sign up and be part of this artsy community with
+						special offers and insider updates!
 					</p>
 					<NewsletterForm />
 				</div>

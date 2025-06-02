@@ -42,7 +42,7 @@ const DesktopHeader = () => {
 			path: '/about-us',
 		},
 		{
-			name: 'Self Posters Club',
+			name: 'Artsy Club',
 			path: '/artsy-club',
 		},
 	];
@@ -99,8 +99,8 @@ const DesktopHeader = () => {
 				</div>
 
 				<p>
-					Get 10% off by joining <a href='/artsy-club'>our club</a>!{' '}
-					<a href='/artsy-club'>our club</a>!
+					Are u artsy? Get 10% off by joining{' '}
+					<a href='/artsy-club'>artsy-club</a>!{' '}
 				</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
