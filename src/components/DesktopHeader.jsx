@@ -99,8 +99,8 @@ const DesktopHeader = () => {
 				</div>
 
 				<p>
-					Are u artsy? Get 10% off by joining{' '}
-					<a href='/artsy-club'>artsy-club</a>!{' '}
+					Are u artsy? Get 10% off by joining <a href='/artsy-club'>our club</a>
+					!{' '}
 				</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
