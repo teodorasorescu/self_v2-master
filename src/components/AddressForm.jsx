@@ -143,7 +143,7 @@ export const AddressForm = () => {
 									paddingTop: '0.5%',
 								}}
 							>
-								Doresc să fiu la curent cu noutăți și oferte{' '}
+								Vreau să fiu parte din artsy club{' '}
 							</label>
 						</div>
 					</div>
