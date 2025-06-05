@@ -1,15 +1,19 @@
 const benefits = [
 	{
-		title: 'ELEVATE YOUR WALLS',
-		desc: 'Transform your space with our premium color-based canvas posters, designed to add depth, character, and a touch of personality to any room.',
+		title: 'UNIQUE DESIGNS',
+		desc: 'Curated store of expressive designs which support independent artists.',
 	},
 	{
-		title: 'SENSE THE QUALITY',
+		title: '100% COTTON CANVAS & PRINT QUALITY',
 		desc: 'We use 100% cotton canvas, a material that guarantees quality and durability of colors.',
 	},
 	{
-		title: 'EXPRESS YOURSELF',
-		desc: 'Let your walls reflect your personality. Each piece helps you create a space that feels truly yours—bold, artistic, and full of character.',
+		title: 'SAFE & SECURE CARD PAYMENTS',
+		desc: 'Powered by Stripe you can pay directly with card or through Apple / Google Pay.',
+	},
+	{
+		title: 'EASY RETURNS',
+		desc: '14-Day Easy Returns and if damaged we\'ll replace it for free.',
 	},
 ];
 
