@@ -8,22 +8,22 @@ const KarenHaller = S3_BUCKET + '/KarenHaller.webp';
 const colorResearchers = [
 	{
 		researcher: 'Goethe',
-		desc: 'Goethe a fost unul dintre primii care a studiat efectele psihologice ale culorilor! În cartea sa din 1810, "Teoria culorilor", el a propus pentru prima dată ideea că culorile nu erau doar fenomene fizice, ci aveau și efecte psihologice asupra oamenilor. El a susținut că fiecare culoare avea o caracteristică specifică și putea provoca răspunsuri emoționale și psihologice. Această lucrare a avut un impact semnificativ asupra domeniului creativ și este studiată și astăzi.',
+		desc: 'Goethe was one of the first to study the psychological effects of colors! In his 1810 book "Theory of Colors," he was the first to propose the idea that colors were not just physical phenomena but also had psychological effects on people. He argued that each color had a specific characteristic and could evoke emotional and psychological responses. This work had a significant impact on the creative field and is still studied today.',
 		image: `url(${Goethe})`,
 	},
 	{
 		researcher: 'Max Lüscher',
-		desc: 'Max Lüscher a fost un psihoterapeut elvețian care a dezvoltat testul Lüscher al culorilor, o unealtă folosită pentru a măsura starea psihologică și trăsăturile de personalitate ale unei persoane, pe baza preferințelor ei de culoare. Acest test a fost tradus în mai mult de 30 de limbi străine, iar metoda lui de atribuire stare-culoare este folosită și acum în universități din toată lumea.',
+		desc: 'Max Lüscher was a Swiss psychotherapist who developed the Lüscher Color Test, a tool used to measure a person\'s psychological state and personality traits based on their color preferences. This test has been translated into more than 30 foreign languages, and his state-color attribution method is still used in universities worldwide.',
 		image: `url(${ML})`,
 	},
 	{
 		researcher: 'Eva Heller',
-		desc: 'Autoare și psiholoagă germană, Eva Heller, a scris cartea "Psihologia culorii: efecte și simbolistică", care explorează impactul psihologic al culorilor asupra ființelor umane. Aceasta evidențiază faptul că asocierea culorilor nu este una întâmplătoare, bazată strict pe gusturi, însă una bazată pe comportament și experiențe.',
+		desc: 'German author and psychologist Eva Heller wrote the book "The Psychology of Color: Effects and Symbolism," which explores the psychological impact of colors on human beings. She emphasizes that color associations are not random or based solely on personal taste but are instead rooted in behavior and experiences.',
 		image: `url(${EvaHeller})`,
 	},
 	{
 		researcher: 'Karen Haller',
-		desc: 'Karen Haller este o expertă renumită în domeniul psihologiei aplicate a culorilor. Ea este specializată în înțelegerea modului în care culoarea afectează comportamentul și emoțiile umane. Totodată, are o pregătire în design interior și ajută oamenii să integreze culorile în spațiul lor. Ea și-a adunat toate cunoștiințele și a publicat cartea "The Little Book of Colour", unde explorează impactul culorilor asupra vieții umane, oferind o abordare practică.',
+		desc: 'Karen Haller is a renowned expert in applied color psychology. She specializes in understanding how color affects human behavior and emotions. With additional training in interior design, she helps people integrate colors into their spaces. She compiled her knowledge in the book "The Little Book of Colour," where she explores the impact of colors on human life, offering a practical approach.',
 		image: `url(${KarenHaller})`,
 	},
 ];
