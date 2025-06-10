@@ -1,2 +1,2 @@
-export const TIKTOK_LINK = 'https://www.tiktok.com/@selfposters.ro';
-export const INSTAGRAM_LINK = 'https://www.instagram.com/selfposters.ro';
+export const TIKTOK_LINK = 'https://www.tiktok.com/@self_posters';
+export const INSTAGRAM_LINK = 'https://www.instagram.com/self_posters';
