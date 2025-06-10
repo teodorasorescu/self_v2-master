@@ -1,62 +1,47 @@
 export const productQuestions = [
 	{
-		title: 'Care este diferența între culorile RGB și CMYK?',
-		content:
-			'RGB (red, green, blue) este optim pentru afișajele digitale unde lumina este emisă direct. Imprimarea necesită absorbția și reflexia luminii de către cerneală pe hârtie, ceea ce face ca CMYK (cyan, magenta, yellow, key (black)) să fie alegerea practică pentru acest mediu.',
+		title: 'Why do the chosen colors look slightly different when printed?',
+		content: 'Before printing, we convert colors from RGB to CMYK to ensure the best quality. Therefore, we recommend avoiding very bright RGB colors that don\'t exist in the CMYK color space.',
 	},
 	{
-		title: 'De ce culorile alese arată ușor diferite printate?',
-		content:
-			'Deoarece înainte de printare, facem conversia de culori de la RGB la CMYK pentru a obține cea mai bună calitate. Astfel, vă îndrumăm să nu alegeți culori RGB foarte aprinse, ce nu se regăsesc în CMYK.',
-	},
-	{
-		title: 'Care sunt pașii de personalizare al tabloului?',
-		content:
-			'Alege ce fel de tablou ai dori și accesează pagina de personalizare aferentă. ' +
-			'în funcție de tabloul ales, consultă semnificația fiecărei culori și fă-ți propriul design. \n' +
-			'Alege și culoarea font-ului dintre culorile deja alese pentru tablou. Selectează o ramă potrivită pentru tabloul tău :)',
+		title: 'What are the steps to customize a poster?',
+		content: 'Choose what type of poster you would like and access its customization page. ' +
+			'Depending on the selected poster, check the meaning of each color and create your own design.\n' +
+			'Select a font color from the colors already chosen for your poster. Choose a suitable frame for your poster :)',
 	},
 ];
 
 export const orderQuestions = [
 	{
-		title: 'Cine îmi livreză produsele?',
-		content:
-			'Partenerii noștri de încredere pentru livrări sunt Sameday, care asigură transport pe tot teritoriul României.',
+		title: 'Who delivers my products?',
+		content: 'Our trusted delivery partner is Sameday, which provides shipping throughout Romania.',
 	},
 	{
-		title: 'Cât durează să ajungă comanda pe care am plasat-o?',
-		content:
-			'Pregătirea și ambalarea comenzii pot dura până la 2 zile lucrătoare, iar serviciul de curierat face tot posibilul să livreze comandă în 1-2 zile lucrătoare de la momentul plasării.',
+		title: 'How long does it take to receive my order?',
+		content: 'Order preparation and packaging may take up to 5 business days as items are printed upon order receipt. Our courier service makes every effort to deliver your order within 1-2 business days from shipment.',
 	},
 	{
-		title: 'Pot avea și alte cerințe de personalizare al tabloului?',
-		content:
-			'În cazul în care dorești să faci o modificare în plus tabloului (de exemplu, eliminarea textului),  trimite un mesaj la hello@selfposters.ro sau scrie-ne pe instagram la @selfposters.ro',
+		title: 'Can I request additional customizations for my poster?',
+		content: 'If you would like to make additional modifications to your poster (for example, removing text), please message us at hello@selfposters.ro or contact us on Instagram @selfposters.ro',
 	},
 	{
-		title: 'Ce fac dacă comanda mea nu a sosit?',
-		content:
-			'Facem tot posibilul să nu existe astfel de experienţe. Dacă totuşi au trecut mai mult de 5 zile lucrătoare şi comanda nu s-a livrat, scrie-ne la hello@selfposters.ro sau pe instagram la @selfposters.ro şi ne vom asigura că produsele vor ajunge în cel mai scurt timp.',
+		title: 'What should I do if my order hasn\'t arrived?',
+		content: 'We do everything possible to prevent such situations. However, if more than 10 business days have passed and your order hasn\'t arrived, please email us at hello@selfposters.ro or message us on Instagram @selfposters.ro and we\'ll ensure your products arrive as quickly as possible.',
 	},
 	{
-		title: 'Am primit un produse defect, ce să fac?',
-		content:
-			'Ne pare rău pentru această experienţă, ştim că pot exista greşeli în procesare, dar împreună cu suportul comunităţii noastre reuşim întotdeauna să remediem situaţiile neplăcute. Contactează-ne pe email la hello@selfposters.ro sau pe instagram la @selfposters.ro şi vom rezolva în cel mai scurt timp.',
+		title: 'I received a defective product - what should I do?',
+		content: 'We\'re sorry for this experience. While processing errors can sometimes occur, together with our community support we always resolve such situations. Please contact us at hello@selfposters.ro or on Instagram @selfposters.ro and we\'ll resolve the issue promptly.',
 	},
 	{
-		title: 'Pot returna tabloul personalizat?',
-		content:
-			'Din păcate, produsele personalizate care respectă cerințele clientului și primite fără defecte, nu pot fi returnate.',
+		title: 'Can I return a customized poster?',
+		content: 'Unfortunately, personalized products that meet the customer\'s requirements and are received without defects cannot be returned.',
 	},
 	{
-		title: 'Ramele se pot returna?',
-		content:
-			'Returnarea ramelor este permisă, până la 14 zile de la primirea comenzii. Dacă se dorește returnarea unui produs, vă rugăm să inițiați acțiunea trimițându-ne un email pe hello@selfposters.ro. ',
+		title: 'How do I return a product?',
+		content: 'Send an email to hello@selfposters.ro with the subject "Return [order number]" and we\'ll arrange for a Sameday courier to pick up your return package.',
 	},
 	{
-		title: 'În cât timp se vor restitui banii în cazul unui retur?',
-		content:
-			'Restituirea va fi primită în termen de 5-10 zile de la primirea produsului returnat.',
+		title: 'How long does it take to receive a refund for a return?',
+		content: 'The refund will be processed within 5-10 days of receiving the returned product.',
 	},
 ];
