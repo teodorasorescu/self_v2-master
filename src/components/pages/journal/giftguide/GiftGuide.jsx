@@ -25,7 +25,7 @@ const GiftGuide = () => {
 
 	const navigate = useNavigate();
 	const navigateToCustom = () => {
-		navigate('/customized-canvas-posters');
+		navigate('/customized-aura-portraits');
 	};
 	return (
 		<div className={classes.container}>
@@ -151,7 +151,7 @@ const GiftGuide = () => {
 					And don't forget! <br /> The customized posters are the best for
 					authentic gifts!{' '}
 				</h2>
-				<Button msg={'Customized Canvas Posters'} onClick={navigateToCustom} />
+				<Button msg={'Customized Aura Portraits'} onClick={navigateToCustom} />
 			</>
 		</div>
 	);

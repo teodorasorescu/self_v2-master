@@ -37,18 +37,18 @@ function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 
 	useEffect(() => {
-		ReactGA.initialize('G-VBCPDM60NT');
+		//ReactGA.initialize('G-VBCPDM60NT');
 
 		if (localStorage.getItem('discountValue') === null) {
 			localStorage.setItem('discountValue', 0);
 		}
 
-		if (localStorage.getItem('products') == null) {
+		if (localStorage.getItem('products') === null) {
 			localStorage.setItem('products', JSON.stringify([]));
 		}
 
 		localStorage.setItem('posters', JSON.stringify([]));
-		if (localStorage.getItem('itemCount') == null) {
+		if (localStorage.getItem('itemCount') === null) {
 			localStorage.setItem('itemCount', 0);
 		}
 	}, []);
@@ -69,16 +69,15 @@ function App() {
 						path='/sticker-sheets/:urlTitle'
 						element={<StickerDetails />}
 					/>
-					{/* <Route path='/quiz' element={<QuizPage />} /> */}
 					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 					<Route path='/new-collection' element={<Preframe />} />
 					<Route path='/journal/gift-guide' element={<GiftGuide />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
-					<Route path='/personalizare' element={<ColorPickerGradient />} />
+					<Route path='/customization' element={<ColorPickerGradient />} />
 					<Route
-						path='/customized-canvas-posters'
+						path='/customized-aura-portraits'
 						element={<CustomPosterPage />}
 					/>
 					<Route path='/journal' element={<JournalPage />} />
@@ -90,15 +89,15 @@ function App() {
 						path='/journal/color-psychology'
 						element={<ColorPsychologyPage />}
 					/>
-					<Route path='/adaugă-produs' element={<AddProduct />} />
-					<Route path='/confirmare-comanda' element={<OrderConfirmation />} />
+					<Route path='/aura-poster' element={<AddProduct />} />
+					<Route path='/order-confirmation' element={<OrderConfirmation />} />
 					<Route path='/about-us' element={<OurStoryPage />} />
-					<Route path='/sustenabilitate' element={<SustenabilityPage />} />
-					<Route path='/termeni-și-condiții' element={<TermsAndConditions />} />
+					<Route path='/sustainability' element={<SustenabilityPage />} />
 					<Route
-						path='/politica-de-confidențialitate'
-						element={<Confidentiality />}
+						path='/terms-and-conditions'
+						element={<TermsAndConditions />}
 					/>
+					<Route path='/privacy-policy' element={<Confidentiality />} />
 					<Route path='/faq' element={<FAQPage />} />
 					<Route path='/contact' element={<ContactPage />} />
 				</Routes>

@@ -1,5 +1,5 @@
 export const getLockerPluginInstance = () => {
-	const clientId = process.env.REACT_APP_CLIENT_ID_SAMEDAY; //each integrator will have an unique clientId
+	const clientId = process.env.REACT_APP_CLIENT_ID_SAMEDAY;
 	const countryCode = 'RO';
 	const langCode = 'ro';
 	const city = 'Sectorul 3';

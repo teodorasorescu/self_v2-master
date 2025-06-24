@@ -18,6 +18,6 @@ export const meditationTips = [
 	},
 	{
 		title: 'O atitudine deschisă',
-		desc: 'Lasă gândurile să treacă prin mintea ta fără a le judeca.',
+		desc: 'Lasă gândurile să treacă prin mintea ta none a le judeca.',
 	},
 ];

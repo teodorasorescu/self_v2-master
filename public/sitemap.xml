@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://selfposters.ro/</loc>
+        <loc>https://self-posters.com/</loc>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://selfposters.ro/canvas-art-prints</loc>
+        <loc>https://self-posters.com/canvas-art-prints</loc>
         <priority>1.00</priority>
     </url>
      <url>
-        <loc>https://selfposters.ro/custom-canvas/</loc>
+        <loc>https://self-posters.com/custom-canvas/</loc>
         <priority>1.00</priority>
     </url>
      <url>
-        <loc>https://selfposters.ro/psihologia-culorilor/</loc>
+        <loc>https://self-posters.com/psihologia-culorilor/</loc>
         <priority>0.80</priority>
     </url>
 </urlset>

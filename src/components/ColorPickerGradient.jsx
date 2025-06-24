@@ -83,10 +83,10 @@ function ColorPickerGradient() {
 
 	const colorsMap = new Map();
 
-	colorsMap.set('Prima culoare', colorSwatch1);
-	colorsMap.set('A doua culoare', colorSwatch2);
-	colorsMap.set('A treia culoare', colorSwatch3);
-	colorsMap.set('A patra culoare', colorSwatch4);
+	colorsMap.set('1st Color', colorSwatch1);
+	colorsMap.set('2nd Color', colorSwatch2);
+	colorsMap.set('3rd Color', colorSwatch3);
+	colorsMap.set('4th Color', colorSwatch4);
 
 	useEffect(() => {
 		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
@@ -191,11 +191,7 @@ function ColorPickerGradient() {
 				</div>
 				<div className='descriptionContainer'>
 					<div className='titleContainer'>
-						<h1>
-							Custom Your Canvas Poster <br />
-							{product.title}
-							<br />
-						</h1>
+						<h1>{product.title}</h1>
 					</div>
 					<div className='paragraphContainer'>
 						<p>{product.description}</p>
@@ -209,17 +205,17 @@ function ColorPickerGradient() {
 							id='culoare_font'
 							name='culoare_font'
 							className='form-select'
-							placeholder='Culoare font'
+							placeholder='Text Color'
 							onChange={setField}
 						>
-							<option value='Prima culoare'>Culoare font</option>
+							<option value='1st Color'>Text Color</option>
 							{fontColors.map((color, index) => {
 								return <option key={`color-${index}`}>{color}</option>;
 							})}
 						</select>
 					</div>
 					<div className='buttonContainer'>
-						<Link to='/adaugă-produs'>
+						<Link to='/aura-poster'>
 							<Button className='button' onClick={computeColors}>
 								NEXT
 							</Button>

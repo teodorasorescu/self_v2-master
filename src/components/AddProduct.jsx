@@ -17,17 +17,26 @@ import {
 import reactCSS from 'reactcss';
 import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { computeCustomProduct, updatePrice } from '../constants/utils';
+import {
+	computeCustomProduct,
+	getCurrencyByCountry,
+	updatePrice,
+} from '../constants/utils';
 import FrameAndChassisSelect from './FrameAndChassisSelect';
+import { useCountry } from '../contexts/CountryProvider';
 
 const AddProduct = () => {
-	const [frameColor, setFrameColor] = useState('fără');
+	const [frameColor, setFrameColor] = useState('none');
 	const [chassis, setChassis] = useState(false);
 	const [size, setSize] = useState('21x30cm');
 	const { itemCount, setItemCount } = useStateContext();
+	const { countryCode } = useCountry();
 
 	let product = useSelector(selectProduct);
-	const [finalPrice, setFinalPrice] = useState(product.price);
+	const [finalPrice, setFinalPrice] = useState({
+		price: product.price,
+		currency: getCurrencyByCountry(countryCode),
+	});
 
 	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
 
@@ -50,7 +59,7 @@ const AddProduct = () => {
 
 		const finalProduct = computeCustomProduct(
 			product,
-			finalPrice,
+			finalPrice.price,
 			discountCodeValue,
 			frameColor,
 			chassis,
@@ -110,7 +119,9 @@ const AddProduct = () => {
 	};
 
 	useEffect(() => {
-		setFinalPrice(updatePrice(frameColor, chassis, size, product.price));
+		setFinalPrice(
+			updatePrice(frameColor, chassis, size, product.price, countryCode)
+		);
 	}, [frameColor, chassis, size]);
 
 	useEffect(() => {
@@ -135,10 +146,10 @@ const AddProduct = () => {
 				<div className='introductionContainer'>
 					<div className='titleContainer'>
 						<h1>{product.title}</h1>
-						<h2>{finalPrice.toFixed(2) + ' lei'} </h2>
+						<h2>{finalPrice.price + ' ' + finalPrice.currency} </h2>
 					</div>
 					<div className='productContainer'>
-						<h5>Personalizarea tabloului</h5>
+						<h5>Your Customized Aura Poster</h5>
 					</div>
 					<div className='bodySwatchesContainer'>
 						{listItems(product.colors)}
@@ -150,12 +161,13 @@ const AddProduct = () => {
 						setFrameColor={setFrameColor}
 						setSize={setSize}
 						size={size}
+						countryCode={countryCode}
 					/>
 
 					<div className='addToCartContainer'>
 						<a href='/cart'>
 							<Button className='cartButton' onClick={computeProductCart}>
-								ADAUGĂ ÎN COȘ
+								Add to Cart
 							</Button>
 						</a>
 					</div>

@@ -10,7 +10,7 @@ const NewsletterFreePoster = () => {
 			<h2>
 				Instrustions <br />
 				Sign up & give us a follow on{' '}
-				<a href={INSTAGRAM_LINK}>selfposters.ro</a> <br /> The winner will be
+				<a href={INSTAGRAM_LINK}>self-posters.com</a> <br /> The winner will be
 				announced on instagram on 8th March. Good luck!
 			</h2>
 			<FreeNewsletterForm />

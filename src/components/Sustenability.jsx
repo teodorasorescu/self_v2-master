@@ -7,7 +7,7 @@ const Sustenability = () => {
 			{' '}
 			<div className={styles.imgContainer}></div>
 			<div className={styles.text}>
-				<h3>SUSTENABILITITATE</h3>
+				<h3>Sustainability</h3>
 				<p className={styles.subheadline}>
 					Confecționarea <b>ramelor</b> este facută din lemn natural certificat
 					FSC 100%, astfel lemnul provine din surse prietenoase pentru păduri,
@@ -19,7 +19,7 @@ const Sustenability = () => {
 					<br />
 					<div className={styles.buttonContainer}>
 						{' '}
-						<a href='/sustenabilitate'>
+						<a href='/sustainability'>
 							<Button className={styles.button}>
 								{' '}
 								Cum contribuie Self Posters la sănătatea mediului?

@@ -3,6 +3,8 @@ import classes from '../../../styling/poster.item.module.scss';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { S3_BUCKET } from '../../../constants/links.js';
 import Tag from '../../ui/tag/Tag.jsx';
+import { getLocalizedPrice } from '../../../constants/utils.js';
+import { useCountry } from '../../../contexts/CountryProvider.jsx';
 
 const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const [hovered, setHovered] = useState(false);
@@ -11,6 +13,9 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const imgTitle = S3_BUCKET + '/' + posterImg;
 	const imgHoverTitle = S3_BUCKET + '/' + product.hoverImgTitle;
 	const isArtist = product.artist !== null;
+	const { countryCode } = useCountry();
+
+	const computedPrice = getLocalizedPrice(product.price, countryCode);
 	return (
 		<>
 			<div
@@ -47,7 +52,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 						<h4 className={classes.price}>Out of Stock</h4>
 					) : (
 						<h4 className={classes.price}>
-							From {product.price.toFixed(2)} lei
+							From {computedPrice.price + ' ' + computedPrice.currency}
 						</h4>
 					)}
 				</div>

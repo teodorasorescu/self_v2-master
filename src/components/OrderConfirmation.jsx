@@ -1,11 +1,13 @@
 import styles from '../styling/order.confirmation.module.scss';
 import { useStateContext } from '../contexts/ContextProvider';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import sendOrderAction from '../reducers/actions/sendOrderAction';
 import getPaymentStatusAction from '../reducers/actions/getPaymentStatusAction';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectOrderFailed } from '../reducers/slices/orderFailedSlice';
 import { S3_BUCKET } from '../constants/links';
+import { useCountry } from '../contexts/CountryProvider';
+import { getCurrencyByCountry } from '../constants/utils';
 
 const orderConfirmationImg = S3_BUCKET + '/order_confirmation.webp';
 const orderFailedImg = S3_BUCKET + '/orderfailed.webp';
@@ -14,7 +16,8 @@ const declinedImg = S3_BUCKET + '/declined.webp';
 const OrderConfirmation = () => {
 	const { headerOn, setHeaderOn } = useStateContext();
 	const [unpaidOrder, setUnpaidOrder] = useState(false);
-
+	const { countryCode } = useCountry();
+	const currency = getCurrencyByCountry(countryCode);
 	const productsOrder = JSON.parse(localStorage.getItem('productsOrder'));
 
 	const customer = JSON.parse(localStorage.getItem('customer'));
@@ -25,8 +28,10 @@ const OrderConfirmation = () => {
 	const discountCode = localStorage.getItem('discountCode');
 	useEffect(() => {
 		setHeaderOn(true);
+
 		if (sessionId !== '') {
 			const session = getPaymentStatusAction(sessionId, dispatch);
+
 			session.then(function (s) {
 				if (s.paymentStatus === 'paid') {
 					const products = productsOrder.map((product) => {
@@ -52,6 +57,7 @@ const OrderConfirmation = () => {
 							products: products,
 							customer: customer,
 							discountCode: discountCode,
+							currency: currency,
 						},
 						dispatch
 					);
@@ -74,13 +80,13 @@ const OrderConfirmation = () => {
 					{unpaidOrder && (
 						<>
 							<img src={declinedImg} alt='paymentfailed' />
-							<h3>Tranzacție nereușită</h3>
+							<h3>Unsuccessful payment</h3>
 						</>
 					)}
 					{orderFailed && (
 						<>
 							<img src={orderFailedImg} alt='orderfailed' />
-							<h3>A apărut o eroare. Încearcă mai târziu.</h3>
+							<h3>General error occurred. Try again later!</h3>
 						</>
 					)}
 				</div>
@@ -91,11 +97,10 @@ const OrderConfirmation = () => {
 							src={orderConfirmationImg}
 							alt='Comanda ta cu tablouri personalizate canvas gradient este confirmata!'
 						/>
-						<h5>Mulțumim pentru comandă!</h5>
+						<h5>Thank you for being yourself!</h5>
 						<p>
-							Comanda ta este confirmată și va fi livrată în cel târziu 3-5 zile
-							lucrătoare. Îți vom trimite un email cu confirmarea în cel mai
-							scurt timp.
+							Your order has been confirmed and will be delivered within 5-7
+							business days. We will send you a confirmation email shortly.
 						</p>
 					</div>
 				</>

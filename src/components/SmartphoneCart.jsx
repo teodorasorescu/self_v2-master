@@ -21,7 +21,7 @@ import { selectedShowcaseProducts } from '../constants/productConstants.js';
 
 const emptyCart = S3_BUCKET + '/emptyCart.webp';
 
-export const SmartphoneCart = () => {
+export const SmartphoneCart = ({ currency }) => {
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
 
@@ -30,7 +30,7 @@ export const SmartphoneCart = () => {
 	const [total, setTotal] = useState(calculateTotalPrice(storedProducts));
 	const discountCodeValue = localStorage.getItem('discountValue');
 	const columns = [
-		{ id: 'image', label: 'Articol' },
+		{ id: 'image', label: 'Article' },
 		{ id: 'title', label: '' },
 	];
 
@@ -88,7 +88,7 @@ export const SmartphoneCart = () => {
 	return (
 		<div className={styles.cart}>
 			<div className={styles.container}>
-				<p>Coșul tău</p>
+				<p>Cart</p>
 			</div>
 			{storedProducts.length === 0 && setItemCount(0)}
 			{storedProducts.length === 0 ? (
@@ -159,12 +159,12 @@ export const SmartphoneCart = () => {
 																		</p>
 																		{row['chassis'] === true && (
 																			<p className={styles.frame}>
-																				Montare pe cadru de lemn
+																				Sketched Canvas
 																			</p>
 																		)}
-																		{row['frameColor'] !== 'fără' && (
+																		{row['frameColor'] !== 'none' && (
 																			<p className={styles.frame}>
-																				Culoare ramă: {row['frameColor']}
+																				Frame: {row['frameColor']}
 																			</p>
 																		)}
 
@@ -175,19 +175,19 @@ export const SmartphoneCart = () => {
 																						{(
 																							row['quantity'] *
 																							row['initialPrice']
-																						).toFixed(2) + ' lei'}
+																						).toFixed(1) + currency}
 																					</p>
 																					<p className={styles.price}>
 																						{(
 																							row['quantity'] * row['price']
-																						).toFixed(2) + ' lei'}
+																						).toFixed(1) + currency}
 																					</p>
 																				</>
 																			) : (
 																				<p className={styles.price}>
 																					{(
 																						row['quantity'] * row['price']
-																					).toFixed(2) + ' lei'}
+																					).toFixed(1) + currency}
 																				</p>
 																			)}
 																		</div>
@@ -219,7 +219,7 @@ export const SmartphoneCart = () => {
 									}}
 									align='right'
 								>
-									{'Total:  ' + total.toFixed(2) + ' lei'}
+									{'Total:  ' + total.toFixed(1) + currency}
 								</p>
 							</div>
 
@@ -239,7 +239,7 @@ export const SmartphoneCart = () => {
 										goToCheckout();
 									}}
 								>
-									Mergi la Checkout
+									CHECKOUT
 								</Button>
 								<Button
 									style={{
@@ -253,7 +253,7 @@ export const SmartphoneCart = () => {
 										to='/'
 										style={{ textDecoration: 'none', color: 'black' }}
 									>
-										Continuă cumpărăturile{' '}
+										Get More Posters
 									</Link>
 								</Button>
 							</div>

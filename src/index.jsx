@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -6,11 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import { ContextProvider } from './contexts/ContextProvider';
 import { Provider } from 'react-redux';
 import { store } from './reducers/store';
+import { CountryProvider } from './contexts/CountryProvider';
 ReactDOM.render(
 	<ContextProvider>
-		<Provider store={store}>
-			<App />
-		</Provider>
+		<CountryProvider>
+			<Provider store={store}>
+				<App />
+			</Provider>
+		</CountryProvider>
 	</ContextProvider>,
 	document.getElementById('root')
 );

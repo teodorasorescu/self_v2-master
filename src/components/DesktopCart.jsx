@@ -22,7 +22,7 @@ import { S3_BUCKET } from '../constants/links.js';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage.jsx';
 import { selectedShowcaseProducts } from '../constants/productConstants.js';
 
-export const DesktopCart = () => {
+export const DesktopCart = ({ currency }) => {
 	const emptyCart = S3_BUCKET + '/emptyCart.webp';
 	const { itemCount, setItemCount } = useStateContext();
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -85,7 +85,7 @@ export const DesktopCart = () => {
 	return (
 		<div className={styles.cart}>
 			<div className={styles.hContainer}>
-				<p>Coșul tău</p>
+				<p>Cart</p>
 			</div>
 			{storedProducts.length === 0 && setItemCount(0)}
 			{storedProducts.length === 0 ? (
@@ -151,12 +151,12 @@ export const DesktopCart = () => {
 																		</p>
 																		{row['chassis'] === true && (
 																			<p className={styles.frame}>
-																				Montare pe cadru de lemn
+																				Stretched Canvas
 																			</p>
 																		)}
-																		{row['frameColor'] !== 'fără' && (
+																		{row['frameColor'] !== 'none' && (
 																			<p className={styles.frame}>
-																				Culoare ramă: {row['frameColor']}
+																				Frame: {row['frameColor']}
 																			</p>
 																		)}
 
@@ -181,23 +181,25 @@ export const DesktopCart = () => {
 																		productId={index}
 																	/>
 																) : column.id === 'total' ? (
-																	(row['quantity'] * row['price']).toFixed(2) +
-																	' lei'
+																	(row['quantity'] * row['price']).toFixed(1) +
+																	currency
 																) : column.id != 'colors' ? (
 																	<div>
 																		{discountCodeValue != 0 ? (
 																			<>
 																				{' '}
 																				<p className={styles.discountedPrice}>
-																					{row['initialPrice'].toFixed(2) +
-																						' lei'}
+																					{row['initialPrice'].toFixed(1) +
+																						currency}
 																				</p>
 																				<p className={styles.price}>
-																					{row['price'].toFixed(2) + ' lei'}
+																					{row['price'].toFixed(1) + currency}
 																				</p>
 																			</>
 																		) : (
-																			<p>{row['price'].toFixed(2) + ' lei'}</p>
+																			<p>
+																				{row['price'].toFixed(1) + currency}
+																			</p>
 																		)}
 																	</div>
 																) : null}
@@ -213,7 +215,7 @@ export const DesktopCart = () => {
 						</TableContainer>
 						<div className={styles.textContainer}>
 							<p className={styles.pTotal} align='right'>
-								Total: {'' + total.toFixed(2) + ' lei'}
+								Total: {'' + total.toFixed(1) + currency}
 							</p>
 						</div>
 						<div className={styles.buttonContainer}>
@@ -225,11 +227,14 @@ export const DesktopCart = () => {
 									goToCheckout();
 								}}
 							>
-								Mergi la Checkout
+								Checkout
 							</Button>
 							<Button className={styles.shopContainerButton}>
-								<a href='/' style={{ textDecoration: 'none', color: 'black' }}>
-									Continuă cumpărăturile{' '}
+								<a
+									href='/canvas-art-prints'
+									style={{ textDecoration: 'none', color: 'black' }}
+								>
+									Get more posters
 								</a>
 							</Button>
 						</div>

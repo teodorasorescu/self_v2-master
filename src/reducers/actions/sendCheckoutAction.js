@@ -8,7 +8,7 @@ const sendCheckoutAction = async (
 	checkout,
 	setItemCount
 ) => {
-	const stripe = await loadStripe(process.env.REACT_APP_PUBLIC_KEY_STRIPE_PROD);
+	const stripe = await loadStripe(process.env.REACT_APP_PUBLIC_KEY_STRIPE_TEST);
 
 	const headers = {
 		'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const sendCheckoutAction = async (
 		localStorage.setItem('discountValue', 0);
 	} catch (error) {
 		dispatch(loadOrderFailed(true));
-		navigate('/confirmare-comanda');
+		navigate('/order-confirmation');
 	}
 };
 

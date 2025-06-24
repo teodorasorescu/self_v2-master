@@ -77,7 +77,7 @@ const DesktopHeader = () => {
 				<link
 					rel='icon'
 					type='image/png'
-					href='https://selfposters.ro/favicon.png'
+					href='https://self-posters.com/favicon.png'
 				/>
 			</Helmet>
 			<div className={styles.promotionTextContainer}>
@@ -99,8 +99,8 @@ const DesktopHeader = () => {
 				</div>
 
 				<p>
-					Are u artsy? Get 10% off by joining <a href='/artsy-club'>our club</a>
-					!{' '}
+					Are u artsy enough? Get 10% off by joining{' '}
+					<a href='/artsy-club'>our club</a>!{' '}
 				</p>
 				<div className={styles.contactText}>
 					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
@@ -177,10 +177,10 @@ const DesktopHeader = () => {
 					</a>
 					<a
 						className={styles.link}
-						href='/customized-canvas-posters'
+						href='/customized-aura-portraits'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Customized Canvas Posters
+						Customized Aura Portraits
 					</a>
 				</div>
 			</div>
