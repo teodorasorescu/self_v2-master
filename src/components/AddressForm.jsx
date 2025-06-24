@@ -331,8 +331,8 @@ export const AddressForm = () => {
 							}}
 						>
 							I have read and agree to the
-							<a href='politica-de-confidențialitate'> Privacy Policy</a> and
-							<a href='termeni-și-condiții'> Terms and Conditions</a>.*
+							<a href='privacy-policy'> Privacy Policy</a> and
+							<a href='terms-and-conditions'> Terms and Conditions</a>.*
 						</label>
 					</div>
 					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
