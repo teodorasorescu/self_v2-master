@@ -6,15 +6,14 @@ const VisualImages = () => {
 		<div className={styles.container}>
 			<div className={styles.imgContainer}>
 				<div className={styles.firstContainer}></div>
-
-				<a href='/customized-canvas-posters'>
-					<Button msg={'Custom Your Canvas Poster'} />
+				<a href='/journal'>
+					<Button msg={'Journal'} />
 				</a>
 			</div>
 			<div className={styles.imgContainer}>
 				<div className={styles.secondContainer}></div>
-				<a href='/journal'>
-					<Button msg={'Journal'} />
+				<a href='/customized-aura-portraits'>
+					<Button msg={'Custom Your Aura Poster'} />
 				</a>
 			</div>
 		</div>

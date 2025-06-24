@@ -39,7 +39,7 @@ const sendCheckoutAction = async (
 		localStorage.setItem('discountValue', 0);
 	} catch (error) {
 		dispatch(loadOrderFailed(true));
-		navigate('/confirmare-comanda');
+		navigate('/order-confirmation');
 	}
 };
 

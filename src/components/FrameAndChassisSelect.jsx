@@ -8,9 +8,10 @@ import {
 } from '../reducers/slices/stockSlice';
 import { frameColors } from '../constants/frameColors';
 import { chassisPrices, framePrices } from '../constants/productConstants';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { noop } from 'lodash';
+import { getLocalizedPrice } from '../constants/utils';
 
 const FrameAndChassisSelect = ({
 	frameColor,
@@ -19,7 +20,16 @@ const FrameAndChassisSelect = ({
 	setChassis,
 	setSize,
 	size,
+	countryCode,
 }) => {
+	const initialPrice = {
+		price: 0,
+		currency: 'RON',
+	};
+
+	const [chassisPrice, setChassisPrice] = useState(initialPrice);
+	const [framePrice, setFramePrice] = useState(initialPrice);
+
 	const setField = (event) => {
 		setFrameColor(event.target.value);
 	};
@@ -36,10 +46,23 @@ const FrameAndChassisSelect = ({
 	const chassisStock = useSelector(selectChassisStock);
 	const dispatch = useDispatch();
 
+	const getChassisBySize = (size) => {
+		setChassisPrice(getLocalizedPrice(chassisPrices.get(size), countryCode));
+	};
+
+	const getFrameBySize = (size) => {
+		setFramePrice(getLocalizedPrice(framePrices.get(size), countryCode));
+	};
+
 	useEffect(() => {
 		getFramesStockAction(dispatch);
 		getChassisStockAction(dispatch);
 	}, []);
+
+	useEffect(() => {
+		getChassisBySize(size);
+		getFrameBySize(size);
+	}, [size]);
 
 	return (
 		<div>
@@ -58,41 +81,43 @@ const FrameAndChassisSelect = ({
 			</div>
 
 			<div className='frameContainer'>
-				<h6>Montare pe cadru de lemn</h6>
+				<h6>Streched Canvas on Wooden Frame</h6>
 				<select
 					id='chassis'
 					name='chassis'
 					className='form-select'
-					placeholder='Montare pe cadru de lemn'
+					placeholder='Wooden Frame Streched Canvas'
 					onChange={(e) => setChassisField(e.target.value === 'true')}
 				>
-					<option value='false'>Nu</option>
+					<option value='false'>No</option>
 					<option
-						disabled={chassisStock == 0 || frameColor !== 'fără' ? true : false}
+						disabled={
+							chassisStock === 0 || frameColor !== 'none' ? true : false
+						}
 						value='true'
 					>
-						Da + {chassisPrices.get(size)} lei
+						Yes + {chassisPrice.price + ' ' + chassisPrice.currency}
 					</option>
 				</select>
 			</div>
 			<div className='frameContainer'>
-				<h6>Rame din lemn natural</h6>
+				<h6>Natural Wooden Frames</h6>
 				<select
 					id='culoare_ramă'
 					name='culoare_ramă'
 					className='form-select'
-					placeholder='Culoare ramă'
+					placeholder='Frame'
 					onChange={setField}
 				>
-					<option value='fără'>Continuă fără ramă</option>
+					<option value='none'>No Frame</option>
 					{frameColors.map((color, index) => {
 						return (
 							<option
-								disabled={framesStock == 0 || chassis == true ? true : false}
+								disabled={framesStock === 0 || chassis === true ? true : false}
 								key={`color-${index}`}
 								value={color}
 							>
-								{color} + {framePrices.get(size)} lei
+								{color} + {framePrice.price + ' ' + framePrice.currency}
 							</option>
 						);
 					})}

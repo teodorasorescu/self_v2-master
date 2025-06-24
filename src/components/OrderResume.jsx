@@ -4,10 +4,13 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useStateContext } from '../contexts/ContextProvider';
 import { CheckoutCart } from './CheckoutCart';
-import { calculateTotalPrice } from '../constants/utils';
+import { calculateTotalPrice, getCurrencyByCountry } from '../constants/utils';
+import { useCountry } from '../contexts/CountryProvider';
 
 export const OrderResume = ({ storedProducts }) => {
 	const { orderResume, setOrderResume } = useStateContext();
+	const { countryCode } = useCountry();
+	const currency = ' ' + getCurrencyByCountry(countryCode);
 
 	const total = calculateTotalPrice(storedProducts);
 	const setOrderResumeTrue = () => {
@@ -27,9 +30,9 @@ export const OrderResume = ({ storedProducts }) => {
 				>
 					<div className={styles.textContainer}>
 						<p>
-							Afișează rezumatul comenzii <KeyboardArrowDownIcon />
+							Show Your Order <KeyboardArrowDownIcon />
 						</p>
-						<p>{total.toFixed(2) + ' lei'}</p>
+						<p>{total.toFixed(1) + currency}</p>
 					</div>
 				</div>
 			)}
@@ -40,9 +43,9 @@ export const OrderResume = ({ storedProducts }) => {
 				>
 					<div className={styles.textContainer}>
 						<p>
-							Ascunde rezumatul comenzii <KeyboardArrowUpIcon />
+							Hide Your Order <KeyboardArrowUpIcon />
 						</p>
-						<p>{total.toFixed(2) + ' lei'}</p>
+						<p>{total.toFixed(1) + currency}</p>
 					</div>
 
 					<div className={styles.cartContainer}>

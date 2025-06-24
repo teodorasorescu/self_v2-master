@@ -5,20 +5,20 @@ export const infoCategories = [
 		link: '/about-us',
 	},
 	{
-		name: 'Sustenability',
-		link: '/sustenabilitate',
+		name: 'Sustainability',
+		link: '/sustainability',
 	},
 	{
 		name: 'Inspiration',
-		link: '/inspiration',
+		link: '/journal/inspiration',
 	},
 	{
 		name: 'Terms & Conditions',
-		link: '/termeni-și-condiții',
+		link: '/terms-and-conditions',
 	},
 	{
 		name: 'Privacy Policy',
-		link: '/politica-de-confidențialitate',
+		link: '/privacy-policy',
 	},
 	{
 		name: 'FAQ',

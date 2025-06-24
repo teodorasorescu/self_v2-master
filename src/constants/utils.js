@@ -1,16 +1,35 @@
 import { chassisPrices, framePrices, posterPrices } from './productConstants';
 import { v4 as uuidv4 } from 'uuid';
+import states from './states';
 
-export const updatePrice = (frameColor, chassis, size, initialPrice) => {
-	let updatedPrice = posterPrices.get(size)?.get(initialPrice);
-	if (frameColor !== 'fără') {
-		updatedPrice += framePrices.get(size);
-	}
-	if (chassis) {
-		updatedPrice += chassisPrices.get(size);
-	}
+export const getCurrencyByCountry = (countryCode) => {
+	const RON_COUNTRIES = ['RO'];
+	return RON_COUNTRIES.includes(countryCode) ? 'RON' : 'EUR';
+};
 
-	return updatedPrice;
+export const updatePrice = (
+	frameColor,
+	chassis,
+	size,
+	initialPrice,
+	countryCode = 'RO'
+) => {
+	const basePrice = posterPrices.get(size)?.get(initialPrice) || 0;
+	const framePrice = frameColor !== 'none' ? framePrices.get(size) || 0 : 0;
+	const chassisPrice = chassis ? chassisPrices.get(size) || 0 : 0;
+
+	const totalInRON = basePrice + framePrice + chassisPrice;
+	const currency = getCurrencyByCountry(countryCode);
+
+	const price =
+		currency === 'RON'
+			? totalInRON
+			: parseFloat((totalInRON / RON_TO_EUR_RATE).toFixed(1));
+
+	return {
+		price,
+		currency,
+	};
 };
 
 export const calculatePromotionPrice = (price) => {
@@ -105,3 +124,22 @@ export const modifyExistingDiscount = (products, newDiscount) => {
 	});
 	localStorage.setItem('products', JSON.stringify(modifiedProducts));
 };
+
+const RON_TO_EUR_RATE = 5;
+
+export function getLocalizedPrice(priceInRon, countryCode) {
+	const isRON = countryCode === 'RO';
+	const price = isRON
+		? priceInRon
+		: Math.floor(parseFloat(priceInRon / RON_TO_EUR_RATE));
+
+	const currency = isRON ? 'RON' : 'EUR';
+
+	return { price, currency };
+}
+
+export const getRegions = (country) => {
+	return states[country] || [];
+};
+
+export const supportedCountries = ['RO', 'BG', 'HU'];

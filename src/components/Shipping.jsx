@@ -5,13 +5,10 @@ import { getLockerPluginInstance } from './EasyboxLocker';
 import { useStateContext } from '../contexts/ContextProvider';
 
 import { useDispatch } from 'react-redux';
-import {
-	HOME_DELIVERY_BIG,
-	HOME_DELIVERY_SMALL,
-	LOCKER_DELIVERY_BIG,
-	LOCKER_DELIVERY_SMALL,
-} from '../constants/productConstants';
+import { shippingPrices } from '../constants/productConstants';
 import { loadDeliveryPriceState } from '../reducers/slices/deliveryPriceSlice';
+import { useCountry } from '../contexts/CountryProvider';
+import { getCurrencyByCountry, supportedCountries } from '../constants/utils';
 
 export const Shipping = () => {
 	const [shippingMethod, setShippingMethod] = useState(0);
@@ -34,17 +31,22 @@ export const Shipping = () => {
 	let pluginInstance = getLockerPluginInstance();
 	pluginInstance.subscribe(closeAndSaveLockerId);
 
+	const { countryCode } = useCountry();
+	const currency = ' ' + getCurrencyByCountry(countryCode);
+
 	const computeShippingPrice = () => {
+		const shippingPrice = shippingPrices.get(countryCode);
+		console.log(shippingPrice?.get('courier')['small']);
 		const filteredProducts = storedProducts.filter(
-			(product) => product.frameColor === 'fără' && product.chassis === false
+			(product) => product.frameColor === 'none' && product.chassis === false
 		);
 
 		if (filteredProducts.length === storedProducts.length) {
-			setHomeDeliveryAmount(HOME_DELIVERY_SMALL);
-			setLockerDeliveryAmount(LOCKER_DELIVERY_SMALL);
+			setHomeDeliveryAmount(shippingPrice?.get('courier')['small']);
+			setLockerDeliveryAmount(shippingPrice?.get('locker')['small']);
 		} else {
-			setHomeDeliveryAmount(HOME_DELIVERY_BIG);
-			setLockerDeliveryAmount(LOCKER_DELIVERY_BIG);
+			setHomeDeliveryAmount(shippingPrice?.get('courier')['large']);
+			setLockerDeliveryAmount(shippingPrice?.get('locker')['large']);
 		}
 	};
 
@@ -91,59 +93,69 @@ export const Shipping = () => {
 	return (
 		<div>
 			<h3 align='left' className={styles.titleShipping}>
-				Metodă de expediere - Sameday
+				Shipping Method
 			</h3>
-			<form className={styles.formContainer}>
-				<div className='form-group'>
-					<div className='form-check'>
-						<input
-							className='form-check-input'
-							type='radio'
-							name='deliveryMethod'
-							id='homeDelivery'
-							value='homeDelivery'
-							onChange={() => saveCustomerShippingMethod(1)}
-							checked={shippingMethod === 1}
-						/>
-						<label
-							className={`form-check-label ${styles.shippingContainer}`}
-							htmlFor='homeDelivery'
-						>
-							<p>Livrare la domiciliu</p>
-							{shippingMethod === 1 && homeDeliveryAmount !== 0 && (
-								<p className={styles.pBold}>{homeDeliveryAmount} lei</p>
-							)}
-						</label>
-					</div>
-				</div>
-				<div className='form-check'>
-					<input
-						className='form-check-input'
-						type='radio'
-						name='deliveryMethod'
-						id='lockerOption'
-						value='lockerOption'
-						onChange={() => saveCustomerShippingMethod(2)}
-						checked={shippingMethod === 2}
-					/>
-					<label
-						className={`form-check-label ${styles.shippingContainer}`}
-						htmlFor='lockerOption'
-					>
-						<p>Punct de colectare</p>
-						{shippingMethod === 2 && lockerDeliveryAmount !== 0 && (
-							<p className={styles.pBold}>{lockerDeliveryAmount} lei</p>
+			{supportedCountries.includes(countryCode) ? (
+				<>
+					<form className={styles.formContainer}>
+						<div className='form-group'>
+							<div className='form-check'>
+								<input
+									className='form-check-input'
+									type='radio'
+									name='deliveryMethod'
+									id='homeDelivery'
+									value='homeDelivery'
+									onChange={() => saveCustomerShippingMethod(1)}
+									checked={shippingMethod === 1}
+								/>
+								<label
+									className={`form-check-label ${styles.shippingContainer}`}
+									htmlFor='homeDelivery'
+								>
+									<p>Home Delivery</p>
+									{shippingMethod === 1 && homeDeliveryAmount !== 0 && (
+										<p className={styles.pBold}>
+											{homeDeliveryAmount + ' ' + currency}
+										</p>
+									)}
+								</label>
+							</div>
+						</div>
+						<div className='form-check'>
+							<input
+								className='form-check-input'
+								type='radio'
+								name='deliveryMethod'
+								id='lockerOption'
+								value='lockerOption'
+								onChange={() => saveCustomerShippingMethod(2)}
+								checked={shippingMethod === 2}
+							/>
+							<label
+								className={`form-check-label ${styles.shippingContainer}`}
+								htmlFor='lockerOption'
+							>
+								<p>Easybox Delivery</p>
+								{shippingMethod === 2 && lockerDeliveryAmount !== 0 && (
+									<p className={styles.pBold}>
+										{lockerDeliveryAmount + ' ' + currency}
+									</p>
+								)}
+							</label>
+						</div>
+						{shippingMethod === 2 && !isError && (
+							<p>
+								{locker.name} <br /> {locker.address} <br /> {locker.city}{' '}
+								<br /> {locker.county}
+							</p>
 						)}
-					</label>
-				</div>
-				{shippingMethod === 2 && !isError && (
-					<p>
-						{locker.name} <br /> {locker.address} <br /> {locker.city} <br />{' '}
-						{locker.county}
-					</p>
-				)}
-				{isError && <p>Alege un locker sau schimbă metoda de livrare.</p>}
-			</form>
+						{isError && <p>Choose locker or change delivery method.</p>}
+					</form>
+				</>
+			) : (
+				<p>Sorry, we don't ship to your country.</p>
+			)}
 		</div>
 	);
 };

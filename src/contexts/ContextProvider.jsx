@@ -16,7 +16,7 @@ export const ContextProvider = ({ children }) => {
 		address: '',
 		addressInfo: '',
 		phoneNumber: '',
-		cityId: 0,
+		cityId: '',
 		state: '',
 		country: '',
 		postalCode: '',

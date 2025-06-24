@@ -8,5 +8,5 @@ export const description =
 export const benefits = [
 	'Stunning collection of canvas art prints',
 	'Natural wood frames',
-	'Customized canvas posters',
+	'Customized Aura Portraits',
 ];

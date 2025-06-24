@@ -10,12 +10,7 @@ const Contact = () => {
 
 	return (
 		<div>
-			<h5>Contact</h5>
-			<p>
-				Bucuresti, Sector 3, <br />
-				Str. Nerva Traian, nr 27-33, <br /> Sc. B, Et. 1, nr. 6
-			</p>
-			<p>0763382056</p>
+			<h5>Socials</h5>
 			<div>
 				<a href={INSTAGRAM_LINK}>
 					<img

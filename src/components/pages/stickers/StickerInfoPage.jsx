@@ -44,7 +44,7 @@ const StickerInfoPage = ({ product, suport, details }) => {
 					? computeDiscount(product.price, discountCodeValue)
 					: product.price,
 			title: product.title,
-			frameColor: 'fără',
+			frameColor: 'none',
 			size: product.size,
 		};
 
@@ -64,13 +64,13 @@ const StickerInfoPage = ({ product, suport, details }) => {
 			<div className={classes.introductionContainer}>
 				<div className={classes.titleContainer}>
 					<h1>{product.title}</h1>
-					<h2>{product.price.toFixed(2) + ' lei'}</h2>
+					<h2>{product.price.toFixed(1) + ' RON'}</h2>
 				</div>
 
 				<div className={classes.addToCartContainer}>
 					<a href='/cart'>
 						<Button className={classes.cartButton} onClick={computeProductCart}>
-							ADAUGĂ ÎN COȘ
+							Add to Cart
 						</Button>
 					</a>
 				</div>

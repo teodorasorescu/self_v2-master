@@ -7,20 +7,27 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import styles from '../styling/checkout.cart.module.scss';
-import { calculateTotalPrice, computeProductsLength } from '../constants/utils';
+import {
+	calculateTotalPrice,
+	computeProductsLength,
+	getCurrencyByCountry,
+} from '../constants/utils';
 
 import { createTheme, ThemeProvider } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { selectDeliveryPrice } from '../reducers/slices/deliveryPriceSlice';
 import { S3_BUCKET } from '../constants/links';
 import { price } from '../constants/productConstants';
+import { useCountry } from '../contexts/CountryProvider';
 
 export const CheckoutCart = ({ storedProducts }) => {
 	const discountCodeValue = parseInt(localStorage.getItem('discountValue'), 10);
 	const discountCode = localStorage.getItem('discountCode');
+	const { countryCode } = useCountry();
+	const currency = ' ' + getCurrencyByCountry(countryCode);
 
 	const columns = [
-		{ id: 'image', label: 'Articol' },
+		{ id: 'image', label: 'Article' },
 		{ id: 'title', label: '' },
 
 		{
@@ -80,9 +87,9 @@ export const CheckoutCart = ({ storedProducts }) => {
 
 	const calculateTotal = () => {
 		if (discount) {
-			return (total - price * discountNo + deliveryPrice).toFixed(2);
+			return (total - price * discountNo + deliveryPrice).toFixed(1);
 		}
-		return (total + deliveryPrice).toFixed(2);
+		return (total + deliveryPrice).toFixed(1);
 	};
 
 	return (
@@ -147,7 +154,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																			(row['quantity'] * row['price']).toFixed(
 																				2
 																			) +
-																			' lei'}
+																			currency}
 																	</p>
 																</div>
 															) : column.id === 'title' ? (
@@ -158,12 +165,12 @@ export const CheckoutCart = ({ storedProducts }) => {
 																	</p>
 																	{row['chassis'] === true && (
 																		<p className={styles.frame}>
-																			Montare pe cadru de lemn
+																			Sketched Canvas
 																		</p>
 																	)}
-																	{row['frameColor'] !== 'fără' && (
+																	{row['frameColor'] !== 'none' && (
 																		<p className={styles.frame}>
-																			Culoare ramă: {row['frameColor']}
+																			Frame: {row['frameColor']}
 																		</p>
 																	)}
 																</>
@@ -183,7 +190,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Subtotal</p>
 						<p className={styles.pRightContainer}>
-							{'' + total.toFixed(2) + ' lei'}
+							{'' + total.toFixed(1) + currency}
 						</p>
 					</div>
 
@@ -195,15 +202,15 @@ export const CheckoutCart = ({ storedProducts }) => {
 					)}
 
 					<div className={styles.pLeftContainer}>
-						<p align='left'>Transport</p>
+						<p align='left'>Shipping</p>
 						<p className={styles.pTransportContainer}>
-							&nbsp;{deliveryPrice.toFixed(2)} lei
+							&nbsp;{deliveryPrice.toFixed(1) + currency}
 						</p>
 					</div>
 					<div className={styles.pTotalContainer}>
 						<p align='left'>Total</p>
 						<p className={styles.totalValueContainer}>
-							{'' + calculateTotal() + ' lei'}{' '}
+							{'' + calculateTotal() + currency}
 						</p>
 					</div>
 				</div>

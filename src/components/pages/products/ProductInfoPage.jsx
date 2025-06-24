@@ -1,6 +1,10 @@
 import { React, useEffect, useState } from 'react';
 import Button from '@mui/material/Button';
-import { computeProduct, updatePrice } from '../../../constants/utils';
+import {
+	computeProduct,
+	getCurrencyByCountry,
+	updatePrice,
+} from '../../../constants/utils';
 import classes from './poster.page.module.scss';
 import { useStateContext } from '../../../contexts/ContextProvider';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -17,15 +21,22 @@ import {
 	selectedShowcaseProducts,
 } from '../../../constants/productConstants';
 import SelectedForYouPage from '../selectedForYouShowcase/SelectedForYouPage';
+import { useCountry } from '../../../contexts/CountryProvider';
 
 const ProductInfoPage = ({ product, suport, details }) => {
-	const [frameColor, setFrameColor] = useState('fără');
+	const [frameColor, setFrameColor] = useState('none');
 	const [chassis, setChassis] = useState(false);
 	const [size, setSize] = useState('21x30cm');
 	const { itemCount, setItemCount } = useStateContext();
 	const isArtist = product.artist !== null;
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
-	const [finalPrice, setFinalPrice] = useState(product.price);
+
+	const { countryCode } = useCountry();
+	const [finalPrice, setFinalPrice] = useState({
+		price: product.price,
+		currency: getCurrencyByCountry(countryCode),
+	});
+
 	const width = smartphoneScreen ? '90vw' : '25vw';
 	const dispatch = useDispatch();
 	const localStoreProducts = localStorage.getItem('products');
@@ -46,7 +57,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 
 		const finalProduct = computeProduct(
 			product,
-			finalPrice,
+			finalPrice.price,
 			discountCodeValue,
 			frameColor,
 			chassis,
@@ -63,7 +74,9 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	};
 
 	useEffect(() => {
-		setFinalPrice(updatePrice(frameColor, chassis, size, product.price));
+		setFinalPrice(
+			updatePrice(frameColor, chassis, size, product.price, countryCode)
+		);
 	}, [frameColor, chassis, size]);
 
 	return (
@@ -79,7 +92,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 							<h3>{product.artist.artist}</h3>
 						</a>
 					)}
-					<h2>{finalPrice.toFixed(2) + ' lei'} </h2>
+					<h2>{finalPrice.price + ' ' + finalPrice.currency} </h2>
 				</div>
 
 				<FrameAndChassisSelect
@@ -89,6 +102,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 					setFrameColor={setFrameColor}
 					setSize={setSize}
 					size={size}
+					countryCode={countryCode}
 				/>
 
 				<div className={classes.addToCartContainer}>
@@ -102,7 +116,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 								className={classes.cartButton}
 								onClick={computeProductCart}
 							>
-								ADAUGĂ ÎN COȘ
+								Add to Cart
 							</Button>
 						</a>
 					)}

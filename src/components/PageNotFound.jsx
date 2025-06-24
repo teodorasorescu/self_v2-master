@@ -12,19 +12,20 @@ const PageNotFound = () => {
 
 			<h2>
 				{' '}
-				You can find us here: <b className={classes.email}>@selfposters.ro </b>
+				You can find us here:{' '}
+				<b className={classes.email}>@self-posters.com </b>
 				<a href={INSTAGRAM_LINK}>
 					<img
 						className={classes.socialMediaIcons}
 						src={instaIcon}
-						alt='instagram - @selfposters.ro'
+						alt='instagram - @self-posters.com'
 					/>
 				</a>
 				<a href={TIKTOK_LINK}>
 					<img
 						className={classes.socialMediaIcons}
 						src={tiktokIcon}
-						alt='tiktok - @selfposters.ro'
+						alt='tiktok - @self-posters.com'
 					/>
 				</a>
 			</h2>

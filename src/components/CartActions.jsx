@@ -115,7 +115,7 @@ const CartActions = ({ quantity, productId }) => {
 					color: 'black',
 				}}
 			>
-				Elimină x
+				Remove
 			</Button>
 		</div>
 	);

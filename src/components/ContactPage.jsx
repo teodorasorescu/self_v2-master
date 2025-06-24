@@ -8,11 +8,12 @@ const ContactPage = () => {
 
 	return (
 		<div className={classes.container}>
-			<h2>Suntem aici să te ajutăm.</h2>
+			<h2>Get your answears ASAP!</h2>
 			<h2>
 				{' '}
-				Scrie-ne la <b className={classes.email}>hello@selfposters.ro </b>, sau
-				pe instagram <b className={classes.email}>@selfposters.ro</b>
+				Drop a message to{' '}
+				<b className={classes.email}>selfposters@gmail.com </b>
+				or on instagram <b className={classes.email}>@self_posters </b>
 				<a href={INSTAGRAM_LINK}>
 					<img
 						className={classes.socialMediaIcons}
@@ -23,7 +24,7 @@ const ContactPage = () => {
 			</h2>
 			<img src={selfLogo} alt='logo' />
 			<h4>0763382056</h4>
-			<h4>Program de lucru: 10:00 - 18:00</h4>
+			<h4>10:00 - 18:00</h4>
 			<div></div>
 		</div>
 	);

@@ -14,7 +14,7 @@ export const productSlice = createSlice({
 			fontColor: '',
 			chassis: false,
 			quantity: 0,
-			price: price,
+			price: 60,
 			frameColor: '',
 			subtitle: '',
 			discount: 0,

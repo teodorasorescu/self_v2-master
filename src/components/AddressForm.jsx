@@ -6,7 +6,12 @@ import states from '../constants/states';
 import { useStateContext } from '../contexts/ContextProvider';
 import { Shipping } from './Shipping';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { calculateTotalPrice, computeProductsLength } from '../constants/utils';
+import {
+	calculateTotalPrice,
+	computeProductsLength,
+	getCurrencyByCountry,
+	getRegions,
+} from '../constants/utils';
 import { price } from '../constants/productConstants';
 
 import sendCheckoutAction from '../reducers/actions/sendCheckoutAction';
@@ -15,6 +20,7 @@ import { useNavigate } from 'react-router-dom';
 import { selectShippingCities } from '../reducers/slices/shippingCitiesSlice';
 import getCitiesByCountyAction from '../reducers/actions/getCitiesByCountyAction';
 import { selectDeliveryPrice } from '../reducers/slices/deliveryPriceSlice';
+import { useCountry } from '../contexts/CountryProvider';
 
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
@@ -48,6 +54,8 @@ export const AddressForm = () => {
 	};
 
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
+	const { countryCode } = useCountry();
+	const currency = getCurrencyByCountry(countryCode);
 
 	const total = calculateTotalPrice(storedProducts);
 	const discountNo = Math.floor(computeProductsLength(storedProducts) / 3);
@@ -59,9 +67,9 @@ export const AddressForm = () => {
 
 	const getTotal = () => {
 		if (discount) {
-			return (total - price * discountNo + deliveryPrice).toFixed(2);
+			return total - price * discountNo + deliveryPrice;
 		}
-		return (total + deliveryPrice).toFixed(2);
+		return total + deliveryPrice;
 	};
 
 	var heightT = '7vh';
@@ -83,13 +91,13 @@ export const AddressForm = () => {
 	};
 
 	localStorage.setItem('customer', JSON.stringify(customer));
-
 	const sendSession = () => {
 		sendCheckoutAction(
 			navigate,
 			dispatch,
 			{
 				total: getTotal(),
+				currency: currency,
 			},
 			setItemCount
 		);
@@ -122,7 +130,7 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div className='invalid-feedback'>Introdu un e-mail</div>
+							<div className='invalid-feedback'>E-mail Required</div>
 						</div>
 						<div className='form-check' style={{ paddingBottom: '2%' }}>
 							<input
@@ -143,7 +151,7 @@ export const AddressForm = () => {
 									paddingTop: '0.5%',
 								}}
 							>
-								Vreau să fiu parte din artsy club{' '}
+								I want to be part of Artsy Club
 							</label>
 						</div>
 					</div>
@@ -156,7 +164,7 @@ export const AddressForm = () => {
 								id='firstName'
 								name='firstName'
 								type='text'
-								placeholder='Prenume'
+								placeholder='First Name'
 								className='form-control'
 								value={customer.firstName}
 								onChange={(e) => {
@@ -165,14 +173,14 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div className='invalid-feedback'>Introdu un prenume</div>
+							<div className='invalid-feedback'>First Name Required</div>
 						</div>
 						<div className='form-group'>
 							<input
 								id='lastName'
 								name='lastName'
 								type='text'
-								placeholder='Nume de familie'
+								placeholder='Last Name'
 								className='form-control'
 								value={customer.lastName}
 								onChange={(e) => {
@@ -181,7 +189,7 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							/>
-							<div className='invalid-feedback'>Introdu un nume</div>
+							<div className='invalid-feedback'>Last Name Required</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<input
@@ -189,13 +197,13 @@ export const AddressForm = () => {
 								name='address'
 								type='text'
 								className='form-control'
-								placeholder='Adresă'
+								placeholder='Address'
 								value={customer.address}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
 							/>
-							<div className='invalid-feedback'>Introdu strada</div>
+							<div className='invalid-feedback'>Address Required</div>
 						</div>
 
 						<div className='form-group' style={{ paddingTop: '2%' }}>
@@ -203,34 +211,32 @@ export const AddressForm = () => {
 								id='addressInfo'
 								name='addressInfo'
 								type='text'
-								placeholder='Scară, etaj, apartament, etc'
+								placeholder='Apartment, suite, etc.'
 								className='form-control'
 								value={customer.addressInfo}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
 							/>{' '}
-							<div className='invalid-feedback'>
-								Introdu scară, etaj, apartament, etc
-							</div>
+							<div className='invalid-feedback'>Apartment, suite required</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<select
 								id='country'
 								name='country'
 								className='form-select'
-								placeholder='Țară/Regiune'
+								placeholder='Country / Region'
 								defaultValue={customer.country}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
 							>
-								<option value=''>Țară / Regiune</option>
+								<option value=''>Country / Region</option>
 								{countries.map((country, index) => {
 									return <option key={`country-${index}`}>{country}</option>;
 								})}
 							</select>
-							<div className='invalid-feedback'>Introdu o țară</div>
+							<div className='invalid-feedback'>Country Required</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<select
@@ -242,35 +248,35 @@ export const AddressForm = () => {
 								style={{ height: heightT }}
 								required
 							>
-								<option style={{ color: 'grey' }}>Județ</option>
-								{states.map((state, index) => {
+								<option style={{ color: 'grey' }}>County</option>
+								{getRegions(customer.country).map((state, index) => {
 									return <option key={index}>{state}</option>;
 								})}
 							</select>
-							<div className='invalid-feedback'>Introdu un județ</div>
+							<div className='invalid-feedback'>County Required</div>
 						</div>
+
 						<div className='form-group' style={{ paddingTop: '2%' }}>
-							<select
-								className='form-select'
+							<input
+								className='form-control'
 								id='cityId'
 								name='cityId'
 								type='text'
-								placeholder='Localitate'
+								placeholder='City'
 								value={customer.cityId}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
-							>
-								<option style={{ color: 'grey' }}>Localitate</option>
+							/>
+							<div className='invalid-feedback'>City Required</div>
+							{/* <option style={{ color: 'grey' }}>City</option>
 								{cities.map((city, index) => {
 									return (
 										<option key={index} value={city.id}>
 											{city.name}
 										</option>
 									);
-								})}
-							</select>
-							<div className='invalid-feedback'>Introdu o localitate</div>
+								})} */}
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<input
@@ -280,7 +286,7 @@ export const AddressForm = () => {
 								className={`form-control ${
 									errors.postalCode ? 'is-invalid' : ''
 								}`}
-								placeholder='Cod poștal'
+								placeholder='Postal Code'
 								value={customer.postalCode}
 								onChange={setField}
 								style={{ height: 'heightT' }}
@@ -294,16 +300,14 @@ export const AddressForm = () => {
 								id='phoneNumber'
 								name='phoneNumber'
 								type='text'
-								placeholder='Telefon'
+								placeholder='Phone'
 								className='form-control'
 								value={customer.phoneNumber}
 								onChange={setField}
 								style={{ height: heightT }}
 								required
 							/>
-							<div className='invalid-feedback'>
-								Introdu un număr de telefon
-							</div>
+							<div className='invalid-feedback'>Phone Required</div>
 						</div>
 					</div>
 					<Shipping />
@@ -326,17 +330,14 @@ export const AddressForm = () => {
 								marginTop: '3%',
 							}}
 						>
-							Am luat la cunoștiință{' '}
-							<a href='politica-de-confidențialitate'>
-								Politica de Confidențialitate
-							</a>{' '}
-							și
-							<a href='termeni-și-condiții'> Termenii și Condițiile </a>.*
+							I have read and agree to the
+							<a href='privacy-policy'> Privacy Policy</a> and
+							<a href='terms-and-conditions'> Terms and Conditions</a>.*
 						</label>
 					</div>
 					<div style={{ paddingTop: '2%', paddingBottom: '5%' }}>
 						<button type='submit' className={styles.buttonContainer}>
-							PLĂTEȘTE ACUM
+							PAY NOW
 						</button>
 					</div>
 				</form>

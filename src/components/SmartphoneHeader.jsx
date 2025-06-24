@@ -115,14 +115,15 @@ const SmartphoneHeader = () => {
 		<div>
 			<div className={styles.promotionTextContainer}>
 				<p>
-					Are u artsy? Get 10% off by joining <a href='artsy-club'>our club</a>
+					Are u artsy enough? Get 10% off by joining{' '}
+					<a href='artsy-club'>our club</a>
 				</p>
 			</div>
 			<Helmet>
 				<link
 					rel='icon'
 					type='image/png'
-					href='https://selfposters.ro/favicon.png'
+					href='https://self-posters.com/favicon.png'
 				/>
 			</Helmet>
 			<div className={styles.stillPositionContainer}>

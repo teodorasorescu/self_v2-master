@@ -1,9 +1,29 @@
 export const price = 60.0;
 
-export const HOME_DELIVERY_SMALL = 19;
-export const LOCKER_DELIVERY_SMALL = 14;
-export const HOME_DELIVERY_BIG = 25;
-export const LOCKER_DELIVERY_BIG = 14;
+export const shippingPrices = new Map([
+	[
+		'RO',
+		new Map([
+			['locker', { small: 17, large: 17 }],
+			['courier', { small: 25, large: 28 }],
+		]),
+	],
+	[
+		'BG',
+		new Map([
+			['locker', { small: 5.5, large: 6 }],
+			['courier', { small: 6.8, large: 7.4 }],
+		]),
+	],
+	[
+		'HU',
+		new Map([
+			['locker', { small: 6.5, large: 7 }],
+			['courier', { small: 7.6, large: 8.4 }],
+		]),
+	],
+]);
+
 export const freeFraming =
 	'When you purchase a canvas art print and frame in matching sizes, we will frame it for free.';
 export const deliveryDetails =
@@ -19,7 +39,7 @@ export const framesDetails =
 	'Print: 100% cotton canvas with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 
 export const suport =
-	"For questions, don't hesitate to contact us at hello@selfposters.ro, or on Instagram/TikTok @selfposters.ro ♡";
+	"For questions, don't hesitate to contact us at hello@self-posters.com, or on Instagram/TikTok @self-posters.com ♡";
 export const atentionareCuloare =
 	'Vă sfătuim să nu alegeți culori stridente. Tehnologia actuală nu permite printarea culorilor în format RGB, ci CMYK. Astfel, culorile stridente pot ieși la imprimare ușor mai închise.';
 
@@ -53,12 +73,7 @@ export const color1 = {
 	b: '163',
 };
 
-export const fontColors = [
-	'Prima culoare',
-	'A doua culoare',
-	'A treia culoare',
-	'A patra culoare',
-];
+export const fontColors = ['1st Color', '2nd Color', '3rd Color', '4th Color'];
 export const subheadersLabelData = ['Featured'];
 
 export const selectedShowcaseProducts = [
@@ -110,8 +125,8 @@ export const headersData = [
 		href: '/canvas-art-prints',
 	},
 	{
-		label: 'Customized Canvas Posters',
-		href: '/customized-canvas-posters',
+		label: 'Customized Aura Portraits',
+		href: '/customized-aura-portraits',
 	},
 	{
 		label: 'Journal',

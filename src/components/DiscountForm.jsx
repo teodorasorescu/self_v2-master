@@ -29,7 +29,7 @@ const DiscountForm = () => {
 					<input
 						className={`${classes.formInput} form-control`}
 						type='text'
-						placeholder='Cod de reducere'
+						placeholder='Discount Code'
 						aria-describedby='basic-addon2'
 						required
 						value={discountCode}
@@ -37,7 +37,7 @@ const DiscountForm = () => {
 					/>
 					<div className={`input-group-append ${classes.inputContainer}`}>
 						<Button className={classes.buttonContainer} type='submit'>
-							Aplică
+							Apply
 						</Button>
 					</div>
 				</div>
@@ -45,9 +45,9 @@ const DiscountForm = () => {
 			{discountCodeSuccess != null && (
 				<>
 					{discountCodeSuccess === true ? (
-						<p>Codul a fost aplicat cu succes!</p>
+						<p>Enjoy the discount!</p>
 					) : (
-						<p>Codul introdus este invalid.</p>
+						<p>Invalid Discount Code</p>
 					)}
 				</>
 			)}

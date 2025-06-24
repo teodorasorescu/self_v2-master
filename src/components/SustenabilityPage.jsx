@@ -1,64 +1,62 @@
 import styles from '../styling/sustenability.page.module.scss';
+
 const SustenabilityPage = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.imgContainer}></div>
 			<div className={styles.text}>
 				<h3>
-					<b>SUSTENABILITITATE</b>
+					<b>SUSTAINABILITY</b>
 				</h3>
 				<p className={styles.subheadline}>
-					Confecționarea <b>ramelor</b> este facută din lemn natural certificat
-					FSC 100%, astfel lemnul provine din surse prietenoase pentru păduri,
-					gestionate în mod responsabil. Totodată, <b>tuburile</b> și{' '}
-					<b>cutiile</b> în care sunt livrate tablourile din pânză, sunt
-					confecționate din carton, susținând astfel folosirea materialelor
-					ecologice, fără plastic. Utilizarea materialelor de înaltă calitate
-					este esențială pentru Self Posters, deoarece se dorește ca produsele
-					să fie rezistente și să-și păstreze aspectul în timp. Astfel,
-					printarea se face pe <b>canvas 100% bumbac</b>. <br /> <br />
-					Mai mult de atât, <b>tuburile</b> sunt confecționate din carton de
-					înaltă calitate, ce poate fi reciclat cu usurință chiar și de mai
-					multe ori. Producătorii tuburilor au redus poluarea procesării
-					acestora cu 95%, prin reutilizarea fibrei. Aceștia au un sistem de
-					management al calităţii conform standardelor ISO 9001, sistem de
-					management de mediu ISO 14001 și sistem de management al securității
-					și sănătății ocupaționale ISO 45001. <br />
-					<br />
-					Pe viitor, Self Posters speră să intensifice eforturile în această
-					direcție, explorând noi modalități de a reduce impactul asupra
-					mediului înconjurător și de a promova un stil de viață ecologic. Din
-					păcate, ambalarea tablourilor nu este în totalitate ecologică, însă
-					vrem să atingem un nivel cât mai mare de sustenabilitate pe viitor,
-					înlocuind elemente de plastic (folia de protecție cu bule, pungi,
-					benzi).
+					The <b>frames</b> are made from 100% FSC-certified natural wood,
+					meaning the wood comes from forest-friendly sources that are
+					responsibly managed. Additionally, the <b>tubes</b> and <b>boxes</b>{' '}
+					used to deliver the canvas artworks are made from cardboard, thus
+					supporting the use of eco-friendly, non-plastic materials. The use of
+					high-quality materials is essential to Self Posters, as the aim is for
+					the products to be durable and maintain their appearance over time.
+					Therefore, printing is done on <b>100% cotton canvas</b>.
+					<br /> <br />
+					Moreover, the <b>tubes</b> are made from high-quality cardboard that
+					can easily be recycled multiple times. The tube manufacturers have
+					reduced pollution in the processing of these tubes by 95% by reusing
+					fiber. They have a quality management system in accordance with ISO
+					9001 standards, an environmental management system ISO 14001, and an
+					occupational health and safety management system ISO 45001.
+					<br /> <br />
+					In the future, Self Posters hopes to intensify efforts in this
+					direction by exploring new ways to reduce environmental impact and
+					promote an eco-friendly lifestyle. Unfortunately, the packaging of the
+					artworks is not entirely ecological yet, but we aim to reach a higher
+					level of sustainability by replacing plastic elements (bubble wrap,
+					bags, tapes).
 				</p>
-			</div>{' '}
+			</div>
+
 			<div className={styles.text}>
 				<h4>
 					<b>FOREST STEWARDSHIP COUNCIL® (FSC®)</b>
 				</h4>
 
 				<p className={styles.subheadline}>
-					Consiliul pentru Administrarea Pădurilor® (FSC®) este o organizație
-					globală, non-profit, dedicată promovării gestionării responsabile a
-					pădurilor. FSC® definește standarde bazate pe principii convenite
-					pentru administrarea responsabilă a pădurilor, susținute de părți
-					interesate din domeniul mediului, social și economic. FSC® ajută la
-					îngrijirea pădurilor, a oamenilor și faunei sălbatice.
+					The Forest Stewardship Council® (FSC®) is a global, non-profit
+					organization dedicated to promoting responsible forest management.
+					FSC® defines standards based on agreed principles for responsible
+					forest management, supported by environmental, social, and economic
+					stakeholders. FSC® helps care for forests, people, and wildlife.
 					<p className={styles.italic}>
 						<a href='https://fsc.org/en'>
-							{' '}
-							Pentru a afla mai multe despre Consiliul pentru Administrarea
-							Pădurilor®, vizitați www.fsc.org
+							To learn more about the Forest Stewardship Council®, visit
+							www.fsc.org
 						</a>
 					</p>
-					Deoarece majoritatea produselor noastre sunt fabricate din lemn,
-					obținerea certificării FSC® este crucială pentru noi. Mai important,
-					prin alegerea produselor certificate FSC®, clienții sprijină
-					gestionarea responsabilă a pădurilor lumii.
+					Since most of our products are made from wood, obtaining FSC®
+					certification is crucial for us. More importantly, by choosing FSC®
+					certified products, customers support the responsible management of
+					the world’s forests.
 				</p>
-			</div>{' '}
+			</div>
 		</div>
 	);
 };
