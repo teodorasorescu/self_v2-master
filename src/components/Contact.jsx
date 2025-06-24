@@ -10,8 +10,7 @@ const Contact = () => {
 
 	return (
 		<div>
-			<h5>Contact</h5>
-			<p>0763382056</p>
+			<h5>Socials</h5>
 			<div>
 				<a href={INSTAGRAM_LINK}>
 					<img
