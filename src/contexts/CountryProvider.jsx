@@ -8,7 +8,10 @@ export function CountryProvider({ children }) {
 	const [countryCode, setCountryCode] = useState('RO');
 
 	useEffect(() => {
-		const savedCode = localStorage.getItem('countryCode');
+		let savedCode = localStorage.getItem('countryCode');
+		if (savedCode === 'DE') {
+			savedCode = 'RO';
+		}
 		if (savedCode) {
 			setCountryCode(savedCode);
 		} else {
@@ -18,6 +21,9 @@ export function CountryProvider({ children }) {
 					const code = response.data.country;
 					if (code) {
 						localStorage.setItem('countryCode', code);
+						if (code === 'DE') {
+							code = 'RO';
+						}
 						setCountryCode(code);
 					}
 				})
