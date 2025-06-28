@@ -156,6 +156,7 @@ export const posterPrices = new Map([
 		new Map([
 			[60, 60],
 			[120, 120],
+			[132, 132],
 		]),
 	],
 	[
@@ -163,6 +164,7 @@ export const posterPrices = new Map([
 		new Map([
 			[60, 90],
 			[120, 150],
+			[132, 165],
 		]),
 	],
 ]);
