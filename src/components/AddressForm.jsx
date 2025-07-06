@@ -34,23 +34,6 @@ export const AddressForm = () => {
 
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
-		// Validate the postal code
-		if (event.target.name === 'postalCode') {
-			validatePostalCode(event.target.value);
-		}
-	};
-
-	const validatePostalCode = (value) => {
-		if (value.length !== 6) {
-			setErrors({
-				...errors,
-				postalCode: 'Codul poștal trebuie să conțină 6 caractere.',
-			});
-		} else {
-			// Remove error if the postal code is valid
-			const { postalCode, ...otherErrors } = errors;
-			setErrors(otherErrors);
-		}
 	};
 
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
@@ -283,17 +266,12 @@ export const AddressForm = () => {
 								id='postalCode'
 								name='postalCode'
 								type='text'
-								className={`form-control ${
-									errors.postalCode ? 'is-invalid' : ''
-								}`}
+								className='form-control'
 								placeholder='Postal Code'
 								value={customer.postalCode}
 								onChange={setField}
 								style={{ height: 'heightT' }}
 							/>
-							{errors.postalCode && (
-								<div className='invalid-feedback'>{errors.postalCode}</div>
-							)}
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
 							<input
