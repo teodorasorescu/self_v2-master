@@ -13,14 +13,6 @@ export const infoCategories = [
 		link: '/journal/inspiration',
 	},
 	{
-		name: 'Terms & Conditions',
-		link: '/terms-and-conditions',
-	},
-	{
-		name: 'Privacy Policy',
-		link: '/privacy-policy',
-	},
-	{
 		name: 'FAQ',
 		link: '/faq',
 	},
