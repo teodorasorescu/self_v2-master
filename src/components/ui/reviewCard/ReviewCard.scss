@@ -1,0 +1,36 @@
+.review-card {
+	background: #fff7e3;
+	border-radius: 1rem;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+	padding: 2rem;
+	max-width: 600px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.2s ease;
+
+	&:hover {
+		transform: translateY(-4px);
+	}
+
+	.review-stars {
+		font-size: 2rem;
+		color: #facc15; // yellow-400
+
+		.inactive-stars {
+			color: #e5e7eb; // gray-200
+		}
+	}
+
+	.review-text {
+		font-size: 1rem;
+		color: #374151; // gray-700
+		line-height: 1.5;
+	}
+
+	.review-name {
+		font-size: 0.875rem;
+		color: #9ca3af; // gray-400
+	}
+}
