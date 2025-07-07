@@ -1,7 +1,5 @@
-export const getLockerPluginInstance = () => {
+export const getLockerPluginInstance = (countryCode) => {
 	const clientId = process.env.REACT_APP_CLIENT_ID_SAMEDAY;
-	const countryCode = 'RO';
-	const langCode = 'ro';
 	const city = 'Sectorul 3';
 	const county = 'Bucuresti';
 	const favLockerId = 143;
@@ -9,7 +7,7 @@ export const getLockerPluginInstance = () => {
 	window.LockerPlugin.init({
 		clientId: clientId,
 		countryCode: countryCode,
-		langCode: langCode,
+		langCode: countryCode,
 		city: city,
 		county: county,
 		favLockerId: favLockerId,

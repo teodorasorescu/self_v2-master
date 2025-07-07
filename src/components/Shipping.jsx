@@ -28,7 +28,7 @@ export const Shipping = () => {
 	const storedProducts = JSON.parse(localStorage.getItem('products'));
 	const dispatch = useDispatch();
 
-	let pluginInstance = getLockerPluginInstance();
+	let pluginInstance = getLockerPluginInstance(countryCode);
 	pluginInstance.subscribe(closeAndSaveLockerId);
 
 	const { countryCode } = useCountry();

@@ -12,6 +12,8 @@ export function CountryProvider({ children }) {
 		if (savedCode === 'DE') {
 			savedCode = 'RO';
 		}
+		savedCode = 'HU';
+
 		if (savedCode) {
 			setCountryCode(savedCode);
 		} else {
