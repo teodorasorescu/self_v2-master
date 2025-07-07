@@ -27,12 +27,11 @@ export const Shipping = () => {
 	const [lockerDeliveryAmount, setLockerDeliveryAmount] = useState(0);
 	const storedProducts = JSON.parse(localStorage.getItem('products'));
 	const dispatch = useDispatch();
+	const { countryCode } = useCountry();
+	const currency = ' ' + getCurrencyByCountry(countryCode);
 
 	let pluginInstance = getLockerPluginInstance(countryCode);
 	pluginInstance.subscribe(closeAndSaveLockerId);
-
-	const { countryCode } = useCountry();
-	const currency = ' ' + getCurrencyByCountry(countryCode);
 
 	const computeShippingPrice = () => {
 		const shippingPrice = shippingPrices.get(countryCode);
