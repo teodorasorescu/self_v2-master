@@ -9,10 +9,9 @@ const Benefits = () => {
 	const settings = {
 		dots: false,
 		infinite: true,
-
 		speed: 500,
 		slidesToShow: isMobile ? 1.1 : benefits.length, // Show all on larger screens, one per slide on mobile
-		slidesToScroll: 2,
+		slidesToScroll: 1,
 		arrows: false, // Optional: hide arrows on mobile for cleaner UI
 	};
 
