@@ -12,7 +12,7 @@ export function CountryProvider({ children }) {
 		if (savedCode === 'DE') {
 			savedCode = 'RO';
 		}
-		savedCode = 'HU';
+		savedCode = 'BG';
 
 		if (savedCode) {
 			setCountryCode(savedCode);
