@@ -20,7 +20,7 @@ const OurStoryPage = () => {
 						<b className={styles.boldColor}>colors</b> around us shape our mood
 						and well-being. More than just décor, our posters are designed to
 						bring energy, inspiration, and a touch of art to your space.{' '}
-						<b className={styles.boldColor}>Embrace yourself</b> — each of us
+						<b className={styles.boldColor}>Embrace yourself</b>, each of us
 						carries a unique perspective and our designs are separate
 						interpretations of this foundation. By collaborating with{' '}
 						<b className={styles.boldColor}>independent artists</b>, we create a
