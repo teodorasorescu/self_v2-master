@@ -5,6 +5,7 @@ import { S3_BUCKET } from '../../../constants/links.js';
 import Tag from '../../ui/tag/Tag.jsx';
 import { getLocalizedPrice } from '../../../constants/utils.js';
 import { useCountry } from '../../../contexts/CountryProvider.jsx';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const [hovered, setHovered] = useState(false);
@@ -23,8 +24,9 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 				onMouseEnter={() => setHovered(!smartphoneScreen)}
 				onMouseLeave={() => setHovered(false)}
 			>
-				<img
+				<LazyLoadImage
 					src={imgTitle}
+					effect='blur'
 					className={`${classes.pictureContainer} ${
 						hovered && hasHoverImg ? classes.fadeOut : ''
 					}`}
@@ -32,11 +34,12 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 				/>{' '}
 				{product.limitedEdition && <Tag title='Limited Edition' />}
 				{hasHoverImg && (
-					<img
+					<LazyLoadImage
 						src={imgHoverTitle}
 						className={`${classes.pictureContainer} ${
 							hovered ? classes.fadeIn : ''
 						}`}
+						effect='blur'
 						alt={product.altDescription}
 						style={{ display: hovered ? 'block' : 'none' }}
 					/>

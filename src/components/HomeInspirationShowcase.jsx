@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styling/inspoHome.scss';
 import { inspoHome } from '../constants/inspoHome';
 

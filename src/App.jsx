@@ -32,12 +32,13 @@ import GiftGuide from './components/pages/journal/giftguide/GiftGuide.jsx';
 import ArtistJournalPage from './components/pages/artistJournalPage/ArtistJournalPage.jsx';
 import Preframe from './components/pages/preframeCollection/Preframe.jsx';
 import SignUpModal from './components/features/signUpModal/SignUpModal.jsx';
+import QuizPage from './components/features/quiz/Quiz.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 
 	useEffect(() => {
-		ReactGA.initialize('G-VBCPDM60NT');
+		//ReactGA.initialize('G-VBCPDM60NT');
 
 		if (localStorage.getItem('discountValue') === null) {
 			localStorage.setItem('discountValue', 0);
@@ -75,6 +76,8 @@ function App() {
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
+					<Route path='/quiz' element={<QuizPage />} />
+
 					<Route path='/customization' element={<ColorPickerGradient />} />
 					<Route
 						path='/customized-aura-portraits'

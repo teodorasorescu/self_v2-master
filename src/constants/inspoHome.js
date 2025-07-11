@@ -6,24 +6,29 @@ const inspo4 = S3_BUCKET + '/inspo4.webp';
 const inspo8 = S3_BUCKET + '/inspo8.webp';
 const inspo14 = S3_BUCKET + '/inspo14.webp';
 const inspo15 = S3_BUCKET + '/inspo15.webp';
-const inspo19 = S3_BUCKET + '/inspo19.webp';
 const inspo20 = S3_BUCKET + '/inspo21.webp';
-const inspo21 = S3_BUCKET + '/leleCafe.webp';
+const inspo21 = S3_BUCKET + '/3.webp';
 const inspo22 = S3_BUCKET + '/WaterShowcase1.webp';
 const inspo23 = S3_BUCKET + '/WaterShowcase2.webp';
+const inspo24 = S3_BUCKET + '/2.webp';
+const inspo25 = S3_BUCKET + '/1.webp';
 
 export const inspoHome = [
+	{
+		image: `url(${inspo25})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo24})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
 	{
 		image: `url(${inspo21})`,
 		heading: 'Slide Four',
 		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
 	},
-	{
-		image: `url(${inspo20})`,
-		heading: 'Slide Four',
-		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
-	},
-
 	{
 		image: `url(${inspo22})`,
 		heading: 'Slide Four',
@@ -34,6 +39,12 @@ export const inspoHome = [
 		heading: 'Slide Four',
 		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
 	},
+	{
+		image: `url(${inspo20})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+
 	{
 		image: `url(${inspo16})`,
 		heading: 'Slide Four',
