@@ -1,0 +1,40 @@
+.postersList {
+	margin-left: 3%;
+	margin-right: 3%;
+	display: flex;
+	flex-wrap: wrap; // Allow items to wrap
+	justify-content: space-between; // Space items evenly
+}
+
+.poster {
+	width: calc(50% - 10px); // Default to 2 items per row for small screens
+	margin-bottom: 2%;
+	animation: fadeIn 0.8s ease forwards;
+	animation-delay: calc(var(--delay) * 0.2s); /* Stagger animation delay */
+
+	@media (min-width: 768px) {
+		// For tablets and small desktops
+		width: calc(33.33% - 10px); // 3 items per row
+	}
+
+	@media (min-width: 1024px) {
+		// For larger desktops
+		width: calc(25% - 10px); // 4 items per row
+	}
+
+	> a {
+		text-decoration: none;
+		text-decoration-line: none;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

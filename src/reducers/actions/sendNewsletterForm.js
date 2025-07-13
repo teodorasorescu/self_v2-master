@@ -8,8 +8,12 @@ const sendNewsletterAction = (email, dispatch) => {
 		.then(() => {
 			dispatch(loadNewsletterState(true));
 		})
-		.catch(() => {
-			dispatch(loadNewsletterState(false));
+		.catch((error) => {
+			if (error.response && error.response.status === 409) {
+				dispatch(loadNewsletterState(true));
+			} else {
+				dispatch(loadNewsletterState(false));
+			}
 		});
 };
 

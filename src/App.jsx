@@ -33,6 +33,7 @@ import ArtistJournalPage from './components/pages/artistJournalPage/ArtistJourna
 import Preframe from './components/pages/preframeCollection/Preframe.jsx';
 import SignUpModal from './components/features/signUpModal/SignUpModal.jsx';
 import QuizPage from './components/features/quiz/Quiz.jsx';
+import QuizResult from './components/pages/quizResult/QuizResult.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -70,6 +71,8 @@ function App() {
 						path='/sticker-sheets/:urlTitle'
 						element={<StickerDetails />}
 					/>
+					<Route path='/quiz-result' element={<QuizResult />} />
+
 					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 					<Route path='/new-collection' element={<Preframe />} />
 					<Route path='/journal/gift-guide' element={<GiftGuide />} />

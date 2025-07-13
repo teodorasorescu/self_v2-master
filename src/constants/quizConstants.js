@@ -1,151 +1,127 @@
 export const quizData = [
 	{
-		question: 'What describes your personality best?',
-		options: [
-			{ text: 'Bold and passionate', color: 'red' },
-			{ text: 'Calm and collected', color: 'blue' },
-			{ text: 'Creative and imaginative', color: 'purple' },
-			{ text: 'Grounded and balanced', color: 'green' },
-		],
-	},
-	{
-		question: 'What style of art inspires you the most?',
-		options: [
-			{ text: 'Abstract and expressive', preference: 'abstract' },
-			{ text: 'Surreal and dreamlike', preference: 'surreal' },
-			{ text: 'Minimalist and clean', preference: 'minimalist' },
-			{ text: 'Bold and graphic designs', preference: 'graphic' },
-		],
-	},
-	{
-		question: 'Which colors would dominate your ideal art piece?',
+		question: 'Stepping into your living room, what mood do you want to feel?',
 		options: [
 			{
-				text: 'Bright and cheerful tones',
-				color: 'yellow',
-				preference: 'abstract',
+				text: 'Inspired and imaginative',
+				color: 'lavender',
+				preference: 'expressive',
 			},
 			{
-				text: 'Earthy and natural shades',
-				color: 'brown',
+				text: 'Calm, clean, and ordered',
+				color: 'mint',
 				preference: 'minimalist',
 			},
-			{ text: 'Elegant and modern hues', color: 'teal', preference: 'graphic' },
 			{
-				text: 'Dark and dramatic tones',
-				color: 'black',
-				preference: 'surreal',
+				text: 'Bold, modern, and striking',
+				color: 'scarlet',
+				preference: 'graphic',
+			},
+			{ text: 'Cozy and charming', color: 'peach', preference: 'illustration' },
+		],
+	},
+	{
+		question: 'Which wall art would you most likely choose?',
+		options: [
+			{
+				text: 'Soft watercolor abstraction',
+				color: 'blush',
+				preference: 'expressive',
 			},
 			{
-				text: 'Soft pink and pastel hues',
-				color: 'pink',
-				preference: 'dreamy',
+				text: 'Black and white line art',
+				color: 'almond',
+				preference: 'minimalist',
+			},
+			{
+				text: 'High-contrast typographic poster',
+				color: 'crimson',
+				preference: 'graphic',
+			},
+			{
+				text: 'Hand-drawn character illustration',
+				color: 'apricot',
+				preference: 'illustration',
 			},
 		],
 	},
 	{
-		question: 'What motivates you to purchase art?',
+		question: 'What draws you to a piece of art?',
 		options: [
-			{ text: 'Supporting independent artists', preference: 'independent' },
-			{ text: 'Making a bold statement in a room', preference: 'graphic' },
 			{
-				text: 'It has to represent my style or personality',
-				preference: 'personal',
+				text: 'Emotion and dreamlike fantasy',
+				color: 'mauve',
+				preference: 'expressive',
 			},
 			{
-				text: 'Decorating with harmonious aesthetics',
-				preference: 'decorative',
+				text: 'Balance, shape, and simplicity',
+				color: 'sand',
+				preference: 'minimalist',
 			},
 			{
-				text: 'I need an emotional attachment to the art',
-				preference: 'personal',
+				text: 'Vivid color and bold shapes',
+				color: 'coral',
+				preference: 'graphic',
+			},
+			{
+				text: 'Playful scenes or characters',
+				color: 'buttercup',
+				preference: 'illustration',
+			},
+			{
+				text: 'Signed original by an artist I love',
+				color: 'terracotta',
+				preference: 'artist',
 			},
 		],
 		multiple: true,
 	},
 	{
-		question: 'Which best describes your relationship with art?',
+		question: 'Which vibe best suits down-time in your space?',
 		options: [
 			{
-				text: 'Art is life! I keep up-to-date with artists I love',
-				preference: 'independent',
+				text: 'Layered, introspective ambiance',
+				color: 'periwinkle',
+				preference: 'expressive',
 			},
 			{
-				text: 'I appreciate art, but I don’t keep up to date',
+				text: 'Airy and minimal with refined finishes',
+				color: 'linen',
 				preference: 'minimalist',
 			},
 			{
-				text: 'I’m new to the art world, but I want to learn',
-				preference: 'graphic',
-			},
-		],
-	},
-	{
-		question: 'What kind of posters appeal to you most?',
-		options: [
-			{ text: 'Abstract, colorful splashes', preference: 'abstract' },
-			{ text: 'Surreal landscapes', preference: 'surreal' },
-			{ text: 'Minimalist typography', preference: 'minimalist' },
-			{ text: 'Bold graphic illustrations', preference: 'graphic' },
-			{ text: 'Dreamy pastel illustrations', preference: 'dreamy' },
-		],
-	},
-	{
-		question: 'Which vibe resonates with you most?',
-		options: [
-			{ text: 'Soft and whimsical', color: 'pink', preference: 'dreamy' },
-			{
-				text: 'Elegant and luxurious',
-				color: 'gold',
-				preference: 'decorative',
-			},
-			{ text: 'Bright and fun', color: 'yellow', preference: 'playful' },
-			{ text: 'Chic and modern', color: 'teal', preference: 'graphic' },
-		],
-	},
-	{
-		question: 'Which art themes do you find most charming?',
-		options: [
-			{
-				text: 'Floral and botanical designs',
-				color: 'pink',
-				preference: 'dreamy',
-			},
-			{
-				text: 'Cute and playful illustrations',
-				color: 'pink',
-				preference: 'playful',
-			},
-			{ text: 'Classic vintage styles', color: 'peach', preference: 'vintage' },
-			{
-				text: 'Fantasy and magical themes',
-				color: 'lavender',
-				preference: 'fantasy',
-			},
-		],
-	},
-	{
-		question: 'What do you think makes a space feel complete?',
-		options: [
-			{
-				text: 'Soft, pastel tones for a calming effect',
-				color: 'pink',
-				preference: 'dreamy',
-			},
-			{
-				text: 'Bold, striking pieces for impact',
-				color: 'red',
+				text: 'Edgy modern with sculptural statement',
+				color: 'vermillion',
 				preference: 'graphic',
 			},
 			{
-				text: 'Clean, minimalist designs',
-				color: 'white',
-				preference: 'minimalist',
-			},
-			{
-				text: 'Cozy, warm tones for comfort',
+				text: 'Warm, cute, lighthearted décor',
 				color: 'peach',
-				preference: 'cozy',
+				preference: 'illustration',
+			},
+			{
+				text: 'Eco-inspired & handmade accents',
+				color: 'earth',
+				preference: 'artist',
+			},
+		],
+	},
+	{
+		question: 'What’s most important when you buy art?',
+		options: [
+			{ text: 'It needs to move me emotionally', preference: 'expressive' },
+			{
+				text: 'It complements my clean, ordered style',
+				preference: 'minimalist',
+			},
+			{ text: 'It makes a statement in a room', preference: 'graphic' },
+			{
+				text: 'It tells a fun story or evokes nostalgia',
+				preference: 'illustration',
+			},
+			{
+				text: 'It’s made by an independent or emerging artist',
+				preference: 'artist',
 			},
 		],
 	},
@@ -153,26 +129,33 @@ export const quizData = [
 
 export const resultsData = {
 	colors: {
-		red: { description: 'Bold and energetic', hex: '#FF4C4C' },
-		blue: { description: 'Calm and soothing', hex: '#4C6EFF' },
-		purple: { description: 'Creative and imaginative', hex: '#9C27B0' },
-		green: { description: 'Grounded and balanced', hex: '#4CAF50' },
-		pink: { description: 'Playful and vibrant', hex: '#FFC0CB' },
-		black: { description: 'Dark and dramatic', hex: '#000000' },
-		white: { description: 'Pure and simple', hex: '#FFFFFF' },
-		brown: { description: 'Earthy and natural', hex: '#8B4513' },
-		orange: { description: 'Energetic and warm', hex: '#FF9800' },
-		yellow: { description: 'Bright and cheerful', hex: '#FFD700' },
-		teal: { description: 'Elegant and modern', hex: '#008080' },
-		gray: { description: 'Neutral and sophisticated', hex: '#808080' },
+		scarlet: { description: 'Bold and energetic', hex: '#D7263D' },
+		mint: { description: 'Fresh and calming', hex: '#B8E2D0' },
+		lavender: { description: 'Gentle and creative', hex: '#A99AC5' },
+		peach: { description: 'Warm and playful', hex: '#FFCBA5' },
+		mauve: { description: 'Dreamy and expressive', hex: '#C7A1C7' },
+		sand: { description: 'Soft and minimal', hex: '#E6D8C3' },
+		crimson: { description: 'Strong and impactful', hex: '#CE2034' },
+		apricot: { description: 'Whimsical and cozy', hex: '#F9BFA5' },
+		blush: { description: 'Romantic and soft', hex: '#F4C5C5' },
+		almond: { description: 'Natural and refined', hex: '#E6D3B1' },
+		coral: { description: 'Lively and modern', hex: '#FF715B' },
+		periwinkle: { description: 'Reflective and magical', hex: '#BFC4F2' },
+		linen: { description: 'Clean and airy', hex: '#F4EEE4' },
+		vermillion: { description: 'Vibrant and fierce', hex: '#E0451F' },
+		buttercup: { description: 'Cheerful and sunny', hex: '#F9D44D' },
+		terracotta: { description: 'Handcrafted and warm', hex: '#D3755C' },
 	},
 	preferences: {
-		abstract: 'Abstract art suits your love for expression and creativity.',
-		surreal: 'Surreal art matches your imaginative and dreamy side.',
-		minimalist: 'Minimalist designs reflect your appreciation for simplicity.',
-		graphic: 'You enjoy bold and striking graphic designs.',
-		independent: 'You value supporting independent artists.',
-		decorative: 'You aim to create a harmonious and beautiful environment.',
-		personal: 'You choose art that resonates deeply with you.',
+		expressive:
+			'You’re drawn to imaginative, emotive visuals that invite reflection and feeling, often favoring art that speaks from the heart.',
+		minimalist:
+			'You gravitate toward calm, refined aesthetics—embracing negative space, clean lines, and quiet sophistication.',
+		graphic:
+			'You’re energized by bold design—dynamic color, striking forms, and contemporary compositions that demand attention.',
+		illustration:
+			'You find joy in narrative-rich visuals—artworks full of charm, storytelling, and hand-drawn personality.',
+		artist:
+			'You deeply value authenticity in art—supporting independent creators and pieces that reflect human touch and personal vision.',
 	},
 };

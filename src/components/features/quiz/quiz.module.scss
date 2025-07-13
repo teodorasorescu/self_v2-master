@@ -1,4 +1,4 @@
-$primary: #7684ff;
+$primary: #ffffff;
 $secondary: #ffdb93;
 $bg: #ffffff;
 $text: #1f1f1f;
@@ -71,90 +71,22 @@ $text: #1f1f1f;
 }
 
 .selectedOption {
-	background: $primary !important;
-	color: white !important;
+	background: #ffdb93 !important;
 	border-color: $primary !important;
 }
 
 .nextButton {
-	margin-top: 1.5rem;
-	padding: 0.75rem 1.5rem;
-	background: $primary;
-	color: black;
-	border: none;
-	border-radius: 0.5rem;
-	font-weight: bold;
 	cursor: pointer;
-	transition: 0.2s;
+	transition: background-color 0.3s;
+	width: 16vw;
+	height: auto;
+	padding: 5%;
 
+	@media screen and (max-width: 1024px) {
+		width: 30vw;
+	}
 	&:disabled {
 		background: lighten($primary, 35%);
 		cursor: not-allowed;
-	}
-}
-
-.result {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	h2 {
-		font-size: 2rem;
-		margin-bottom: 1rem;
-		font-family: 'Frank Ruhl Libre', serif;
-	}
-
-	h3 {
-		margin-top: 1.5rem;
-		margin-bottom: 2rem;
-		font-size: 1.2rem;
-	}
-
-	p {
-		font-size: 1rem;
-		margin-top: 0.5rem;
-	}
-
-	button {
-		margin-top: 2rem;
-		padding: 0.75rem 1.5rem;
-		background: $secondary;
-		color: white;
-		border: none;
-		border-radius: 0.5rem;
-		font-weight: bold;
-		cursor: pointer;
-		transition: 0.2s;
-
-		&:hover {
-			background: darken($secondary, 10%);
-		}
-	}
-}
-
-.colorResults {
-	display: flex;
-	gap: 1.5rem;
-	justify-content: center;
-	flex-wrap: wrap;
-
-	.colorCircleWrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.colorCircle {
-		width: 60px;
-		height: 60px;
-		border-radius: 50%;
-		box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-		margin-bottom: 0.5rem;
-	}
-
-	.colorLabel {
-		font-size: 0.9rem;
-		color: #333;
-		text-align: center;
 	}
 }

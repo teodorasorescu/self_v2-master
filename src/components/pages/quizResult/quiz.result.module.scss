@@ -1,0 +1,132 @@
+$primary: #7684ff;
+$secondary: #ffdb93;
+$bg: #ffffff;
+$text: #1f1f1f;
+
+.quizContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: $bg;
+	padding: 2rem 1rem;
+	color: $text;
+	text-align: center;
+
+	> div {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		width: 100%;
+		max-width: 600px;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	> h1 {
+		font-family: 'Frank Ruhl Libre', serif;
+		font-size: 2rem;
+	}
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h2 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		font-family: 'Frank Ruhl Libre', serif;
+	}
+
+	h3 {
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
+		font-size: 1.2rem;
+	}
+
+	p {
+		font-size: 1rem;
+		margin-top: 0.5rem;
+	}
+}
+
+.preferencesSection {
+	margin-top: 2rem;
+}
+
+.preferencesList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+	margin: 1rem 0 2rem;
+}
+
+.preferenceItem {
+	display: flex;
+	align-items: center;
+	background-color: #fff7e3;
+	padding: 0.6rem 1rem;
+	border-radius: 20px;
+	font-size: 0.95rem;
+}
+
+.preferenceIcon {
+	color: #4caf50;
+	margin-right: 0.5rem;
+	font-weight: bold;
+}
+
+/* Posters Wrapper */
+.postersWrapper {
+	margin: 2rem 0;
+	border-top: 1px solid #eee;
+	padding-top: 2rem;
+}
+
+/* Button */
+.buttonContainer {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.restartButton {
+	cursor: pointer;
+	transition: background-color 0.3s;
+	width: 10vw;
+	height: auto;
+	padding: 5%;
+
+	@media screen and (max-width: 1024px) {
+		width: 30vw;
+	}
+}
+.colorContainer {
+	margin: 1rem 0;
+}
+
+.colorGrid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* 2 columns */
+	gap: 1rem; /* Space between items */
+}
+
+.colorItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.colorCircle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+}
+
+.colorDesc {
+	font-size: 0.9rem;
+	text-align: center;
+}

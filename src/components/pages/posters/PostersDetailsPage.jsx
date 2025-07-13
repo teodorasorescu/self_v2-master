@@ -1,5 +1,5 @@
-import { React } from 'react';
 import classes from '../../../styling/posters.page.details.module.scss';
+import PostersList from '../../features/postersList/PostersList';
 import ProductItem from '../../features/products/ProductItem';
 
 const PostersDetailsPage = ({ posters }) => {
@@ -13,23 +13,7 @@ const PostersDetailsPage = ({ posters }) => {
 				transforming ordinary rooms into vibrant expressions of style and
 				creativity.
 			</h2>
-			<div className={classes.postersList}>
-				{posters.map((poster, index) => (
-					<div
-						key={poster.urlTitle}
-						className={classes.poster}
-						style={{ '--delay': index }}
-					>
-						<a href={`/canvas-art-prints/${poster.urlTitle}`}>
-							<ProductItem
-								product={poster}
-								posterImg={poster.imgTitle}
-								hasHoverImg={true}
-							/>
-						</a>
-					</div>
-				))}
-			</div>
+			<PostersList posters={posters} />
 		</div>
 	);
 };
