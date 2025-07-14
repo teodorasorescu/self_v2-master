@@ -108,8 +108,9 @@ const QuizPage = () => {
 					<h2>
 						Question {currentQuestion + 1} of {quizData.length}
 					</h2>
-					<h3>{quizData[currentQuestion].question}</h3>
 
+					<h3>{quizData[currentQuestion].question}</h3>
+					{quizData[currentQuestion].multiple && <p>Select all that apply</p>}
 					<div className={classes.options}>
 						{quizData[currentQuestion].options.map((option, idx) => {
 							const isSelected = quizData[currentQuestion].multiple

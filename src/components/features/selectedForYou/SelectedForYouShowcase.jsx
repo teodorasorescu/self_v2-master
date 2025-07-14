@@ -1,21 +1,18 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import classes from './selected.module.scss';
-import { selectPosters } from '../../../reducers/slices/postersSlice';
-import { useSelector } from 'react-redux';
 import ProductItem from '../products/ProductItem';
 import 'swiper/css/mousewheel';
 
-const SelectedForYouShowcase = ({ products, data }) => {
+const SelectedForYouShowcase = ({ products, data, title }) => {
 	const filteredData = products.filter((item) => data.includes(item.title));
 
 	return (
 		<div className={classes.productSlider}>
-			<h2>Selected for you</h2>
+			<h2>{title}</h2>
 			<div className={classes.swiperWrapper}>
 				<div className={`${classes.navButton} ${classes.prevButton}`}></div>
 				<div className={classes.swiperContainer}>

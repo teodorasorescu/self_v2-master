@@ -76,6 +76,16 @@ export const color1 = {
 export const fontColors = ['1st Color', '2nd Color', '3rd Color', '4th Color'];
 export const subheadersLabelData = ['Featured'];
 
+export const summerProducts = [
+	'La Siesta',
+	'Sunkissed',
+	'Slow Life',
+	'Water',
+	'Salty Thoughts',
+	'Starry Coral',
+	'Sunset Feelings',
+];
+
 export const selectedShowcaseProducts = [
 	'The Blue Hour',
 	'Where She Stood',

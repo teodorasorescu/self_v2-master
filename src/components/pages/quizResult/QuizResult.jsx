@@ -59,7 +59,7 @@ const QuizResult = () => {
 				</div>
 
 				<div className={classes.preferencesSection}>
-					<h3>Your Perfect Posters Match</h3>
+					<h3>The Posters You NEED</h3>
 
 					<div className={classes.preferencesList}>
 						{preferences.map((p, i) => (
