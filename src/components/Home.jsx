@@ -6,7 +6,10 @@ import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import Button from '@mui/material/Button';
 import SelfMission from './SelfMission';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage';
-import { selectedShowcaseProducts } from '../constants/productConstants';
+import {
+	selectedShowcaseProducts,
+	summerProducts,
+} from '../constants/productConstants';
 import Reviews from './features/reviews/Reviews';
 
 const Home = () => {
@@ -15,17 +18,28 @@ const Home = () => {
 			<div className={styles.introductionImgContainer}>
 				{
 					<div className={styles.introductionContainer}>
+						<div className={styles.mobileOnlyText}>
+							<h1>Unsure where to start?</h1>
+							<p>
+								Try our Art Finder Quiz and get matched with a personalised
+								selection of art prints that fit your style
+							</p>
+						</div>
 						<div className={styles.buttonContainer}>
-							<a href='/canvas-art-prints'>
-								<Button className={styles.button}>SHOP NOW</Button>
+							<a href='/quiz'>
+								<Button className={styles.button}>START QUIZ</Button>
 							</a>{' '}
 						</div>
 					</div>
 				}
 			</div>
 			<SelfMission />
-			<PostersHomeLoading /> <Benefits />
-			<SelectedForYouPage data={selectedShowcaseProducts} />
+			<SelectedForYouPage data={summerProducts} title='Summer Selection' />
+			<Benefits />
+			<SelectedForYouPage
+				data={selectedShowcaseProducts}
+				title='Selected for you'
+			/>
 			<VisualImages />
 			<Reviews />
 			<div className={styles.inspoImages}>

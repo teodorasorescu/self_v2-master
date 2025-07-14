@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
 
@@ -25,6 +25,7 @@ export const ContextProvider = ({ children }) => {
 		shippingMethod: 1,
 	});
 
+	const [quizResult, setQuizResult] = useState([]);
 	const [drawerOpen, setDrawerOpen] = useState(false);
 
 	const setItemCount = (count) => {
@@ -47,6 +48,8 @@ export const ContextProvider = ({ children }) => {
 				setOrderResume,
 				resume,
 				setResume,
+				quizResult,
+				setQuizResult,
 			}}
 		>
 			{children}

@@ -1,11 +1,12 @@
 import classes from './Button.module.scss';
 
-export const Button = ({ msg, style, onClick }) => {
+export const Button = ({ msg, style, onClick, disabled }) => {
 	return (
 		<div className={classes.buttonContainer}>
 			<button
 				onClick={onClick}
 				type='submit'
+				disabled={disabled}
 				className={`${classes.buttonStyle} ${style}`}
 			>
 				{msg}{' '}

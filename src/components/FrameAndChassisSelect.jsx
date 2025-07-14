@@ -77,6 +77,7 @@ const FrameAndChassisSelect = ({
 				>
 					<option value='21x30cm'>21x30cm</option>
 					<option value='30x40cm'>30x40cm</option>
+					<option value='30x40cm'>50x70cm</option>
 				</select>
 			</div>
 

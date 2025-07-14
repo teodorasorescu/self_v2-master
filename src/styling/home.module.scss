@@ -44,22 +44,19 @@
 		animation: fadeToRight 3s ease forwards;
 		margin-bottom: 5%;
 
-		.title {
-			font-family: 'Frank Ruhl Libre', serif;
-			font-optical-sizing: auto;
-			color: #fff7e3;
-			font-size: 6rem;
-			font-style: italic;
+		.mobileOnlyText {
+			display: none;
 			text-align: center;
+			margin-top: 1rem;
+			color: #fff7e3;
 		}
 
-		.subtitle {
-			padding-top: 1%;
-			padding-bottom: 2%;
-			font-size: 1rem;
-			color: #c9ccff;
+		/* Show only on mobile devices */
+		@media only screen and (max-width: 768px) {
+			.mobileOnlyText {
+				display: block;
+			}
 		}
-
 		/* Smaller screen */
 		@media (max-width: 1300px) {
 			.title {
@@ -144,29 +141,29 @@
 			height: auto;
 			animation: fadeToRight 3s ease forwards;
 
-			.title {
-				border-radius: 20px;
-				font-optical-sizing: auto;
-				font-weight: 500;
-				font-style: italic;
-				font-size: 2.5rem;
-				text-align: center;
-				color: #fff7e3;
-			}
+			// .title {
+			// 	border-radius: 20px;
+			// 	font-optical-sizing: auto;
+			// 	font-weight: 500;
+			// 	font-style: italic;
+			// 	font-size: 2.5rem;
+			// 	text-align: center;
+			// 	color: #fff7e3;
+			// }
 			> h1 {
 				padding-top: 2%;
 			}
 
-			.subtitle {
-				opacity: 1;
-				padding-left: 1%;
-				font-family: 'Frank Ruhl Libre', serif;
+			// .subtitle {
+			// 	opacity: 1;
+			// 	padding-left: 1%;
+			// 	font-family: 'Frank Ruhl Libre', serif;
 
-				font-weight: 500;
-				padding-top: 1%;
-				font-size: 1.7rem;
-				color: #c9ccff;
-			}
+			// 	font-weight: 500;
+			// 	padding-top: 1%;
+			// 	font-size: 1.7rem;
+			// 	color: #c9ccff;
+			// }
 
 			.secondSubtitle {
 				opacity: 0;
@@ -194,7 +191,7 @@
 		}
 
 		@media screen and (max-width: 768px) {
-			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/Siesta_Smartphone.webp');
+			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homePageSmartphone.jpg');
 			height: 70vh; /* Height for screens up to 768px */
 		}
 	}

@@ -6,6 +6,7 @@ import { CheckoutCart } from './CheckoutCart';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { OrderResume } from './OrderResume';
 import { S3_BUCKET } from '../constants/links.js';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const Checkout = () => {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -20,7 +21,7 @@ export const Checkout = () => {
 		<div className={styles.container}>
 			<div className={styles.checkoutContainer}>
 				<div className={styles.image}>
-					<img
+					<LazyLoadImage
 						src={Self}
 						alt='embrace yourself, tablouri personalizate canvas'
 					/>
