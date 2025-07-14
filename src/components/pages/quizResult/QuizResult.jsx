@@ -28,7 +28,8 @@ const QuizResult = () => {
 		return (
 			<div className={classes.quizContainer}>
 				<h1>
-					We got you! Your quiz result is ready! Sign up to see it immediatly!
+					We got you! <br /> Your quiz result is ready <br />
+					Sign up to see it immediatly
 				</h1>
 				<NewsletterForm onSuccess={() => setSignedUp(true)} />
 			</div>

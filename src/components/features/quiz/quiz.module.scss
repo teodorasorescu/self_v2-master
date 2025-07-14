@@ -45,6 +45,31 @@ $text: #1f1f1f;
 		font-family: 'Frank Ruhl Libre', serif;
 		margin-bottom: 6%;
 	}
+
+	.nextButton {
+		cursor: pointer;
+		margin-top: 20%;
+		transition: background-color 0.3s;
+		width: 6vw;
+		height: 3vw;
+		padding: 3%;
+
+		@media screen and (max-width: 1024px) {
+			width: 20vw;
+			height: 10vw;
+		}
+
+		/* ----- Disabled state ----- */
+		&:disabled,
+		&[disabled] {
+			cursor: not-allowed;
+			opacity: 0.5; // visual dim
+			background: #ffdb93; // keep same hue for brand
+			color: #1f1f1f;
+			/* optional: remove shadow / border effects here */
+			box-shadow: none;
+		}
+	}
 }
 
 .options {
@@ -52,6 +77,10 @@ $text: #1f1f1f;
 	flex-direction: column;
 	gap: 0.75rem;
 	width: 100%;
+	button:focus {
+		outline: none;
+		-webkit-tap-highlight-color: transparent;
+	}
 
 	button {
 		width: 100%;
@@ -62,31 +91,13 @@ $text: #1f1f1f;
 		font-weight: 600;
 		cursor: pointer;
 		transition: 0.2s;
-
-		&:hover {
-			border-color: $primary;
-			background: #ffdb93;
-		}
+		color: black;
+		padding: 2%;
 	}
-}
 
-.selectedOption {
-	background: #ffdb93 !important;
-	border-color: $primary !important;
-}
-
-.nextButton {
-	cursor: pointer;
-	transition: background-color 0.3s;
-	width: 16vw;
-	height: auto;
-	padding: 5%;
-
-	@media screen and (max-width: 1024px) {
-		width: 30vw;
-	}
-	&:disabled {
-		background: lighten($primary, 35%);
-		cursor: not-allowed;
+	.selectedOption {
+		border: 3px solid #b1b9ff !important;
+		color: #1f1f1f;
+		background: #ffdb93;
 	}
 }

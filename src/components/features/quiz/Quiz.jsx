@@ -12,27 +12,25 @@ const QuizPage = () => {
 	const [selectedPreferences, setSelectedPreferences] = useState([]);
 	const [multiAnswers, setMultiAnswers] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const [result, setResult] = useState(null); // start null
+	const [result, setResult] = useState(null);
+
+	// For single-choice questions: store selected option index
+	const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
 
 	const { setQuizResult } = useStateContext();
 
 	const getTopTwoPreferences = (prefs) => {
-		// 1. Count frequencies
 		const frequencyMap = {};
 		prefs.forEach((pref) => {
 			frequencyMap[pref] = (frequencyMap[pref] || 0) + 1;
 		});
-
-		// 2. Convert to array and sort by frequency (descending), then alphabetically (ascending)
 		const sorted = Object.keys(frequencyMap).sort((a, b) => {
 			return frequencyMap[b] - frequencyMap[a] || a.localeCompare(b);
 		});
-
-		// 3. Slice the top 2
 		return sorted.slice(0, 2);
 	};
 
-	const handleAnswer = (option) => {
+	const handleAnswer = (option, idx) => {
 		if (quizData[currentQuestion].multiple) {
 			setMultiAnswers((prev) =>
 				prev.includes(option.preference)
@@ -43,7 +41,7 @@ const QuizPage = () => {
 			if (option.color) setSelectedColors((prev) => [...prev, option.color]);
 			if (option.preference)
 				setSelectedPreferences((prev) => [...prev, option.preference]);
-			handleNext();
+			setSelectedOptionIndex(idx); // select option but DO NOT auto-next
 		}
 	};
 
@@ -53,20 +51,21 @@ const QuizPage = () => {
 			setSelectedPreferences((prev) => [...prev, ...multiAnswers]);
 			setMultiAnswers([]);
 		}
-		currentQuestion + 1 < quizData.length
-			? setCurrentQuestion((q) => q + 1)
-			: calculateResult();
+		setSelectedOptionIndex(null); // reset selected option index on next
+		if (currentQuestion + 1 < quizData.length) {
+			setCurrentQuestion((q) => q + 1);
+		} else {
+			calculateResult();
+		}
 	};
 
 	const calculateResult = () => {
 		setLoading(true);
-
 		setTimeout(() => {
 			const counts = selectedColors.reduce(
 				(m, c) => ((m[c] = (m[c] || 0) + 1), m),
 				{}
 			);
-
 			let topColors = Object.keys(counts)
 				.sort((a, b) => counts[b] - counts[a])
 				.filter((c) => c !== 'black' && c !== 'white')
@@ -112,30 +111,33 @@ const QuizPage = () => {
 					<h3>{quizData[currentQuestion].question}</h3>
 
 					<div className={classes.options}>
-						{quizData[currentQuestion].options.map((option, idx) => (
-							<button
-								key={idx}
-								className={
-									quizData[currentQuestion].multiple &&
-									multiAnswers.includes(option.preference)
-										? classes.selectedOption
-										: ''
-								}
-								onClick={() => handleAnswer(option)}
-							>
-								{option.text}
-							</button>
-						))}
+						{quizData[currentQuestion].options.map((option, idx) => {
+							const isSelected = quizData[currentQuestion].multiple
+								? multiAnswers.includes(option.preference)
+								: selectedOptionIndex === idx;
+
+							return (
+								<button
+									key={idx}
+									className={isSelected ? classes.selectedOption : ''}
+									onClick={() => handleAnswer(option, idx)}
+								>
+									{option.text}
+								</button>
+							);
+						})}
 					</div>
 
-					{quizData[currentQuestion].multiple && (
-						<Button
-							className={classes.nextButton}
-							msg={'Next'}
-							disabled={multiAnswers.length === 0}
-							onClick={handleNext}
-						/>
-					)}
+					<Button
+						style={classes.nextButton}
+						msg={'Next'}
+						onClick={handleNext}
+						disabled={
+							quizData[currentQuestion].multiple
+								? multiAnswers.length === 0
+								: selectedOptionIndex === null
+						}
+					/>
 				</div>
 			)}
 		</div>

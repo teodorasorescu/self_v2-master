@@ -8,12 +8,12 @@ export const quizData = [
 				preference: 'expressive',
 			},
 			{
-				text: 'Calm, clean, and ordered',
+				text: 'Calm, clean and ordered',
 				color: 'mint',
 				preference: 'minimalist',
 			},
 			{
-				text: 'Bold, modern, and striking',
+				text: 'Bold, modern and striking',
 				color: 'scarlet',
 				preference: 'graphic',
 			},
@@ -24,17 +24,17 @@ export const quizData = [
 		question: 'Which wall art would you most likely choose?',
 		options: [
 			{
-				text: 'Soft watercolor abstraction',
+				text: 'Abstract expressive art',
 				color: 'blush',
 				preference: 'expressive',
 			},
 			{
-				text: 'Black and white line art',
+				text: 'Compositions with quiet elegance',
 				color: 'almond',
 				preference: 'minimalist',
 			},
 			{
-				text: 'High-contrast typographic poster',
+				text: 'Static objects or forms',
 				color: 'crimson',
 				preference: 'graphic',
 			},
@@ -49,17 +49,13 @@ export const quizData = [
 		question: 'What draws you to a piece of art?',
 		options: [
 			{
-				text: 'Emotion and dreamlike fantasy',
+				text: 'Emotions and connection',
 				color: 'mauve',
 				preference: 'expressive',
 			},
+
 			{
-				text: 'Balance, shape, and simplicity',
-				color: 'sand',
-				preference: 'minimalist',
-			},
-			{
-				text: 'Vivid color and bold shapes',
+				text: 'Bold visuals and curiosity',
 				color: 'coral',
 				preference: 'graphic',
 			},
@@ -69,40 +65,46 @@ export const quizData = [
 				preference: 'illustration',
 			},
 			{
-				text: 'Signed original by an artist I love',
+				text: 'Pieces that carry the artist’s voice and style',
 				color: 'terracotta',
 				preference: 'artist',
 			},
+			{
+				text: 'Balance and simplicity',
+				color: 'sand',
+				preference: 'minimalist',
+			},
 		],
+
 		multiple: true,
 	},
 	{
-		question: 'Which vibe best suits down-time in your space?',
+		question: 'Which vibe best suits your space?',
 		options: [
 			{
-				text: 'Layered, introspective ambiance',
+				text: 'My home feels personal, like a visual diary',
 				color: 'periwinkle',
 				preference: 'expressive',
 			},
 			{
-				text: 'Airy and minimal with refined finishes',
-				color: 'linen',
-				preference: 'minimalist',
+				text: 'Authentic with artist energy',
+				color: 'earth',
+				preference: 'artist',
 			},
 			{
-				text: 'Edgy modern with sculptural statement',
+				text: 'Bold shapes & main character energy',
 				color: 'vermillion',
 				preference: 'graphic',
 			},
 			{
-				text: 'Warm, cute, lighthearted décor',
-				color: 'peach',
-				preference: 'illustration',
+				text: 'Neutral, clean and spacious',
+				color: 'linen',
+				preference: 'minimalist',
 			},
 			{
-				text: 'Eco-inspired & handmade accents',
-				color: 'earth',
-				preference: 'artist',
+				text: 'Cozy with fun characters',
+				color: 'peach',
+				preference: 'illustration',
 			},
 		],
 	},
