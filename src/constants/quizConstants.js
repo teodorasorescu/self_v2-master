@@ -152,12 +152,12 @@ export const resultsData = {
 		expressive:
 			'You’re drawn to imaginative, emotive visuals that invite reflection and feeling, often favoring art that speaks from the heart.',
 		minimalist:
-			'You gravitate toward calm, refined aesthetics—embracing negative space, clean lines, and quiet sophistication.',
+			'You gravitate toward calm, refined aesthetics, embracing negative space, clean lines and quiet sophistication.',
 		graphic:
-			'You’re energized by bold design—dynamic color, striking forms, and contemporary compositions that demand attention.',
+			'You’re energized by bold design, dynamic color, striking forms and contemporary compositions that demand attention.',
 		illustration:
-			'You find joy in narrative-rich visuals—artworks full of charm, storytelling, and hand-drawn personality.',
+			'You find joy in narrative-rich visuals: artworks full of charm, storytelling and hand-drawn personality.',
 		artist:
-			'You deeply value authenticity in art—supporting independent creators and pieces that reflect human touch and personal vision.',
+			'You deeply value authenticity in art, supporting independent creators and pieces that reflect human touch and personal vision.',
 	},
 };
