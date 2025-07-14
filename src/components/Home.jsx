@@ -2,7 +2,6 @@ import styles from '../styling/home.module.scss';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
 import Benefits from './Benefits';
 import VisualImages from './VisiualImages';
-import PostersHomeLoading from './features/posters/PostersHomeLoading';
 import Button from '@mui/material/Button';
 import SelfMission from './SelfMission';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage';
@@ -11,28 +10,65 @@ import {
 	summerProducts,
 } from '../constants/productConstants';
 import Reviews from './features/reviews/Reviews';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { HOME_PHOTOS } from '../constants/inspoHome';
 
 const Home = () => {
+	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
+
 	return (
 		<div className={styles.container}>
-			<div className={styles.introductionImgContainer}>
-				{
-					<div className={styles.introductionContainer}>
-						<div className={styles.mobileOnlyText}>
-							<h1>Unsure where to start?</h1>
-							<p>
-								Try our Art Finder Quiz and get matched with a personalised
-								selection of art prints that fit your style
-							</p>
+			{!screenSizeSmartphone ? (
+				<div className={styles.photoGridDesktop}>
+					{HOME_PHOTOS.map((photo, index) => (
+						<div key={index} className={styles.photoGridItem}>
+							<img
+								src={photo.src}
+								alt={photo.alt || `Photo ${index + 1}`}
+								className={styles.photoGridImg}
+								loading='lazy'
+							/>
+							{index === 0 && (
+								<div className={styles.photoOverlay}>
+									<div className={styles.overlayText}>
+										<h1>Unsure where to start?</h1>
+										<p>
+											Try our Art Finder Quiz and get matched with a
+											personalised selection of art prints and recommended
+											colors that fit your style
+										</p>
+									</div>
+									<div className={styles.buttonContainer}>
+										<a href='/quiz'>
+											<Button className={styles.button}>START QUIZ</Button>
+										</a>{' '}
+									</div>
+								</div>
+							)}
 						</div>
-						<div className={styles.buttonContainer}>
-							<a href='/quiz'>
-								<Button className={styles.button}>START QUIZ</Button>
-							</a>{' '}
+					))}
+				</div>
+			) : (
+				<div className={styles.introductionImgContainer}>
+					{
+						<div className={styles.introductionContainer}>
+							<div className={styles.mobileOnlyText}>
+								<h1>Unsure where to start?</h1>
+								<p>
+									Try our Art Finder Quiz and get matched with a personalised
+									selection of art prints & recommended colors that fit your
+									style
+								</p>
+							</div>
+							<div className={styles.buttonContainer}>
+								<a href='/quiz'>
+									<Button className={styles.button}>START QUIZ</Button>
+								</a>{' '}
+							</div>
 						</div>
-					</div>
-				}
-			</div>
+					}
+				</div>
+			)}
 			<SelfMission />
 			<SelectedForYouPage data={summerProducts} title='Summer Selection' />
 			<Benefits />
@@ -42,6 +78,12 @@ const Home = () => {
 			/>
 			<VisualImages />
 			<Reviews />
+			{/* <div className={styles.feedbackContainer}>
+				<a href='https://www.trustpilot.com/evaluate/self-posters.com'>
+					"We'd love to hear your thoughts! How are we doing?"
+					<Button className={styles.button}>Give Feedback</Button>
+				</a>{' '}
+			</div> */}
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
 			</div>

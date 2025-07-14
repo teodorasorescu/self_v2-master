@@ -5,6 +5,69 @@
 	justify-content: space-evenly;
 	font-family: 'Raleway', sans-serif;
 
+	.photoGridDesktop {
+		margin-right: 3%;
+		margin-left: 3%;
+		display: grid;
+		gap: 1.5rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.photoGridItem {
+		position: relative;
+		overflow: hidden;
+
+		transition: all 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		}
+		&:first-child {
+			// Specific styles for first image only
+			.photoOverlay {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 1.5rem;
+				background: linear-gradient(
+					to top,
+					rgba(0, 0, 0, 0.7) 0%,
+					transparent 100%
+				);
+				color: #fff7e3;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+
+				.overlayText {
+					font-size: 1rem;
+					margin-bottom: 1rem;
+					font-weight: 500;
+
+					> h1 {
+						font-family: 'Frank Ruhl Libre', serif;
+						font-optical-sizing: auto;
+						font-size: 1.8rem;
+						font-style: italic;
+						text-align: left;
+					}
+					> p {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	.photoGridImg {
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+		aspect-ratio: 4/5;
+		border: 1px solid #f0f0f0;
+	}
+
 	.homePhoto {
 		margin-top: 3%;
 	}
@@ -49,71 +112,13 @@
 			text-align: center;
 			margin-top: 1rem;
 			color: #fff7e3;
+			padding: 2%;
 		}
 
 		/* Show only on mobile devices */
 		@media only screen and (max-width: 768px) {
 			.mobileOnlyText {
 				display: block;
-			}
-		}
-		/* Smaller screen */
-		@media (max-width: 1300px) {
-			.title {
-				font-size: 2.2rem;
-				margin-bottom: 30%;
-			}
-
-			.subtitle {
-				font-size: 1.5rem;
-			}
-		}
-		.buttonContainer {
-			float: bottom;
-			text-align: center;
-			.button {
-				width: auto;
-				height: auto;
-				font-family: 'Raleway', sans-serif;
-				font-size: 1rem;
-				transition: all 0.1s ease;
-				background-color: #7684ff;
-				border-radius: 10px;
-				cursor: pointer;
-				text-decoration: none;
-				border: 0.1px solid #7684ff;
-
-				color: #fff7e3;
-				margin-bottom: 3%;
-				text-align: center;
-
-				animation: bounce 1s infinite;
-			}
-
-			.button:hover {
-				text-decoration: none;
-				border: 0.1px solid #7684ff;
-
-				transition: none;
-				color: #7684ff;
-				animation: none;
-				background-color: #fff7e3;
-			}
-
-			@keyframes bounce {
-				0%,
-				20%,
-				50%,
-				80%,
-				100% {
-					transform: translateY(0);
-				}
-				40% {
-					transform: translateY(-10px);
-				}
-				60% {
-					transform: translateY(-5px);
-				}
 			}
 		}
 
@@ -141,32 +146,8 @@
 			height: auto;
 			animation: fadeToRight 3s ease forwards;
 
-			// .title {
-			// 	border-radius: 20px;
-			// 	font-optical-sizing: auto;
-			// 	font-weight: 500;
-			// 	font-style: italic;
-			// 	font-size: 2.5rem;
-			// 	text-align: center;
-			// 	color: #fff7e3;
-			// }
 			> h1 {
 				padding-top: 2%;
-			}
-
-			// .subtitle {
-			// 	opacity: 1;
-			// 	padding-left: 1%;
-			// 	font-family: 'Frank Ruhl Libre', serif;
-
-			// 	font-weight: 500;
-			// 	padding-top: 1%;
-			// 	font-size: 1.7rem;
-			// 	color: #c9ccff;
-			// }
-
-			.secondSubtitle {
-				opacity: 0;
 			}
 
 			.buttonContainer {
@@ -184,7 +165,6 @@
 		transition: all 0.05s;
 		display: flex;
 		height: 100dvh;
-		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/La_Siesta_Collection.webp');
 
 		@media screen and (max-width: 1024px) {
 			height: 80dvh; /* Height for screens up to 1024px */
@@ -206,4 +186,53 @@
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
 	cursor: grab;
+}
+
+.buttonContainer {
+	float: bottom;
+}
+
+.button {
+	width: auto;
+	height: auto;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1rem;
+	transition: all 0.1s ease;
+	background-color: #7684ff;
+	border-radius: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	border: 0.1px solid #7684ff;
+
+	color: #fff7e3;
+	margin-bottom: 3%;
+	text-align: left;
+
+	animation: bounce 1s infinite;
+}
+
+.button:hover {
+	text-decoration: none;
+	border: 0.1px solid #7684ff;
+
+	transition: none;
+	color: #7684ff;
+	animation: none;
+	background-color: #fff7e3;
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-10px);
+	}
+	60% {
+		transform: translateY(-5px);
+	}
 }

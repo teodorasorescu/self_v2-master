@@ -3,6 +3,8 @@
 	grid-template-columns: 1fr;
 	gap: 1rem;
 	padding: 2rem 1rem;
+	margin-left: auto;
+	margin-right: auto;
 
 	@media (min-width: 640px) {
 		grid-template-columns: repeat(2, 1fr);

@@ -13,6 +13,9 @@ const inspo23 = S3_BUCKET + '/WaterShowcase2.webp';
 const inspo24 = S3_BUCKET + '/2.webp';
 const inspo25 = S3_BUCKET + '/1.webp';
 
+const homeImg1 = S3_BUCKET + '/leleCafe.webp';
+const homeImg2 = S3_BUCKET + '/homePageSmartphone.jpg';
+
 export const inspoHome = [
 	{
 		image: `url(${inspo25})`,
@@ -82,5 +85,16 @@ export const inspoHome = [
 		image: `url(${inspo8})`,
 		heading: 'Slide Five',
 		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+];
+
+export const HOME_PHOTOS = [
+	{
+		src: homeImg1,
+		alt: 'ee',
+	},
+	{
+		src: homeImg2,
+		alt: 'ee',
 	},
 ];
