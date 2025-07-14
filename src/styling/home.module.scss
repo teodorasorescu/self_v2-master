@@ -183,16 +183,16 @@
 		background-position: center;
 		transition: all 0.05s;
 		display: flex;
-		height: 100vh;
+		height: 100dvh;
 		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/La_Siesta_Collection.webp');
 
 		@media screen and (max-width: 1024px) {
-			height: 80vh; /* Height for screens up to 1024px */
+			height: 80dvh; /* Height for screens up to 1024px */
 		}
 
 		@media screen and (max-width: 768px) {
 			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homePageSmartphone.jpg');
-			height: 70vh; /* Height for screens up to 768px */
+			height: 70dvh; /* Height for screens up to 768px */
 		}
 	}
 }
