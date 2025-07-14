@@ -43,7 +43,6 @@
 		border-radius: 10px;
 		animation: fadeToRight 3s ease forwards;
 		margin-bottom: 5%;
-		background: #00000016;
 
 		.mobileOnlyText {
 			display: none;
@@ -192,7 +191,7 @@
 		}
 
 		@media screen and (max-width: 768px) {
-			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homePageSmartphone.webp');
+			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/homePageSmartphone.jpg');
 			height: 70vh; /* Height for screens up to 768px */
 		}
 	}
