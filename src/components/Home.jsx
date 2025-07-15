@@ -12,6 +12,7 @@ import {
 import Reviews from './features/reviews/Reviews';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { HOME_PHOTOS } from '../constants/inspoHome';
+import ButtonHomePage from './ui/buttonHomePage/Button';
 
 const Home = () => {
 	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
@@ -40,7 +41,7 @@ const Home = () => {
 									</div>
 									<div className={styles.buttonContainer}>
 										<a href='/quiz'>
-											<Button className={styles.button}>START QUIZ</Button>
+											<ButtonHomePage msg='START QUIZ' />
 										</a>{' '}
 									</div>
 								</div>
@@ -78,12 +79,12 @@ const Home = () => {
 			/>
 			<VisualImages />
 			<Reviews />
-			{/* <div className={styles.feedbackContainer}>
+			<div className={styles.feedbackContainer}>
+				<p>We'd love to hear your thoughts! How are we doing?</p>
 				<a href='https://www.trustpilot.com/evaluate/self-posters.com'>
-					"We'd love to hear your thoughts! How are we doing?"
-					<Button className={styles.button}>Give Feedback</Button>
-				</a>{' '}
-			</div> */}
+					<ButtonHomePage msg='Give Feedback' />
+				</a>
+			</div>
 			<div className={styles.inspoImages}>
 				<HomeInspirationShowcase />
 			</div>

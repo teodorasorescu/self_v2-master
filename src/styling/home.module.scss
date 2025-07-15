@@ -190,49 +190,13 @@
 
 .buttonContainer {
 	float: bottom;
+}
 
-	.button {
-		width: auto;
-		height: auto;
-		font-family: 'Raleway', sans-serif;
-		font-size: 1rem;
-		transition: all 0.1s ease;
-		background-color: #7684ff;
-		border-radius: 10px;
-		cursor: pointer;
-		text-decoration: none;
-		border: 0.1px solid #7684ff;
-
-		color: #fff7e3;
-		margin-bottom: 3%;
-		text-align: left;
-
-		animation: bounce 1s infinite;
-	}
-
-	.button:hover {
-		text-decoration: none;
-		border: 0.1px solid #7684ff;
-
-		transition: none;
-		color: #7684ff;
-		animation: none;
-		background-color: #fff7e3;
-	}
-
-	@keyframes bounce {
-		0%,
-		20%,
-		50%,
-		80%,
-		100% {
-			transform: translateY(0);
-		}
-		40% {
-			transform: translateY(-10px);
-		}
-		60% {
-			transform: translateY(-5px);
-		}
+.feedbackContainer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	@media screen and (max-width: 1024px) {
+		padding: 10%;
 	}
 }
