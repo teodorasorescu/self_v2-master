@@ -12,7 +12,7 @@ const ContactPage = () => {
 			<h2>
 				{' '}
 				Drop a message to{' '}
-				<b className={classes.email}>selfposters@gmail.com </b>
+				<b className={classes.email}>hello@self-posters.com</b>
 				or on instagram <b className={classes.email}>@self_posters </b>
 				<a href={INSTAGRAM_LINK}>
 					<img
