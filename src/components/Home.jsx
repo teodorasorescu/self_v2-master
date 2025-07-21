@@ -12,7 +12,7 @@ import {
 import Reviews from './features/reviews/Reviews';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { HOME_PHOTOS } from '../constants/inspoHome';
-import ButtonHomePage from './ui/buttonHomePage/Button';
+import ButtonHomePage from './ui/buttonHomePage/ButtonHomePage';
 
 const Home = () => {
 	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
@@ -41,7 +41,7 @@ const Home = () => {
 									</div>
 									<div className={styles.buttonContainer}>
 										<a href='/quiz'>
-											<ButtonHomePage msg='START QUIZ' />
+											<ButtonHomePage msg='Start Quiz' />
 										</a>{' '}
 									</div>
 								</div>
@@ -63,7 +63,7 @@ const Home = () => {
 							</div>
 							<div className={styles.buttonContainer}>
 								<a href='/quiz'>
-									<Button className={styles.button}>START QUIZ</Button>
+									<ButtonHomePage msg='Start Quiz' />
 								</a>{' '}
 							</div>
 						</div>
