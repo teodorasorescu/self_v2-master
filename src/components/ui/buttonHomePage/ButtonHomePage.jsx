@@ -2,7 +2,11 @@ import Button from '@mui/material/Button';
 import classes from './Button.module.scss';
 
 export const ButtonHomePage = ({ msg }) => {
-	return <Button className={classes.button}>{msg}</Button>;
+	return (
+		<div className={classes.buttonContainer}>
+			<Button className={classes.button}>{msg}</Button>
+		</div>
+	);
 };
 
 export default ButtonHomePage;
