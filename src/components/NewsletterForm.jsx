@@ -16,14 +16,16 @@ const NewsletterForm = ({ onSuccess }) => {
 		setEmail(event.target.value);
 	};
 
-	function handleSubmit(e) {
+	async function handleSubmit(e) {
 		e.preventDefault();
 
 		setIsLoading(true);
 
-		sendNewsletterAction(email, dispatch);
-
-		setIsLoading(false);
+		try {
+			await sendNewsletterAction(email, dispatch);
+		} finally {
+			setIsLoading(false);
+		}
 	}
 
 	useEffect(() => {
@@ -34,6 +36,12 @@ const NewsletterForm = ({ onSuccess }) => {
 
 	return (
 		<div className={classes.container}>
+			{isLoading && (
+				<div>
+					<p>Get Ready :)</p>
+					<Loader />
+				</div>
+			)}
 			<form onSubmit={handleSubmit}>
 				<div className='input-group mb-3'>
 					<input
@@ -51,7 +59,7 @@ const NewsletterForm = ({ onSuccess }) => {
 							type='submit'
 							disabled={isLoading}
 						>
-							{isLoading ? <Loader /> : "I'm in"}
+							I'm in
 						</Button>
 					</div>
 				</div>
