@@ -2,7 +2,6 @@ import styles from '../styling/home.module.scss';
 import HomeInspirationShowcase from './HomeInspirationShowcase';
 import Benefits from './Benefits';
 import VisualImages from './VisiualImages';
-import Button from '@mui/material/Button';
 import SelfMission from './SelfMission';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage';
 import {
@@ -72,6 +71,11 @@ const Home = () => {
 			)}
 			<SelfMission />
 			<SelectedForYouPage data={summerProducts} title='Summer Selection' />
+			<div className={styles.centeredContainer}>
+				<a href='/canvas-art-prints'>
+					<ButtonHomePage msg='View All' />
+				</a>
+			</div>
 			<Benefits />
 			<SelectedForYouPage
 				data={selectedShowcaseProducts}
