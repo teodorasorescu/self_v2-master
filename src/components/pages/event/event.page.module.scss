@@ -1,0 +1,80 @@
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	.imageContainer {
+		width: 100vw;
+		@media screen and (min-width: 1024px) {
+			width: 40vw;
+			margin: auto;
+		}
+	}
+
+	> h1 {
+		font-family: 'Frank Ruhl Libre', serif;
+		font-optical-sizing: auto;
+		font-size: 2rem;
+		font-style: italic;
+	}
+}
+
+.detailsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	text-align: center;
+	padding: 2rem;
+	max-width: 600px;
+	margin: 0 auto;
+	color: #333;
+
+	font-family: 'Raleway';
+	h1 {
+		font-size: 2rem;
+		font-weight: 700;
+		font-style: italic;
+		font-family: 'Frank Ruhl Libre', serif;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		color: #d96c00;
+		margin-top: 1rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		color: #666;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.paymentLink {
+		margin-top: 1rem;
+		font-weight: 600;
+		color: #fff;
+		background-color: #fdb33a;
+		padding: 0.75rem 1.25rem;
+		border-radius: 8px;
+		text-decoration: none;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: #ffd391;
+		}
+	}
+
+	.contactInfo {
+		font-size: 0.9rem;
+		margin-top: 1.5rem;
+		color: #555;
+	}
+}

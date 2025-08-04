@@ -34,6 +34,7 @@ import Preframe from './components/pages/preframeCollection/Preframe.jsx';
 import SignUpModal from './components/features/signUpModal/SignUpModal.jsx';
 import QuizPage from './components/features/quiz/Quiz.jsx';
 import QuizResult from './components/pages/quizResult/QuizResult.jsx';
+import EventPage from './components/pages/event/EventPage.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -80,7 +81,10 @@ function App() {
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/quiz' element={<QuizPage />} />
-
+					<Route
+						path='/event/members/b8947aff-5017-4676-8b34-070ebfad6dad'
+						element={<EventPage />}
+					/>
 					<Route path='/customization' element={<ColorPickerGradient />} />
 					<Route
 						path='/customized-aura-portraits'
