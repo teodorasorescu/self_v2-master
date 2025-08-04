@@ -46,7 +46,7 @@
 	.buttonContainer {
 		width: 50%;
 		margin: auto;
-		font-size: 100%;
+		font-size: 80%;
 		transition: all 0.1s ease;
 		font-family: 'Raleway', sans-serif;
 		border-radius: 10px;
@@ -64,7 +64,7 @@
 		&:hover {
 			background-color: #ffd391;
 		}
-		color: black;
+		color: rgb(255, 255, 255);
 		text-decoration-line: none;
 	}
 	.formInput {
@@ -72,6 +72,7 @@
 		border: 2px solid rgba(248, 221, 170, 0.8);
 		border-radius: 10px;
 		font-size: 1rem;
+		color: rgb(0, 0, 0);
 
 		&:focus {
 			outline: none;
