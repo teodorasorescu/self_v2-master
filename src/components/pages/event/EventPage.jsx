@@ -29,8 +29,8 @@ const EventPage = () => {
 
 			<h2>🎟️ Ticket – 100 lei</h2>
 			<h3>
-				👯 Bring a friend and they pay only 80 lei <br /> (you can save their
-				spot as well)
+				👯 90 lei if you are bringing a friend <br /> (you can save their spot
+				as well)
 			</h3>
 
 			<p>🍷 1 drink + all painting materials included</p>

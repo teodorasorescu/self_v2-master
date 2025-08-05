@@ -82,7 +82,7 @@ const EventForm = ({ onSuccess }) => {
 					/>
 				</div>
 				<div className={classes.inputGroup}>
-					<p>Bringing a friend? Their ticket is just 80 lei!</p>
+					<p>Bringing a friend? The ticket will be 90 lei!</p>
 					<select
 						name='isComingWithFriend'
 						className={classes.formInput}
