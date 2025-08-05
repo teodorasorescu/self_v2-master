@@ -22,6 +22,10 @@ const DesktopHeader = () => {
 			path: '/journal',
 		},
 		{
+			name: 'Paint & Sip Registration',
+			path: '/paintandsip',
+		},
+		{
 			name: 'La Siesta Collection',
 			path: '/journal/ana-liana',
 		},
