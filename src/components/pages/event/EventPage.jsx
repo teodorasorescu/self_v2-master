@@ -38,7 +38,6 @@ const EventPage = () => {
 			<a href='https://revolut.me/teodor9aob' className={classes.paymentLink}>
 				Pay Here
 			</a>
-
 			<p className={classes.contactInfo}>
 				Questions or issues? DM us at <strong>@self_posters</strong>
 			</p>
