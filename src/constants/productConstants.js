@@ -79,7 +79,7 @@ export const subheadersLabelData = ['Featured'];
 export const summerProducts = [
 	'Obor Mercato',
 	'Little Things',
-	'Matcha, Please',
+	'Matcha, Please!',
 	'Day by Day',
 	'La Siesta',
 	'Sunkissed',
