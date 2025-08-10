@@ -77,7 +77,7 @@ export const fontColors = ['1st Color', '2nd Color', '3rd Color', '4th Color'];
 export const subheadersLabelData = ['Featured'];
 
 export const summerProducts = [
-	'Obor Mercato',
+	'Obor Mercado',
 	'Little Things',
 	'Matcha, Please!',
 	'Day by Day',
