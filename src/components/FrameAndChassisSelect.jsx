@@ -77,7 +77,7 @@ const FrameAndChassisSelect = ({
 				>
 					<option value='21x30cm'>21x30cm</option>
 					<option value='30x40cm'>30x40cm</option>
-					<option value='30x40cm'>50x70cm</option>
+					<option value='50x70cm'>50x70cm</option>
 				</select>
 			</div>
 
@@ -113,13 +113,17 @@ const FrameAndChassisSelect = ({
 					<option value='none'>No Frame</option>
 					{frameColors.map((color, index) => {
 						return (
-							<option
-								disabled={framesStock === 0 || chassis === true ? true : false}
-								key={`color-${index}`}
-								value={color}
-							>
-								{color} + {framePrice.price + ' ' + framePrice.currency}
-							</option>
+							framePrice.price !== undefined && (
+								<option
+									disabled={
+										framesStock === 0 || chassis === true ? true : false
+									}
+									key={`color-${index}`}
+									value={color}
+								>
+									{color} + {framePrice.price + ' ' + framePrice.currency}
+								</option>
+							)
 						);
 					})}
 				</select>

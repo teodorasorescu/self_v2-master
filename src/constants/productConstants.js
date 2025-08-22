@@ -145,10 +145,6 @@ export const headersData = [
 		label: 'Journal',
 		href: '/journal',
 	},
-	{
-		label: 'Paint & Sip Registration',
-		href: '/paintandsip',
-	},
 ];
 
 export const prices = new Map([

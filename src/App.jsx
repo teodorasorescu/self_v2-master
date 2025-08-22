@@ -81,7 +81,6 @@ function App() {
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/quiz' element={<QuizPage />} />
-					<Route path='/paintandsip' element={<EventPage />} />
 					<Route path='/customization' element={<ColorPickerGradient />} />
 					<Route
 						path='/customized-aura-portraits'
