@@ -14,15 +14,17 @@
 		margin-bottom: 3%;
 		text-align: left;
 		animation: bounce 1s infinite;
+		font-weight: 650;
 	}
 
 	.button:hover {
 		text-decoration: none;
-		border: 0.1px solid #7684ff;
+		border: 2px solid #7684ff;
 		transition: none;
 		color: #7684ff;
 		animation: none;
 		background-color: #fff7e3;
+		font-weight: 650;
 	}
 
 	@keyframes bounce {
