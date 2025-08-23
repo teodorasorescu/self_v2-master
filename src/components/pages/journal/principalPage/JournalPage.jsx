@@ -1,4 +1,3 @@
-import { React } from 'react';
 import classes from './journal.page.module.scss';
 import JournalItem from '../../../features/journal/JournalItem';
 import { articles } from '../../../../constants/articles';

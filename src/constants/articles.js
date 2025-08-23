@@ -4,7 +4,7 @@ export const articles = [
 		title: 'Paint & Sip by the Lake',
 		date: '16th August 2025',
 		urlTitle: 'paint-and-sip-by-the-lake',
-		description: 'Read more about Ana Liana and her artworks.',
+		description: 'What made this event truly memorable?',
 	},
 	{
 		imgTitle: 'inspo23.webp',
