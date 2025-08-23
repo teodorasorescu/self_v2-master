@@ -168,7 +168,7 @@ export const posterPrices = new Map([
 	[
 		'13x18cm',
 		new Map([
-			[60, 60],
+			[60, 40],
 			[55, 55],
 		]),
 	],
@@ -189,7 +189,7 @@ export const posterPrices = new Map([
 	[
 		'50x70cm',
 		new Map([
-			[60, 90],
+			[60, 150],
 			[55, 300],
 		]),
 	],

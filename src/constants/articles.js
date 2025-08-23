@@ -1,5 +1,13 @@
 export const articles = [
 	{
+		imgTitle: 'iris_collab.webp',
+		title: "Self Posters x Fleur D'Iris Collab",
+		date: '13th July 2025',
+		urlTitle: 'fleur-diris-collab',
+		description:
+			'We teamed up to bring you a blend of color & creativity for your walls and your wardrobe.',
+	},
+	{
 		imgTitle: 'Siesta_Smartphone.webp',
 		title: 'La Siesta Collection | Ana Liana',
 		date: '1st June 2025',

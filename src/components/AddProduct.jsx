@@ -28,7 +28,7 @@ import { useCountry } from '../contexts/CountryProvider';
 const AddProduct = () => {
 	const [frameColor, setFrameColor] = useState('none');
 	const [chassis, setChassis] = useState(false);
-	const [size, setSize] = useState('21x30cm');
+	const [size, setSize] = useState('13x18cm');
 	const { itemCount, setItemCount } = useStateContext();
 	const { countryCode } = useCountry();
 
