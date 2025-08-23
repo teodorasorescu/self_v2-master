@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './stickers.showcase.module.scss';
 import ProductItem from '../products/ProductItem';
 import useMediaQuery from '@mui/material/useMediaQuery';

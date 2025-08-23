@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../styling/order.resume.module.scss';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';

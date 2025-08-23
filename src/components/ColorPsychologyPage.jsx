@@ -1,5 +1,3 @@
-import React from 'react';
-
 import classes from '../styling/color.psycho.page.module.scss';
 import ColorsFlipcard from './ColorsFlipcard';
 import ResearchersFlipcard from './ResearchersFlipcard';

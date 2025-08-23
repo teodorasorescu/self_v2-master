@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../styling/footer.module.scss';
 import { S3_BUCKET } from '../constants/links';
 

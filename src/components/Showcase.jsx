@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styling/showcase.css';
 export const Showcase = ({ jpg }) => {
 	return (

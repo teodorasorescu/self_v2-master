@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from '../../../styling/posters.showcase.module.scss';
 import PostersGroup from '../posters/postersGroup/PostersGroup';
 import Button from '../../ui/button/Button';

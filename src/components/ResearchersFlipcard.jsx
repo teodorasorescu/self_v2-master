@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styling/ResearchersFlipcard.css';
 import colorResearchers from '../constants/colorResearchers';
 import { S3_BUCKET } from '../constants/links';

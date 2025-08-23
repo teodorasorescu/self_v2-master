@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './posters.artist.showcase.module.scss';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ProductItem from '../products/ProductItem';

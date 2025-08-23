@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../styling/footer.module.scss';
 import FooterCategory from './FooterCategory';
 import { infoCategories } from '../constants/footerCategories';
