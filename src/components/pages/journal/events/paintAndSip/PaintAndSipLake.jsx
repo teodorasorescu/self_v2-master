@@ -96,7 +96,7 @@ const PaintAndSipLake = () => {
 					width={350}
 					alt='Collection of art prints and posters on display – Minimalist and colorful summer-themed illustrations, typography, and abstract designs showcased alongside flowers.'
 				/>{' '}
-				<a href='/quiz'>
+				<a href='/journal'>
 					<ButtonHomePage msg='Read more from our journal' />
 				</a>{' '}
 			</>
