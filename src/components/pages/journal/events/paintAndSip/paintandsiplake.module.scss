@@ -8,52 +8,39 @@
 	font-display: swap;
 	font-weight: 500;
 	margin-bottom: 5%;
-	> img {
+	.image {
 		width: 40vw;
+		margin: 1%;
 		@media screen and (max-width: 1024px) {
 			width: 90vw;
 		}
 	}
+
 	> h1 {
 		font-family: 'Frank Ruhl Libre', serif;
 		font-optical-sizing: auto;
 		color: #000000;
-		font-size: 2.5rem;
+		font-size: 2rem;
+		margin: 2%;
 		font-style: italic;
 		text-align: center;
 	}
-	> h4 {
+
+	> h2 {
 		margin-top: 3%;
 		margin-right: auto;
 		margin-left: auto;
 		color: black;
 		width: 50vw;
-		font-size: 0.9rem;
+		font-size: 1.1rem;
 		font-family: 'Raleway';
-		text-align: center;
+		text-align: justify;
 		font-style: normal;
 		font-display: swap;
 		font-weight: 500;
 		@media screen and (max-width: 1024px) {
-			font-size: 0.8rem;
-			width: 80vw;
-		}
-	}
-	> h2 {
-		font-size: 1.1rem;
-		margin-left: 3%;
-		margin-right: 3%;
-
-		@media screen and (max-width: 1024px) {
-			font-size: 1rem;
-		}
-	}
-	> h3 {
-		color: black;
-		font-size: 1rem;
-
-		@media screen and (max-width: 1024px) {
 			font-size: 0.9rem;
+			width: 90vw;
 		}
 	}
 }

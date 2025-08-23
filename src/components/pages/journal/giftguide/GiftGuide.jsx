@@ -1,16 +1,17 @@
-import { React, useEffect } from 'react';
+import { useEffect } from 'react';
 import classes from './gift.guide.module.scss';
 import ProductItem from '../../../features/products/ProductItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPosters } from '../../../../reducers/slices/postersSlice';
 import getPostersAction from '../../../../reducers/actions/getPostersAction';
-import GiftPhoto from '../../../../components/features/journal/giftguide.webp';
 import Button from '../../../ui/button/Button';
 import { useNavigate } from 'react-router-dom';
+import { S3_BUCKET } from '../../../../constants/links';
+
 const GiftGuide = () => {
 	const dispatch = useDispatch();
 	const storedPosters = useSelector(selectPosters);
-
+	const giftPhoto = { S3_BUCKET } + '/giftguide.webp';
 	useEffect(() => {
 		if (storedPosters.length === 0) {
 			getPostersAction(dispatch);
@@ -27,6 +28,7 @@ const GiftGuide = () => {
 	const navigateToCustom = () => {
 		navigate('/customized-aura-portraits');
 	};
+
 	return (
 		<div className={classes.container}>
 			<h1>Holiday Gift Guide</h1>
@@ -34,7 +36,7 @@ const GiftGuide = () => {
 				Get inspired with a selection of our favourite posters to gift your
 				loved ones – including yourself – during the holiday season.
 			</h2>
-			<img src={GiftPhoto} alt='christmas tree' />
+			<img src={giftPhoto} alt='christmas tree' />
 			<>
 				<h4>to the</h4>
 				<h1>Nature Lover</h1>

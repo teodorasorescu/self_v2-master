@@ -35,6 +35,7 @@ import SignUpModal from './components/features/signUpModal/SignUpModal.jsx';
 import QuizPage from './components/features/quiz/Quiz.jsx';
 import QuizResult from './components/pages/quizResult/QuizResult.jsx';
 import EventPage from './components/pages/event/EventPage.jsx';
+import PaintAndSipLake from './components/pages/journal/events/paintAndSip/PaintAndSipLake.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -73,10 +74,8 @@ function App() {
 						element={<StickerDetails />}
 					/>
 					<Route path='/quiz-result' element={<QuizResult />} />
-
 					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 					<Route path='/new-collection' element={<Preframe />} />
-					<Route path='/journal/gift-guide' element={<GiftGuide />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
@@ -86,15 +85,25 @@ function App() {
 						path='/customized-aura-portraits'
 						element={<CustomPosterPage />}
 					/>
-					<Route path='/journal' element={<JournalPage />} />
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
-					<Route path='/journal/inspiration' element={<Inspiration />} />
+
+					<>
+						<Route path='/journal' element={<JournalPage />} />
+						<Route path='/journal/gift-guide' element={<GiftGuide />} />
+						<Route path='/journal/inspiration' element={<Inspiration />} />
+						<Route
+							path='/journal/paint-and-sip-by-the-lake'
+							element={<PaintAndSipLake />}
+						/>
+
+						<Route
+							path='/journal/color-psychology'
+							element={<ColorPsychologyPage />}
+						/>
+					</>
+
 					<Route path='/artsy-club' element={<OurClubPage />} />
-					<Route
-						path='/journal/color-psychology'
-						element={<ColorPsychologyPage />}
-					/>
 					<Route path='/aura-poster' element={<AddProduct />} />
 					<Route path='/order-confirmation' element={<OrderConfirmation />} />
 					<Route path='/about-us' element={<OurStoryPage />} />

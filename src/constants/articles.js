@@ -1,5 +1,19 @@
 export const articles = [
 	{
+		imgTitle: 'ps6.webp',
+		title: 'Paint & Sip by the Lake',
+		date: '16th August 2025',
+		urlTitle: 'paint-and-sip-by-the-lake',
+		description: 'Read more about Ana Liana and her artworks.',
+	},
+	{
+		imgTitle: 'inspo23.webp',
+		title: 'The Summer Collection',
+		date: '14th August 2025',
+		urlTitle: 'summer-collection',
+		description: 'All about this collection of summerish canvas prints.',
+	},
+	{
 		imgTitle: 'iris_collab.webp',
 		title: "Self Posters x Fleur D'Iris Collab",
 		date: '13th July 2025',

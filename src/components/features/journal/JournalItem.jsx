@@ -1,4 +1,3 @@
-import { React } from 'react';
 import classes from './journal.item.module.scss';
 import { S3_BUCKET } from '../../../constants/links.js';
 
