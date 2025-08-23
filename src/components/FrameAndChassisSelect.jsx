@@ -75,6 +75,7 @@ const FrameAndChassisSelect = ({
 					placeholder='Size'
 					onChange={setSizeField}
 				>
+					<option value='13x18cm'>13x18cm</option>
 					<option value='21x30cm'>21x30cm</option>
 					<option value='30x40cm'>30x40cm</option>
 					<option value='50x70cm'>50x70cm</option>
@@ -91,14 +92,16 @@ const FrameAndChassisSelect = ({
 					onChange={(e) => setChassisField(e.target.value === 'true')}
 				>
 					<option value='false'>No</option>
-					<option
-						disabled={
-							chassisStock === 0 || frameColor !== 'none' ? true : false
-						}
-						value='true'
-					>
-						Yes + {chassisPrice.price + ' ' + chassisPrice.currency}
-					</option>
+					{chassisPrice.price !== undefined && (
+						<option
+							disabled={
+								chassisStock === 0 || frameColor !== 'none' ? true : false
+							}
+							value='true'
+						>
+							Yes + {chassisPrice.price + ' ' + chassisPrice.currency}
+						</option>
+					)}
 				</select>
 			</div>
 			<div className='frameContainer'>

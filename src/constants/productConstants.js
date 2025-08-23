@@ -152,7 +152,7 @@ export const prices = new Map([
 	['30x40cm', 90],
 ]);
 
-export const sizes = ['21x30cm', '30x40cm', '50x70cm'];
+export const sizes = ['13x18cm', '21x30cm', '30x40cm', '50x70cm'];
 export const chassisPrices = new Map([
 	['21x30cm', 30],
 	['30x40cm', 50],
@@ -166,24 +166,31 @@ export const framePrices = new Map([
 
 export const posterPrices = new Map([
 	[
+		'13x18cm',
+		new Map([
+			[60, 60],
+			[55, 55],
+		]),
+	],
+	[
 		'21x30cm',
 		new Map([
 			[60, 60],
-			[120, 120],
+			[55, 120],
 		]),
 	],
 	[
 		'30x40cm',
 		new Map([
 			[60, 90],
-			[120, 150],
+			[55, 150],
 		]),
 	],
 	[
 		'50x70cm',
 		new Map([
 			[60, 90],
-			[120, 300],
+			[55, 300],
 		]),
 	],
 ]);

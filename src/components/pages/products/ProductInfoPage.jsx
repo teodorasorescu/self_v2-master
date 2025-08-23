@@ -26,7 +26,7 @@ import { useCountry } from '../../../contexts/CountryProvider';
 const ProductInfoPage = ({ product, suport, details }) => {
 	const [frameColor, setFrameColor] = useState('none');
 	const [chassis, setChassis] = useState(false);
-	const [size, setSize] = useState('21x30cm');
+	const [size, setSize] = useState('13x18cm');
 	const { itemCount, setItemCount } = useStateContext();
 	const isArtist = product.artist !== null;
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
