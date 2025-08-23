@@ -17,7 +17,7 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import DiscountForm from './DiscountForm.jsx';
 import { S3_BUCKET } from '../constants/links.js';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage.jsx';
-import { selectedShowcaseProducts } from '../constants/productConstants.js';
+import { summerProducts } from '../constants/productConstants.js';
 
 const emptyCart = S3_BUCKET + '/emptyCart.webp';
 
@@ -261,7 +261,7 @@ export const SmartphoneCart = ({ currency }) => {
 					</Paper>
 				</ThemeProvider>
 			)}
-			<SelectedForYouPage data={selectedShowcaseProducts} />
+			<SelectedForYouPage data={summerProducts} title='Summer Selection' />
 		</div>
 	);
 };

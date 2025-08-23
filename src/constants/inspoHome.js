@@ -12,11 +12,29 @@ const inspo22 = S3_BUCKET + '/WaterShowcase1.webp';
 const inspo23 = S3_BUCKET + '/WaterShowcase2.webp';
 const inspo24 = S3_BUCKET + '/2.webp';
 const inspo25 = S3_BUCKET + '/1.webp';
+const inspo26 = S3_BUCKET + '/inspo22.webp';
+const inspo27 = S3_BUCKET + '/inspo24.webp';
+const inspo28 = S3_BUCKET + '/inspo23.webp';
 
 const homeImg1 = S3_BUCKET + '/leleCafe.webp';
 const homeImg2 = S3_BUCKET + '/homePageSmartphone.jpg';
 
 export const inspoHome = [
+	{
+		image: `url(${inspo28})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo27})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo26})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
 	{
 		image: `url(${inspo25})`,
 		heading: 'Slide Four',

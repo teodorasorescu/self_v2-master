@@ -90,16 +90,14 @@ export const summerProducts = [
 ];
 
 export const selectedShowcaseProducts = [
+	'The Panier Collection',
+	'The Disco Collection',
 	'The Blue Hour',
 	'Where She Stood',
 	'Morning in Stillness',
 	'Peonies',
 	'Next Chapter',
 	'Self Love',
-	'Love Feeling 2',
-	'Love Feeling 1',
-	'Water',
-	'Salty Thoughts',
 	'A table for two, please!',
 	'Sunset Feelings',
 	'There is Strength in Vulnerability',

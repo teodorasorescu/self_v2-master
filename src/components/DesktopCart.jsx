@@ -20,7 +20,7 @@ import { calculateTotalPrice } from '../constants/utils.js';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { S3_BUCKET } from '../constants/links.js';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage.jsx';
-import { selectedShowcaseProducts } from '../constants/productConstants.js';
+import { summerProducts } from '../constants/productConstants.js';
 
 export const DesktopCart = ({ currency }) => {
 	const emptyCart = S3_BUCKET + '/emptyCart.webp';
@@ -241,7 +241,7 @@ export const DesktopCart = ({ currency }) => {
 					</Paper>
 				</ThemeProvider>
 			)}{' '}
-			<SelectedForYouPage data={selectedShowcaseProducts} />
+			<SelectedForYouPage data={summerProducts} title='Summer Selection' />
 		</div>
 	);
 };
