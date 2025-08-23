@@ -90,8 +90,8 @@ export const summerProducts = [
 ];
 
 export const selectedShowcaseProducts = [
-	'The Panier Collection',
-	'The Disco Collection',
+	'Panier Collection',
+	'Disco Collection',
 	'The Blue Hour',
 	'Where She Stood',
 	'Morning in Stillness',
