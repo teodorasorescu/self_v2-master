@@ -41,7 +41,7 @@ function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 
 	useEffect(() => {
-		ReactGA.initialize('G-VBCPDM60NT');
+		//ReactGA.initialize('G-VBCPDM60NT');
 
 		if (localStorage.getItem('discountValue') === null) {
 			localStorage.setItem('discountValue', 0);
@@ -65,7 +65,7 @@ function App() {
 				<ScrollToTop />
 				{headerOn && <Header />}
 				<Routes>
-					<Route
+					{/* <Route
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
@@ -74,12 +74,11 @@ function App() {
 						element={<StickerDetails />}
 					/>
 					<Route path='/quiz-result' element={<QuizResult />} />
-					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 					<Route path='/new-collection' element={<Preframe />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
-					<Route path='*' element={<PageNotFound />} />
-					<Route path='/' element={<Home />} />
-					<Route path='/quiz' element={<QuizPage />} />
+					<Route path='*' element={<PageNotFound />} /> */}
+					<Route path='/' element={<JournalPage />} />
+					{/* <Route path='/quiz' element={<QuizPage />} />
 					<Route path='/customization' element={<ColorPickerGradient />} />
 					<Route
 						path='/customized-aura-portraits'
@@ -87,8 +86,9 @@ function App() {
 					/>
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
-
+*/}
 					<>
+						<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 						<Route path='/journal' element={<JournalPage />} />
 						<Route path='/journal/gift-guide' element={<GiftGuide />} />
 						<Route path='/journal/inspiration' element={<Inspiration />} />
@@ -104,8 +104,8 @@ function App() {
 					</>
 
 					<Route path='/artsy-club' element={<OurClubPage />} />
-					<Route path='/aura-poster' element={<AddProduct />} />
-					<Route path='/order-confirmation' element={<OrderConfirmation />} />
+					{/* <Route path='/aura-poster' element={<AddProduct />} /> */}
+					{/* <Route path='/order-confirmation' element={<OrderConfirmation />} /> */}
 					<Route path='/about-us' element={<OurStoryPage />} />
 					<Route path='/sustainability' element={<SustenabilityPage />} />
 					<Route
