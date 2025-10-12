@@ -98,6 +98,10 @@ export const subheadersData = new Map([
 		'Featured',
 		[
 			{
+				label: 'Autumn Collection',
+				href: '/journal/autumn-collection',
+			},
+			{
 				label: 'La Siesta Collection',
 				href: '/journal/ana-liana',
 			},

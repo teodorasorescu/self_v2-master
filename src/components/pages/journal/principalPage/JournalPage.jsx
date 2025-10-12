@@ -5,7 +5,7 @@ import { articles } from '../../../../constants/articles';
 const JournalPage = () => {
 	return (
 		<div className={classes.container}>
-			<h1>We're updating our website, but in the meantime, have a read!🤓</h1>
+			<h1>Journal</h1>
 			<div className={classes.articlesList}>
 				{articles.map((article, index) => (
 					<div key={index} className={classes.article}>
