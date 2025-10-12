@@ -36,12 +36,13 @@ import QuizPage from './components/features/quiz/Quiz.jsx';
 import QuizResult from './components/pages/quizResult/QuizResult.jsx';
 import EventPage from './components/pages/event/EventPage.jsx';
 import PaintAndSipLake from './components/pages/journal/events/paintAndSip/PaintAndSipLake.jsx';
+import AutumnCollectionArticle from './components/pages/journal/autumcollection/AutumnCollectionArticle.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
 
 	useEffect(() => {
-		//ReactGA.initialize('G-VBCPDM60NT');
+		ReactGA.initialize('G-VBCPDM60NT');
 
 		if (localStorage.getItem('discountValue') === null) {
 			localStorage.setItem('discountValue', 0);
@@ -65,7 +66,7 @@ function App() {
 				<ScrollToTop />
 				{headerOn && <Header />}
 				<Routes>
-					{/* <Route
+					<Route
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
@@ -74,11 +75,12 @@ function App() {
 						element={<StickerDetails />}
 					/>
 					<Route path='/quiz-result' element={<QuizResult />} />
+					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 					<Route path='/new-collection' element={<Preframe />} />
 					<Route path='/canvas-art-prints' element={<PostersPage />} />
-					<Route path='*' element={<PageNotFound />} /> */}
-					<Route path='/' element={<JournalPage />} />
-					{/* <Route path='/quiz' element={<QuizPage />} />
+					<Route path='*' element={<PageNotFound />} />
+					<Route path='/' element={<Home />} />
+					<Route path='/quiz' element={<QuizPage />} />
 					<Route path='/customization' element={<ColorPickerGradient />} />
 					<Route
 						path='/customized-aura-portraits'
@@ -86,9 +88,8 @@ function App() {
 					/>
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
-*/}
+
 					<>
-						<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 						<Route path='/journal' element={<JournalPage />} />
 						<Route path='/journal/gift-guide' element={<GiftGuide />} />
 						<Route path='/journal/inspiration' element={<Inspiration />} />
@@ -96,7 +97,10 @@ function App() {
 							path='/journal/paint-and-sip-by-the-lake'
 							element={<PaintAndSipLake />}
 						/>
-
+						<Route
+							path='/journal/autumn-collection'
+							element={<AutumnCollectionArticle />}
+						/>
 						<Route
 							path='/journal/color-psychology'
 							element={<ColorPsychologyPage />}
@@ -104,8 +108,8 @@ function App() {
 					</>
 
 					<Route path='/artsy-club' element={<OurClubPage />} />
-					{/* <Route path='/aura-poster' element={<AddProduct />} /> */}
-					{/* <Route path='/order-confirmation' element={<OrderConfirmation />} /> */}
+					<Route path='/aura-poster' element={<AddProduct />} />
+					<Route path='/order-confirmation' element={<OrderConfirmation />} />
 					<Route path='/about-us' element={<OurStoryPage />} />
 					<Route path='/sustainability' element={<SustenabilityPage />} />
 					<Route

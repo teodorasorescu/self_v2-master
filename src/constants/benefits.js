@@ -1,7 +1,7 @@
 const benefits = [
 	{
-		title: '100% COTTON CANVAS & PRINT QUALITY',
-		desc: 'We use 100% cotton canvas, a material that guarantees quality and durability of colors.',
+		title: 'Hahnemühle Canvas Quality',
+		desc: 'We use Hahnemühle Canvas 320 g/m², a material that guarantees quality and durability of colors.',
 	},
 	{
 		title: 'EASY RETURNS',

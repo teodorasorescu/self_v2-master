@@ -29,14 +29,14 @@ export const freeFraming =
 export const deliveryDetails =
 	'Delivery is made by Sameday and it takes up to 3-5 days. You can choose between home or easybox locker delivery.';
 export const details =
-	'Print: 100% cotton canvas with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
+	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 export const stickerDetails = 'Size: 15x20cm\nSticker Sheet';
 
 export const postersDetails =
-	'Print: 100% cotton canvas with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
+	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 
 export const framesDetails =
-	'Print: 100% cotton canvas with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
+	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 
 export const suport =
 	"For questions, don't hesitate to contact us at hello@self-posters.com, or on Instagram/TikTok @self-posters.com ♡";
@@ -77,30 +77,21 @@ export const fontColors = ['1st Color', '2nd Color', '3rd Color', '4th Color'];
 export const subheadersLabelData = ['Featured'];
 
 export const summerProducts = [
-	'Obor Mercado',
-	'Little Things',
-	'Matcha, Please!',
-	'Day by Day',
-	'La Siesta',
-	'Sunkissed',
-	'Slow Life',
-	'Water',
-	'Salty Thoughts',
-	'Starry Coral',
+	'Definitely a Pisces',
+	'OOTD',
+	'Când nu mai poți...mai poți un pic...',
+	'Mai mult decât îmi trebuie, mai puțin decât vreau.',
+	'Knitted Sweater',
+	'Trench',
 ];
 
 export const selectedShowcaseProducts = [
-	'Panier Collection',
-	'Disco Collection',
-	'The Blue Hour',
-	'Where She Stood',
-	'Morning in Stillness',
-	'Peonies',
-	'Next Chapter',
-	'Self Love',
-	'A table for two, please!',
-	'Sunset Feelings',
-	'There is Strength in Vulnerability',
+	'Budapest',
+	'Milan',
+	'Bucharest',
+	'Mes Tabi',
+	'Sip, Glow, Repeat',
+	'Martini Nights',
 ];
 export const subheadersData = new Map([
 	[
@@ -167,28 +158,28 @@ export const posterPrices = new Map([
 		'13x18cm',
 		new Map([
 			[60, 40],
-			[55, 55],
+			[62, 62],
 		]),
 	],
 	[
 		'21x30cm',
 		new Map([
 			[60, 60],
-			[55, 120],
+			[62, 149],
 		]),
 	],
 	[
 		'30x40cm',
 		new Map([
 			[60, 90],
-			[55, 150],
+			[62, 225],
 		]),
 	],
 	[
 		'50x70cm',
 		new Map([
 			[60, 150],
-			[55, 300],
+			[62, 409],
 		]),
 	],
 ]);

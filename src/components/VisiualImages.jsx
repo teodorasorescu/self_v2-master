@@ -12,8 +12,8 @@ const VisualImages = () => {
 			</div>
 			<div className={styles.imgContainer}>
 				<div className={styles.secondContainer}></div>
-				<a href='/customized-aura-portraits'>
-					<Button msg={'Custom Your Aura Poster'} />
+				<a href='/journal/autumn-collection'>
+					<Button msg={'About Autumn Collection'} />
 				</a>
 			</div>
 		</div>

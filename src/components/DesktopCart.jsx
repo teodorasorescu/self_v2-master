@@ -241,7 +241,7 @@ export const DesktopCart = ({ currency }) => {
 					</Paper>
 				</ThemeProvider>
 			)}{' '}
-			<SelectedForYouPage data={summerProducts} title='Summer Selection' />
+			<SelectedForYouPage data={summerProducts} title='Autumn Selection' />
 		</div>
 	);
 };

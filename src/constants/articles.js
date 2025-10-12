@@ -1,5 +1,12 @@
 export const articles = [
 	{
+		imgTitle: 'iuliaVerzanCollection.webp',
+		title: 'About our autumn collection',
+		date: '12th October 2025',
+		urlTitle: 'autumn-collection',
+		description: '1 word: AMAZING!',
+	},
+	{
 		imgTitle: 'ps6.webp',
 		title: 'Paint & Sip by the Lake',
 		date: '16th August 2025',
