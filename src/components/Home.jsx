@@ -31,7 +31,7 @@ const Home = () => {
 							{index === 0 && (
 								<div className={styles.photoOverlay}>
 									<div className={styles.overlayText}>
-										<h1>Unsure where to start?</h1>
+										<h1>Autumn Collection</h1>
 										<p>
 											Try our Art Finder Quiz and get matched with a
 											personalised selection of art prints and recommended
@@ -53,7 +53,7 @@ const Home = () => {
 					{
 						<div className={styles.introductionContainer}>
 							<div className={styles.mobileOnlyText}>
-								<h1>Unsure where to start?</h1>
+								<h1>Autumn Collection</h1>
 								<p>
 									Try our Art Finder Quiz and get matched with a personalised
 									selection of art prints & recommended colors that fit your
