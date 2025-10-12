@@ -35,19 +35,14 @@ const AutumnCollectionArticle = () => {
 					painting, illustration and design, the works balance nostalgia witha
 					distinctly modern sensibility.
 					<br />
-					Textures feel lived-in; colors hum softly between warmth and
-					playfulness. Each piece invites pause, an invitation to notice beauty
-					in what surrounds us: the patterns of habit, the tenderness of
-					solitude, the joy of simple pleasures. Together, they form a visual
-					language of comfort, crafted with affection for the ordinary.
 				</h2>
 			</>
 			<h2>
-				What made this Paint and Sip event truly memorable was the people around
-				the table. From the two kids experimenting with their first brushstrokes
-				to the mother-daughter duo sharing a quiet creative moment, everyone
-				felt amazing. The evening became less about technique and more about
-				togetherness, an exchange of stories, laughter and inspiration.
+				Textures feel lived-in; colors hum softly between warmth and
+				playfulness. Each piece invites pause, an invitation to notice beauty in
+				what surrounds us: the patterns of habit, the tenderness of solitude,
+				the joy of simple pleasures. Together, they form a visual language of
+				comfort, crafted with affection for the ordinary.
 			</h2>
 			<LazyLoadImage
 				className={classes.image}
