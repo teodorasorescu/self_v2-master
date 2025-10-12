@@ -169,14 +169,14 @@ export const posterPrices = new Map([
 		'21x30cm',
 		new Map([
 			[60, 60],
-			[62, 149],
+			[62, 159],
 		]),
 	],
 	[
 		'30x40cm',
 		new Map([
 			[60, 90],
-			[62, 225],
+			[62, 229],
 		]),
 	],
 	[
