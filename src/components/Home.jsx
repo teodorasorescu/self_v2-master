@@ -70,7 +70,7 @@ const Home = () => {
 				</div>
 			)}
 			<SelfMission />
-			<SelectedForYouPage data={summerProducts} title='Autumn Selection' />
+			<SelectedForYouPage data={summerProducts} title='Trending Today' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
 					<ButtonHomePage msg='View All' />

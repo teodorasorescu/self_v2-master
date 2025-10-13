@@ -10,10 +10,6 @@
 	width: 90vw;
 
 	.imgContainer {
-		@media screen and (max-width: 1024px) {
-			width: 90vw;
-		}
-		width: 40%;
 		margin-right: 3%;
 		margin-left: 3%;
 		> p > b {

@@ -78,20 +78,24 @@ export const subheadersLabelData = ['Featured'];
 
 export const summerProducts = [
 	'Definitely a Pisces',
-	'OOTD',
+	'Sip, Glow, Repeat',
 	'Când nu mai poți...mai poți un pic...',
 	'Mai mult decât îmi trebuie, mai puțin decât vreau.',
-	'Knitted Sweater',
-	'Trench',
+	'Le Joyeux Trench-Coat',
+	'Le cardigan gourmand',
+	'Bucharest',
+	'Girls night at my place ||',
+	'Girls night at my place |',
 ];
 
 export const selectedShowcaseProducts = [
-	'Budapest',
+	'Mes Tabi',
 	'Milan',
 	'Bucharest',
-	'Mes Tabi',
-	'Sip, Glow, Repeat',
+	'OOTD',
 	'Martini Nights',
+	'Girls night at my place ||',
+	'Girls night at my place |',
 ];
 export const subheadersData = new Map([
 	[
