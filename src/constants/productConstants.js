@@ -39,7 +39,7 @@ export const framesDetails =
 	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 
 export const suport =
-	"For questions, don't hesitate to contact us at hello@self-posters.com, or on Instagram/TikTok @self-posters.com ♡";
+	"For questions, don't hesitate to contact us at hello@self-posters.com, or on Instagram/TikTok @self_posters ♡";
 export const atentionareCuloare =
 	'Vă sfătuim să nu alegeți culori stridente. Tehnologia actuală nu permite printarea culorilor în format RGB, ci CMYK. Astfel, culorile stridente pot ieși la imprimare ușor mai închise.';
 
