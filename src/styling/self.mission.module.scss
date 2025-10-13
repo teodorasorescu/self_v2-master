@@ -18,14 +18,10 @@
 	}
 
 	.text {
-		@media screen and (max-width: 1024px) {
-			width: 95vw;
-			padding: 10%;
-		}
 		align-self: left;
 		margin-top: auto;
 		margin-bottom: auto;
-		width: 50%;
+		width: 90vw
 		padding-left: 3%;
 		margin-right: 2%;
 		> h3 {
