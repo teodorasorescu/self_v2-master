@@ -11,7 +11,7 @@ const EventForm = ({ onSuccess }) => {
 		email: '',
 		name: '',
 		phoneNumber: '',
-		isComingWithFriend: 'Yes',
+		isComingWithFriend: 'NO',
 	});
 
 	const dispatch = useDispatch();
@@ -80,18 +80,6 @@ const EventForm = ({ onSuccess }) => {
 						value={member.phoneNumber}
 						onChange={setField}
 					/>
-				</div>
-				<div className={classes.inputGroup}>
-					<p>Bringing a friend? The ticket will be 90 lei!</p>
-					<select
-						name='isComingWithFriend'
-						className={classes.formInput}
-						onChange={setField}
-						value={member.isComingWithFriend}
-					>
-						<option value='Yes'>Yes</option>
-						<option value='No'>No</option>
-					</select>
 				</div>
 				<Button
 					className={classes.buttonContainer}

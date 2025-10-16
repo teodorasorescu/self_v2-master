@@ -106,6 +106,7 @@ function App() {
 							element={<ColorPsychologyPage />}
 						/>
 					</>
+					<Route path='/event' element={<EventPage />} />
 
 					<Route path='/artsy-club' element={<OurClubPage />} />
 					<Route path='/aura-poster' element={<AddProduct />} />

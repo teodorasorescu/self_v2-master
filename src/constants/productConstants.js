@@ -135,8 +135,8 @@ export const headersData = [
 		href: '/canvas-art-prints',
 	},
 	{
-		label: 'Customized Aura Portraits',
-		href: '/customized-aura-portraits',
+		label: 'Manifestation Event',
+		href: '/event',
 	},
 	{
 		label: 'Journal',

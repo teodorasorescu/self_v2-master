@@ -4,7 +4,7 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 1rem;
 
 	.imageContainer {
 		width: 100vw;
@@ -19,6 +19,18 @@
 		font-optical-sizing: auto;
 		font-size: 2rem;
 		font-style: italic;
+	}
+	> h2 {
+		font-family: 'Frank Ruhl Libre', serif;
+		font-size: 1.2rem;
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+
+	h3 {
+		font-family: Raleway;
+		font-size: 0.8rem;
+		color: #666;
 	}
 }
 
