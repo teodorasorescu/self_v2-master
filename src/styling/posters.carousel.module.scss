@@ -40,11 +40,11 @@
 		margin-left: 0%;
 		border-left: 0%;
 		width: 100vw;
-		height: 60vh;
+		height: max-content;
 		object-fit: contain;
 		@media screen and (min-width: 700px) {
 			width: 100vw;
-			min-height: 60vh;
+			height: max-content;
 		}
 	}
 }
