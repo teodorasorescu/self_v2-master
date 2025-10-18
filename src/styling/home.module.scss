@@ -137,7 +137,7 @@
 			}
 		}
 
-		@media (max-width: 768px) {
+		@media (max-width: 1024px) {
 			width: 100vw;
 			text-align: center;
 			box-sizing: border-box;
@@ -171,12 +171,8 @@
 		height: 100svh;
 
 		@media screen and (max-width: 1024px) {
-			height: 80svh; /* Height for screens up to 1024px */
-		}
-
-		@media screen and (max-width: 768px) {
 			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/iuliaVerzanCollection.webp');
-			height: 70svh;
+			height: 80svh;
 		}
 	}
 }
