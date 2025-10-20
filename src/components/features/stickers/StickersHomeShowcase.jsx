@@ -23,7 +23,7 @@ const StickersHomeShowcase = ({ products, title }) => {
 				{products.map((p, index) => (
 					<div className={classes.sticker} key={index}>
 						{' '}
-						<a href={`/sticker-sheets/${p.urlTitle}`}>
+						<a href={`/clay-objects/${p.urlTitle}`}>
 							<ProductItem
 								id={index}
 								product={p}

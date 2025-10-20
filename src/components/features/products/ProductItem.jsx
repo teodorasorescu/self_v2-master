@@ -13,7 +13,11 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	const imgTitle = S3_BUCKET + '/' + posterImg;
 	const imgHoverTitle = S3_BUCKET + '/' + product.hoverImgTitle;
-	const isArtist = product.artist !== null;
+	const isArtist =
+		product.artist != undefined &&
+		product.artist.artist != undefined &&
+		product.artist !== null &&
+		product.artist.artist !== null;
 	const { countryCode } = useCountry();
 
 	const computedPrice = getLocalizedPrice(product.price, countryCode);

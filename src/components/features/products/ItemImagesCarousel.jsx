@@ -5,7 +5,6 @@ import Tag from '../../ui/tag/Tag';
 
 const ItemImagesCarousel = ({ product }) => {
 	const isImageEmpty = product.imgTitle === '';
-
 	return (
 		<>
 			{' '}
@@ -28,7 +27,7 @@ const ItemImagesCarousel = ({ product }) => {
 									)}
 							</div>
 						</Carousel.Item>
-						{product.showcase != undefined &&
+						{product.showcase !== undefined &&
 							product.showcase.map((posterImg, index) => (
 								<Carousel.Item interval={600000} key={index}>
 									<div className={classes.container}>

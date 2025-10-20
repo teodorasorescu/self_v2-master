@@ -30,7 +30,8 @@ export const deliveryDetails =
 	'Delivery is made by Sameday and it takes up to 3-5 days. You can choose between home or easybox locker delivery.';
 export const details =
 	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
-export const stickerDetails = 'Size: 15x20cm\nSticker Sheet';
+export const stickerDetails =
+	'Material: air-dry clay \n Exterior: Acrylic paint and protective varnish \n Handmade';
 
 export const postersDetails =
 	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
@@ -75,6 +76,14 @@ export const color1 = {
 
 export const fontColors = ['1st Color', '2nd Color', '3rd Color', '4th Color'];
 export const subheadersLabelData = ['Featured'];
+
+export const clayObjects = [
+	'Tabi Holder',
+	'Green Sofa',
+	'Striped Sofa',
+	'Cowboy Hat Holder',
+	'Armchair & Table Set',
+];
 
 export const summerProducts = [
 	'Definitely a Pisces',

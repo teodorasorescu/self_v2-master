@@ -9,7 +9,10 @@ import 'swiper/css/mousewheel';
 
 const SelectedForYouShowcase = ({ products, data, title }) => {
 	const filteredData = products.filter((item) => data.includes(item.title));
-
+	const url =
+		title === 'Decorative Objects by Sweets&Beadz'
+			? 'clay-objects'
+			: 'canvas-art-prints';
 	return (
 		<div className={classes.productSlider}>
 			<h2>{title}</h2>
@@ -20,14 +23,7 @@ const SelectedForYouShowcase = ({ products, data, title }) => {
 						modules={[Navigation, Autoplay, Mousewheel]}
 						spaceBetween={20}
 						slidesPerView={4}
-						navigation={
-							filteredData.length > 2
-								? {
-										nextEl: `.${classes.nextButton}`,
-										prevEl: `.${classes.prevButton}`,
-								  }
-								: false
-						}
+						navigation={false}
 						loop={filteredData.length >= 4}
 						observer={true}
 						observeParents={true}
@@ -54,7 +50,7 @@ const SelectedForYouShowcase = ({ products, data, title }) => {
 						{filteredData.map((product) => (
 							<SwiperSlide key={product.urlTitle}>
 								<div className={classes.productCard}>
-									<a href={`/canvas-art-prints/${product.urlTitle}`}>
+									<a href={`/${url}/${product.urlTitle}`}>
 										<ProductItem
 											product={product}
 											posterImg={product.imgTitlePosterList}

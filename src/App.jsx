@@ -70,10 +70,7 @@ function App() {
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
-					<Route
-						path='/sticker-sheets/:urlTitle'
-						element={<StickerDetails />}
-					/>
+					<Route path='/clay-objects/:urlTitle' element={<StickerDetails />} />
 					<Route path='/quiz-result' element={<QuizResult />} />
 					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
 					<Route path='/new-collection' element={<Preframe />} />

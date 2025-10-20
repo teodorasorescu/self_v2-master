@@ -12,7 +12,16 @@ const getStickerByUrlTitle = (urlTitle, dispatch) => {
 	axios
 		.get(`${BACKEND_PATH}/products/stickers/` + urlTitle)
 		.then((response) => {
-			dispatch(loadSticker(response.data));
+			const resp = response.data;
+
+			const listShowcaseImgs = resp.showcase.split(',');
+
+			const sticker = {
+				...resp,
+				showcase: listShowcaseImgs,
+			};
+
+			dispatch(loadSticker(sticker));
 		})
 		.catch(() => {
 			dispatch(loadStickerFailed(BACKEND_ERROR_MESSAGE));

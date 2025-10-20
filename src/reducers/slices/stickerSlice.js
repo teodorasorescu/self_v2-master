@@ -13,6 +13,7 @@ export const stickerSlice = createSlice({
 			urlTitle: '',
 			altDescription: '',
 			size: '15x20cm',
+			showcase: [],
 		},
 		isStickerLoading: false,
 		stickerLoadingError: '',

@@ -1,4 +1,3 @@
-import { React } from 'react';
 import Button from '@mui/material/Button';
 
 import { computeDiscount } from '../../../constants/utils';
@@ -11,13 +10,17 @@ import ReactGA from 'react-ga4';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useDispatch } from 'react-redux';
 import { loadProducts } from '../../../reducers/slices/productsSlice';
-import { deliveryDetails } from '../../../constants/productConstants';
-
+import {
+	deliveryDetails,
+	selectedShowcaseProducts,
+} from '../../../constants/productConstants';
+import SelectedForYouPage from '../selectedForYouShowcase/SelectedForYouPage';
 const StickerInfoPage = ({ product, suport, details }) => {
 	const { itemCount, setItemCount } = useStateContext();
 	const width = useMediaQuery('(max-width:1023px)') ? '90vw' : '25vw';
 	const dispatch = useDispatch();
 	const localStoreProducts = localStorage.getItem('products');
+	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 
 	let storedProducts = [];
 	if (localStoreProducts != []) {
@@ -65,6 +68,15 @@ const StickerInfoPage = ({ product, suport, details }) => {
 				<div className={classes.titleContainer}>
 					<h1>{product.title}</h1>
 					<h2>{product.price.toFixed(1) + ' RON'}</h2>
+					<p>
+						Since childhood, Marina, the founder of Sweets&Beadz, has felt the
+						need to create, to bring color to the world around het. Each piece
+						is handmade with care and attention to detail, using materials such
+						as air-dry clay, acrylic paints, protective varnishes, as well as
+						precious elements like glass and stainless steel. She combines the
+						precision of her medical profession with the freedom of artistic
+						expression and this duality is reflected in everything she creates.
+					</p>
 				</div>
 
 				<div className={classes.addToCartContainer}>
@@ -76,18 +88,29 @@ const StickerInfoPage = ({ product, suport, details }) => {
 				</div>
 
 				<div className={classes.detailsDropdownContainer}>
+					{product.artist != null && (
+						<Dropdown
+							title='About Artist'
+							content={product.artist.artistDescription}
+							dropdownWidth={width}
+							value={true}
+							artistImg={product.artist.aboutArtistImg}
+						/>
+					)}
 					<Dropdown
-						title='Delivery'
-						content={deliveryDetails}
-						dropdownWidth={width}
-						value={true}
-					/>
-					<Dropdown
-						title='Details'
+						title='Specifications'
 						content={details}
 						dropdownWidth={width}
-						value={true}
+						value={false}
 					/>
+
+					<Dropdown
+						title='Delivery & Returns'
+						content={deliveryDetails}
+						dropdownWidth={width}
+						value={false}
+					/>
+
 					<Dropdown
 						title='Support'
 						content={suport}
@@ -95,6 +118,13 @@ const StickerInfoPage = ({ product, suport, details }) => {
 						value={false}
 					/>
 				</div>
+				{smartphoneScreen && (
+					<div className={classes.productsShowcase}>
+						<div className={classes.productsShowcase}>
+							<SelectedForYouPage data={selectedShowcaseProducts} />{' '}
+						</div>
+					</div>
+				)}
 			</div>
 		</div>
 	);

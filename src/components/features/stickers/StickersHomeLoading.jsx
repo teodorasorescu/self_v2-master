@@ -6,9 +6,9 @@ import {
 	selectStickers,
 } from '../../../reducers/slices/stickersSlice';
 import getStickersAction from '../../../reducers/actions/getStickersAction';
-import StickersHomeShowcase from './StickersHomeShowcase';
+import SelectedForYouShowcase from '../selectedForYou/SelectedForYouShowcase';
 
-const PostersHomeLoading = () => {
+const PostersHomeLoading = ({ data }) => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(areStickersLoading);
 	let stickers = useSelector(selectStickers);
@@ -23,7 +23,11 @@ const PostersHomeLoading = () => {
 		content = <Loader />;
 	} else {
 		content = (
-			<StickersHomeShowcase products={stickers} title={'Sticker Sheets'} />
+			<SelectedForYouShowcase
+				products={stickers}
+				data={data}
+				title={'Decorative Objects by Sweets&Beadz'}
+			/>
 		);
 	}
 

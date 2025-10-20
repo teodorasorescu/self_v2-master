@@ -5,6 +5,7 @@ import VisualImages from './VisiualImages';
 import SelfMission from './SelfMission';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage';
 import {
+	clayObjects,
 	selectedShowcaseProducts,
 	summerProducts,
 } from '../constants/productConstants';
@@ -12,6 +13,7 @@ import Reviews from './features/reviews/Reviews';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { HOME_PHOTOS } from '../constants/inspoHome';
 import ButtonHomePage from './ui/buttonHomePage/ButtonHomePage';
+import PostersHomeLoading from './features/stickers/StickersHomeLoading';
 
 const Home = () => {
 	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
@@ -76,6 +78,8 @@ const Home = () => {
 					<ButtonHomePage msg='View All' />
 				</a>
 			</div>
+			<PostersHomeLoading data={clayObjects} />
+
 			<VisualImages />
 			<Benefits />
 
