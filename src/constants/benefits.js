@@ -1,7 +1,7 @@
 const benefits = [
 	{
-		title: 'Hahnemühle Canvas Quality',
-		desc: 'We use Hahnemühle Canvas 320 g/m², a material that guarantees quality and durability of colors.',
+		title: 'Fine Art Prints',
+		desc: 'We use Hahnemühle Canvas 320 g/m², a material that guarantees quality of colors with archival durability.',
 	},
 	{
 		title: 'EASY RETURNS',
@@ -13,9 +13,8 @@ const benefits = [
 	},
 	{
 		title: 'UNIQUE DESIGNS',
-		desc: 'Curated store of expressive designs which support independent artists.',
+		desc: 'Curated store of expressive designs by emerging artists.',
 	},
-
 	{
 		title: 'SAFE & SECURE CARD PAYMENTS',
 		desc: 'Powered by Stripe you can pay directly with card or through Apple / Google Pay.',

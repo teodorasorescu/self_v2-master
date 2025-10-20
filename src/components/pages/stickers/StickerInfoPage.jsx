@@ -70,7 +70,7 @@ const StickerInfoPage = ({ product, suport, details }) => {
 					<h2>{product.price.toFixed(1) + ' RON'}</h2>
 					<p>
 						Since childhood, Marina, the founder of Sweets&Beadz, has felt the
-						need to create, to bring color to the world around het. Each piece
+						need to create, to bring color to the world around her. Each piece
 						is handmade with care and attention to detail, using materials such
 						as air-dry clay, acrylic paints, protective varnishes, as well as
 						precious elements like glass and stainless steel. She combines the
