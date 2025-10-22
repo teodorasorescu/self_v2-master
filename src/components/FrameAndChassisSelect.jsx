@@ -6,7 +6,6 @@ import {
 	selectChassisStock,
 	selectFramesStock,
 } from '../reducers/slices/stockSlice';
-import { frameColors } from '../constants/frameColors';
 import { chassisPrices, framePrices } from '../constants/productConstants';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
@@ -114,21 +113,6 @@ const FrameAndChassisSelect = ({
 					onChange={setField}
 				>
 					<option value='none'>No Frame</option>
-					{frameColors.map((color, index) => {
-						return (
-							framePrice.price !== undefined && (
-								<option
-									disabled={
-										framesStock === 0 || chassis === true ? true : false
-									}
-									key={`color-${index}`}
-									value={color}
-								>
-									{color} + {framePrice.price + ' ' + framePrice.currency}
-								</option>
-							)
-						);
-					})}
 				</select>
 			</div>
 		</div>
