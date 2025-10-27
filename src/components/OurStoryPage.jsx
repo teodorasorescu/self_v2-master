@@ -1,13 +1,10 @@
 import styles from '../styling/our.story.page.module.scss';
 
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { S3_BUCKET } from '../constants/links';
 
 const mottoImg = S3_BUCKET + '/motto.webp';
 
 const OurStoryPage = () => {
-	const smartphoneScreen = useMediaQuery('(max-width:768px)');
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.textContainer}>

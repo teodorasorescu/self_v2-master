@@ -7,7 +7,7 @@
 		flex-direction: column;
 
 		.imgContainer {
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 1020px) {
 				width: 100vw;
 				height: auto;
 			}
@@ -22,18 +22,14 @@
 			justify-content: center;
 			> img {
 				align-self: center;
-
-				@media screen and (max-width: 1024px) {
-					width: 300px;
-					height: auto;
-					align-self: center;
-				}
-				width: 500px;
+				width: 300px;
+				height: auto;
+				align-self: center;
 			}
 		}
 
 		.text {
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 1020px) {
 				padding: 5%;
 				width: 100vw;
 				margin-right: 0%;
