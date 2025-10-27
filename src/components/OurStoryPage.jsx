@@ -42,7 +42,7 @@ const OurStoryPage = () => {
 					</h4>
 					<p className={styles.subheadline}>
 						Our mission is to bridge the gap between{' '}
-						<b className={styles.boldColor}>talented independent artists</b> and
+						<b className={styles.boldColor}>talented emerging artists</b> and
 						those looking to bring{' '}
 						<b className={styles.boldColor}>unique expressive designs</b>, into
 						their homes. We collaborate with creatives from diverse backgrounds,

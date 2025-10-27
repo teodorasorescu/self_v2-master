@@ -6,19 +6,18 @@ const SelfMission = () => {
 		<div className={styles.container}>
 			<>
 				<div className={styles.text}>
-					<h3>{headline}</h3>
+					<h3>Supporting Emerging Artists, Inspiring Spaces</h3>
 				</div>
 				<div className={styles.imgContainer}>
 					<p className={styles.paragraph}>
 						Self Posters connects{' '}
-						<b className={styles.boldColor}>talented independent artists</b>{' '}
-						with those seeking{' '}
+						<b className={styles.boldColor}>talented emerging artists</b> with
+						those seeking{' '}
 						<b className={styles.boldColor}>unique, expressive designs</b> for
-						their homes. Each piece is{' '}
-						<b className={styles.boldColor}>emotion, color and creativity </b>{' '}
-						brought to life. By choosing our posters, you support artists while
-						turning your walls into{' '}
-						<b className={styles.boldColor}>a true reflection of you.</b>
+						their homes. We collaborate with creatives from diverse backgrounds,
+						giving them a platform to showcase their work. By fostering this
+						community, we not only bring exclusive artwork to our customers but
+						also support the artists behind each piece.
 					</p>
 				</div>
 			</>

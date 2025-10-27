@@ -53,16 +53,16 @@ export const DesktopCart = ({ currency }) => {
 
 	const theme = createTheme({
 		typography: {
-			fontFamily: 'Raleway',
+			fontFamily: 'Poppins, sans-seris',
 		},
 		components: {
 			MuiCssBaseline: {
 				styleOverrides: `
 					@font-face {
-						font-family: 'Raleway';
-						font-style: normal;
-						font-display: swap;
-						font-weight: 500;
+						 font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+						
 					}
 				`,
 			},

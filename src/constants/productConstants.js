@@ -143,10 +143,7 @@ export const headersData = [
 		label: 'Canvas Art Prints',
 		href: '/canvas-art-prints',
 	},
-	{
-		label: 'Manifestation Event',
-		href: '/event',
-	},
+
 	{
 		label: 'Journal',
 		href: '/journal',

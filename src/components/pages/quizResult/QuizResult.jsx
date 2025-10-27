@@ -40,24 +40,6 @@ const QuizResult = () => {
 		<div className={classes.quizContainer}>
 			<div className={classes.result}>
 				<h2>Your Quiz Result</h2>
-
-				<h3>Recommended Colors</h3>
-				<div className={classes.colorContainer}>
-					<div className={classes.colorGrid}>
-						{' '}
-						{colors.map((c, i) => (
-							<div key={i} className={classes.colorItem}>
-								<div
-									className={classes.colorCircle}
-									style={{ backgroundColor: c.hex }}
-									title={`${c.description} (${c.hex})`}
-								/>
-								<div className={classes.colorDesc}>{c.description}</div>
-							</div>
-						))}
-					</div>
-				</div>
-
 				<div className={classes.preferencesSection}>
 					<h3>The Posters You NEED</h3>
 

@@ -1,4 +1,3 @@
-import { React } from 'react';
 import { useStateContext } from '../contexts/ContextProvider';
 import styles from '../styling/header.module.scss';
 
@@ -51,7 +50,7 @@ const SmartphoneHeader = () => {
 					<MenuItem
 						style={{
 							fontSize: '20px',
-							fontFamily: "'Raleway', sans-serif",
+							fontFamily: "'Poppins', sans-serif",
 							paddingTop: '3%',
 						}}
 						onClick={closeDrawer}
@@ -71,7 +70,7 @@ const SmartphoneHeader = () => {
 					{...{
 						style: {
 							fontSize: '20px',
-							fontFamily: "'Raleway', sans-serif",
+							fontFamily: "'Poppins', sans-serif",
 							paddingTop: '3%',
 						},
 						key: label,
@@ -101,7 +100,7 @@ const SmartphoneHeader = () => {
 							borderTop: '0.1ch solid rgba(159, 153, 153, 0.379)',
 							paddingBottom: '3%',
 							paddingTop: '3%',
-							fontFamily: "'Raleway', sans-serif",
+							fontFamily: "'Poppins', sans-serif",
 						}}
 					>
 						{label}
@@ -115,8 +114,8 @@ const SmartphoneHeader = () => {
 		<div>
 			<div className={styles.promotionTextContainer}>
 				<p>
-					Are u artsy enough? Get 10% off by joining{' '}
-					<a href='artsy-club'>our club</a>
+					Are u artsy enough? <br />
+					Get 10% off by joining <a href='artsy-club'>our club</a>
 				</p>
 			</div>
 			<Helmet>

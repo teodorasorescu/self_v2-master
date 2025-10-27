@@ -68,16 +68,16 @@ export const CheckoutCart = ({ storedProducts }) => {
 
 	const theme = createTheme({
 		typography: {
-			fontFamily: 'Raleway',
+			fontFamily: 'Poppins, sans-serif',
 		},
 		components: {
 			MuiCssBaseline: {
 				styleOverrides: `
 					@font-face {
-						font-family: 'Raleway';
+						font-family: 'Poppins', sans-serif;
 						font-style: normal;
 						font-display: swap;
-						font-weight: 600;
+						font-weight: 500;
 					}
 				`,
 			},

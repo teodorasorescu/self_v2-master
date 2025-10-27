@@ -15,7 +15,7 @@
 			flex-direction: row; //default value
 			align-items: center;
 			justify-content: space-evenly;
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Poppins', sans-serif;
 			text-decoration: none;
 			color: rgb(0, 0, 0);
 			font-size: 15px;
@@ -60,7 +60,7 @@
 			.upperContainer {
 				width: 100%;
 				background-color: rgb(255, 255, 255);
-				font-family: 'Raleway', sans-serif;
+				font-family: 'Poppins', sans-serif;
 				display: flex;
 				flex-direction: row;
 				align-items: center; /* Center items vertically */
@@ -123,9 +123,8 @@
 
 				.link {
 					text-decoration: none;
-					font-family: 'Raleway', sans-serif;
+					font-family: 'Poppins', sans-serif;
 					color: rgb(0, 0, 0);
-					font-weight: 450;
 					font-size: 0.9rem;
 				}
 			}
@@ -135,36 +134,32 @@
 //smartphone size
 @media screen and (max-width: 1024px) {
 	.promotionTextContainer {
-		height: 35px;
-
-		@media screen and (max-width: 280px) {
-			height: 45px;
-		}
-
+		height: auto;
 		width: 100%;
 		position: relative;
 		top: 0;
 		padding-top: 1%;
 		background-color: #fff7e3;
 		display: block;
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		text-align: center;
 		text-decoration: none;
+
 		color: rgb(0, 0, 0);
-		font-size: 15px;
-		font-weight: 500;
-		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		font-family: 'Poppins', sans-serif;
 
 		> p > a {
 			text-decoration: none;
 			color: #7684ff;
+			font-weight: 500;
 		}
 	}
 
 	.stillPositionContainer {
 		justify-content: space-between;
 		display: flex;
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		align-items: center;
 		padding: 0;
 		border-bottom: 0.1ch solid rgba(135, 135, 135, 0.144);
@@ -181,7 +176,7 @@
 
 		.link {
 			text-decoration: none;
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Poppins', sans-serif;
 			color: rgb(0, 0, 0);
 			font-weight: 400;
 			font-size: 18px;
@@ -189,7 +184,7 @@
 
 		> drawerlink {
 			text-decoration: none;
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Poppins', sans-serif;
 			color: rgb(0, 0, 0);
 			font-weight: 400;
 			font-size: 40px;
@@ -200,7 +195,7 @@
 			font-size: 70px;
 			display: flex;
 			text-align: center;
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Poppins', sans-serif;
 			padding: 10%;
 		}
 
@@ -222,7 +217,7 @@
 			display: flex;
 			flex-direction: row;
 			top: 200px;
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Poppins', sans-serif;
 
 			.socialMediaIcons {
 				width: 25px;

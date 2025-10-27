@@ -1,12 +1,12 @@
 .container {
 	margin-bottom: 3%;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	@media screen and (max-width: 1024px) {
 		margin-top: 3%;
 	}
 
 	& .headerContainer {
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		display: flex;
 		flex-direction: row;
 		flex: 10px;

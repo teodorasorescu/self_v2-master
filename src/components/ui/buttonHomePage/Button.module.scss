@@ -2,7 +2,7 @@
 	.button {
 		width: auto;
 		height: auto;
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		font-size: 1rem;
 		transition: all 0.1s ease;
 		background-color: #7684ff;
@@ -14,7 +14,7 @@
 		margin-bottom: 3%;
 		text-align: left;
 		animation: bounce 1s infinite;
-		font-weight: 650;
+		font-weight: 500;
 	}
 
 	.button:hover {
@@ -24,7 +24,7 @@
 		color: #7684ff;
 		animation: none;
 		background-color: #fff7e3;
-		font-weight: 650;
+		font-weight: 550;
 	}
 
 	@keyframes bounce {

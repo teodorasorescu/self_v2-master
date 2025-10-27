@@ -1,17 +1,18 @@
 .buttonContainer {
 	.buttonStyle {
 		border-radius: 10px;
-		font-family: 'Raleway', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		text-align: center;
 		font-size: 100%;
 		transition: all 0.1s ease;
 		cursor: pointer;
 		text-decoration: none;
 		background-color: #fff7e3;
-		font-weight: 600;
+		font-weight: 500;
 		border: 2px solid rgb(252, 236, 208);
 		color: black;
 		text-decoration-line: none;
+		padding: 1%;
 	}
 
 	.buttonStyle:hover {
@@ -32,14 +33,15 @@
 		.buttonStyle {
 			font-size: 100%;
 			transition: all 0.1s ease;
-			font-family: 'Raleway', sans-serif;
+			font-family: 'Poppins', sans-serif;
 			border-radius: 10px;
 
 			cursor: pointer;
 			background-color: #fff7e3;
-			font-weight: 600;
+			font-weight: 500;
 			border: 2px solid rgb(252, 236, 208);
 			color: black;
+			padding: 1%;
 			text-decoration-line: none;
 		}
 

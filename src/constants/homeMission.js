@@ -1,4 +1,4 @@
-export const headline = 'Made to Create Visual Comfort & Emotion';
+export const headline = 'Supporting Artists, Inspiring Spaces';
 
 export const subheadline =
 	'Explorează-ți identitatea și personalizează-ți tabloul!';

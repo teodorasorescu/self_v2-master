@@ -36,8 +36,7 @@ const Home = () => {
 										<h1>Autumn Collection</h1>
 										<p>
 											Try our Art Finder Quiz and get matched with a
-											personalised selection of art prints and recommended
-											colors that fit your style
+											personalised selection of art prints that fit your style.
 										</p>
 									</div>
 									<div className={styles.buttonContainer}>
@@ -58,8 +57,7 @@ const Home = () => {
 								<h1>Autumn Collection</h1>
 								<p>
 									Try our Art Finder Quiz and get matched with a personalised
-									selection of art prints & recommended colors that fit your
-									style
+									selection of art prints that fit your style.
 								</p>
 							</div>
 							<div className={styles.buttonContainer}>
