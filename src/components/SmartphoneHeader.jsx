@@ -113,10 +113,18 @@ const SmartphoneHeader = () => {
 	return (
 		<div>
 			<div className={styles.promotionTextContainer}>
-				<p>
-					Are u artsy enough? <br />
-					Get 10% off by joining <a href='artsy-club'>our club</a>
-				</p>
+				<div className={styles.marquee}>
+					<div className={styles.marqueeInner}>
+						<p>
+							Are u artsy enough? Get 10% off by joining{' '}
+							<a href='artsy-club'>our club</a>
+						</p>
+						<p>
+							Are u artsy enough? Get 10% off by joining{' '}
+							<a href='artsy-club'>our club</a>
+						</p>
+					</div>
+				</div>
 			</div>
 			<Helmet>
 				<link
