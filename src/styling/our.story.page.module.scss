@@ -1,16 +1,13 @@
 .container {
 	display: flex;
 	flex-direction: column;
+
 	.textContainer {
 		height: auto;
 		display: flex;
 		flex-direction: column;
 
 		.imgContainer {
-			@media screen and (max-width: 1020px) {
-				width: 100vw;
-				height: auto;
-			}
 			width: 50%;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -20,21 +17,15 @@
 			align-self: center;
 			display: flex;
 			justify-content: center;
+
 			> img {
 				align-self: center;
 				width: 300px;
 				height: auto;
-				align-self: center;
 			}
 		}
 
 		.text {
-			@media screen and (max-width: 1020px) {
-				padding: 5%;
-				width: 100vw;
-				margin-right: 0%;
-				margin-left: 0%;
-			}
 			padding-top: 3%;
 			margin-top: 3%;
 			align-self: center;
@@ -47,21 +38,41 @@
 			> h2 > h4 {
 				padding-top: 3%;
 			}
+
 			.subheadline {
 				font-size: 1.1rem;
 			}
+
 			.headline {
 				font-size: 1.2rem;
+
 				.italic {
 					font-style: italic;
 				}
 			}
+
 			> p {
 				font-size: 1rem;
 				font-family: 'Poppins', sans-serif;
+
 				> b {
 					color: #7684ff;
 				}
+			}
+		}
+
+		/* ✅ Media queries OUTSIDE the nested selector */
+		@media screen and (max-width: 1024px) {
+			.imgContainer {
+				width: 100vw;
+				height: auto;
+			}
+
+			.text {
+				padding: 5%;
+				width: 100vw;
+				margin-right: 0;
+				margin-left: 0;
 			}
 		}
 	}
