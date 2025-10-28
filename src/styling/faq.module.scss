@@ -6,7 +6,6 @@
 	margin-left: 3%;
 	word-wrap: break-word;
 	margin-bottom: 3%;
-
 	align-items: center;
 
 	> h4 {
@@ -17,14 +16,12 @@
 	}
 
 	.buttonContainer {
-		@media screen and (max-width: 1024px) {
-			width: 100vw;
-		}
 		display: flex;
 		flex-direction: row;
 		width: 50%;
 		justify-content: space-evenly;
 		align-self: center;
+
 		.button {
 			width: auto;
 			height: auto;
@@ -42,6 +39,12 @@
 			text-decoration: none;
 			transition: none;
 			background-color: rgba(253, 231, 189, 0.6);
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.buttonContainer {
+			width: 100vw;
 		}
 	}
 }

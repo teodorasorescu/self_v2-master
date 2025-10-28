@@ -8,24 +8,24 @@ const ContactPage = () => {
 
 	return (
 		<div className={classes.container}>
-			<h2>Get your answears ASAP!</h2>
+			<h1>Contact</h1>
+			<h2>We are always ready to help you.</h2>
 			<h2>
 				{' '}
 				Drop a message to{' '}
-				<b className={classes.email}>hello@self-posters.com</b>
-				or on instagram <b className={classes.email}>@self_posters </b>
+				<b className={classes.email}>
+					hello@self-posters.com <br />{' '}
+				</b>
+				or on <br />
 				<a href={INSTAGRAM_LINK}>
 					<img
 						className={classes.socialMediaIcons}
 						src={instaIcon}
 						alt='instagram'
 					/>
+					<b className={classes.email}>@self_posters </b>
 				</a>
 			</h2>
-			<img src={selfLogo} alt='logo' />
-			<h4>0763382056</h4>
-			<h4>10:00 - 18:00</h4>
-			<div></div>
 		</div>
 	);
 };

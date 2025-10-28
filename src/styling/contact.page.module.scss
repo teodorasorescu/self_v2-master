@@ -9,8 +9,13 @@
 	margin-left: auto;
 
 	font-family: 'Poppins', sans-serif;
-
+	> h1 {
+		text-align: left;
+	}
 	> h2 {
+		> a {
+			text-decoration: none;
+		}
 		font-family: 'Poppins', sans-serif;
 		text-align: center;
 		.email {
@@ -19,9 +24,5 @@
 		.socialMediaIcons {
 			width: 30px;
 		}
-	}
-
-	> img {
-		width: 300px;
 	}
 }
