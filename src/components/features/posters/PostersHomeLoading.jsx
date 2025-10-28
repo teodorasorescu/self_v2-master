@@ -28,7 +28,7 @@ const PostersHomeLoading = () => {
 			<ProductsHomeShowcase
 				products={storedPosters}
 				href={'/canvas-art-prints'}
-				title={'Selected for you'}
+				title={'SELECTED FOR YOU'}
 			/>
 		);
 	}

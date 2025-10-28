@@ -70,20 +70,21 @@ const Home = () => {
 				</div>
 			)}
 			<SelfMission />
-			<SelectedForYouPage data={summerProducts} title='Trending Today' />
+			<SelectedForYouPage data={summerProducts} title='TRENDING TODAY' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
 					<ButtonHomePage msg='View All' />
 				</a>
 			</div>
+			<Benefits />
+
 			<PostersHomeLoading data={clayObjects} />
 
 			<VisualImages />
-			<Benefits />
 
 			<SelectedForYouPage
 				data={selectedShowcaseProducts}
-				title='Selected for you'
+				title='SELECTED FOR YOU'
 			/>
 
 			<Reviews />

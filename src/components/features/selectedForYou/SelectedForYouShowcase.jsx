@@ -15,7 +15,7 @@ const SelectedForYouShowcase = ({ products, data, title }) => {
 			: 'canvas-art-prints';
 	return (
 		<div className={classes.productSlider}>
-			<h2>{title}</h2>
+			<h1>{title}</h1>
 			<div className={classes.swiperWrapper}>
 				<div className={`${classes.navButton} ${classes.prevButton}`}></div>
 				<div className={classes.swiperContainer}>

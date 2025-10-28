@@ -86,15 +86,15 @@ export const clayObjects = [
 ];
 
 export const summerProducts = [
+	'Mes Tabi',
 	'Definitely a Pisces',
-	'Sip, Glow, Repeat',
 	'Când nu mai poți...mai poți un pic...',
 	'Mai mult decât îmi trebuie, mai puțin decât vreau.',
 	'Le Joyeux Trench-Coat',
 	'Le cardigan gourmand',
-	'Bucharest',
+	'Budapest',
 	'Girls night at my place ||',
-	'Girls night at my place |',
+	'001',
 ];
 
 export const selectedShowcaseProducts = [
@@ -103,8 +103,9 @@ export const selectedShowcaseProducts = [
 	'Bucharest',
 	'OOTD',
 	'Martini Nights',
-	'Girls night at my place ||',
+	'Sip, Glow, Repeat',
 	'Girls night at my place |',
+	'Sip Between the Lines',
 ];
 export const subheadersData = new Map([
 	[

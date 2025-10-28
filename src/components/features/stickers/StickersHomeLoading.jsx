@@ -26,7 +26,7 @@ const PostersHomeLoading = ({ data }) => {
 			<SelectedForYouShowcase
 				products={stickers}
 				data={data}
-				title={'Decorative Objects by Sweets&Beadz'}
+				title={'DECORATIVE OBJECTS by Sweets&Beadz'}
 			/>
 		);
 	}
