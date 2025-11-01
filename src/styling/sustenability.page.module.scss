@@ -3,48 +3,40 @@
 	flex-direction: column;
 	height: auto;
 
-	.imgContainer {
-		border-radius: 0 0 60px 60px;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		transition: all 0.05s;
-		height: 500px;
-		background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/sustenability.webp');
-	}
-
 	.text {
 		margin-top: 3%;
 		text-align: justify;
-		@media screen and (max-width: 1024px) {
-			width: 100vw;
-			padding: 5%;
-			margin-right: 0;
-			margin-bottom: 0%;
-		}
 		border-radius: 60px;
-		background-color: #fff7e3;
 		padding: 3%;
 		align-self: center;
 		width: 50%;
 		padding-left: 2%;
 		margin-right: 2%;
 		font-family: 'Poppins', sans-serif;
-		// > img {
-		// 	margin-bottom: 3%;
-		// }
+
+		// Media query for responsive design
+		@media screen and (max-width: 1024px) {
+			width: 100vw;
+			padding: 5%;
+			margin-right: 0;
+			margin-bottom: 0%;
+			border-radius: 40px; // Consider adjusting for mobile
+		}
+
 		> h3 {
 			padding-top: 3%;
 			padding-bottom: 3%;
 		}
+
 		.subheadline {
 			font-size: 1.1rem;
 		}
+
 		.italic {
 			font-style: italic;
-			font-style: italic;
+			// Remove duplicate line
 		}
+
 		> p {
 			font-size: 1rem;
 			font-family: 'Poppins', sans-serif;

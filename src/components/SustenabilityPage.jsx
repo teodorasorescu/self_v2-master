@@ -3,20 +3,21 @@ import styles from '../styling/sustenability.page.module.scss';
 const SustenabilityPage = () => {
 	return (
 		<div className={styles.container}>
-			<div className={styles.imgContainer}></div>
 			<div className={styles.text}>
 				<h3>
 					<b>SUSTAINABILITY</b>
 				</h3>
 				<p className={styles.subheadline}>
-					The <b>frames</b> are made from 100% FSC-certified natural wood,
-					meaning the wood comes from forest-friendly sources that are
-					responsibly managed. Additionally, the <b>tubes</b> and <b>boxes</b>{' '}
-					used to deliver the canvas artworks are made from cardboard, thus
-					supporting the use of eco-friendly, non-plastic materials. The use of
-					high-quality materials is essential to Self Posters, as the aim is for
-					the products to be durable and maintain their appearance over time.
-					Therefore, printing is done on <b>100% cotton canvas</b>.
+					All prints are made-to-order, printed only when purchased to minimize
+					waste and support sustainable practices. <br />
+					Additionally, the <b>tubes</b> and <b>boxes</b> used to deliver the
+					canvas artworks are made from cardboard, thus supporting the use of
+					eco-friendly, non-plastic materials. The digital or painted artworks
+					are printed on a high-quality canvas material produced by{' '}
+					<b>Hahnemühle</b>, a German manufacturer known worldwide for premium
+					fine-art papers and canvases. The canvas is acid-free and lignin-free,
+					which prevents yellowing over time. It is typically archival quality,
+					meaning it can last 60–100+ years if properly cared for.
 					<br /> <br />
 					Moreover, the <b>tubes</b> are made from high-quality cardboard that
 					can easily be recycled multiple times. The tube manufacturers have
@@ -31,30 +32,6 @@ const SustenabilityPage = () => {
 					artworks is not entirely ecological yet, but we aim to reach a higher
 					level of sustainability by replacing plastic elements (bubble wrap,
 					bags, tapes).
-				</p>
-			</div>
-
-			<div className={styles.text}>
-				<h4>
-					<b>FOREST STEWARDSHIP COUNCIL® (FSC®)</b>
-				</h4>
-
-				<p className={styles.subheadline}>
-					The Forest Stewardship Council® (FSC®) is a global, non-profit
-					organization dedicated to promoting responsible forest management.
-					FSC® defines standards based on agreed principles for responsible
-					forest management, supported by environmental, social, and economic
-					stakeholders. FSC® helps care for forests, people, and wildlife.
-					<p className={styles.italic}>
-						<a href='https://fsc.org/en'>
-							To learn more about the Forest Stewardship Council®, visit
-							www.fsc.org
-						</a>
-					</p>
-					Since most of our products are made from wood, obtaining FSC®
-					certification is crucial for us. More importantly, by choosing FSC®
-					certified products, customers support the responsible management of
-					the world’s forests.
 				</p>
 			</div>
 		</div>

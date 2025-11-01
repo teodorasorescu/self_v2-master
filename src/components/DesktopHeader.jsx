@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { useState } from 'react';
 import styles from '../styling/header.module.scss';
 import Badge from '@mui/material/Badge';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
@@ -36,14 +36,6 @@ const DesktopHeader = () => {
 		{
 			name: 'Salt Water Collection',
 			path: '/journal/daia-grigore',
-		},
-		{
-			name: 'About Us',
-			path: '/about-us',
-		},
-		{
-			name: 'Artsy Club',
-			path: '/artsy-club',
 		},
 	];
 
@@ -117,7 +109,7 @@ const DesktopHeader = () => {
 					<a href='/'>
 						<img
 							src={selfLogo}
-							width='200'
+							width='130'
 							alt='Self Posters Logo - Embrace yourself with colors'
 						/>
 					</a>
@@ -174,6 +166,13 @@ const DesktopHeader = () => {
 						onMouseOver={() => setSubHeadersOff()}
 					>
 						Canvas Art Prints
+					</a>
+					<a
+						className={styles.link}
+						href='/sustainability'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Sustainability
 					</a>
 				</div>
 			</div>

@@ -1,4 +1,3 @@
-import { React } from 'react';
 import classes from './artist.journal.item.module.scss';
 import ArtistsPostersLoading from '../../posters/ArtistsPostersLoading';
 import useMediaQuery from '@mui/material/useMediaQuery';

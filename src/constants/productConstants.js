@@ -88,8 +88,8 @@ export const clayObjects = [
 export const summerProducts = [
 	'Mes Tabi',
 	'Definitely a Pisces',
-	'Când nu mai poți...mai poți un pic...',
-	'Mai mult decât îmi trebuie, mai puțin decât vreau.',
+	'Cinnamon Rolls',
+	'Cozonac',
 	'Le Joyeux Trench-Coat',
 	'Le cardigan gourmand',
 	'Budapest',

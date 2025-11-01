@@ -25,7 +25,7 @@ export const orderQuestions = [
 	{
 		title: 'How long does it take to receive my order?',
 		content:
-			'Printing and packaging may take up to 5 business days as items are printed upon order receipt. Our courier service makes every effort to deliver your order within 1-2 business days from shipment.',
+			'All our prints are made-to-order as part of our sustainable approach. Please allow up to 5 business days for production, plus 1-2 business days for shipping. You can expect to receive your order within 6-7 business days total.',
 	},
 	{
 		title: "What should I do if my order hasn't arrived?",

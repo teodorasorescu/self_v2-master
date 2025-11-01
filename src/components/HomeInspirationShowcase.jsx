@@ -8,12 +8,12 @@ export const HomeInspirationShowcase = () => {
 			<div className='imagesContainer'>
 				{inspoHome.map((c, i) => {
 					return (
-						<a key={i} href='/journal/inspiration' className='imgItem'>
+						<div key={i} className='imgItem'>
 							<div
 								className='imgBox'
 								style={{ backgroundImage: `${c.image}` }}
 							></div>
-						</a>
+						</div>
 					);
 				})}
 			</div>
