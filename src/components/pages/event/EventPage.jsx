@@ -31,7 +31,7 @@ const EventPage = () => {
 				</h3>
 				<EventForm onSuccess={() => setSignedUp(true)} />
 
-				<SelectedForYouPage data={summerProducts} title='TRENDING TODAY' />
+				<SelectedForYouPage data={summerProducts} title='Trending Today' />
 			</div>
 		);
 	}

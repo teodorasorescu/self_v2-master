@@ -1,17 +1,17 @@
 .productSlider {
 	position: relative;
-
-	padding: 3%;
 	& h1 {
-		font-family: 'Frank Ruhl Libre', serif;
+		font-family: 'Poppins', serif;
 		font-optical-sizing: auto;
-		font-size: 1.8rem;
-		font-style: italic;
+		font-size: 1.3rem;
 		text-align: left;
+		margin-top: 2%;
+		margin-left: 2%;
 	}
+
 	.swiperContainer {
 		position: relative;
-		padding: 5%;
+		padding: 2%;
 	}
 	.navButton {
 		position: absolute;

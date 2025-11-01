@@ -175,13 +175,6 @@ const DesktopHeader = () => {
 					>
 						Canvas Art Prints
 					</a>
-					<a
-						className={styles.link}
-						href='/customized-aura-portraits'
-						onMouseOver={() => setSubHeadersOff()}
-					>
-						Customized Aura Portraits
-					</a>
 				</div>
 			</div>
 		</div>

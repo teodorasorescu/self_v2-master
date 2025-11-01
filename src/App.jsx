@@ -3,15 +3,11 @@ import './App.css';
 import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import ColorPickerGradient from './components/ColorPickerGradient';
 import { Cart } from './components/Cart';
 import { Checkout } from './components/Checkout';
 import { useStateContext } from './contexts/ContextProvider';
-import Inspiration from './components/Inspiration';
-import ColorPsychologyPage from './components/ColorPsychologyPage.jsx';
 import Footer from './components/Footer';
 import OrderConfirmation from './components/OrderConfirmation';
-import AddProduct from './components/AddProduct';
 import OurStoryPage from './components/OurStoryPage';
 import SustenabilityPage from './components/SustenabilityPage';
 import TermsAndConditions from './components/TermsAndConditions';
@@ -24,7 +20,6 @@ import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
 import PosterDetails from './components/features/posters/PosterDetails.jsx';
 import PostersPage from './components/pages/posters/PostersPage.jsx';
-import CustomPosterPage from './components/CustomPosterPage.jsx';
 import StickerDetails from './components/features/stickers/StickerDetails.jsx';
 import OurClubPage from './components/pages/ourclub/OurClubPage.jsx';
 import JournalPage from './components/pages/journal/principalPage/JournalPage.jsx';
@@ -78,18 +73,12 @@ function App() {
 					<Route path='*' element={<PageNotFound />} />
 					<Route path='/' element={<Home />} />
 					<Route path='/quiz' element={<QuizPage />} />
-					<Route path='/customization' element={<ColorPickerGradient />} />
-					<Route
-						path='/customized-aura-portraits'
-						element={<CustomPosterPage />}
-					/>
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
 
 					<>
 						<Route path='/journal' element={<JournalPage />} />
 						<Route path='/journal/gift-guide' element={<GiftGuide />} />
-						<Route path='/journal/inspiration' element={<Inspiration />} />
 						<Route
 							path='/journal/paint-and-sip-by-the-lake'
 							element={<PaintAndSipLake />}
@@ -98,15 +87,10 @@ function App() {
 							path='/journal/autumn-collection'
 							element={<AutumnCollectionArticle />}
 						/>
-						<Route
-							path='/journal/color-psychology'
-							element={<ColorPsychologyPage />}
-						/>
 					</>
 					<Route path='/event' element={<EventPage />} />
 
 					<Route path='/artsy-club' element={<OurClubPage />} />
-					<Route path='/aura-poster' element={<AddProduct />} />
 					<Route path='/order-confirmation' element={<OrderConfirmation />} />
 					<Route path='/about-us' element={<OurStoryPage />} />
 					<Route path='/sustainability' element={<SustenabilityPage />} />

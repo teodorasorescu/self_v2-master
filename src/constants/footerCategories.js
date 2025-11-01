@@ -9,10 +9,6 @@ export const infoCategories = [
 		link: '/sustainability',
 	},
 	{
-		name: 'Inspiration',
-		link: '/journal/inspiration',
-	},
-	{
 		name: 'FAQ',
 		link: '/faq',
 	},

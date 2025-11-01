@@ -260,7 +260,7 @@ export const SmartphoneCart = ({ currency }) => {
 					</Paper>
 				</ThemeProvider>
 			)}
-			<SelectedForYouPage data={summerProducts} title='TRENDING TODAY' />
+			<SelectedForYouPage data={summerProducts} title='Trending Today' />
 		</div>
 	);
 };

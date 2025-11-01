@@ -1,5 +1,4 @@
 import styles from '../styling/self.mission.module.scss';
-import { headline } from '../constants/homeMission';
 
 const SelfMission = () => {
 	return (

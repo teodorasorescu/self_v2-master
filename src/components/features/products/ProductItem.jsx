@@ -28,9 +28,12 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 				onMouseEnter={() => setHovered(!smartphoneScreen)}
 				onMouseLeave={() => setHovered(false)}
 			>
-				<LazyLoadImage
+				<img
 					src={imgTitle}
 					effect='blur'
+					fetchPriority='high'
+					loading='eager'
+					decoding='async'
 					className={`${classes.pictureContainer} ${
 						hovered && hasHoverImg ? classes.fadeOut : ''
 					}`}

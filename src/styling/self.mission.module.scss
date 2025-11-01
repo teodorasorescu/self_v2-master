@@ -3,11 +3,9 @@
 	flex-direction: column;
 	height: auto;
 	border-radius: 60px;
-	margin-right: 3%;
-	margin-left: 3%;
 	margin-top: 3%;
 	margin-bottom: 3%;
-	width: 90vw;
+	width: 95vw;
 
 	.imgContainer {
 		margin-right: 3%;
@@ -26,10 +24,9 @@
 		padding-left: 3%;
 		margin-right: 2%;
 		> h3 {
-			font-family: 'Frank Ruhl Libre', serif;
-			font-style: italic;
-
+			font-family: 'Poppins', serif;
 			color: #7684ff;
+			font-size: 1.3rem;
 		}
 		.subheadline {
 			@media screen and (max-width: 1024px) {

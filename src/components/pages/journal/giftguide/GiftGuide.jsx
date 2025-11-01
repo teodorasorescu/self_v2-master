@@ -148,13 +148,6 @@ const GiftGuide = () => {
 					))}
 				</div>
 			</>
-			<>
-				<h2>
-					And don't forget! <br /> The customized posters are the best for
-					authentic gifts!{' '}
-				</h2>
-				<Button msg={'Customized Aura Portraits'} onClick={navigateToCustom} />
-			</>
 		</div>
 	);
 };

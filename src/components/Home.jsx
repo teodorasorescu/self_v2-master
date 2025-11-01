@@ -28,7 +28,8 @@ const Home = () => {
 								src={photo.src}
 								alt={photo.alt || `Photo ${index + 1}`}
 								className={styles.photoGridImg}
-								loading='lazy'
+								fetchpriority='high'
+								loading='eager'
 							/>
 							{index === 0 && (
 								<div className={styles.photoOverlay}>
@@ -69,8 +70,9 @@ const Home = () => {
 					}
 				</div>
 			)}
+
 			<SelfMission />
-			<SelectedForYouPage data={summerProducts} title='TRENDING TODAY' />
+			<SelectedForYouPage data={summerProducts} title='Trending Today' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
 					<ButtonHomePage msg='View All' />
