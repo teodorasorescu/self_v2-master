@@ -82,7 +82,7 @@ const FrameAndChassisSelect = ({
 			</div>
 
 			<div className='frameContainer'>
-				<h6>Streched Canvas on Wooden Frame</h6>
+				<h6>Ready to Hang?</h6>
 				<select
 					id='chassis'
 					name='chassis'
@@ -103,7 +103,7 @@ const FrameAndChassisSelect = ({
 					)}
 				</select>
 			</div>
-			<div className='frameContainer'>
+			{/* <div className='frameContainer'>
 				<h6>Natural Wooden Frames</h6>
 				<select
 					id='culoare_ramă'
@@ -114,7 +114,7 @@ const FrameAndChassisSelect = ({
 				>
 					<option value='none'>No Frame</option>
 				</select>
-			</div>
+			</div> */}
 		</div>
 	);
 };

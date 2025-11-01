@@ -164,7 +164,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																	</p>
 																	{row['chassis'] === true && (
 																		<p className={styles.frame}>
-																			Sketched Canvas
+																			Ready to Hang
 																		</p>
 																	)}
 																	{row['frameColor'] !== 'none' && (

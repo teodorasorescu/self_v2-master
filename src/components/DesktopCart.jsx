@@ -151,7 +151,7 @@ export const DesktopCart = ({ currency }) => {
 																		</p>
 																		{row['chassis'] === true && (
 																			<p className={styles.frame}>
-																				Stretched Canvas
+																				Ready to Hang
 																			</p>
 																		)}
 																		{row['frameColor'] !== 'none' && (

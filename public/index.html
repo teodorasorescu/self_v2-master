@@ -6,11 +6,11 @@
     <meta name="theme-color" content="#000000" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore our stunning selection of canvas art prints and frames in premium quality. Fast Delivery. Secure Payments." />
+    <meta name="description" content="Explore our stunning selection of canvas art prints in premium quality. Fast Delivery. Secure Payments." />
     <meta name="author" content="Self Posters" />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="SELF POSTERS | Canvas Art Prints | Buy Canvas Art Prints Online" />
-    <meta property="og:description" content="Explore our stunning selection of canvas art prints and frames in premium quality. Fast Delivery. Secure Payments." />
+    <meta property="og:description" content="Explore our stunning selection of canvas art prints made by emerging artists. Fast Delivery. Secure Payments." />
     <meta property="og:url" content="https://self-posters.com" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ro_RO" />
@@ -18,9 +18,31 @@
     
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="https://self-posters.com/favicon.png">
-    <!-- Preloading and Preconnecting -->
+    
+    <!-- PERFORMANCE OPTIMIZATIONS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.sameday.ro">
+    <link rel="preconnect" href="https://d2inw1jvxszbn9.cloudfront.net">
+    <link rel="dns-prefetch" href="https://d2inw1jvxszbn9.cloudfront.net">
+    
+   
+    <!-- Preload critical image -->
+    <link 
+      rel="preload" 
+      href="https://d2inw1jvxszbn9.cloudfront.net/iuliaVerzanCollection.webp" 
+      as="image"
+      fetchpriority="high"
+    >
+    
+    <!-- Async CSS -->
+    <link 
+      rel="preload" 
+      href="/css/main.9a67c34a.css" 
+      as="style" 
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <noscript><link rel="stylesheet" href="/css/main.9a67c34a.css"></noscript>
 
     <!-- Manifest and Icons -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -43,14 +65,20 @@
       ]
     }
     </script>
-  <meta name="google-site-verification" content="cAImYZQEolRYmfNdALNG_8Ho20Detd222k-tIojY4rY" />
-  <meta name="p:domain_verify" content="b90309fc76b92b88bc975903882112d7"/>
-</head>
+    
+    <meta name="google-site-verification" content="cAImYZQEolRYmfNdALNG_8Ho20Detd222k-tIojY4rY" />
+    <meta name="p:domain_verify" content="b90309fc76b92b88bc975903882112d7"/>
+  </head>
+  
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <!-- External Script -->
-    <script src="https://cdn.sameday.ro/locker-plugin/lockerpluginsdk.js"></script>
+    <!-- Async External Script -->
+    <script 
+      src="https://cdn.sameday.ro/locker-plugin/lockerpluginsdk.js" 
+      async 
+      defer
+    ></script>
   </body>
 </html>
