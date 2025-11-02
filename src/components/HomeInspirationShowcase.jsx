@@ -12,6 +12,7 @@ export const HomeInspirationShowcase = () => {
 							<div
 								className='imgBox'
 								style={{ backgroundImage: `${c.image}` }}
+								loading='lazy'
 							></div>
 						</div>
 					);

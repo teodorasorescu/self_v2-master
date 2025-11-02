@@ -8,19 +8,17 @@
 		flex-direction: column;
 
 		.imgContainer {
-			width: 50%;
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
 			transition: all 0.05s;
-			height: 350px;
+			max-width: 99vw;
 			align-self: center;
 			display: flex;
 			justify-content: center;
 
 			> img {
 				align-self: center;
-				width: 300px;
 				height: auto;
 			}
 		}

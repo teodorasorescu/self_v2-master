@@ -58,12 +58,6 @@ const PaintAndSipLake = () => {
 				width={350}
 				alt='Guests painting and sipping cocktails by the lake – Creative workshop with canvases, pastel table décor, and laughter shared in the summer evening light.'
 			/>{' '}
-			<LazyLoadImage
-				className={classes.image}
-				src={ps2}
-				width={350}
-				alt='Pop-up art display with summer poster collection – Table set up on sand with framed posters, colorful prints, and fresh flowers from Obor Market.'
-			/>
 			<>
 				<h2>
 					This little pop-up table was filled with canvas prints of artists such

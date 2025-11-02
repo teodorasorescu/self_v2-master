@@ -16,8 +16,44 @@ const inspo11 = S3_BUCKET + '/homePageSmartphone.jpg';
 
 const homeImg1 = S3_BUCKET + '/iuliaVerzanCollection.webp';
 const homeImg2 = S3_BUCKET + '/chairs.webp';
+const inspo12 = S3_BUCKET + '/cat.webp';
+const inspo13 = S3_BUCKET + '/anawithchair.webp';
+const inspo14 = S3_BUCKET + '/mestabi2.webp';
+const inspo15 = S3_BUCKET + '/trench.webp';
+const inspo16 = S3_BUCKET + '/Artboard+1hover5.webp';
+const inspo17 = S3_BUCKET + '/Artboard+1hover13.webp';
 
 export const inspoHome = [
+	{
+		image: `url(${inspo13})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo14})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo15})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo16})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo17})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
+	{
+		image: `url(${inspo12})`,
+		heading: 'Slide Four',
+		desc: 'This is the description of slide two Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quos quas, voluptatum nesciunt illum exercitationem.',
+	},
 	{
 		image: `url(${inspo3})`,
 		heading: 'Slide Four',

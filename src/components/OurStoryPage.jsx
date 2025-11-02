@@ -3,6 +3,7 @@ import styles from '../styling/our.story.page.module.scss';
 import { S3_BUCKET } from '../constants/links';
 
 const mottoImg = S3_BUCKET + '/motto.webp';
+const imgTitle = S3_BUCKET + '/aboutTeo.webp';
 
 const OurStoryPage = () => {
 	return (
@@ -31,7 +32,7 @@ const OurStoryPage = () => {
 					</p>
 				</div>{' '}
 				<div className={styles.imgContainer}>
-					<img src={mottoImg} alt='Embrace yourself with colors' />
+					<img src={imgTitle} width={400} />
 				</div>
 				<div className={styles.text}>
 					<h4>
