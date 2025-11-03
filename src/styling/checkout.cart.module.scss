@@ -10,7 +10,7 @@
 		}
 
 		.discountedPrice {
-			color: #7684ff;
+			color: #420000;
 		}
 		.priceContainer {
 			display: flex;
@@ -21,9 +21,9 @@
 				display: flex;
 				flex-direction: row;
 				font-size: 90%;
-				color: #7684ff;
+				color: #420000;
 				.pRightContainer {
-					font-weight: 600;
+					font-weight: 500;
 					text-align: right;
 					position: absolute;
 					left: 85%;
@@ -36,7 +36,7 @@
 				flex-direction: row;
 				font-size: 90%;
 				.pRightContainer {
-					font-weight: 600;
+					font-weight: 500;
 					text-align: right;
 					position: absolute;
 					left: 85%;
@@ -54,14 +54,14 @@
 				padding: 0px 0 0px 15px;
 				display: flex;
 				flex-direction: row;
-				font-weight: 600;
+				font-weight: 500;
 				font-size: large;
 
 				.totalValueContainer {
 					text-align: right;
 					position: absolute;
 					left: 81%;
-					font-weight: 600;
+					font-weight: 500;
 				}
 			}
 		}
@@ -95,7 +95,7 @@
 				font-size: small;
 			}
 			.discountedPrice {
-				color: #7684ff;
+				color: #420000;
 			}
 			@media screen and (width: 1024px) {
 				width: 80vw;
@@ -114,9 +114,9 @@
 					display: flex;
 					flex-direction: row;
 					font-size: 90%;
-					color: #7684ff;
+					color: #420000;
 					.pRightContainer {
-						font-weight: 600;
+						font-weight: 500;
 						text-align: right;
 						position: absolute;
 						@media screen and (max-width: 600px) {
@@ -168,7 +168,7 @@
 					padding: 0px 0 0px 15px;
 					display: flex;
 					flex-direction: row;
-					font-weight: 600;
+					font-weight: 500;
 					font-size: large;
 
 					.totalValueContainer {

@@ -242,14 +242,13 @@ export const SmartphoneCart = ({ currency }) => {
 								</Button>
 								<Button
 									style={{
-										fontStyle: 'italic',
 										textDecoration: 'none',
 										width: '100vw',
 										paddingBottom: '10%',
 									}}
 								>
 									<Link
-										to='/'
+										to='/canvas-art-prints'
 										style={{ textDecoration: 'none', color: 'black' }}
 									>
 										Get More Posters

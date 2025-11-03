@@ -41,7 +41,6 @@
 
 		.pTotal {
 			position: relative;
-			font-style: italic;
 			padding-right: 1%;
 			@media screen and (width: 1024px) {
 			}
@@ -64,51 +63,51 @@
 			}
 		}
 	}
-
 	.buttonContainer {
-		position: relative;
 		display: flex;
 		flex-direction: column;
+		gap: 12px;
+		align-items: flex-end; // ✅ stays aligned to the right
 
 		font-family: 'Poppins', sans-serif;
-		float: right;
-		color: black;
-		justify-items: space-between;
-		.checkoutContainer {
-			background-color: rgba(248, 221, 170, 0.2);
-			font-weight: 600;
-			border: 2px solid rgba(248, 221, 170, 0.8);
-			color: black;
-			border-radius: 10px;
-			transition: all 0.1s ease;
+		margin-top: 12px;
 
-			@media screen and (min-width: 1025px) {
-				width: 30vw;
-				height: 60px;
-				font-size: 20px;
-			}
-			@media screen and (min-width: 880px) {
-				font-size: 20px;
-				width: 35vw;
+		button {
+			cursor: pointer;
+			padding: 14px 20px;
+			border-radius: 12px;
+			font-weight: 500;
+			font-size: 16px;
+			width: 100%; // same width for both buttons
+			max-width: 300px; // ✅ same max width so they match
+			transition: 0.2s ease;
+		}
+
+		.checkoutButton {
+			background-color: #420000;
+			color: #fff7e3;
+
+			&:hover {
+				background-color: rgba(66, 0, 0, 0.85);
 			}
 		}
 
-		.checkoutContainer:hover {
-			text-decoration: none;
-			transition: none;
-			background-color: rgba(248, 221, 170, 0.8);
-		}
-
-		.shopContainerButton {
-			@media screen and (min-width: 880px) {
-				width: 35vw;
+		.shopButton {
+			background-color: #f8ddaa;
+			color: #420000;
+			border-radius: 12px;
+			&:hover {
+				background-color: rgba(248, 221, 170, 0.85);
 			}
+		}
+	}
 
-			width: 30vw;
-			font-style: italic;
-			text-decoration: none;
-			font-size: 20px;
-			color: black;
+	/* Optional: larger on desktop */
+	@media (min-width: 1024px) {
+		.buttonContainer button {
+			font-size: 18px;
+			padding: 16px 22px;
+			max-width: 340px;
 		}
 	}
 }

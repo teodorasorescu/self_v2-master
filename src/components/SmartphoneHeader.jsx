@@ -225,7 +225,7 @@ const SmartphoneHeader = () => {
 							badgeContent={Number.isNaN(itemCount) ? 0 : itemCount}
 							sx={{
 								'& .MuiBadge-colorPrimary': {
-									backgroundColor: '#7684ff',
+									backgroundColor: '#420000',
 									color: '#fff7e3',
 								},
 							}}

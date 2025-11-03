@@ -1,29 +1,31 @@
 .container {
 	h3 {
 		font-size: 2rem;
-		color: black;
+		color: rgba(248, 221, 170, 0.8);
 	}
 
 	.inputContainer {
 		height: auto;
 		padding: 1%;
-		background-color: rgba(248, 221, 170, 0.2);
-		border: 2px solid rgba(248, 221, 170, 0.8);
+		background-color: #420000;
+		border: 2px solid #420000;
 		border-radius: 10px;
-		color: black;
+		color: rgba(248, 221, 170, 0.8);
 		&:hover {
-			background-color: rgba(248, 221, 170, 0.8);
+			background-color: rgba(66, 0, 0, 0.85);
+
 			transition: background-color 0.3s ease;
 		}
 	}
 
 	.formInput {
-		border: 2px solid rgba(248, 221, 170, 0.8);
+		border: 2px solid #420000;
 		border-radius: 10px;
+		text-decoration: none;
 	}
 
 	.buttonContainer {
-		font-weight: 600;
-		color: black;
+		font-weight: 500;
+		color: #fff7e3;
 	}
 }

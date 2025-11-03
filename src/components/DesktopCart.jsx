@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Button from '@mui/material/Button';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -214,28 +214,24 @@ export const DesktopCart = ({ currency }) => {
 							</Table>
 						</TableContainer>
 						<div className={styles.textContainer}>
-							<p className={styles.pTotal} align='right'>
-								Total: {'' + total.toFixed(1) + currency}
+							<p className={styles.pTotal}>
+								Total: {total.toFixed(1) + currency}
 							</p>
 						</div>
+
 						<div className={styles.buttonContainer}>
 							<DiscountForm />
-							<Button
-								className={styles.checkoutContainer}
-								style={{ textDecoration: 'none', color: 'black' }}
-								onClick={() => {
-									goToCheckout();
-								}}
-							>
+
+							<Button className={styles.checkoutButton} onClick={goToCheckout}>
 								Checkout
 							</Button>
-							<Button className={styles.shopContainerButton}>
-								<a
-									href='/canvas-art-prints'
-									style={{ textDecoration: 'none', color: 'black' }}
-								>
-									Get more posters
-								</a>
+
+							<Button
+								className={styles.shopButton}
+								component='a'
+								href='/canvas-art-prints'
+							>
+								Get more posters
 							</Button>
 						</div>
 					</Paper>

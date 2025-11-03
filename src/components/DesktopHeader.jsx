@@ -122,7 +122,7 @@ const DesktopHeader = () => {
 								)}
 								sx={{
 									'& .MuiBadge-colorPrimary': {
-										backgroundColor: '#7684ff',
+										backgroundColor: '#420000',
 										color: '#fff7e3', // Set text color for better contrast
 									},
 								}}

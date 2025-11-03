@@ -48,15 +48,14 @@
 
 		cursor: pointer;
 		text-decoration: none;
-		background-color: rgba(248, 221, 170, 0.2);
-		font-weight: 600;
-		border: 2px solid rgba(248, 221, 170, 0.8);
-		color: black;
+		font-weight: 500;
+		background-color: #420000;
+		color: #fff7e3;
 	}
 
 	.checkoutButton:hover {
 		text-decoration: none;
 		transition: none;
-		background-color: rgba(248, 221, 170, 0.8);
+		background-color: rgba(66, 0, 0, 0.85);
 	}
 }
