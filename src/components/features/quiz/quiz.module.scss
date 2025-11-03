@@ -44,16 +44,16 @@ $text: #1f1f1f;
 	> h1 {
 		font-family: 'Poppins', serif;
 		margin-bottom: 6%;
+		font-weight: 400;
+		font-size: 1.6rem;
 	}
 
 	.nextButton {
 		cursor: pointer;
-		margin-top: 20%;
+		margin-top: 10%;
 		transition: background-color 0.3s;
 		width: 6vw;
 		height: 3vw;
-		padding: 3%;
-
 		@media screen and (max-width: 1024px) {
 			width: 20vw;
 			height: 10vw;
@@ -100,7 +100,7 @@ $text: #1f1f1f;
 	}
 
 	.selectedOption {
-		border: 3px solid #b1b9ff !important;
+		border: 3px solid #420000 !important;
 		color: #1f1f1f;
 		background: #ffdb93;
 	}
