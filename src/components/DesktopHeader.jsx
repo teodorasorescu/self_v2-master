@@ -1,14 +1,11 @@
 import { useState } from 'react';
 import styles from '../styling/header.module.scss';
 import Badge from '@mui/material/Badge';
-import { TIKTOK_LINK } from '../constants/socialMediaLinks';
-import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import Subheader from './Subheader';
 import { Helmet } from 'react-helmet';
 import { S3_BUCKET } from '../constants/links';
+import Banner from './ui/banner/Banner';
 
-const instaIcon = S3_BUCKET + '/instagram_logo.webp';
-const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
 const selfLogo = S3_BUCKET + '/self_logo.webp';
 const shoppingBagIcon = S3_BUCKET + '/box.webp';
 
@@ -73,36 +70,7 @@ const DesktopHeader = () => {
 				/>
 			</Helmet>
 			<div className={styles.promotionTextContainer}>
-				<div className={styles.socialMediaLogo}>
-					<a href={INSTAGRAM_LINK}>
-						<img
-							className={styles.socialMediaIcons}
-							src={instaIcon}
-							alt='instagram'
-						/>
-					</a>
-					<a href={TIKTOK_LINK}>
-						<img
-							className={styles.socialMediaIcons}
-							src={tiktokIcon}
-							alt='tiktok'
-						/>
-					</a>
-				</div>
-
-				<p>
-					Get BLACK FRIDAY 35% SALE before anyone by joining{' '}
-					<a href='/artsy-club'>our club</a>!{' '}
-				</p>
-				<div className={styles.contactText}>
-					<a style={{ textDecoration: 'none', color: 'black' }} href='/faq'>
-						<p>FAQ&nbsp;&nbsp;</p>
-					</a>
-
-					<a style={{ textDecoration: 'none', color: 'black' }} href='/contact'>
-						<p>Contact&nbsp;&nbsp;</p>
-					</a>
-				</div>
+				<Banner />
 			</div>
 			<div className={styles.stillPositionContainer}>
 				<div className={styles.upperContainer}>

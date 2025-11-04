@@ -73,9 +73,7 @@ const Home = () => {
 					}
 				</div>
 			)}
-
 			<SelfMission />
-			<Banner />
 			<SelectedForYouPage data={summerProducts} title='Trending Today' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
@@ -86,11 +84,10 @@ const Home = () => {
 			<SelectedForYouPage
 				data={selectedShowcaseProducts}
 				title='Selected for you'
-			/>
+			/>{' '}
+			<Banner />
 			{/* <PostersHomeLoading data={clayObjects} /> */}
-
 			<VisualImages />
-
 			<Reviews />
 			<div className={styles.feedbackContainer}>
 				<p>We'd love to hear your thoughts! How are we doing?</p>

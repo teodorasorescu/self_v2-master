@@ -15,8 +15,8 @@ const PostersDetailsPage = ({ posters }) => {
 				balance nostalgia with a distinctly modern sensibility, transforming
 				ordinary rooms into vibrant expressions of style and creativity.
 			</h2>
-			<Banner />
 			<PostersList posters={posters} />
+			<Banner />
 		</div>
 	);
 };

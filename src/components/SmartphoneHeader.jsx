@@ -16,6 +16,7 @@ import { S3_BUCKET } from '../constants/links';
 import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import SubheaderDropdown from './features/subheaderSmartphone/SubheaderDropdown';
+import Banner from './ui/banner/Banner';
 
 const instaIcon = S3_BUCKET + '/instagram_logo.webp';
 const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
@@ -113,18 +114,7 @@ const SmartphoneHeader = () => {
 	return (
 		<div>
 			<div className={styles.promotionTextContainer}>
-				<div className={styles.marquee}>
-					<div className={styles.marqueeInner}>
-						<p>
-							Get BLACK FRIDAY 35% SALE before anyone by joining{' '}
-							<a href='artsy-club'>our club</a>
-						</p>
-						<p>
-							Get BLACK FRIDAY 35% SALE before anyone by joining{' '}
-							<a href='artsy-club'>our club</a>
-						</p>
-					</div>
-				</div>
+				<Banner />
 			</div>
 			<Helmet>
 				<link
