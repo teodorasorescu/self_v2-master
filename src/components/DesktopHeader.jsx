@@ -91,7 +91,7 @@ const DesktopHeader = () => {
 				</div>
 
 				<p>
-					Are u artsy enough? Get 10% off by joining{' '}
+					Get BLACK FRIDAY 35% SALE before anyone by joining{' '}
 					<a href='/artsy-club'>our club</a>!{' '}
 				</p>
 				<div className={styles.contactText}>

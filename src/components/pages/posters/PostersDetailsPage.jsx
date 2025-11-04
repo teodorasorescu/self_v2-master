@@ -1,5 +1,6 @@
 import classes from '../../../styling/posters.page.details.module.scss';
 import PostersList from '../../features/postersList/PostersList';
+import Banner from '../../ui/banner/Banner';
 
 const PostersDetailsPage = ({ posters }) => {
 	return (
@@ -14,6 +15,7 @@ const PostersDetailsPage = ({ posters }) => {
 				balance nostalgia with a distinctly modern sensibility, transforming
 				ordinary rooms into vibrant expressions of style and creativity.
 			</h2>
+			<Banner />
 			<PostersList posters={posters} />
 		</div>
 	);

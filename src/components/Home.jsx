@@ -12,6 +12,8 @@ import Reviews from './features/reviews/Reviews';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { HOME_PHOTOS } from '../constants/inspoHome';
 import ButtonHomePage from './ui/buttonHomePage/ButtonHomePage';
+import Banner from './ui/banner/Banner';
+import DateCountdown from './ui/countdown/DateCountdown';
 
 const Home = () => {
 	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
@@ -32,7 +34,8 @@ const Home = () => {
 							{index === 0 && (
 								<div className={styles.photoOverlay}>
 									<div className={styles.overlayText}>
-										<h1>Autumn Collection</h1>
+										<h1>BLACK FRIDAY 35% SALE</h1>
+										<DateCountdown targetDate='2025-11-07T00:00:00' />
 										<p>
 											Try our Art Finder Quiz and get matched with a
 											personalised selection of art prints that fit your style.
@@ -53,7 +56,9 @@ const Home = () => {
 					{
 						<div className={styles.introductionContainer}>
 							<div className={styles.mobileOnlyText}>
-								<h1>Autumn Collection</h1>
+								<h1>BLACK FRIDAY 35% SALE</h1>
+								<DateCountdown targetDate='2025-11-07T00:00:00' />
+
 								<p>
 									Try our Art Finder Quiz and get matched with a personalised
 									selection of art prints that fit your style.
@@ -70,6 +75,7 @@ const Home = () => {
 			)}
 
 			<SelfMission />
+			<Banner />
 			<SelectedForYouPage data={summerProducts} title='Trending Today' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>

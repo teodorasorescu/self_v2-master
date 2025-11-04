@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import classes from './countdown.module.scss';
-import Button from '../../ui/button/Button';
+import Button from '../button/Button';
 import { useNavigate } from 'react-router-dom';
 const Countdown = ({ targetDate }) => {
 	const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(targetDate));

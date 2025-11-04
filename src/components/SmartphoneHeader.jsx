@@ -116,11 +116,11 @@ const SmartphoneHeader = () => {
 				<div className={styles.marquee}>
 					<div className={styles.marqueeInner}>
 						<p>
-							Are u artsy enough? Get 10% off by joining{' '}
+							Get BLACK FRIDAY 35% SALE before anyone by joining{' '}
 							<a href='artsy-club'>our club</a>
 						</p>
 						<p>
-							Are u artsy enough? Get 10% off by joining{' '}
+							Get BLACK FRIDAY 35% SALE before anyone by joining{' '}
 							<a href='artsy-club'>our club</a>
 						</p>
 					</div>
