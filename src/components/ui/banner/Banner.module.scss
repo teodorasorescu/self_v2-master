@@ -9,7 +9,7 @@
 
 .marqueeInner {
 	display: flex;
-	animation: marqueeFlow 5s linear infinite;
+	animation: marqueeFlow 20s linear infinite;
 	animation-play-state: running;
 	will-change: transform;
 }
@@ -26,7 +26,11 @@
 	color: #fff7e3;
 	font-weight: 500;
 }
-
+@media screen and (max-width: 1024px) {
+	.marqueeInner {
+		animation: marqueeFlow 5s linear infinite; // faster on small screens
+	}
+}
 @keyframes marqueeFlow {
 	0% {
 		transform: translateX(0);
