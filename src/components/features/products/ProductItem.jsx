@@ -30,10 +30,6 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 			>
 				<img
 					src={imgTitle}
-					effect='blur'
-					fetchPriority='high'
-					loading='eager'
-					decoding='async'
 					className={`${classes.pictureContainer} ${
 						hovered && hasHoverImg ? classes.fadeOut : ''
 					}`}
