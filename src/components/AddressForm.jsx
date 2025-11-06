@@ -9,6 +9,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import {
 	calculateTotalPrice,
 	computeProductsLength,
+	countryWithSameday,
 	getCurrencyByCountry,
 	getRegions,
 } from '../constants/utils';
@@ -25,7 +26,6 @@ import { useCountry } from '../contexts/CountryProvider';
 export const AddressForm = () => {
 	const { customer, setCustomer } = useStateContext();
 	const { itemCount, setItemCount } = useStateContext();
-	const [errors, setErrors] = useState({});
 
 	const localStoreProducts = localStorage.getItem('products');
 	const storedProducts = JSON.parse(localStoreProducts);
@@ -35,7 +35,6 @@ export const AddressForm = () => {
 	const setField = (event) => {
 		setCustomer({ ...customer, [event.target.name]: event.target.value });
 	};
-
 	const smartphoneScreen = useMediaQuery('max-width:1025px');
 	const { countryCode } = useCountry();
 	const currency = getCurrencyByCountry(countryCode);
@@ -222,20 +221,34 @@ export const AddressForm = () => {
 							<div className='invalid-feedback'>Country Required</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
-							<select
-								className='form-select'
-								id='state'
-								name='state'
-								defaultValue={customer.state}
-								onChange={setField}
-								style={{ height: heightT }}
-								required
-							>
-								<option style={{ color: 'grey' }}>County</option>
-								{getRegions(customer.country).map((state, index) => {
-									return <option key={index}>{state}</option>;
-								})}
-							</select>
+							{countryWithSameday.includes(customer.country) ? (
+								<select
+									className='form-select'
+									id='state'
+									name='state'
+									defaultValue={customer.state}
+									onChange={setField}
+									style={{ height: heightT }}
+									required
+								>
+									<option style={{ color: 'grey' }}>County</option>
+									{getRegions(customer.country).map((state, index) => (
+										<option key={index}>{state}</option>
+									))}
+								</select>
+							) : (
+								<input
+									type='text'
+									className='form-control'
+									id='state'
+									name='state'
+									value={customer.state}
+									onChange={setField}
+									placeholder='State / Region'
+									style={{ height: heightT }}
+									required
+								/>
+							)}
 							<div className='invalid-feedback'>County Required</div>
 						</div>
 
@@ -288,7 +301,7 @@ export const AddressForm = () => {
 							<div className='invalid-feedback'>Phone Required</div>
 						</div>
 					</div>
-					<Shipping />
+					<Shipping country={customer.country} />
 
 					<div className='form-check' style={{ paddingBottom: '2%' }}>
 						<input

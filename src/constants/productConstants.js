@@ -172,29 +172,29 @@ export const posterPrices = new Map([
 	[
 		'13x18cm',
 		new Map([
-			[60, 40],
-			[62, 62],
+			[60, { original: 40, discount35: 26 }],
+			[62, { original: 62, discount35: 40 }],
 		]),
 	],
 	[
 		'21x30cm',
 		new Map([
-			[60, 60],
-			[62, 159],
+			[60, { original: 60, discount35: 39 }],
+			[62, { original: 159, discount35: 103 }],
 		]),
 	],
 	[
 		'30x40cm',
 		new Map([
-			[60, 90],
-			[62, 229],
+			[60, { original: 90, discount35: 59 }],
+			[62, { original: 229, discount35: 149 }],
 		]),
 	],
 	[
 		'50x70cm',
 		new Map([
-			[60, 150],
-			[62, 409],
+			[60, { original: 150, discount35: 97 }],
+			[62, { original: 409, discount35: 266 }],
 		]),
 	],
 ]);

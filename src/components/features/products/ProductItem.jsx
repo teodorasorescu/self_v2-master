@@ -13,6 +13,10 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	const imgTitle = S3_BUCKET + '/' + posterImg;
 	const imgHoverTitle = S3_BUCKET + '/' + product.hoverImgTitle;
+	const imgTitlePosterSmartphone =
+		S3_BUCKET + '/' + product.imgTitlePosterSmartphone;
+	const imageToShow = smartphoneScreen ? imgTitlePosterSmartphone : imgTitle;
+
 	const isArtist =
 		product.artist != undefined &&
 		product.artist.artist != undefined &&
@@ -20,7 +24,9 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 		product.artist.artist !== null;
 	const { countryCode } = useCountry();
 
+	const discountedPrice = getLocalizedPrice(40, countryCode);
 	const computedPrice = getLocalizedPrice(product.price, countryCode);
+
 	return (
 		<>
 			<div
@@ -29,12 +35,13 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 				onMouseLeave={() => setHovered(false)}
 			>
 				<img
-					src={imgTitle}
+					src={imageToShow}
 					className={`${classes.pictureContainer} ${
 						hovered && hasHoverImg ? classes.fadeOut : ''
 					}`}
 					alt={product.altDescription}
 				/>{' '}
+				<Tag title='35% OFF' />
 				{product.limitedEdition && <Tag title='Limited Edition' />}
 				{hasHoverImg && (
 					<LazyLoadImage
@@ -57,9 +64,21 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					{product.stock !== null && product.stock <= 0 ? (
 						<h4 className={classes.price}>Out of Stock</h4>
 					) : (
-						<h4 className={classes.price}>
-							From {computedPrice.price + ' ' + computedPrice.currency}
-						</h4>
+						<div>
+							<h4 style={{ color: 'red' }} className={classes.price}>
+								{'from ' +
+									discountedPrice.price +
+									' ' +
+									discountedPrice.currency +
+									' '}
+							</h4>{' '}
+							<h4
+								style={{ textDecoration: 'line-through' }}
+								className={classes.price}
+							>
+								{' ' + computedPrice.price + ' ' + computedPrice.currency}
+							</h4>{' '}
+						</div>
 					)}
 				</div>
 			</div>

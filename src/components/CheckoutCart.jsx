@@ -85,6 +85,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 	});
 
 	const calculateTotal = () => {
+		deliveryPrice = 0;
 		if (discount) {
 			return (total - price * discountNo + deliveryPrice).toFixed(1);
 		}
@@ -119,7 +120,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																			sx={{
 																				'& .MuiBadge-colorPrimary': {
 																					backgroundColor: '#420000',
-																					color: '#fff7e3', // Set text color for better contrast
+																					color: '#fff7e3',
 																				},
 																			}}
 																		>
@@ -202,9 +203,10 @@ export const CheckoutCart = ({ storedProducts }) => {
 
 					<div className={styles.pLeftContainer}>
 						<p align='left'>Shipping</p>
-						<p className={styles.pTransportContainer}>
+						{/* <p className={styles.pTransportContainer}>
 							&nbsp;{deliveryPrice.toFixed(1) + currency}
-						</p>
+						</p> */}
+						<p className={styles.pTransportContainer}>&nbsp;FREE</p>
 					</div>
 					<div className={styles.pTotalContainer}>
 						<p align='left'>Total</p>

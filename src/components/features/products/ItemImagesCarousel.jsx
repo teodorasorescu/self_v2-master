@@ -18,6 +18,8 @@ const ItemImagesCarousel = ({ product }) => {
 									className={classes.picturesContainer}
 									alt={product.altDescription}
 								/>
+								<Tag title='35% OFF' />
+
 								{product.stock !== null && product.stock <= 0 && (
 									<Tag title='Out of Stock' />
 								)}

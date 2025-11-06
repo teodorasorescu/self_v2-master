@@ -35,6 +35,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	const [finalPrice, setFinalPrice] = useState({
 		price: product.price,
 		currency: getCurrencyByCountry(countryCode),
+		originalPrice: 62,
 	});
 
 	const width = smartphoneScreen ? '90vw' : '25vw';
@@ -92,7 +93,12 @@ const ProductInfoPage = ({ product, suport, details }) => {
 							<h3>{product.artist.artist}</h3>
 						</a>
 					)}
-					<h2>{finalPrice.price + ' ' + finalPrice.currency} </h2>
+					<h2 style={{ textDecoration: 'line-through', fontSize: '1.2rem' }}>
+						{finalPrice.originalPrice + ' ' + finalPrice.currency}{' '}
+					</h2>
+					<h2 style={{ color: 'red' }}>
+						{finalPrice.price + ' ' + finalPrice.currency}{' '}
+					</h2>
 				</div>
 
 				<FrameAndChassisSelect

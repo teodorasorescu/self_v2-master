@@ -15,10 +15,13 @@ export const updatePrice = (
 	countryCode = 'RO'
 ) => {
 	const basePrice = posterPrices.get(size)?.get(initialPrice) || 0;
+	const originalPrice = basePrice?.original;
+	const discountedPrice = basePrice?.discount35;
+
 	const framePrice = frameColor !== 'none' ? framePrices.get(size) || 0 : 0;
 	const chassisPrice = chassis ? chassisPrices.get(size) || 0 : 0;
 
-	const totalInRON = basePrice + framePrice + chassisPrice;
+	const totalInRON = discountedPrice + framePrice + chassisPrice;
 	const currency = getCurrencyByCountry(countryCode);
 
 	const price =
@@ -29,8 +32,11 @@ export const updatePrice = (
 	return {
 		price,
 		currency,
+		originalPrice,
 	};
 };
+
+export const countryWithSameday = ['Romania', 'Bulgaria', 'Hungary'];
 
 export const calculatePromotionPrice = (price) => {
 	return price + 0.4 * 90;

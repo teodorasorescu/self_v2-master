@@ -8,7 +8,7 @@ import { S3_BUCKET } from '../constants/links';
 import Newsletter from './Newsletter';
 import FooterAnpc from './FooterAnpc';
 import { useLocation } from 'react-router-dom';
-
+import SamedayLogo from './sameday-courier-logo-full.jpg';
 const selfLogo = S3_BUCKET + '/self_logo.webp';
 const cartTypesImg = S3_BUCKET + '/cardTypes.webp';
 
@@ -56,7 +56,7 @@ const Footer = () => {
 						className={styles.cardTypeImg}
 						src={cartTypesImg}
 						alt='Visa, Mastercard, Google Pay, Apple Pay'
-					/>
+					/>{' '}
 					{wideScreen && <FooterAnpc />}
 				</div>
 			</div>
@@ -64,12 +64,8 @@ const Footer = () => {
 				{!wideScreen && (
 					<>
 						{' '}
-						<img
-							className={styles.logo}
-							src={selfLogo}
-							alt='Self Posters Logo'
-						/>
-						<FooterAnpc />
+						<img src={SamedayLogo} width='60' alt='Self Posters Logo' />
+						<FooterAnpc />{' '}
 					</>
 				)}
 			</div>

@@ -8,9 +8,14 @@ import { useDispatch } from 'react-redux';
 import { shippingPrices } from '../constants/productConstants';
 import { loadDeliveryPriceState } from '../reducers/slices/deliveryPriceSlice';
 import { useCountry } from '../contexts/CountryProvider';
-import { getCurrencyByCountry, supportedCountries } from '../constants/utils';
+import {
+	countryWithSameday,
+	getCurrencyByCountry,
+	supportedCountries,
+} from '../constants/utils';
+import SamedayLogo from './sameday-courier-logo-full.jpg';
 
-export const Shipping = () => {
+export const Shipping = ({ country }) => {
 	const [shippingMethod, setShippingMethod] = useState(0);
 	const [isError, setIsError] = useState(true);
 	const [locker, setLocker] = useState({
@@ -28,14 +33,13 @@ export const Shipping = () => {
 	const storedProducts = JSON.parse(localStorage.getItem('products'));
 	const dispatch = useDispatch();
 	const { countryCode } = useCountry();
-	const currency = ' ' + getCurrencyByCountry(countryCode);
 
 	let pluginInstance = getLockerPluginInstance(countryCode);
 	pluginInstance.subscribe(closeAndSaveLockerId);
 
 	const computeShippingPrice = () => {
 		const shippingPrice = shippingPrices.get(countryCode);
-		console.log(shippingPrice?.get('courier')['small']);
+
 		const filteredProducts = storedProducts.filter(
 			(product) => product.frameColor === 'none' && product.chassis === false
 		);
@@ -94,6 +98,8 @@ export const Shipping = () => {
 			<h3 align='left' className={styles.titleShipping}>
 				Shipping Method
 			</h3>
+			<img src={SamedayLogo} width='60' alt='Self Posters Logo' />
+
 			{supportedCountries.includes(countryCode) ? (
 				<>
 					<form className={styles.formContainer}>
@@ -114,9 +120,10 @@ export const Shipping = () => {
 								>
 									<p>Home Delivery</p>
 									{shippingMethod === 1 && homeDeliveryAmount !== 0 && (
-										<p className={styles.pBold}>
-											{homeDeliveryAmount + ' ' + currency}
-										</p>
+										// <p className={styles.pBold}>
+										// 	{homeDeliveryAmount + ' ' + currency}
+										// </p>
+										<p className={styles.pBold}>FREE</p>
 									)}
 								</label>
 							</div>
@@ -137,9 +144,10 @@ export const Shipping = () => {
 							>
 								<p>Easybox Delivery</p>
 								{shippingMethod === 2 && lockerDeliveryAmount !== 0 && (
-									<p className={styles.pBold}>
-										{lockerDeliveryAmount + ' ' + currency}
-									</p>
+									// <p className={styles.pBold}>
+									// 	{lockerDeliveryAmount + ' ' + currency}
+									// </p>
+									<p className={styles.pBold}>FREE</p>
 								)}
 							</label>
 						</div>
