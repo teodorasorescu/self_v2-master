@@ -13,7 +13,9 @@ import {
 	getCurrencyByCountry,
 	supportedCountries,
 } from '../constants/utils';
-import SamedayLogo from './sameday-courier-logo-full.jpg';
+import { S3_BUCKET } from '../constants/links';
+
+const samedayLogo = S3_BUCKET + '/samedayLogo.webp';
 
 export const Shipping = ({ country }) => {
 	const [shippingMethod, setShippingMethod] = useState(0);
@@ -98,7 +100,7 @@ export const Shipping = ({ country }) => {
 			<h3 align='left' className={styles.titleShipping}>
 				Shipping Method
 			</h3>
-			<img src={SamedayLogo} width='60' alt='Self Posters Logo' />
+			<img src={samedayLogo} width='60' alt='Self Posters Logo' />
 
 			{supportedCountries.includes(countryCode) ? (
 				<>

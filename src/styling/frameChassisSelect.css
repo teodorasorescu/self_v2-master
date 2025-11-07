@@ -3,11 +3,24 @@
 		width: 25vw;
 		padding: 4%;
 	}
+
+	.sizeGuide {
+		padding-left: 4%;
+		font-size: 0.8rem;
+		cursor: pointer;
+		text-decoration: underline;
+	}
 }
 
 @media screen and (max-width: 1024px) {
 	.frameContainer {
 		width: 90vw;
 		padding: 4%;
+	}
+	.sizeGuide {
+		padding-left: 4%;
+		font-size: 0.8rem;
+		cursor: pointer;
+		text-decoration: underline;
 	}
 }

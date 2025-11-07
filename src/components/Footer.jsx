@@ -8,14 +8,12 @@ import { S3_BUCKET } from '../constants/links';
 import Newsletter from './Newsletter';
 import FooterAnpc from './FooterAnpc';
 import { useLocation } from 'react-router-dom';
-import SamedayLogo from './sameday-courier-logo-full.jpg';
-const selfLogo = S3_BUCKET + '/self_logo.webp';
+const samedayLogo = S3_BUCKET + '/samedayLogo.webp';
 const cartTypesImg = S3_BUCKET + '/cardTypes.webp';
 
 const Footer = () => {
 	const wideScreen = useMediaQuery('(min-width:1024px)');
 	const location = useLocation();
-	console.log(location.pathname);
 	const isQuizResultPath = () => {
 		return (
 			location.pathname === '/quiz-result' ||
@@ -64,7 +62,7 @@ const Footer = () => {
 				{!wideScreen && (
 					<>
 						{' '}
-						<img src={SamedayLogo} width='60' alt='Self Posters Logo' />
+						<img src={samedayLogo} width='60' alt='samedayLogo' />
 						<FooterAnpc />{' '}
 					</>
 				)}

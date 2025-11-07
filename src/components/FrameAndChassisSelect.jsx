@@ -11,7 +11,8 @@ import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { noop } from 'lodash';
 import { getLocalizedPrice } from '../constants/utils';
-
+import ImageModal from './ui/imgModal/ImageModal';
+import sizeGuideImage from './sizeGuide.png';
 const FrameAndChassisSelect = ({
 	frameColor,
 	chassis,
@@ -28,6 +29,7 @@ const FrameAndChassisSelect = ({
 
 	const [chassisPrice, setChassisPrice] = useState(initialPrice);
 	const [framePrice, setFramePrice] = useState(initialPrice);
+	const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
 
 	const setField = (event) => {
 		setFrameColor(event.target.value);
@@ -80,7 +82,16 @@ const FrameAndChassisSelect = ({
 					<option value='50x70cm'>50x70cm</option>
 				</select>
 			</div>
+			<p className='sizeGuide' onClick={() => setIsSizeGuideOpen(true)}>
+				Size Guide
+			</p>
 
+			<ImageModal
+				isOpen={isSizeGuideOpen}
+				onClose={() => setIsSizeGuideOpen(false)}
+				imageSrc={sizeGuideImage}
+				alt='Size Guide Table'
+			/>
 			<div className='frameContainer'>
 				<h6>Ready to Hang?</h6>
 				<select
