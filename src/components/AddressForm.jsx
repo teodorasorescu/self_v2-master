@@ -48,10 +48,11 @@ export const AddressForm = () => {
 	localStorage.setItem('deliveryPrice', deliveryPrice);
 
 	const getTotal = () => {
-		if (discount) {
-			return total - price * discountNo + deliveryPrice;
-		}
-		return total + deliveryPrice;
+		// if (discount) {
+		// 	return total - price * discountNo + deliveryPrice;
+		// }
+		// return total + deliveryPrice;
+		return total;
 	};
 
 	var heightT = '7vh';
