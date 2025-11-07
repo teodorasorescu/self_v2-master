@@ -13,7 +13,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { HOME_PHOTOS } from '../constants/inspoHome';
 import ButtonHomePage from './ui/buttonHomePage/ButtonHomePage';
 import Banner from './ui/banner/Banner';
-import DateCountdown from './ui/countdown/DateCountdown';
 
 const Home = () => {
 	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
@@ -35,7 +34,7 @@ const Home = () => {
 								<div className={styles.photoOverlay}>
 									<div className={styles.overlayText}>
 										<h1>BLACK FRIDAY 35% SALE</h1>
-										<DateCountdown targetDate='2025-11-07T00:00:00' />
+										<h1>Free Delivery</h1>
 										<p>
 											Try our Art Finder Quiz and get matched with a
 											personalised selection of art prints that fit your style.
@@ -57,8 +56,7 @@ const Home = () => {
 						<div className={styles.introductionContainer}>
 							<div className={styles.mobileOnlyText}>
 								<h1>BLACK FRIDAY 35% SALE</h1>
-								<DateCountdown targetDate='2025-11-07T00:00:00' />
-
+								<h1>Free Delivery</h1>
 								<p>
 									Try our Art Finder Quiz and get matched with a personalised
 									selection of art prints that fit your style.

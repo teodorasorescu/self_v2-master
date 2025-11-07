@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react';
 import styles from './Banner.module.scss';
-import DateCountdown from '../countdown/DateCountdown';
 
 const Banner = () => {
 	const marqueeRef = useRef(null);
@@ -38,18 +37,12 @@ const Banner = () => {
 		>
 			<div className={styles.marqueeInner}>
 				<p>Don’t Miss the Only Sale of the Year</p>
-				<p>BLACK FRIDAY</p>
-				<p>
-					<DateCountdown targetDate='2025-11-07T00:00:00' />
-				</p>{' '}
-				<p>BLACK FRIDAY 35% SALE</p>
+				<p>Limited Stock </p> <p>BLACK FRIDAY 35% SALE</p>
 				<p>FREE DELIVERY</p>
 				{/* duplicate for seamless scroll */}
 				<p>Don’t Miss the Only Sale of the Year</p>
 				<p>BLACK FRIDAY 35% SALE</p>
-				<p>
-					<DateCountdown targetDate='2025-11-07T00:00:00' />
-				</p>
+				<p>Limited Stock </p>
 				<p>FREE DELIVERY</p>
 			</div>
 		</div>
