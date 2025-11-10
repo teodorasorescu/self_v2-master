@@ -9,7 +9,7 @@ const PostersDetailsPage = ({ posters }) => {
 			<div className={classes.banner}>
 				<div className={classes.subBanner}>
 					<h1>The Biggest and Only Sale of the Year</h1>
-					<h2>35% OFF EVERYTHING + FREE DELIVERY</h2>
+					<h2>35% OFF EVERYTHING + Free Shipping</h2>
 				</div>
 
 				<>
