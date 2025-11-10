@@ -1,31 +1,46 @@
 .container {
 	display: block;
-	padding-top: 3%;
 	text-align: center;
 	font-family: Poppins, sans-serif;
 	cursor: default;
 
-	> h2 {
-		font-size: 0.9rem;
-		margin-left: 3%;
-		text-align: left;
-		margin-bottom: 5%;
-		font-optical-sizing: auto;
-		color: #000000;
-		text-align: justify;
-		width: 90vw;
-		font-weight: 400;
+	// > h2 {
+	// 	font-size: 0.9rem;
+	// 	margin-left: 3%;
+	// 	text-align: left;
+	// 	margin-bottom: 5%;
+	// 	font-optical-sizing: auto;
+	// 	color: #000000;
+	// 	text-align: justify;
+	// 	width: 90vw;
+	// 	font-weight: 400;
+	// }
+	.banner {
+		.subBanner {
+			padding: 2%;
+			color: #420000;
+			> h2 {
+				font-size: 1.3rem;
+			}
+		}
+		.benefits {
+			> h2 {
+				color: #420000;
+				font-size: 1rem;
+			}
+			> p {
+				font-size: 0.8rem;
+			}
+		}
+		> h1 {
+			font-family: 'Poppins', serif;
+			font-optical-sizing: auto;
+			color: #000000;
+			font-size: 1.3rem;
+			margin-left: 3%;
+			text-align: center;
+		}
 	}
-
-	> h1 {
-		font-family: 'Poppins', serif;
-		font-optical-sizing: auto;
-		color: #000000;
-		font-size: 1.3rem;
-		margin-left: 3%;
-		text-align: left;
-	}
-
 	& .postersList {
 		margin-left: 3%;
 		margin-right: 3%;
