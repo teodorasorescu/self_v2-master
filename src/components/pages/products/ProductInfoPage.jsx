@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import {
 	computeProduct,
 	getCurrencyByCountry,
+	getLocalizedPrice,
 	updatePrice,
 } from '../../../constants/utils';
 import classes from './poster.page.module.scss';
@@ -35,7 +36,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	const [finalPrice, setFinalPrice] = useState({
 		price: product.price,
 		currency: getCurrencyByCountry(countryCode),
-		originalPrice: 62,
+		originalPrice: getLocalizedPrice(62, countryCode),
 	});
 
 	const width = smartphoneScreen ? '90vw' : '25vw';
