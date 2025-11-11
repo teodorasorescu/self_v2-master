@@ -20,5 +20,6 @@
   "https://connect.facebook.net/en_US/fbevents.js"
 );
 
-fbq("init", "1614207002855186");
+// Initialize Pixel
+fbq("init", "1410995370279324");
 fbq("track", "PageView");
