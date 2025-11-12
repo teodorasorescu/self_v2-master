@@ -15,7 +15,7 @@ export const updatePrice = (
 	countryCode = 'RO'
 ) => {
 	const basePrice = posterPrices.get(size)?.get(initialPrice) || 0;
-	const originalPrice = basePrice?.original;
+	let originalPrice = basePrice?.original;
 	const discountedPrice = basePrice?.discount35;
 
 	const framePrice = frameColor !== 'none' ? framePrices.get(size) || 0 : 0;
@@ -29,6 +29,8 @@ export const updatePrice = (
 			? totalInRON
 			: parseFloat((totalInRON / RON_TO_EUR_RATE).toFixed(1));
 
+	originalPrice =
+		currency === 'RON' ? 62 : parseFloat((62 / RON_TO_EUR_RATE).toFixed(1));
 	return {
 		price,
 		currency,
