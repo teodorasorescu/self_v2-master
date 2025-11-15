@@ -11,6 +11,10 @@ const benefits = [
 		title: 'Supporting Artists',
 		desc: 'Every sale goes back to artists.',
 	},
+	{
+		title: 'EU Shipping',
+		desc: 'We guarantee safe and fast delivery by our partners Sameday and DPD.',
+	},
 ];
 
 export default benefits;

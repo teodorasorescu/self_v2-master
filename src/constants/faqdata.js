@@ -20,12 +20,12 @@ export const orderQuestions = [
 	{
 		title: 'Who delivers the canvas art prints?',
 		content:
-			'Our trusted delivery partner is Sameday, which provides shipping throughout Romania.',
+			'We ship with Sameday in Bulgaria, Hungary, and Romania, and with DPD to all other EU countries.',
 	},
 	{
 		title: 'How long does it take to receive my order?',
 		content:
-			'All our prints are made-to-order as part of our sustainable approach. Please allow up to 5 business days for production, plus 1-2 business days for shipping. You can expect to receive your order within 6-7 business days total.',
+			'All our prints are made-to-order as part of our sustainable approach. Please allow up to 5 business days for production, plus shipping days:<br><br><strong>Austria</strong>: 2–4 business days<br><strong>Belgium</strong>: 2–4 business days<br><strong>Bulgaria</strong>: 4–6 business days<br><strong>Croatia</strong>: 3–5 business days<br><strong>Cyprus</strong>: 5–7 business days<br><strong>Czechia</strong>: 3–5 business days<br><strong>Denmark</strong>: 2–4 business days<br><strong>Estonia</strong>: 4–6 business days<br><strong>Finland</strong>: 4–6 business days<br><strong>France</strong>: 2–4 business days<br><strong>Germany</strong>: 2–4 business days<br><strong>Greece</strong>: 4–6 business days<br><strong>Hungary</strong>: 3–5 business days<br><strong>Ireland</strong>: 3–5 business days<br><strong>Italy</strong>: 2–4 business days<br><strong>Latvia</strong>: 4–6 business days<br><strong>Lithuania</strong>: 4–6 business days<br><strong>Luxembourg</strong>: 2–4 business days<br><strong>Malta</strong>: 5–7 business days<br><strong>Netherlands</strong>: 2–4 business days<br><strong>Poland</strong>: 3–5 business days<br><strong>Portugal</strong>: 3–5 business days<br><strong>Romania</strong>: 3–5 business days<br><strong>Slovakia</strong>: 3–5 business days<br><strong>Slovenia</strong>: 3–5 business days<br><strong>Spain</strong>: 3–5 business days<br><strong>Sweden</strong>: 4–6 business days<br></br>',
 	},
 	{
 		title: "What should I do if my order hasn't arrived?",

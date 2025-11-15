@@ -6,18 +6,16 @@ const FAQDropdown = ({ questions }) => {
 	const width = useMediaQuery('(max-width:1024px)') ? '90vw' : '50vw';
 	return (
 		<div className={classes.dropdownContainer}>
-			{questions.map((q, i) => {
-				return (
-					<div className={classes.dropdown} key={i}>
-						<Dropdown
-							title={q.title}
-							content={q.content}
-							dropdownWidth={width}
-							value={false}
-						/>
-					</div>
-				);
-			})}
+			{questions.map((q, i) => (
+				<div className={classes.dropdown} key={i}>
+					<Dropdown
+						title={q.title}
+						content={q.content}
+						dropdownWidth={width}
+						value={false}
+					/>
+				</div>
+			))}
 		</div>
 	);
 };

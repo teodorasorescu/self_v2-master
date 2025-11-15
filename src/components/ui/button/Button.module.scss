@@ -14,14 +14,14 @@
 		text-align: center;
 		cursor: pointer;
 
-		background-color: #420000;
+		background-color: #34001b;
 		color: #fff7e3;
 		border: none;
 		text-decoration: none;
 		transition: background-color 0.2s ease, transform 0.1s ease;
 
 		&:hover {
-			background-color: rgba(66, 0, 0, 0.85);
+			background-color: #34000fd1;
 			transform: translateY(-1px);
 		}
 

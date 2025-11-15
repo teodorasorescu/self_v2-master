@@ -7,8 +7,9 @@ import DropdownSection from './DropdownSection';
 import { S3_BUCKET } from '../constants/links';
 import Newsletter from './Newsletter';
 import FooterAnpc from './FooterAnpc';
+import samedayLogo from './logo-sameday.svg';
+import dpdLogo from './DPD LOGO.svg';
 import { useLocation } from 'react-router-dom';
-const samedayLogo = S3_BUCKET + '/samedayLogo.webp';
 const cartTypesImg = S3_BUCKET + '/cardTypes.webp';
 
 const Footer = () => {
@@ -62,7 +63,8 @@ const Footer = () => {
 				{!wideScreen && (
 					<>
 						{' '}
-						<img src={samedayLogo} width='60' alt='samedayLogo' />
+						<img src={dpdLogo} width='80' alt='samedayLogo' />
+						<img src={samedayLogo} width='90' alt='samedayLogo' />
 						<FooterAnpc />{' '}
 					</>
 				)}

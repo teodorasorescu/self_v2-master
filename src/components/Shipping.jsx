@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import styles from '../styling/shipping.module.scss';
 import { getLockerPluginInstance } from './EasyboxLocker';
@@ -8,14 +8,10 @@ import { useDispatch } from 'react-redux';
 import { shippingPrices } from '../constants/productConstants';
 import { loadDeliveryPriceState } from '../reducers/slices/deliveryPriceSlice';
 import { useCountry } from '../contexts/CountryProvider';
-import {
-	countryWithSameday,
-	getCurrencyByCountry,
-	supportedCountries,
-} from '../constants/utils';
-import { S3_BUCKET } from '../constants/links';
-
-const samedayLogo = S3_BUCKET + '/samedayLogo.webp';
+import { samedayCountriesName } from '../constants/utils';
+import countries from '../constants/countries';
+import logoDPD from './DPD LOGO.svg';
+import samedayLogo from './logo-sameday.svg';
 
 export const Shipping = ({ country }) => {
 	const [shippingMethod, setShippingMethod] = useState(0);
@@ -100,70 +96,103 @@ export const Shipping = ({ country }) => {
 			<h3 align='left' className={styles.titleShipping}>
 				Shipping Method
 			</h3>
-			<img src={samedayLogo} width='60' alt='Self Posters Logo' />
 
-			{supportedCountries.includes(countryCode) ? (
-				<>
-					<form className={styles.formContainer}>
-						<div className='form-group'>
+			{countries.includes(country) ? (
+				samedayCountriesName.includes(country) ? (
+					<>
+						<img
+							src={samedayLogo}
+							style={{ marginBottom: '3%' }}
+							alt='Self Posters Logo'
+						/>
+						<form className={styles.formContainer}>
+							<div className='form-group'>
+								<div className='form-check'>
+									<input
+										className='form-check-input'
+										type='radio'
+										name='deliveryMethod'
+										id='homeDelivery'
+										value='homeDelivery'
+										onChange={() => saveCustomerShippingMethod(1)}
+										checked={shippingMethod === 1}
+									/>
+									<label
+										className={`form-check-label ${styles.shippingContainer}`}
+										htmlFor='homeDelivery'
+									>
+										<p>Standard Shipping</p>
+										{shippingMethod === 1 && homeDeliveryAmount !== 0 && (
+											<p className={styles.pBold}>FREE</p>
+										)}
+									</label>
+								</div>
+							</div>
 							<div className='form-check'>
 								<input
 									className='form-check-input'
 									type='radio'
 									name='deliveryMethod'
-									id='homeDelivery'
-									value='homeDelivery'
-									onChange={() => saveCustomerShippingMethod(1)}
-									checked={shippingMethod === 1}
+									id='lockerOption'
+									value='lockerOption'
+									onChange={() => saveCustomerShippingMethod(2)}
+									checked={shippingMethod === 2}
 								/>
 								<label
 									className={`form-check-label ${styles.shippingContainer}`}
-									htmlFor='homeDelivery'
+									htmlFor='lockerOption'
 								>
-									<p>Home Delivery</p>
-									{shippingMethod === 1 && homeDeliveryAmount !== 0 && (
-										// <p className={styles.pBold}>
-										// 	{homeDeliveryAmount + ' ' + currency}
-										// </p>
+									<p>Easybox Delivery</p>
+									{shippingMethod === 2 && lockerDeliveryAmount !== 0 && (
 										<p className={styles.pBold}>FREE</p>
 									)}
 								</label>
 							</div>
-						</div>
-						<div className='form-check'>
-							<input
-								className='form-check-input'
-								type='radio'
-								name='deliveryMethod'
-								id='lockerOption'
-								value='lockerOption'
-								onChange={() => saveCustomerShippingMethod(2)}
-								checked={shippingMethod === 2}
-							/>
-							<label
-								className={`form-check-label ${styles.shippingContainer}`}
-								htmlFor='lockerOption'
-							>
-								<p>Easybox Delivery</p>
-								{shippingMethod === 2 && lockerDeliveryAmount !== 0 && (
-									// <p className={styles.pBold}>
-									// 	{lockerDeliveryAmount + ' ' + currency}
-									// </p>
-									<p className={styles.pBold}>FREE</p>
-								)}
-							</label>
-						</div>
-						{shippingMethod === 2 && !isError && (
-							<p>
-								{locker.name} <br /> {locker.address} <br /> {locker.city}{' '}
-								<br /> {locker.county}
-							</p>
-						)}
-						{isError && <p>Choose locker or change delivery method.</p>}
-					</form>
-				</>
+							{shippingMethod === 2 && !isError && (
+								<p>
+									{locker.name} <br /> {locker.address} <br /> {locker.city}{' '}
+									<br /> {locker.county}
+								</p>
+							)}
+							{isError && <p>Choose locker or change delivery method.</p>}
+						</form>
+					</>
+				) : (
+					<>
+						<img
+							src={logoDPD}
+							style={{ marginBottom: '3%' }}
+							width='60'
+							alt='DPD Logo'
+						/>
+						<form className={styles.formContainer}>
+							<div className='form-group'>
+								<div className='form-check'>
+									<input
+										className='form-check-input'
+										type='radio'
+										name='deliveryMethod'
+										id='homeDelivery'
+										value='homeDelivery'
+										onChange={() => saveCustomerShippingMethod(1)}
+										checked={shippingMethod === 1}
+									/>
+									<label
+										className={`form-check-label ${styles.shippingContainer}`}
+										htmlFor='homeDelivery'
+									>
+										<p>Standard DPD Shipping</p>
+										{shippingMethod === 1 && homeDeliveryAmount !== 0 && (
+											<p className={styles.pBold}>FREE</p>
+										)}
+									</label>
+								</div>
+							</div>
+						</form>
+					</>
+				)
 			) : (
-				<p>Sorry, we don't ship to your country.</p>
+				<p>Please choose your country to see available shipping methods.</p>
 			)}
 		</div>
 	);

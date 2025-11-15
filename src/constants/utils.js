@@ -38,8 +38,6 @@ export const updatePrice = (
 	};
 };
 
-export const countryWithSameday = ['Romania', 'Bulgaria', 'Hungary'];
-
 export const calculatePromotionPrice = (price) => {
 	return price + 0.4 * 90;
 };
@@ -150,4 +148,34 @@ export const getRegions = (country) => {
 	return states[country] || [];
 };
 
-export const supportedCountries = ['RO', 'BG', 'HU'];
+export const samedayCountries = ['RO', 'HU', 'BG'];
+export const samedayCountriesName = ['Romania', 'Hungary', 'Bulgaria'];
+export const supportedCountries = [
+	'AT', // Austria
+	'BE', // Belgium
+	'BG', // Bulgaria
+	'HR', // Croatia
+	'CY', // Cyprus
+	'CZ', // Czechia
+	'DK', // Denmark
+	'EE', // Estonia
+	'FI', // Finland
+	'FR', // France
+	'DE', // Germany
+	'GR', // Greece
+	'HU', // Hungary
+	'IE', // Ireland
+	'IT', // Italy
+	'LV', // Latvia
+	'LT', // Lithuania
+	'LU', // Luxembourg
+	'MT', // Malta
+	'NL', // Netherlands
+	'PL', // Poland
+	'PT', // Portugal
+	'RO', // Romania
+	'SK', // Slovakia
+	'SI', // Slovenia
+	'ES', // Spain
+	'SE', // Sweden
+];

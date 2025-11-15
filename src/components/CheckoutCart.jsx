@@ -119,7 +119,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																			badgeContent={row['quantity']}
 																			sx={{
 																				'& .MuiBadge-colorPrimary': {
-																					backgroundColor: '#420000',
+																					backgroundColor: '#34001B',
 																					color: '#fff7e3',
 																				},
 																			}}

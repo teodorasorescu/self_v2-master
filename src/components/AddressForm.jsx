@@ -9,9 +9,9 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import {
 	calculateTotalPrice,
 	computeProductsLength,
-	countryWithSameday,
 	getCurrencyByCountry,
 	getRegions,
+	samedayCountries,
 } from '../constants/utils';
 import { price } from '../constants/productConstants';
 
@@ -140,7 +140,7 @@ export const AddressForm = () => {
 					</div>
 					<div>
 						<h3 align='left' className={styles.hTitle}>
-							Livrare
+							Delivery
 						</h3>
 						<div className='form-group' style={{ paddingBottom: '2%' }}>
 							<input
@@ -222,7 +222,7 @@ export const AddressForm = () => {
 							<div className='invalid-feedback'>Country Required</div>
 						</div>
 						<div className='form-group' style={{ paddingTop: '2%' }}>
-							{countryWithSameday.includes(customer.country) ? (
+							{samedayCountries.includes(customer.country) ? (
 								<select
 									className='form-select'
 									id='state'

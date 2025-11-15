@@ -37,13 +37,15 @@ const Banner = () => {
 		>
 			<div className={styles.marqueeInner}>
 				<p>Don’t Miss the Only Sale of the Year</p>
-				<p>Limited Stock </p> <p>BLACK FRIDAY 35% SALE</p>
+				<p>Limited Stock </p> <p> 35% SALE</p>
 				<p>Free Shipping</p>
+				<p>EU Delivery</p>
 				{/* duplicate for seamless scroll */}
 				<p>Don’t Miss the Only Sale of the Year</p>
-				<p>BLACK FRIDAY 35% SALE</p>
+				<p>35% SALE</p>
 				<p>Limited Stock </p>
 				<p>Free Shipping</p>
+				<p>EU Delivery</p>
 			</div>
 		</div>
 	);

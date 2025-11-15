@@ -61,7 +61,7 @@ const Dropdown = ({ title, content, dropdownWidth, value, artistImg }) => {
 							alt='about artist'
 						/>
 					)}
-					<p>{content}</p>
+					<div dangerouslySetInnerHTML={{ __html: content }} />
 				</div>
 			</CSSTransition>
 		</div>

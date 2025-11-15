@@ -17,6 +17,8 @@ import { TIKTOK_LINK } from '../constants/socialMediaLinks';
 import { INSTAGRAM_LINK } from '../constants/socialMediaLinks';
 import SubheaderDropdown from './features/subheaderSmartphone/SubheaderDropdown';
 import Banner from './ui/banner/Banner';
+import { useCountry } from '../contexts/CountryProvider';
+import { getCurrencyByCountry, supportedCountries } from '../constants/utils';
 
 const instaIcon = S3_BUCKET + '/instagram_logo.webp';
 const tiktokIcon = S3_BUCKET + '/tiktok_logo.webp';
@@ -25,6 +27,7 @@ const selfLogo = S3_BUCKET + '/self_logo.webp';
 
 const SmartphoneHeader = () => {
 	const { drawerOpen, setDrawerOpen } = useStateContext();
+	const { countryCode } = useCountry();
 
 	const itemCount = Number.parseInt(localStorage.getItem('itemCount'));
 	const openDrawer = () => {
@@ -162,6 +165,7 @@ const SmartphoneHeader = () => {
 						<div style={{ width: '350px' }}>{getSubheaders()}</div>
 
 						<div style={{ paddingTop: '10%' }}>{getContactChoices()}</div>
+
 						<div
 							style={{
 								display: 'flex',
@@ -200,6 +204,25 @@ const SmartphoneHeader = () => {
 								</a>
 							</MenuItem>
 						</div>
+						{supportedCountries.includes(countryCode) ? (
+							<MenuItem
+								style={{
+									fontFamily: "'Poppins', sans-serif",
+									fontSize: '0.9rem',
+								}}
+							>
+								Delivery Country: {countryCode}{' '}
+							</MenuItem>
+						) : (
+							<MenuItem
+								style={{
+									fontFamily: "'Poppins', sans-serif",
+									fontSize: '0.9rem',
+								}}
+							>
+								Sorry, we don't ship to your country.
+							</MenuItem>
+						)}
 					</Drawer>
 				</Toolbar>
 				<a href='/'>
@@ -215,7 +238,7 @@ const SmartphoneHeader = () => {
 							badgeContent={Number.isNaN(itemCount) ? 0 : itemCount}
 							sx={{
 								'& .MuiBadge-colorPrimary': {
-									backgroundColor: '#420000',
+									backgroundColor: '#34001B',
 									color: '#fff7e3',
 								},
 							}}

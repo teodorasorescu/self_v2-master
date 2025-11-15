@@ -7,19 +7,19 @@
 	.inputContainer {
 		height: auto;
 		padding: 1%;
-		background-color: #420000;
-		border: 2px solid #420000;
+		background-color: #34001b;
+		border: 2px solid #34001b;
 		border-radius: 10px;
 		color: rgba(248, 221, 170, 0.8);
 		&:hover {
-			background-color: rgba(66, 0, 0, 0.85);
+			background-color: #34000fd1;
 
 			transition: background-color 0.3s ease;
 		}
 	}
 
 	.formInput {
-		border: 2px solid #420000;
+		border: 2px solid #34001b;
 		border-radius: 10px;
 		text-decoration: none;
 	}
