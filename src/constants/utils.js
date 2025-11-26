@@ -22,6 +22,8 @@ export const updatePrice = (
 	const chassisPrice = chassis ? chassisPrices.get(size) || 0 : 0;
 
 	const totalInRON = discountedPrice + framePrice + chassisPrice;
+	const totalInRONOriginal = originalPrice + framePrice + chassisPrice;
+
 	const currency = getCurrencyByCountry(countryCode);
 
 	const price =
@@ -30,7 +32,9 @@ export const updatePrice = (
 			: parseFloat((totalInRON / RON_TO_EUR_RATE).toFixed(1));
 
 	originalPrice =
-		currency === 'RON' ? 62 : parseFloat((62 / RON_TO_EUR_RATE).toFixed(1));
+		currency === 'RON'
+			? totalInRONOriginal
+			: parseFloat((totalInRONOriginal / RON_TO_EUR_RATE).toFixed(1));
 	return {
 		price,
 		currency,
