@@ -33,7 +33,7 @@ const Home = () => {
 							{index === 0 && (
 								<div className={styles.photoOverlay}>
 									<div className={styles.overlayText}>
-										<h1>35% SALE & Free Shipping</h1>
+										<h1>15% SALE & Free Shipping</h1>
 										<p>
 											Try our Art Finder Quiz and get matched with a
 											personalised selection of art prints that fit your style.
@@ -54,8 +54,7 @@ const Home = () => {
 					{
 						<div className={styles.introductionContainer}>
 							<div className={styles.mobileOnlyText}>
-								<h1>35% SALE</h1>
-								<h1>Free Shipping</h1>
+								<h1>15% SALE</h1>
 								<p>
 									Try our Art Finder Quiz and get matched with a personalised
 									selection of art prints that fit your style.

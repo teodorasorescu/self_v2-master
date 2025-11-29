@@ -24,7 +24,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 		product.artist.artist !== null;
 	const { countryCode } = useCountry();
 
-	const discountedPrice = getLocalizedPrice(40, countryCode);
+	const discountedPrice = getLocalizedPrice(53, countryCode);
 	const computedPrice = getLocalizedPrice(product.price, countryCode);
 
 	return (
@@ -41,7 +41,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					}`}
 					alt={product.altDescription}
 				/>{' '}
-				<Tag title='35% OFF' />
+				<Tag title='15% OFF' />
 				{product.limitedEdition && <Tag title='Limited Edition' />}
 				{hasHoverImg && (
 					<LazyLoadImage

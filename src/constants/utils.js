@@ -29,12 +29,12 @@ export const updatePrice = (
 	const price =
 		currency === 'RON'
 			? totalInRON
-			: parseFloat((totalInRON / RON_TO_EUR_RATE).toFixed(1));
+			: Math.ceil((totalInRON / RON_TO_EUR_RATE).toFixed(1));
 
 	originalPrice =
 		currency === 'RON'
 			? totalInRONOriginal
-			: parseFloat((totalInRONOriginal / RON_TO_EUR_RATE).toFixed(1));
+			: Math.ceil((totalInRONOriginal / RON_TO_EUR_RATE).toFixed(1));
 	return {
 		price,
 		currency,
