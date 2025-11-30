@@ -30,7 +30,6 @@ const FrameAndChassisSelect = ({
 	const [chassisPrice, setChassisPrice] = useState(initialPrice);
 	const [framePrice, setFramePrice] = useState(initialPrice);
 	const [isSizeGuideOpen, setIsSizeGuideOpen] = useState(false);
-
 	const setField = (event) => {
 		setFrameColor(event.target.value);
 	};
@@ -102,7 +101,8 @@ const FrameAndChassisSelect = ({
 					onChange={(e) => setChassisField(e.target.value === 'true')}
 				>
 					<option value='false'>No</option>
-					{chassisPrice.price !== undefined && (
+
+					{chassisPrice.price !== undefined && chassisPrice.price !== null && (
 						<option
 							disabled={
 								chassisStock === 0 || frameColor !== 'none' ? true : false
