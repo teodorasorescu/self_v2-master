@@ -146,6 +146,15 @@ const GiftGuide = () => {
 						)
 					)}
 				</div>
+				<div className={classes.postersList}>
+					{filter('Definitely a Pisces', 'OOTD').map((poster) => (
+						<div key={poster.urlTitle} className={classes.poster}>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem product={poster} posterImg={poster.imgTitle} />
+							</a>
+						</div>
+					))}
+				</div>
 			</>
 			<>
 				<h4>for the</h4>
