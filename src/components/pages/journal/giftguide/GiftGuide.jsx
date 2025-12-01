@@ -4,8 +4,7 @@ import ProductItem from '../../../features/products/ProductItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPosters } from '../../../../reducers/slices/postersSlice';
 import getPostersAction from '../../../../reducers/actions/getPostersAction';
-import Button from '../../../ui/button/Button';
-import { useNavigate } from 'react-router-dom';
+
 import { S3_BUCKET } from '../../../../constants/links';
 
 const GiftGuide = () => {
@@ -24,14 +23,12 @@ const GiftGuide = () => {
 		);
 	};
 
-	const navigate = useNavigate();
-
 	return (
 		<div className={classes.container}>
 			<h1>Holiday Gift Guide</h1>
 			<h2>
 				Get inspired with a selection of our favourite posters to gift your
-				loved ones – including yourself – during the holiday season.
+				loved ones, including yourself, during the holiday season.
 			</h2>
 			<img src={giftPhoto} alt='christmas tree' />
 			<>
