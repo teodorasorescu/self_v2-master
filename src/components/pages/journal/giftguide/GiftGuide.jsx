@@ -11,7 +11,7 @@ import { S3_BUCKET } from '../../../../constants/links';
 const GiftGuide = () => {
 	const dispatch = useDispatch();
 	const storedPosters = useSelector(selectPosters);
-	const giftPhoto = { S3_BUCKET } + '/giftguide.webp';
+	const giftPhoto = S3_BUCKET + '/giftGuide.png';
 	useEffect(() => {
 		if (storedPosters.length === 0) {
 			getPostersAction(dispatch);
@@ -25,9 +25,6 @@ const GiftGuide = () => {
 	};
 
 	const navigate = useNavigate();
-	const navigateToCustom = () => {
-		navigate('/customized-aura-portraits');
-	};
 
 	return (
 		<div className={classes.container}>
@@ -38,16 +35,29 @@ const GiftGuide = () => {
 			</h2>
 			<img src={giftPhoto} alt='christmas tree' />
 			<>
-				<h4>to the</h4>
-				<h1>Nature Lover</h1>
-				<h4>
-					Celebrate the beauty of the natural world with our stunning collection
-					of nature-inspired posters. Designed for adventurers, dreamers, and
-					those who find peace in the great outdoors, these posters are the
-					perfect gift for anyone who cherishes nature's wonders.
-				</h4>
+				<h4>for the</h4>
+				<h1>Bedroom</h1>
+
 				<div className={classes.postersList}>
-					{filter('Sunset Feelings', 'Aurora Lights').map((poster) => (
+					{filter('Peonies', '003').map((poster) => (
+						<div key={poster.urlTitle} className={classes.poster}>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem product={poster} posterImg={poster.imgTitle} />
+							</a>
+						</div>
+					))}
+				</div>
+				<div className={classes.postersList}>
+					{filter('001', 'Milan').map((poster) => (
+						<div key={poster.urlTitle} className={classes.poster}>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem product={poster} posterImg={poster.imgTitle} />
+							</a>
+						</div>
+					))}
+				</div>
+				<div className={classes.postersList}>
+					{filter('Self Love', `Le Cardigan Gourmand`).map((poster) => (
 						<div key={poster.urlTitle} className={classes.poster}>
 							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
 								<ProductItem product={poster} posterImg={poster.imgTitle} />
@@ -57,19 +67,53 @@ const GiftGuide = () => {
 				</div>
 			</>
 			<>
-				<h4>to the</h4>
-				<h1>Graceful&Kindest</h1>
-				<h4>
-					Celebrate the gentle beauty and quiet strength of the graceful and
-					kind-hearted with posters that inspire and uplift. Each piece captures
-					the essence of compassion and poise, with designs like Inner Blooming,
-					which symbolizes growth and self-discovery, and Graceful Soul, a
-					tribute to elegance and tranquility. These posters are perfect for
-					creating a serene space that reflects the nurturing spirit and
-					timeless beauty of their owner.
-				</h4>
+				<h4>for the</h4>
+				<h1>Kitchen</h1>
+
 				<div className={classes.postersList}>
-					{filter('Graceful Soul', 'Inner Blooming').map((poster) => (
+					{filter('Cinnamon Rolls', 'Cozonac').map((poster) => (
+						<div key={poster.urlTitle} className={classes.poster}>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem product={poster} posterImg={poster.imgTitle} />
+							</a>
+						</div>
+					))}
+				</div>
+
+				<div className={classes.postersList}>
+					{filter('Day by Day', 'Obor Mercado').map((poster) => (
+						<div key={poster.urlTitle} className={classes.poster}>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem product={poster} posterImg={poster.imgTitle} />
+							</a>
+						</div>
+					))}
+				</div>
+				<div className={classes.postersList}>
+					{filter('Hai acasă la sarmale!').map((poster) => (
+						<div key={poster.urlTitle} className={classes.poster}>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem product={poster} posterImg={poster.imgTitle} />
+							</a>
+						</div>
+					))}
+				</div>
+			</>
+			<>
+				<h4>for the</h4>
+				<h1>Coffee / Matcha Station</h1>
+
+				<div className={classes.postersList}>
+					{filter('Sip Between the Lines', 'Budapest').map((poster) => (
+						<div key={poster.urlTitle} className={classes.poster}>
+							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+								<ProductItem product={poster} posterImg={poster.imgTitle} />
+							</a>
+						</div>
+					))}
+				</div>
+				<div className={classes.postersList}>
+					{filter('Matcha, Please!', "I've made you coffee").map((poster) => (
 						<div key={poster.urlTitle} className={classes.poster}>
 							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
 								<ProductItem product={poster} posterImg={poster.imgTitle} />
@@ -80,20 +124,38 @@ const GiftGuide = () => {
 			</>
 
 			<>
-				<h4>to the</h4>
-				<h1>Gentle Soul</h1>
-				<h4>
-					Celebrate the beauty of kindness and tranquility with Soul Compassion
-					and Soft Rainbow, two posters crafted for the gentle soul. A tender
-					tribute to empathy and understanding, this design radiates warmth and
-					reminds us of the strength in kindness. A dreamy blend of delicate
-					hues, it symbolizes hope and serenity, capturing the quiet beauty of
-					life’s softer moments. Perfect for creating a space that feels like a
-					sanctuary, these posters make a heartfelt gift for someone who
-					embodies grace and gentleness.
-				</h4>
+				<h4>for the</h4>
+				<h1>Living Room</h1>
+
 				<div className={classes.postersList}>
-					{filter('Soul Compassion', 'Soft Rainbow').map((poster) => (
+					{filter('Girls night at my place ||', 'The Blue Hour').map(
+						(poster) => (
+							<div key={poster.urlTitle} className={classes.poster}>
+								<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+									<ProductItem product={poster} posterImg={poster.imgTitle} />
+								</a>
+							</div>
+						)
+					)}
+				</div>
+				<div className={classes.postersList}>
+					{filter('Morning in Stillness', 'A table for two, please!').map(
+						(poster) => (
+							<div key={poster.urlTitle} className={classes.poster}>
+								<a href={`/canvas-art-prints/${poster.urlTitle}`}>
+									<ProductItem product={poster} posterImg={poster.imgTitle} />
+								</a>
+							</div>
+						)
+					)}
+				</div>
+			</>
+			<>
+				<h4>for the</h4>
+				<h1>Hallway</h1>
+
+				<div className={classes.postersList}>
+					{filter('Where She Stood', 'Mes Tabi').map((poster) => (
 						<div key={poster.urlTitle} className={classes.poster}>
 							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
 								<ProductItem product={poster} posterImg={poster.imgTitle} />
@@ -101,45 +163,8 @@ const GiftGuide = () => {
 						</div>
 					))}
 				</div>
-			</>
-			<>
-				<h4>to the</h4>
-				<h1>Reckless Adventurer</h1>
-				<h4>
-					Fuel the spirit of adventure with our bold and dynamic posters.
-					Perfect for those who crave the thrill of the unknown, individuality
-					and freedom, they capture the courage it takes to carve your path and
-					leave your mark on the world. These posters are a reminder that life
-					is meant to be lived boldly. Inspire your wild side or gift them to
-					the daredevil in your life who’s always ready for the next adventure.
-				</h4>
 				<div className={classes.postersList}>
-					{filter('Self Expression', 'Mind Echoes').map((poster) => (
-						<div key={poster.urlTitle} className={classes.poster}>
-							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
-								<ProductItem product={poster} posterImg={poster.imgTitle} />
-							</a>
-						</div>
-					))}
-				</div>
-			</>
-			<>
-				<h4>to the</h4>
-				<h1>Inspirational Speaker</h1>
-				<h4>
-					Celebrate the transformative power of words with these beautifully
-					crafted quote-inspired posters, perfect for those who inspire through
-					authenticity and empathy. A striking reminder that true courage lies
-					in openness, this design honors the profound connection forged through
-					sharing our most authentic selves. These pieces are more than
-					art—they’re affirmations that uplift and create a space where
-					inspiration thrives, just like the words of a gifted speaker
-				</h4>
-				<div className={classes.postersList}>
-					{filter(
-						'There is Strength in Vulnerability',
-						'Can You Treat Yourself with Sotfness When Things Are Hard? '
-					).map((poster) => (
+					{filter('Le Joyeux Trench-Coat').map((poster) => (
 						<div key={poster.urlTitle} className={classes.poster}>
 							<a href={`/canvas-art-prints/${poster.urlTitle}`}>
 								<ProductItem product={poster} posterImg={poster.imgTitle} />

@@ -17,7 +17,7 @@
 	> h1 {
 		font-family: 'Frank Ruhl Libre', serif;
 		font-optical-sizing: auto;
-		color: #000000;
+		color: #34001b;
 		font-size: 2.5rem;
 		font-style: italic;
 		text-align: center;
@@ -26,7 +26,7 @@
 		margin-top: 3%;
 		margin-right: auto;
 		margin-left: auto;
-		color: black;
+		color: #34001b;
 		width: 50vw;
 		font-size: 0.9rem;
 		font-family: 'Poppins';
@@ -49,7 +49,7 @@
 		}
 	}
 	> h3 {
-		color: black;
+		color: #34001b;
 		font-size: 1rem;
 
 		@media screen and (max-width: 1024px) {
@@ -63,12 +63,14 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		padding: 1%;
 		@media screen and (max-width: 1024px) {
 			align-items: center;
 		}
 	}
 
 	& .poster {
+		padding: 1%;
 		margin-bottom: 2%;
 		display: block;
 		justify-content: center;
