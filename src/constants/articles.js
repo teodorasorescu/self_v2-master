@@ -1,10 +1,19 @@
 export const articles = [
 	{
+		imgTitle: 'giftGuide.png',
+		title: 'Holiday Gift Guide',
+		date: '1st December 2025',
+		urlTitle: 'gift-guide',
+		description:
+			'Get inspired with a selection of our favourite posters to gift your loved ones, including yourself, during the holiday season.',
+	},
+	{
 		imgTitle: 'iuliaVerzanCollection.webp',
 		title: 'About our autumn collection',
 		date: '12th October 2025',
 		urlTitle: 'autumn-collection',
-		description: '1 word: AMAZING!',
+		description:
+			'Blending painting, illustration and design, the works balance nostalgia witha distinctly modern sensibility. Read more.',
 	},
 	{
 		imgTitle: 'ps6.webp',
@@ -55,13 +64,5 @@ export const articles = [
 		date: '7th March 2025',
 		urlTitle: 'daia-grigore',
 		description: 'Read more about Daia and her artworks.',
-	},
-	{
-		imgTitle: 'giftguide.webp',
-		title: 'Holiday Gift Guide',
-		date: '26th November 2024',
-		urlTitle: 'gift-guide',
-		description:
-			'Get inspired with a selection of our favourite posters to gift your loved ones – including yourself – during the holiday season.',
 	},
 ];
