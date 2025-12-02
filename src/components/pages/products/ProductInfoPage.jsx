@@ -100,7 +100,12 @@ const ProductInfoPage = ({ product, suport, details }) => {
 						{finalPrice.price + ' ' + finalPrice.currency}{' '}
 					</h2>
 				</div>
-
+				<h4>
+					Fine Art Print on Hahnemühle Canvas 320 g/m² with a matte finish,
+					created with intention by contemporary artists. Every piece tells a
+					story while sharing a common thread: the power of self-expression
+					through art.
+				</h4>
 				<FrameAndChassisSelect
 					frameColor={frameColor}
 					chassis={chassis}

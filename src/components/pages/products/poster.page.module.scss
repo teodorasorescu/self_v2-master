@@ -22,6 +22,13 @@
 
 			font-family: 'Poppins', sans-serif;
 			text-align: left;
+
+			> h4 {
+				margin-top: 3%;
+				font-weight: 400;
+				font-size: 1rem;
+			}
+
 			.titleContainer {
 				border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 				width: 25vw;
@@ -106,10 +113,16 @@
 			text-align: left;
 			justify-content: center;
 
+			> h4 {
+				margin: 3%;
+				font-weight: 400;
+				font-size: 1rem;
+			}
+
 			.titleContainer {
 				font-family: 'Frank Ruhl Libre', serif;
-
 				margin-left: 3%;
+				margin-top: 1%;
 				width: 95vw;
 				border-bottom: 0.1ch solid rgba(159, 153, 153, 0.379);
 				padding-left: 1%;
