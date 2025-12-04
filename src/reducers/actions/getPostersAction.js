@@ -6,10 +6,16 @@ import {
 	loadPostersFailed,
 } from '../slices/postersSlice';
 
-const getPostersAction = (dispatch) => {
+const getPostersAction = (dispatch, group) => {
 	dispatch(loadPostersStarted());
+	let queryParam = '?group=nogrup';
+	if (group !== null && group !== undefined) {
+		queryParam = '?group=' + group;
+	}
+
+	console.log(queryParam);
 	axios
-		.get(`${BACKEND_PATH}/products/posters`)
+		.get(`${BACKEND_PATH}/products/posters` + queryParam)
 		.then((response) => {
 			dispatch(loadPostersSuccess(response.data));
 		})
