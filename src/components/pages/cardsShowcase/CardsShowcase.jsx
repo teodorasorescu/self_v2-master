@@ -16,13 +16,17 @@ const CardsShowcase = ({ title, group }) => {
 
 	const [storedPosters, setStoredPosters] = useState(() => {
 		const saved = localStorage.getItem('cards');
-		return saved ? JSON.parse(saved) : null;
+		return saved ? JSON.parse(saved) : [];
 	});
 
+	// fetch posters on initial load or when "group" changes
 	useEffect(() => {
-		getPostersAction(dispatch, group);
-	}, []);
+		if (group) {
+			getPostersAction(dispatch, group);
+		}
+	}, [group]);
 
+	// sync Redux cards → localStorage
 	useEffect(() => {
 		if (cards && cards.length > 0) {
 			setStoredPosters(cards);
@@ -30,7 +34,7 @@ const CardsShowcase = ({ title, group }) => {
 		}
 	}, [cards]);
 
-	if (isPageLoading && !storedPosters) {
+	if (isPageLoading && storedPosters.length === 0) {
 		return <Loader />;
 	}
 
