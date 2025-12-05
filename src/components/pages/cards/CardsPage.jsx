@@ -1,37 +1,34 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
 	arePostersLoading,
+	selectCards,
 	selectPosters,
 } from '../../../reducers/slices/postersSlice';
 import getPostersAction from '../../../reducers/actions/getPostersAction';
 import Loader from '../../ui/loader/Loader';
-import SelectedForYouShowcase from '../../features/selectedForYou/SelectedForYouShowcase';
+import CardsDetailsPage from './CardsDetailsPage';
 
-const SelectedForYouPage = ({ data, title }) => {
+const CardsPage = () => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(arePostersLoading);
-	let storedPosters = useSelector(selectPosters);
+	let cards = useSelector(selectCards);
 
 	useEffect(() => {
-		getPostersAction(dispatch, null);
-	}, []);
+		if (cards.length === 0) {
+			getPostersAction(dispatch, 'holiday-card');
+		}
+	}, [dispatch]);
 
 	let content;
 
 	if (isPageLoading) {
 		content = <Loader />;
 	} else {
-		content = (
-			<SelectedForYouShowcase
-				products={storedPosters}
-				data={data}
-				title={title}
-			/>
-		);
+		content = <CardsDetailsPage posters={cards} />;
 	}
 
 	return <>{content}</>;
 };
 
-export default SelectedForYouPage;
+export default CardsPage;

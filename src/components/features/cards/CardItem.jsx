@@ -7,7 +7,7 @@ import { getLocalizedPrice } from '../../../constants/utils.js';
 import { useCountry } from '../../../contexts/CountryProvider.jsx';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const ProductItem = ({ product, posterImg, hasHoverImg }) => {
+const CardItem = ({ product, posterImg, hasHoverImg }) => {
 	const [hovered, setHovered] = useState(false);
 
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
@@ -16,7 +16,6 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	const imgTitlePosterSmartphone =
 		S3_BUCKET + '/' + product.imgTitlePosterSmartphone;
 	const imageToShow = smartphoneScreen ? imgTitlePosterSmartphone : imgTitle;
-
 	const isArtist =
 		product.artist != undefined &&
 		product.artist.artist != undefined &&
@@ -24,8 +23,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 		product.artist.artist !== null;
 	const { countryCode } = useCountry();
 
-	const discountedPrice = getLocalizedPrice(53, countryCode);
-	const computedPrice = getLocalizedPrice(product.price, countryCode);
+	const discountedPrice = getLocalizedPrice(product.price, countryCode);
 
 	return (
 		<>
@@ -41,7 +39,6 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					}`}
 					alt={product.altDescription}
 				/>{' '}
-				<Tag title='15% OFF' />
 				{product.limitedEdition && <Tag title='Limited Edition' />}
 				{hasHoverImg && (
 					<LazyLoadImage
@@ -65,18 +62,8 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 						<h4 className={classes.price}>Out of Stock</h4>
 					) : (
 						<div>
-							<h4 style={{ color: 'red' }} className={classes.price}>
-								{'from ' +
-									discountedPrice.price +
-									' ' +
-									discountedPrice.currency +
-									' '}
-							</h4>{' '}
-							<h4
-								style={{ textDecoration: 'line-through' }}
-								className={classes.price}
-							>
-								{' ' + computedPrice.price + ' ' + computedPrice.currency}
+							<h4 style={{ color: 'black' }} className={classes.price}>
+								{discountedPrice.price + ' ' + discountedPrice.currency + ' '}
 							</h4>{' '}
 						</div>
 					)}
@@ -86,4 +73,4 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 	);
 };
 
-export default ProductItem;
+export default CardItem;

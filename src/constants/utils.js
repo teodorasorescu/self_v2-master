@@ -42,6 +42,18 @@ export const updatePrice = (
 	};
 };
 
+export const updateCardPrice = (price, currency) => {
+	const calculatedPrice =
+		currency === 'RON'
+			? price
+			: Math.ceil((price / RON_TO_EUR_RATE).toFixed(1));
+
+	return {
+		price: calculatedPrice,
+		currency: currency,
+	};
+};
+
 export const calculatePromotionPrice = (price) => {
 	return price + 0.4 * 90;
 };

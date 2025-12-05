@@ -5,7 +5,6 @@ import Tag from '../../ui/tag/Tag';
 
 const ItemImagesCarousel = ({ product }) => {
 	const isImageEmpty = product.imgTitle === '';
-	console.log(product);
 	return (
 		<>
 			{' '}
@@ -19,10 +18,8 @@ const ItemImagesCarousel = ({ product }) => {
 									className={classes.picturesContainer}
 									alt={product.altDescription}
 								/>
+								<Tag title='15% OFF' />
 
-								{product.posterGroup !== 'holiday-card' && (
-									<Tag title='15% OFF' />
-								)}
 								{product.stock !== null && product.stock <= 0 && (
 									<Tag title='Out of Stock' />
 								)}

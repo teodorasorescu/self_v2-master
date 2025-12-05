@@ -1,4 +1,3 @@
-import benefits from '../../../constants/benefits';
 import classes from '../../../styling/posters.page.details.module.scss';
 import PostersList from '../../features/postersList/PostersList';
 import Banner from '../../ui/banner/Banner';

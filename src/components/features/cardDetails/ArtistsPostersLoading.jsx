@@ -6,32 +6,34 @@ import {
 } from '../../../reducers/slices/postersSlice';
 import getPostersAction from '../../../reducers/actions/getPostersAction';
 import Loader from '../../ui/loader/Loader';
-import SelectedForYouShowcase from '../../features/selectedForYou/SelectedForYouShowcase';
+import PostersByArtistShowcase from '../postersByArtistShowcase/PostersByArtistShowcase';
 
-const SelectedForYouPage = ({ data, title }) => {
+const ArtistsPostersLoading = ({ artist }) => {
 	const dispatch = useDispatch();
 	const isPageLoading = useSelector(arePostersLoading);
 	let storedPosters = useSelector(selectPosters);
 
 	useEffect(() => {
-		getPostersAction(dispatch, null);
-	}, []);
+		if (storedPosters.length === 0) {
+			getPostersAction(dispatch);
+		}
+	}, [dispatch]);
 
 	let content;
 
 	if (isPageLoading) {
 		content = <Loader />;
 	} else {
-		content = (
-			<SelectedForYouShowcase
-				products={storedPosters}
-				data={data}
-				title={title}
-			/>
+		const filteredPosters = storedPosters.filter(
+			(poster) =>
+				artist.id !== null &&
+				poster.artist !== null &&
+				poster.artist.id === artist.id
 		);
+		content = <PostersByArtistShowcase products={filteredPosters} />;
 	}
 
 	return <>{content}</>;
 };
 
-export default SelectedForYouPage;
+export default ArtistsPostersLoading;

@@ -36,25 +36,6 @@ const DesktopHeader = () => {
 		},
 	];
 
-	const interiorDesignTopics = [
-		{
-			name: 'Best practices for using gradient in design',
-			path: 'inspiration',
-		},
-		{
-			name: 'How to decorate my room to match my personality?',
-			path: 'ce-este-meditatia-si-cum-se-practica',
-		},
-		{
-			name: 'What happened nowadays to detail?',
-			path: 'ce-este-meditatia-si-cum-se-practica',
-		},
-		{
-			name: 'How do colors in my home change my mood?',
-			path: 'ce-este-meditatia-si-cum-se-practica',
-		},
-	];
-
 	const setSubHeadersOff = () => {
 		setSubHeaderSpirituality(false);
 		setSubHeaderDesign(false);
@@ -134,6 +115,13 @@ const DesktopHeader = () => {
 						onMouseOver={() => setSubHeadersOff()}
 					>
 						Canvas Art Prints
+					</a>
+					<a
+						className={styles.link}
+						href='/intention-cards'
+						onMouseOver={() => setSubHeadersOff()}
+					>
+						Intention Cards
 					</a>
 					<a
 						className={styles.link}

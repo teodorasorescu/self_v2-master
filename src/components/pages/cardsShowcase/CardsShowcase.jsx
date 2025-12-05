@@ -1,0 +1,40 @@
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	arePostersLoading,
+	selectCards,
+} from '../../../reducers/slices/postersSlice';
+import getPostersAction from '../../../reducers/actions/getPostersAction';
+import Loader from '../../ui/loader/Loader';
+import CardItemsShowcase from '../../features/cardsShowcaseItems/CarditemsShowcase';
+
+const CardsShowcase = ({ title, group }) => {
+	const dispatch = useDispatch();
+
+	const cards = useSelector(selectCards);
+	const isPageLoading = useSelector(arePostersLoading);
+
+	const [storedPosters, setStoredPosters] = useState(() => {
+		const saved = localStorage.getItem('cards');
+		return saved ? JSON.parse(saved) : null;
+	});
+
+	useEffect(() => {
+		getPostersAction(dispatch, group);
+	}, []);
+
+	useEffect(() => {
+		if (cards && cards.length > 0) {
+			setStoredPosters(cards);
+			localStorage.setItem('cards', JSON.stringify(cards));
+		}
+	}, [cards]);
+
+	if (isPageLoading && !storedPosters) {
+		return <Loader />;
+	}
+
+	return <CardItemsShowcase products={storedPosters} title={title} />;
+};
+
+export default CardsShowcase;

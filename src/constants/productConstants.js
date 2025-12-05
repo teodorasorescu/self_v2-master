@@ -27,7 +27,7 @@ export const shippingPrices = new Map([
 export const freeFraming =
 	'When you purchase a canvas art print and frame in matching sizes, we will frame it for free.';
 export const deliveryDetails =
-	'Delivery is made by Sameday and it takes up to 3-5 days. You can choose between home or easybox locker delivery.';
+	'Delivery is made by Sameday or DPD and it takes up to 3-5 days in Romania, for the other EU Countries find info in the FAQ section. You can choose between home or easybox locker delivery.';
 export const details =
 	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 export const stickerDetails =
@@ -35,7 +35,27 @@ export const stickerDetails =
 
 export const postersDetails =
 	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
+export const wishCardsCandleDetails = `Dimensions: 10 × 14.4 cm
+Paper: 260 g/m²
+Packaging: Individually wrapped in a transparent protective sleeve
 
+Candle by Odyssée:
+Made with clean, safe ingredients
+Free from harmful substances:
+- Lead-free
+- Phthalate-free
+- Bleach-free
+- Free of synthetic colorants
+Cruelty-free (not tested on animals)
+
+Illustration: Adela Holdon 
+
+Instructions:
+1. Take out the match
+2. Strike the match
+3. Light the wick
+4. Set an intention or make a wish
+`;
 export const framesDetails =
 	'Print: Hahnemühle Canvas 320 g/m² with a matte finish\n\nFrames\nFrame Material: 100% FSC® certified natural wood\nMounting Method: Equipped with a hanger\nPicture Protection: Plexiglass\n\nStretcher (Chassis):\nMaterial: Dried softwood';
 
@@ -97,6 +117,7 @@ export const summerProducts = [
 	'001',
 ];
 
+export const holidayCards = ['Golden Star', 'Unicorn', 'Rudolf'];
 export const selectedShowcaseProducts = [
 	'Mes Tabi',
 	'Milan',
@@ -144,7 +165,10 @@ export const headersData = [
 		label: 'Canvas Art Prints',
 		href: '/canvas-art-prints',
 	},
-
+	{
+		label: 'Intention Cards',
+		href: '/intention-cards',
+	},
 	{
 		label: 'Journal',
 		href: '/journal',

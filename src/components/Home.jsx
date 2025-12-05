@@ -4,15 +4,13 @@ import Benefits from './Benefits';
 import VisualImages from './VisiualImages';
 import SelfMission from './SelfMission';
 import SelectedForYouPage from './pages/selectedForYouShowcase/SelectedForYouPage';
-import {
-	selectedShowcaseProducts,
-	summerProducts,
-} from '../constants/productConstants';
+import { summerProducts } from '../constants/productConstants';
 import Reviews from './features/reviews/Reviews';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { HOME_PHOTOS } from '../constants/inspoHome';
 import ButtonHomePage from './ui/buttonHomePage/ButtonHomePage';
 import Banner from './ui/banner/Banner';
+import CardsShowcase from './pages/cardsShowcase/CardsShowcase';
 
 const Home = () => {
 	const screenSizeSmartphone = useMediaQuery('(max-width:1024px)');
@@ -69,20 +67,15 @@ const Home = () => {
 					}
 				</div>
 			)}
-			<SelfMission />
+			<SelfMission />{' '}
+			<CardsShowcase title='Intention Cards' group='holiday-card' /> <Banner />
+			<Benefits />
 			<SelectedForYouPage data={summerProducts} title='Trending Today' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
 					<ButtonHomePage msg='View All' />
 				</a>
-			</div>
-			<Benefits />
-			<SelectedForYouPage
-				data={selectedShowcaseProducts}
-				title='Selected for you'
-			/>{' '}
-			<Banner />
-			{/* <PostersHomeLoading data={clayObjects} /> */}
+			</div>{' '}
 			<VisualImages />
 			<Reviews />
 			<div className={styles.feedbackContainer}>

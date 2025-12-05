@@ -8,16 +8,33 @@ import {
 
 const getPostersAction = (dispatch, group) => {
 	dispatch(loadPostersStarted());
+
 	let queryParam = '?group=nogrup';
+	let isCard = false;
+
 	if (group !== null && group !== undefined) {
 		queryParam = '?group=' + group;
+		isCard = true;
 	}
 
-	console.log(queryParam);
 	axios
 		.get(`${BACKEND_PATH}/products/posters` + queryParam)
 		.then((response) => {
-			dispatch(loadPostersSuccess(response.data));
+			if (isCard) {
+				dispatch(
+					loadPostersSuccess({
+						data: response.data,
+						type: 'cards',
+					})
+				);
+			} else {
+				dispatch(
+					loadPostersSuccess({
+						data: response.data,
+						type: 'posters',
+					})
+				);
+			}
 		})
 		.catch(() => {
 			dispatch(loadPostersFailed(BACKEND_ERROR_MESSAGE));
