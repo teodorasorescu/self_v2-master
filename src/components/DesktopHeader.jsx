@@ -19,20 +19,16 @@ const DesktopHeader = () => {
 			path: '/journal',
 		},
 		{
-			name: 'La Siesta Collection',
-			path: '/journal/ana-liana',
+			label: 'Limited Edition Opera x Raluca Ioana Drăghici',
+			href: '/journal/raluca-ioana-draghici',
 		},
 		{
-			name: 'Still Life, Still Home Collection',
-			path: '/journal/ciocarlica',
+			label: 'Limited Edition Opera x PAV',
+			href: '/journal/andra-victoria-popescu-pav',
 		},
 		{
-			name: 'The Spring Blossom Collection',
-			path: '/journal/silvie-illustrations',
-		},
-		{
-			name: 'Salt Water Collection',
-			path: '/journal/daia-grigore',
+			label: 'Autumn Collection',
+			href: '/journal/autumn-collection',
 		},
 	];
 

@@ -1,5 +1,21 @@
 export const articles = [
 	{
+		imgTitle: 'Artboard%201ral.webp',
+		title: 'Raluca Ioana Drăghici Limited Edition',
+		date: '8th December 2025',
+		urlTitle: 'raluca-ioana-draghici',
+		description:
+			'A curated series of 4 artworks by Raluca Ioana Drăghici, each released as an exclusive limited edition of 10 Fine Art Prints.',
+	},
+	{
+		imgTitle: 'Artboard%201pav.webp',
+		title: 'Andra Victoria Popescu (PAV) Limited Edition',
+		date: '8th December 2025',
+		urlTitle: 'andra-victoria-popescu-pav',
+		description:
+			'A curated series of 4 artworks by PAV, each released as an exclusive limited edition of 10 Fine Art Prints.',
+	},
+	{
 		imgTitle: 'giftGuide.png',
 		title: 'Holiday Gift Guide',
 		date: '1st December 2025',
