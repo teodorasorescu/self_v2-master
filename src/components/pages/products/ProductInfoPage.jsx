@@ -23,21 +23,21 @@ import {
 } from '../../../constants/productConstants';
 import SelectedForYouPage from '../selectedForYouShowcase/SelectedForYouPage';
 import { useCountry } from '../../../contexts/CountryProvider';
-const artistSpecialSizes = {
-	15: ['25x25cm'],
-	16: ['20x25cm'],
-};
 
 const ProductInfoPage = ({ product, suport, details }) => {
 	const defaultSize = '13x18cm';
 	const isArtist = product.artist !== null;
+	const isOperaArtist = isArtist && [16, 15].includes(product.artist.id);
 
 	const getInitialSize = () => {
-		if (isArtist && artistSpecialSizes[product.artist.id]?.length) {
-			return artistSpecialSizes[product.artist.id][0];
+		if (isOperaArtist) {
+			if (product.title === 'Vase of Flowers') {
+				return '20x25cm';
+			} else return '25x25cm';
 		}
 		return defaultSize;
 	};
+
 	const [frameColor, setFrameColor] = useState('none');
 	const [chassis, setChassis] = useState(false);
 	const [size, setSize] = useState(getInitialSize);
@@ -63,8 +63,6 @@ const ProductInfoPage = ({ product, suport, details }) => {
 	}
 
 	const discountCodeValue = parseInt(localStorage.getItem('discountValue'), 10);
-
-	const isOperaArtist = isArtist && [16, 15].includes(product.artist.id);
 
 	const computeProductCart = () => {
 		ReactGA.event('button_click', {

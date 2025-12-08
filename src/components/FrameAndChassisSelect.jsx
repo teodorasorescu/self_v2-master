@@ -56,18 +56,24 @@ const FrameAndChassisSelect = ({
 	};
 
 	const isArtist = product.artist !== null;
-	const artistSpecialSizes = {
-		15: ['25x25cm', '50x50cm'],
-		16: ['20x25cm', '50x40cm'],
+	const isOperaArtist = isArtist && [16, 15].includes(product.artist.id);
+	const defaultSizes = ['13x18cm', '21x30cm', '30x40cm', '50x70cm'];
+
+	const getSizesForProduct = (product, isOperaArtist) => {
+		// Special case by title
+		if (product.title === 'Vase of Flowers') {
+			return ['20x25cm', '50x40cm'];
+		}
+
+		if (isOperaArtist) {
+			return ['25x25cm', '50x50cm'];
+		}
+
+		// Default sizes
+		return defaultSizes;
 	};
 
-	const specialSizes = isArtist
-		? artistSpecialSizes[product.artist.id] || []
-		: [];
-
-	const defaultSizes = ['13x18cm', '21x30cm', '30x40cm', '50x70cm'];
-	const sizesToShow =
-		specialSizes && specialSizes.length > 0 ? specialSizes : defaultSizes;
+	const sizesToShow = getSizesForProduct(product, isOperaArtist);
 
 	useEffect(() => {
 		getFramesStockAction(dispatch);
