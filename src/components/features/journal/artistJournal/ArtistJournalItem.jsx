@@ -6,6 +6,7 @@ import { S3_BUCKET } from '../../../../constants/links';
 const ArtistJournalItem = ({ artist }) => {
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 	const image = S3_BUCKET + '/' + artist.aboutArtistShowcase;
+	console.log(image);
 	return (
 		<div className={classes.mainContainer}>
 			<div className={classes.container}>

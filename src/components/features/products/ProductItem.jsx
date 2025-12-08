@@ -23,7 +23,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 		product.artist !== null &&
 		product.artist.artist !== null;
 
-	const isOperaArtist = isArtist && [14, 15].includes(product.artist.id);
+	const isOperaArtist = isArtist && [16, 15].includes(product.artist.id);
 
 	const { countryCode } = useCountry();
 

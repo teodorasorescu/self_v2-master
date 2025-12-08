@@ -18,6 +18,7 @@ import { loadProducts } from '../../../reducers/slices/productsSlice';
 import {
 	deliveryDetails,
 	freeFraming,
+	posterDescriptions,
 	selectedShowcaseProducts,
 } from '../../../constants/productConstants';
 import SelectedForYouPage from '../selectedForYouShowcase/SelectedForYouPage';
@@ -63,7 +64,7 @@ const ProductInfoPage = ({ product, suport, details }) => {
 
 	const discountCodeValue = parseInt(localStorage.getItem('discountValue'), 10);
 
-	const isOperaArtist = isArtist && [14, 15].includes(product.artist.id);
+	const isOperaArtist = isArtist && [16, 15].includes(product.artist.id);
 
 	const computeProductCart = () => {
 		ReactGA.event('button_click', {
@@ -94,7 +95,6 @@ const ProductInfoPage = ({ product, suport, details }) => {
 			updatePrice(frameColor, chassis, size, product.price, countryCode)
 		);
 	}, [frameColor, chassis, size]);
-
 	return (
 		<div className={classes.container}>
 			<div className={classes.carouselContainer}>
@@ -126,11 +126,16 @@ const ProductInfoPage = ({ product, suport, details }) => {
 					)}
 				</div>
 				{isOperaArtist ? (
-					<h4>
-						A curated series of artworks, each released as an exclusive limited
-						edition of 10 Fine Art Prints. <br></br> <br></br>Each print comes
-						with a Certificate of Authenticity signed by the artist.
-					</h4>
+					<>
+						{' '}
+						<h4>
+							A curated series of artworks, each released as an exclusive
+							limited edition of 10 Fine Art Prints. <br></br> <br></br>Each
+							print comes with a Certificate of Authenticity signed by the
+							artist.
+						</h4>
+						<h4>{posterDescriptions.get(product.id)}</h4>
+					</>
 				) : (
 					<h4>
 						Fine Art Print on Hahnemühle Canvas 320 g/m² with a matte finish,

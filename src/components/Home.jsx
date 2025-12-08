@@ -68,14 +68,14 @@ const Home = () => {
 				</div>
 			)}
 			<SelfMission />{' '}
-			<CardsShowcase title='Intention Cards' group='holiday-card' /> <Banner />
-			<Benefits />
-			<SelectedForYouPage data={summerProducts} title='Trending Today' />
+			<SelectedForYouPage data={summerProducts} title='Trending Now' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
 					<ButtonHomePage msg='View All' />
 				</a>
 			</div>{' '}
+			<Benefits />
+			<CardsShowcase title='Intention Cards' group='holiday-card' /> <Banner />
 			<VisualImages />
 			<Reviews />
 			<div className={styles.feedbackContainer}>

@@ -106,16 +106,50 @@ export const clayObjects = [
 ];
 
 export const summerProducts = [
-	'Mes Tabi',
-	'Definitely a Pisces',
-	'Cinnamon Rolls',
-	'Cozonac',
-	'Le Joyeux Trench-Coat',
-	'Le cardigan gourmand',
-	'Budapest',
-	'Girls night at my place ||',
-	'001',
+	'What Do You Want To Be When You Grow Up?',
+	'Bad Boys',
+	'Vase of Flowers',
+	'Emergence',
+	"Don't Wither, Alfonso",
+	'I Need A Minute',
+	'Fleeting Wings II',
+	'Fleeting Wings I',
 ];
+
+export const posterDescriptions = new Map([
+	[
+		77,
+		'Vase of Flowers I explores the subtle interplay between form, shadow, and symbolic memory. What first appears as a simple still-life gradually reveals an intricate choreography of light and mirrored contours. The flowers, long-standing symbols of growth and fertility; interact with the cast shadows of the hands that shaped their image. Drăghici transforms this moment of play into a study of perception, where the boundary between object and shadow shifts constantly. The result is a composition that feels both intimate and architectural, an image in which presence and absence hold equal weight.',
+	],
+	[
+		76,
+		'Emergence III expands the vocabulary of Fleeting Wings into a richer, more chromatic register. Here, the wing-like structure unfolds into multicoloured layers, with deep reds anchoring the image and creating a sense of internal gravity. The painting oscillates between recognisable form and pure abstraction, inviting the viewer to witness the moment an image begins to take shape. It is an exploration of perception at its threshold — a reminder that emergence is not sudden but gradual, layered, and quietly transformative.',
+	],
+	[
+		74,
+		'A meditation on balance, Fleeting Wings I draws on Drăghici’s enduring fascination with near-symmetry. The composition hovers between abstraction and figuration: a structure reminiscent of wings or folded forms, rendered in cool blue tones that evoke calm and controlled movement. The symmetrical framework is never entirely perfect, allowing the painting’s quiet tension to surface.This work exemplifies her “interior mathematics”: an intuitive search for harmony through subtle deviations, gestures, and layered colour.',
+	],
+	[
+		75,
+		'This work brings Drăghici’s study of near-symmetry even closer to abstraction. Softly mirrored structures dissolve into atmospheric colour fields,  creating a composition that feels both balanced and intentionally unresolved. The image resists naming, offering instead a space for introspection — a form that feels familiar yet remains just beyond recognition. In this ambiguity lies its strength: a painting shaped by intuition, guided by structure, and open to interpretation.',
+	],
+	[
+		70,
+		'In this intimate work, PAV transforms her cat Alfonso into a symbol of shared growth and emotional continuity. The figurative clarity of the cat contrasts with an abstract, collage-like background that expresses general emotional states rather than specific memories. Painted with the sensitivity of a diaristic gesture, the piece reflects the longing to spend more time together and the subtle ways artist and companion change side by side.',
+	],
+	[
+		71,
+		'This composition captures childhood as a space of projection, imagination, and possibility. Children play with dolls representing divergent life paths—soldier, Parisian woman, perhaps an artist—while Alfonso appears again as a stabilizing presence. The work explores early identities, career fantasies, and the fluidity of becoming, all expressed through PAV’s signature blend of naïve gesture and emotional clarity.',
+	],
+	[
+		72,
+		'One of PAV’s signature works, I Need a Minute brings together multiple layers of her life in a composition reminiscent of collage yet fully painted. Alfonso, floating balloons, and earlier versions of the artist intertwine with abstract zones that represent shifting emotional states. The piece reads as a visual pause—a moment suspended between past and present selves, between clarity and uncertainty.',
+	],
+	[
+		73,
+		'Bad Boys unfolds as a quiet psychological scene in which the grown-up artist looks back at her younger self playing with figure-like symbols of men. The simplified clouds and grass evoke a childlike landscape, yet the undertones are reflective and mature. The work suggests a re-reading of past relationships through a serene, almost innocent visual vocabulary—an image of self-awareness that bridges childhood and adulthood.',
+	],
+]);
 
 export const holidayCards = ['Golden Star', 'Unicorn', 'Rudolf'];
 export const selectedShowcaseProducts = [
@@ -133,24 +167,16 @@ export const subheadersData = new Map([
 		'Featured',
 		[
 			{
+				label: 'Limited Edition Opera x PAV',
+				href: '/journal/andra-victoria-popescu-pav',
+			},
+			{
+				label: 'Limited Edition Opera x Raluca Ioana Drăghici',
+				href: '/journal/raluca-ioana-draghici',
+			},
+			{
 				label: 'Autumn Collection',
 				href: '/journal/autumn-collection',
-			},
-			{
-				label: 'La Siesta Collection',
-				href: '/journal/ana-liana',
-			},
-			{
-				label: 'Still Life, Still Home Collection',
-				href: '/journal/ciocarlica',
-			},
-			{
-				label: 'The Spring Blossom Collection',
-				href: '/journal/silvie-illustrations',
-			},
-			{
-				label: 'Salt Water Collection',
-				href: '/journal/daia-grigore',
 			},
 		],
 	],
