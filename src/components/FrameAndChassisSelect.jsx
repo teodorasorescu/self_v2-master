@@ -14,6 +14,7 @@ import { getLocalizedPrice } from '../constants/utils';
 import ImageModal from './ui/imgModal/ImageModal';
 import sizeGuideImage from './sizeGuide.png';
 const FrameAndChassisSelect = ({
+	product,
 	frameColor,
 	chassis,
 	setFrameColor,
@@ -54,6 +55,20 @@ const FrameAndChassisSelect = ({
 		setFramePrice(getLocalizedPrice(framePrices.get(size), countryCode));
 	};
 
+	const isArtist = product.artist !== null;
+	const artistSpecialSizes = {
+		15: ['25x25cm', '50x50cm'],
+		16: ['20x25cm', '50x40cm'],
+	};
+
+	const specialSizes = isArtist
+		? artistSpecialSizes[product.artist.id] || []
+		: [];
+
+	const defaultSizes = ['13x18cm', '21x30cm', '30x40cm', '50x70cm'];
+	const sizesToShow =
+		specialSizes && specialSizes.length > 0 ? specialSizes : defaultSizes;
+
 	useEffect(() => {
 		getFramesStockAction(dispatch);
 		getChassisStockAction(dispatch);
@@ -75,10 +90,11 @@ const FrameAndChassisSelect = ({
 					placeholder='Size'
 					onChange={setSizeField}
 				>
-					<option value='13x18cm'>13x18cm</option>
-					<option value='21x30cm'>21x30cm</option>
-					<option value='30x40cm'>30x40cm</option>
-					<option value='50x70cm'>50x70cm</option>
+					{sizesToShow.map((size) => (
+						<option key={size} value={size}>
+							{size}
+						</option>
+					))}
 				</select>
 			</div>
 			<p className='sizeGuide' onClick={() => setIsSizeGuideOpen(true)}>

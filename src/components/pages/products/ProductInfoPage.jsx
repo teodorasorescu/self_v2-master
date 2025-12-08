@@ -22,13 +22,25 @@ import {
 } from '../../../constants/productConstants';
 import SelectedForYouPage from '../selectedForYouShowcase/SelectedForYouPage';
 import { useCountry } from '../../../contexts/CountryProvider';
+const artistSpecialSizes = {
+	15: ['25x25cm'],
+	16: ['20x25cm'],
+};
 
 const ProductInfoPage = ({ product, suport, details }) => {
+	const defaultSize = '13x18cm';
+	const isArtist = product.artist !== null;
+
+	const getInitialSize = () => {
+		if (isArtist && artistSpecialSizes[product.artist.id]?.length) {
+			return artistSpecialSizes[product.artist.id][0];
+		}
+		return defaultSize;
+	};
 	const [frameColor, setFrameColor] = useState('none');
 	const [chassis, setChassis] = useState(false);
-	const [size, setSize] = useState('13x18cm');
+	const [size, setSize] = useState(getInitialSize);
 	const { itemCount, setItemCount } = useStateContext();
-	const isArtist = product.artist !== null;
 	const smartphoneScreen = useMediaQuery('(max-width:1023px)');
 
 	const { countryCode } = useCountry();
@@ -51,14 +63,17 @@ const ProductInfoPage = ({ product, suport, details }) => {
 
 	const discountCodeValue = parseInt(localStorage.getItem('discountValue'), 10);
 
+	const isOperaArtist = isArtist && [14, 15].includes(product.artist.id);
+
 	const computeProductCart = () => {
 		ReactGA.event('button_click', {
 			button_label: `Adauga In Cos ${product.title}`,
 		});
 
+		const price = isOperaArtist ? finalPrice.originalPrice : finalPrice.price;
 		const finalProduct = computeProduct(
 			product,
-			finalPrice.price,
+			price,
 			discountCodeValue,
 			frameColor,
 			chassis,
@@ -93,20 +108,39 @@ const ProductInfoPage = ({ product, suport, details }) => {
 							<h3>{product.artist.artist}</h3>
 						</a>
 					)}
-					<h2 style={{ textDecoration: 'line-through', fontSize: '1.2rem' }}>
-						{finalPrice.originalPrice + ' ' + finalPrice.currency}{' '}
-					</h2>
-					<h2 style={{ color: 'red' }}>
-						{finalPrice.price + ' ' + finalPrice.currency}{' '}
-					</h2>
+					{isOperaArtist ? (
+						<h2>
+							{finalPrice.originalPrice} {finalPrice.currency}
+						</h2>
+					) : (
+						<>
+							<h2
+								style={{ textDecoration: 'line-through', fontSize: '1.2rem' }}
+							>
+								{finalPrice.originalPrice} {finalPrice.currency}
+							</h2>
+							<h2 style={{ color: 'red' }}>
+								{finalPrice.price} {finalPrice.currency}
+							</h2>
+						</>
+					)}
 				</div>
-				<h4>
-					Fine Art Print on Hahnemühle Canvas 320 g/m² with a matte finish,
-					created with intention by contemporary artists. Every piece tells a
-					story while sharing a common thread: the power of self-expression
-					through art.
-				</h4>
+				{isOperaArtist ? (
+					<h4>
+						A curated series of artworks, each released as an exclusive limited
+						edition of 10 Fine Art Prints. <br></br> <br></br>Each print comes
+						with a Certificate of Authenticity signed by the artist.
+					</h4>
+				) : (
+					<h4>
+						Fine Art Print on Hahnemühle Canvas 320 g/m² with a matte finish,
+						created with intention by contemporary artists. Every piece tells a
+						story while sharing a common thread: the power of self-expression
+						through art.
+					</h4>
+				)}
 				<FrameAndChassisSelect
+					product={product}
 					frameColor={frameColor}
 					chassis={chassis}
 					setChassis={setChassis}

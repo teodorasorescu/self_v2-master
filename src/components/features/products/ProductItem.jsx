@@ -22,6 +22,9 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 		product.artist.artist != undefined &&
 		product.artist !== null &&
 		product.artist.artist !== null;
+
+	const isOperaArtist = isArtist && [14, 15].includes(product.artist.id);
+
 	const { countryCode } = useCountry();
 
 	const discountedPrice = getLocalizedPrice(53, countryCode);
@@ -65,19 +68,23 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 						<h4 className={classes.price}>Out of Stock</h4>
 					) : (
 						<div>
-							<h4 style={{ color: 'red' }} className={classes.price}>
-								{'from ' +
-									discountedPrice.price +
-									' ' +
-									discountedPrice.currency +
-									' '}
-							</h4>{' '}
-							<h4
-								style={{ textDecoration: 'line-through' }}
-								className={classes.price}
-							>
-								{' ' + computedPrice.price + ' ' + computedPrice.currency}
-							</h4>{' '}
+							{isOperaArtist ? (
+								<h4 className={classes.price}>
+									{computedPrice.price} {computedPrice.currency}
+								</h4>
+							) : (
+								<>
+									<h4 style={{ color: 'red' }} className={classes.price}>
+										from {discountedPrice.price} {discountedPrice.currency}
+									</h4>
+									<h4
+										style={{ textDecoration: 'line-through' }}
+										className={classes.price}
+									>
+										{computedPrice.price} {computedPrice.currency}
+									</h4>
+								</>
+							)}
 						</div>
 					)}
 				</div>

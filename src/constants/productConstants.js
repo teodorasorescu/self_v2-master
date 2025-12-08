@@ -183,7 +183,11 @@ export const prices = new Map([
 export const sizes = ['13x18cm', '21x30cm', '30x40cm', '50x70cm'];
 export const chassisPrices = new Map([
 	['21x30cm', 30],
+	['25x25cm', 30],
+	['20x25cm', 30],
 	['30x40cm', 50],
+	['50x40cm', 50],
+	['50x50cm', 50],
 	['50x70cm', 80],
 ]);
 
@@ -207,6 +211,8 @@ export const posterPrices = new Map([
 			[62, { original: 159, discount35: 135 }],
 		]),
 	],
+	['20x25cm', new Map([[220, { original: 220, discount35: 143 }]])],
+	['25x25cm', new Map([[275, { original: 275, discount35: 179 }]])],
 	[
 		'30x40cm',
 		new Map([
@@ -214,6 +220,8 @@ export const posterPrices = new Map([
 			[62, { original: 229, discount35: 195 }],
 		]),
 	],
+	['50x40cm', new Map([[220, { original: 440, discount35: 286 }]])],
+	['50x50cm', new Map([[275, { original: 550, discount35: 358 }]])],
 	[
 		'50x70cm',
 		new Map([
