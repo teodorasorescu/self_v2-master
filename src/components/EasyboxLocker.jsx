@@ -1,8 +1,8 @@
 export const getLockerPluginInstance = (countryCode) => {
 	const clientId = process.env.REACT_APP_CLIENT_ID_SAMEDAY;
-	const city = 'Sectorul 3';
-	const county = 'Bucuresti';
-	const favLockerId = 4222;
+	const city = 'Iasi';
+	const county = 'Iasi';
+	const favLockerId = 4720;
 	const theme = 'light';
 	window.LockerPlugin.init({
 		clientId: clientId,
