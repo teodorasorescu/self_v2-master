@@ -6,13 +6,14 @@ const CardsDetailsPage = ({ posters }) => {
 	return (
 		<div className={classes.container}>
 			<h1>Intention Cards</h1>
+
 			<h2>
-				A special holiday collaboration with Odyssée Candles and Adela Holdon.
-				Each card invites you to set an intention, light your candle with
-				purpose and let the flame carry your thoughts toward what you wish for
-				the new year. The candle, hand-poured in Romania by Odyssée, is crafted
-				with clean, sustainable ingredients, free from harmful substances and
-				cruelty-free. Illustrations by Adela Holdon.
+				Instructions
+				<br />
+				1. Take out the match
+				<br /> 2. Strike the match
+				<br /> 3. Light the candle
+				<br /> 4. Set an intention or make a wish
 			</h2>
 			<CardsList posters={posters} />
 			<Banner />
