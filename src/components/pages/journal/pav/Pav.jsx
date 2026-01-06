@@ -5,8 +5,6 @@ import ButtonHomePage from '../../../ui/buttonHomePage/ButtonHomePage';
 import { S3_BUCKET } from '../../../../constants/links';
 
 const PavArticle = () => {
-	const paintAndSip = S3_BUCKET + '/iuliaVerzanCollection.webp';
-	const ps2 = S3_BUCKET + '/girlsnightout.webp';
 	const ps4 = S3_BUCKET + '/pav1.webp';
 	const ps5 = S3_BUCKET + '/pav4.webp';
 	const ps6 = S3_BUCKET + '/pav3.webp';

@@ -6,7 +6,6 @@ import CardsShowcase from '../../cardsShowcase/CardsShowcase';
 
 const IntentionsArticle = () => {
 	const ps1 = S3_BUCKET + '/odysee&adelaholdon.jpg';
-	const ps5 = S3_BUCKET + '/pav4.webp';
 	const ps3 = S3_BUCKET + '/7.png';
 	const ps4 = S3_BUCKET + '/8.png';
 	const ps2 = S3_BUCKET + '/star_intention.webp';

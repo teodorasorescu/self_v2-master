@@ -6,7 +6,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const PaintAndSipLake = () => {
 	const paintAndSip = S3_BUCKET + '/ps7.webp';
-	const ps2 = S3_BUCKET + '/ps2.webp';
 	const ps4 = S3_BUCKET + '/ps4.webp';
 	const ps5 = S3_BUCKET + '/ps5.webp';
 	const ps6 = S3_BUCKET + '/ps6.webp';

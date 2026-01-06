@@ -1,5 +1,13 @@
 export const articles = [
 	{
+		imgTitle: 'odysee&adelaholdon.jpg',
+		title: 'Why Intention Shapes a Better Life',
+		date: '6th January 2026',
+		urlTitle: 'why-intention-shapes-a-better-life',
+		description:
+			'Setting intentions and goals constantly helps you build a better life because it aligns your inner world with your actions: again and again, not just once.',
+	},
+	{
 		imgTitle: 'Artboard%201ral.webp',
 		title: 'Raluca Ioana Drăghici Limited Edition',
 		date: '8th December 2025',
