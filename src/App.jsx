@@ -34,7 +34,8 @@ import PaintAndSipLake from './components/pages/journal/events/paintAndSip/Paint
 import AutumnCollectionArticle from './components/pages/journal/autumcollection/AutumnCollectionArticle.jsx';
 import CardsPage from './components/pages/cards/CardsPage.jsx';
 import CardDetails from './components/features/cardDetails/CardDetails.jsx';
-import PavArticle from './components/pages/journal/autumcollection copy/Pav.jsx';
+import PavArticle from './components/pages/journal/pav/Pav.jsx';
+import IntentionsArticle from './components/pages/journal/whyIntentionsMatter/IntentionsArticle.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -90,6 +91,10 @@ function App() {
 						<Route
 							path='/journal/autumn-collection'
 							element={<AutumnCollectionArticle />}
+						/>
+						<Route
+							path='/journal/why-intention-shapes-a-better-life'
+							element={<IntentionsArticle />}
 						/>
 						<Route
 							path='/journal/about-pav-self-expression-through-art'

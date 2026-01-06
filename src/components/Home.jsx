@@ -68,6 +68,7 @@ const Home = () => {
 			)}
 			<SelfMission />{' '}
 			<CardsShowcase title='Intention Cards' group='holiday-card' />
+			<VisualImages />{' '}
 			<div className={styles.quizContainer}>
 				<h1>
 					{' '}
@@ -77,24 +78,23 @@ const Home = () => {
 				<a href='/quiz'>
 					<ButtonHomePage msg='START QUIZ' />
 				</a>
-			</div>
+			</div>{' '}
 			<SelectedForYouPage data={summerProducts} title='Trending Now' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
 					<ButtonHomePage msg='View All' />
 				</a>
 			</div>{' '}
-			<Benefits />
-			<VisualImages />
+			<Benefits />{' '}
+			<div className={styles.inspoImages}>
+				<HomeInspirationShowcase />
+			</div>
 			<Reviews />
 			<div className={styles.feedbackContainer}>
 				<p>We'd love to hear your thoughts! How are we doing?</p>
 				<a href='https://www.trustpilot.com/evaluate/self-posters.com'>
 					<ButtonHomePage msg='Give Feedback' />
 				</a>
-			</div>
-			<div className={styles.inspoImages}>
-				<HomeInspirationShowcase />
 			</div>
 		</div>
 	);
