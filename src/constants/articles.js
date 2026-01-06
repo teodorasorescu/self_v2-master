@@ -9,9 +9,9 @@ export const articles = [
 	},
 	{
 		imgTitle: 'Artboard%201pav.webp',
-		title: 'Andra Victoria Popescu (PAV) Limited Edition',
+		title: 'PAV and Self Expression Through Art',
 		date: '8th December 2025',
-		urlTitle: 'andra-victoria-popescu-pav',
+		urlTitle: 'about-pav-self-expression-through-art',
 		description:
 			'A curated series of 4 artworks by PAV, each released as an exclusive limited edition of 10 Fine Art Prints.',
 	},

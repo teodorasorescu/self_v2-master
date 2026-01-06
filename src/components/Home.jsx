@@ -9,7 +9,6 @@ import Reviews from './features/reviews/Reviews';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { HOME_PHOTOS } from '../constants/inspoHome';
 import ButtonHomePage from './ui/buttonHomePage/ButtonHomePage';
-import Banner from './ui/banner/Banner';
 import CardsShowcase from './pages/cardsShowcase/CardsShowcase';
 
 const Home = () => {
@@ -31,15 +30,15 @@ const Home = () => {
 							{index === 0 && (
 								<div className={styles.photoOverlay}>
 									<div className={styles.overlayText}>
-										<h1>15% SALE & Free Shipping</h1>
+										<h1>Intention Cards</h1>
 										<p>
-											Try our Art Finder Quiz and get matched with a
-											personalised selection of art prints that fit your style.
+											We have a ritual for you to become a better version of
+											yourself.
 										</p>
 									</div>
 									<div className={styles.buttonContainer}>
-										<a href='/quiz'>
-											<ButtonHomePage msg='Start Quiz' />
+										<a href='/intention-cards'>
+											<ButtonHomePage msg='SHOP NOW' />
 										</a>{' '}
 									</div>
 								</div>
@@ -52,15 +51,15 @@ const Home = () => {
 					{
 						<div className={styles.introductionContainer}>
 							<div className={styles.mobileOnlyText}>
-								<h1>15% SALE</h1>
+								<h1>Intention Cards</h1>
 								<p>
-									Try our Art Finder Quiz and get matched with a personalised
-									selection of art prints that fit your style.
+									We have a ritual for you to become a better version of
+									yourself.
 								</p>
 							</div>
 							<div className={styles.buttonContainer}>
-								<a href='/quiz'>
-									<ButtonHomePage msg='Start Quiz' />
+								<a href='/intention-cards'>
+									<ButtonHomePage msg='SHOP NOW' />
 								</a>{' '}
 							</div>
 						</div>
@@ -68,6 +67,17 @@ const Home = () => {
 				</div>
 			)}
 			<SelfMission />{' '}
+			<CardsShowcase title='Intention Cards' group='holiday-card' />
+			<div className={styles.quizContainer}>
+				<h1>
+					{' '}
+					Try our Art Finder Quiz and get matched with a personalised selection
+					of art prints that fit your style.
+				</h1>
+				<a href='/quiz'>
+					<ButtonHomePage msg='START QUIZ' />
+				</a>
+			</div>
 			<SelectedForYouPage data={summerProducts} title='Trending Now' />
 			<div className={styles.centeredContainer}>
 				<a href='/canvas-art-prints'>
@@ -75,7 +85,6 @@ const Home = () => {
 				</a>
 			</div>{' '}
 			<Benefits />
-			<CardsShowcase title='Intention Cards' group='holiday-card' /> <Banner />
 			<VisualImages />
 			<Reviews />
 			<div className={styles.feedbackContainer}>

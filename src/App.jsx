@@ -34,6 +34,7 @@ import PaintAndSipLake from './components/pages/journal/events/paintAndSip/Paint
 import AutumnCollectionArticle from './components/pages/journal/autumcollection/AutumnCollectionArticle.jsx';
 import CardsPage from './components/pages/cards/CardsPage.jsx';
 import CardDetails from './components/features/cardDetails/CardDetails.jsx';
+import PavArticle from './components/pages/journal/autumcollection copy/Pav.jsx';
 
 function App() {
 	const { headerOn, setHeaderOn } = useStateContext();
@@ -89,6 +90,10 @@ function App() {
 						<Route
 							path='/journal/autumn-collection'
 							element={<AutumnCollectionArticle />}
+						/>
+						<Route
+							path='/journal/about-pav-self-expression-through-art'
+							element={<PavArticle />}
 						/>
 					</>
 					<Route path='/event' element={<EventPage />} />

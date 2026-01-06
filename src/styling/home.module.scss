@@ -170,7 +170,7 @@
 		height: 100svh;
 
 		@media screen and (max-width: 1024px) {
-			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/iuliaVerzanCollection.webp');
+			background-image: url('https://myselfpostersbucket11.s3.eu-central-1.amazonaws.com/star.jpg');
 			height: 80svh;
 			background-size: cover;
 			background-position: center;
@@ -202,5 +202,32 @@
 	margin-right: auto;
 	@media screen and (max-width: 1024px) {
 		padding: 10%;
+	}
+}
+.quizContainer {
+	background: #fff7e3;
+	border-radius: 1rem;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+	padding: 2rem;
+	max-width: 600px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.2s ease;
+	margin: auto;
+	&:hover {
+		transform: translateY(-4px);
+	}
+
+	> h1 {
+		font-size: 1.3rem;
+		font-family: 'Poppins', serif;
+		font-weight: 400;
+		margin-bottom: 3%;
+	}
+	@media screen and (max-width: 1024px) {
+		padding: 10%;
+		background-color: #fff7e3;
 	}
 }

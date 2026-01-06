@@ -107,13 +107,15 @@ export const clayObjects = [
 
 export const summerProducts = [
 	'What Do You Want To Be When You Grow Up?',
-	'Bad Boys',
+	'Cinnamon Rolls',
 	'Vase of Flowers',
-	'Emergence',
-	"Don't Wither, Alfonso",
-	'I Need A Minute',
-	'Fleeting Wings II',
-	'Fleeting Wings I',
+	'Girls night at my place ||',
+	'Definitely a Pisces',
+	'Budapest',
+	'Mes Tabi',
+	'Where She Stood',
+	"I've made you coffee",
+	'A table for two, please!',
 ];
 
 export const posterDescriptions = new Map([

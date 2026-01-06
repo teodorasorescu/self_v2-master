@@ -12,8 +12,8 @@ const VisualImages = () => {
 			</div>
 			<div className={styles.imgContainer}>
 				<div className={styles.secondContainer}></div>
-				<a href='/journal/gift-guide'>
-					<Button msg={'Holiday Gift Guide'} />
+				<a href='/journal/about-pav-self-expression-through-art'>
+					<Button msg={'Self Expression Through Art'} />
 				</a>
 			</div>
 		</div>
