@@ -29,8 +29,19 @@ const CardsShowcase = ({ title, group }) => {
 	// sync Redux cards → localStorage
 	useEffect(() => {
 		if (cards && cards.length > 0) {
-			setStoredPosters(cards);
-			localStorage.setItem('cards', JSON.stringify(cards));
+			const allowedTitles = [
+				'Heart',
+				"Galentine's Day",
+				'Love Birds',
+				'Horse',
+				'Make a Wish',
+			];
+
+			const filteredCards = cards.filter((card) =>
+				allowedTitles.includes(card.title),
+			);
+			setStoredPosters(filteredCards);
+			localStorage.setItem('cards', JSON.stringify(filteredCards));
 		}
 	}, [cards]);
 

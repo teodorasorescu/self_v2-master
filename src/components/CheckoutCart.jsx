@@ -58,8 +58,6 @@ export const CheckoutCart = ({ storedProducts }) => {
 	const total = calculateTotalPrice(storedProducts);
 	const discountNo = Math.floor(computeProductsLength(storedProducts) / 3);
 	const discount = false;
-	// computeProductsLength(storedProducts) / 3 >= 1;
-
 	let deliveryPrice = useSelector(selectDeliveryPrice);
 
 	if (deliveryPrice === 0) {
@@ -152,7 +150,7 @@ export const CheckoutCart = ({ storedProducts }) => {
 																	>
 																		{'' +
 																			(row['quantity'] * row['price']).toFixed(
-																				2
+																				2,
 																			) +
 																			currency}
 																	</p>

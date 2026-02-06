@@ -71,7 +71,7 @@ const IntentionsArticle = () => {
 				alt='Collection of art prints and posters on display – Minimalist and colorful summer-themed illustrations, typography, and abstract designs showcased alongside flowers.'
 			/>{' '}
 			<h2>After, wait and watch your intention getting sealed.</h2>{' '}
-			<CardsShowcase title='Intention Cards' group='holiday-card' />
+			<CardsShowcase title='Wish Cards' group='holiday-card' />
 		</div>
 	);
 };

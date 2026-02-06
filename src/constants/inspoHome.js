@@ -14,8 +14,8 @@ const inspo9 = S3_BUCKET + '/frontPage.webp';
 const inspo10 = S3_BUCKET + '/leleCafe.webp';
 const inspo11 = S3_BUCKET + '/homePageSmartphone.jpg';
 
-const homeImg1 = S3_BUCKET + '/star.jpg';
-const homeImg2 = S3_BUCKET + '/iuliaVerzanCollection.webp';
+const homeImg1 = S3_BUCKET + '/galentines.png';
+const homeImg2 = S3_BUCKET + '/loveBirds.png';
 const inspo12 = S3_BUCKET + '/cat.webp';
 const inspo13 = S3_BUCKET + '/anawithchair.webp';
 const inspo14 = S3_BUCKET + '/mestabi2.webp';

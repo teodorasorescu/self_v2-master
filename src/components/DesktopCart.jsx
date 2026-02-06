@@ -197,7 +197,7 @@ export const DesktopCart = ({ currency }) => {
 																				</p>
 																			</>
 																		) : (
-																			<p style={{ color: 'red' }}>
+																			<p>
 																				{row['price'].toFixed(1) + currency}
 																			</p>
 																		)}

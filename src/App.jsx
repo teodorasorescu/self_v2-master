@@ -69,7 +69,7 @@ function App() {
 						path='/canvas-art-prints/:urlTitle'
 						element={<PosterDetails />}
 					/>
-					<Route path='/intention-cards/:urlTitle' element={<CardDetails />} />
+					<Route path='/wish-cards/:urlTitle' element={<CardDetails />} />
 					<Route path='/clay-objects/:urlTitle' element={<StickerDetails />} />
 					<Route path='/quiz-result' element={<QuizResult />} />
 					<Route path='/journal/:urlTitle' element={<ArtistJournalPage />} />
@@ -80,7 +80,7 @@ function App() {
 					<Route path='/quiz' element={<QuizPage />} />
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/checkout' element={<Checkout />} />
-					<Route path='/intention-cards' element={<CardsPage />} />
+					<Route path='/wish-cards' element={<CardsPage />} />
 					<>
 						<Route path='/journal' element={<JournalPage />} />
 						<Route path='/journal/gift-guide' element={<GiftGuide />} />

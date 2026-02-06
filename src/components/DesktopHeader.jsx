@@ -63,7 +63,7 @@ const DesktopHeader = () => {
 							<Badge
 								color='primary'
 								badgeContent={Number.parseInt(
-									localStorage.getItem('itemCount')
+									localStorage.getItem('itemCount'),
 								)}
 								sx={{
 									'& .MuiBadge-colorPrimary': {
@@ -114,10 +114,10 @@ const DesktopHeader = () => {
 					</a>
 					<a
 						className={styles.link}
-						href='/intention-cards'
+						href='/wish-cards'
 						onMouseOver={() => setSubHeadersOff()}
 					>
-						Intention Cards
+						Wish Cards
 					</a>
 					<a
 						className={styles.link}

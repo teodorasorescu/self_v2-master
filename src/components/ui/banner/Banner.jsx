@@ -36,12 +36,12 @@ const Banner = () => {
 			onTouchEnd={onTouchEnd}
 		>
 			<div className={styles.marqueeInner}>
-				<p>Don’t Miss the Only Sale of the Year</p>
+				<p>Be My Valentine</p>
 				<p>Limited Stock </p> <p> 15% SALE</p>
 				<p>Free Shipping</p>
 				<p>EU Delivery</p>
 				{/* duplicate for seamless scroll */}
-				<p>Don’t Miss the Only Sale of the Year</p>
+				<p>Be My Valentine</p>
 				<p>15% SALE</p>
 				<p>Limited Stock </p>
 				<p>Free Shipping</p>

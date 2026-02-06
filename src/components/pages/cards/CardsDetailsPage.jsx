@@ -5,7 +5,7 @@ import Banner from '../../ui/banner/Banner';
 const CardsDetailsPage = ({ posters }) => {
 	return (
 		<div className={classes.container}>
-			<h1>Intention Cards</h1>
+			<h1>Wish Cards</h1>
 
 			<h2>
 				Instructions

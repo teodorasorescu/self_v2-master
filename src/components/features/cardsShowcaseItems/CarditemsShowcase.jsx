@@ -45,7 +45,7 @@ const CardItemsShowcase = ({ products, title }) => {
 					{products.map((product) => (
 						<SwiperSlide key={product.urlTitle}>
 							<div className={classes.productCard}>
-								<a href={`/intention-cards/${product.urlTitle}`}>
+								<a href={`/wish-cards/${product.urlTitle}`}>
 									<CardItem
 										product={product}
 										posterImg={product.imgTitlePosterList}

@@ -69,14 +69,17 @@ const ProductInfoPage = ({ product, suport, details }) => {
 			button_label: `Adauga In Cos ${product.title}`,
 		});
 
-		const price = isOperaArtist ? finalPrice.originalPrice : finalPrice.price;
+		const price = finalPrice.originalPrice;
+		//when discount
+		// const price = isOperaArtist ? finalPrice.originalPrice : finalPrice.price;
+
 		const finalProduct = computeProduct(
 			product,
 			price,
 			discountCodeValue,
 			frameColor,
 			chassis,
-			size
+			size,
 		);
 
 		const productsList = [...storedProducts, finalProduct];
@@ -84,13 +87,13 @@ const ProductInfoPage = ({ product, suport, details }) => {
 		dispatch(loadProducts(productsList));
 
 		setItemCount(
-			Math.max(Number.parseInt(localStorage.getItem('itemCount')) + 1, 0)
+			Math.max(Number.parseInt(localStorage.getItem('itemCount')) + 1, 0),
 		);
 	};
 
 	useEffect(() => {
 		setFinalPrice(
-			updatePrice(frameColor, chassis, size, product.price, countryCode)
+			updatePrice(frameColor, chassis, size, product.price, countryCode),
 		);
 	}, [frameColor, chassis, size]);
 	return (
@@ -113,13 +116,13 @@ const ProductInfoPage = ({ product, suport, details }) => {
 					) : (
 						<>
 							<h2
-								style={{ textDecoration: 'line-through', fontSize: '1.2rem' }}
+							// style={{ textDecoration: 'line-through', fontSize: '1.2rem' }}
 							>
 								{finalPrice.originalPrice} {finalPrice.currency}
 							</h2>
-							<h2 style={{ color: 'red' }}>
+							{/* <h2 style={{ color: 'red' }}>
 								{finalPrice.price} {finalPrice.currency}
-							</h2>
+							</h2> */}
 						</>
 					)}
 				</div>

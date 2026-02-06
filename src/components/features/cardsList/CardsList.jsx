@@ -10,7 +10,7 @@ const CardsList = ({ posters }) => {
 					className={classes.poster}
 					style={{ '--delay': index }}
 				>
-					<a href={`/intention-cards/${poster.urlTitle}`}>
+					<a href={`/wish-cards/${poster.urlTitle}`}>
 						<CardItem
 							product={poster}
 							posterImg={poster.imgTitle}

@@ -27,7 +27,8 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 
 	const { countryCode } = useCountry();
 
-	const discountedPrice = getLocalizedPrice(53, countryCode);
+	//when discount
+	// const discountedPrice = getLocalizedPrice(53, countryCode);
 	const computedPrice = getLocalizedPrice(product.price, countryCode);
 
 	return (
@@ -44,7 +45,7 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 					}`}
 					alt={product.altDescription}
 				/>{' '}
-				<Tag title='15% OFF' />
+				{/* <Tag title='15% OFF' /> */}
 				{product.limitedEdition && <Tag title='Limited Edition' />}
 				{hasHoverImg && (
 					<LazyLoadImage
@@ -74,13 +75,10 @@ const ProductItem = ({ product, posterImg, hasHoverImg }) => {
 								</h4>
 							) : (
 								<>
-									<h4 style={{ color: 'red' }} className={classes.price}>
+									{/* <h4 style={{ color: 'red' }} className={classes.price}>
 										from {discountedPrice.price} {discountedPrice.currency}
-									</h4>
-									<h4
-										style={{ textDecoration: 'line-through' }}
-										className={classes.price}
-									>
+									</h4> */}
+									<h4 className={classes.price}>
 										{computedPrice.price} {computedPrice.currency}
 									</h4>
 								</>

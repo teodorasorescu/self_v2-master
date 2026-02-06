@@ -194,8 +194,8 @@ export const headersData = [
 		href: '/canvas-art-prints',
 	},
 	{
-		label: 'Intention Cards',
-		href: '/intention-cards',
+		label: 'Wish Cards',
+		href: '/wish-cards',
 	},
 	{
 		label: 'Journal',
@@ -228,33 +228,33 @@ export const posterPrices = new Map([
 	[
 		'13x18cm',
 		new Map([
-			[60, { original: 40, discount35: 34 }],
-			[62, { original: 62, discount35: 53 }],
+			[60, { original: 40, discount35: 0 }],
+			[62, { original: 62, discount35: 0 }],
 		]),
 	],
 	[
 		'21x30cm',
 		new Map([
-			[60, { original: 60, discount35: 51 }],
-			[62, { original: 159, discount35: 135 }],
+			[60, { original: 60, discount35: 0 }],
+			[62, { original: 159, discount35: 0 }],
 		]),
 	],
-	['20x25cm', new Map([[220, { original: 220, discount35: 143 }]])],
-	['25x25cm', new Map([[275, { original: 275, discount35: 179 }]])],
+	['20x25cm', new Map([[220, { original: 220, discount35: 0 }]])],
+	['25x25cm', new Map([[275, { original: 275, discount35: 0 }]])],
 	[
 		'30x40cm',
 		new Map([
-			[60, { original: 90, discount35: 59 }],
-			[62, { original: 229, discount35: 195 }],
+			[60, { original: 90, discount35: 0 }],
+			[62, { original: 229, discount35: 0 }],
 		]),
 	],
-	['50x40cm', new Map([[220, { original: 440, discount35: 286 }]])],
-	['50x50cm', new Map([[275, { original: 550, discount35: 358 }]])],
+	['50x40cm', new Map([[220, { original: 440, discount35: 0 }]])],
+	['50x50cm', new Map([[275, { original: 550, discount35: 0 }]])],
 	[
 		'50x70cm',
 		new Map([
-			[60, { original: 150, discount35: 97 }],
-			[62, { original: 409, discount35: 348 }],
+			[60, { original: 150, discount35: 0 }],
+			[62, { original: 409, discount35: 0 }],
 		]),
 	],
 ]);

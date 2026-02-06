@@ -183,10 +183,7 @@ export const SmartphoneCart = ({ currency }) => {
 																					</p>
 																				</>
 																			) : (
-																				<p
-																					style={{ color: 'red' }}
-																					className={styles.price}
-																				>
+																				<p className={styles.price}>
 																					{(
 																						row['quantity'] * row['price']
 																					).toFixed(1) + currency}

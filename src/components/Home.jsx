@@ -30,14 +30,17 @@ const Home = () => {
 							{index === 0 && (
 								<div className={styles.photoOverlay}>
 									<div className={styles.overlayText}>
-										<h1>Intention Cards</h1>
+										<h1>
+											Valentine's Day<br></br> Wish Cards
+										</h1>
+
 										<p>
-											We have a ritual for you to become a better version of
-											yourself.
+											Each card invites you to make a love wish or to ask
+											someone special to "Be Your Valentine"
 										</p>
 									</div>
 									<div className={styles.buttonContainer}>
-										<a href='/intention-cards'>
+										<a href='/wish-cards'>
 											<ButtonHomePage msg='SHOP NOW' />
 										</a>{' '}
 									</div>
@@ -51,14 +54,17 @@ const Home = () => {
 					{
 						<div className={styles.introductionContainer}>
 							<div className={styles.mobileOnlyText}>
-								<h1>Intention Cards</h1>
+								<h1>
+									{' '}
+									Valentine's Day<br></br> Wish Cards
+								</h1>
 								<p>
-									We have a ritual for you to become a better version of
-									yourself.
+									Each card invites you to make a love wish or to ask someone
+									special to "Be Your Valentine"
 								</p>
 							</div>
 							<div className={styles.buttonContainer}>
-								<a href='/intention-cards'>
+								<a href='/wish-cards'>
 									<ButtonHomePage msg='SHOP NOW' />
 								</a>{' '}
 							</div>
@@ -67,7 +73,7 @@ const Home = () => {
 				</div>
 			)}
 			<SelfMission />{' '}
-			<CardsShowcase title='Intention Cards' group='holiday-card' />
+			<CardsShowcase title='Be My Valentine' group='holiday-card' />
 			<VisualImages />{' '}
 			<div className={styles.quizContainer}>
 				<h1>

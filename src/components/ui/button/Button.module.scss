@@ -18,7 +18,9 @@
 		color: #fff7e3;
 		border: none;
 		text-decoration: none;
-		transition: background-color 0.2s ease, transform 0.1s ease;
+		transition:
+			background-color 0.2s ease,
+			transform 0.1s ease;
 
 		&:hover {
 			background-color: #34000fd1;
