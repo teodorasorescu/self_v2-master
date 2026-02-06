@@ -48,8 +48,6 @@ Free from harmful substances:
 - Free of synthetic colorants
 Cruelty-free (not tested on animals)
 
-Illustration: Adela Holdon 
-
 Instructions:
 1. Take out the match
 2. Strike the match
